@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/history has a default state 1`] = `false`;
+
+exports[`reducers/history reduces IS_AUTH 1`] = `true`;
+
+exports[`reducers/history reduces nothing 1`] = `false`;
