@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/index combines other reducers 1`] = `[Function]`;
+
+exports[`reducers/index has a default state 1`] = `
+Object {
+  "isAuth": false,
+}
+`;
+
+exports[`reducers/index reduces nothing 1`] = `
+Object {
+  "isAuth": "INITIAL_AUTH",
+}
+`;
+
+exports[`reducers/index reduces other actions 1`] = `
+Object {
+  "isAuth": "STATE_AUTH",
+}
+`;
