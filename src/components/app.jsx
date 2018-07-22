@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Provider } from "react-redux";
 import PropTypes from "prop-types";
-import "assets/style.scss";
+import "styles/index.scss";
 
 const App = ({ store }) => (
   <Provider store={store}>
