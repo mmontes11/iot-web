@@ -2,11 +2,20 @@ import React from "react";
 import { mount } from "enzyme";
 import configureStore from "redux-mock-store";
 import { MemoryRouter } from "react-router-dom";
-import App from "components/app";
+import App from "containers/app";
 
 describe("components/app", () => {
   const state = {
-    isAuth: false
+    auth: {
+      isAuth: false,
+      username: null,
+      password: null
+    },
+    request: {
+      pending: 0,
+      statusCode: null,
+      error: null
+    }
   };
 
   it("renders the app", () => {

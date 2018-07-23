@@ -16,7 +16,7 @@ describe("reducers/index", () => {
   });
 
   const state = {
-    isAuth: "INITIAL_AUTH"
+    auth: "INITIAL_AUTH"
   };
 
   deepFreeze(state);
