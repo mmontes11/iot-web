@@ -18,6 +18,33 @@ Object {
 }
 `;
 
+exports[`reducers/history reduces SET_PASSWORD 1`] = `
+Object {
+  "isAuth": false,
+  "password": "PASSWORD",
+  "showError": true,
+  "username": null,
+}
+`;
+
+exports[`reducers/history reduces SET_SHOW_ERROR 1`] = `
+Object {
+  "isAuth": false,
+  "password": null,
+  "showError": true,
+  "username": null,
+}
+`;
+
+exports[`reducers/history reduces SET_USERNAME 1`] = `
+Object {
+  "isAuth": false,
+  "password": null,
+  "showError": true,
+  "username": "USERNAME",
+}
+`;
+
 exports[`reducers/history reduces nothing 1`] = `
 Object {
   "isAuth": false,

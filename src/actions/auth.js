@@ -34,19 +34,20 @@ export const login = () => (dispatch, getState) => {
   iotClient.authService.setCredentials(username, password);
   iotClient.authService
     .getToken()
-    .then(response =>
+    .then(response => {
       dispatch({
         type: LOGIN_REQUEST_SUCCESS,
         statusCode: response.statusCode,
         error: null
-      })
-    )
+      });
+      isAuth()(dispatch);
+    })
     .catch(error => {
       dispatch({
         type: LOGIN_REQUEST_ERROR,
         statusCode: error.statusCode,
         error
       });
-    })
-    .finally(() => isAuth()(dispatch));
+      isAuth()(dispatch);
+    });
 };

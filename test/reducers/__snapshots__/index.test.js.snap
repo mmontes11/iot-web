@@ -15,22 +15,14 @@ Object {
 
 exports[`reducers/index reduces nothing 1`] = `
 Object {
-  "auth": "INITIAL_AUTH",
-  "request": Object {
-    "error": null,
-    "pending": 0,
-    "statusCode": null,
-  },
+  "auth": "AUTH",
+  "request": "REQUEST",
 }
 `;
 
 exports[`reducers/index reduces other actions 1`] = `
 Object {
-  "auth": "STATE_AUTH",
-  "request": Object {
-    "error": null,
-    "pending": 0,
-    "statusCode": null,
-  },
+  "auth": "STATE",
+  "request": "REQUEST",
 }
 `;

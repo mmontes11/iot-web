@@ -1,0 +1,1307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/login renders login in error state and closes dialog 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setShowError={[Function]}
+      setUsername={[Function]}
+      shouldShowError={false}
+      username={null}
+    >
+      <section
+        className="hero has-background-light is-fullheight"
+      >
+        <div
+          className="hero-body"
+        >
+          <div
+            className="container has-text-centered"
+          >
+            <div
+              className="column is-4 is-offset-4"
+            >
+              <div
+                className="box"
+              >
+                <p
+                  className="title is-1"
+                >
+                  IoT
+                </p>
+                <form>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="username-input"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-user"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="password-input"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    className="button is-block is-primary is-large is-fullwidth"
+                    disabled={false}
+                    id="login-button"
+                    onClick={[Function]}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Modal
+          isActive={false}
+          messageStyle={
+            Object {
+              "is-danger": true,
+            }
+          }
+          onCloseClick={[Function]}
+          subTitle="Invalid Credentials"
+          title="Error"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="modal-background"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="link"
+              tabIndex={0}
+            />
+            <div
+              className="modal-content"
+            >
+              <article
+                className="message is-medium is-danger"
+              >
+                <div
+                  className="message-header"
+                >
+                  <p>
+                    Error
+                  </p>
+                </div>
+                <div
+                  className="message-body has-text-centered"
+                >
+                  Invalid Credentials
+                </div>
+              </article>
+            </div>
+            <button
+              aria-label="close"
+              className="modal-close is-large"
+              onClick={[Function]}
+            />
+          </div>
+        </Modal>
+      </section>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;
+
+exports[`components/login renders login in error state and closes dialog 2`] = `
+Object {
+  "auth": Object {
+    "isAuth": false,
+    "password": null,
+    "showError": false,
+    "username": null,
+  },
+  "request": Object {
+    "error": null,
+    "pending": 0,
+    "statusCode": null,
+  },
+}
+`;
+
+exports[`components/login renders login in error state and closes dialog 3`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setShowError={[Function]}
+      setUsername={[Function]}
+      shouldShowError={false}
+      username={null}
+    >
+      <section
+        className="hero has-background-light is-fullheight"
+      >
+        <div
+          className="hero-body"
+        >
+          <div
+            className="container has-text-centered"
+          >
+            <div
+              className="column is-4 is-offset-4"
+            >
+              <div
+                className="box"
+              >
+                <p
+                  className="title is-1"
+                >
+                  IoT
+                </p>
+                <form>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="username-input"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-user"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="password-input"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    className="button is-block is-primary is-large is-fullwidth"
+                    disabled={false}
+                    id="login-button"
+                    onClick={[Function]}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Modal
+          isActive={false}
+          messageStyle={
+            Object {
+              "is-danger": true,
+            }
+          }
+          onCloseClick={[Function]}
+          subTitle="Invalid Credentials"
+          title="Error"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="modal-background"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="link"
+              tabIndex={0}
+            />
+            <div
+              className="modal-content"
+            >
+              <article
+                className="message is-medium is-danger"
+              >
+                <div
+                  className="message-header"
+                >
+                  <p>
+                    Error
+                  </p>
+                </div>
+                <div
+                  className="message-body has-text-centered"
+                >
+                  Invalid Credentials
+                </div>
+              </article>
+            </div>
+            <button
+              aria-label="close"
+              className="modal-close is-large"
+              onClick={[Function]}
+            />
+          </div>
+        </Modal>
+      </section>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;
+
+exports[`components/login renders login in error state and closes dialog 4`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setShowError={[Function]}
+      setUsername={[Function]}
+      shouldShowError={false}
+      username={null}
+    >
+      <section
+        className="hero has-background-light is-fullheight"
+      >
+        <div
+          className="hero-body"
+        >
+          <div
+            className="container has-text-centered"
+          >
+            <div
+              className="column is-4 is-offset-4"
+            >
+              <div
+                className="box"
+              >
+                <p
+                  className="title is-1"
+                >
+                  IoT
+                </p>
+                <form>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="username-input"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-user"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="password-input"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    className="button is-block is-primary is-large is-fullwidth"
+                    disabled={false}
+                    id="login-button"
+                    onClick={[Function]}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Modal
+          isActive={false}
+          messageStyle={
+            Object {
+              "is-danger": true,
+            }
+          }
+          onCloseClick={[Function]}
+          subTitle="Invalid Credentials"
+          title="Error"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="modal-background"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="link"
+              tabIndex={0}
+            />
+            <div
+              className="modal-content"
+            >
+              <article
+                className="message is-medium is-danger"
+              >
+                <div
+                  className="message-header"
+                >
+                  <p>
+                    Error
+                  </p>
+                </div>
+                <div
+                  className="message-body has-text-centered"
+                >
+                  Invalid Credentials
+                </div>
+              </article>
+            </div>
+            <button
+              aria-label="close"
+              className="modal-close is-large"
+              onClick={[Function]}
+            />
+          </div>
+        </Modal>
+      </section>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;
+
+exports[`components/login renders login in error state and closes dialog 5`] = `
+Object {
+  "auth": Object {
+    "isAuth": false,
+    "password": null,
+    "showError": false,
+    "username": null,
+  },
+  "request": Object {
+    "error": null,
+    "pending": 0,
+    "statusCode": null,
+  },
+}
+`;
+
+exports[`components/login renders login in error state and closes dialog 6`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setShowError={[Function]}
+      setUsername={[Function]}
+      shouldShowError={false}
+      username={null}
+    >
+      <section
+        className="hero has-background-light is-fullheight"
+      >
+        <div
+          className="hero-body"
+        >
+          <div
+            className="container has-text-centered"
+          >
+            <div
+              className="column is-4 is-offset-4"
+            >
+              <div
+                className="box"
+              >
+                <p
+                  className="title is-1"
+                >
+                  IoT
+                </p>
+                <form>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="username-input"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-user"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="password-input"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    className="button is-block is-primary is-large is-fullwidth"
+                    disabled={false}
+                    id="login-button"
+                    onClick={[Function]}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Modal
+          isActive={false}
+          messageStyle={
+            Object {
+              "is-danger": true,
+            }
+          }
+          onCloseClick={[Function]}
+          subTitle="Invalid Credentials"
+          title="Error"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="modal-background"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="link"
+              tabIndex={0}
+            />
+            <div
+              className="modal-content"
+            >
+              <article
+                className="message is-medium is-danger"
+              >
+                <div
+                  className="message-header"
+                >
+                  <p>
+                    Error
+                  </p>
+                </div>
+                <div
+                  className="message-body has-text-centered"
+                >
+                  Invalid Credentials
+                </div>
+              </article>
+            </div>
+            <button
+              aria-label="close"
+              className="modal-close is-large"
+              onClick={[Function]}
+            />
+          </div>
+        </Modal>
+      </section>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;
+
+exports[`components/login renders login in initial state 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setShowError={[Function]}
+      setUsername={[Function]}
+      shouldShowError={false}
+      username={null}
+    >
+      <section
+        className="hero has-background-light is-fullheight"
+      >
+        <div
+          className="hero-body"
+        >
+          <div
+            className="container has-text-centered"
+          >
+            <div
+              className="column is-4 is-offset-4"
+            >
+              <div
+                className="box"
+              >
+                <p
+                  className="title is-1"
+                >
+                  IoT
+                </p>
+                <form>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="username-input"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-user"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="password-input"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    className="button is-block is-primary is-large is-fullwidth"
+                    disabled={false}
+                    id="login-button"
+                    onClick={[Function]}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Modal
+          isActive={false}
+          messageStyle={
+            Object {
+              "is-danger": true,
+            }
+          }
+          onCloseClick={[Function]}
+          subTitle="Invalid Credentials"
+          title="Error"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="modal-background"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="link"
+              tabIndex={0}
+            />
+            <div
+              className="modal-content"
+            >
+              <article
+                className="message is-medium is-danger"
+              >
+                <div
+                  className="message-header"
+                >
+                  <p>
+                    Error
+                  </p>
+                </div>
+                <div
+                  className="message-body has-text-centered"
+                >
+                  Invalid Credentials
+                </div>
+              </article>
+            </div>
+            <button
+              aria-label="close"
+              className="modal-close is-large"
+              onClick={[Function]}
+            />
+          </div>
+        </Modal>
+      </section>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;
+
+exports[`components/login renders login in loading state 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      isAuth={[Function]}
+      isLoading={true}
+      login={[Function]}
+      password="password"
+      setPassword={[Function]}
+      setShowError={[Function]}
+      setUsername={[Function]}
+      shouldShowError={false}
+      username="username"
+    >
+      <section
+        className="hero has-background-light is-fullheight"
+      >
+        <div
+          className="hero-body"
+        >
+          <div
+            className="container has-text-centered"
+          >
+            <div
+              className="column is-4 is-offset-4"
+            >
+              <div
+                className="box"
+              >
+                <p
+                  className="title is-1"
+                >
+                  IoT
+                </p>
+                <form>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="username-input"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        value="username"
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-user"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="password-input"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value="password"
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    className="button is-block is-primary is-large is-fullwidth is-loading"
+                    disabled={true}
+                    id="login-button"
+                    onClick={[Function]}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Modal
+          isActive={false}
+          messageStyle={
+            Object {
+              "is-danger": true,
+            }
+          }
+          onCloseClick={[Function]}
+          subTitle="Invalid Credentials"
+          title="Error"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="modal-background"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="link"
+              tabIndex={0}
+            />
+            <div
+              className="modal-content"
+            >
+              <article
+                className="message is-medium is-danger"
+              >
+                <div
+                  className="message-header"
+                >
+                  <p>
+                    Error
+                  </p>
+                </div>
+                <div
+                  className="message-body has-text-centered"
+                >
+                  Invalid Credentials
+                </div>
+              </article>
+            </div>
+            <button
+              aria-label="close"
+              className="modal-close is-large"
+              onClick={[Function]}
+            />
+          </div>
+        </Modal>
+      </section>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;
+
+exports[`components/login simulates successful login 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setShowError={[Function]}
+      setUsername={[Function]}
+      shouldShowError={false}
+      username={null}
+    >
+      <section
+        className="hero has-background-light is-fullheight"
+      >
+        <div
+          className="hero-body"
+        >
+          <div
+            className="container has-text-centered"
+          >
+            <div
+              className="column is-4 is-offset-4"
+            >
+              <div
+                className="box"
+              >
+                <p
+                  className="title is-1"
+                >
+                  IoT
+                </p>
+                <form>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="username-input"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-user"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="password-input"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value=""
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    className="button is-block is-primary is-large is-fullwidth"
+                    disabled={false}
+                    id="login-button"
+                    onClick={[Function]}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Modal
+          isActive={false}
+          messageStyle={
+            Object {
+              "is-danger": true,
+            }
+          }
+          onCloseClick={[Function]}
+          subTitle="Invalid Credentials"
+          title="Error"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="modal-background"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="link"
+              tabIndex={0}
+            />
+            <div
+              className="modal-content"
+            >
+              <article
+                className="message is-medium is-danger"
+              >
+                <div
+                  className="message-header"
+                >
+                  <p>
+                    Error
+                  </p>
+                </div>
+                <div
+                  className="message-body has-text-centered"
+                >
+                  Invalid Credentials
+                </div>
+              </article>
+            </div>
+            <button
+              aria-label="close"
+              className="modal-close is-large"
+              onClick={[Function]}
+            />
+          </div>
+        </Modal>
+      </section>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;
+
+exports[`components/login simulates successful login 2`] = `
+Object {
+  "auth": Object {
+    "isAuth": false,
+    "password": "password",
+    "showError": true,
+    "username": "username",
+  },
+  "request": Object {
+    "error": null,
+    "pending": 1,
+    "statusCode": null,
+  },
+}
+`;
+
+exports[`components/login simulates successful login 3`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Connect(Login)>
+    <Login
+      isAuth={[Function]}
+      isLoading={true}
+      login={[Function]}
+      password="password"
+      setPassword={[Function]}
+      setShowError={[Function]}
+      setUsername={[Function]}
+      shouldShowError={false}
+      username="username"
+    >
+      <section
+        className="hero has-background-light is-fullheight"
+      >
+        <div
+          className="hero-body"
+        >
+          <div
+            className="container has-text-centered"
+          >
+            <div
+              className="column is-4 is-offset-4"
+            >
+              <div
+                className="box"
+              >
+                <p
+                  className="title is-1"
+                >
+                  IoT
+                </p>
+                <form>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="username-input"
+                        onChange={[Function]}
+                        placeholder="Username"
+                        value="username"
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-user"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className="field"
+                  >
+                    <div
+                      className="control has-icons-left"
+                    >
+                      <input
+                        className="input is-large"
+                        id="password-input"
+                        onChange={[Function]}
+                        placeholder="Password"
+                        type="password"
+                        value="password"
+                      />
+                      <span
+                        className="icon is-large is-left"
+                      >
+                        <i
+                          className="fas fa-lock"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    className="button is-block is-primary is-large is-fullwidth is-loading"
+                    disabled={true}
+                    id="login-button"
+                    onClick={[Function]}
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Modal
+          isActive={false}
+          messageStyle={
+            Object {
+              "is-danger": true,
+            }
+          }
+          onCloseClick={[Function]}
+          subTitle="Invalid Credentials"
+          title="Error"
+        >
+          <div
+            className="modal"
+          >
+            <div
+              className="modal-background"
+              onClick={[Function]}
+              onKeyPress={[Function]}
+              role="link"
+              tabIndex={0}
+            />
+            <div
+              className="modal-content"
+            >
+              <article
+                className="message is-medium is-danger"
+              >
+                <div
+                  className="message-header"
+                >
+                  <p>
+                    Error
+                  </p>
+                </div>
+                <div
+                  className="message-body has-text-centered"
+                >
+                  Invalid Credentials
+                </div>
+              </article>
+            </div>
+            <button
+              aria-label="close"
+              className="modal-close is-large"
+              onClick={[Function]}
+            />
+          </div>
+        </Modal>
+      </section>
+    </Login>
+  </Connect(Login)>
+</Provider>
+`;

@@ -46,6 +46,7 @@ class Login extends React.Component {
                   <div className="field">
                     <div className="control has-icons-left">
                       <input
+                        id="username-input"
                         className="input is-large"
                         placeholder="Username"
                         onChange={this._onUsernameChange}
@@ -59,6 +60,7 @@ class Login extends React.Component {
                   <div className="field">
                     <div className="control has-icons-left">
                       <input
+                        id="password-input"
                         className="input is-large"
                         type="password"
                         placeholder="Password"
@@ -71,6 +73,7 @@ class Login extends React.Component {
                     </div>
                   </div>
                   <button
+                    id="login-button"
                     className={btnClass}
                     onClick={this._onLoginClick}
                     disabled={isLoading}
