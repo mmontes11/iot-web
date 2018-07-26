@@ -9,7 +9,8 @@ describe("components/app", () => {
     auth: {
       isAuth: false,
       username: null,
-      password: null
+      password: null,
+      showError: true
     },
     request: {
       pending: 0,

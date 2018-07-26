@@ -2,8 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { setUsername, setPassword, login } from "actions/auth";
-import { isLoading } from "reducers";
+import * as authActions from "actions/auth";
+import * as reducerHelpers from "reducers";
+import Modal from "components/modal";
 
 class Login extends React.Component {
   _onUsernameChange = ({ target: { value } }) => {
@@ -16,7 +17,11 @@ class Login extends React.Component {
     event.preventDefault();
     this.props.login();
   };
+  _onModalCloseClick = () => {
+    this.props.setShowError(false);
+  };
   render() {
+    const { username, password, isLoading, shouldShowError } = this.props;
     const btnClass = classNames(
       "button",
       "is-block",
@@ -24,10 +29,12 @@ class Login extends React.Component {
       "is-large",
       "is-fullwidth",
       {
-        "is-loading": this.props.isLoading
+        "is-loading": isLoading
       }
     );
-    const isDisabled = this.props.isLoading;
+    const modalMessageStyle = {
+      "is-danger": true
+    };
     return (
       <section className="hero has-background-light is-fullheight">
         <div className="hero-body">
@@ -42,6 +49,7 @@ class Login extends React.Component {
                         className="input is-large"
                         placeholder="Username"
                         onChange={this._onUsernameChange}
+                        value={username || ""}
                       />
                       <span className="icon is-large is-left">
                         <i className="fas fa-user" />
@@ -55,6 +63,7 @@ class Login extends React.Component {
                         type="password"
                         placeholder="Password"
                         onChange={this._onPasswordChange}
+                        value={password || ""}
                       />
                       <span className="icon is-large is-left">
                         <i className="fas fa-lock" />
@@ -64,7 +73,7 @@ class Login extends React.Component {
                   <button
                     className={btnClass}
                     onClick={this._onLoginClick}
-                    disabled={isDisabled}
+                    disabled={isLoading}
                   >
                     Login
                   </button>
@@ -73,25 +82,40 @@ class Login extends React.Component {
             </div>
           </div>
         </div>
+        <Modal
+          isActive={shouldShowError}
+          onCloseClick={this._onModalCloseClick}
+          messageStyle={modalMessageStyle}
+          title="Error"
+          subTitle="Invalid Credentials"
+        />
       </section>
     );
   }
 }
 
 Login.propTypes = {
+  username: PropTypes.string,
+  password: PropTypes.string,
   isLoading: PropTypes.bool.isRequired,
+  shouldShowError: PropTypes.bool.isRequired,
   setUsername: PropTypes.func.isRequired,
   setPassword: PropTypes.func.isRequired,
-  login: PropTypes.func.isRequired
+  login: PropTypes.func.isRequired,
+  setShowError: PropTypes.func.isRequired
+};
+
+Login.defaultProps = {
+  username: "",
+  password: ""
 };
 
 export default connect(
   state => ({
-    isLoading: isLoading(state)
+    username: state.auth.username,
+    password: state.auth.password,
+    isLoading: reducerHelpers.isLoading(state),
+    shouldShowError: reducerHelpers.hasError(state) && state.auth.showError
   }),
-  {
-    setUsername,
-    setPassword,
-    login
-  }
+  authActions
 )(Login);

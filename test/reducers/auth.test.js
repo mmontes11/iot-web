@@ -5,7 +5,8 @@ describe("reducers/history", () => {
   const initialState = {
     isAuth: false,
     username: null,
-    password: null
+    password: null,
+    showError: true
   };
 
   it("has a default state", () => {

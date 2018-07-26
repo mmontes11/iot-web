@@ -207,10 +207,15 @@ exports[`components/app renders the app 1`] = `
             >
               <Connect(Login)>
                 <Login
+                  isAuth={[Function]}
                   isLoading={false}
                   login={[Function]}
+                  password={null}
                   setPassword={[Function]}
+                  setShowError={[Function]}
                   setUsername={[Function]}
+                  shouldShowError={false}
+                  username={null}
                 >
                   <section
                     className="hero has-background-light is-fullheight"
@@ -243,6 +248,7 @@ exports[`components/app renders the app 1`] = `
                                     className="input is-large"
                                     onChange={[Function]}
                                     placeholder="Username"
+                                    value=""
                                   />
                                   <span
                                     className="icon is-large is-left"
@@ -264,6 +270,7 @@ exports[`components/app renders the app 1`] = `
                                     onChange={[Function]}
                                     placeholder="Password"
                                     type="password"
+                                    value=""
                                   />
                                   <span
                                     className="icon is-large is-left"
@@ -286,6 +293,54 @@ exports[`components/app renders the app 1`] = `
                         </div>
                       </div>
                     </div>
+                    <Modal
+                      isActive={false}
+                      messageStyle={
+                        Object {
+                          "is-danger": true,
+                        }
+                      }
+                      onCloseClick={[Function]}
+                      subTitle="Invalid Credentials"
+                      title="Error"
+                    >
+                      <div
+                        className="modal"
+                      >
+                        <div
+                          className="modal-background"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="link"
+                          tabIndex={0}
+                        />
+                        <div
+                          className="modal-content"
+                        >
+                          <article
+                            className="message is-medium is-danger"
+                          >
+                            <div
+                              className="message-header"
+                            >
+                              <p>
+                                Error
+                              </p>
+                            </div>
+                            <div
+                              className="message-body has-text-centered"
+                            >
+                              Invalid Credentials
+                            </div>
+                          </article>
+                        </div>
+                        <button
+                          aria-label="close"
+                          className="modal-close is-large"
+                          onClick={[Function]}
+                        />
+                      </div>
+                    </Modal>
                   </section>
                 </Login>
               </Connect(Login)>

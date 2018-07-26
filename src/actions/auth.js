@@ -2,6 +2,7 @@ import {
   IS_AUTH,
   SET_USERNAME,
   SET_PASSWORD,
+  SET_SHOW_ERROR,
   LOGIN_REQUEST,
   LOGIN_REQUEST_SUCCESS,
   LOGIN_REQUEST_ERROR
@@ -23,17 +24,29 @@ export const setPassword = password => dispatch => {
   dispatch({ type: SET_PASSWORD, password });
 };
 
+export const setShowError = showError => dispatch => {
+  dispatch({ type: SET_SHOW_ERROR, showError });
+};
+
 export const login = () => (dispatch, getState) => {
   dispatch({ type: LOGIN_REQUEST });
   const { username, password } = getState().auth;
   iotClient.authService.setCredentials(username, password);
   iotClient.authService
     .getToken()
-    .then(res =>
-      dispatch({ type: LOGIN_REQUEST_SUCCESS, statusCode: res.statusCode })
+    .then(response =>
+      dispatch({
+        type: LOGIN_REQUEST_SUCCESS,
+        statusCode: response.statusCode,
+        error: null
+      })
     )
-    .catch(err =>
-      dispatch({ type: LOGIN_REQUEST_ERROR, statusCode: err.statusCode, err })
-    )
+    .catch(error => {
+      dispatch({
+        type: LOGIN_REQUEST_ERROR,
+        statusCode: error.statusCode,
+        error
+      });
+    })
     .finally(() => isAuth()(dispatch));
 };

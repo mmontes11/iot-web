@@ -8,4 +8,4 @@ export default combineReducers({
 });
 
 export const isLoading = state => requestHelpers.isLoading(state.request);
-export const hasError = state => requestHelpers.hasError(state.error);
+export const hasError = state => requestHelpers.hasError(state.request);

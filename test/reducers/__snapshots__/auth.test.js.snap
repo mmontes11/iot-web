@@ -4,6 +4,7 @@ exports[`reducers/history has a default state 1`] = `
 Object {
   "isAuth": false,
   "password": null,
+  "showError": true,
   "username": null,
 }
 `;
@@ -12,6 +13,7 @@ exports[`reducers/history reduces IS_AUTH 1`] = `
 Object {
   "isAuth": true,
   "password": null,
+  "showError": true,
   "username": null,
 }
 `;
@@ -20,6 +22,7 @@ exports[`reducers/history reduces nothing 1`] = `
 Object {
   "isAuth": false,
   "password": null,
+  "showError": true,
   "username": null,
 }
 `;
