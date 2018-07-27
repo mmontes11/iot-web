@@ -83,9 +83,7 @@ module.exports = {
         ),
         IOT_SERVER_BASIC_AUTH_PASSWORD: JSON.stringify(
           process.env.IOT_SERVER_BASIC_AUTH_PASSWORD
-        ),
-        IOT_SERVER_USERNAME: JSON.stringify(process.env.IOT_SERVER_USERNAME),
-        IOT_SERVER_PASSWORD: JSON.stringify(process.env.IOT_SERVER_PASSWORD)
+        )
       }
     })
   ],

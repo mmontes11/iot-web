@@ -4,18 +4,25 @@ exports[`reducers/index combines other reducers 1`] = `[Function]`;
 
 exports[`reducers/index has a default state 1`] = `
 Object {
-  "isAuth": false,
+  "auth": false,
+  "request": Object {
+    "error": null,
+    "pending": 0,
+    "statusCode": null,
+  },
 }
 `;
 
 exports[`reducers/index reduces nothing 1`] = `
 Object {
-  "isAuth": "INITIAL_AUTH",
+  "auth": "AUTH",
+  "request": "REQUEST",
 }
 `;
 
 exports[`reducers/index reduces other actions 1`] = `
 Object {
-  "isAuth": "STATE_AUTH",
+  "auth": "STATE",
+  "request": "REQUEST",
 }
 `;
