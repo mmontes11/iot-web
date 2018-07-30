@@ -6,13 +6,11 @@ import "styles/index.scss";
 import Login from "containers/login";
 import Main from "components/main";
 
-const App = ({ store, isAuth }) => (
-  <Provider store={store}>{isAuth ? <Main /> : <Login />}</Provider>
-);
+const App = ({ store, isAuth }) => <Provider store={store}>{isAuth ? <Main /> : <Login />}</Provider>;
 
 App.propTypes = {
   store: PropTypes.shape({}).isRequired,
-  isAuth: PropTypes.bool.isRequired
+  isAuth: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = ({ auth: { isAuth } }) => ({ isAuth });

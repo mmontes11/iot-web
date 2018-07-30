@@ -1,10 +1,4 @@
-import {
-  isAuth,
-  setUsername,
-  setPassword,
-  setShowError,
-  login
-} from "actions/auth";
+import { isAuth, setUsername, setPassword, setShowError, login } from "actions/auth";
 
 describe("actions/auth", () => {
   const testThunk = thunk => {
@@ -29,7 +23,7 @@ describe("actions/auth", () => {
     const thunk = login();
     const dispatch = jest.fn();
     const getState = jest.fn(() => ({
-      auth: { username: "username", password: "password" }
+      auth: { username: "username", password: "password" },
     }));
     thunk(dispatch, getState);
     expect(thunk).toBeAThunk();

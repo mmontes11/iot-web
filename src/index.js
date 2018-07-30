@@ -13,16 +13,13 @@ const middlewares = [thunk];
 if (process.env.NODE_ENV !== "production") {
   middlewares.push(createLogger());
 }
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(...middlewares))
-);
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)));
 
 render(
   <Router>
     <App store={store} />
   </Router>,
-  document.getElementById("app")
+  document.getElementById("app"),
 );
 
 store.dispatch(isAuth());

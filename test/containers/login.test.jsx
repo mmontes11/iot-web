@@ -14,19 +14,19 @@ describe("components/login", () => {
         isAuth: false,
         username: null,
         password: null,
-        showError: true
+        showError: true,
       },
       request: {
         pending: 0,
         statusCode: null,
-        error: null
-      }
+        error: null,
+      },
     };
     const store = configureStore([])(state);
     const wrapper = mount(
       <Provider store={store}>
         <Login />
-      </Provider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -36,19 +36,19 @@ describe("components/login", () => {
         isAuth: true,
         username: "username",
         password: "password",
-        showError: true
+        showError: true,
       },
       request: {
         pending: 1,
         statusCode: null,
-        error: null
-      }
+        error: null,
+      },
     };
     const store = configureStore([])(state);
     const wrapper = mount(
       <Provider store={store}>
         <Login />
-      </Provider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -57,7 +57,7 @@ describe("components/login", () => {
     const wrapper = mount(
       <Provider store={store}>
         <Login />
-      </Provider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
     wrapper.find(".modal-close").simulate("click");
@@ -69,7 +69,7 @@ describe("components/login", () => {
     const wrapper = mount(
       <Provider store={store}>
         <Login />
-      </Provider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
     wrapper.find(".modal-close").simulate("click");
@@ -81,15 +81,11 @@ describe("components/login", () => {
     const wrapper = mount(
       <Provider store={store}>
         <Login />
-      </Provider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
-    wrapper
-      .find("#username-input")
-      .simulate("change", { target: { value: "username" } });
-    wrapper
-      .find("#password-input")
-      .simulate("change", { target: { value: "password" } });
+    wrapper.find("#username-input").simulate("change", { target: { value: "username" } });
+    wrapper.find("#password-input").simulate("change", { target: { value: "password" } });
     wrapper.find("#login-button").simulate("click");
     expect(store.getState()).toMatchSnapshot();
     expect(wrapper).toMatchSnapshot();

@@ -8,7 +8,7 @@ exports[`components/modal renders when is active 1`] = `
     className="modal-background"
     onClick={[MockFunction]}
     onKeyPress={[MockFunction]}
-    role="link"
+    role="button"
     tabIndex={0}
   />
   <div

@@ -5,7 +5,7 @@ import {
   SET_SHOW_ERROR,
   LOGIN_REQUEST,
   LOGIN_REQUEST_SUCCESS,
-  LOGIN_REQUEST_ERROR
+  LOGIN_REQUEST_ERROR,
 } from "constants/actionTypes/auth";
 import iotClient from "lib/iotClient";
 
@@ -38,7 +38,7 @@ export const login = () => (dispatch, getState) => {
       dispatch({
         type: LOGIN_REQUEST_SUCCESS,
         statusCode: response.statusCode,
-        error: null
+        error: null,
       });
       isAuth()(dispatch);
     })
@@ -46,8 +46,19 @@ export const login = () => (dispatch, getState) => {
       dispatch({
         type: LOGIN_REQUEST_ERROR,
         statusCode: error.statusCode,
-        error
+        error,
       });
+      isAuth()(dispatch);
+    });
+};
+
+export const logout = () => dispatch => {
+  iotClient.authService
+    .logout()
+    .then(() => {
+      isAuth()(dispatch);
+    })
+    .catch(() => {
       isAuth()(dispatch);
     });
 };

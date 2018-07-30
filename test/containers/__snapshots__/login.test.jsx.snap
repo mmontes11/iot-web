@@ -17,6 +17,7 @@ exports[`components/login renders login in error state and closes dialog 1`] = `
       isAuth={[Function]}
       isLoading={false}
       login={[Function]}
+      logout={[Function]}
       password={null}
       setPassword={[Function]}
       setShowError={[Function]}
@@ -25,7 +26,7 @@ exports[`components/login renders login in error state and closes dialog 1`] = `
       username={null}
     >
       <section
-        className="hero has-background-light is-fullheight"
+        className="hero is-fullheight"
       >
         <div
           className="hero-body"
@@ -121,7 +122,7 @@ exports[`components/login renders login in error state and closes dialog 1`] = `
               className="modal-background"
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="link"
+              role="button"
               tabIndex={0}
             />
             <div
@@ -159,6 +160,9 @@ exports[`components/login renders login in error state and closes dialog 1`] = `
 
 exports[`components/login renders login in error state and closes dialog 2`] = `
 Object {
+  "app": Object {
+    "isHamburgerMenuExpanded": false,
+  },
   "auth": Object {
     "isAuth": false,
     "password": null,
@@ -190,6 +194,7 @@ exports[`components/login renders login in error state and closes dialog 3`] = `
       isAuth={[Function]}
       isLoading={false}
       login={[Function]}
+      logout={[Function]}
       password={null}
       setPassword={[Function]}
       setShowError={[Function]}
@@ -198,7 +203,7 @@ exports[`components/login renders login in error state and closes dialog 3`] = `
       username={null}
     >
       <section
-        className="hero has-background-light is-fullheight"
+        className="hero is-fullheight"
       >
         <div
           className="hero-body"
@@ -294,7 +299,7 @@ exports[`components/login renders login in error state and closes dialog 3`] = `
               className="modal-background"
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="link"
+              role="button"
               tabIndex={0}
             />
             <div
@@ -347,6 +352,7 @@ exports[`components/login renders login in error state and closes dialog 4`] = `
       isAuth={[Function]}
       isLoading={false}
       login={[Function]}
+      logout={[Function]}
       password={null}
       setPassword={[Function]}
       setShowError={[Function]}
@@ -355,7 +361,7 @@ exports[`components/login renders login in error state and closes dialog 4`] = `
       username={null}
     >
       <section
-        className="hero has-background-light is-fullheight"
+        className="hero is-fullheight"
       >
         <div
           className="hero-body"
@@ -451,7 +457,7 @@ exports[`components/login renders login in error state and closes dialog 4`] = `
               className="modal-background"
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="link"
+              role="button"
               tabIndex={0}
             />
             <div
@@ -489,6 +495,9 @@ exports[`components/login renders login in error state and closes dialog 4`] = `
 
 exports[`components/login renders login in error state and closes dialog 5`] = `
 Object {
+  "app": Object {
+    "isHamburgerMenuExpanded": false,
+  },
   "auth": Object {
     "isAuth": false,
     "password": null,
@@ -520,6 +529,7 @@ exports[`components/login renders login in error state and closes dialog 6`] = `
       isAuth={[Function]}
       isLoading={false}
       login={[Function]}
+      logout={[Function]}
       password={null}
       setPassword={[Function]}
       setShowError={[Function]}
@@ -528,7 +538,7 @@ exports[`components/login renders login in error state and closes dialog 6`] = `
       username={null}
     >
       <section
-        className="hero has-background-light is-fullheight"
+        className="hero is-fullheight"
       >
         <div
           className="hero-body"
@@ -624,7 +634,7 @@ exports[`components/login renders login in error state and closes dialog 6`] = `
               className="modal-background"
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="link"
+              role="button"
               tabIndex={0}
             />
             <div
@@ -678,6 +688,7 @@ exports[`components/login renders login in initial state 1`] = `
       isAuth={[Function]}
       isLoading={false}
       login={[Function]}
+      logout={[Function]}
       password={null}
       setPassword={[Function]}
       setShowError={[Function]}
@@ -686,7 +697,7 @@ exports[`components/login renders login in initial state 1`] = `
       username={null}
     >
       <section
-        className="hero has-background-light is-fullheight"
+        className="hero is-fullheight"
       >
         <div
           className="hero-body"
@@ -782,7 +793,7 @@ exports[`components/login renders login in initial state 1`] = `
               className="modal-background"
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="link"
+              role="button"
               tabIndex={0}
             />
             <div
@@ -836,6 +847,7 @@ exports[`components/login renders login in loading state 1`] = `
       isAuth={[Function]}
       isLoading={true}
       login={[Function]}
+      logout={[Function]}
       password="password"
       setPassword={[Function]}
       setShowError={[Function]}
@@ -844,7 +856,7 @@ exports[`components/login renders login in loading state 1`] = `
       username="username"
     >
       <section
-        className="hero has-background-light is-fullheight"
+        className="hero is-fullheight"
       >
         <div
           className="hero-body"
@@ -940,7 +952,7 @@ exports[`components/login renders login in loading state 1`] = `
               className="modal-background"
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="link"
+              role="button"
               tabIndex={0}
             />
             <div
@@ -993,6 +1005,7 @@ exports[`components/login simulates successful login 1`] = `
       isAuth={[Function]}
       isLoading={false}
       login={[Function]}
+      logout={[Function]}
       password={null}
       setPassword={[Function]}
       setShowError={[Function]}
@@ -1001,7 +1014,7 @@ exports[`components/login simulates successful login 1`] = `
       username={null}
     >
       <section
-        className="hero has-background-light is-fullheight"
+        className="hero is-fullheight"
       >
         <div
           className="hero-body"
@@ -1097,7 +1110,7 @@ exports[`components/login simulates successful login 1`] = `
               className="modal-background"
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="link"
+              role="button"
               tabIndex={0}
             />
             <div
@@ -1135,6 +1148,9 @@ exports[`components/login simulates successful login 1`] = `
 
 exports[`components/login simulates successful login 2`] = `
 Object {
+  "app": Object {
+    "isHamburgerMenuExpanded": false,
+  },
   "auth": Object {
     "isAuth": false,
     "password": "password",
@@ -1166,6 +1182,7 @@ exports[`components/login simulates successful login 3`] = `
       isAuth={[Function]}
       isLoading={true}
       login={[Function]}
+      logout={[Function]}
       password="password"
       setPassword={[Function]}
       setShowError={[Function]}
@@ -1174,7 +1191,7 @@ exports[`components/login simulates successful login 3`] = `
       username="username"
     >
       <section
-        className="hero has-background-light is-fullheight"
+        className="hero is-fullheight"
       >
         <div
           className="hero-body"
@@ -1270,7 +1287,7 @@ exports[`components/login simulates successful login 3`] = `
               className="modal-background"
               onClick={[Function]}
               onKeyPress={[Function]}
-              role="link"
+              role="button"
               tabIndex={0}
             />
             <div
