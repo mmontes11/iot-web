@@ -1,4 +1,4 @@
-import { isAuth, setUsername, setPassword, setShowError, login } from "actions/auth";
+import { isAuth, setUsername, setPassword, setShowError, login, logout } from "actions/auth";
 
 describe("actions/auth", () => {
   const testThunk = thunk => {
@@ -28,5 +28,8 @@ describe("actions/auth", () => {
     thunk(dispatch, getState);
     expect(thunk).toBeAThunk();
     expect(thunk).toMatchSnapshot();
+  });
+  it("dispatches a logout action", () => {
+    testThunk(logout());
   });
 });

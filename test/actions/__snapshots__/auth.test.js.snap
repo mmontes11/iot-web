@@ -2,6 +2,8 @@
 
 exports[`actions/auth dispatches a login action 1`] = `[Function]`;
 
+exports[`actions/auth dispatches a logout action 1`] = `[Function]`;
+
 exports[`actions/auth dispatches a setPassword action 1`] = `[Function]`;
 
 exports[`actions/auth dispatches a setShowError action 1`] = `[Function]`;

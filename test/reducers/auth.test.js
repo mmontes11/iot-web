@@ -1,7 +1,7 @@
 import authReducer from "reducers/auth";
 import { IS_AUTH, SET_USERNAME, SET_PASSWORD, SET_SHOW_ERROR } from "constants/actionTypes/auth";
 
-describe("reducers/history", () => {
+describe("reducers/auth", () => {
   const initialState = {
     isAuth: false,
     username: null,

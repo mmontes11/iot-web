@@ -3,5 +3,6 @@ jest.mock("lib/iotClient", () => ({
     isAuth: () => Promise.resolve(true),
     getToken: () => Promise.resolve("token"),
     setCredentials: () => undefined,
+    logout: () => Promise.resolve(),
   },
 }));

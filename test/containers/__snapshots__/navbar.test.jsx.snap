@@ -1,0 +1,645 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/navbar renders navbar in initial state 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <withRouter(Connect(Navbar))>
+        <Route>
+          <Connect(Navbar)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+          >
+            <Navbar
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "canGo": [Function],
+                  "createHref": [Function],
+                  "entries": Array [
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                  ],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "index": 0,
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              isHamburgerMenuExpanded={false}
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              logout={[Function]}
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              toggleHamburgerMenu={[Function]}
+            >
+              <nav
+                className="navbar has-shadow is-spaced"
+              >
+                <div
+                  className="navbar-brand"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-item"
+                    to="/"
+                  >
+                    <Route
+                      path="\\\\/"
+                    >
+                      <Link
+                        aria-current="page"
+                        className="navbar-item active"
+                        replace={false}
+                        style={Object {}}
+                        to="/"
+                      >
+                        <a
+                          aria-current="page"
+                          className="navbar-item active"
+                          href="/"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <h1
+                            className="title"
+                          >
+                            IoT
+                          </h1>
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                  <div
+                    className="navbar-burger burger"
+                    data-target="navbar-menu"
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                </div>
+                <div
+                  className="navbar-menu"
+                  id="navbar-menu"
+                >
+                  <div
+                    className="navbar-start"
+                  >
+                    <NavLink
+                      activeClassName="navbar-item-active"
+                      aria-current="page"
+                      className="navbar-item"
+                      to="/things"
+                    >
+                      <Route
+                        path="\\\\/things"
+                      >
+                        <Link
+                          aria-current={null}
+                          className="navbar-item"
+                          replace={false}
+                          to="/things"
+                        >
+                          <a
+                            aria-current={null}
+                            className="navbar-item"
+                            href="/things"
+                            onClick={[Function]}
+                          >
+                            Things
+                          </a>
+                        </Link>
+                      </Route>
+                    </NavLink>
+                    <NavLink
+                      activeClassName="navbar-item-active"
+                      aria-current="page"
+                      className="navbar-item"
+                      to="/stats"
+                    >
+                      <Route
+                        path="\\\\/stats"
+                      >
+                        <Link
+                          aria-current={null}
+                          className="navbar-item"
+                          replace={false}
+                          to="/stats"
+                        >
+                          <a
+                            aria-current={null}
+                            className="navbar-item"
+                            href="/stats"
+                            onClick={[Function]}
+                          >
+                            Stats
+                          </a>
+                        </Link>
+                      </Route>
+                    </NavLink>
+                  </div>
+                  <div
+                    className="navbar-end"
+                  >
+                    <div
+                      className="navbar-item"
+                    >
+                      <div
+                        className="field"
+                      >
+                        <p
+                          className="control"
+                        >
+                          <button
+                            className="button is-primary"
+                            id="logout-button"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="icon"
+                            >
+                              <i
+                                className="fa fa-user"
+                              />
+                            </span>
+                            <span>
+                              Logout
+                            </span>
+                          </button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </Navbar>
+          </Connect(Navbar)>
+        </Route>
+      </withRouter(Connect(Navbar))>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] = `
+<MemoryRouter
+  keyLength={0}
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+    >
+      <withRouter(Connect(Navbar))>
+        <Route>
+          <Connect(Navbar)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "canGo": [Function],
+                "createHref": [Function],
+                "entries": Array [
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                ],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "index": 0,
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+          >
+            <Navbar
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "canGo": [Function],
+                  "createHref": [Function],
+                  "entries": Array [
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                  ],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "index": 0,
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              isHamburgerMenuExpanded={true}
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              logout={[Function]}
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              toggleHamburgerMenu={[Function]}
+            >
+              <nav
+                className="navbar has-shadow is-spaced"
+              >
+                <div
+                  className="navbar-brand"
+                >
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="navbar-item"
+                    to="/"
+                  >
+                    <Route
+                      path="\\\\/"
+                    >
+                      <Link
+                        aria-current="page"
+                        className="navbar-item active"
+                        replace={false}
+                        style={Object {}}
+                        to="/"
+                      >
+                        <a
+                          aria-current="page"
+                          className="navbar-item active"
+                          href="/"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <h1
+                            className="title"
+                          >
+                            IoT
+                          </h1>
+                        </a>
+                      </Link>
+                    </Route>
+                  </NavLink>
+                  <div
+                    className="navbar-burger burger is-active"
+                    data-target="navbar-menu"
+                    onClick={[Function]}
+                    onKeyPress={[Function]}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                </div>
+                <div
+                  className="navbar-menu is-active"
+                  id="navbar-menu"
+                >
+                  <div
+                    className="navbar-start"
+                  >
+                    <NavLink
+                      activeClassName="navbar-item-active"
+                      aria-current="page"
+                      className="navbar-item"
+                      to="/things"
+                    >
+                      <Route
+                        path="\\\\/things"
+                      >
+                        <Link
+                          aria-current={null}
+                          className="navbar-item"
+                          replace={false}
+                          to="/things"
+                        >
+                          <a
+                            aria-current={null}
+                            className="navbar-item"
+                            href="/things"
+                            onClick={[Function]}
+                          >
+                            Things
+                          </a>
+                        </Link>
+                      </Route>
+                    </NavLink>
+                    <NavLink
+                      activeClassName="navbar-item-active"
+                      aria-current="page"
+                      className="navbar-item"
+                      to="/stats"
+                    >
+                      <Route
+                        path="\\\\/stats"
+                      >
+                        <Link
+                          aria-current={null}
+                          className="navbar-item"
+                          replace={false}
+                          to="/stats"
+                        >
+                          <a
+                            aria-current={null}
+                            className="navbar-item"
+                            href="/stats"
+                            onClick={[Function]}
+                          >
+                            Stats
+                          </a>
+                        </Link>
+                      </Route>
+                    </NavLink>
+                  </div>
+                  <div
+                    className="navbar-end"
+                  >
+                    <div
+                      className="navbar-item"
+                    >
+                      <div
+                        className="field"
+                      >
+                        <p
+                          className="control"
+                        >
+                          <button
+                            className="button is-primary"
+                            id="logout-button"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="icon"
+                            >
+                              <i
+                                className="fa fa-user"
+                              />
+                            </span>
+                            <span>
+                              Logout
+                            </span>
+                          </button>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </Navbar>
+          </Connect(Navbar)>
+        </Route>
+      </withRouter(Connect(Navbar))>
+    </Provider>
+  </Router>
+</MemoryRouter>
+`;
+
+exports[`containers/navbar simulates a click in hamburger menu button 1`] = `
+Object {
+  "app": Object {
+    "isHamburgerMenuExpanded": true,
+  },
+  "auth": Object {
+    "isAuth": false,
+    "password": null,
+    "showError": true,
+    "username": null,
+  },
+  "request": Object {
+    "error": null,
+    "pending": 0,
+    "statusCode": null,
+  },
+}
+`;
+
+exports[`containers/navbar simulates a click in logout button 1`] = `
+Object {
+  "app": Object {
+    "isHamburgerMenuExpanded": false,
+  },
+  "auth": Object {
+    "isAuth": false,
+    "password": null,
+    "showError": true,
+    "username": null,
+  },
+  "request": Object {
+    "error": null,
+    "pending": 0,
+    "statusCode": null,
+  },
+}
+`;

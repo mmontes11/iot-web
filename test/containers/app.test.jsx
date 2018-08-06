@@ -4,7 +4,7 @@ import configureStore from "redux-mock-store";
 import { MemoryRouter } from "react-router-dom";
 import App from "containers/app";
 
-describe("components/app", () => {
+describe("containers/app", () => {
   it("renders the app without auth", () => {
     const state = {
       app: {

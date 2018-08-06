@@ -53,7 +53,7 @@ class Navbar extends React.Component {
             <div className="navbar-item">
               <div className="field">
                 <p className="control">
-                  <button className="button is-primary" onClick={this._onLogoutButtonClick}>
+                  <button id="logout-button" className="button is-primary" onClick={this._onLogoutButtonClick}>
                     <span className="icon">
                       <i className="fa fa-user" />
                     </span>

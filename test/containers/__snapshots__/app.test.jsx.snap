@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/app renders the app with auth 1`] = `
+exports[`containers/app renders the app with auth 1`] = `
 <MemoryRouter
   initialEntries={
     Array [
@@ -437,6 +437,7 @@ exports[`components/app renders the app with auth 1`] = `
                                     >
                                       <button
                                         className="button is-primary"
+                                        id="logout-button"
                                         onClick={[Function]}
                                       >
                                         <span
@@ -546,7 +547,7 @@ exports[`components/app renders the app with auth 1`] = `
 </MemoryRouter>
 `;
 
-exports[`components/app renders the app without auth 1`] = `
+exports[`containers/app renders the app without auth 1`] = `
 <MemoryRouter
   initialEntries={
     Array [
