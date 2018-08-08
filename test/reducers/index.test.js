@@ -16,7 +16,7 @@ describe("reducers/index", () => {
   });
   const mockState = {
     auth: "AUTH",
-    request: "REQUEST"
+    request: "REQUEST",
   };
   deepFreeze(mockState);
   it("has a default state", () => {
@@ -32,16 +32,16 @@ describe("reducers/index", () => {
     it("indicates that the app is loading", () => {
       const state = {
         request: {
-          pending: 1
-        }
+          pending: 1,
+        },
       };
       expect(isLoading(state)).toBeTruthy();
     });
     it("indicates that the app is not loading", () => {
       const state = {
         request: {
-          pending: 0
-        }
+          pending: 0,
+        },
       };
       deepFreeze(state);
       expect(isLoading(state)).toBeFalsy();
@@ -51,16 +51,16 @@ describe("reducers/index", () => {
     it("indicates that the app has an error", () => {
       const state = {
         request: {
-          error: new Error()
-        }
+          error: new Error(),
+        },
       };
       expect(hasError(state)).toBeTruthy();
     });
     it("indicates that the app has not an error", () => {
       const state = {
         request: {
-          error: null
-        }
+          error: null,
+        },
       };
       deepFreeze(state);
       expect(hasError(state)).toBeFalsy();

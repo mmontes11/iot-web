@@ -4,18 +4,12 @@ import classNames from "classnames";
 
 const Modal = ({ isActive, onCloseClick, messageStyle, title, subTitle }) => {
   const modalClass = classNames("modal", {
-    "is-active": isActive
+    "is-active": isActive,
   });
   const messageClass = classNames("message", "is-medium", messageStyle);
   return (
     <div className={modalClass}>
-      <div
-        className="modal-background"
-        onClick={onCloseClick}
-        onKeyPress={onCloseClick}
-        role="link"
-        tabIndex={0}
-      />
+      <div className="modal-background" onClick={onCloseClick} onKeyPress={onCloseClick} role="button" tabIndex={0} />
       <div className="modal-content">
         <article className={messageClass}>
           <div className="message-header">
@@ -24,11 +18,7 @@ const Modal = ({ isActive, onCloseClick, messageStyle, title, subTitle }) => {
           <div className="message-body has-text-centered">{subTitle}</div>
         </article>
       </div>
-      <button
-        className="modal-close is-large"
-        aria-label="close"
-        onClick={onCloseClick}
-      />
+      <button className="modal-close is-large" aria-label="close" onClick={onCloseClick} />
     </div>
   );
 };
@@ -38,7 +28,7 @@ Modal.propTypes = {
   onCloseClick: PropTypes.func.isRequired,
   messageStyle: PropTypes.shape({}).isRequired,
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired
+  subTitle: PropTypes.string.isRequired,
 };
 
 export default Modal;

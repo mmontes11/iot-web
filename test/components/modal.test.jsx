@@ -5,13 +5,7 @@ import Modal from "components/modal";
 describe("components/modal", () => {
   const onCloseClick = jest.fn();
   const wrapper = shallow(
-    <Modal
-      isActive
-      onCloseClick={onCloseClick}
-      messageStyle={{ "is-info": true }}
-      title="Test"
-      subTitle="Test"
-    />
+    <Modal isActive onCloseClick={onCloseClick} messageStyle={{ "is-info": true }} title="Test" subTitle="Test" />,
   );
   it("renders when is active", () => {
     expect(wrapper).toMatchSnapshot();

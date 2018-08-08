@@ -22,21 +22,14 @@ class Login extends React.Component {
   };
   render() {
     const { username, password, isLoading, shouldShowError } = this.props;
-    const btnClass = classNames(
-      "button",
-      "is-block",
-      "is-primary",
-      "is-large",
-      "is-fullwidth",
-      {
-        "is-loading": isLoading
-      }
-    );
+    const btnClass = classNames("button", "is-block", "is-primary", "is-large", "is-fullwidth", {
+      "is-loading": isLoading,
+    });
     const modalMessageStyle = {
-      "is-danger": true
+      "is-danger": true,
     };
     return (
-      <section className="hero has-background-light is-fullheight">
+      <section className="hero is-fullheight">
         <div className="hero-body">
           <div className="container has-text-centered">
             <div className="column is-4 is-offset-4">
@@ -72,12 +65,7 @@ class Login extends React.Component {
                       </span>
                     </div>
                   </div>
-                  <button
-                    id="login-button"
-                    className={btnClass}
-                    onClick={this._onLoginClick}
-                    disabled={isLoading}
-                  >
+                  <button id="login-button" className={btnClass} onClick={this._onLoginClick} disabled={isLoading}>
                     Login
                   </button>
                 </form>
@@ -105,12 +93,12 @@ Login.propTypes = {
   setUsername: PropTypes.func.isRequired,
   setPassword: PropTypes.func.isRequired,
   login: PropTypes.func.isRequired,
-  setShowError: PropTypes.func.isRequired
+  setShowError: PropTypes.func.isRequired,
 };
 
 Login.defaultProps = {
   username: "",
-  password: ""
+  password: "",
 };
 
 export default connect(
@@ -118,7 +106,7 @@ export default connect(
     username: state.auth.username,
     password: state.auth.password,
     isLoading: reducerHelpers.isLoading(state),
-    shouldShowError: reducerHelpers.hasError(state) && state.auth.showError
+    shouldShowError: reducerHelpers.hasError(state) && state.auth.showError,
   }),
-  authActions
+  authActions,
 )(Login);

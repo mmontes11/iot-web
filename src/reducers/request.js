@@ -1,7 +1,7 @@
 const initialState = {
   pending: 0,
   statusCode: null,
-  error: null
+  error: null,
 };
 
 export default (state = initialState, { type, statusCode, error }) => {

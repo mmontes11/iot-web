@@ -1,21 +1,13 @@
-import {
-  IS_AUTH,
-  SET_PASSWORD,
-  SET_USERNAME,
-  SET_SHOW_ERROR
-} from "constants/actionTypes/auth";
+import { IS_AUTH, SET_PASSWORD, SET_USERNAME, SET_SHOW_ERROR } from "constants/actionTypes/auth";
 
 const initialState = {
   isAuth: false,
   username: null,
   password: null,
-  showError: true
+  showError: true,
 };
 
-export default (
-  state = initialState,
-  { type, isAuth, username, password, showError }
-) => {
+export default (state = initialState, { type, isAuth, username, password, showError }) => {
   switch (type) {
     case IS_AUTH:
       return { ...initialState, isAuth };

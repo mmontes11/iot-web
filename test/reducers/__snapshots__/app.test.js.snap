@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/app has a default state 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+}
+`;
+
+exports[`reducers/app reduces TOGGLE_HAMBURGUER_MENU 1`] = `
+Object {
+  "isHamburgerMenuExpanded": true,
+}
+`;
+
+exports[`reducers/app reduces nothing 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+}
+`;
