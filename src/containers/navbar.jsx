@@ -43,10 +43,16 @@ class Navbar extends React.Component {
         <div id="navbar-menu" className={navbarMenuClass}>
           <div className="navbar-start">
             <NavLink to="/things" className="navbar-item" activeClassName="navbar-item-active">
-              Things
+              <span className="icon">
+                <i className="fas fa-microchip" />
+              </span>
+              <span>Things</span>
             </NavLink>
             <NavLink to="/stats" className="navbar-item" activeClassName="navbar-item-active">
-              Stats
+              <span className="icon">
+                <i className="fas fa-chart-bar" />
+              </span>
+              <span>Stats</span>
             </NavLink>
           </div>
           <div className="navbar-end">

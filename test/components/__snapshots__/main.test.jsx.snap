@@ -239,7 +239,16 @@ exports[`components/main renders a main in / path 1`] = `
                                 onClick={[Function]}
                                 style={Object {}}
                               >
-                                Things
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-microchip"
+                                  />
+                                </span>
+                                <span>
+                                  Things
+                                </span>
                               </a>
                             </Link>
                           </Route>
@@ -265,7 +274,16 @@ exports[`components/main renders a main in / path 1`] = `
                                 href="/stats"
                                 onClick={[Function]}
                               >
-                                Stats
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-chart-bar"
+                                  />
+                                </span>
+                                <span>
+                                  Stats
+                                </span>
                               </a>
                             </Link>
                           </Route>
@@ -309,9 +327,7 @@ exports[`components/main renders a main in / path 1`] = `
               </Connect(Navbar)>
             </Route>
           </withRouter(Connect(Navbar))>
-          <main
-            className="container"
-          >
+          <main>
             <Switch>
               <Route
                 component={[Function]}
@@ -333,7 +349,7 @@ exports[`components/main renders a main in / path 1`] = `
                 }
                 path="/things"
               >
-                <Things
+                <withRouter(Connect(Things))
                   history={
                     Object {
                       "action": "REPLACE",
@@ -380,7 +396,127 @@ exports[`components/main renders a main in / path 1`] = `
                       "url": "/things",
                     }
                   }
-                />
+                >
+                  <Route>
+                    <Connect(Things)
+                      history={
+                        Object {
+                          "action": "REPLACE",
+                          "block": [Function],
+                          "canGo": [Function],
+                          "createHref": [Function],
+                          "entries": Array [
+                            Object {
+                              "hash": "",
+                              "pathname": "/things",
+                              "search": "",
+                              "state": undefined,
+                            },
+                          ],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "index": 0,
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/things",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/things",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/things",
+                          "url": "/things",
+                        }
+                      }
+                    >
+                      <Things
+                        getThings={[Function]}
+                        history={
+                          Object {
+                            "action": "REPLACE",
+                            "block": [Function],
+                            "canGo": [Function],
+                            "createHref": [Function],
+                            "entries": Array [
+                              Object {
+                                "hash": "",
+                                "pathname": "/things",
+                                "search": "",
+                                "state": undefined,
+                              },
+                            ],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "index": 0,
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/things",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        isLoading={false}
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/things",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/things",
+                            "url": "/things",
+                          }
+                        }
+                        selectThing={[Function]}
+                        selectedThing={null}
+                        things={Array []}
+                      >
+                        <div
+                          className="container is-fluid section"
+                        >
+                          <div
+                            className="columns"
+                          >
+                            <div
+                              className="column is-one-quarter"
+                            />
+                            <div
+                              className="column is-three-quarters"
+                            />
+                          </div>
+                        </div>
+                      </Things>
+                    </Connect(Things)>
+                  </Route>
+                </withRouter(Connect(Things))>
               </Route>
             </Switch>
           </main>
@@ -630,7 +766,16 @@ exports[`components/main renders a main in /foo path 1`] = `
                                 onClick={[Function]}
                                 style={Object {}}
                               >
-                                Things
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-microchip"
+                                  />
+                                </span>
+                                <span>
+                                  Things
+                                </span>
                               </a>
                             </Link>
                           </Route>
@@ -656,7 +801,16 @@ exports[`components/main renders a main in /foo path 1`] = `
                                 href="/stats"
                                 onClick={[Function]}
                               >
-                                Stats
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-chart-bar"
+                                  />
+                                </span>
+                                <span>
+                                  Stats
+                                </span>
                               </a>
                             </Link>
                           </Route>
@@ -700,9 +854,7 @@ exports[`components/main renders a main in /foo path 1`] = `
               </Connect(Navbar)>
             </Route>
           </withRouter(Connect(Navbar))>
-          <main
-            className="container"
-          >
+          <main>
             <Switch>
               <Route
                 component={[Function]}
@@ -724,7 +876,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                 }
                 path="/things"
               >
-                <Things
+                <withRouter(Connect(Things))
                   history={
                     Object {
                       "action": "REPLACE",
@@ -771,7 +923,127 @@ exports[`components/main renders a main in /foo path 1`] = `
                       "url": "/things",
                     }
                   }
-                />
+                >
+                  <Route>
+                    <Connect(Things)
+                      history={
+                        Object {
+                          "action": "REPLACE",
+                          "block": [Function],
+                          "canGo": [Function],
+                          "createHref": [Function],
+                          "entries": Array [
+                            Object {
+                              "hash": "",
+                              "pathname": "/things",
+                              "search": "",
+                              "state": undefined,
+                            },
+                          ],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "index": 0,
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/things",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/things",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/things",
+                          "url": "/things",
+                        }
+                      }
+                    >
+                      <Things
+                        getThings={[Function]}
+                        history={
+                          Object {
+                            "action": "REPLACE",
+                            "block": [Function],
+                            "canGo": [Function],
+                            "createHref": [Function],
+                            "entries": Array [
+                              Object {
+                                "hash": "",
+                                "pathname": "/things",
+                                "search": "",
+                                "state": undefined,
+                              },
+                            ],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "index": 0,
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/things",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        isLoading={false}
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/things",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/things",
+                            "url": "/things",
+                          }
+                        }
+                        selectThing={[Function]}
+                        selectedThing={null}
+                        things={Array []}
+                      >
+                        <div
+                          className="container is-fluid section"
+                        >
+                          <div
+                            className="columns"
+                          >
+                            <div
+                              className="column is-one-quarter"
+                            />
+                            <div
+                              className="column is-three-quarters"
+                            />
+                          </div>
+                        </div>
+                      </Things>
+                    </Connect(Things)>
+                  </Route>
+                </withRouter(Connect(Things))>
               </Route>
             </Switch>
           </main>
@@ -1019,7 +1291,16 @@ exports[`components/main renders a main in /stats path 1`] = `
                                 href="/things"
                                 onClick={[Function]}
                               >
-                                Things
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-microchip"
+                                  />
+                                </span>
+                                <span>
+                                  Things
+                                </span>
                               </a>
                             </Link>
                           </Route>
@@ -1047,7 +1328,16 @@ exports[`components/main renders a main in /stats path 1`] = `
                                 onClick={[Function]}
                                 style={Object {}}
                               >
-                                Stats
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-chart-bar"
+                                  />
+                                </span>
+                                <span>
+                                  Stats
+                                </span>
                               </a>
                             </Link>
                           </Route>
@@ -1091,9 +1381,7 @@ exports[`components/main renders a main in /stats path 1`] = `
               </Connect(Navbar)>
             </Route>
           </withRouter(Connect(Navbar))>
-          <main
-            className="container"
-          >
+          <main>
             <Switch>
               <Route
                 component={[Function]}
@@ -1412,7 +1700,16 @@ exports[`components/main renders a main in /things path 1`] = `
                                 onClick={[Function]}
                                 style={Object {}}
                               >
-                                Things
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-microchip"
+                                  />
+                                </span>
+                                <span>
+                                  Things
+                                </span>
                               </a>
                             </Link>
                           </Route>
@@ -1438,7 +1735,16 @@ exports[`components/main renders a main in /things path 1`] = `
                                 href="/stats"
                                 onClick={[Function]}
                               >
-                                Stats
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-chart-bar"
+                                  />
+                                </span>
+                                <span>
+                                  Stats
+                                </span>
                               </a>
                             </Link>
                           </Route>
@@ -1482,9 +1788,7 @@ exports[`components/main renders a main in /things path 1`] = `
               </Connect(Navbar)>
             </Route>
           </withRouter(Connect(Navbar))>
-          <main
-            className="container"
-          >
+          <main>
             <Switch>
               <Route
                 component={[Function]}
@@ -1506,7 +1810,7 @@ exports[`components/main renders a main in /things path 1`] = `
                 }
                 path="/things"
               >
-                <Things
+                <withRouter(Connect(Things))
                   history={
                     Object {
                       "action": "POP",
@@ -1553,7 +1857,127 @@ exports[`components/main renders a main in /things path 1`] = `
                       "url": "/things",
                     }
                   }
-                />
+                >
+                  <Route>
+                    <Connect(Things)
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "canGo": [Function],
+                          "createHref": [Function],
+                          "entries": Array [
+                            Object {
+                              "hash": "",
+                              "pathname": "/things",
+                              "search": "",
+                              "state": undefined,
+                            },
+                          ],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "index": 0,
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/things",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/things",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/things",
+                          "url": "/things",
+                        }
+                      }
+                    >
+                      <Things
+                        getThings={[Function]}
+                        history={
+                          Object {
+                            "action": "POP",
+                            "block": [Function],
+                            "canGo": [Function],
+                            "createHref": [Function],
+                            "entries": Array [
+                              Object {
+                                "hash": "",
+                                "pathname": "/things",
+                                "search": "",
+                                "state": undefined,
+                              },
+                            ],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "index": 0,
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/things",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        isLoading={false}
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/things",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/things",
+                            "url": "/things",
+                          }
+                        }
+                        selectThing={[Function]}
+                        selectedThing={null}
+                        things={Array []}
+                      >
+                        <div
+                          className="container is-fluid section"
+                        >
+                          <div
+                            className="columns"
+                          >
+                            <div
+                              className="column is-one-quarter"
+                            />
+                            <div
+                              className="column is-three-quarters"
+                            />
+                          </div>
+                        </div>
+                      </Things>
+                    </Connect(Things)>
+                  </Route>
+                </withRouter(Connect(Things))>
               </Route>
             </Switch>
           </main>

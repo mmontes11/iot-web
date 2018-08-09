@@ -5,4 +5,7 @@ jest.mock("lib/iotClient", () => ({
     setCredentials: () => undefined,
     logout: () => Promise.resolve(),
   },
+  thingsService: {
+    getThings: () => Promise.resolve({ statusCode: 200, body: { things: [] } }),
+  },
 }));

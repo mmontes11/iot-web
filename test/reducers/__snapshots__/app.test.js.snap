@@ -3,6 +3,7 @@
 exports[`reducers/app has a default state 1`] = `
 Object {
   "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": false,
 }
 `;
 

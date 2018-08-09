@@ -6,12 +6,17 @@ exports[`reducers/index has a default state 1`] = `
 Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
+    "isMapDialogOpened": false,
   },
   "auth": false,
   "request": Object {
     "error": null,
     "pending": 0,
     "statusCode": null,
+  },
+  "things": Object {
+    "loadedThings": Array [],
+    "selectedThing": null,
   },
 }
 `;
@@ -20,9 +25,14 @@ exports[`reducers/index reduces nothing 1`] = `
 Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
+    "isMapDialogOpened": false,
   },
   "auth": "AUTH",
   "request": "REQUEST",
+  "things": Object {
+    "loadedThings": Array [],
+    "selectedThing": null,
+  },
 }
 `;
 
@@ -30,8 +40,13 @@ exports[`reducers/index reduces other actions 1`] = `
 Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
+    "isMapDialogOpened": false,
   },
   "auth": "STATE",
   "request": "REQUEST",
+  "things": Object {
+    "loadedThings": Array [],
+    "selectedThing": null,
+  },
 }
 `;

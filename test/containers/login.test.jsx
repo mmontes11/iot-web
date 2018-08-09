@@ -1,28 +1,14 @@
 import React from "react";
 import { mount } from "enzyme";
-import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
-import rootReducer from "reducers";
 import Login from "containers/login";
+import { initialState } from "../helpers/redux";
 
 describe("containers/login", () => {
   it("renders login in initial state", () => {
-    const state = {
-      auth: {
-        isAuth: false,
-        username: null,
-        password: null,
-        showError: true,
-      },
-      request: {
-        pending: 0,
-        statusCode: null,
-        error: null,
-      },
-    };
-    const store = configureStore([])(state);
+    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
       <Provider store={store}>
         <Login />
@@ -32,6 +18,7 @@ describe("containers/login", () => {
   });
   it("renders login in loading state", () => {
     const state = {
+      ...initialState,
       auth: {
         isAuth: true,
         username: "username",
@@ -44,7 +31,7 @@ describe("containers/login", () => {
         error: null,
       },
     };
-    const store = configureStore([])(state);
+    const store = configureStore([thunk])(state);
     const wrapper = mount(
       <Provider store={store}>
         <Login />
@@ -54,6 +41,7 @@ describe("containers/login", () => {
   });
   it("renders login in error state", () => {
     const state = {
+      ...initialState,
       auth: {
         isAuth: true,
         username: "username",
@@ -66,7 +54,7 @@ describe("containers/login", () => {
         error: new Error(),
       },
     };
-    const store = configureStore([])(state);
+    const store = configureStore([thunk])(state);
     const wrapper = mount(
       <Provider store={store}>
         <Login />
@@ -75,7 +63,7 @@ describe("containers/login", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("simulates closing dialog", () => {
-    const store = createStore(rootReducer, applyMiddleware(thunk));
+    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
       <Provider store={store}>
         <Login />
@@ -87,7 +75,7 @@ describe("containers/login", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("simulates successful login", () => {
-    const store = createStore(rootReducer, applyMiddleware(thunk));
+    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
       <Provider store={store}>
         <Login />

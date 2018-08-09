@@ -481,11 +481,12 @@ exports[`containers/login simulates closing dialog 1`] = `
 <Provider
   store={
     Object {
+      "clearActions": [Function],
       "dispatch": [Function],
+      "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
       "subscribe": [Function],
-      Symbol(observable): [Function],
     }
   }
 >
@@ -643,13 +644,17 @@ Object {
   "auth": Object {
     "isAuth": false,
     "password": null,
-    "showError": false,
+    "showError": true,
     "username": null,
   },
   "request": Object {
     "error": null,
     "pending": 0,
     "statusCode": null,
+  },
+  "things": Object {
+    "loadedThings": Array [],
+    "selectedThing": null,
   },
 }
 `;
@@ -658,11 +663,12 @@ exports[`containers/login simulates closing dialog 3`] = `
 <Provider
   store={
     Object {
+      "clearActions": [Function],
       "dispatch": [Function],
+      "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
       "subscribe": [Function],
-      Symbol(observable): [Function],
     }
   }
 >
@@ -816,11 +822,12 @@ exports[`containers/login simulates successful login 1`] = `
 <Provider
   store={
     Object {
+      "clearActions": [Function],
       "dispatch": [Function],
+      "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
       "subscribe": [Function],
-      Symbol(observable): [Function],
     }
   }
 >
@@ -977,14 +984,18 @@ Object {
   },
   "auth": Object {
     "isAuth": false,
-    "password": "password",
+    "password": null,
     "showError": true,
-    "username": "username",
+    "username": null,
   },
   "request": Object {
     "error": null,
-    "pending": 1,
+    "pending": 0,
     "statusCode": null,
+  },
+  "things": Object {
+    "loadedThings": Array [],
+    "selectedThing": null,
   },
 }
 `;
@@ -993,26 +1004,27 @@ exports[`containers/login simulates successful login 3`] = `
 <Provider
   store={
     Object {
+      "clearActions": [Function],
       "dispatch": [Function],
+      "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
       "subscribe": [Function],
-      Symbol(observable): [Function],
     }
   }
 >
   <Connect(Login)>
     <Login
       isAuth={[Function]}
-      isLoading={true}
+      isLoading={false}
       login={[Function]}
       logout={[Function]}
-      password="password"
+      password={null}
       setPassword={[Function]}
       setShowError={[Function]}
       setUsername={[Function]}
       shouldShowError={false}
-      username="username"
+      username={null}
     >
       <section
         className="hero is-fullheight"
@@ -1046,7 +1058,7 @@ exports[`containers/login simulates successful login 3`] = `
                         id="username-input"
                         onChange={[Function]}
                         placeholder="Username"
-                        value="username"
+                        value=""
                       />
                       <span
                         className="icon is-large is-left"
@@ -1069,7 +1081,7 @@ exports[`containers/login simulates successful login 3`] = `
                         onChange={[Function]}
                         placeholder="Password"
                         type="password"
-                        value="password"
+                        value=""
                       />
                       <span
                         className="icon is-large is-left"
@@ -1081,8 +1093,8 @@ exports[`containers/login simulates successful login 3`] = `
                     </div>
                   </div>
                   <button
-                    className="button is-block is-primary is-large is-fullwidth is-loading"
-                    disabled={true}
+                    className="button is-block is-primary is-large is-fullwidth"
+                    disabled={false}
                     id="login-button"
                     onClick={[Function]}
                   >
