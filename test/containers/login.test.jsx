@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
 import Login from "containers/login";
-import { initialState } from "../helpers/redux";
+import { initialState } from "../constants/index";
 
 describe("containers/login", () => {
   it("renders login in initial state", () => {

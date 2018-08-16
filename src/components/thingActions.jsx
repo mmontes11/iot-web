@@ -1,27 +1,39 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const ThingActions = ({ thing, history }) => (
+const ThingActions = ({ googleMapsUrl, onStatsClick }) => (
   <p className="buttons is-horizontal-center">
-    <a className="button is-medium" href={thing.googleMapsUrl} target="_blank" rel="noopener noreferrer">
-      <span className="icon is-medium">
-        <i className="fas fa-map-marked" />
-      </span>
-    </a>
-    <button className="button is-medium" onClick={() => history.push("/stats")}>
-      <span className="icon is-medium">
-        <i className="fas fa-chart-bar" />
-      </span>
-    </button>
+    {googleMapsUrl && (
+      <a
+        id="google-maps-link"
+        className="button is-medium"
+        href={googleMapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span className="icon is-medium">
+          <i className="fas fa-map-marked" />
+        </span>
+      </a>
+    )}
+    {onStatsClick && (
+      <button id="stats-button" className="button is-medium" onClick={() => onStatsClick()}>
+        <span className="icon is-medium">
+          <i className="fas fa-chart-bar" />
+        </span>
+      </button>
+    )}
   </p>
 );
 
 ThingActions.propTypes = {
-  thing: PropTypes.shape({}).isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
+  googleMapsUrl: PropTypes.string,
+  onStatsClick: PropTypes.func,
 };
 
-export default withRouter(ThingActions);
+ThingActions.defaultProps = {
+  googleMapsUrl: null,
+  onStatsClick: null,
+};
+
+export default ThingActions;

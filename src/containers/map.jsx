@@ -38,16 +38,18 @@ Map.defaultProps = {
 };
 
 const withConnect = connect(
-  state => ({ isMapDialogOpened: state.app.isMapDialogOpened }),
+  state => ({ isDialogOpened: state.app.isMapDialogOpened }),
   { toggleDialog: toggleMapDialog },
 );
 
 const withGoogleMapProps = withProps(props => {
   const point = props.marker && props.marker.point;
+  let maybeKey = "";
+  if (process.env.NODE_ENV === "PRODUCTION") {
+    maybeKey = `&key=${process.env.GOOGLE_MAPS_KEY}`;
+  }
   return {
-    googleMapURL: `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${
-      process.env.GOOGLE_MAPS_KEY
-    }&libraries=geometry,drawing,places`,
+    googleMapURL: `https://maps.googleapis.com/maps/api/js?v=3.exp${maybeKey}&libraries=geometry,drawing,places`,
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: props.containerElement || <div className="map" />,
     mapElement: <div style={{ height: `100%` }} />,

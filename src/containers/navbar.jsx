@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { withRouter, NavLink } from "react-router-dom";
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import { compose } from "recompose";
 import { logout } from "actions/auth";
 import { toggleHamburgerMenu } from "actions/app";
 
@@ -81,11 +82,14 @@ Navbar.propTypes = {
   toggleHamburgerMenu: PropTypes.func.isRequired,
 };
 
-export default withRouter(
-  connect(
-    state => ({
-      isHamburgerMenuExpanded: state.app.isHamburgerMenuExpanded,
-    }),
-    { logout, toggleHamburgerMenu },
-  )(Navbar),
+const withConnect = connect(
+  state => ({
+    isHamburgerMenuExpanded: state.app.isHamburgerMenuExpanded,
+  }),
+  { logout, toggleHamburgerMenu },
 );
+
+export default compose(
+  withRouter,
+  withConnect,
+)(Navbar);

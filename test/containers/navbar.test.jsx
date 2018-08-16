@@ -5,7 +5,7 @@ import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
 import { MemoryRouter } from "react-router-dom";
 import Navbar from "containers/navbar";
-import { initialState } from "../helpers/redux";
+import { initialState } from "../constants/index";
 
 describe("containers/navbar", () => {
   it("renders navbar in initial state", () => {
@@ -34,7 +34,6 @@ describe("containers/navbar", () => {
         </Provider>
       </MemoryRouter>,
     );
-
     expect(wrapper).toMatchSnapshot();
   });
   it("simulates a click in hamburger menu button", () => {
@@ -61,10 +60,8 @@ describe("containers/navbar", () => {
         </Provider>
       </MemoryRouter>,
     );
-
     const logoutButton = wrapper.find("#logout-button");
     logoutButton.first().simulate("click");
-
     expect(store.getState().auth.isAuth).toBeFalsy();
     expect(store.getState()).toMatchSnapshot();
   });

@@ -640,6 +640,7 @@ exports[`containers/login simulates closing dialog 2`] = `
 Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
+    "isMapDialogOpened": false,
   },
   "auth": Object {
     "isAuth": false,
@@ -981,6 +982,7 @@ exports[`containers/login simulates successful login 2`] = `
 Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
+    "isMapDialogOpened": false,
   },
   "auth": Object {
     "isAuth": false,

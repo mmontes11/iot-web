@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/tagList renders nothing when no tags are specified 1`] = `""`;
+
+exports[`components/tagList renders tags 1`] = `
+<div
+  className="tag-list"
+>
+  <p
+    className="tag-list-label is-6"
+  >
+    <strong>
+      foo
+    </strong>
+  </p>
+  <div
+    className="tags"
+  >
+    <span
+      className="tag is-warning"
+      key="Zm9v"
+    >
+      foo
+    </span>
+    <span
+      className="tag is-warning"
+      key="YmFy"
+    >
+      bar
+    </span>
+  </div>
+</div>
+`;
+
+exports[`components/tagList renders tags without label 1`] = `
+<div
+  className="tag-list"
+>
+  <div
+    className="tags"
+  >
+    <span
+      className="tag is-warning"
+      key="Zm9v"
+    >
+      foo
+    </span>
+    <span
+      className="tag is-warning"
+      key="YmFy"
+    >
+      bar
+    </span>
+  </div>
+</div>
+`;
+
+exports[`components/tagList renders tags without style 1`] = `
+<div
+  className="tag-list"
+>
+  <p
+    className="tag-list-label is-6"
+  >
+    <strong>
+      foo
+    </strong>
+  </p>
+  <div
+    className="tags"
+  >
+    <span
+      className="tag"
+      key="Zm9v"
+    >
+      foo
+    </span>
+    <span
+      className="tag"
+      key="YmFy"
+    >
+      bar
+    </span>
+  </div>
+</div>
+`;

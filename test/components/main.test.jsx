@@ -5,7 +5,7 @@ import { MemoryRouter } from "react-router-dom";
 import Main from "components/main";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
-import { initialState } from "../helpers/redux";
+import { initialState } from "../constants/index";
 
 describe("components/main", () => {
   it("renders a main in / path", () => {
@@ -17,12 +17,10 @@ describe("components/main", () => {
         </Provider>
       </MemoryRouter>,
     );
-
     expect(wrapper.find("Things")).toHaveLength(1);
     expect(wrapper.find("Stats")).toHaveLength(0);
     expect(wrapper).toMatchSnapshot();
   });
-
   it("renders a main in /foo path", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(
@@ -37,7 +35,6 @@ describe("components/main", () => {
     expect(wrapper.find("Stats")).toHaveLength(0);
     expect(wrapper).toMatchSnapshot();
   });
-
   it("renders a main in /things path", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(
@@ -47,12 +44,10 @@ describe("components/main", () => {
         </Provider>
       </MemoryRouter>,
     );
-
     expect(wrapper.find("Things")).toHaveLength(1);
     expect(wrapper.find("Stats")).toHaveLength(0);
     expect(wrapper).toMatchSnapshot();
   });
-
   it("renders a main in /stats path", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(
@@ -62,7 +57,6 @@ describe("components/main", () => {
         </Provider>
       </MemoryRouter>,
     );
-
     expect(wrapper.find("Things")).toHaveLength(0);
     expect(wrapper.find("Stats")).toHaveLength(1);
     expect(wrapper).toMatchSnapshot();

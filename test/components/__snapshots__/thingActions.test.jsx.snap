@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/thingActions renders 1`] = `
+<p
+  className="buttons is-horizontal-center"
+>
+  <a
+    className="button is-medium"
+    href="https://www.google.es/maps"
+    id="google-maps-link"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <span
+      className="icon is-medium"
+    >
+      <i
+        className="fas fa-map-marked"
+      />
+    </span>
+  </a>
+  <button
+    className="button is-medium"
+    id="stats-button"
+    onClick={[Function]}
+  >
+    <span
+      className="icon is-medium"
+    >
+      <i
+        className="fas fa-chart-bar"
+      />
+    </span>
+  </button>
+</p>
+`;
+
+exports[`components/thingActions renders without actions 1`] = `
+<p
+  className="buttons is-horizontal-center"
+/>
+`;

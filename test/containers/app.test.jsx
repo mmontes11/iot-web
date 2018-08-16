@@ -4,7 +4,7 @@ import configureStore from "redux-mock-store";
 import { MemoryRouter } from "react-router-dom";
 import thunk from "redux-thunk";
 import App from "containers/app";
-import { initialState } from "../helpers/redux";
+import { initialState } from "../constants/index";
 
 describe("containers/app", () => {
   it("renders the app without auth", () => {
@@ -16,19 +16,46 @@ describe("containers/app", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders the app with auth", () => {
-    const state = {
-      ...initialState,
-      auth: {
-        isAuth: true,
-        username: null,
-        password: null,
-        showError: true,
-      },
-    };
-    const store = configureStore([thunk])(state);
+  const stateWithAuth = {
+    ...initialState,
+    auth: {
+      isAuth: true,
+      username: null,
+      password: null,
+      showError: true,
+    },
+  };
+  it("renders the app with auth in /", () => {
+    const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <MemoryRouter initialEntries={["/"]} keyLength={0}>
+        <App store={store} />
+      </MemoryRouter>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("renders the app with auth in /foo", () => {
+    const store = configureStore([thunk])(stateWithAuth);
+    const wrapper = mount(
+      <MemoryRouter initialEntries={["/foo"]} keyLength={0}>
+        <App store={store} />
+      </MemoryRouter>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("renders the app with auth in /things", () => {
+    const store = configureStore([thunk])(stateWithAuth);
+    const wrapper = mount(
+      <MemoryRouter initialEntries={["/things"]} keyLength={0}>
+        <App store={store} />
+      </MemoryRouter>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("renders the app with auth in /stats", () => {
+    const store = configureStore([thunk])(stateWithAuth);
+    const wrapper = mount(
+      <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
         <App store={store} />
       </MemoryRouter>,
     );

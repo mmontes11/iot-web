@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/thingDetail renders 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-content"
+  >
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-three-fifths has-text-centered"
+      >
+        <p
+          className="title is-3 has-text-primary is-spaced"
+        >
+          foo
+        </p>
+        <p
+          className="title is-6"
+        >
+          <strong>
+            IP address:
+          </strong>
+           
+          <a
+            href="http://http://192.168.0.20"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            http://192.168.0.20
+          </a>
+        </p>
+        <p
+          className="title is-6"
+        >
+          <strong>
+            MQTT topic:
+          </strong>
+           
+          <span
+            className="has-text-info"
+          >
+            bar
+          </span>
+        </p>
+        <p
+          className="title is-6"
+        >
+          <strong>
+            Last observation:
+          </strong>
+           
+          <span
+            className="has-text-info"
+          >
+            1970-1-1 00:00:00
+          </span>
+        </p>
+        <TagList
+          label="Events:"
+          tagStyle="is-warning"
+          tags={
+            Array [
+              "foo",
+              "bar",
+            ]
+          }
+        />
+        <TagList
+          label="Measurements:"
+          tagStyle="is-warning"
+          tags={
+            Array [
+              "bar",
+              "foo",
+            ]
+          }
+        />
+        <ThingActions
+          googleMapsUrl="https://www.google.es/maps"
+          onStatsClick={[Function]}
+        />
+      </div>
+      <div
+        className="column is-two-fifths"
+      >
+        <Connect(withProps(withScriptjs(withGoogleMap(Map))))
+          marker={
+            Object {
+              "label": "foo",
+              "point": Object {
+                "lat": 40.21339,
+                "lng": -40.58457,
+              },
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

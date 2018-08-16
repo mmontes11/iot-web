@@ -10,11 +10,20 @@ Object {
 exports[`reducers/app reduces TOGGLE_HAMBURGUER_MENU 1`] = `
 Object {
   "isHamburgerMenuExpanded": true,
+  "isMapDialogOpened": false,
+}
+`;
+
+exports[`reducers/app reduces TOGGLE_MAP_DIALOG 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": true,
 }
 `;
 
 exports[`reducers/app reduces nothing 1`] = `
 Object {
   "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": false,
 }
 `;

@@ -5,7 +5,7 @@ import ThingActions from "components/thingActions";
 import Map from "containers/map";
 import { pointToLatLng } from "helpers/geometry";
 
-const ThingDetail = ({ thing }) => (
+const ThingDetail = ({ thing, onStatsClick }) => (
   <div className="card">
     <div className="card-content">
       <div className="columns">
@@ -26,7 +26,7 @@ const ThingDetail = ({ thing }) => (
           </p>
           <TagList label="Events:" tags={thing.supportedObservationTypes.event} tagStyle="is-warning" />
           <TagList label="Measurements:" tags={thing.supportedObservationTypes.measurement} tagStyle="is-warning" />
-          <ThingActions thing={thing} />
+          <ThingActions googleMapsUrl={thing.googleMapsUrl} onStatsClick={() => onStatsClick()} />
         </div>
         <div className="column is-two-fifths">
           <Map marker={{ label: thing.name, point: pointToLatLng(thing.geometry) }} />
@@ -38,6 +38,11 @@ const ThingDetail = ({ thing }) => (
 
 ThingDetail.propTypes = {
   thing: PropTypes.shape({}).isRequired,
+  onStatsClick: PropTypes.func,
+};
+
+ThingDetail.defaultProps = {
+  onStatsClick: null,
 };
 
 export default ThingDetail;

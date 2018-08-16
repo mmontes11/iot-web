@@ -508,9 +508,6 @@ exports[`components/main renders a main in / path 1`] = `
                             <div
                               className="column is-one-quarter"
                             />
-                            <div
-                              className="column is-three-quarters"
-                            />
                           </div>
                         </div>
                       </Things>
@@ -1034,9 +1031,6 @@ exports[`components/main renders a main in /foo path 1`] = `
                           >
                             <div
                               className="column is-one-quarter"
-                            />
-                            <div
-                              className="column is-three-quarters"
                             />
                           </div>
                         </div>
@@ -1968,9 +1962,6 @@ exports[`components/main renders a main in /things path 1`] = `
                           >
                             <div
                               className="column is-one-quarter"
-                            />
-                            <div
-                              className="column is-three-quarters"
                             />
                           </div>
                         </div>
