@@ -8,6 +8,10 @@ $info: #70C1B3;
 $success: #B2DBBF;
 $warning: #F3FFBD;
 $danger: #FF1654;
+$link: $info;
+$link-hover: $success;
+$selected: rgba($primary, 0.2);
+$navbar-box-shadow-color: hsl(0, 0%, 90%);
 
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
@@ -17,5 +21,6 @@ $danger: #FF1654;
 @import "../../node_modules/bulma/sass/components/modal.sass";
 @import "../../node_modules/bulma/sass/components/message.sass";
 @import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/components/card.sass";
 
 @import "./style.scss";

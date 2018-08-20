@@ -1,3 +1,40 @@
+html {
+  overflow: auto;
+  background-color: $light;
+}
+
+.is-horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+.is-selected {
+  background-color: $selected;
+}
+
 .navbar-item-active {
   color: $primary;
+}
+
+.thing-item-card {
+  @extend .card;
+  cursor: pointer;
+  outline: none;
+}
+
+.tag-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  & .tag-list-label {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.map {
+  height: 20rem;
+  @include from($desktop) {
+    height: 100%;
+  }
 }

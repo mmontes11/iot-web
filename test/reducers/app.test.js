@@ -1,17 +1,22 @@
+import deepFreeze from "deep-freeze";
 import appReducer from "reducers/app";
-import { TOGGLE_HAMBURGER_MENU } from "constants/actionTypes/app";
+import { TOGGLE_HAMBURGER_MENU, TOGGLE_MAP_DIALOG } from "constants/actionTypes/app";
+import { initialState } from "../constants/index";
+
+const appInitialState = initialState.app;
+deepFreeze(appInitialState);
 
 describe("reducers/app", () => {
-  const initialState = {
-    isHamburgerMenuExpanded: false,
-  };
   it("has a default state", () => {
     expect(appReducer(undefined, { type: "@init" })).toMatchSnapshot();
   });
   it("reduces nothing", () => {
-    expect(appReducer(initialState, { type: "WHATEVER" })).toMatchSnapshot();
+    expect(appReducer(appInitialState, { type: "WHATEVER" })).toMatchSnapshot();
   });
   it("reduces TOGGLE_HAMBURGUER_MENU", () => {
-    expect(appReducer(initialState, { type: TOGGLE_HAMBURGER_MENU })).toMatchSnapshot();
+    expect(appReducer(appInitialState, { type: TOGGLE_HAMBURGER_MENU })).toMatchSnapshot();
+  });
+  it("reduces TOGGLE_MAP_DIALOG", () => {
+    expect(appReducer(appInitialState, { type: TOGGLE_MAP_DIALOG })).toMatchSnapshot();
   });
 });

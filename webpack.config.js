@@ -76,6 +76,7 @@ module.exports = {
         IOT_SERVER_URL: JSON.stringify(process.env.IOT_SERVER_URL),
         IOT_SERVER_BASIC_AUTH_USERNAME: JSON.stringify(process.env.IOT_SERVER_BASIC_AUTH_USERNAME),
         IOT_SERVER_BASIC_AUTH_PASSWORD: JSON.stringify(process.env.IOT_SERVER_BASIC_AUTH_PASSWORD),
+        GOOGLE_MAPS_KEY: JSON.stringify(process.env.GOOGLE_MAPS_KEY),
       },
     }),
   ],

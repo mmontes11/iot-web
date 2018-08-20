@@ -1,4 +1,4 @@
-import { toggleHamburgerMenu } from "actions/app";
+import { toggleHamburgerMenu, toggleMapDialog } from "actions/app";
 
 describe("actions/auth", () => {
   const testThunk = thunk => {
@@ -7,7 +7,10 @@ describe("actions/auth", () => {
     expect(thunk).toBeAThunk();
     expect(thunk).toMatchSnapshot();
   };
-  it("dispatches an toggleHamburgerMenu action", () => {
+  it("dispatches a toggleHamburgerMenu action", () => {
     testThunk(toggleHamburgerMenu());
+  });
+  it("dispatches a toggleMapDialog action", () => {
+    testThunk(toggleMapDialog());
   });
 });
