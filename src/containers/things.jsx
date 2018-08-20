@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
+import { compose } from "recompose";
 import PropTypes from "prop-types";
 import ThingItem from "components/thingItem";
 import ThingDetail from "components/thingDetail";
@@ -66,16 +67,19 @@ Things.defaultProps = {
   things: [],
 };
 
-export default withRouter(
-  connect(
-    state => ({
-      isLoading: reducerHelpers.isLoading(state),
-      things: state.things.loadedThings,
-      selectedThing: state.things.selectedThing,
-    }),
-    {
-      getThings: thingActions.getThings,
-      selectThing: thingActions.selectThing,
-    },
-  )(Things),
+const withConnect = connect(
+  state => ({
+    isLoading: reducerHelpers.isLoading(state),
+    things: state.things.loadedThings,
+    selectedThing: state.things.selectedThing,
+  }),
+  {
+    getThings: thingActions.getThings,
+    selectThing: thingActions.selectThing,
+  },
 );
+
+export default compose(
+  withRouter,
+  withConnect,
+)(Things);

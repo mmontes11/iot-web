@@ -1,12 +1,7 @@
 import PropTypes from "prop-types";
 
 export const pointToLatLng = geometry => {
-  if (
-    geometry == null ||
-    !geometry.coordinates ||
-    geometry.type == null ||
-    geometry.type !== "Point"
-  ) {
+  if (geometry == null || !geometry.coordinates || geometry.type == null || geometry.type !== "Point") {
     return null;
   }
   const [lng, lat] = geometry.coordinates;
