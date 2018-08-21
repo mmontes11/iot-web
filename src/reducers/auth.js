@@ -1,4 +1,5 @@
 import { IS_AUTH, SET_PASSWORD, SET_USERNAME, SET_SHOW_ERROR } from "constants/actionTypes/auth";
+import { RESET } from "constants/actionTypes/common";
 
 const initialState = {
   isAuth: false,
@@ -17,6 +18,8 @@ export default (state = initialState, { type, isAuth, username, password, showEr
       return { ...state, password };
     case SET_SHOW_ERROR:
       return { ...state, showError };
+    case RESET:
+      return { ...initialState, isAuth: state.isAuth };
     default:
       return state;
   }

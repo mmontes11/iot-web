@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/navbar renders navbar in initial state 1`] = `
+exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
 <MemoryRouter
   keyLength={0}
 >
@@ -48,9 +48,9 @@ exports[`containers/navbar renders navbar in initial state 1`] = `
         }
       }
     >
-      <withRouter(Connect(Navbar))>
+      <withRouter(Connect(Connect(ResetOnUnmount)))>
         <Route>
-          <Connect(Navbar)
+          <Connect(Connect(ResetOnUnmount))
             history={
               Object {
                 "action": "POP",
@@ -98,7 +98,7 @@ exports[`containers/navbar renders navbar in initial state 1`] = `
               }
             }
           >
-            <Navbar
+            <Connect(ResetOnUnmount)
               history={
                 Object {
                   "action": "POP",
@@ -149,173 +149,279 @@ exports[`containers/navbar renders navbar in initial state 1`] = `
               }
               toggleHamburgerMenu={[Function]}
             >
-              <nav
-                className="navbar has-shadow is-spaced"
+              <ResetOnUnmount
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                isHamburgerMenuExpanded={false}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                logout={[Function]}
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                reset={[Function]}
+                toggleHamburgerMenu={[Function]}
               >
-                <div
-                  className="navbar-brand"
+                <Navbar
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  isHamburgerMenuExpanded={false}
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  logout={[Function]}
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                  reset={[Function]}
+                  toggleHamburgerMenu={[Function]}
                 >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-item"
-                    to="/"
-                  >
-                    <Route
-                      path="\\\\/"
-                    >
-                      <Link
-                        aria-current="page"
-                        className="navbar-item active"
-                        replace={false}
-                        style={Object {}}
-                        to="/"
-                      >
-                        <a
-                          aria-current="page"
-                          className="navbar-item active"
-                          href="/"
-                          onClick={[Function]}
-                          style={Object {}}
-                        >
-                          <h1
-                            className="title"
-                          >
-                            IoT
-                          </h1>
-                        </a>
-                      </Link>
-                    </Route>
-                  </NavLink>
-                  <div
-                    className="navbar-burger burger"
-                    data-target="navbar-menu"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </div>
-                <div
-                  className="navbar-menu"
-                  id="navbar-menu"
-                >
-                  <div
-                    className="navbar-start"
-                  >
-                    <NavLink
-                      activeClassName="navbar-item-active"
-                      aria-current="page"
-                      className="navbar-item"
-                      to="/things"
-                    >
-                      <Route
-                        path="\\\\/things"
-                      >
-                        <Link
-                          aria-current={null}
-                          className="navbar-item"
-                          replace={false}
-                          to="/things"
-                        >
-                          <a
-                            aria-current={null}
-                            className="navbar-item"
-                            href="/things"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="icon"
-                            >
-                              <i
-                                className="fas fa-microchip"
-                              />
-                            </span>
-                            <span>
-                              Things
-                            </span>
-                          </a>
-                        </Link>
-                      </Route>
-                    </NavLink>
-                    <NavLink
-                      activeClassName="navbar-item-active"
-                      aria-current="page"
-                      className="navbar-item"
-                      to="/stats"
-                    >
-                      <Route
-                        path="\\\\/stats"
-                      >
-                        <Link
-                          aria-current={null}
-                          className="navbar-item"
-                          replace={false}
-                          to="/stats"
-                        >
-                          <a
-                            aria-current={null}
-                            className="navbar-item"
-                            href="/stats"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="icon"
-                            >
-                              <i
-                                className="fas fa-chart-bar"
-                              />
-                            </span>
-                            <span>
-                              Stats
-                            </span>
-                          </a>
-                        </Link>
-                      </Route>
-                    </NavLink>
-                  </div>
-                  <div
-                    className="navbar-end"
+                  <nav
+                    className="navbar has-shadow is-spaced"
                   >
                     <div
-                      className="navbar-item"
+                      className="navbar-brand"
                     >
-                      <div
-                        className="field"
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="navbar-item"
+                        to="/"
                       >
-                        <p
-                          className="control"
+                        <Route
+                          path="\\\\/"
                         >
-                          <button
-                            className="button is-primary"
-                            id="logout-button"
-                            onClick={[Function]}
+                          <Link
+                            aria-current="page"
+                            className="navbar-item active"
+                            replace={false}
+                            style={Object {}}
+                            to="/"
                           >
-                            <span
-                              className="icon"
+                            <a
+                              aria-current="page"
+                              className="navbar-item active"
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
                             >
-                              <i
-                                className="fa fa-user"
-                              />
-                            </span>
-                            <span>
-                              Logout
-                            </span>
-                          </button>
-                        </p>
+                              <h1
+                                className="title"
+                              >
+                                IoT
+                              </h1>
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
+                      <div
+                        className="navbar-burger burger"
+                        data-target="navbar-menu"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <span />
+                        <span />
+                        <span />
                       </div>
                     </div>
-                  </div>
-                </div>
-              </nav>
-            </Navbar>
-          </Connect(Navbar)>
+                    <div
+                      className="navbar-menu"
+                      id="navbar-menu"
+                    >
+                      <div
+                        className="navbar-start"
+                      >
+                        <NavLink
+                          activeClassName="navbar-item-active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/things"
+                        >
+                          <Route
+                            path="\\\\/things"
+                          >
+                            <Link
+                              aria-current={null}
+                              className="navbar-item"
+                              replace={false}
+                              to="/things"
+                            >
+                              <a
+                                aria-current={null}
+                                className="navbar-item"
+                                href="/things"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-microchip"
+                                  />
+                                </span>
+                                <span>
+                                  Things
+                                </span>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                        <NavLink
+                          activeClassName="navbar-item-active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/stats"
+                        >
+                          <Route
+                            path="\\\\/stats"
+                          >
+                            <Link
+                              aria-current={null}
+                              className="navbar-item"
+                              replace={false}
+                              to="/stats"
+                            >
+                              <a
+                                aria-current={null}
+                                className="navbar-item"
+                                href="/stats"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-chart-bar"
+                                  />
+                                </span>
+                                <span>
+                                  Stats
+                                </span>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                      </div>
+                      <div
+                        className="navbar-end"
+                      >
+                        <div
+                          className="navbar-item"
+                        >
+                          <div
+                            className="field"
+                          >
+                            <p
+                              className="control"
+                            >
+                              <button
+                                className="button is-primary"
+                                id="logout-button"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fa fa-user"
+                                  />
+                                </span>
+                                <span>
+                                  Logout
+                                </span>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                </Navbar>
+              </ResetOnUnmount>
+            </Connect(ResetOnUnmount)>
+          </Connect(Connect(ResetOnUnmount))>
         </Route>
-      </withRouter(Connect(Navbar))>
+      </withRouter(Connect(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -369,9 +475,9 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
         }
       }
     >
-      <withRouter(Connect(Navbar))>
+      <withRouter(Connect(Connect(ResetOnUnmount)))>
         <Route>
-          <Connect(Navbar)
+          <Connect(Connect(ResetOnUnmount))
             history={
               Object {
                 "action": "POP",
@@ -419,7 +525,7 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
               }
             }
           >
-            <Navbar
+            <Connect(ResetOnUnmount)
               history={
                 Object {
                   "action": "POP",
@@ -470,173 +576,279 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
               }
               toggleHamburgerMenu={[Function]}
             >
-              <nav
-                className="navbar has-shadow is-spaced"
+              <ResetOnUnmount
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                isHamburgerMenuExpanded={true}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                logout={[Function]}
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                reset={[Function]}
+                toggleHamburgerMenu={[Function]}
               >
-                <div
-                  className="navbar-brand"
+                <Navbar
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  isHamburgerMenuExpanded={true}
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  logout={[Function]}
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                  reset={[Function]}
+                  toggleHamburgerMenu={[Function]}
                 >
-                  <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="navbar-item"
-                    to="/"
-                  >
-                    <Route
-                      path="\\\\/"
-                    >
-                      <Link
-                        aria-current="page"
-                        className="navbar-item active"
-                        replace={false}
-                        style={Object {}}
-                        to="/"
-                      >
-                        <a
-                          aria-current="page"
-                          className="navbar-item active"
-                          href="/"
-                          onClick={[Function]}
-                          style={Object {}}
-                        >
-                          <h1
-                            className="title"
-                          >
-                            IoT
-                          </h1>
-                        </a>
-                      </Link>
-                    </Route>
-                  </NavLink>
-                  <div
-                    className="navbar-burger burger is-active"
-                    data-target="navbar-menu"
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </div>
-                <div
-                  className="navbar-menu is-active"
-                  id="navbar-menu"
-                >
-                  <div
-                    className="navbar-start"
-                  >
-                    <NavLink
-                      activeClassName="navbar-item-active"
-                      aria-current="page"
-                      className="navbar-item"
-                      to="/things"
-                    >
-                      <Route
-                        path="\\\\/things"
-                      >
-                        <Link
-                          aria-current={null}
-                          className="navbar-item"
-                          replace={false}
-                          to="/things"
-                        >
-                          <a
-                            aria-current={null}
-                            className="navbar-item"
-                            href="/things"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="icon"
-                            >
-                              <i
-                                className="fas fa-microchip"
-                              />
-                            </span>
-                            <span>
-                              Things
-                            </span>
-                          </a>
-                        </Link>
-                      </Route>
-                    </NavLink>
-                    <NavLink
-                      activeClassName="navbar-item-active"
-                      aria-current="page"
-                      className="navbar-item"
-                      to="/stats"
-                    >
-                      <Route
-                        path="\\\\/stats"
-                      >
-                        <Link
-                          aria-current={null}
-                          className="navbar-item"
-                          replace={false}
-                          to="/stats"
-                        >
-                          <a
-                            aria-current={null}
-                            className="navbar-item"
-                            href="/stats"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="icon"
-                            >
-                              <i
-                                className="fas fa-chart-bar"
-                              />
-                            </span>
-                            <span>
-                              Stats
-                            </span>
-                          </a>
-                        </Link>
-                      </Route>
-                    </NavLink>
-                  </div>
-                  <div
-                    className="navbar-end"
+                  <nav
+                    className="navbar has-shadow is-spaced"
                   >
                     <div
-                      className="navbar-item"
+                      className="navbar-brand"
                     >
-                      <div
-                        className="field"
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="navbar-item"
+                        to="/"
                       >
-                        <p
-                          className="control"
+                        <Route
+                          path="\\\\/"
                         >
-                          <button
-                            className="button is-primary"
-                            id="logout-button"
-                            onClick={[Function]}
+                          <Link
+                            aria-current="page"
+                            className="navbar-item active"
+                            replace={false}
+                            style={Object {}}
+                            to="/"
                           >
-                            <span
-                              className="icon"
+                            <a
+                              aria-current="page"
+                              className="navbar-item active"
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
                             >
-                              <i
-                                className="fa fa-user"
-                              />
-                            </span>
-                            <span>
-                              Logout
-                            </span>
-                          </button>
-                        </p>
+                              <h1
+                                className="title"
+                              >
+                                IoT
+                              </h1>
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
+                      <div
+                        className="navbar-burger burger is-active"
+                        data-target="navbar-menu"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <span />
+                        <span />
+                        <span />
                       </div>
                     </div>
-                  </div>
-                </div>
-              </nav>
-            </Navbar>
-          </Connect(Navbar)>
+                    <div
+                      className="navbar-menu is-active"
+                      id="navbar-menu"
+                    >
+                      <div
+                        className="navbar-start"
+                      >
+                        <NavLink
+                          activeClassName="navbar-item-active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/things"
+                        >
+                          <Route
+                            path="\\\\/things"
+                          >
+                            <Link
+                              aria-current={null}
+                              className="navbar-item"
+                              replace={false}
+                              to="/things"
+                            >
+                              <a
+                                aria-current={null}
+                                className="navbar-item"
+                                href="/things"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-microchip"
+                                  />
+                                </span>
+                                <span>
+                                  Things
+                                </span>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                        <NavLink
+                          activeClassName="navbar-item-active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/stats"
+                        >
+                          <Route
+                            path="\\\\/stats"
+                          >
+                            <Link
+                              aria-current={null}
+                              className="navbar-item"
+                              replace={false}
+                              to="/stats"
+                            >
+                              <a
+                                aria-current={null}
+                                className="navbar-item"
+                                href="/stats"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-chart-bar"
+                                  />
+                                </span>
+                                <span>
+                                  Stats
+                                </span>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                      </div>
+                      <div
+                        className="navbar-end"
+                      >
+                        <div
+                          className="navbar-item"
+                        >
+                          <div
+                            className="field"
+                          >
+                            <p
+                              className="control"
+                            >
+                              <button
+                                className="button is-primary"
+                                id="logout-button"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fa fa-user"
+                                  />
+                                </span>
+                                <span>
+                                  Logout
+                                </span>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                </Navbar>
+              </ResetOnUnmount>
+            </Connect(ResetOnUnmount)>
+          </Connect(Connect(ResetOnUnmount))>
         </Route>
-      </withRouter(Connect(Navbar))>
+      </withRouter(Connect(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>

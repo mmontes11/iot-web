@@ -1,6 +1,7 @@
 import deepFreeze from "deep-freeze";
 import appReducer from "reducers/app";
 import { TOGGLE_HAMBURGER_MENU, TOGGLE_MAP_DIALOG } from "constants/actionTypes/app";
+import { RESET } from "constants/actionTypes/common";
 import { initialState } from "../constants/index";
 
 const appInitialState = initialState.app;
@@ -18,5 +19,8 @@ describe("reducers/app", () => {
   });
   it("reduces TOGGLE_MAP_DIALOG", () => {
     expect(appReducer(appInitialState, { type: TOGGLE_MAP_DIALOG })).toMatchSnapshot();
+  });
+  it("reduces RESET", () => {
+    expect(appReducer(appInitialState, { type: RESET })).toMatchSnapshot();
   });
 });

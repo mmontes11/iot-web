@@ -1,10 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import { compose } from "recompose";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import * as authActions from "actions/auth";
 import * as reducerHelpers from "reducers";
 import Modal from "components/modal";
+import { withResetOnUnmount } from "hocs/resetOnUnmount";
 
 class Login extends React.Component {
   _onUsernameChange = ({ target: { value } }) => {
@@ -101,7 +103,7 @@ Login.defaultProps = {
   password: "",
 };
 
-export default connect(
+const withRouter = connect(
   state => ({
     username: state.auth.username,
     password: state.auth.password,
@@ -109,4 +111,9 @@ export default connect(
     shouldShowError: reducerHelpers.hasError(state) && state.auth.showError,
   }),
   authActions,
+);
+
+export default compose(
+  withRouter,
+  withResetOnUnmount,
 )(Login);

@@ -7,7 +7,7 @@ import Login from "containers/login";
 import { initialState } from "../constants/index";
 
 describe("containers/login", () => {
-  it("renders login in initial state", () => {
+  it("renders login in initial state and unmounts", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(
       <Provider store={store}>
@@ -15,6 +15,7 @@ describe("containers/login", () => {
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
   });
   it("renders login in loading state", () => {
     const state = {

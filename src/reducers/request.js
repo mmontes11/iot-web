@@ -1,3 +1,5 @@
+import { RESET } from "constants/actionTypes/common";
+
 const initialState = {
   pending: 0,
   statusCode: null,
@@ -13,6 +15,9 @@ export default (state = initialState, { type, statusCode, error }) => {
   }
   if (/_REQUEST_ERROR$/.test(type)) {
     return { ...state, pending: state.pending - 1, statusCode, error };
+  }
+  if (type === RESET) {
+    return initialState;
   }
   return state;
 };

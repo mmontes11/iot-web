@@ -1,4 +1,5 @@
 import { TOGGLE_HAMBURGER_MENU, TOGGLE_MAP_DIALOG } from "constants/actionTypes/app";
+import { RESET } from "constants/actionTypes/common";
 
 const initialState = {
   isHamburgerMenuExpanded: false,
@@ -11,6 +12,8 @@ export default (state = initialState, { type }) => {
       return { ...state, isHamburgerMenuExpanded: !state.isHamburgerMenuExpanded };
     case TOGGLE_MAP_DIALOG:
       return { ...state, isMapDialogOpened: !state.isMapDialogOpened };
+    case RESET:
+      return initialState;
     default:
       return state;
   }

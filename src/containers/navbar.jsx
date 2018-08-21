@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import { compose } from "recompose";
 import { logout } from "actions/auth";
 import { toggleHamburgerMenu } from "actions/app";
+import { withResetOnUnmount } from "hocs/resetOnUnmount";
 
 class Navbar extends React.Component {
   _onHamburgerMenuClick = () => {
@@ -92,4 +93,5 @@ const withConnect = connect(
 export default compose(
   withRouter,
   withConnect,
+  withResetOnUnmount,
 )(Navbar);

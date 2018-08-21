@@ -7,6 +7,13 @@ Object {
 }
 `;
 
+exports[`reducers/things reduces RESET 1`] = `
+Object {
+  "loadedThings": Array [],
+  "selectedThing": null,
+}
+`;
+
 exports[`reducers/things reduces THING_SELECTED 1`] = `
 Object {
   "loadedThings": Array [],

@@ -18,6 +18,15 @@ Object {
 }
 `;
 
+exports[`reducers/auth reduces RESET 1`] = `
+Object {
+  "isAuth": false,
+  "password": null,
+  "showError": true,
+  "username": null,
+}
+`;
+
 exports[`reducers/auth reduces SET_PASSWORD 1`] = `
 Object {
   "isAuth": false,

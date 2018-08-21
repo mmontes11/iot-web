@@ -1,6 +1,7 @@
 import deepFreeze from "deep-freeze";
 import requestReducer from "reducers/request";
 import { LOGIN_REQUEST, LOGIN_REQUEST_SUCCESS, LOGIN_REQUEST_ERROR } from "constants/actionTypes/auth";
+import { RESET } from "constants/actionTypes/common";
 import { initialState } from "../constants/index";
 
 const requestInitialState = initialState.request;
@@ -31,5 +32,8 @@ describe("reducers/request", () => {
     requestReducer(requestInitialState, { type: LOGIN_REQUEST });
     requestReducer(requestInitialState, { type: LOGIN_REQUEST_SUCCESS });
     expect(requestReducer(requestInitialState, { type: LOGIN_REQUEST_ERROR })).toMatchSnapshot();
+  });
+  it("reduces RESET", () => {
+    expect(requestReducer(requestInitialState, { type: RESET })).toMatchSnapshot();
   });
 });

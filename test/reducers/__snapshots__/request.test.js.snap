@@ -32,6 +32,14 @@ Object {
 }
 `;
 
+exports[`reducers/request reduces RESET 1`] = `
+Object {
+  "error": null,
+  "pending": 0,
+  "statusCode": null,
+}
+`;
+
 exports[`reducers/request reduces nothing 1`] = `
 Object {
   "error": null,

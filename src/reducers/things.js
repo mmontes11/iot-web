@@ -1,4 +1,5 @@
 import { THINGS_UPDATED, THING_SELECTED } from "constants/actionTypes/things";
+import { RESET } from "constants/actionTypes/common";
 
 const initialState = {
   loadedThings: [],
@@ -14,7 +15,8 @@ export default (state = initialState, { type, things, thing }) => {
         return { ...state, selectedThing: null };
       }
       return { ...state, selectedThing: thing };
-
+    case RESET:
+      return { ...initialState, loadedThings: state.loadedThings };
     default:
       return state;
   }

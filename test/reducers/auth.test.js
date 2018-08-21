@@ -1,6 +1,7 @@
 import deepFreeze from "deep-freeze";
 import authReducer from "reducers/auth";
 import { IS_AUTH, SET_USERNAME, SET_PASSWORD, SET_SHOW_ERROR } from "constants/actionTypes/auth";
+import { RESET } from "constants/actionTypes/common";
 import { initialState } from "../constants/index";
 
 const authInitialState = initialState.auth;
@@ -24,5 +25,8 @@ describe("reducers/auth", () => {
   });
   it("reduces SET_SHOW_ERROR", () => {
     expect(authReducer(authInitialState, { type: SET_SHOW_ERROR, showError: true })).toMatchSnapshot();
+  });
+  it("reduces RESET", () => {
+    expect(authReducer(authInitialState, { type: RESET })).toMatchSnapshot();
   });
 });

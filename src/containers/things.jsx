@@ -8,10 +8,13 @@ import ThingDetail from "components/thingDetail";
 import Loader from "components/loader";
 import * as thingActions from "actions/things";
 import * as reducerHelpers from "reducers";
+import { withResetOnUnmount } from "hocs/resetOnUnmount";
 
 class Things extends React.Component {
   componentDidMount() {
-    this.props.getThings();
+    if (this.props.things.length === 0) {
+      this.props.getThings();
+    }
   }
   _isSelected = thing => this.props.selectedThing !== null && this.props.selectedThing.name === thing.name;
   _onThingItemClick = thing => {
@@ -82,4 +85,5 @@ const withConnect = connect(
 export default compose(
   withRouter,
   withConnect,
+  withResetOnUnmount,
 )(Things);

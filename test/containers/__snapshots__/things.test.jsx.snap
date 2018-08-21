@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/things renders things in initial state 1`] = `
+exports[`containers/things renders things in initial state and unmounts 1`] = `
 <MemoryRouter
   initialEntries={
     Array [
@@ -53,9 +53,9 @@ exports[`containers/things renders things in initial state 1`] = `
         }
       }
     >
-      <withRouter(Connect(Things))>
+      <withRouter(Connect(Connect(ResetOnUnmount)))>
         <Route>
-          <Connect(Things)
+          <Connect(Connect(ResetOnUnmount))
             history={
               Object {
                 "action": "POP",
@@ -103,7 +103,7 @@ exports[`containers/things renders things in initial state 1`] = `
               }
             }
           >
-            <Things
+            <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
                 Object {
@@ -156,21 +156,131 @@ exports[`containers/things renders things in initial state 1`] = `
               selectedThing={null}
               things={Array []}
             >
-              <div
-                className="container is-fluid section"
+              <ResetOnUnmount
+                getThings={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                isLoading={false}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                reset={[Function]}
+                selectThing={[Function]}
+                selectedThing={null}
+                things={Array []}
               >
-                <div
-                  className="columns"
+                <Things
+                  getThings={[Function]}
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  isLoading={false}
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                  reset={[Function]}
+                  selectThing={[Function]}
+                  selectedThing={null}
+                  things={Array []}
                 >
                   <div
-                    className="column is-one-quarter"
-                  />
-                </div>
-              </div>
-            </Things>
-          </Connect(Things)>
+                    className="container is-fluid section"
+                  >
+                    <div
+                      className="columns"
+                    >
+                      <div
+                        className="column is-one-quarter"
+                      />
+                    </div>
+                  </div>
+                </Things>
+              </ResetOnUnmount>
+            </Connect(ResetOnUnmount)>
+          </Connect(Connect(ResetOnUnmount))>
         </Route>
-      </withRouter(Connect(Things))>
+      </withRouter(Connect(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -229,9 +339,9 @@ exports[`containers/things renders things in loading state 1`] = `
         }
       }
     >
-      <withRouter(Connect(Things))>
+      <withRouter(Connect(Connect(ResetOnUnmount)))>
         <Route>
-          <Connect(Things)
+          <Connect(Connect(ResetOnUnmount))
             history={
               Object {
                 "action": "POP",
@@ -279,7 +389,7 @@ exports[`containers/things renders things in loading state 1`] = `
               }
             }
           >
-            <Things
+            <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
                 Object {
@@ -332,24 +442,134 @@ exports[`containers/things renders things in loading state 1`] = `
               selectedThing={null}
               things={Array []}
             >
-              <Loader>
-                <div
-                  className="is-horizontal-center"
+              <ResetOnUnmount
+                getThings={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                isLoading={true}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                reset={[Function]}
+                selectThing={[Function]}
+                selectedThing={null}
+                things={Array []}
+              >
+                <Things
+                  getThings={[Function]}
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  isLoading={true}
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                  reset={[Function]}
+                  selectThing={[Function]}
+                  selectedThing={null}
+                  things={Array []}
                 >
-                  <figure
-                    className="image is-128x128"
-                  >
-                    <img
-                      alt="Loader"
-                      src="test-file-stub"
-                    />
-                  </figure>
-                </div>
-              </Loader>
-            </Things>
-          </Connect(Things)>
+                  <Loader>
+                    <div
+                      className="is-horizontal-center"
+                    >
+                      <figure
+                        className="image is-128x128"
+                      >
+                        <img
+                          alt="Loader"
+                          src="test-file-stub"
+                        />
+                      </figure>
+                    </div>
+                  </Loader>
+                </Things>
+              </ResetOnUnmount>
+            </Connect(ResetOnUnmount)>
+          </Connect(Connect(ResetOnUnmount))>
         </Route>
-      </withRouter(Connect(Things))>
+      </withRouter(Connect(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -408,9 +628,9 @@ exports[`containers/things renders things with loaded things 1`] = `
         }
       }
     >
-      <withRouter(Connect(Things))>
+      <withRouter(Connect(Connect(ResetOnUnmount)))>
         <Route>
-          <Connect(Things)
+          <Connect(Connect(ResetOnUnmount))
             history={
               Object {
                 "action": "POP",
@@ -458,7 +678,7 @@ exports[`containers/things renders things with loaded things 1`] = `
               }
             }
           >
-            <Things
+            <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
                 Object {
@@ -538,50 +758,214 @@ exports[`containers/things renders things with loaded things 1`] = `
                 ]
               }
             >
-              <div
-                className="container is-fluid section"
+              <ResetOnUnmount
+                getThings={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                isLoading={false}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                reset={[Function]}
+                selectThing={[Function]}
+                selectedThing={null}
+                things={
+                  Array [
+                    Object {
+                      "geometry": Object {
+                        "coordinates": Array [
+                          -40.58457,
+                          40.21339,
+                        ],
+                        "type": "Point",
+                      },
+                      "googleMapsUrl": "https://www.google.es/maps",
+                      "ip": "http://192.168.0.20",
+                      "lastObservation": "2018-08-18T10:30:04.158Z",
+                      "name": "foo",
+                      "supportedObservationTypes": Object {
+                        "event": Array [
+                          "foo",
+                          "bar",
+                        ],
+                        "measurement": Array [
+                          "bar",
+                          "foo",
+                        ],
+                      },
+                      "topic": "bar",
+                    },
+                  ]
+                }
               >
-                <div
-                  className="columns"
+                <Things
+                  getThings={[Function]}
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  isLoading={false}
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                  reset={[Function]}
+                  selectThing={[Function]}
+                  selectedThing={null}
+                  things={
+                    Array [
+                      Object {
+                        "geometry": Object {
+                          "coordinates": Array [
+                            -40.58457,
+                            40.21339,
+                          ],
+                          "type": "Point",
+                        },
+                        "googleMapsUrl": "https://www.google.es/maps",
+                        "ip": "http://192.168.0.20",
+                        "lastObservation": "2018-08-18T10:30:04.158Z",
+                        "name": "foo",
+                        "supportedObservationTypes": Object {
+                          "event": Array [
+                            "foo",
+                            "bar",
+                          ],
+                          "measurement": Array [
+                            "bar",
+                            "foo",
+                          ],
+                        },
+                        "topic": "bar",
+                      },
+                    ]
+                  }
                 >
                   <div
-                    className="column is-one-quarter"
+                    className="container is-fluid section"
                   >
-                    <ThingItem
-                      isSelected={false}
-                      key="Zm9v"
-                      name="foo"
-                      onClick={[Function]}
+                    <div
+                      className="columns"
                     >
                       <div
-                        className="thing-item-card"
-                        onClick={[Function]}
-                        onKeyPress={[Function]}
-                        role="button"
-                        tabIndex={0}
+                        className="column is-one-quarter"
                       >
-                        <div
-                          className="card-content"
+                        <ThingItem
+                          isSelected={false}
+                          key="Zm9v"
+                          name="foo"
+                          onClick={[Function]}
                         >
                           <div
-                            className="content"
+                            className="thing-item-card"
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            tabIndex={0}
                           >
-                            <p
-                              className="title is-6"
+                            <div
+                              className="card-content"
                             >
-                              foo
-                            </p>
+                              <div
+                                className="content"
+                              >
+                                <p
+                                  className="title is-6"
+                                >
+                                  foo
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                        </ThingItem>
                       </div>
-                    </ThingItem>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </Things>
-          </Connect(Things)>
+                </Things>
+              </ResetOnUnmount>
+            </Connect(ResetOnUnmount)>
+          </Connect(Connect(ResetOnUnmount))>
         </Route>
-      </withRouter(Connect(Things))>
+      </withRouter(Connect(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -640,9 +1024,9 @@ exports[`containers/things renders things with loaded things and selected thing 
         }
       }
     >
-      <withRouter(Connect(Things))>
+      <withRouter(Connect(Connect(ResetOnUnmount)))>
         <Route>
-          <Connect(Things)
+          <Connect(Connect(ResetOnUnmount))
             history={
               Object {
                 "action": "POP",
@@ -690,7 +1074,7 @@ exports[`containers/things renders things with loaded things and selected thing 
               }
             }
           >
-            <Things
+            <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
                 Object {
@@ -795,308 +1179,464 @@ exports[`containers/things renders things with loaded things and selected thing 
                 ]
               }
             >
-              <div
-                className="container is-fluid section"
+              <ResetOnUnmount
+                getThings={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 0,
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                isLoading={false}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                reset={[Function]}
+                selectThing={[Function]}
+                selectedThing={
+                  Object {
+                    "geometry": Object {
+                      "coordinates": Array [
+                        -40.58457,
+                        40.21339,
+                      ],
+                      "type": "Point",
+                    },
+                    "googleMapsUrl": "https://www.google.es/maps",
+                    "ip": "http://192.168.0.20",
+                    "lastObservation": "2018-08-18T10:30:04.158Z",
+                    "name": "foo",
+                    "supportedObservationTypes": Object {
+                      "event": Array [
+                        "foo",
+                        "bar",
+                      ],
+                      "measurement": Array [
+                        "bar",
+                        "foo",
+                      ],
+                    },
+                    "topic": "bar",
+                  }
+                }
+                things={
+                  Array [
+                    Object {
+                      "geometry": Object {
+                        "coordinates": Array [
+                          -40.58457,
+                          40.21339,
+                        ],
+                        "type": "Point",
+                      },
+                      "googleMapsUrl": "https://www.google.es/maps",
+                      "ip": "http://192.168.0.20",
+                      "lastObservation": "2018-08-18T10:30:04.158Z",
+                      "name": "foo",
+                      "supportedObservationTypes": Object {
+                        "event": Array [
+                          "foo",
+                          "bar",
+                        ],
+                        "measurement": Array [
+                          "bar",
+                          "foo",
+                        ],
+                      },
+                      "topic": "bar",
+                    },
+                  ]
+                }
               >
-                <div
-                  className="columns"
+                <Things
+                  getThings={[Function]}
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 0,
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  isLoading={false}
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                  reset={[Function]}
+                  selectThing={[Function]}
+                  selectedThing={
+                    Object {
+                      "geometry": Object {
+                        "coordinates": Array [
+                          -40.58457,
+                          40.21339,
+                        ],
+                        "type": "Point",
+                      },
+                      "googleMapsUrl": "https://www.google.es/maps",
+                      "ip": "http://192.168.0.20",
+                      "lastObservation": "2018-08-18T10:30:04.158Z",
+                      "name": "foo",
+                      "supportedObservationTypes": Object {
+                        "event": Array [
+                          "foo",
+                          "bar",
+                        ],
+                        "measurement": Array [
+                          "bar",
+                          "foo",
+                        ],
+                      },
+                      "topic": "bar",
+                    }
+                  }
+                  things={
+                    Array [
+                      Object {
+                        "geometry": Object {
+                          "coordinates": Array [
+                            -40.58457,
+                            40.21339,
+                          ],
+                          "type": "Point",
+                        },
+                        "googleMapsUrl": "https://www.google.es/maps",
+                        "ip": "http://192.168.0.20",
+                        "lastObservation": "2018-08-18T10:30:04.158Z",
+                        "name": "foo",
+                        "supportedObservationTypes": Object {
+                          "event": Array [
+                            "foo",
+                            "bar",
+                          ],
+                          "measurement": Array [
+                            "bar",
+                            "foo",
+                          ],
+                        },
+                        "topic": "bar",
+                      },
+                    ]
+                  }
                 >
                   <div
-                    className="column is-one-quarter"
+                    className="container is-fluid section"
                   >
-                    <ThingItem
-                      isSelected={true}
-                      key="Zm9v"
-                      name="foo"
-                      onClick={[Function]}
+                    <div
+                      className="columns"
                     >
                       <div
-                        className="thing-item-card is-selected"
-                        onClick={[Function]}
-                        onKeyPress={[Function]}
-                        role="button"
-                        tabIndex={0}
+                        className="column is-one-quarter"
                       >
-                        <div
-                          className="card-content"
+                        <ThingItem
+                          isSelected={true}
+                          key="Zm9v"
+                          name="foo"
+                          onClick={[Function]}
                         >
                           <div
-                            className="content"
-                          >
-                            <p
-                              className="title is-6"
-                            >
-                              foo
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </ThingItem>
-                  </div>
-                  <div
-                    className="column is-three-quarters"
-                  >
-                    <ThingDetail
-                      onStatsClick={[Function]}
-                      thing={
-                        Object {
-                          "geometry": Object {
-                            "coordinates": Array [
-                              -40.58457,
-                              40.21339,
-                            ],
-                            "type": "Point",
-                          },
-                          "googleMapsUrl": "https://www.google.es/maps",
-                          "ip": "http://192.168.0.20",
-                          "lastObservation": "2018-08-18T10:30:04.158Z",
-                          "name": "foo",
-                          "supportedObservationTypes": Object {
-                            "event": Array [
-                              "foo",
-                              "bar",
-                            ],
-                            "measurement": Array [
-                              "bar",
-                              "foo",
-                            ],
-                          },
-                          "topic": "bar",
-                        }
-                      }
-                    >
-                      <div
-                        className="card"
-                      >
-                        <div
-                          className="card-content"
-                        >
-                          <div
-                            className="columns"
+                            className="thing-item-card is-selected"
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            tabIndex={0}
                           >
                             <div
-                              className="column is-three-fifths has-text-centered"
+                              className="card-content"
                             >
-                              <p
-                                className="title is-3 has-text-primary is-spaced"
-                              >
-                                foo
-                              </p>
-                              <p
-                                className="title is-6"
-                              >
-                                <strong>
-                                  IP address:
-                                </strong>
-                                 
-                                <a
-                                  href="http://http://192.168.0.20"
-                                  rel="noopener noreferrer"
-                                  target="_blank"
-                                >
-                                  http://192.168.0.20
-                                </a>
-                              </p>
-                              <p
-                                className="title is-6"
-                              >
-                                <strong>
-                                  MQTT topic:
-                                </strong>
-                                 
-                                <span
-                                  className="has-text-info"
-                                >
-                                  bar
-                                </span>
-                              </p>
-                              <p
-                                className="title is-6"
-                              >
-                                <strong>
-                                  Last observation:
-                                </strong>
-                                 
-                                <span
-                                  className="has-text-info"
-                                >
-                                  1970-1-1 00:00:00
-                                </span>
-                              </p>
-                              <TagList
-                                label="Events:"
-                                tagStyle="is-warning"
-                                tags={
-                                  Array [
-                                    "foo",
-                                    "bar",
-                                  ]
-                                }
-                              >
-                                <div
-                                  className="tag-list"
-                                >
-                                  <p
-                                    className="tag-list-label is-6"
-                                  >
-                                    <strong>
-                                      Events:
-                                    </strong>
-                                  </p>
-                                  <div
-                                    className="tags"
-                                  >
-                                    <span
-                                      className="tag is-warning"
-                                      key="Zm9v"
-                                    >
-                                      foo
-                                    </span>
-                                    <span
-                                      className="tag is-warning"
-                                      key="YmFy"
-                                    >
-                                      bar
-                                    </span>
-                                  </div>
-                                </div>
-                              </TagList>
-                              <TagList
-                                label="Measurements:"
-                                tagStyle="is-warning"
-                                tags={
-                                  Array [
-                                    "bar",
-                                    "foo",
-                                  ]
-                                }
-                              >
-                                <div
-                                  className="tag-list"
-                                >
-                                  <p
-                                    className="tag-list-label is-6"
-                                  >
-                                    <strong>
-                                      Measurements:
-                                    </strong>
-                                  </p>
-                                  <div
-                                    className="tags"
-                                  >
-                                    <span
-                                      className="tag is-warning"
-                                      key="YmFy"
-                                    >
-                                      bar
-                                    </span>
-                                    <span
-                                      className="tag is-warning"
-                                      key="Zm9v"
-                                    >
-                                      foo
-                                    </span>
-                                  </div>
-                                </div>
-                              </TagList>
-                              <ThingActions
-                                googleMapsUrl="https://www.google.es/maps"
-                                onStatsClick={[Function]}
+                              <div
+                                className="content"
                               >
                                 <p
-                                  className="buttons is-horizontal-center"
+                                  className="title is-6"
                                 >
-                                  <a
-                                    className="button is-medium"
-                                    href="https://www.google.es/maps"
-                                    id="google-maps-link"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                  >
-                                    <span
-                                      className="icon is-medium"
-                                    >
-                                      <i
-                                        className="fas fa-map-marked"
-                                      />
-                                    </span>
-                                  </a>
-                                  <button
-                                    className="button is-medium"
-                                    id="stats-button"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="icon is-medium"
-                                    >
-                                      <i
-                                        className="fas fa-chart-bar"
-                                      />
-                                    </span>
-                                  </button>
+                                  foo
                                 </p>
-                              </ThingActions>
+                              </div>
                             </div>
+                          </div>
+                        </ThingItem>
+                      </div>
+                      <div
+                        className="column is-three-quarters"
+                      >
+                        <ThingDetail
+                          onStatsClick={[Function]}
+                          thing={
+                            Object {
+                              "geometry": Object {
+                                "coordinates": Array [
+                                  -40.58457,
+                                  40.21339,
+                                ],
+                                "type": "Point",
+                              },
+                              "googleMapsUrl": "https://www.google.es/maps",
+                              "ip": "http://192.168.0.20",
+                              "lastObservation": "2018-08-18T10:30:04.158Z",
+                              "name": "foo",
+                              "supportedObservationTypes": Object {
+                                "event": Array [
+                                  "foo",
+                                  "bar",
+                                ],
+                                "measurement": Array [
+                                  "bar",
+                                  "foo",
+                                ],
+                              },
+                              "topic": "bar",
+                            }
+                          }
+                        >
+                          <div
+                            className="card"
+                          >
                             <div
-                              className="column is-two-fifths"
+                              className="card-content"
                             >
-                              <Connect(withProps(withScriptjs(withGoogleMap(Map))))
-                                marker={
-                                  Object {
-                                    "label": "foo",
-                                    "point": Object {
-                                      "lat": 40.21339,
-                                      "lng": -40.58457,
-                                    },
-                                  }
-                                }
+                              <div
+                                className="columns"
                               >
-                                <withProps(withScriptjs(withGoogleMap(Map)))
-                                  isDialogOpened={false}
-                                  marker={
-                                    Object {
-                                      "label": "foo",
-                                      "point": Object {
-                                        "lat": 40.21339,
-                                        "lng": -40.58457,
-                                      },
-                                    }
-                                  }
-                                  toggleDialog={[Function]}
+                                <div
+                                  className="column is-three-fifths has-text-centered"
                                 >
-                                  <withScriptjs(withGoogleMap(Map))
-                                    center={
-                                      Object {
-                                        "lat": 40.21339,
-                                        "lng": -40.58457,
-                                      }
+                                  <p
+                                    className="title is-3 has-text-primary is-spaced"
+                                  >
+                                    foo
+                                  </p>
+                                  <p
+                                    className="title is-6"
+                                  >
+                                    <strong>
+                                      IP address:
+                                    </strong>
+                                     
+                                    <a
+                                      href="http://http://192.168.0.20"
+                                      rel="noopener noreferrer"
+                                      target="_blank"
+                                    >
+                                      http://192.168.0.20
+                                    </a>
+                                  </p>
+                                  <p
+                                    className="title is-6"
+                                  >
+                                    <strong>
+                                      MQTT topic:
+                                    </strong>
+                                     
+                                    <span
+                                      className="has-text-info"
+                                    >
+                                      bar
+                                    </span>
+                                  </p>
+                                  <p
+                                    className="title is-6"
+                                  >
+                                    <strong>
+                                      Last observation:
+                                    </strong>
+                                     
+                                    <span
+                                      className="has-text-info"
+                                    >
+                                      1970-1-1 00:00:00
+                                    </span>
+                                  </p>
+                                  <TagList
+                                    label="Events:"
+                                    tagStyle="is-warning"
+                                    tags={
+                                      Array [
+                                        "foo",
+                                        "bar",
+                                      ]
                                     }
-                                    containerElement={
+                                  >
+                                    <div
+                                      className="tag-list"
+                                    >
+                                      <p
+                                        className="tag-list-label is-6"
+                                      >
+                                        <strong>
+                                          Events:
+                                        </strong>
+                                      </p>
                                       <div
-                                        className="map"
-                                      />
+                                        className="tags"
+                                      >
+                                        <span
+                                          className="tag is-warning"
+                                          key="Zm9v"
+                                        >
+                                          foo
+                                        </span>
+                                        <span
+                                          className="tag is-warning"
+                                          key="YmFy"
+                                        >
+                                          bar
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </TagList>
+                                  <TagList
+                                    label="Measurements:"
+                                    tagStyle="is-warning"
+                                    tags={
+                                      Array [
+                                        "bar",
+                                        "foo",
+                                      ]
                                     }
-                                    googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-                                    isDialogOpened={false}
-                                    label="foo"
-                                    loadingElement={
+                                  >
+                                    <div
+                                      className="tag-list"
+                                    >
+                                      <p
+                                        className="tag-list-label is-6"
+                                      >
+                                        <strong>
+                                          Measurements:
+                                        </strong>
+                                      </p>
                                       <div
-                                        style={
-                                          Object {
-                                            "height": "100%",
-                                          }
-                                        }
-                                      />
-                                    }
-                                    mapElement={
-                                      <div
-                                        style={
-                                          Object {
-                                            "height": "100%",
-                                          }
-                                        }
-                                      />
-                                    }
+                                        className="tags"
+                                      >
+                                        <span
+                                          className="tag is-warning"
+                                          key="YmFy"
+                                        >
+                                          bar
+                                        </span>
+                                        <span
+                                          className="tag is-warning"
+                                          key="Zm9v"
+                                        >
+                                          foo
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </TagList>
+                                  <ThingActions
+                                    googleMapsUrl="https://www.google.es/maps"
+                                    onStatsClick={[Function]}
+                                  >
+                                    <p
+                                      className="buttons is-horizontal-center"
+                                    >
+                                      <a
+                                        className="button is-medium"
+                                        href="https://www.google.es/maps"
+                                        id="google-maps-link"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        <span
+                                          className="icon is-medium"
+                                        >
+                                          <i
+                                            className="fas fa-map-marked"
+                                          />
+                                        </span>
+                                      </a>
+                                      <button
+                                        className="button is-medium"
+                                        id="stats-button"
+                                        onClick={[Function]}
+                                      >
+                                        <span
+                                          className="icon is-medium"
+                                        >
+                                          <i
+                                            className="fas fa-chart-bar"
+                                          />
+                                        </span>
+                                      </button>
+                                    </p>
+                                  </ThingActions>
+                                </div>
+                                <div
+                                  className="column is-two-fifths"
+                                >
+                                  <Connect(withProps(withScriptjs(withGoogleMap(Map))))
                                     marker={
                                       Object {
                                         "label": "foo",
@@ -1106,37 +1646,95 @@ exports[`containers/things renders things with loaded things and selected thing 
                                         },
                                       }
                                     }
-                                    point={
-                                      Object {
-                                        "lat": 40.21339,
-                                        "lng": -40.58457,
-                                      }
-                                    }
-                                    toggleDialog={[Function]}
-                                    zoom={12}
                                   >
-                                    <div
-                                      style={
+                                    <withProps(withScriptjs(withGoogleMap(Map)))
+                                      isDialogOpened={false}
+                                      marker={
                                         Object {
-                                          "height": "100%",
+                                          "label": "foo",
+                                          "point": Object {
+                                            "lat": 40.21339,
+                                            "lng": -40.58457,
+                                          },
                                         }
                                       }
-                                    />
-                                  </withScriptjs(withGoogleMap(Map))>
-                                </withProps(withScriptjs(withGoogleMap(Map)))>
-                              </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+                                      toggleDialog={[Function]}
+                                    >
+                                      <withScriptjs(withGoogleMap(Map))
+                                        center={
+                                          Object {
+                                            "lat": 40.21339,
+                                            "lng": -40.58457,
+                                          }
+                                        }
+                                        containerElement={
+                                          <div
+                                            className="map"
+                                          />
+                                        }
+                                        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                                        isDialogOpened={false}
+                                        label="foo"
+                                        loadingElement={
+                                          <div
+                                            style={
+                                              Object {
+                                                "height": "100%",
+                                              }
+                                            }
+                                          />
+                                        }
+                                        mapElement={
+                                          <div
+                                            style={
+                                              Object {
+                                                "height": "100%",
+                                              }
+                                            }
+                                          />
+                                        }
+                                        marker={
+                                          Object {
+                                            "label": "foo",
+                                            "point": Object {
+                                              "lat": 40.21339,
+                                              "lng": -40.58457,
+                                            },
+                                          }
+                                        }
+                                        point={
+                                          Object {
+                                            "lat": 40.21339,
+                                            "lng": -40.58457,
+                                          }
+                                        }
+                                        toggleDialog={[Function]}
+                                        zoom={12}
+                                      >
+                                        <div
+                                          style={
+                                            Object {
+                                              "height": "100%",
+                                            }
+                                          }
+                                        />
+                                      </withScriptjs(withGoogleMap(Map))>
+                                    </withProps(withScriptjs(withGoogleMap(Map)))>
+                                  </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </ThingDetail>
                       </div>
-                    </ThingDetail>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </Things>
-          </Connect(Things)>
+                </Things>
+              </ResetOnUnmount>
+            </Connect(ResetOnUnmount)>
+          </Connect(Connect(ResetOnUnmount))>
         </Route>
-      </withRouter(Connect(Things))>
+      </withRouter(Connect(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -1201,9 +1799,9 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
         }
       }
     >
-      <withRouter(Connect(Things))>
+      <withRouter(Connect(Connect(ResetOnUnmount)))>
         <Route>
-          <Connect(Things)
+          <Connect(Connect(ResetOnUnmount))
             history={
               Object {
                 "action": "PUSH",
@@ -1257,7 +1855,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
               }
             }
           >
-            <Things
+            <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
                 Object {
@@ -1368,308 +1966,476 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                 ]
               }
             >
-              <div
-                className="container is-fluid section"
+              <ResetOnUnmount
+                getThings={[Function]}
+                history={
+                  Object {
+                    "action": "PUSH",
+                    "block": [Function],
+                    "canGo": [Function],
+                    "createHref": [Function],
+                    "entries": Array [
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      Object {
+                        "hash": "",
+                        "pathname": "/stats",
+                        "search": "",
+                        "state": undefined,
+                      },
+                    ],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "index": 1,
+                    "length": 2,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/stats",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                isLoading={false}
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/stats",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": false,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                reset={[Function]}
+                selectThing={[Function]}
+                selectedThing={
+                  Object {
+                    "geometry": Object {
+                      "coordinates": Array [
+                        -40.58457,
+                        40.21339,
+                      ],
+                      "type": "Point",
+                    },
+                    "googleMapsUrl": "https://www.google.es/maps",
+                    "ip": "http://192.168.0.20",
+                    "lastObservation": "2018-08-18T10:30:04.158Z",
+                    "name": "foo",
+                    "supportedObservationTypes": Object {
+                      "event": Array [
+                        "foo",
+                        "bar",
+                      ],
+                      "measurement": Array [
+                        "bar",
+                        "foo",
+                      ],
+                    },
+                    "topic": "bar",
+                  }
+                }
+                things={
+                  Array [
+                    Object {
+                      "geometry": Object {
+                        "coordinates": Array [
+                          -40.58457,
+                          40.21339,
+                        ],
+                        "type": "Point",
+                      },
+                      "googleMapsUrl": "https://www.google.es/maps",
+                      "ip": "http://192.168.0.20",
+                      "lastObservation": "2018-08-18T10:30:04.158Z",
+                      "name": "foo",
+                      "supportedObservationTypes": Object {
+                        "event": Array [
+                          "foo",
+                          "bar",
+                        ],
+                        "measurement": Array [
+                          "bar",
+                          "foo",
+                        ],
+                      },
+                      "topic": "bar",
+                    },
+                  ]
+                }
               >
-                <div
-                  className="columns"
+                <Things
+                  getThings={[Function]}
+                  history={
+                    Object {
+                      "action": "PUSH",
+                      "block": [Function],
+                      "canGo": [Function],
+                      "createHref": [Function],
+                      "entries": Array [
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        Object {
+                          "hash": "",
+                          "pathname": "/stats",
+                          "search": "",
+                          "state": undefined,
+                        },
+                      ],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "index": 1,
+                      "length": 2,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/stats",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  isLoading={false}
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/stats",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": false,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                  reset={[Function]}
+                  selectThing={[Function]}
+                  selectedThing={
+                    Object {
+                      "geometry": Object {
+                        "coordinates": Array [
+                          -40.58457,
+                          40.21339,
+                        ],
+                        "type": "Point",
+                      },
+                      "googleMapsUrl": "https://www.google.es/maps",
+                      "ip": "http://192.168.0.20",
+                      "lastObservation": "2018-08-18T10:30:04.158Z",
+                      "name": "foo",
+                      "supportedObservationTypes": Object {
+                        "event": Array [
+                          "foo",
+                          "bar",
+                        ],
+                        "measurement": Array [
+                          "bar",
+                          "foo",
+                        ],
+                      },
+                      "topic": "bar",
+                    }
+                  }
+                  things={
+                    Array [
+                      Object {
+                        "geometry": Object {
+                          "coordinates": Array [
+                            -40.58457,
+                            40.21339,
+                          ],
+                          "type": "Point",
+                        },
+                        "googleMapsUrl": "https://www.google.es/maps",
+                        "ip": "http://192.168.0.20",
+                        "lastObservation": "2018-08-18T10:30:04.158Z",
+                        "name": "foo",
+                        "supportedObservationTypes": Object {
+                          "event": Array [
+                            "foo",
+                            "bar",
+                          ],
+                          "measurement": Array [
+                            "bar",
+                            "foo",
+                          ],
+                        },
+                        "topic": "bar",
+                      },
+                    ]
+                  }
                 >
                   <div
-                    className="column is-one-quarter"
+                    className="container is-fluid section"
                   >
-                    <ThingItem
-                      isSelected={true}
-                      key="Zm9v"
-                      name="foo"
-                      onClick={[Function]}
+                    <div
+                      className="columns"
                     >
                       <div
-                        className="thing-item-card is-selected"
-                        onClick={[Function]}
-                        onKeyPress={[Function]}
-                        role="button"
-                        tabIndex={0}
+                        className="column is-one-quarter"
                       >
-                        <div
-                          className="card-content"
+                        <ThingItem
+                          isSelected={true}
+                          key="Zm9v"
+                          name="foo"
+                          onClick={[Function]}
                         >
                           <div
-                            className="content"
-                          >
-                            <p
-                              className="title is-6"
-                            >
-                              foo
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </ThingItem>
-                  </div>
-                  <div
-                    className="column is-three-quarters"
-                  >
-                    <ThingDetail
-                      onStatsClick={[Function]}
-                      thing={
-                        Object {
-                          "geometry": Object {
-                            "coordinates": Array [
-                              -40.58457,
-                              40.21339,
-                            ],
-                            "type": "Point",
-                          },
-                          "googleMapsUrl": "https://www.google.es/maps",
-                          "ip": "http://192.168.0.20",
-                          "lastObservation": "2018-08-18T10:30:04.158Z",
-                          "name": "foo",
-                          "supportedObservationTypes": Object {
-                            "event": Array [
-                              "foo",
-                              "bar",
-                            ],
-                            "measurement": Array [
-                              "bar",
-                              "foo",
-                            ],
-                          },
-                          "topic": "bar",
-                        }
-                      }
-                    >
-                      <div
-                        className="card"
-                      >
-                        <div
-                          className="card-content"
-                        >
-                          <div
-                            className="columns"
+                            className="thing-item-card is-selected"
+                            onClick={[Function]}
+                            onKeyPress={[Function]}
+                            role="button"
+                            tabIndex={0}
                           >
                             <div
-                              className="column is-three-fifths has-text-centered"
+                              className="card-content"
                             >
-                              <p
-                                className="title is-3 has-text-primary is-spaced"
-                              >
-                                foo
-                              </p>
-                              <p
-                                className="title is-6"
-                              >
-                                <strong>
-                                  IP address:
-                                </strong>
-                                 
-                                <a
-                                  href="http://http://192.168.0.20"
-                                  rel="noopener noreferrer"
-                                  target="_blank"
-                                >
-                                  http://192.168.0.20
-                                </a>
-                              </p>
-                              <p
-                                className="title is-6"
-                              >
-                                <strong>
-                                  MQTT topic:
-                                </strong>
-                                 
-                                <span
-                                  className="has-text-info"
-                                >
-                                  bar
-                                </span>
-                              </p>
-                              <p
-                                className="title is-6"
-                              >
-                                <strong>
-                                  Last observation:
-                                </strong>
-                                 
-                                <span
-                                  className="has-text-info"
-                                >
-                                  1970-1-1 00:00:00
-                                </span>
-                              </p>
-                              <TagList
-                                label="Events:"
-                                tagStyle="is-warning"
-                                tags={
-                                  Array [
-                                    "foo",
-                                    "bar",
-                                  ]
-                                }
-                              >
-                                <div
-                                  className="tag-list"
-                                >
-                                  <p
-                                    className="tag-list-label is-6"
-                                  >
-                                    <strong>
-                                      Events:
-                                    </strong>
-                                  </p>
-                                  <div
-                                    className="tags"
-                                  >
-                                    <span
-                                      className="tag is-warning"
-                                      key="Zm9v"
-                                    >
-                                      foo
-                                    </span>
-                                    <span
-                                      className="tag is-warning"
-                                      key="YmFy"
-                                    >
-                                      bar
-                                    </span>
-                                  </div>
-                                </div>
-                              </TagList>
-                              <TagList
-                                label="Measurements:"
-                                tagStyle="is-warning"
-                                tags={
-                                  Array [
-                                    "bar",
-                                    "foo",
-                                  ]
-                                }
-                              >
-                                <div
-                                  className="tag-list"
-                                >
-                                  <p
-                                    className="tag-list-label is-6"
-                                  >
-                                    <strong>
-                                      Measurements:
-                                    </strong>
-                                  </p>
-                                  <div
-                                    className="tags"
-                                  >
-                                    <span
-                                      className="tag is-warning"
-                                      key="YmFy"
-                                    >
-                                      bar
-                                    </span>
-                                    <span
-                                      className="tag is-warning"
-                                      key="Zm9v"
-                                    >
-                                      foo
-                                    </span>
-                                  </div>
-                                </div>
-                              </TagList>
-                              <ThingActions
-                                googleMapsUrl="https://www.google.es/maps"
-                                onStatsClick={[Function]}
+                              <div
+                                className="content"
                               >
                                 <p
-                                  className="buttons is-horizontal-center"
+                                  className="title is-6"
                                 >
-                                  <a
-                                    className="button is-medium"
-                                    href="https://www.google.es/maps"
-                                    id="google-maps-link"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                  >
-                                    <span
-                                      className="icon is-medium"
-                                    >
-                                      <i
-                                        className="fas fa-map-marked"
-                                      />
-                                    </span>
-                                  </a>
-                                  <button
-                                    className="button is-medium"
-                                    id="stats-button"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="icon is-medium"
-                                    >
-                                      <i
-                                        className="fas fa-chart-bar"
-                                      />
-                                    </span>
-                                  </button>
+                                  foo
                                 </p>
-                              </ThingActions>
+                              </div>
                             </div>
+                          </div>
+                        </ThingItem>
+                      </div>
+                      <div
+                        className="column is-three-quarters"
+                      >
+                        <ThingDetail
+                          onStatsClick={[Function]}
+                          thing={
+                            Object {
+                              "geometry": Object {
+                                "coordinates": Array [
+                                  -40.58457,
+                                  40.21339,
+                                ],
+                                "type": "Point",
+                              },
+                              "googleMapsUrl": "https://www.google.es/maps",
+                              "ip": "http://192.168.0.20",
+                              "lastObservation": "2018-08-18T10:30:04.158Z",
+                              "name": "foo",
+                              "supportedObservationTypes": Object {
+                                "event": Array [
+                                  "foo",
+                                  "bar",
+                                ],
+                                "measurement": Array [
+                                  "bar",
+                                  "foo",
+                                ],
+                              },
+                              "topic": "bar",
+                            }
+                          }
+                        >
+                          <div
+                            className="card"
+                          >
                             <div
-                              className="column is-two-fifths"
+                              className="card-content"
                             >
-                              <Connect(withProps(withScriptjs(withGoogleMap(Map))))
-                                marker={
-                                  Object {
-                                    "label": "foo",
-                                    "point": Object {
-                                      "lat": 40.21339,
-                                      "lng": -40.58457,
-                                    },
-                                  }
-                                }
+                              <div
+                                className="columns"
                               >
-                                <withProps(withScriptjs(withGoogleMap(Map)))
-                                  isDialogOpened={false}
-                                  marker={
-                                    Object {
-                                      "label": "foo",
-                                      "point": Object {
-                                        "lat": 40.21339,
-                                        "lng": -40.58457,
-                                      },
-                                    }
-                                  }
-                                  toggleDialog={[Function]}
+                                <div
+                                  className="column is-three-fifths has-text-centered"
                                 >
-                                  <withScriptjs(withGoogleMap(Map))
-                                    center={
-                                      Object {
-                                        "lat": 40.21339,
-                                        "lng": -40.58457,
-                                      }
+                                  <p
+                                    className="title is-3 has-text-primary is-spaced"
+                                  >
+                                    foo
+                                  </p>
+                                  <p
+                                    className="title is-6"
+                                  >
+                                    <strong>
+                                      IP address:
+                                    </strong>
+                                     
+                                    <a
+                                      href="http://http://192.168.0.20"
+                                      rel="noopener noreferrer"
+                                      target="_blank"
+                                    >
+                                      http://192.168.0.20
+                                    </a>
+                                  </p>
+                                  <p
+                                    className="title is-6"
+                                  >
+                                    <strong>
+                                      MQTT topic:
+                                    </strong>
+                                     
+                                    <span
+                                      className="has-text-info"
+                                    >
+                                      bar
+                                    </span>
+                                  </p>
+                                  <p
+                                    className="title is-6"
+                                  >
+                                    <strong>
+                                      Last observation:
+                                    </strong>
+                                     
+                                    <span
+                                      className="has-text-info"
+                                    >
+                                      1970-1-1 00:00:00
+                                    </span>
+                                  </p>
+                                  <TagList
+                                    label="Events:"
+                                    tagStyle="is-warning"
+                                    tags={
+                                      Array [
+                                        "foo",
+                                        "bar",
+                                      ]
                                     }
-                                    containerElement={
+                                  >
+                                    <div
+                                      className="tag-list"
+                                    >
+                                      <p
+                                        className="tag-list-label is-6"
+                                      >
+                                        <strong>
+                                          Events:
+                                        </strong>
+                                      </p>
                                       <div
-                                        className="map"
-                                      />
+                                        className="tags"
+                                      >
+                                        <span
+                                          className="tag is-warning"
+                                          key="Zm9v"
+                                        >
+                                          foo
+                                        </span>
+                                        <span
+                                          className="tag is-warning"
+                                          key="YmFy"
+                                        >
+                                          bar
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </TagList>
+                                  <TagList
+                                    label="Measurements:"
+                                    tagStyle="is-warning"
+                                    tags={
+                                      Array [
+                                        "bar",
+                                        "foo",
+                                      ]
                                     }
-                                    googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-                                    isDialogOpened={false}
-                                    label="foo"
-                                    loadingElement={
+                                  >
+                                    <div
+                                      className="tag-list"
+                                    >
+                                      <p
+                                        className="tag-list-label is-6"
+                                      >
+                                        <strong>
+                                          Measurements:
+                                        </strong>
+                                      </p>
                                       <div
-                                        style={
-                                          Object {
-                                            "height": "100%",
-                                          }
-                                        }
-                                      />
-                                    }
-                                    mapElement={
-                                      <div
-                                        style={
-                                          Object {
-                                            "height": "100%",
-                                          }
-                                        }
-                                      />
-                                    }
+                                        className="tags"
+                                      >
+                                        <span
+                                          className="tag is-warning"
+                                          key="YmFy"
+                                        >
+                                          bar
+                                        </span>
+                                        <span
+                                          className="tag is-warning"
+                                          key="Zm9v"
+                                        >
+                                          foo
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </TagList>
+                                  <ThingActions
+                                    googleMapsUrl="https://www.google.es/maps"
+                                    onStatsClick={[Function]}
+                                  >
+                                    <p
+                                      className="buttons is-horizontal-center"
+                                    >
+                                      <a
+                                        className="button is-medium"
+                                        href="https://www.google.es/maps"
+                                        id="google-maps-link"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                      >
+                                        <span
+                                          className="icon is-medium"
+                                        >
+                                          <i
+                                            className="fas fa-map-marked"
+                                          />
+                                        </span>
+                                      </a>
+                                      <button
+                                        className="button is-medium"
+                                        id="stats-button"
+                                        onClick={[Function]}
+                                      >
+                                        <span
+                                          className="icon is-medium"
+                                        >
+                                          <i
+                                            className="fas fa-chart-bar"
+                                          />
+                                        </span>
+                                      </button>
+                                    </p>
+                                  </ThingActions>
+                                </div>
+                                <div
+                                  className="column is-two-fifths"
+                                >
+                                  <Connect(withProps(withScriptjs(withGoogleMap(Map))))
                                     marker={
                                       Object {
                                         "label": "foo",
@@ -1679,37 +2445,95 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                         },
                                       }
                                     }
-                                    point={
-                                      Object {
-                                        "lat": 40.21339,
-                                        "lng": -40.58457,
-                                      }
-                                    }
-                                    toggleDialog={[Function]}
-                                    zoom={12}
                                   >
-                                    <div
-                                      style={
+                                    <withProps(withScriptjs(withGoogleMap(Map)))
+                                      isDialogOpened={false}
+                                      marker={
                                         Object {
-                                          "height": "100%",
+                                          "label": "foo",
+                                          "point": Object {
+                                            "lat": 40.21339,
+                                            "lng": -40.58457,
+                                          },
                                         }
                                       }
-                                    />
-                                  </withScriptjs(withGoogleMap(Map))>
-                                </withProps(withScriptjs(withGoogleMap(Map)))>
-                              </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+                                      toggleDialog={[Function]}
+                                    >
+                                      <withScriptjs(withGoogleMap(Map))
+                                        center={
+                                          Object {
+                                            "lat": 40.21339,
+                                            "lng": -40.58457,
+                                          }
+                                        }
+                                        containerElement={
+                                          <div
+                                            className="map"
+                                          />
+                                        }
+                                        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                                        isDialogOpened={false}
+                                        label="foo"
+                                        loadingElement={
+                                          <div
+                                            style={
+                                              Object {
+                                                "height": "100%",
+                                              }
+                                            }
+                                          />
+                                        }
+                                        mapElement={
+                                          <div
+                                            style={
+                                              Object {
+                                                "height": "100%",
+                                              }
+                                            }
+                                          />
+                                        }
+                                        marker={
+                                          Object {
+                                            "label": "foo",
+                                            "point": Object {
+                                              "lat": 40.21339,
+                                              "lng": -40.58457,
+                                            },
+                                          }
+                                        }
+                                        point={
+                                          Object {
+                                            "lat": 40.21339,
+                                            "lng": -40.58457,
+                                          }
+                                        }
+                                        toggleDialog={[Function]}
+                                        zoom={12}
+                                      >
+                                        <div
+                                          style={
+                                            Object {
+                                              "height": "100%",
+                                            }
+                                          }
+                                        />
+                                      </withScriptjs(withGoogleMap(Map))>
+                                    </withProps(withScriptjs(withGoogleMap(Map)))>
+                                  </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </ThingDetail>
                       </div>
-                    </ThingDetail>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </Things>
-          </Connect(Things)>
+                </Things>
+              </ResetOnUnmount>
+            </Connect(ResetOnUnmount)>
+          </Connect(Connect(ResetOnUnmount))>
         </Route>
-      </withRouter(Connect(Things))>
+      </withRouter(Connect(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>

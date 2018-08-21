@@ -1,6 +1,7 @@
 import deepFreeze from "deep-freeze";
 import thingsReducer from "reducers/things";
 import { THINGS_UPDATED, THING_SELECTED } from "constants/actionTypes/things";
+import { RESET } from "constants/actionTypes/common";
 import { initialState } from "../constants/index";
 
 const thingsInitialState = initialState.things;
@@ -24,5 +25,8 @@ describe("reducers/things", () => {
     expect(state).toMatchSnapshot();
     state = thingsReducer(state, { type: THING_SELECTED, thing: "foo" });
     expect(state).toMatchSnapshot();
+  });
+  it("reduces RESET", () => {
+    expect(thingsReducer(thingsInitialState, { type: RESET })).toMatchSnapshot();
   });
 });

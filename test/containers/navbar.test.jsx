@@ -8,7 +8,7 @@ import Navbar from "containers/navbar";
 import { initialState } from "../constants/index";
 
 describe("containers/navbar", () => {
-  it("renders navbar in initial state", () => {
+  it("renders navbar in initial state and unmounts", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(
       <MemoryRouter keyLength={0}>
@@ -18,6 +18,7 @@ describe("containers/navbar", () => {
       </MemoryRouter>,
     );
     expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
   });
   it("renders navbar in toggled hamburguer menu state", () => {
     const state = {

@@ -8,7 +8,7 @@ import Things from "containers/things";
 import { initialState, thing } from "../constants";
 
 describe("containers/things", () => {
-  it("renders things in initial state", () => {
+  it("renders things in initial state and unmounts", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(
       <MemoryRouter initialEntries={["/"]} keyLength={0}>
@@ -18,6 +18,7 @@ describe("containers/things", () => {
       </MemoryRouter>,
     );
     expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
   });
   it("renders things in loading state", () => {
     const state = {
