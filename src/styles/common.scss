@@ -1,0 +1,13 @@
+html {
+  overflow: auto;
+  background-color: $light;
+}
+
+.is-horizontal-center {
+  display: flex;
+  justify-content: center;
+}
+
+.is-selected {
+  background-color: $selected;
+}
