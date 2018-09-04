@@ -23,7 +23,7 @@ const Stats = () => (
           isActive={false}
           isLoading
           isDisabled={false}
-          onButtonClick={() => undefined}
+          onButtonClick={() => undefined}z
           onItemClick={() => undefined}
         />
       </div>

@@ -14,6 +14,16 @@ Object {
     "pending": 0,
     "statusCode": null,
   },
+  "stats": Object {
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selected": null,
+    },
+  },
   "things": Object {
     "loadedThings": Array [],
     "selectedThing": null,
@@ -29,6 +39,16 @@ Object {
   },
   "auth": "AUTH",
   "request": "REQUEST",
+  "stats": Object {
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selected": null,
+    },
+  },
   "things": Object {
     "loadedThings": Array [],
     "selectedThing": null,
@@ -44,6 +64,16 @@ Object {
   },
   "auth": "STATE",
   "request": "REQUEST",
+  "stats": Object {
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selected": null,
+    },
+  },
   "things": Object {
     "loadedThings": Array [],
     "selectedThing": null,

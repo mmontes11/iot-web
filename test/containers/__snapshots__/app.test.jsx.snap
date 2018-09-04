@@ -2655,6 +2655,7 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                       label="Select Thing"
                                       onButtonClick={[Function]}
                                       onItemClick={[Function]}
+                                      z={true}
                                     >
                                       <div
                                         className="dropdown"

@@ -2191,6 +2191,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                               label="Select Thing"
                               onButtonClick={[Function]}
                               onItemClick={[Function]}
+                              z={true}
                             >
                               <div
                                 className="dropdown"

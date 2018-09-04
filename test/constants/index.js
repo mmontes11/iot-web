@@ -18,6 +18,13 @@ export const initialState = {
     loadedThings: [],
     selectedThing: null,
   },
+  stats: {
+    type: {
+      selected: null,
+      items: ["event", "measurement"],
+      isActive: false
+    }
+  }
 };
 
 export const thing = {
