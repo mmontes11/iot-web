@@ -4,8 +4,8 @@ const initialState = {
   type: {
     selected: null,
     items: ["event", "measurement"],
-    isActive: false
-  }
+    isActive: false,
+  },
 };
 
 export default (state = initialState, { type, updatedType }) => {

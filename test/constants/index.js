@@ -22,9 +22,9 @@ export const initialState = {
     type: {
       selected: null,
       items: ["event", "measurement"],
-      isActive: false
-    }
-  }
+      isActive: false,
+    },
+  },
 };
 
 export const thing = {

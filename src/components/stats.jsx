@@ -1,50 +1,37 @@
 import React from "react";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
-import Dropdown from "components/dropdown";
+import ParamsPanel from "components/paramsPanel";
+import FiltersPanel from "components/filtersPanel";
 
 const Stats = () => (
   <div className="container is-fluid section">
-    <div className="box columns is-half-widescreen">
-      <div className="column is-one-quarter">
-        <Dropdown
-          label="Select Type"
-          items={["Item1", "Item2", "Item3"]}
-          isActive
-          isLoading={false}
-          isDisabled={false}
-          onButtonClick={() => undefined}
-          onItemClick={() => undefined}
+    <div className="columns">
+      <div className="column is-three-quarters">
+        <ParamsPanel
+          statsType={{
+            label: "Select stats type",
+            items: ["event", "measurement"],
+            isActive: true,
+            onButtonClick: () => undefined,
+            onItemClick: () => undefined,
+          }}
+          observationType={{
+            label: "Select observation type",
+            items: ["temperature", "humidity"],
+            isActive: false,
+            isLoading: false,
+            isDisabled: true,
+            onButtonClick: () => undefined,
+            onItemClick: () => undefined,
+          }}
+          reset={{
+            isDisabled: true,
+            onReset: () => undefined,
+          }}
         />
       </div>
       <div className="column is-one-quarter">
-        <Dropdown
-          label="Select Thing"
-          items={["Item1", "Item2", "Item3"]}
-          isActive={false}
-          isLoading
-          isDisabled={false}
-          onButtonClick={() => undefined}z
-          onItemClick={() => undefined}
-        />
-      </div>
-      <div className="column is-one-quarter">
-        <Dropdown
-          label="Select Time Period"
-          items={["Item1", "Item2", "Item3"]}
-          isActive={false}
-          isLoading={false}
-          isDisabled
-          onButtonClick={() => undefined}
-          onItemClick={() => undefined}
-        />
-      </div>
-      <div className="column is-one-quarter">
-        <button className="button is-warning is-fullwidth" disabled>
-          <span>Reset</span>
-          <span className="icon is-small">
-            <i className="fas fa-eraser" aria-hidden="true" />
-          </span>
-        </button>
+        <FiltersPanel />
       </div>
     </div>
   </div>

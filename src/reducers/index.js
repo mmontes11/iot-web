@@ -10,7 +10,7 @@ export default combineReducers({
   auth,
   request,
   things,
-  stats
+  stats,
 });
 
 export const isLoading = state => requestHelpers.isLoading(state.request);

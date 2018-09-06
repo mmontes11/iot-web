@@ -2549,289 +2549,236 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                 className="container is-fluid section"
                               >
                                 <div
-                                  className="box columns is-half-widescreen"
+                                  className="columns"
                                 >
                                   <div
-                                    className="column is-one-quarter"
+                                    className="column is-three-quarters"
                                   >
-                                    <Dropdown
-                                      isActive={true}
-                                      isDisabled={false}
-                                      isLoading={false}
-                                      items={
-                                        Array [
-                                          "Item1",
-                                          "Item2",
-                                          "Item3",
-                                        ]
+                                    <ParamsPanel
+                                      observationType={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": true,
+                                          "isLoading": false,
+                                          "items": Array [
+                                            "temperature",
+                                            "humidity",
+                                          ],
+                                          "label": "Select observation type",
+                                          "onButtonClick": [Function],
+                                          "onItemClick": [Function],
+                                        }
                                       }
-                                      label="Select Type"
-                                      onButtonClick={[Function]}
-                                      onItemClick={[Function]}
+                                      reset={
+                                        Object {
+                                          "isDisabled": true,
+                                          "onReset": [Function],
+                                        }
+                                      }
+                                      statsType={
+                                        Object {
+                                          "isActive": true,
+                                          "items": Array [
+                                            "event",
+                                            "measurement",
+                                          ],
+                                          "label": "Select stats type",
+                                          "onButtonClick": [Function],
+                                          "onItemClick": [Function],
+                                        }
+                                      }
                                     >
                                       <div
-                                        className="dropdown is-active"
+                                        className="box"
                                       >
                                         <div
-                                          className="dropdown-trigger"
-                                        >
-                                          <button
-                                            aria-controls="dropdown-menu"
-                                            aria-haspopup="true"
-                                            className="button"
-                                            disabled={false}
-                                            onClick={[Function]}
-                                          >
-                                            <span>
-                                              Select Type
-                                            </span>
-                                            <span
-                                              className="icon is-small"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                className="fas fa-angle-down"
-                                              />
-                                            </span>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="dropdown-menu"
-                                          id="dropdown-menu"
-                                          role="menu"
+                                          className="columns"
                                         >
                                           <div
-                                            className="dropdown-content"
+                                            className="column is-5"
                                           >
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTE="
-                                              onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
+                                            <Dropdown
+                                              isActive={true}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={
+                                                Array [
+                                                  "event",
+                                                  "measurement",
+                                                ]
+                                              }
+                                              label="Select stats type"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
                                             >
-                                              Item1
-                                            </div>
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTI="
-                                              onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
+                                              <div
+                                                className="dropdown is-active"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={false}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      Select stats type
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  >
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="ZXZlbnQ="
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      event
+                                                    </div>
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="bWVhc3VyZW1lbnQ="
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      measurement
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column is-5"
+                                          >
+                                            <Dropdown
+                                              isActive={false}
+                                              isDisabled={true}
+                                              isLoading={false}
+                                              items={
+                                                Array [
+                                                  "temperature",
+                                                  "humidity",
+                                                ]
+                                              }
+                                              label="Select observation type"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
                                             >
-                                              Item2
-                                            </div>
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTM="
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={true}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      Select observation type
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  >
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="dGVtcGVyYXR1cmU="
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      temperature
+                                                    </div>
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="aHVtaWRpdHk="
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      humidity
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column"
+                                          >
+                                            <button
+                                              className="button is-warning is-fullwidth"
+                                              disabled={true}
                                               onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
                                             >
-                                              Item3
-                                            </div>
+                                              <span>
+                                                Reset
+                                              </span>
+                                              <span
+                                                className="icon is-small"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="fas fa-eraser"
+                                                />
+                                              </span>
+                                            </button>
                                           </div>
                                         </div>
                                       </div>
-                                    </Dropdown>
+                                    </ParamsPanel>
                                   </div>
                                   <div
                                     className="column is-one-quarter"
                                   >
-                                    <Dropdown
-                                      isActive={false}
-                                      isDisabled={false}
-                                      isLoading={true}
-                                      items={
-                                        Array [
-                                          "Item1",
-                                          "Item2",
-                                          "Item3",
-                                        ]
-                                      }
-                                      label="Select Thing"
-                                      onButtonClick={[Function]}
-                                      onItemClick={[Function]}
-                                      z={true}
-                                    >
+                                    <FiltersPanel>
                                       <div
-                                        className="dropdown"
-                                      >
-                                        <div
-                                          className="dropdown-trigger"
-                                        >
-                                          <button
-                                            aria-controls="dropdown-menu"
-                                            aria-haspopup="true"
-                                            className="button is-loading"
-                                            disabled={false}
-                                            onClick={[Function]}
-                                          >
-                                            <span>
-                                              Select Thing
-                                            </span>
-                                            <span
-                                              className="icon is-small"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                className="fas fa-angle-down"
-                                              />
-                                            </span>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="dropdown-menu"
-                                          id="dropdown-menu"
-                                          role="menu"
-                                        >
-                                          <div
-                                            className="dropdown-content"
-                                          >
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTE="
-                                              onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
-                                            >
-                                              Item1
-                                            </div>
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTI="
-                                              onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
-                                            >
-                                              Item2
-                                            </div>
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTM="
-                                              onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
-                                            >
-                                              Item3
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </Dropdown>
-                                  </div>
-                                  <div
-                                    className="column is-one-quarter"
-                                  >
-                                    <Dropdown
-                                      isActive={false}
-                                      isDisabled={true}
-                                      isLoading={false}
-                                      items={
-                                        Array [
-                                          "Item1",
-                                          "Item2",
-                                          "Item3",
-                                        ]
-                                      }
-                                      label="Select Time Period"
-                                      onButtonClick={[Function]}
-                                      onItemClick={[Function]}
-                                    >
-                                      <div
-                                        className="dropdown"
-                                      >
-                                        <div
-                                          className="dropdown-trigger"
-                                        >
-                                          <button
-                                            aria-controls="dropdown-menu"
-                                            aria-haspopup="true"
-                                            className="button"
-                                            disabled={true}
-                                            onClick={[Function]}
-                                          >
-                                            <span>
-                                              Select Time Period
-                                            </span>
-                                            <span
-                                              className="icon is-small"
-                                            >
-                                              <i
-                                                aria-hidden="true"
-                                                className="fas fa-angle-down"
-                                              />
-                                            </span>
-                                          </button>
-                                        </div>
-                                        <div
-                                          className="dropdown-menu"
-                                          id="dropdown-menu"
-                                          role="menu"
-                                        >
-                                          <div
-                                            className="dropdown-content"
-                                          >
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTE="
-                                              onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
-                                            >
-                                              Item1
-                                            </div>
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTI="
-                                              onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
-                                            >
-                                              Item2
-                                            </div>
-                                            <div
-                                              className="dropdown-item"
-                                              key="SXRlbTM="
-                                              onClick={[Function]}
-                                              onKeyPress={[Function]}
-                                              role="button"
-                                              tabIndex={0}
-                                            >
-                                              Item3
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </Dropdown>
-                                  </div>
-                                  <div
-                                    className="column is-one-quarter"
-                                  >
-                                    <button
-                                      className="button is-warning is-fullwidth"
-                                      disabled={true}
-                                    >
-                                      <span>
-                                        Reset
-                                      </span>
-                                      <span
-                                        className="icon is-small"
-                                      >
-                                        <i
-                                          aria-hidden="true"
-                                          className="fas fa-eraser"
-                                        />
-                                      </span>
-                                    </button>
+                                        className="box"
+                                      />
+                                    </FiltersPanel>
                                   </div>
                                 </div>
                               </div>

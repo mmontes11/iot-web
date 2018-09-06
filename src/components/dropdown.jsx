@@ -44,7 +44,7 @@ const Dropdown = ({ label, items, isActive, isLoading, isDisabled, onButtonClick
 
 Dropdown.propTypes = {
   label: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   isActive: PropTypes.bool.isRequired,
   isLoading: PropTypes.bool.isRequired,
   isDisabled: PropTypes.bool.isRequired,
