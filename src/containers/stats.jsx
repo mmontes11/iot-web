@@ -9,7 +9,7 @@ import FiltersPanel from "components/filtersPanel";
 import * as paramsActions from "actions/params";
 import * as commonActions from "actions/common";
 
-const Stats = ({ type, isResetDisabled, selectType, updateType, reset }) => (
+const Stats = ({ type, observation, isResetDisabled, selectType, updateType, reset }) => (
   <div className="container is-fluid section">
     <div className="columns">
       <div className="column is-three-quarters">
@@ -21,11 +21,8 @@ const Stats = ({ type, isResetDisabled, selectType, updateType, reset }) => (
             onItemClick: item => updateType(item),
           }}
           observation={{
-            label: "Select observation type",
-            items: ["temperature", "humidity"],
-            isActive: false,
-            isLoading: false,
-            isDisabled: true,
+            ...observation,
+            label: observation.selectedItem || "Select observation",
             onButtonClick: () => undefined,
             onItemClick: () => undefined,
           }}
@@ -44,6 +41,7 @@ const Stats = ({ type, isResetDisabled, selectType, updateType, reset }) => (
 
 Stats.propTypes = {
   type: PropTypes.shape({}).isRequired,
+  observation: PropTypes.shape({}).isRequired,
   isResetDisabled: PropTypes.bool.isRequired,
   selectType: PropTypes.func.isRequired,
   updateType: PropTypes.func.isRequired,
@@ -53,6 +51,7 @@ Stats.propTypes = {
 const withConnect = connect(
   state => ({
     type: state.stats.params.type,
+    observation: state.stats.params.observation,
     isResetDisabled: state.stats.params.reset.isDisabled,
   }),
   { ...paramsActions, ...commonActions },

@@ -2495,6 +2495,15 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                 "url": "/stats",
                               }
                             }
+                            observation={
+                              Object {
+                                "isActive": false,
+                                "isDisabled": true,
+                                "isLoading": false,
+                                "items": Array [],
+                                "selectedItem": null,
+                              }
+                            }
                             reset={[Function]}
                             selectType={[Function]}
                             type={
@@ -2556,6 +2565,15 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                     "params": Object {},
                                     "path": "/stats",
                                     "url": "/stats",
+                                  }
+                                }
+                                observation={
+                                  Object {
+                                    "isActive": false,
+                                    "isDisabled": true,
+                                    "isLoading": false,
+                                    "items": Array [],
+                                    "selectedItem": null,
                                   }
                                 }
                                 reset={[Function]}
@@ -2620,6 +2638,15 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                       "url": "/stats",
                                     }
                                   }
+                                  observation={
+                                    Object {
+                                      "isActive": false,
+                                      "isDisabled": true,
+                                      "isLoading": false,
+                                      "items": Array [],
+                                      "selectedItem": null,
+                                    }
+                                  }
                                   reset={[Function]}
                                   selectType={[Function]}
                                   type={
@@ -2682,6 +2709,15 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                         "url": "/stats",
                                       }
                                     }
+                                    observation={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": true,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "selectedItem": null,
+                                      }
+                                    }
                                     reset={[Function]}
                                     selectType={[Function]}
                                     type={
@@ -2711,13 +2747,11 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                                 "isActive": false,
                                                 "isDisabled": true,
                                                 "isLoading": false,
-                                                "items": Array [
-                                                  "temperature",
-                                                  "humidity",
-                                                ],
-                                                "label": "Select observation type",
+                                                "items": Array [],
+                                                "label": "Select observation",
                                                 "onButtonClick": [Function],
                                                 "onItemClick": [Function],
+                                                "selectedItem": null,
                                               }
                                             }
                                             reset={
@@ -2830,15 +2864,11 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                                     isActive={false}
                                                     isDisabled={true}
                                                     isLoading={false}
-                                                    items={
-                                                      Array [
-                                                        "temperature",
-                                                        "humidity",
-                                                      ]
-                                                    }
-                                                    label="Select observation type"
+                                                    items={Array []}
+                                                    label="Select observation"
                                                     onButtonClick={[Function]}
                                                     onItemClick={[Function]}
+                                                    selectedItem={null}
                                                   >
                                                     <div
                                                       className="dropdown"
@@ -2854,7 +2884,7 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                                           onClick={[Function]}
                                                         >
                                                           <span>
-                                                            Select observation type
+                                                            Select observation
                                                           </span>
                                                           <span
                                                             className="icon is-small"
@@ -2873,28 +2903,7 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                                       >
                                                         <div
                                                           className="dropdown-content"
-                                                        >
-                                                          <div
-                                                            className="dropdown-item"
-                                                            key="dGVtcGVyYXR1cmU="
-                                                            onClick={[Function]}
-                                                            onKeyPress={[Function]}
-                                                            role="button"
-                                                            tabIndex={0}
-                                                          >
-                                                            temperature
-                                                          </div>
-                                                          <div
-                                                            className="dropdown-item"
-                                                            key="aHVtaWRpdHk="
-                                                            onClick={[Function]}
-                                                            onKeyPress={[Function]}
-                                                            role="button"
-                                                            tabIndex={0}
-                                                          >
-                                                            humidity
-                                                          </div>
-                                                        </div>
+                                                        />
                                                       </div>
                                                     </div>
                                                   </Dropdown>

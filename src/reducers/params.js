@@ -1,9 +1,10 @@
 import { TYPE_SELECT, TYPE_UPDATED } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
+import { OBSERVATION_TYPES } from "constants/observationTypes";
 
 export const initialState = {
   type: {
-    items: ["event", "measurement"],
+    items: OBSERVATION_TYPES,
     isActive: false,
     selectedItem: null,
   },
