@@ -1,8 +1,10 @@
 .dropdown {
   width: 100%;
 
-  .dropdown-trigger {
+  .dropdown-trigger,
+  .dropdown-menu {
     width: 100%;
+    cursor: pointer;
   }
 
   .button {

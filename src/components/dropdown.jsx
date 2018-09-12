@@ -28,7 +28,9 @@ const Dropdown = ({ label, items, isActive, isLoading, isDisabled, onButtonClick
               <div
                 key={btoa(item)}
                 className="dropdown-item"
-                onClick={() => onItemClick(item)}
+                onClick={() => {
+                  onItemClick(item);
+                }}
                 onKeyPress={() => onItemClick(item)}
                 role="button"
                 tabIndex={0}

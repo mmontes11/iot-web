@@ -19,11 +19,23 @@ export const initialState = {
     selectedThing: null,
   },
   stats: {
-    type: {
-      selected: null,
-      items: ["event", "measurement"],
-      isActive: false,
-    },
+    params: {
+      type: {
+        items: ["event", "measurement"],
+        isActive: false,
+        selectedItem: null,
+      },
+      observation: {
+        items: [],
+        isActive: false,
+        isLoading: false,
+        isDisabled: true,
+        selectedItem: null,
+      },
+      reset: {
+        isDisabled: true,
+      },
+    }
   },
 };
 

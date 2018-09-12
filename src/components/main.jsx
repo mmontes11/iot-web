@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Navbar from "containers/navbar";
 import Things from "containers/things";
-import Stats from "components/stats";
+import Stats from "containers/stats";
 
 const Main = () => (
   <div className="has-navbar-fixed-top">

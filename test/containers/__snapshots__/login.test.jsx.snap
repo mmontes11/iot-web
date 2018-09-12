@@ -766,13 +766,25 @@ Object {
     "statusCode": null,
   },
   "stats": Object {
-    "type": Object {
-      "isActive": false,
-      "items": Array [
-        "event",
-        "measurement",
-      ],
-      "selected": null,
+    "params": Object {
+      "observation": Object {
+        "isActive": false,
+        "isDisabled": true,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+      "reset": Object {
+        "isDisabled": true,
+      },
+      "type": Object {
+        "isActive": false,
+        "items": Array [
+          "event",
+          "measurement",
+        ],
+        "selectedItem": null,
+      },
     },
   },
   "things": Object {
@@ -1174,13 +1186,25 @@ Object {
     "statusCode": null,
   },
   "stats": Object {
-    "type": Object {
-      "isActive": false,
-      "items": Array [
-        "event",
-        "measurement",
-      ],
-      "selected": null,
+    "params": Object {
+      "observation": Object {
+        "isActive": false,
+        "isDisabled": true,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+      "reset": Object {
+        "isDisabled": true,
+      },
+      "type": Object {
+        "isActive": false,
+        "items": Array [
+          "event",
+          "measurement",
+        ],
+        "selectedItem": null,
+      },
     },
   },
   "things": Object {

@@ -2399,7 +2399,7 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                         }
                         path="/stats"
                       >
-                        <Connect(ResetOnUnmount)
+                        <Connect(withRouter(Connect(ResetOnUnmount)))
                           history={
                             Object {
                               "action": "POP",
@@ -2447,7 +2447,7 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                             }
                           }
                         >
-                          <ResetOnUnmount
+                          <withRouter(Connect(ResetOnUnmount))
                             history={
                               Object {
                                 "action": "POP",
@@ -2478,6 +2478,7 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                                 "replace": [Function],
                               }
                             }
+                            isResetDisabled={true}
                             location={
                               Object {
                                 "hash": "",
@@ -2495,296 +2496,451 @@ exports[`containers/app renders the app with auth in /stats 1`] = `
                               }
                             }
                             reset={[Function]}
+                            selectType={[Function]}
+                            type={
+                              Object {
+                                "isActive": false,
+                                "items": Array [
+                                  "event",
+                                  "measurement",
+                                ],
+                                "selectedItem": null,
+                              }
+                            }
+                            updateType={[Function]}
                           >
-                            <Stats
-                              history={
-                                Object {
-                                  "action": "POP",
-                                  "block": [Function],
-                                  "canGo": [Function],
-                                  "createHref": [Function],
-                                  "entries": Array [
-                                    Object {
+                            <Route>
+                              <Connect(ResetOnUnmount)
+                                history={
+                                  Object {
+                                    "action": "POP",
+                                    "block": [Function],
+                                    "canGo": [Function],
+                                    "createHref": [Function],
+                                    "entries": Array [
+                                      Object {
+                                        "hash": "",
+                                        "pathname": "/stats",
+                                        "search": "",
+                                        "state": undefined,
+                                      },
+                                    ],
+                                    "go": [Function],
+                                    "goBack": [Function],
+                                    "goForward": [Function],
+                                    "index": 0,
+                                    "length": 1,
+                                    "listen": [Function],
+                                    "location": Object {
                                       "hash": "",
                                       "pathname": "/stats",
                                       "search": "",
                                       "state": undefined,
                                     },
-                                  ],
-                                  "go": [Function],
-                                  "goBack": [Function],
-                                  "goForward": [Function],
-                                  "index": 0,
-                                  "length": 1,
-                                  "listen": [Function],
-                                  "location": Object {
+                                    "push": [Function],
+                                    "replace": [Function],
+                                  }
+                                }
+                                isResetDisabled={true}
+                                location={
+                                  Object {
                                     "hash": "",
                                     "pathname": "/stats",
                                     "search": "",
                                     "state": undefined,
-                                  },
-                                  "push": [Function],
-                                  "replace": [Function],
+                                  }
                                 }
-                              }
-                              location={
-                                Object {
-                                  "hash": "",
-                                  "pathname": "/stats",
-                                  "search": "",
-                                  "state": undefined,
+                                match={
+                                  Object {
+                                    "isExact": true,
+                                    "params": Object {},
+                                    "path": "/stats",
+                                    "url": "/stats",
+                                  }
                                 }
-                              }
-                              match={
-                                Object {
-                                  "isExact": true,
-                                  "params": Object {},
-                                  "path": "/stats",
-                                  "url": "/stats",
+                                reset={[Function]}
+                                selectType={[Function]}
+                                type={
+                                  Object {
+                                    "isActive": false,
+                                    "items": Array [
+                                      "event",
+                                      "measurement",
+                                    ],
+                                    "selectedItem": null,
+                                  }
                                 }
-                              }
-                              reset={[Function]}
-                            >
-                              <div
-                                className="container is-fluid section"
+                                updateType={[Function]}
                               >
-                                <div
-                                  className="columns"
+                                <ResetOnUnmount
+                                  history={
+                                    Object {
+                                      "action": "POP",
+                                      "block": [Function],
+                                      "canGo": [Function],
+                                      "createHref": [Function],
+                                      "entries": Array [
+                                        Object {
+                                          "hash": "",
+                                          "pathname": "/stats",
+                                          "search": "",
+                                          "state": undefined,
+                                        },
+                                      ],
+                                      "go": [Function],
+                                      "goBack": [Function],
+                                      "goForward": [Function],
+                                      "index": 0,
+                                      "length": 1,
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "pathname": "/stats",
+                                        "search": "",
+                                        "state": undefined,
+                                      },
+                                      "push": [Function],
+                                      "replace": [Function],
+                                    }
+                                  }
+                                  isResetDisabled={true}
+                                  location={
+                                    Object {
+                                      "hash": "",
+                                      "pathname": "/stats",
+                                      "search": "",
+                                      "state": undefined,
+                                    }
+                                  }
+                                  match={
+                                    Object {
+                                      "isExact": true,
+                                      "params": Object {},
+                                      "path": "/stats",
+                                      "url": "/stats",
+                                    }
+                                  }
+                                  reset={[Function]}
+                                  selectType={[Function]}
+                                  type={
+                                    Object {
+                                      "isActive": false,
+                                      "items": Array [
+                                        "event",
+                                        "measurement",
+                                      ],
+                                      "selectedItem": null,
+                                    }
+                                  }
+                                  updateType={[Function]}
                                 >
-                                  <div
-                                    className="column is-three-quarters"
+                                  <Stats
+                                    history={
+                                      Object {
+                                        "action": "POP",
+                                        "block": [Function],
+                                        "canGo": [Function],
+                                        "createHref": [Function],
+                                        "entries": Array [
+                                          Object {
+                                            "hash": "",
+                                            "pathname": "/stats",
+                                            "search": "",
+                                            "state": undefined,
+                                          },
+                                        ],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "index": 0,
+                                        "length": 1,
+                                        "listen": [Function],
+                                        "location": Object {
+                                          "hash": "",
+                                          "pathname": "/stats",
+                                          "search": "",
+                                          "state": undefined,
+                                        },
+                                        "push": [Function],
+                                        "replace": [Function],
+                                      }
+                                    }
+                                    isResetDisabled={true}
+                                    location={
+                                      Object {
+                                        "hash": "",
+                                        "pathname": "/stats",
+                                        "search": "",
+                                        "state": undefined,
+                                      }
+                                    }
+                                    match={
+                                      Object {
+                                        "isExact": true,
+                                        "params": Object {},
+                                        "path": "/stats",
+                                        "url": "/stats",
+                                      }
+                                    }
+                                    reset={[Function]}
+                                    selectType={[Function]}
+                                    type={
+                                      Object {
+                                        "isActive": false,
+                                        "items": Array [
+                                          "event",
+                                          "measurement",
+                                        ],
+                                        "selectedItem": null,
+                                      }
+                                    }
+                                    updateType={[Function]}
                                   >
-                                    <ParamsPanel
-                                      observationType={
-                                        Object {
-                                          "isActive": false,
-                                          "isDisabled": true,
-                                          "isLoading": false,
-                                          "items": Array [
-                                            "temperature",
-                                            "humidity",
-                                          ],
-                                          "label": "Select observation type",
-                                          "onButtonClick": [Function],
-                                          "onItemClick": [Function],
-                                        }
-                                      }
-                                      reset={
-                                        Object {
-                                          "isDisabled": true,
-                                          "onReset": [Function],
-                                        }
-                                      }
-                                      statsType={
-                                        Object {
-                                          "isActive": true,
-                                          "items": Array [
-                                            "event",
-                                            "measurement",
-                                          ],
-                                          "label": "Select stats type",
-                                          "onButtonClick": [Function],
-                                          "onItemClick": [Function],
-                                        }
-                                      }
+                                    <div
+                                      className="container is-fluid section"
                                     >
                                       <div
-                                        className="box"
+                                        className="columns"
                                       >
                                         <div
-                                          className="columns"
+                                          className="column is-three-quarters"
                                         >
-                                          <div
-                                            className="column is-5"
-                                          >
-                                            <Dropdown
-                                              isActive={true}
-                                              isDisabled={false}
-                                              isLoading={false}
-                                              items={
-                                                Array [
-                                                  "event",
-                                                  "measurement",
-                                                ]
-                                              }
-                                              label="Select stats type"
-                                              onButtonClick={[Function]}
-                                              onItemClick={[Function]}
-                                            >
-                                              <div
-                                                className="dropdown is-active"
-                                              >
-                                                <div
-                                                  className="dropdown-trigger"
-                                                >
-                                                  <button
-                                                    aria-controls="dropdown-menu"
-                                                    aria-haspopup="true"
-                                                    className="button"
-                                                    disabled={false}
-                                                    onClick={[Function]}
-                                                  >
-                                                    <span>
-                                                      Select stats type
-                                                    </span>
-                                                    <span
-                                                      className="icon is-small"
-                                                    >
-                                                      <i
-                                                        aria-hidden="true"
-                                                        className="fas fa-angle-down"
-                                                      />
-                                                    </span>
-                                                  </button>
-                                                </div>
-                                                <div
-                                                  className="dropdown-menu"
-                                                  id="dropdown-menu"
-                                                  role="menu"
-                                                >
-                                                  <div
-                                                    className="dropdown-content"
-                                                  >
-                                                    <div
-                                                      className="dropdown-item"
-                                                      key="ZXZlbnQ="
-                                                      onClick={[Function]}
-                                                      onKeyPress={[Function]}
-                                                      role="button"
-                                                      tabIndex={0}
-                                                    >
-                                                      event
-                                                    </div>
-                                                    <div
-                                                      className="dropdown-item"
-                                                      key="bWVhc3VyZW1lbnQ="
-                                                      onClick={[Function]}
-                                                      onKeyPress={[Function]}
-                                                      role="button"
-                                                      tabIndex={0}
-                                                    >
-                                                      measurement
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </Dropdown>
-                                          </div>
-                                          <div
-                                            className="column is-5"
-                                          >
-                                            <Dropdown
-                                              isActive={false}
-                                              isDisabled={true}
-                                              isLoading={false}
-                                              items={
-                                                Array [
+                                          <ParamsPanel
+                                            observation={
+                                              Object {
+                                                "isActive": false,
+                                                "isDisabled": true,
+                                                "isLoading": false,
+                                                "items": Array [
                                                   "temperature",
                                                   "humidity",
-                                                ]
+                                                ],
+                                                "label": "Select observation type",
+                                                "onButtonClick": [Function],
+                                                "onItemClick": [Function],
                                               }
-                                              label="Select observation type"
-                                              onButtonClick={[Function]}
-                                              onItemClick={[Function]}
+                                            }
+                                            reset={
+                                              Object {
+                                                "isDisabled": true,
+                                                "onReset": [Function],
+                                              }
+                                            }
+                                            type={
+                                              Object {
+                                                "isActive": false,
+                                                "items": Array [
+                                                  "event",
+                                                  "measurement",
+                                                ],
+                                                "label": "Select type",
+                                                "onButtonClick": [Function],
+                                                "onItemClick": [Function],
+                                                "selectedItem": null,
+                                              }
+                                            }
+                                          >
+                                            <div
+                                              className="box"
                                             >
                                               <div
-                                                className="dropdown"
+                                                className="columns"
                                               >
                                                 <div
-                                                  className="dropdown-trigger"
+                                                  className="column is-5"
+                                                >
+                                                  <Dropdown
+                                                    isActive={false}
+                                                    isDisabled={false}
+                                                    isLoading={false}
+                                                    items={
+                                                      Array [
+                                                        "event",
+                                                        "measurement",
+                                                      ]
+                                                    }
+                                                    label="Select type"
+                                                    onButtonClick={[Function]}
+                                                    onItemClick={[Function]}
+                                                    selectedItem={null}
+                                                  >
+                                                    <div
+                                                      className="dropdown"
+                                                    >
+                                                      <div
+                                                        className="dropdown-trigger"
+                                                      >
+                                                        <button
+                                                          aria-controls="dropdown-menu"
+                                                          aria-haspopup="true"
+                                                          className="button"
+                                                          disabled={false}
+                                                          onClick={[Function]}
+                                                        >
+                                                          <span>
+                                                            Select type
+                                                          </span>
+                                                          <span
+                                                            className="icon is-small"
+                                                          >
+                                                            <i
+                                                              aria-hidden="true"
+                                                              className="fas fa-angle-down"
+                                                            />
+                                                          </span>
+                                                        </button>
+                                                      </div>
+                                                      <div
+                                                        className="dropdown-menu"
+                                                        id="dropdown-menu"
+                                                        role="menu"
+                                                      >
+                                                        <div
+                                                          className="dropdown-content"
+                                                        >
+                                                          <div
+                                                            className="dropdown-item"
+                                                            key="ZXZlbnQ="
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                          >
+                                                            event
+                                                          </div>
+                                                          <div
+                                                            className="dropdown-item"
+                                                            key="bWVhc3VyZW1lbnQ="
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                          >
+                                                            measurement
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </Dropdown>
+                                                </div>
+                                                <div
+                                                  className="column is-5"
+                                                >
+                                                  <Dropdown
+                                                    isActive={false}
+                                                    isDisabled={true}
+                                                    isLoading={false}
+                                                    items={
+                                                      Array [
+                                                        "temperature",
+                                                        "humidity",
+                                                      ]
+                                                    }
+                                                    label="Select observation type"
+                                                    onButtonClick={[Function]}
+                                                    onItemClick={[Function]}
+                                                  >
+                                                    <div
+                                                      className="dropdown"
+                                                    >
+                                                      <div
+                                                        className="dropdown-trigger"
+                                                      >
+                                                        <button
+                                                          aria-controls="dropdown-menu"
+                                                          aria-haspopup="true"
+                                                          className="button"
+                                                          disabled={true}
+                                                          onClick={[Function]}
+                                                        >
+                                                          <span>
+                                                            Select observation type
+                                                          </span>
+                                                          <span
+                                                            className="icon is-small"
+                                                          >
+                                                            <i
+                                                              aria-hidden="true"
+                                                              className="fas fa-angle-down"
+                                                            />
+                                                          </span>
+                                                        </button>
+                                                      </div>
+                                                      <div
+                                                        className="dropdown-menu"
+                                                        id="dropdown-menu"
+                                                        role="menu"
+                                                      >
+                                                        <div
+                                                          className="dropdown-content"
+                                                        >
+                                                          <div
+                                                            className="dropdown-item"
+                                                            key="dGVtcGVyYXR1cmU="
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                          >
+                                                            temperature
+                                                          </div>
+                                                          <div
+                                                            className="dropdown-item"
+                                                            key="aHVtaWRpdHk="
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                          >
+                                                            humidity
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </Dropdown>
+                                                </div>
+                                                <div
+                                                  className="column"
                                                 >
                                                   <button
-                                                    aria-controls="dropdown-menu"
-                                                    aria-haspopup="true"
-                                                    className="button"
+                                                    className="button is-warning is-fullwidth"
                                                     disabled={true}
                                                     onClick={[Function]}
                                                   >
                                                     <span>
-                                                      Select observation type
+                                                      Reset
                                                     </span>
                                                     <span
                                                       className="icon is-small"
                                                     >
                                                       <i
                                                         aria-hidden="true"
-                                                        className="fas fa-angle-down"
+                                                        className="fas fa-eraser"
                                                       />
                                                     </span>
                                                   </button>
                                                 </div>
-                                                <div
-                                                  className="dropdown-menu"
-                                                  id="dropdown-menu"
-                                                  role="menu"
-                                                >
-                                                  <div
-                                                    className="dropdown-content"
-                                                  >
-                                                    <div
-                                                      className="dropdown-item"
-                                                      key="dGVtcGVyYXR1cmU="
-                                                      onClick={[Function]}
-                                                      onKeyPress={[Function]}
-                                                      role="button"
-                                                      tabIndex={0}
-                                                    >
-                                                      temperature
-                                                    </div>
-                                                    <div
-                                                      className="dropdown-item"
-                                                      key="aHVtaWRpdHk="
-                                                      onClick={[Function]}
-                                                      onKeyPress={[Function]}
-                                                      role="button"
-                                                      tabIndex={0}
-                                                    >
-                                                      humidity
-                                                    </div>
-                                                  </div>
-                                                </div>
                                               </div>
-                                            </Dropdown>
-                                          </div>
-                                          <div
-                                            className="column"
-                                          >
-                                            <button
-                                              className="button is-warning is-fullwidth"
-                                              disabled={true}
-                                              onClick={[Function]}
-                                            >
-                                              <span>
-                                                Reset
-                                              </span>
-                                              <span
-                                                className="icon is-small"
-                                              >
-                                                <i
-                                                  aria-hidden="true"
-                                                  className="fas fa-eraser"
-                                                />
-                                              </span>
-                                            </button>
-                                          </div>
+                                            </div>
+                                          </ParamsPanel>
+                                        </div>
+                                        <div
+                                          className="column is-one-quarter"
+                                        >
+                                          <FiltersPanel>
+                                            <div
+                                              className="box"
+                                            />
+                                          </FiltersPanel>
                                         </div>
                                       </div>
-                                    </ParamsPanel>
-                                  </div>
-                                  <div
-                                    className="column is-one-quarter"
-                                  >
-                                    <FiltersPanel>
-                                      <div
-                                        className="box"
-                                      />
-                                    </FiltersPanel>
-                                  </div>
-                                </div>
-                              </div>
-                            </Stats>
-                          </ResetOnUnmount>
-                        </Connect(ResetOnUnmount)>
+                                    </div>
+                                  </Stats>
+                                </ResetOnUnmount>
+                              </Connect(ResetOnUnmount)>
+                            </Route>
+                          </withRouter(Connect(ResetOnUnmount))>
+                        </Connect(withRouter(Connect(ResetOnUnmount)))>
                       </Route>
                     </Switch>
                   </main>

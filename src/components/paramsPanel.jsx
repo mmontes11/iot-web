@@ -2,29 +2,23 @@ import React from "react";
 import Dropdown from "components/dropdown";
 import PropTypes from "prop-types";
 
-const ParamsPanel = ({ statsType, observationType, reset }) => (
+const ParamsPanel = ({ type, observation, reset }) => (
   <div className="box">
     <div className="columns">
       <div className="column is-5">
         <Dropdown
-          label={statsType.label}
-          items={statsType.items}
-          isActive={statsType.isActive}
+          {...type}
           isLoading={false}
           isDisabled={false}
-          onButtonClick={() => statsType.onButtonClick()}
-          onItemClick={() => statsType.onItemClick()}
+          onButtonClick={() => type.onButtonClick()}
+          onItemClick={item => type.onItemClick(item)}
         />
       </div>
       <div className="column is-5">
         <Dropdown
-          label={observationType.label}
-          items={observationType.items}
-          isActive={observationType.isActive}
-          isLoading={observationType.isLoading}
-          isDisabled={observationType.isDisabled}
-          onButtonClick={() => observationType.onButtonClick()}
-          onItemClick={() => observationType.onItemClick()}
+          {...observation}
+          onButtonClick={() => observation.onButtonClick()}
+          onItemClick={item => observation.onItemClick(item)}
         />
       </div>
       <div className="column">
@@ -40,14 +34,14 @@ const ParamsPanel = ({ statsType, observationType, reset }) => (
 );
 
 ParamsPanel.propTypes = {
-  statsType: PropTypes.shape({
+  type: PropTypes.shape({
     label: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     isActive: PropTypes.bool.isRequired,
     onButtonClick: PropTypes.func.isRequired,
     onItemClick: PropTypes.func.isRequired,
   }).isRequired,
-  observationType: PropTypes.shape({
+  observation: PropTypes.shape({
     label: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     isActive: PropTypes.bool.isRequired,
