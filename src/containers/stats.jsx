@@ -9,7 +9,16 @@ import FiltersPanel from "components/filtersPanel";
 import * as paramsActions from "actions/params";
 import * as commonActions from "actions/common";
 
-const Stats = ({ type, observation, isResetDisabled, selectType, updateType, reset }) => (
+const Stats = ({
+  type,
+  observation,
+  isResetDisabled,
+  selectType,
+  updateType,
+  selectObservation,
+  updateObservation,
+  reset,
+}) => (
   <div className="container is-fluid section">
     <div className="columns">
       <div className="column is-three-quarters">
@@ -23,8 +32,8 @@ const Stats = ({ type, observation, isResetDisabled, selectType, updateType, res
           observation={{
             ...observation,
             label: observation.selectedItem || "Select observation",
-            onButtonClick: () => undefined,
-            onItemClick: () => undefined,
+            onButtonClick: () => selectObservation(),
+            onItemClick: item => updateObservation(item),
           }}
           reset={{
             isDisabled: isResetDisabled,
@@ -45,6 +54,8 @@ Stats.propTypes = {
   isResetDisabled: PropTypes.bool.isRequired,
   selectType: PropTypes.func.isRequired,
   updateType: PropTypes.func.isRequired,
+  selectObservation: PropTypes.func.isRequired,
+  updateObservation: PropTypes.func.isRequired,
   reset: PropTypes.func.isRequired,
 };
 

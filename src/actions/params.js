@@ -1,6 +1,8 @@
 import {
   TYPE_SELECT,
   TYPE_UPDATED,
+  OBSERVATION_SELECT,
+  OBSERVATION_UPDATED,
   OBSERVATIONS_REQUEST,
   OBSERVATIONS_REQUEST_SUCCESS,
   OBSERVATIONS_REQUEST_ERROR,
@@ -36,10 +38,18 @@ export const updateType = updatedType => dispatch => {
     () => dispatch({ type: OBSERVATIONS_REQUEST }),
     res => {
       dispatch({ type: OBSERVATIONS_REQUEST_SUCCESS, statusCode: res.statusCode, error: null });
-      dispatch({ type: OBSERVATIONS_UPDATED, things: res.body.types });
+      dispatch({ type: OBSERVATIONS_UPDATED, observations: res.body.types });
     },
     error => {
       dispatch({ type: OBSERVATIONS_REQUEST_ERROR, statusCode: error.statusCode, error });
     },
   );
+};
+
+export const selectObservation = () => dispatch => {
+  dispatch({ type: OBSERVATION_SELECT });
+};
+
+export const updateObservation = updatedObservation => dispatch => {
+  dispatch({ type: OBSERVATION_UPDATED, updatedObservation });
 };
