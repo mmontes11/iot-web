@@ -859,11 +859,11 @@ Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
     "isMapDialogOpened": false,
+    "showError": true,
   },
   "auth": Object {
     "isAuth": false,
     "password": null,
-    "showError": true,
     "username": null,
   },
   "request": Object {
@@ -905,11 +905,11 @@ Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
     "isMapDialogOpened": false,
+    "showError": true,
   },
   "auth": Object {
     "isAuth": false,
     "password": null,
-    "showError": true,
     "username": null,
   },
   "request": Object {

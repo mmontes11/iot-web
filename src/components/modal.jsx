@@ -26,7 +26,7 @@ const Modal = ({ isActive, onCloseClick, messageStyle, title, subTitle }) => {
 Modal.propTypes = {
   isActive: PropTypes.bool.isRequired,
   onCloseClick: PropTypes.func.isRequired,
-  messageStyle: PropTypes.shape({}).isRequired,
+  messageStyle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
 };

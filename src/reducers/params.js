@@ -57,7 +57,7 @@ export default (state = initialState, { type, updatedType, updatedObservation, o
     case OBSERVATIONS_REQUEST_ERROR:
       return { ...state, observation: { ...state.observation, isLoading: false, isDisabled: true } };
     case OBSERVATIONS_UPDATED:
-      return { ...state, observation: { ...state.observations, items: observations } };
+      return { ...state, observation: { ...state.observation, items: observations } };
     case RESET:
       return initialState;
     default:

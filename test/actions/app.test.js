@@ -1,4 +1,4 @@
-import { toggleHamburgerMenu, toggleMapDialog } from "actions/app";
+import { toggleHamburgerMenu, toggleMapDialog, setShowError } from "actions/app";
 
 describe("actions/auth", () => {
   const testThunk = thunk => {
@@ -12,5 +12,8 @@ describe("actions/auth", () => {
   });
   it("dispatches a toggleMapDialog action", () => {
     testThunk(toggleMapDialog());
+  });
+  it("dispatches a setShowError action", () => {
+    testThunk(setShowError());
   });
 });

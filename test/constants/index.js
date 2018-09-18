@@ -2,12 +2,12 @@ export const initialState = {
   app: {
     isHamburgerMenuExpanded: false,
     isMapDialogOpened: false,
+    showError: true,
   },
   auth: {
     isAuth: false,
     username: null,
     password: null,
-    showError: true,
   },
   request: {
     pending: 0,

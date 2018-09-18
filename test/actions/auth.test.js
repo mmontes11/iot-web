@@ -1,4 +1,4 @@
-import { isAuth, setUsername, setPassword, setShowError, login, logout } from "actions/auth";
+import { isAuth, setUsername, setPassword, login, logout } from "actions/auth";
 
 describe("actions/auth", () => {
   const testThunk = thunk => {
@@ -15,9 +15,6 @@ describe("actions/auth", () => {
   });
   it("dispatches a setPassword action", () => {
     testThunk(setPassword());
-  });
-  it("dispatches a setShowError action", () => {
-    testThunk(setShowError());
   });
   it("dispatches a login action", () => {
     const thunk = login();
