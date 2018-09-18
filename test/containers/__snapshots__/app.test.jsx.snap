@@ -657,6 +657,7 @@ exports[`containers/app renders app in error state 1`] = `
                           }
                         >
                           <withRouter(Connect(ResetOnUnmount))
+                            getStats={[Function]}
                             history={
                               Object {
                                 "action": "POP",
@@ -731,6 +732,7 @@ exports[`containers/app renders app in error state 1`] = `
                           >
                             <Route>
                               <Connect(ResetOnUnmount)
+                                getStats={[Function]}
                                 history={
                                   Object {
                                     "action": "POP",
@@ -804,6 +806,7 @@ exports[`containers/app renders app in error state 1`] = `
                                 updateType={[Function]}
                               >
                                 <ResetOnUnmount
+                                  getStats={[Function]}
                                   history={
                                     Object {
                                       "action": "POP",
@@ -877,6 +880,7 @@ exports[`containers/app renders app in error state 1`] = `
                                   updateType={[Function]}
                                 >
                                   <Stats
+                                    getStats={[Function]}
                                     history={
                                       Object {
                                         "action": "POP",
@@ -4140,6 +4144,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                           }
                         >
                           <withRouter(Connect(ResetOnUnmount))
+                            getStats={[Function]}
                             history={
                               Object {
                                 "action": "POP",
@@ -4214,6 +4219,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                           >
                             <Route>
                               <Connect(ResetOnUnmount)
+                                getStats={[Function]}
                                 history={
                                   Object {
                                     "action": "POP",
@@ -4287,6 +4293,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                 updateType={[Function]}
                               >
                                 <ResetOnUnmount
+                                  getStats={[Function]}
                                   history={
                                     Object {
                                       "action": "POP",
@@ -4360,6 +4367,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                   updateType={[Function]}
                                 >
                                   <Stats
+                                    getStats={[Function]}
                                     history={
                                       Object {
                                         "action": "POP",

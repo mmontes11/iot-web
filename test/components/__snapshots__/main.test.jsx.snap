@@ -1984,6 +1984,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                   }
                 >
                   <withRouter(Connect(ResetOnUnmount))
+                    getStats={[Function]}
                     history={
                       Object {
                         "action": "POP",
@@ -2058,6 +2059,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                   >
                     <Route>
                       <Connect(ResetOnUnmount)
+                        getStats={[Function]}
                         history={
                           Object {
                             "action": "POP",
@@ -2131,6 +2133,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                         updateType={[Function]}
                       >
                         <ResetOnUnmount
+                          getStats={[Function]}
                           history={
                             Object {
                               "action": "POP",
@@ -2204,6 +2207,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                           updateType={[Function]}
                         >
                           <Stats
+                            getStats={[Function]}
                             history={
                               Object {
                                 "action": "POP",

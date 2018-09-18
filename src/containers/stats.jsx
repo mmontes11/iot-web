@@ -8,6 +8,7 @@ import ParamsPanel from "components/paramsPanel";
 import FiltersPanel from "components/filtersPanel";
 import * as paramsActions from "actions/params";
 import * as commonActions from "actions/common";
+import * as statsActions from "actions/stats";
 
 const Stats = ({
   type,
@@ -17,6 +18,7 @@ const Stats = ({
   updateType,
   selectObservation,
   updateObservation,
+  getStats,
   reset,
 }) => (
   <div className="container is-fluid section">
@@ -33,7 +35,10 @@ const Stats = ({
             ...observation,
             label: observation.selectedItem || "Select observation",
             onButtonClick: () => selectObservation(),
-            onItemClick: item => updateObservation(item),
+            onItemClick: item => {
+              updateObservation(item);
+              getStats();
+            },
           }}
           reset={{
             isDisabled: isResetDisabled,
@@ -56,6 +61,7 @@ Stats.propTypes = {
   updateType: PropTypes.func.isRequired,
   selectObservation: PropTypes.func.isRequired,
   updateObservation: PropTypes.func.isRequired,
+  getStats: PropTypes.func.isRequired,
   reset: PropTypes.func.isRequired,
 };
 
@@ -65,7 +71,7 @@ const withConnect = connect(
     observation: state.stats.params.observation,
     isResetDisabled: state.stats.params.reset.isDisabled,
   }),
-  { ...paramsActions, ...commonActions },
+  { ...paramsActions, ...commonActions, ...statsActions },
 );
 
 export default compose(
