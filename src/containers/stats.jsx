@@ -6,6 +6,7 @@ import { compose } from "recompose";
 import PropTypes from "prop-types";
 import ParamsPanel from "components/paramsPanel";
 import FiltersPanel from "components/filtersPanel";
+import BarChart from "components/barChart";
 import * as paramsActions from "actions/params";
 import * as commonActions from "actions/common";
 import * as statsActions from "actions/stats";
@@ -45,6 +46,7 @@ const Stats = ({
             onReset: () => reset(),
           }}
         />
+        <BarChart />
       </div>
       <div className="column is-one-quarter">
         <FiltersPanel />

@@ -1,0 +1,7 @@
+.barchart {
+  height: 20rem;
+
+  @include from($desktop) {
+    height: 40rem;
+  }
+}
