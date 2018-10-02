@@ -417,6 +417,8 @@ Object {
     "statusCode": null,
   },
   "stats": Object {
+    "isLoadingStats": false,
+    "items": Array [],
     "params": Object {
       "observation": Object {
         "isActive": false,

@@ -19,7 +19,7 @@ const observationInitialState = {
   selectedItem: null,
 };
 
-export const initialState = {
+const initialState = {
   type: {
     items: OBSERVATION_TYPES,
     isActive: false,

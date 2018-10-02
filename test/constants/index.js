@@ -36,6 +36,8 @@ export const initialState = {
         isDisabled: true,
       },
     },
+    items: [],
+    isLoadingStats: false,
   },
 };
 

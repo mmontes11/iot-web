@@ -688,6 +688,7 @@ exports[`containers/app renders app in error state 1`] = `
                                 "replace": [Function],
                               }
                             }
+                            isLoading={false}
                             isResetDisabled={true}
                             location={
                               Object {
@@ -717,6 +718,7 @@ exports[`containers/app renders app in error state 1`] = `
                             reset={[Function]}
                             selectObservation={[Function]}
                             selectType={[Function]}
+                            stats={Array []}
                             type={
                               Object {
                                 "isActive": false,
@@ -763,6 +765,7 @@ exports[`containers/app renders app in error state 1`] = `
                                     "replace": [Function],
                                   }
                                 }
+                                isLoading={false}
                                 isResetDisabled={true}
                                 location={
                                   Object {
@@ -792,6 +795,7 @@ exports[`containers/app renders app in error state 1`] = `
                                 reset={[Function]}
                                 selectObservation={[Function]}
                                 selectType={[Function]}
+                                stats={Array []}
                                 type={
                                   Object {
                                     "isActive": false,
@@ -837,6 +841,7 @@ exports[`containers/app renders app in error state 1`] = `
                                       "replace": [Function],
                                     }
                                   }
+                                  isLoading={false}
                                   isResetDisabled={true}
                                   location={
                                     Object {
@@ -866,6 +871,7 @@ exports[`containers/app renders app in error state 1`] = `
                                   reset={[Function]}
                                   selectObservation={[Function]}
                                   selectType={[Function]}
+                                  stats={Array []}
                                   type={
                                     Object {
                                       "isActive": false,
@@ -911,6 +917,7 @@ exports[`containers/app renders app in error state 1`] = `
                                         "replace": [Function],
                                       }
                                     }
+                                    isLoading={false}
                                     isResetDisabled={true}
                                     location={
                                       Object {
@@ -940,6 +947,7 @@ exports[`containers/app renders app in error state 1`] = `
                                     reset={[Function]}
                                     selectObservation={[Function]}
                                     selectType={[Function]}
+                                    stats={Array []}
                                     type={
                                       Object {
                                         "isActive": false,
@@ -1153,98 +1161,6 @@ exports[`containers/app renders app in error state 1`] = `
                                               </div>
                                             </div>
                                           </ParamsPanel>
-                                          <BarChart>
-                                            <div
-                                              className="box"
-                                            >
-                                              <div
-                                                className="columns"
-                                              >
-                                                <div
-                                                  className="column barchart"
-                                                >
-                                                  <ResponsiveContainer
-                                                    debounce={0}
-                                                    height="100%"
-                                                    width="100%"
-                                                  >
-                                                    <div
-                                                      className="recharts-responsive-container"
-                                                      style={
-                                                        Object {
-                                                          "height": "100%",
-                                                          "maxHeight": undefined,
-                                                          "minHeight": undefined,
-                                                          "minWidth": undefined,
-                                                          "width": "100%",
-                                                        }
-                                                      }
-                                                    >
-                                                      <BarChart
-                                                        barCategoryGap="10%"
-                                                        barGap={4}
-                                                        data={
-                                                          Array [
-                                                            Object {
-                                                              "amt": 2400,
-                                                              "name": "Page A",
-                                                              "pv": 2400,
-                                                              "uv": 4000,
-                                                            },
-                                                            Object {
-                                                              "amt": 2210,
-                                                              "name": "Page B",
-                                                              "pv": 1398,
-                                                              "uv": 3000,
-                                                            },
-                                                            Object {
-                                                              "amt": 2290,
-                                                              "name": "Page C",
-                                                              "pv": 9800,
-                                                              "uv": 2000,
-                                                            },
-                                                          ]
-                                                        }
-                                                        height={0}
-                                                        layout="horizontal"
-                                                        margin={
-                                                          Object {
-                                                            "bottom": 5,
-                                                            "left": 5,
-                                                            "right": 5,
-                                                            "top": 5,
-                                                          }
-                                                        }
-                                                        reverseStackOrder={false}
-                                                        stackOffset="none"
-                                                        width={0}
-                                                      />
-                                                      <ResizeDetector
-                                                        handleHeight={true}
-                                                        handleWidth={true}
-                                                        onResize={[Function]}
-                                                        refreshRate={1000}
-                                                        resizableElementId=""
-                                                        skipOnMount={false}
-                                                      >
-                                                        <div
-                                                          style={
-                                                            Object {
-                                                              "display": "none",
-                                                              "height": 0,
-                                                              "position": "absolute",
-                                                              "visibility": "hidden",
-                                                              "width": 0,
-                                                            }
-                                                          }
-                                                        />
-                                                      </ResizeDetector>
-                                                    </div>
-                                                  </ResponsiveContainer>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </BarChart>
                                         </div>
                                         <div
                                           className="column is-one-quarter"
@@ -4267,6 +4183,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                 "replace": [Function],
                               }
                             }
+                            isLoading={false}
                             isResetDisabled={true}
                             location={
                               Object {
@@ -4296,6 +4213,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                             reset={[Function]}
                             selectObservation={[Function]}
                             selectType={[Function]}
+                            stats={Array []}
                             type={
                               Object {
                                 "isActive": false,
@@ -4342,6 +4260,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                     "replace": [Function],
                                   }
                                 }
+                                isLoading={false}
                                 isResetDisabled={true}
                                 location={
                                   Object {
@@ -4371,6 +4290,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                 reset={[Function]}
                                 selectObservation={[Function]}
                                 selectType={[Function]}
+                                stats={Array []}
                                 type={
                                   Object {
                                     "isActive": false,
@@ -4416,6 +4336,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                       "replace": [Function],
                                     }
                                   }
+                                  isLoading={false}
                                   isResetDisabled={true}
                                   location={
                                     Object {
@@ -4445,6 +4366,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                   reset={[Function]}
                                   selectObservation={[Function]}
                                   selectType={[Function]}
+                                  stats={Array []}
                                   type={
                                     Object {
                                       "isActive": false,
@@ -4490,6 +4412,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                         "replace": [Function],
                                       }
                                     }
+                                    isLoading={false}
                                     isResetDisabled={true}
                                     location={
                                       Object {
@@ -4519,6 +4442,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                     reset={[Function]}
                                     selectObservation={[Function]}
                                     selectType={[Function]}
+                                    stats={Array []}
                                     type={
                                       Object {
                                         "isActive": false,
@@ -4732,98 +4656,6 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                               </div>
                                             </div>
                                           </ParamsPanel>
-                                          <BarChart>
-                                            <div
-                                              className="box"
-                                            >
-                                              <div
-                                                className="columns"
-                                              >
-                                                <div
-                                                  className="column barchart"
-                                                >
-                                                  <ResponsiveContainer
-                                                    debounce={0}
-                                                    height="100%"
-                                                    width="100%"
-                                                  >
-                                                    <div
-                                                      className="recharts-responsive-container"
-                                                      style={
-                                                        Object {
-                                                          "height": "100%",
-                                                          "maxHeight": undefined,
-                                                          "minHeight": undefined,
-                                                          "minWidth": undefined,
-                                                          "width": "100%",
-                                                        }
-                                                      }
-                                                    >
-                                                      <BarChart
-                                                        barCategoryGap="10%"
-                                                        barGap={4}
-                                                        data={
-                                                          Array [
-                                                            Object {
-                                                              "amt": 2400,
-                                                              "name": "Page A",
-                                                              "pv": 2400,
-                                                              "uv": 4000,
-                                                            },
-                                                            Object {
-                                                              "amt": 2210,
-                                                              "name": "Page B",
-                                                              "pv": 1398,
-                                                              "uv": 3000,
-                                                            },
-                                                            Object {
-                                                              "amt": 2290,
-                                                              "name": "Page C",
-                                                              "pv": 9800,
-                                                              "uv": 2000,
-                                                            },
-                                                          ]
-                                                        }
-                                                        height={0}
-                                                        layout="horizontal"
-                                                        margin={
-                                                          Object {
-                                                            "bottom": 5,
-                                                            "left": 5,
-                                                            "right": 5,
-                                                            "top": 5,
-                                                          }
-                                                        }
-                                                        reverseStackOrder={false}
-                                                        stackOffset="none"
-                                                        width={0}
-                                                      />
-                                                      <ResizeDetector
-                                                        handleHeight={true}
-                                                        handleWidth={true}
-                                                        onResize={[Function]}
-                                                        refreshRate={1000}
-                                                        resizableElementId=""
-                                                        skipOnMount={false}
-                                                      >
-                                                        <div
-                                                          style={
-                                                            Object {
-                                                              "display": "none",
-                                                              "height": 0,
-                                                              "position": "absolute",
-                                                              "visibility": "hidden",
-                                                              "width": 0,
-                                                            }
-                                                          }
-                                                        />
-                                                      </ResizeDetector>
-                                                    </div>
-                                                  </ResponsiveContainer>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </BarChart>
                                         </div>
                                         <div
                                           className="column is-one-quarter"

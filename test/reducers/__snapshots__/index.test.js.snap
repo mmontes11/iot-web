@@ -16,6 +16,8 @@ Object {
     "statusCode": null,
   },
   "stats": Object {
+    "isLoadingStats": false,
+    "items": Array [],
     "params": Object {
       "observation": Object {
         "isActive": false,
@@ -36,7 +38,6 @@ Object {
         "selectedItem": null,
       },
     },
-    "stats": null,
   },
   "things": Object {
     "loadedThings": Array [],
@@ -55,6 +56,8 @@ Object {
   "auth": "AUTH",
   "request": "REQUEST",
   "stats": Object {
+    "isLoadingStats": false,
+    "items": Array [],
     "params": Object {
       "observation": Object {
         "isActive": false,
@@ -75,7 +78,6 @@ Object {
         "selectedItem": null,
       },
     },
-    "stats": null,
   },
   "things": Object {
     "loadedThings": Array [],
@@ -94,6 +96,8 @@ Object {
   "auth": "STATE",
   "request": "REQUEST",
   "stats": Object {
+    "isLoadingStats": false,
+    "items": Array [],
     "params": Object {
       "observation": Object {
         "isActive": false,
@@ -114,7 +118,6 @@ Object {
         "selectedItem": null,
       },
     },
-    "stats": null,
   },
   "things": Object {
     "loadedThings": Array [],
