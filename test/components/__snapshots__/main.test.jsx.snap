@@ -2383,7 +2383,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             updateObservation={[Function]}
                                             updateType={[Function]}
                                           >
-                                            <ParamsPanelContainer
+                                            <StatsParamsPanel
                                               history={
                                                 Object {
                                                   "action": "POP",
@@ -2649,7 +2649,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                   </div>
                                                 </div>
                                               </ParamsPanel>
-                                            </ParamsPanelContainer>
+                                            </StatsParamsPanel>
                                           </ResetOnUnmount>
                                         </Connect(ResetOnUnmount)>
                                       </Route>

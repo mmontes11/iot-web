@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import { compose } from "recompose";
 import PropTypes from "prop-types";
-import ParamsPanelContainer from "containers/paramsPanelContainer";
+import StatsParamsPanel from "containers/statsParamsPanel";
 import FiltersPanel from "components/filtersPanel";
 import BarChart from "components/barChart";
 import Loader from "components/loader";
@@ -25,7 +25,7 @@ const Stats = ({ stats, isLoading, getStats, reset }) => (
   <div className="container is-fluid section">
     <div className="columns">
       <div className="column is-three-quarters">
-        <ParamsPanelContainer onParamsSelected={() => getStats()} onReset={() => reset()} />
+        <StatsParamsPanel onParamsSelected={() => getStats()} onReset={() => reset()} />
         {renderChart(stats, isLoading)}
       </div>
       <div className="column is-one-quarter">

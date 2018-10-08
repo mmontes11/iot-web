@@ -1056,7 +1056,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                     updateObservation={[Function]}
                                                     updateType={[Function]}
                                                   >
-                                                    <ParamsPanelContainer
+                                                    <StatsParamsPanel
                                                       history={
                                                         Object {
                                                           "action": "POP",
@@ -1322,7 +1322,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                           </div>
                                                         </div>
                                                       </ParamsPanel>
-                                                    </ParamsPanelContainer>
+                                                    </StatsParamsPanel>
                                                   </ResetOnUnmount>
                                                 </Connect(ResetOnUnmount)>
                                               </Route>
@@ -4718,7 +4718,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                     updateObservation={[Function]}
                                                     updateType={[Function]}
                                                   >
-                                                    <ParamsPanelContainer
+                                                    <StatsParamsPanel
                                                       history={
                                                         Object {
                                                           "action": "POP",
@@ -4984,7 +4984,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                           </div>
                                                         </div>
                                                       </ParamsPanel>
-                                                    </ParamsPanelContainer>
+                                                    </StatsParamsPanel>
                                                   </ResetOnUnmount>
                                                 </Connect(ResetOnUnmount)>
                                               </Route>

@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
 
-const ParamsPanelContainer = ({
+const StatsParamsPanel = ({
   onParamsSelected,
   onReset,
   type,
@@ -50,7 +50,7 @@ const withConnect = connect(
   { ...paramsActions },
 );
 
-ParamsPanelContainer.propTypes = {
+StatsParamsPanel.propTypes = {
   onParamsSelected: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
   type: PropTypes.shape({}).isRequired,
@@ -66,4 +66,4 @@ export default compose(
   withConnect,
   withRouter,
   withResetOnUnmount,
-)(ParamsPanelContainer);
+)(StatsParamsPanel);
