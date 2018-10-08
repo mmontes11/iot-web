@@ -16,6 +16,14 @@ Object {
 }
 `;
 
+exports[`reducers/app reduces SET_SHOW_ERROR 1`] = `
+Object {
+  "isHamburgerMenuExpanded": false,
+  "isMapDialogOpened": false,
+  "showError": true,
+}
+`;
+
 exports[`reducers/app reduces TOGGLE_HAMBURGUER_MENU 1`] = `
 Object {
   "isHamburgerMenuExpanded": true,

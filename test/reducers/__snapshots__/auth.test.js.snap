@@ -32,14 +32,6 @@ Object {
 }
 `;
 
-exports[`reducers/auth reduces SET_SHOW_ERROR 1`] = `
-Object {
-  "isAuth": false,
-  "password": null,
-  "username": null,
-}
-`;
-
 exports[`reducers/auth reduces SET_USERNAME 1`] = `
 Object {
   "isAuth": false,

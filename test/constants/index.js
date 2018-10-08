@@ -56,3 +56,48 @@ export const thing = {
     type: "Point",
   },
 };
+
+export const statsWithUnits = {
+  data: [
+    {
+      name: "min",
+      value: 10,
+    },
+    {
+      name: "avg",
+      value: 20,
+    },
+    {
+      name: "max",
+      value: 30,
+    },
+  ],
+  title: {
+    type: "measurement",
+    thing: "thing",
+    unit: {
+      symbol: "ºC",
+    },
+  },
+};
+
+export const statsWithoutUnits = {
+  data: [
+    {
+      name: "min",
+      value: 10,
+    },
+    {
+      name: "avg",
+      value: 20,
+    },
+    {
+      name: "max",
+      value: 30,
+    },
+  ],
+  title: {
+    type: "event",
+    thing: "thing",
+  },
+};

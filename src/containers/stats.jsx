@@ -16,7 +16,7 @@ const renderChart = (stats, isLoading) => {
   if (isLoading) {
     return <Loader />;
   } else if (stats) {
-    return stats.map(statsItem => <BarChart key={Math.random()} stats={statsItem} />);
+    return stats.map(statsItem => <BarChart key={btoa(`${statsItem.title.type}-${statsItem.title.thing}`)} stats={statsItem} />);
   }
   return null;
 };
