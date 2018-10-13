@@ -29,9 +29,9 @@ describe("containers/stats", () => {
       },
       stats: {
         ...initialState.stats,
-        isLoadingStats: true,
-        items: []
-      }
+        isLoading: true,
+        items: [],
+      },
     };
     const store = configureStore([thunk])(state);
     const wrapperLoading = mount(
@@ -48,12 +48,9 @@ describe("containers/stats", () => {
       ...initialState,
       stats: {
         ...initialState.stats,
-        isLoadingStats: false,
-        items: [
-          statsWithUnits, 
-          statsWithoutUnits
-        ]
-      }
+        isLoading: false,
+        items: [statsWithUnits, statsWithoutUnits],
+      },
     };
     const store = configureStore([thunk])(state);
     const wrapperLoading = mount(

@@ -41,8 +41,8 @@ describe("containers/things", () => {
     const state = {
       ...initialState,
       things: {
-        loadedThings: [thing],
-        selectedThing: null,
+        items: [thing],
+        selectedItem: null,
       },
     };
     const store = configureStore([thunk])(state);
@@ -59,8 +59,8 @@ describe("containers/things", () => {
     const state = {
       ...initialState,
       things: {
-        loadedThings: [thing],
-        selectedThing: thing,
+        items: [thing],
+        selectedItem: thing,
       },
     };
     const store = configureStore([thunk])(state);
@@ -77,8 +77,8 @@ describe("containers/things", () => {
     const state = {
       ...initialState,
       things: {
-        loadedThings: [thing],
-        selectedThing: thing,
+        items: [thing],
+        selectedItem: thing,
       },
     };
     const store = configureStore([thunk])(state);

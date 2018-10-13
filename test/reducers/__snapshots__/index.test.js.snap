@@ -16,7 +16,7 @@ Object {
     "statusCode": null,
   },
   "stats": Object {
-    "isLoadingStats": false,
+    "isLoading": false,
     "items": Array [],
     "params": Object {
       "observation": Object {
@@ -40,8 +40,8 @@ Object {
     },
   },
   "things": Object {
-    "loadedThings": Array [],
-    "selectedThing": null,
+    "items": Array [],
+    "selectedItem": null,
   },
 }
 `;
@@ -56,7 +56,7 @@ Object {
   "auth": "AUTH",
   "request": "REQUEST",
   "stats": Object {
-    "isLoadingStats": false,
+    "isLoading": false,
     "items": Array [],
     "params": Object {
       "observation": Object {
@@ -80,8 +80,8 @@ Object {
     },
   },
   "things": Object {
-    "loadedThings": Array [],
-    "selectedThing": null,
+    "items": Array [],
+    "selectedItem": null,
   },
 }
 `;
@@ -96,7 +96,7 @@ Object {
   "auth": "STATE",
   "request": "REQUEST",
   "stats": Object {
-    "isLoadingStats": false,
+    "isLoading": false,
     "items": Array [],
     "params": Object {
       "observation": Object {
@@ -120,8 +120,8 @@ Object {
     },
   },
   "things": Object {
-    "loadedThings": Array [],
-    "selectedThing": null,
+    "items": Array [],
+    "selectedItem": null,
   },
 }
 `;

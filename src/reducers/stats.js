@@ -4,18 +4,18 @@ import paramsReducer, { initialState as paramsInitialState } from "reducers/para
 
 const initialState = {
   items: [],
-  isLoadingStats: false,
+  isLoading: false,
   params: paramsInitialState,
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case STATS_REQUEST:
-      return { ...state, isLoadingStats: true };
+      return { ...state, isLoading: true };
     case STATS_REQUEST_SUCCESS:
-      return { ...state, isLoadingStats: false };
+      return { ...state, isLoading: false };
     case STATS_REQUEST_ERROR:
-      return { ...state, isLoadingStats: false };
+      return { ...state, isLoading: false };
     case STATS_UPDATED:
       return { ...state, items: action.stats };
     case RESET:

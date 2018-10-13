@@ -15,8 +15,8 @@ export const initialState = {
     error: null,
   },
   things: {
-    loadedThings: [],
-    selectedThing: null,
+    items: [],
+    selectedItem: null,
   },
   stats: {
     params: {
@@ -37,7 +37,7 @@ export const initialState = {
       },
     },
     items: [],
-    isLoadingStats: false,
+    isLoading: false,
   },
 };
 

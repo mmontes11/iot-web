@@ -16,7 +16,9 @@ const renderChart = (stats, isLoading) => {
   if (isLoading) {
     return <Loader />;
   } else if (stats) {
-    return stats.map(statsItem => <BarChart key={btoa(`${statsItem.title.type}-${statsItem.title.thing}`)} stats={statsItem} />);
+    return stats.map(statsItem => (
+      <BarChart key={btoa(`${statsItem.title.type}-${statsItem.title.thing}`)} stats={statsItem} />
+    ));
   }
   return null;
 };
@@ -45,7 +47,7 @@ Stats.propTypes = {
 const withConnect = connect(
   state => ({
     stats: state.stats.items,
-    isLoading: state.stats.isLoadingStats && reducerHelpers.isLoading(state),
+    isLoading: state.stats.isLoading && reducerHelpers.isLoading(state),
   }),
   { ...statsActions, ...commonActions },
 );

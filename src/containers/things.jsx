@@ -73,8 +73,8 @@ Things.defaultProps = {
 const withConnect = connect(
   state => ({
     isLoading: reducerHelpers.isLoading(state),
-    things: state.things.loadedThings,
-    selectedThing: state.things.selectedThing,
+    things: state.things.items,
+    selectedThing: state.things.selectedItem,
   }),
   {
     getThings: thingActions.getThings,

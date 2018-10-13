@@ -2,21 +2,21 @@ import { THINGS_UPDATED, THING_SELECTED } from "constants/actionTypes/things";
 import { RESET } from "constants/actionTypes/common";
 
 const initialState = {
-  loadedThings: [],
-  selectedThing: null,
+  items: [],
+  selectedItem: null,
 };
 
 export default (state = initialState, { type, things, thing }) => {
   switch (type) {
     case THINGS_UPDATED:
-      return { ...state, loadedThings: things };
+      return { ...state, items: things };
     case THING_SELECTED:
-      if (state.selectedThing !== null && state.selectedThing.name === thing.name) {
-        return { ...state, selectedThing: null };
+      if (state.selectedItem !== null && state.selectedItem.name === thing.name) {
+        return { ...state, selectedItem: null };
       }
-      return { ...state, selectedThing: thing };
+      return { ...state, selectedItem: thing };
     case RESET:
-      return { ...initialState, loadedThings: state.loadedThings };
+      return { ...initialState, items: state.items };
     default:
       return state;
   }

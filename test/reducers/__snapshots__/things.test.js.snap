@@ -2,52 +2,52 @@
 
 exports[`reducers/things has a default state 1`] = `
 Object {
-  "loadedThings": Array [],
-  "selectedThing": null,
+  "items": Array [],
+  "selectedItem": null,
 }
 `;
 
 exports[`reducers/things reduces RESET 1`] = `
 Object {
-  "loadedThings": Array [],
-  "selectedThing": null,
+  "items": Array [],
+  "selectedItem": null,
 }
 `;
 
 exports[`reducers/things reduces THING_SELECTED 1`] = `
 Object {
-  "loadedThings": Array [],
-  "selectedThing": "foo",
+  "items": Array [],
+  "selectedItem": "foo",
 }
 `;
 
 exports[`reducers/things reduces THINGS_UPDATED 1`] = `
 Object {
-  "loadedThings": Array [
+  "items": Array [
     "foo",
     "bar",
   ],
-  "selectedThing": null,
+  "selectedItem": null,
 }
 `;
 
 exports[`reducers/things reduces nothing 1`] = `
 Object {
-  "loadedThings": Array [],
-  "selectedThing": null,
+  "items": Array [],
+  "selectedItem": null,
 }
 `;
 
 exports[`reducers/things selects and deselects a thing 1`] = `
 Object {
-  "loadedThings": Array [],
-  "selectedThing": "foo",
+  "items": Array [],
+  "selectedItem": "foo",
 }
 `;
 
 exports[`reducers/things selects and deselects a thing 2`] = `
 Object {
-  "loadedThings": Array [],
-  "selectedThing": null,
+  "items": Array [],
+  "selectedItem": null,
 }
 `;

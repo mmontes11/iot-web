@@ -2,7 +2,7 @@
 
 exports[`reducers/stats has a default state 1`] = `
 Object {
-  "isLoadingStats": false,
+  "isLoading": false,
   "items": Array [],
   "params": Object {
     "observation": Object {
@@ -29,7 +29,7 @@ Object {
 
 exports[`reducers/stats reduces RESET 1`] = `
 Object {
-  "isLoadingStats": false,
+  "isLoading": false,
   "items": Array [],
   "params": Object {
     "observation": Object {
@@ -76,7 +76,7 @@ Object {
 
 exports[`reducers/stats reduces STATS_REQUEST 1`] = `
 Object {
-  "isLoadingStats": true,
+  "isLoading": true,
   "items": Array [],
   "params": Object {
     "observation": Object {
@@ -103,7 +103,7 @@ Object {
 
 exports[`reducers/stats reduces STATS_REQUEST_ERROR 1`] = `
 Object {
-  "isLoadingStats": false,
+  "isLoading": false,
   "items": Array [],
   "params": Object {
     "observation": Object {
@@ -130,7 +130,7 @@ Object {
 
 exports[`reducers/stats reduces STATS_REQUEST_SUCCESS 1`] = `
 Object {
-  "isLoadingStats": false,
+  "isLoading": false,
   "items": Array [],
   "params": Object {
     "observation": Object {
@@ -157,7 +157,7 @@ Object {
 
 exports[`reducers/stats reduces STATS_UPDATED 1`] = `
 Object {
-  "isLoadingStats": false,
+  "isLoading": false,
   "items": Array [],
   "params": Object {
     "observation": Object {
@@ -184,7 +184,7 @@ Object {
 
 exports[`reducers/stats reduces nothing 1`] = `
 Object {
-  "isLoadingStats": false,
+  "isLoading": false,
   "items": Array [],
   "params": Object {
     "observation": Object {
