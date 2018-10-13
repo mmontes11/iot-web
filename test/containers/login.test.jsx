@@ -40,41 +40,6 @@ describe("containers/login", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders login in error state", () => {
-    const state = {
-      ...initialState,
-      auth: {
-        isAuth: true,
-        username: "username",
-        password: "password",
-        showError: true,
-      },
-      request: {
-        pending: 1,
-        statusCode: null,
-        error: new Error(),
-      },
-    };
-    const store = configureStore([thunk])(state);
-    const wrapper = mount(
-      <Provider store={store}>
-        <Login />
-      </Provider>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-  it("simulates closing dialog", () => {
-    const store = configureStore([thunk])(initialState);
-    const wrapper = mount(
-      <Provider store={store}>
-        <Login />
-      </Provider>,
-    );
-    expect(wrapper).toMatchSnapshot();
-    wrapper.find(".modal-close").simulate("click");
-    expect(store.getState()).toMatchSnapshot();
-    expect(wrapper).toMatchSnapshot();
-  });
   it("simulates successful login", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(

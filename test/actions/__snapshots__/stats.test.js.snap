@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions/stats dispatches a getStats action 1`] = `[Function]`;
+
+exports[`actions/stats dispatches a getStats action 2`] = `[Function]`;

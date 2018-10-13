@@ -2,11 +2,11 @@ import {
   IS_AUTH,
   SET_USERNAME,
   SET_PASSWORD,
-  SET_SHOW_ERROR,
   LOGIN_REQUEST,
   LOGIN_REQUEST_SUCCESS,
   LOGIN_REQUEST_ERROR,
 } from "constants/actionTypes/auth";
+import { setShowError } from "actions/app";
 import iotClient from "lib/iotClient";
 
 export const isAuth = () => dispatch => {
@@ -22,10 +22,6 @@ export const setUsername = username => dispatch => {
 
 export const setPassword = password => dispatch => {
   dispatch({ type: SET_PASSWORD, password });
-};
-
-export const setShowError = showError => dispatch => {
-  dispatch({ type: SET_SHOW_ERROR, showError });
 };
 
 export const login = () => (dispatch, getState) => {
@@ -48,7 +44,7 @@ export const login = () => (dispatch, getState) => {
         statusCode: error.statusCode,
         error,
       });
-      isAuth()(dispatch);
+      setShowError(true)(dispatch);
     });
 };
 

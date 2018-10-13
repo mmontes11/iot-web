@@ -2,12 +2,12 @@ export const initialState = {
   app: {
     isHamburgerMenuExpanded: false,
     isMapDialogOpened: false,
+    showError: true,
   },
   auth: {
     isAuth: false,
     username: null,
     password: null,
-    showError: true,
   },
   request: {
     pending: 0,
@@ -17,6 +17,27 @@ export const initialState = {
   things: {
     loadedThings: [],
     selectedThing: null,
+  },
+  stats: {
+    params: {
+      type: {
+        items: ["event", "measurement"],
+        isActive: false,
+        selectedItem: null,
+      },
+      observation: {
+        items: [],
+        isActive: false,
+        isLoading: false,
+        isDisabled: true,
+        selectedItem: null,
+      },
+      reset: {
+        isDisabled: true,
+      },
+    },
+    items: [],
+    isLoadingStats: false,
   },
 };
 
@@ -33,5 +54,50 @@ export const thing = {
   geometry: {
     coordinates: [-40.58457, 40.21339],
     type: "Point",
+  },
+};
+
+export const statsWithUnits = {
+  data: [
+    {
+      name: "min",
+      value: 10,
+    },
+    {
+      name: "avg",
+      value: 20,
+    },
+    {
+      name: "max",
+      value: 30,
+    },
+  ],
+  title: {
+    type: "measurement",
+    thing: "thing",
+    unit: {
+      symbol: "ºC",
+    },
+  },
+};
+
+export const statsWithoutUnits = {
+  data: [
+    {
+      name: "min",
+      value: 10,
+    },
+    {
+      name: "avg",
+      value: 20,
+    },
+    {
+      name: "max",
+      value: 30,
+    },
+  ],
+  title: {
+    type: "event",
+    thing: "thing",
   },
 };

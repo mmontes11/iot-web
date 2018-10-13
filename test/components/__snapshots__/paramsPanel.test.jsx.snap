@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/paramsPanel renders after some params have been specified 1`] = `
+<div
+  className="box"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-5"
+    >
+      <Dropdown
+        isActive={false}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Select type"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+    <div
+      className="column is-5"
+    >
+      <Dropdown
+        isActive={false}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Select type"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+    <div
+      className="column"
+    >
+      <button
+        className="button is-warning is-fullwidth"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span>
+          Reset
+        </span>
+        <span
+          className="icon is-small"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-eraser"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/paramsPanel renders in normal state 1`] = `
+<div
+  className="box"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-5"
+    >
+      <Dropdown
+        isActive={false}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Select type"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+    <div
+      className="column is-5"
+    >
+      <Dropdown
+        isActive={false}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Select type"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </div>
+    <div
+      className="column"
+    >
+      <button
+        className="button is-warning is-fullwidth"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <span>
+          Reset
+        </span>
+        <span
+          className="icon is-small"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-eraser"
+          />
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

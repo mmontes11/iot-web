@@ -25,7 +25,7 @@ describe("containers/app", () => {
       showError: true,
     },
   };
-  it("renders the app with auth in /", () => {
+  it("renders app with auth in /", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <MemoryRouter initialEntries={["/"]} keyLength={0}>
@@ -43,7 +43,7 @@ describe("containers/app", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders the app with auth in /things", () => {
+  it("renders the with auth in /things", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <MemoryRouter initialEntries={["/things"]} keyLength={0}>
@@ -52,8 +52,31 @@ describe("containers/app", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders the app with auth in /stats", () => {
+  it("renders the with auth in /stats", () => {
     const store = configureStore([thunk])(stateWithAuth);
+    const wrapper = mount(
+      <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
+        <App store={store} />
+      </MemoryRouter>,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+  it("renders app in error state", () => {
+    const state = {
+      ...initialState,
+      auth: {
+        isAuth: true,
+        username: "username",
+        password: "password",
+        showError: true,
+      },
+      request: {
+        pending: 1,
+        statusCode: null,
+        error: new Error(),
+      },
+    };
+    const store = configureStore([thunk])(state);
     const wrapper = mount(
       <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
         <App store={store} />

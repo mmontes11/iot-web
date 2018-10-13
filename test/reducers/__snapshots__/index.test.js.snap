@@ -7,12 +7,37 @@ Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
     "isMapDialogOpened": false,
+    "showError": true,
   },
   "auth": false,
   "request": Object {
     "error": null,
     "pending": 0,
     "statusCode": null,
+  },
+  "stats": Object {
+    "isLoadingStats": false,
+    "items": Array [],
+    "params": Object {
+      "observation": Object {
+        "isActive": false,
+        "isDisabled": true,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+      "reset": Object {
+        "isDisabled": true,
+      },
+      "type": Object {
+        "isActive": false,
+        "items": Array [
+          "event",
+          "measurement",
+        ],
+        "selectedItem": null,
+      },
+    },
   },
   "things": Object {
     "loadedThings": Array [],
@@ -26,9 +51,34 @@ Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
     "isMapDialogOpened": false,
+    "showError": true,
   },
   "auth": "AUTH",
   "request": "REQUEST",
+  "stats": Object {
+    "isLoadingStats": false,
+    "items": Array [],
+    "params": Object {
+      "observation": Object {
+        "isActive": false,
+        "isDisabled": true,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+      "reset": Object {
+        "isDisabled": true,
+      },
+      "type": Object {
+        "isActive": false,
+        "items": Array [
+          "event",
+          "measurement",
+        ],
+        "selectedItem": null,
+      },
+    },
+  },
   "things": Object {
     "loadedThings": Array [],
     "selectedThing": null,
@@ -41,9 +91,34 @@ Object {
   "app": Object {
     "isHamburgerMenuExpanded": false,
     "isMapDialogOpened": false,
+    "showError": true,
   },
   "auth": "STATE",
   "request": "REQUEST",
+  "stats": Object {
+    "isLoadingStats": false,
+    "items": Array [],
+    "params": Object {
+      "observation": Object {
+        "isActive": false,
+        "isDisabled": true,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+      "reset": Object {
+        "isDisabled": true,
+      },
+      "type": Object {
+        "isActive": false,
+        "items": Array [
+          "event",
+          "measurement",
+        ],
+        "selectedItem": null,
+      },
+    },
+  },
   "things": Object {
     "loadedThings": Array [],
     "selectedThing": null,

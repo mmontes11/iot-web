@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/stats has a default state 1`] = `
+Object {
+  "isLoadingStats": false,
+  "items": Array [],
+  "params": Object {
+    "observation": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
+    },
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selectedItem": null,
+    },
+  },
+}
+`;
+
+exports[`reducers/stats reduces RESET 1`] = `
+Object {
+  "isLoadingStats": false,
+  "items": Array [],
+  "params": Object {
+    "observation": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
+    },
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selectedItem": null,
+    },
+  },
+  "paramsInitialState": Object {
+    "observation": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
+    },
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selectedItem": null,
+    },
+  },
+}
+`;
+
+exports[`reducers/stats reduces STATS_REQUEST 1`] = `
+Object {
+  "isLoadingStats": true,
+  "items": Array [],
+  "params": Object {
+    "observation": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
+    },
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selectedItem": null,
+    },
+  },
+}
+`;
+
+exports[`reducers/stats reduces STATS_REQUEST_ERROR 1`] = `
+Object {
+  "isLoadingStats": false,
+  "items": Array [],
+  "params": Object {
+    "observation": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
+    },
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selectedItem": null,
+    },
+  },
+}
+`;
+
+exports[`reducers/stats reduces STATS_REQUEST_SUCCESS 1`] = `
+Object {
+  "isLoadingStats": false,
+  "items": Array [],
+  "params": Object {
+    "observation": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
+    },
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selectedItem": null,
+    },
+  },
+}
+`;
+
+exports[`reducers/stats reduces STATS_UPDATED 1`] = `
+Object {
+  "isLoadingStats": false,
+  "items": Array [],
+  "params": Object {
+    "observation": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
+    },
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selectedItem": null,
+    },
+  },
+}
+`;
+
+exports[`reducers/stats reduces nothing 1`] = `
+Object {
+  "isLoadingStats": false,
+  "items": Array [],
+  "params": Object {
+    "observation": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
+    },
+    "type": Object {
+      "isActive": false,
+      "items": Array [
+        "event",
+        "measurement",
+      ],
+      "selectedItem": null,
+    },
+  },
+}
+`;
