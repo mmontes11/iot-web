@@ -45,7 +45,7 @@ const withConnect = connect(
   state => ({
     type: state.stats.params.type,
     observation: state.stats.params.observation,
-    isResetDisabled: state.stats.params.reset.isDisabled,
+    isResetDisabled: state.stats.params.reset.isDisabled && state.stats.filters.items.length === 0,
   }),
   { ...paramsActions },
 );

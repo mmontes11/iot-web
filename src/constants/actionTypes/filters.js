@@ -1,0 +1,2 @@
+export const FILTER_TYPE_SELECT = "FILTER_TYPE_SELECT";
+export const ADD_FILTER_TYPE = "ADD_FILTER_TYPE";

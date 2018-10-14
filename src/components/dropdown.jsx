@@ -2,9 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-const Dropdown = ({ label, items, isActive, isLoading, isDisabled, onButtonClick, onItemClick }) => {
+const Dropdown = ({
+  label,
+  buttonStyle,
+  iconStyle,
+  items,
+  isActive,
+  isLoading,
+  isDisabled,
+  onButtonClick,
+  onItemClick,
+}) => {
   const dropdownClass = classNames("dropdown", { "is-active": isActive });
-  const buttonClass = classNames("button", { "is-loading": isLoading });
+  const buttonClass = classNames("button", buttonStyle, { "is-loading": isLoading });
+  const iconClass = classNames("fas", iconStyle);
   return (
     <div className={dropdownClass}>
       <div className="dropdown-trigger">
@@ -17,7 +28,7 @@ const Dropdown = ({ label, items, isActive, isLoading, isDisabled, onButtonClick
         >
           <span>{label}</span>
           <span className="icon is-small">
-            <i className="fas fa-angle-down" aria-hidden="true" />
+            <i className={iconClass} aria-hidden="true" />
           </span>
         </button>
       </div>
@@ -46,12 +57,18 @@ const Dropdown = ({ label, items, isActive, isLoading, isDisabled, onButtonClick
 
 Dropdown.propTypes = {
   label: PropTypes.string.isRequired,
+  buttonStyle: PropTypes.string,
+  iconStyle: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   isActive: PropTypes.bool.isRequired,
   isLoading: PropTypes.bool.isRequired,
   isDisabled: PropTypes.bool.isRequired,
   onButtonClick: PropTypes.func.isRequired,
   onItemClick: PropTypes.func.isRequired,
+};
+
+Dropdown.defaultProps = {
+  buttonStyle: "",
 };
 
 export default Dropdown;

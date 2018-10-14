@@ -872,6 +872,17 @@ Object {
     "statusCode": null,
   },
   "stats": Object {
+    "filters": Object {
+      "items": Array [],
+      "type": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "items": Array [
+          "date",
+          "thing",
+        ],
+      },
+    },
     "isLoading": false,
     "items": Array [],
     "params": Object {

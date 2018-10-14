@@ -16,6 +16,17 @@ Object {
     "statusCode": null,
   },
   "stats": Object {
+    "filters": Object {
+      "items": Array [],
+      "type": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "items": Array [
+          "thing",
+          "date",
+        ],
+      },
+    },
     "isLoading": false,
     "items": Array [],
     "params": Object {
@@ -56,6 +67,17 @@ Object {
   "auth": "AUTH",
   "request": "REQUEST",
   "stats": Object {
+    "filters": Object {
+      "items": Array [],
+      "type": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "items": Array [
+          "thing",
+          "date",
+        ],
+      },
+    },
     "isLoading": false,
     "items": Array [],
     "params": Object {
@@ -96,6 +118,17 @@ Object {
   "auth": "STATE",
   "request": "REQUEST",
   "stats": Object {
+    "filters": Object {
+      "items": Array [],
+      "type": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "items": Array [
+          "thing",
+          "date",
+        ],
+      },
+    },
     "isLoading": false,
     "items": Array [],
     "params": Object {

@@ -36,6 +36,14 @@ export const initialState = {
         isDisabled: true,
       },
     },
+    filters: {
+      type: {
+        items: ["date", "thing"],
+        isActive: false,
+        isDisabled: false,
+      },
+      items: [],
+    },
     items: [],
     isLoading: false,
   },

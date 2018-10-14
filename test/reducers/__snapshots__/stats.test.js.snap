@@ -2,6 +2,17 @@
 
 exports[`reducers/stats has a default state 1`] = `
 Object {
+  "filters": Object {
+    "items": Array [],
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "thing",
+        "date",
+      ],
+    },
+  },
   "isLoading": false,
   "items": Array [],
   "params": Object {
@@ -29,6 +40,28 @@ Object {
 
 exports[`reducers/stats reduces RESET 1`] = `
 Object {
+  "filters": Object {
+    "items": Array [],
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "thing",
+        "date",
+      ],
+    },
+  },
+  "filtersInitialState": Object {
+    "items": Array [],
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "thing",
+        "date",
+      ],
+    },
+  },
   "isLoading": false,
   "items": Array [],
   "params": Object {
@@ -76,6 +109,17 @@ Object {
 
 exports[`reducers/stats reduces STATS_REQUEST 1`] = `
 Object {
+  "filters": Object {
+    "items": Array [],
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "date",
+        "thing",
+      ],
+    },
+  },
   "isLoading": true,
   "items": Array [],
   "params": Object {
@@ -103,6 +147,17 @@ Object {
 
 exports[`reducers/stats reduces STATS_REQUEST_ERROR 1`] = `
 Object {
+  "filters": Object {
+    "items": Array [],
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "date",
+        "thing",
+      ],
+    },
+  },
   "isLoading": false,
   "items": Array [],
   "params": Object {
@@ -130,6 +185,17 @@ Object {
 
 exports[`reducers/stats reduces STATS_REQUEST_SUCCESS 1`] = `
 Object {
+  "filters": Object {
+    "items": Array [],
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "date",
+        "thing",
+      ],
+    },
+  },
   "isLoading": false,
   "items": Array [],
   "params": Object {
@@ -157,6 +223,17 @@ Object {
 
 exports[`reducers/stats reduces STATS_UPDATED 1`] = `
 Object {
+  "filters": Object {
+    "items": Array [],
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "date",
+        "thing",
+      ],
+    },
+  },
   "isLoading": false,
   "items": Array [],
   "params": Object {
@@ -184,6 +261,17 @@ Object {
 
 exports[`reducers/stats reduces nothing 1`] = `
 Object {
+  "filters": Object {
+    "items": Array [],
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "date",
+        "thing",
+      ],
+    },
+  },
   "isLoading": false,
   "items": Array [],
   "params": Object {
