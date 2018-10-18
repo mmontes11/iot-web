@@ -2762,6 +2762,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             }
                                           }
                                           selectFilterType={[Function]}
+                                          selectedFilters={Array []}
                                           type={
                                             Object {
                                               "isActive": false,
@@ -2823,6 +2824,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             }
                                             reset={[Function]}
                                             selectFilterType={[Function]}
+                                            selectedFilters={Array []}
                                             type={
                                               Object {
                                                 "isActive": false,
@@ -2884,6 +2886,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               }
                                               reset={[Function]}
                                               selectFilterType={[Function]}
+                                              selectedFilters={Array []}
                                               type={
                                                 Object {
                                                   "isActive": false,
@@ -2896,6 +2899,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               }
                                             >
                                               <FiltersPanel
+                                                selectedFilters={Array []}
                                                 type={
                                                   Object {
                                                     "isActive": false,

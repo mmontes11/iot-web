@@ -1212,6 +1212,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                   }
                                 }
                                 selectFilterType={[Function]}
+                                selectedFilters={Array []}
                                 type={
                                   Object {
                                     "isActive": false,
@@ -1273,6 +1274,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                   }
                                   reset={[Function]}
                                   selectFilterType={[Function]}
+                                  selectedFilters={Array []}
                                   type={
                                     Object {
                                       "isActive": false,
@@ -1334,6 +1336,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                     }
                                     reset={[Function]}
                                     selectFilterType={[Function]}
+                                    selectedFilters={Array []}
                                     type={
                                       Object {
                                         "isActive": false,
@@ -1346,6 +1349,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                     }
                                   >
                                     <FiltersPanel
+                                      selectedFilters={Array []}
                                       type={
                                         Object {
                                           "isActive": false,
@@ -2245,6 +2249,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                   }
                                 }
                                 selectFilterType={[Function]}
+                                selectedFilters={Array []}
                                 type={
                                   Object {
                                     "isActive": false,
@@ -2306,6 +2311,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                   }
                                   reset={[Function]}
                                   selectFilterType={[Function]}
+                                  selectedFilters={Array []}
                                   type={
                                     Object {
                                       "isActive": false,
@@ -2367,6 +2373,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     }
                                     reset={[Function]}
                                     selectFilterType={[Function]}
+                                    selectedFilters={Array []}
                                     type={
                                       Object {
                                         "isActive": false,
@@ -2379,6 +2386,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     }
                                   >
                                     <FiltersPanel
+                                      selectedFilters={Array []}
                                       type={
                                         Object {
                                           "isActive": false,
@@ -3292,6 +3300,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                   }
                                 }
                                 selectFilterType={[Function]}
+                                selectedFilters={Array []}
                                 type={
                                   Object {
                                     "isActive": false,
@@ -3353,6 +3362,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                   }
                                   reset={[Function]}
                                   selectFilterType={[Function]}
+                                  selectedFilters={Array []}
                                   type={
                                     Object {
                                       "isActive": false,
@@ -3414,6 +3424,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     }
                                     reset={[Function]}
                                     selectFilterType={[Function]}
+                                    selectedFilters={Array []}
                                     type={
                                       Object {
                                         "isActive": false,
@@ -3426,6 +3437,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     }
                                   >
                                     <FiltersPanel
+                                      selectedFilters={Array []}
                                       type={
                                         Object {
                                           "isActive": false,

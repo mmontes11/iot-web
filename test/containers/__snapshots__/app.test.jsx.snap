@@ -1435,6 +1435,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                     }
                                                   }
                                                   selectFilterType={[Function]}
+                                                  selectedFilters={Array []}
                                                   type={
                                                     Object {
                                                       "isActive": false,
@@ -1496,6 +1497,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                     }
                                                     reset={[Function]}
                                                     selectFilterType={[Function]}
+                                                    selectedFilters={Array []}
                                                     type={
                                                       Object {
                                                         "isActive": false,
@@ -1557,6 +1559,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                       }
                                                       reset={[Function]}
                                                       selectFilterType={[Function]}
+                                                      selectedFilters={Array []}
                                                       type={
                                                         Object {
                                                           "isActive": false,
@@ -1569,6 +1572,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                       }
                                                     >
                                                       <FiltersPanel
+                                                        selectedFilters={Array []}
                                                         type={
                                                           Object {
                                                             "isActive": false,
@@ -5427,6 +5431,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                     }
                                                   }
                                                   selectFilterType={[Function]}
+                                                  selectedFilters={Array []}
                                                   type={
                                                     Object {
                                                       "isActive": false,
@@ -5488,6 +5493,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                     }
                                                     reset={[Function]}
                                                     selectFilterType={[Function]}
+                                                    selectedFilters={Array []}
                                                     type={
                                                       Object {
                                                         "isActive": false,
@@ -5549,6 +5555,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                       }
                                                       reset={[Function]}
                                                       selectFilterType={[Function]}
+                                                      selectedFilters={Array []}
                                                       type={
                                                         Object {
                                                           "isActive": false,
@@ -5561,6 +5568,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                       }
                                                     >
                                                       <FiltersPanel
+                                                        selectedFilters={Array []}
                                                         type={
                                                           Object {
                                                             "isActive": false,
