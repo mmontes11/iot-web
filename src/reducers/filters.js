@@ -8,6 +8,12 @@ export const initialState = {
     isActive: false,
     isDisabled: false,
   },
+  thing: {
+    items: [],
+    isActive: false,
+    isDisabled: false,
+    selectedItem: null
+  },
   items: [],
 };
 
