@@ -1,6 +1,6 @@
 import React from "react";
-import Dropdown from "components/dropdown";
 import PropTypes from "prop-types";
+import Dropdown from "components/dropdown";
 
 const ParamsPanel = ({ type, observation, reset }) => (
   <div className="box">

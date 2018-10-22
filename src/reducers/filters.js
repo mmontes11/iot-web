@@ -1,6 +1,7 @@
-import { FILTER_TYPE_SELECT, ADD_FILTER_TYPE } from "constants/actionTypes/filters";
+import { FILTER_TYPE_SELECT, ADD_FILTER_TYPE, DELETE_FILTER_TYPE } from "constants/actionTypes/filters";
 import { RESET } from "constants/actionTypes/common";
-import { FILTER_TYPES } from "constants/filterTypes";
+import { THING_FILTER_TYPE, FILTER_TYPES } from "constants/filterTypes";
+import thingFilterReducer, { initialState as thingFilterInitialState } from "reducers/thingFilter";
 
 export const initialState = {
   type: {
@@ -8,20 +9,16 @@ export const initialState = {
     isActive: false,
     isDisabled: false,
   },
-  thing: {
-    items: [],
-    isActive: false,
-    isDisabled: false,
-    selectedItem: null
-  },
+  thingFilter: thingFilterInitialState,
   items: [],
 };
 
-export default (state = initialState, { type, addedFilterType }) => {
-  switch (type) {
+export default (state = initialState, action) => {
+  switch (action.type) {
     case FILTER_TYPE_SELECT:
       return { ...state, type: { ...state.type, isActive: !state.type.isActive } };
     case ADD_FILTER_TYPE: {
+      const { addedFilterType } = action;
       const addedItems = [...state.items];
       if (!addedItems.includes(addedFilterType)) {
         addedItems.push(addedFilterType);
@@ -39,9 +36,35 @@ export default (state = initialState, { type, addedFilterType }) => {
         items: addedItems,
       };
     }
+    case DELETE_FILTER_TYPE: {
+      const { deletedFilterType } = action;
+      const addedItems = [...state.items];
+      const newItems = addedItems.filter(item => item !== deletedFilterType);
+      const filterTypeItems = [...state.type.items];
+      if (!filterTypeItems.includes(deletedFilterType)) {
+        filterTypeItems.push(deletedFilterType);
+      }
+      const allItemsSelected = FILTER_TYPES.every(item => newItems.includes(item));
+      const nextState = {
+        ...state,
+        type: {
+          ...state.type,
+          items: filterTypeItems,
+          isDisabled: allItemsSelected,
+        },
+        items: newItems,
+      };
+      if (deletedFilterType === THING_FILTER_TYPE) {
+        return {
+          ...nextState,
+          thingFilter: thingFilterInitialState,
+        };
+      }
+      return nextState;
+    }
     case RESET:
       return initialState;
     default:
-      return state;
+      return { ...state, thingFilter: thingFilterReducer(state.thingFilter, action) };
   }
 };

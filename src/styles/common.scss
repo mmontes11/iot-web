@@ -8,6 +8,18 @@ html {
   justify-content: center;
 }
 
+.is-vertical-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.is-center {
+  @extend .is-vertical-center;
+
+  align-items: center;
+}
+
 .is-selected {
   background-color: $selected;
 }

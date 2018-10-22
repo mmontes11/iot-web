@@ -31,7 +31,7 @@ const Stats = ({ stats, isLoading, getStats, reset }) => (
         {renderChart(stats, isLoading)}
       </div>
       <div className="column is-one-quarter">
-        <StatsFiltersPanel />
+        <StatsFiltersPanel onFiltersChange={() => getStats()} />
       </div>
     </div>
   </div>

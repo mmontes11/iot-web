@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
     case STATS_UPDATED:
       return { ...state, items: action.stats };
     case RESET:
-      return { ...initialState, paramsInitialState, filtersInitialState };
+      return initialState;
     default:
       return { ...state, params: paramsReducer(state.params, action), filters: filtersReducer(state.filters, action) };
   }

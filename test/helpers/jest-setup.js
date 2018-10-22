@@ -29,6 +29,25 @@ jest.mock("lib/iotClient", () => ({
           ],
         },
       }),
+    getStats: () =>
+      Promise.resolve({
+        statusCode: 200,
+        body: {
+          stats: [
+            {
+              total: 210,
+              avgByHour: 8.75,
+              maxByHour: 39,
+              minByHour: 1,
+              stdDevByHour: 9.661995998067205,
+              data: {
+                type: "door-closed",
+                thing: "raspi",
+              },
+            },
+          ],
+        },
+      }),
   },
   measurementService: {
     getTypes: () => Promise.resolve({ statusCode: 200, body: { types: [] } }),
@@ -49,6 +68,25 @@ jest.mock("lib/iotClient", () => ({
                   name: "degress",
                   symbol: "°C",
                 },
+              },
+            },
+          ],
+        },
+      }),
+    getStats: () =>
+      Promise.resolve({
+        statusCode: 200,
+        body: {
+          stats: [
+            {
+              total: 210,
+              avgByHour: 8.75,
+              maxByHour: 39,
+              minByHour: 1,
+              stdDevByHour: 9.661995998067205,
+              data: {
+                type: "door-closed",
+                thing: "raspi",
               },
             },
           ],

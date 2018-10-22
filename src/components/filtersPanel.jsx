@@ -5,10 +5,10 @@ import ThingFilter from "components/thingFilter";
 import DateFilter from "components/dateFilter";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 
-const getFilter = filterType => {
+const getFilter = (filterType, thingFilter) => {
   switch (filterType) {
     case THING_FILTER_TYPE:
-      return <ThingFilter key={filterType} />;
+      return <ThingFilter key={filterType} thingFilter={thingFilter} />;
     case DATE_FILTER_TYPE:
       return <DateFilter key={filterType} />;
     default:
@@ -16,10 +16,10 @@ const getFilter = filterType => {
   }
 };
 
-const FiltersPanel = ({ type, selectedFilters }) => (
+const FiltersPanel = ({ type, selectedFilters, thingFilter }) => (
   <div className="box">
     <Dropdown {...type} label="Filters" buttonStyle="is-primary" iconStyle="fa-plus" isLoading={false} />
-    {selectedFilters.map(getFilter)}
+    {selectedFilters.map(filterType => getFilter(filterType, thingFilter))}
   </div>
 );
 
@@ -30,6 +30,7 @@ FiltersPanel.propTypes = {
     onButtonClick: PropTypes.func.isRequired,
     onItemClick: PropTypes.func.isRequired,
   }).isRequired,
+  thingFilter: PropTypes.shape({}).isRequired,
   selectedFilters: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 

@@ -42,6 +42,13 @@ export const initialState = {
         isActive: false,
         isDisabled: false,
       },
+      thingFilter: {
+        isLoading: false,
+        isActive: false,
+        isDisabled: false,
+        items: [],
+        selectedItem: null,
+      },
       items: [],
     },
     items: [],

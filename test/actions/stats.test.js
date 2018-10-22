@@ -11,6 +11,11 @@ describe("actions/stats", () => {
           type: { selectedItem: EVENT_TYPE },
           observation: { selectedItem: "door-opened" },
         },
+        filters: {
+          thingFilter: {
+            selectedItem: "raspi",
+          },
+        },
       },
     }));
     thunk(dispatch, getState);
@@ -21,6 +26,11 @@ describe("actions/stats", () => {
         params: {
           type: { selectedItem: MEASUREMENT_TYPE },
           observation: { selectedItem: "temperature-outdoor" },
+        },
+        filters: {
+          thingFilter: {
+            selectedItem: "raspi",
+          },
         },
       },
     }));

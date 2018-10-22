@@ -874,6 +874,13 @@ Object {
   "stats": Object {
     "filters": Object {
       "items": Array [],
+      "thingFilter": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
       "type": Object {
         "isActive": false,
         "isDisabled": false,

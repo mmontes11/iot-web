@@ -1113,7 +1113,9 @@ exports[`containers/stats renders stats barcharts 1`] = `
                       <div
                         className="column is-one-quarter"
                       >
-                        <withRouter(Connect(Connect(ResetOnUnmount)))>
+                        <withRouter(Connect(Connect(ResetOnUnmount)))
+                          onFiltersChange={[Function]}
+                        >
                           <Route>
                             <Connect(Connect(ResetOnUnmount))
                               history={
@@ -1162,9 +1164,11 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                   "url": "/",
                                 }
                               }
+                              onFiltersChange={[Function]}
                             >
                               <Connect(ResetOnUnmount)
                                 addFilterType={[Function]}
+                                deleteFilterType={[Function]}
                                 history={
                                   Object {
                                     "action": "POP",
@@ -1211,8 +1215,20 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                     "url": "/",
                                   }
                                 }
+                                onFiltersChange={[Function]}
                                 selectFilterType={[Function]}
+                                selectThingFilter={[Function]}
                                 selectedFilters={Array []}
+                                statsType={null}
+                                thingFilter={
+                                  Object {
+                                    "isActive": false,
+                                    "isDisabled": false,
+                                    "isLoading": false,
+                                    "items": Array [],
+                                    "selectedItem": null,
+                                  }
+                                }
                                 type={
                                   Object {
                                     "isActive": false,
@@ -1223,9 +1239,11 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                     ],
                                   }
                                 }
+                                updateThingFilter={[Function]}
                               >
                                 <ResetOnUnmount
                                   addFilterType={[Function]}
+                                  deleteFilterType={[Function]}
                                   history={
                                     Object {
                                       "action": "POP",
@@ -1272,9 +1290,21 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                       "url": "/",
                                     }
                                   }
+                                  onFiltersChange={[Function]}
                                   reset={[Function]}
                                   selectFilterType={[Function]}
+                                  selectThingFilter={[Function]}
                                   selectedFilters={Array []}
+                                  statsType={null}
+                                  thingFilter={
+                                    Object {
+                                      "isActive": false,
+                                      "isDisabled": false,
+                                      "isLoading": false,
+                                      "items": Array [],
+                                      "selectedItem": null,
+                                    }
+                                  }
                                   type={
                                     Object {
                                       "isActive": false,
@@ -1285,9 +1315,11 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                       ],
                                     }
                                   }
+                                  updateThingFilter={[Function]}
                                 >
                                   <StatsFiltersPanel
                                     addFilterType={[Function]}
+                                    deleteFilterType={[Function]}
                                     history={
                                       Object {
                                         "action": "POP",
@@ -1334,9 +1366,21 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                         "url": "/",
                                       }
                                     }
+                                    onFiltersChange={[Function]}
                                     reset={[Function]}
                                     selectFilterType={[Function]}
+                                    selectThingFilter={[Function]}
                                     selectedFilters={Array []}
+                                    statsType={null}
+                                    thingFilter={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "selectedItem": null,
+                                      }
+                                    }
                                     type={
                                       Object {
                                         "isActive": false,
@@ -1347,9 +1391,23 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                         ],
                                       }
                                     }
+                                    updateThingFilter={[Function]}
                                   >
                                     <FiltersPanel
                                       selectedFilters={Array []}
+                                      thingFilter={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "label": "Select Thing Filter: ",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
+                                          "selectedItem": null,
+                                        }
+                                      }
                                       type={
                                         Object {
                                           "isActive": false,
@@ -2150,7 +2208,9 @@ exports[`containers/stats renders stats in initial state 1`] = `
                       <div
                         className="column is-one-quarter"
                       >
-                        <withRouter(Connect(Connect(ResetOnUnmount)))>
+                        <withRouter(Connect(Connect(ResetOnUnmount)))
+                          onFiltersChange={[Function]}
+                        >
                           <Route>
                             <Connect(Connect(ResetOnUnmount))
                               history={
@@ -2199,9 +2259,11 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                   "url": "/",
                                 }
                               }
+                              onFiltersChange={[Function]}
                             >
                               <Connect(ResetOnUnmount)
                                 addFilterType={[Function]}
+                                deleteFilterType={[Function]}
                                 history={
                                   Object {
                                     "action": "POP",
@@ -2248,8 +2310,20 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     "url": "/",
                                   }
                                 }
+                                onFiltersChange={[Function]}
                                 selectFilterType={[Function]}
+                                selectThingFilter={[Function]}
                                 selectedFilters={Array []}
+                                statsType={null}
+                                thingFilter={
+                                  Object {
+                                    "isActive": false,
+                                    "isDisabled": false,
+                                    "isLoading": false,
+                                    "items": Array [],
+                                    "selectedItem": null,
+                                  }
+                                }
                                 type={
                                   Object {
                                     "isActive": false,
@@ -2260,9 +2334,11 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     ],
                                   }
                                 }
+                                updateThingFilter={[Function]}
                               >
                                 <ResetOnUnmount
                                   addFilterType={[Function]}
+                                  deleteFilterType={[Function]}
                                   history={
                                     Object {
                                       "action": "POP",
@@ -2309,9 +2385,21 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                       "url": "/",
                                     }
                                   }
+                                  onFiltersChange={[Function]}
                                   reset={[Function]}
                                   selectFilterType={[Function]}
+                                  selectThingFilter={[Function]}
                                   selectedFilters={Array []}
+                                  statsType={null}
+                                  thingFilter={
+                                    Object {
+                                      "isActive": false,
+                                      "isDisabled": false,
+                                      "isLoading": false,
+                                      "items": Array [],
+                                      "selectedItem": null,
+                                    }
+                                  }
                                   type={
                                     Object {
                                       "isActive": false,
@@ -2322,9 +2410,11 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                       ],
                                     }
                                   }
+                                  updateThingFilter={[Function]}
                                 >
                                   <StatsFiltersPanel
                                     addFilterType={[Function]}
+                                    deleteFilterType={[Function]}
                                     history={
                                       Object {
                                         "action": "POP",
@@ -2371,9 +2461,21 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                         "url": "/",
                                       }
                                     }
+                                    onFiltersChange={[Function]}
                                     reset={[Function]}
                                     selectFilterType={[Function]}
+                                    selectThingFilter={[Function]}
                                     selectedFilters={Array []}
+                                    statsType={null}
+                                    thingFilter={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "selectedItem": null,
+                                      }
+                                    }
                                     type={
                                       Object {
                                         "isActive": false,
@@ -2384,9 +2486,23 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                         ],
                                       }
                                     }
+                                    updateThingFilter={[Function]}
                                   >
                                     <FiltersPanel
                                       selectedFilters={Array []}
+                                      thingFilter={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "label": "Select Thing Filter: ",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
+                                          "selectedItem": null,
+                                        }
+                                      }
                                       type={
                                         Object {
                                           "isActive": false,
@@ -3201,7 +3317,9 @@ exports[`containers/stats renders when loading stats 1`] = `
                       <div
                         className="column is-one-quarter"
                       >
-                        <withRouter(Connect(Connect(ResetOnUnmount)))>
+                        <withRouter(Connect(Connect(ResetOnUnmount)))
+                          onFiltersChange={[Function]}
+                        >
                           <Route>
                             <Connect(Connect(ResetOnUnmount))
                               history={
@@ -3250,9 +3368,11 @@ exports[`containers/stats renders when loading stats 1`] = `
                                   "url": "/",
                                 }
                               }
+                              onFiltersChange={[Function]}
                             >
                               <Connect(ResetOnUnmount)
                                 addFilterType={[Function]}
+                                deleteFilterType={[Function]}
                                 history={
                                   Object {
                                     "action": "POP",
@@ -3299,8 +3419,20 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     "url": "/",
                                   }
                                 }
+                                onFiltersChange={[Function]}
                                 selectFilterType={[Function]}
+                                selectThingFilter={[Function]}
                                 selectedFilters={Array []}
+                                statsType={null}
+                                thingFilter={
+                                  Object {
+                                    "isActive": false,
+                                    "isDisabled": false,
+                                    "isLoading": false,
+                                    "items": Array [],
+                                    "selectedItem": null,
+                                  }
+                                }
                                 type={
                                   Object {
                                     "isActive": false,
@@ -3311,9 +3443,11 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     ],
                                   }
                                 }
+                                updateThingFilter={[Function]}
                               >
                                 <ResetOnUnmount
                                   addFilterType={[Function]}
+                                  deleteFilterType={[Function]}
                                   history={
                                     Object {
                                       "action": "POP",
@@ -3360,9 +3494,21 @@ exports[`containers/stats renders when loading stats 1`] = `
                                       "url": "/",
                                     }
                                   }
+                                  onFiltersChange={[Function]}
                                   reset={[Function]}
                                   selectFilterType={[Function]}
+                                  selectThingFilter={[Function]}
                                   selectedFilters={Array []}
+                                  statsType={null}
+                                  thingFilter={
+                                    Object {
+                                      "isActive": false,
+                                      "isDisabled": false,
+                                      "isLoading": false,
+                                      "items": Array [],
+                                      "selectedItem": null,
+                                    }
+                                  }
                                   type={
                                     Object {
                                       "isActive": false,
@@ -3373,9 +3519,11 @@ exports[`containers/stats renders when loading stats 1`] = `
                                       ],
                                     }
                                   }
+                                  updateThingFilter={[Function]}
                                 >
                                   <StatsFiltersPanel
                                     addFilterType={[Function]}
+                                    deleteFilterType={[Function]}
                                     history={
                                       Object {
                                         "action": "POP",
@@ -3422,9 +3570,21 @@ exports[`containers/stats renders when loading stats 1`] = `
                                         "url": "/",
                                       }
                                     }
+                                    onFiltersChange={[Function]}
                                     reset={[Function]}
                                     selectFilterType={[Function]}
+                                    selectThingFilter={[Function]}
                                     selectedFilters={Array []}
+                                    statsType={null}
+                                    thingFilter={
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "selectedItem": null,
+                                      }
+                                    }
                                     type={
                                       Object {
                                         "isActive": false,
@@ -3435,9 +3595,23 @@ exports[`containers/stats renders when loading stats 1`] = `
                                         ],
                                       }
                                     }
+                                    updateThingFilter={[Function]}
                                   >
                                     <FiltersPanel
                                       selectedFilters={Array []}
+                                      thingFilter={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "label": "Select Thing Filter: ",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
+                                          "selectedItem": null,
+                                        }
+                                      }
                                       type={
                                         Object {
                                           "isActive": false,

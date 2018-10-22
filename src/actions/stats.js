@@ -3,17 +3,26 @@ import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 import { normalizeStats } from "helpers/statsNormalizer";
 import iotClient from "lib/iotClient";
 
-const requestStats = (type, observation, onStart, onSuccess, onError) => {
+const requestStats = (type, observation, thing, onStart, onSuccess, onError) => {
+  let params = {
+    type: observation,
+  };
+  if (thing !== null) {
+    params = {
+      ...params,
+      thing,
+    };
+  }
   if (type === EVENT_TYPE) {
     onStart();
     iotClient.eventService
-      .getStatsByType(observation)
+      .getStats(params)
       .then(res => onSuccess(res))
       .catch(err => onError(err));
   } else if (type === MEASUREMENT_TYPE) {
     onStart();
     iotClient.measurementService
-      .getStatsByType(observation)
+      .getStats(params)
       .then(res => onSuccess(res))
       .catch(err => onError(err));
   }
@@ -26,6 +35,9 @@ export const getStats = () => (dispatch, getState) => {
         type: { selectedItem: selectedType },
         observation: { selectedItem: selectedObservation },
       },
+      filters: {
+        thingFilter: { selectedItem: selectedThingFilter },
+      },
     },
   } = getState();
   if (!selectedType || !selectedObservation) {
@@ -35,6 +47,7 @@ export const getStats = () => (dispatch, getState) => {
   requestStats(
     selectedType,
     selectedObservation,
+    selectedThingFilter,
     () => dispatch({ type: STATS_REQUEST }),
     res => {
       dispatch({ type: STATS_REQUEST_SUCCESS });
