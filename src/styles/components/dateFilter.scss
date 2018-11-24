@@ -1,0 +1,11 @@
+.buttons {
+  @extend .buttons;
+
+  width: 100%;
+
+  & .button {
+    @extend .button;
+
+    flex-basis: 50%;
+  }
+}

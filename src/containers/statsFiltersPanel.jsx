@@ -28,7 +28,7 @@ const StatsFiltersPanel = ({
     }}
     thingFilter={{
       ...thingFilter,
-      label: thingFilter.selectedItem || "Select Thing Filter: ",
+      label: thingFilter.selectedItem || "Select Thing: ",
       onButtonClick: () => selectThingFilter(statsType, thingFilter.isActive),
       onItemClick: item => {
         updateThingFilter(item);
@@ -38,6 +38,26 @@ const StatsFiltersPanel = ({
         deleteFilterType(item);
         onFiltersChange();
       },
+    }}
+    dateFilter={{
+      selector: {
+        isTimePeriodSelected: true,
+        isCustomSelected: true,
+        onTimePeriodClick: () => undefined,
+        onCustomClick: () => undefined,
+      },
+      timePeriod: {
+        isLoading: false,
+        isActive: false,
+        isDisabled: false,
+        items: [],
+        selectedItem: null,
+        label: "Select Time Period: ",
+        onButtonClick: () => undefined,
+        onItemClick: () => undefined,
+      },
+      custom: {},
+      onDelete: () => undefined,
     }}
     selectedFilters={selectedFilters}
   />

@@ -3,6 +3,13 @@
 exports[`reducers/stats has a default state 1`] = `
 Object {
   "filters": Object {
+    "dateFilter": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
     "items": Array [],
     "thingFilter": Object {
       "isActive": false,
@@ -48,6 +55,13 @@ Object {
 exports[`reducers/stats reduces RESET 1`] = `
 Object {
   "filters": Object {
+    "dateFilter": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
     "items": Array [],
     "thingFilter": Object {
       "isActive": false,
@@ -273,6 +287,13 @@ Object {
 exports[`reducers/stats reduces nothing 1`] = `
 Object {
   "filters": Object {
+    "dateFilter": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
     "items": Array [],
     "thingFilter": Object {
       "isActive": false,

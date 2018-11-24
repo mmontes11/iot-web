@@ -17,6 +17,13 @@ Object {
   },
   "stats": Object {
     "filters": Object {
+      "dateFilter": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
       "items": Array [],
       "thingFilter": Object {
         "isActive": false,
@@ -75,6 +82,13 @@ Object {
   "request": "REQUEST",
   "stats": Object {
     "filters": Object {
+      "dateFilter": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
       "items": Array [],
       "thingFilter": Object {
         "isActive": false,
@@ -133,6 +147,13 @@ Object {
   "request": "REQUEST",
   "stats": Object {
     "filters": Object {
+      "dateFilter": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
       "items": Array [],
       "thingFilter": Object {
         "isActive": false,

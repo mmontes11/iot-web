@@ -2,6 +2,7 @@ import { FILTER_TYPE_SELECT, ADD_FILTER_TYPE, DELETE_FILTER_TYPE } from "constan
 import { RESET } from "constants/actionTypes/common";
 import { THING_FILTER_TYPE, FILTER_TYPES } from "constants/filterTypes";
 import thingFilterReducer, { initialState as thingFilterInitialState } from "reducers/thingFilter";
+import dateFilterReducer, { initialState as dateFilterInitialState } from "reducers/dateFilter";
 
 export const initialState = {
   type: {
@@ -10,6 +11,7 @@ export const initialState = {
     isDisabled: false,
   },
   thingFilter: thingFilterInitialState,
+  dateFilter: dateFilterInitialState,
   items: [],
 };
 
@@ -65,6 +67,10 @@ export default (state = initialState, action) => {
     case RESET:
       return initialState;
     default:
-      return { ...state, thingFilter: thingFilterReducer(state.thingFilter, action) };
+      return {
+        ...state,
+        thingFilter: thingFilterReducer(state.thingFilter, action),
+        dateFilter: dateFilterReducer(state.dateFilter, action),
+      };
   }
 };

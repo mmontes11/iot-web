@@ -1617,6 +1617,28 @@ exports[`containers/app renders app in error state 1`] = `
                                                       updateThingFilter={[Function]}
                                                     >
                                                       <FiltersPanel
+                                                        dateFilter={
+                                                          Object {
+                                                            "custom": Object {},
+                                                            "onDelete": [Function],
+                                                            "selector": Object {
+                                                              "isCustomSelected": true,
+                                                              "isTimePeriodSelected": true,
+                                                              "onCustomClick": [Function],
+                                                              "onTimePeriodClick": [Function],
+                                                            },
+                                                            "timePeriod": Object {
+                                                              "isActive": false,
+                                                              "isDisabled": false,
+                                                              "isLoading": false,
+                                                              "items": Array [],
+                                                              "label": "Select Time Period: ",
+                                                              "onButtonClick": [Function],
+                                                              "onItemClick": [Function],
+                                                              "selectedItem": null,
+                                                            },
+                                                          }
+                                                        }
                                                         selectedFilters={Array []}
                                                         thingFilter={
                                                           Object {
@@ -1624,7 +1646,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                             "isDisabled": false,
                                                             "isLoading": false,
                                                             "items": Array [],
-                                                            "label": "Select Thing Filter: ",
+                                                            "label": "Select Thing: ",
                                                             "onButtonClick": [Function],
                                                             "onDelete": [Function],
                                                             "onItemClick": [Function],
@@ -1647,80 +1669,88 @@ exports[`containers/app renders app in error state 1`] = `
                                                         <div
                                                           className="box"
                                                         >
-                                                          <Dropdown
-                                                            buttonStyle="is-primary"
-                                                            iconStyle="fa-plus"
-                                                            isActive={false}
-                                                            isDisabled={false}
-                                                            isLoading={false}
-                                                            items={
-                                                              Array [
-                                                                "date",
-                                                                "thing",
-                                                              ]
-                                                            }
-                                                            label="Filters"
-                                                            onButtonClick={[Function]}
-                                                            onItemClick={[Function]}
+                                                          <div
+                                                            className="columns"
                                                           >
                                                             <div
-                                                              className="dropdown"
+                                                              className="column"
                                                             >
-                                                              <div
-                                                                className="dropdown-trigger"
-                                                              >
-                                                                <button
-                                                                  aria-controls="dropdown-menu"
-                                                                  aria-haspopup="true"
-                                                                  className="button is-primary"
-                                                                  disabled={false}
-                                                                  onClick={[Function]}
-                                                                >
-                                                                  <span>
-                                                                    Filters
-                                                                  </span>
-                                                                  <span
-                                                                    className="icon is-small"
-                                                                  >
-                                                                    <i
-                                                                      aria-hidden="true"
-                                                                      className="fas fa-plus"
-                                                                    />
-                                                                  </span>
-                                                                </button>
-                                                              </div>
-                                                              <div
-                                                                className="dropdown-menu"
-                                                                id="dropdown-menu"
-                                                                role="menu"
+                                                              <Dropdown
+                                                                buttonStyle="is-primary"
+                                                                iconStyle="fa-plus"
+                                                                isActive={false}
+                                                                isDisabled={false}
+                                                                isLoading={false}
+                                                                items={
+                                                                  Array [
+                                                                    "date",
+                                                                    "thing",
+                                                                  ]
+                                                                }
+                                                                label="Filters"
+                                                                onButtonClick={[Function]}
+                                                                onItemClick={[Function]}
                                                               >
                                                                 <div
-                                                                  className="dropdown-content"
+                                                                  className="dropdown"
                                                                 >
                                                                   <div
-                                                                    className="dropdown-item"
-                                                                    key="ZGF0ZQ=="
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
+                                                                    className="dropdown-trigger"
                                                                   >
-                                                                    date
+                                                                    <button
+                                                                      aria-controls="dropdown-menu"
+                                                                      aria-haspopup="true"
+                                                                      className="button is-primary"
+                                                                      disabled={false}
+                                                                      onClick={[Function]}
+                                                                    >
+                                                                      <span>
+                                                                        Filters
+                                                                      </span>
+                                                                      <span
+                                                                        className="icon is-small"
+                                                                      >
+                                                                        <i
+                                                                          aria-hidden="true"
+                                                                          className="fas fa-plus"
+                                                                        />
+                                                                      </span>
+                                                                    </button>
                                                                   </div>
                                                                   <div
-                                                                    className="dropdown-item"
-                                                                    key="dGhpbmc="
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
+                                                                    className="dropdown-menu"
+                                                                    id="dropdown-menu"
+                                                                    role="menu"
                                                                   >
-                                                                    thing
+                                                                    <div
+                                                                      className="dropdown-content"
+                                                                    >
+                                                                      <div
+                                                                        className="dropdown-item"
+                                                                        key="ZGF0ZQ=="
+                                                                        onClick={[Function]}
+                                                                        onKeyPress={[Function]}
+                                                                        role="button"
+                                                                        tabIndex={0}
+                                                                      >
+                                                                        date
+                                                                      </div>
+                                                                      <div
+                                                                        className="dropdown-item"
+                                                                        key="dGhpbmc="
+                                                                        onClick={[Function]}
+                                                                        onKeyPress={[Function]}
+                                                                        role="button"
+                                                                        tabIndex={0}
+                                                                      >
+                                                                        thing
+                                                                      </div>
+                                                                    </div>
                                                                   </div>
                                                                 </div>
-                                                              </div>
+                                                              </Dropdown>
                                                             </div>
-                                                          </Dropdown>
+                                                          </div>
                                                         </div>
                                                       </FiltersPanel>
                                                     </StatsFiltersPanel>
@@ -5671,6 +5701,28 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                       updateThingFilter={[Function]}
                                                     >
                                                       <FiltersPanel
+                                                        dateFilter={
+                                                          Object {
+                                                            "custom": Object {},
+                                                            "onDelete": [Function],
+                                                            "selector": Object {
+                                                              "isCustomSelected": true,
+                                                              "isTimePeriodSelected": true,
+                                                              "onCustomClick": [Function],
+                                                              "onTimePeriodClick": [Function],
+                                                            },
+                                                            "timePeriod": Object {
+                                                              "isActive": false,
+                                                              "isDisabled": false,
+                                                              "isLoading": false,
+                                                              "items": Array [],
+                                                              "label": "Select Time Period: ",
+                                                              "onButtonClick": [Function],
+                                                              "onItemClick": [Function],
+                                                              "selectedItem": null,
+                                                            },
+                                                          }
+                                                        }
                                                         selectedFilters={Array []}
                                                         thingFilter={
                                                           Object {
@@ -5678,7 +5730,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                             "isDisabled": false,
                                                             "isLoading": false,
                                                             "items": Array [],
-                                                            "label": "Select Thing Filter: ",
+                                                            "label": "Select Thing: ",
                                                             "onButtonClick": [Function],
                                                             "onDelete": [Function],
                                                             "onItemClick": [Function],
@@ -5701,80 +5753,88 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                         <div
                                                           className="box"
                                                         >
-                                                          <Dropdown
-                                                            buttonStyle="is-primary"
-                                                            iconStyle="fa-plus"
-                                                            isActive={false}
-                                                            isDisabled={false}
-                                                            isLoading={false}
-                                                            items={
-                                                              Array [
-                                                                "date",
-                                                                "thing",
-                                                              ]
-                                                            }
-                                                            label="Filters"
-                                                            onButtonClick={[Function]}
-                                                            onItemClick={[Function]}
+                                                          <div
+                                                            className="columns"
                                                           >
                                                             <div
-                                                              className="dropdown"
+                                                              className="column"
                                                             >
-                                                              <div
-                                                                className="dropdown-trigger"
-                                                              >
-                                                                <button
-                                                                  aria-controls="dropdown-menu"
-                                                                  aria-haspopup="true"
-                                                                  className="button is-primary"
-                                                                  disabled={false}
-                                                                  onClick={[Function]}
-                                                                >
-                                                                  <span>
-                                                                    Filters
-                                                                  </span>
-                                                                  <span
-                                                                    className="icon is-small"
-                                                                  >
-                                                                    <i
-                                                                      aria-hidden="true"
-                                                                      className="fas fa-plus"
-                                                                    />
-                                                                  </span>
-                                                                </button>
-                                                              </div>
-                                                              <div
-                                                                className="dropdown-menu"
-                                                                id="dropdown-menu"
-                                                                role="menu"
+                                                              <Dropdown
+                                                                buttonStyle="is-primary"
+                                                                iconStyle="fa-plus"
+                                                                isActive={false}
+                                                                isDisabled={false}
+                                                                isLoading={false}
+                                                                items={
+                                                                  Array [
+                                                                    "date",
+                                                                    "thing",
+                                                                  ]
+                                                                }
+                                                                label="Filters"
+                                                                onButtonClick={[Function]}
+                                                                onItemClick={[Function]}
                                                               >
                                                                 <div
-                                                                  className="dropdown-content"
+                                                                  className="dropdown"
                                                                 >
                                                                   <div
-                                                                    className="dropdown-item"
-                                                                    key="ZGF0ZQ=="
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
+                                                                    className="dropdown-trigger"
                                                                   >
-                                                                    date
+                                                                    <button
+                                                                      aria-controls="dropdown-menu"
+                                                                      aria-haspopup="true"
+                                                                      className="button is-primary"
+                                                                      disabled={false}
+                                                                      onClick={[Function]}
+                                                                    >
+                                                                      <span>
+                                                                        Filters
+                                                                      </span>
+                                                                      <span
+                                                                        className="icon is-small"
+                                                                      >
+                                                                        <i
+                                                                          aria-hidden="true"
+                                                                          className="fas fa-plus"
+                                                                        />
+                                                                      </span>
+                                                                    </button>
                                                                   </div>
                                                                   <div
-                                                                    className="dropdown-item"
-                                                                    key="dGhpbmc="
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
+                                                                    className="dropdown-menu"
+                                                                    id="dropdown-menu"
+                                                                    role="menu"
                                                                   >
-                                                                    thing
+                                                                    <div
+                                                                      className="dropdown-content"
+                                                                    >
+                                                                      <div
+                                                                        className="dropdown-item"
+                                                                        key="ZGF0ZQ=="
+                                                                        onClick={[Function]}
+                                                                        onKeyPress={[Function]}
+                                                                        role="button"
+                                                                        tabIndex={0}
+                                                                      >
+                                                                        date
+                                                                      </div>
+                                                                      <div
+                                                                        className="dropdown-item"
+                                                                        key="dGhpbmc="
+                                                                        onClick={[Function]}
+                                                                        onKeyPress={[Function]}
+                                                                        role="button"
+                                                                        tabIndex={0}
+                                                                      >
+                                                                        thing
+                                                                      </div>
+                                                                    </div>
                                                                   </div>
                                                                 </div>
-                                                              </div>
+                                                              </Dropdown>
                                                             </div>
-                                                          </Dropdown>
+                                                          </div>
                                                         </div>
                                                       </FiltersPanel>
                                                     </StatsFiltersPanel>
