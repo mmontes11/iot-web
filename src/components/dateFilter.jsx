@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import Dropdown from "components/dropdown";
+import DatePicker from "components/datePicker";
 import { DATE_FILTER_TYPE } from "constants/filterTypes";
 
 const DateFilter = ({ dateFilter }) => {
@@ -43,7 +44,12 @@ const DateFilter = ({ dateFilter }) => {
       )}
       {dateFilter.selector.isCustomSelected && (
         <div className="columns">
-          <div className="column">Datepicker</div>
+          <div className="column">
+            <DatePicker
+                selected={new Date()}
+                onChange={() => undefined}
+            />
+          </div>
         </div>
       )}
     </div>
