@@ -418,6 +418,20 @@ Object {
   },
   "stats": Object {
     "filters": Object {
+      "dateFilter": Object {
+        "custom": Object {
+          "endDate": null,
+          "startDate": null,
+        },
+        "isCustomSelected": false,
+        "timePeriod": Object {
+          "isActive": false,
+          "isDisabled": false,
+          "isLoading": false,
+          "items": Array [],
+          "selectedItem": null,
+        },
+      },
       "items": Array [],
       "thingFilter": Object {
         "isActive": false,

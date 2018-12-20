@@ -1516,7 +1516,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                     <span
                                       className="has-text-info"
                                     >
-                                      1970-1-1 00:00:00
+                                      Mock Date
                                     </span>
                                   </p>
                                   <TagList
@@ -2315,7 +2315,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                     <span
                                       className="has-text-info"
                                     >
-                                      1970-1-1 00:00:00
+                                      Mock Date
                                     </span>
                                   </p>
                                   <TagList

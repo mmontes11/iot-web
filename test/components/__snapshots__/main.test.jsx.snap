@@ -2718,6 +2718,22 @@ exports[`components/main renders a main in /stats path 1`] = `
                                       >
                                         <Connect(ResetOnUnmount)
                                           addFilterType={[Function]}
+                                          dateFilter={
+                                            Object {
+                                              "custom": Object {
+                                                "endDate": null,
+                                                "startDate": null,
+                                              },
+                                              "isCustomSelected": false,
+                                              "timePeriod": Object {
+                                                "isActive": false,
+                                                "isDisabled": false,
+                                                "isLoading": false,
+                                                "items": Array [],
+                                                "selectedItem": null,
+                                              },
+                                            }
+                                          }
                                           deleteFilterType={[Function]}
                                           history={
                                             Object {
@@ -2768,6 +2784,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           onFiltersChange={[Function]}
                                           selectFilterType={[Function]}
                                           selectThingFilter={[Function]}
+                                          selectTimePeriod={[Function]}
                                           selectedFilters={Array []}
                                           statsType={null}
                                           thingFilter={
@@ -2779,6 +2796,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               "selectedItem": null,
                                             }
                                           }
+                                          toggleDateFilterType={[Function]}
                                           type={
                                             Object {
                                               "isActive": false,
@@ -2789,10 +2807,29 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               ],
                                             }
                                           }
+                                          updateEndDate={[Function]}
+                                          updateStartDate={[Function]}
                                           updateThingFilter={[Function]}
+                                          updateTimePeriod={[Function]}
                                         >
                                           <ResetOnUnmount
                                             addFilterType={[Function]}
+                                            dateFilter={
+                                              Object {
+                                                "custom": Object {
+                                                  "endDate": null,
+                                                  "startDate": null,
+                                                },
+                                                "isCustomSelected": false,
+                                                "timePeriod": Object {
+                                                  "isActive": false,
+                                                  "isDisabled": false,
+                                                  "isLoading": false,
+                                                  "items": Array [],
+                                                  "selectedItem": null,
+                                                },
+                                              }
+                                            }
                                             deleteFilterType={[Function]}
                                             history={
                                               Object {
@@ -2844,6 +2881,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             reset={[Function]}
                                             selectFilterType={[Function]}
                                             selectThingFilter={[Function]}
+                                            selectTimePeriod={[Function]}
                                             selectedFilters={Array []}
                                             statsType={null}
                                             thingFilter={
@@ -2855,6 +2893,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                 "selectedItem": null,
                                               }
                                             }
+                                            toggleDateFilterType={[Function]}
                                             type={
                                               Object {
                                                 "isActive": false,
@@ -2865,10 +2904,29 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                 ],
                                               }
                                             }
+                                            updateEndDate={[Function]}
+                                            updateStartDate={[Function]}
                                             updateThingFilter={[Function]}
+                                            updateTimePeriod={[Function]}
                                           >
                                             <StatsFiltersPanel
                                               addFilterType={[Function]}
+                                              dateFilter={
+                                                Object {
+                                                  "custom": Object {
+                                                    "endDate": null,
+                                                    "startDate": null,
+                                                  },
+                                                  "isCustomSelected": false,
+                                                  "timePeriod": Object {
+                                                    "isActive": false,
+                                                    "isDisabled": false,
+                                                    "isLoading": false,
+                                                    "items": Array [],
+                                                    "selectedItem": null,
+                                                  },
+                                                }
+                                              }
                                               deleteFilterType={[Function]}
                                               history={
                                                 Object {
@@ -2920,6 +2978,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               reset={[Function]}
                                               selectFilterType={[Function]}
                                               selectThingFilter={[Function]}
+                                              selectTimePeriod={[Function]}
                                               selectedFilters={Array []}
                                               statsType={null}
                                               thingFilter={
@@ -2931,6 +2990,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                   "selectedItem": null,
                                                 }
                                               }
+                                              toggleDateFilterType={[Function]}
                                               type={
                                                 Object {
                                                   "isActive": false,
@@ -2941,25 +3001,36 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                   ],
                                                 }
                                               }
+                                              updateEndDate={[Function]}
+                                              updateStartDate={[Function]}
                                               updateThingFilter={[Function]}
+                                              updateTimePeriod={[Function]}
                                             >
                                               <FiltersPanel
                                                 dateFilter={
                                                   Object {
-                                                    "custom": Object {},
+                                                    "custom": Object {
+                                                      "endDate": Object {
+                                                        "onChange": [Function],
+                                                        "selected": null,
+                                                      },
+                                                      "startDate": Object {
+                                                        "onChange": [Function],
+                                                        "selected": null,
+                                                      },
+                                                    },
+                                                    "isCustomSelected": false,
                                                     "onDelete": [Function],
                                                     "selector": Object {
-                                                      "isCustomSelected": true,
-                                                      "isTimePeriodSelected": true,
-                                                      "onCustomClick": [Function],
-                                                      "onTimePeriodClick": [Function],
+                                                      "isCustomSelected": false,
+                                                      "onChange": [Function],
                                                     },
                                                     "timePeriod": Object {
                                                       "isActive": false,
                                                       "isDisabled": false,
                                                       "isLoading": false,
                                                       "items": Array [],
-                                                      "label": "Select Time Period: ",
+                                                      "label": "Select Time Period:",
                                                       "onButtonClick": [Function],
                                                       "onItemClick": [Function],
                                                       "selectedItem": null,

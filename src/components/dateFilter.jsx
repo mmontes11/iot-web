@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 import Dropdown from "components/dropdown";
 import DatePicker from "components/datePicker";
 import { DATE_FILTER_TYPE } from "constants/filterTypes";
@@ -10,7 +9,7 @@ const DateFilter = ({ dateFilter }) => {
     dateFilter.onDelete(DATE_FILTER_TYPE);
   };
   return (
-    <div className="box">
+    <div className="box date-filter">
       {!dateFilter.selector.isCustomSelected && (
         <div className="columns">
           <div className="column">
@@ -28,16 +27,18 @@ const DateFilter = ({ dateFilter }) => {
           <div className="columns">
             <div className="column">
               <DatePicker
+                placeholder="Select start date:"
                 selected={dateFilter.custom.startDate.selected}
-                onChange={(date) => dateFilter.custom.startDate.onChange(date)}
+                onChange={date => dateFilter.custom.startDate.onChange(date)}
               />
             </div>
           </div>
           <div className="columns">
             <div className="column">
               <DatePicker
+                placeholder="Select end date:"
                 selected={dateFilter.custom.endDate.selected}
-                onChange={(date) => dateFilter.custom.endDate.onChange(date)}
+                onChange={date => dateFilter.custom.endDate.onChange(date)}
               />
             </div>
           </div>
@@ -46,7 +47,7 @@ const DateFilter = ({ dateFilter }) => {
       <div className="columns">
         <div className="column is-10">
           <button className="button is-info" onClick={() => dateFilter.selector.onChange()}>
-            {dateFilter.selector.label}
+            {(dateFilter.selector.isCustomSelected && "Time Period") || "Custom"}
           </button>
         </div>
         <div className="column is-center">
@@ -60,15 +61,15 @@ const DateFilter = ({ dateFilter }) => {
 };
 
 const dateShape = PropTypes.shape({
-  selected: PropTypes.instanceOf(Date).isRequired,
-  onChange: PropTypes.func.isRequired
+  selected: PropTypes.instanceOf(Date),
+  onChange: PropTypes.func.isRequired,
 });
 
 DateFilter.propTypes = {
   dateFilter: PropTypes.shape({
     selector: PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      onChange: PropTypes.func.isRequired
+      isCustomSelected: PropTypes.bool.isRequired,
+      onChange: PropTypes.func.isRequired,
     }).isRequired,
     timePeriod: PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -81,7 +82,7 @@ DateFilter.propTypes = {
     }).isRequired,
     custom: PropTypes.shape({
       startDate: dateShape,
-      endDate: dateShape
+      endDate: dateShape,
     }).isRequired,
     onDelete: PropTypes.func.isRequired,
   }).isRequired,

@@ -49,6 +49,20 @@ export const initialState = {
         items: [],
         selectedItem: null,
       },
+      dateFilter: {
+        isCustomSelected: false,
+        timePeriod: {
+          isLoading: false,
+          isActive: false,
+          isDisabled: false,
+          items: [],
+          selectedItem: null,
+        },
+        custom: {
+          startDate: null,
+          endDate: null,
+        },
+      },
       items: [],
     },
     items: [],

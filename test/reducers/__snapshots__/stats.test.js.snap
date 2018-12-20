@@ -4,11 +4,18 @@ exports[`reducers/stats has a default state 1`] = `
 Object {
   "filters": Object {
     "dateFilter": Object {
-      "isActive": false,
-      "isDisabled": false,
-      "isLoading": false,
-      "items": Array [],
-      "selectedItem": null,
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
+      },
+      "isCustomSelected": false,
+      "timePeriod": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
     },
     "items": Array [],
     "thingFilter": Object {
@@ -56,11 +63,18 @@ exports[`reducers/stats reduces RESET 1`] = `
 Object {
   "filters": Object {
     "dateFilter": Object {
-      "isActive": false,
-      "isDisabled": false,
-      "isLoading": false,
-      "items": Array [],
-      "selectedItem": null,
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
+      },
+      "isCustomSelected": false,
+      "timePeriod": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
     },
     "items": Array [],
     "thingFilter": Object {
@@ -107,6 +121,20 @@ Object {
 exports[`reducers/stats reduces STATS_REQUEST 1`] = `
 Object {
   "filters": Object {
+    "dateFilter": Object {
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
+      },
+      "isCustomSelected": false,
+      "timePeriod": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+    },
     "items": Array [],
     "thingFilter": Object {
       "isActive": false,
@@ -152,6 +180,20 @@ Object {
 exports[`reducers/stats reduces STATS_REQUEST_ERROR 1`] = `
 Object {
   "filters": Object {
+    "dateFilter": Object {
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
+      },
+      "isCustomSelected": false,
+      "timePeriod": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+    },
     "items": Array [],
     "thingFilter": Object {
       "isActive": false,
@@ -197,6 +239,20 @@ Object {
 exports[`reducers/stats reduces STATS_REQUEST_SUCCESS 1`] = `
 Object {
   "filters": Object {
+    "dateFilter": Object {
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
+      },
+      "isCustomSelected": false,
+      "timePeriod": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+    },
     "items": Array [],
     "thingFilter": Object {
       "isActive": false,
@@ -242,6 +298,20 @@ Object {
 exports[`reducers/stats reduces STATS_UPDATED 1`] = `
 Object {
   "filters": Object {
+    "dateFilter": Object {
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
+      },
+      "isCustomSelected": false,
+      "timePeriod": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+    },
     "items": Array [],
     "thingFilter": Object {
       "isActive": false,
@@ -288,11 +358,18 @@ exports[`reducers/stats reduces nothing 1`] = `
 Object {
   "filters": Object {
     "dateFilter": Object {
-      "isActive": false,
-      "isDisabled": false,
-      "isLoading": false,
-      "items": Array [],
-      "selectedItem": null,
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
+      },
+      "isCustomSelected": false,
+      "timePeriod": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
     },
     "items": Array [],
     "thingFilter": Object {

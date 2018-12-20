@@ -1,6 +1,6 @@
 import { FILTER_TYPE_SELECT, ADD_FILTER_TYPE, DELETE_FILTER_TYPE } from "constants/actionTypes/filters";
 import { RESET } from "constants/actionTypes/common";
-import { THING_FILTER_TYPE, FILTER_TYPES } from "constants/filterTypes";
+import { THING_FILTER_TYPE, DATE_FILTER_TYPE, FILTER_TYPES } from "constants/filterTypes";
 import thingFilterReducer, { initialState as thingFilterInitialState } from "reducers/thingFilter";
 import dateFilterReducer, { initialState as dateFilterInitialState } from "reducers/dateFilter";
 
@@ -60,6 +60,11 @@ export default (state = initialState, action) => {
         return {
           ...nextState,
           thingFilter: thingFilterInitialState,
+        };
+      } else if (deletedFilterType === DATE_FILTER_TYPE) {
+        return {
+          ...nextState,
+          dateFilter: dateFilterInitialState,
         };
       }
       return nextState;
