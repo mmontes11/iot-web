@@ -13,6 +13,7 @@ const StatsFiltersPanel = ({
   type,
   statsType,
   thingFilter,
+  dateFilter,
   selectedFilters,
   selectFilterType,
   addFilterType,
@@ -40,29 +41,24 @@ const StatsFiltersPanel = ({
       },
     }}
     dateFilter={{
+      ...dateFilter,
       selector: {
-        isTimePeriodSelected: true,
-        isCustomSelected: true,
-        onTimePeriodClick: () => undefined,
-        onCustomClick: () => undefined,
+        label: dateFilter.isCustomSelected ? "Time Period" : "Custom",
+        onChange: () => undefined,
       },
       timePeriod: {
-        isLoading: false,
-        isActive: false,
-        isDisabled: false,
-        items: [],
-        selectedItem: null,
-        label: "Select Time Period: ",
+        ...dateFilter.timePeriod,
+        label: dateFilter.timePeriod.selectedItem || "Select Time Period:",
         onButtonClick: () => undefined,
         onItemClick: () => undefined,
       },
       custom: {
         startDate: {
-          selected: new Date(),
+          selected: dateFilter.custom.startDate,
           onChange: () => undefined
         },
         endDate: {
-          selected: new Date(),
+          selected: dateFilter.custom.endDate,
           onChange: () => undefined
         }
       },
@@ -77,6 +73,7 @@ StatsFiltersPanel.propTypes = {
   type: PropTypes.shape({}).isRequired,
   statsType: PropTypes.string,
   thingFilter: PropTypes.shape({}).isRequired,
+  dateFilter: PropTypes.shape({}).isRequired,
   selectedFilters: PropTypes.arrayOf(PropTypes.string).isRequired,
   selectFilterType: PropTypes.func.isRequired,
   addFilterType: PropTypes.func.isRequired,
@@ -94,6 +91,7 @@ const withConnect = connect(
     type: state.stats.filters.type,
     statsType: state.stats.params.type.selectedItem,
     thingFilter: state.stats.filters.thingFilter,
+    dateFilter: state.stats.filters.dateFilter,
     selectedFilters: state.stats.filters.items,
   }),
   { ...filterActions, ...thingFilterActions },

@@ -1,12 +1,3 @@
-.buttons {
-  @extend .buttons;
-
+.button {
   width: 100%;
-  z-index: 0;
-
-  & .button {
-    @extend .button;
-
-    flex-basis: 50%;
-  }
 }
