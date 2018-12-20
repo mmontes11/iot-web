@@ -1,0 +1,6 @@
+.react-datepicker-wrapper, .react-datepicker-wrapper * {
+    width: 100%;
+}
+.react-datepicker__input-container input {
+    @extend .input;
+}

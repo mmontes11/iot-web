@@ -7,9 +7,9 @@ const DatePicker = ({ selected, onChange }) => (
         selected={selected}
         onChange={date => onChange(date)}
         showTimeSelect
-        timeFormat="HH:mm"
+        timeFormat="hh:mm"
         timeIntervals={15}
-        dateFormat="MMMM d yyyy HH:mm"
+        dateFormat="yyyy-MM-dd hh:mm"
         timeCaption="Time"
     />
 );

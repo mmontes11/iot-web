@@ -56,7 +56,16 @@ const StatsFiltersPanel = ({
         onButtonClick: () => undefined,
         onItemClick: () => undefined,
       },
-      custom: {},
+      custom: {
+        startDate: {
+          selected: new Date(),
+          onChange: () => undefined
+        },
+        endDate: {
+          selected: new Date(),
+          onChange: () => undefined
+        }
+      },
       onDelete: () => undefined,
     }}
     selectedFilters={selectedFilters}

@@ -43,18 +43,33 @@ const DateFilter = ({ dateFilter }) => {
         </div>
       )}
       {dateFilter.selector.isCustomSelected && (
-        <div className="columns">
-          <div className="column">
-            <DatePicker
-                selected={new Date()}
-                onChange={() => undefined}
-            />
+        <div>
+          <div className="columns">
+            <div className="column">
+              <DatePicker
+                selected={dateFilter.custom.startDate.selected}
+                onChange={(date) => dateFilter.custom.startDate.onChange(date)}
+              />
+            </div>
+          </div>
+          <div className="columns">
+            <div className="column">
+              <DatePicker
+                selected={dateFilter.custom.endDate.selected}
+                onChange={(date) => dateFilter.custom.endDate.onChange(date)}
+              />
+            </div>
           </div>
         </div>
       )}
     </div>
   );
 };
+
+const dateShape =  PropTypes.shape({
+  selected: PropTypes.instanceOf(Date).isRequired,
+  onChange: PropTypes.func.isRequired
+});
 
 DateFilter.propTypes = {
   dateFilter: PropTypes.shape({
@@ -73,7 +88,10 @@ DateFilter.propTypes = {
       onButtonClick: PropTypes.func.isRequired,
       onItemClick: PropTypes.func.isRequired,
     }).isRequired,
-    custom: PropTypes.shape({}).isRequired,
+    custom: PropTypes.shape({
+      startDate: dateShape,
+      endDate: dateShape
+    }).isRequired,
     onDelete: PropTypes.func.isRequired,
   }).isRequired,
 };
