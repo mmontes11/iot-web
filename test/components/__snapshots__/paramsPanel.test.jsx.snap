@@ -11,6 +11,8 @@ exports[`components/paramsPanel renders after some params have been specified 1`
       className="column is-5"
     >
       <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
         isActive={false}
         isDisabled={false}
         isLoading={false}
@@ -29,6 +31,8 @@ exports[`components/paramsPanel renders after some params have been specified 1`
       className="column is-5"
     >
       <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
         isActive={false}
         isDisabled={false}
         isLoading={false}
@@ -79,6 +83,8 @@ exports[`components/paramsPanel renders in normal state 1`] = `
       className="column is-5"
     >
       <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
         isActive={false}
         isDisabled={false}
         isLoading={false}
@@ -97,6 +103,8 @@ exports[`components/paramsPanel renders in normal state 1`] = `
       className="column is-5"
     >
       <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
         isActive={false}
         isDisabled={false}
         isLoading={false}

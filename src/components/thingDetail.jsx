@@ -4,6 +4,7 @@ import TagList from "components/tagList";
 import ThingActions from "components/thingActions";
 import Map from "containers/map";
 import { pointToLatLng } from "helpers/geometry";
+import { formatDate } from "helpers/dateFormatter";
 
 const ThingDetail = ({ thing, onStatsClick }) => (
   <div className="card">
@@ -22,7 +23,7 @@ const ThingDetail = ({ thing, onStatsClick }) => (
           </p>
           <p className="title is-6">
             <strong>Last observation:</strong>{" "}
-            <span className="has-text-info">{new Date(thing.lastObservation).toLocaleString()}</span>
+            <span className="has-text-info">{formatDate(thing.lastObservation)}</span>
           </p>
           <TagList label="Events:" tags={thing.supportedObservationTypes.event} tagStyle="is-warning" />
           <TagList label="Measurements:" tags={thing.supportedObservationTypes.measurement} tagStyle="is-warning" />

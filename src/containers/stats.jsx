@@ -5,7 +5,7 @@ import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import { compose } from "recompose";
 import PropTypes from "prop-types";
 import StatsParamsPanel from "containers/statsParamsPanel";
-import FiltersPanel from "components/filtersPanel";
+import StatsFiltersPanel from "containers/statsFiltersPanel";
 import BarChart from "components/barChart";
 import Loader from "components/loader";
 import * as statsActions from "actions/stats";
@@ -31,7 +31,7 @@ const Stats = ({ stats, isLoading, getStats, reset }) => (
         {renderChart(stats, isLoading)}
       </div>
       <div className="column is-one-quarter">
-        <FiltersPanel />
+        <StatsFiltersPanel onFiltersChange={() => getStats()} />
       </div>
     </div>
   </div>

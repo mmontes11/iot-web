@@ -29,6 +29,25 @@ jest.mock("lib/iotClient", () => ({
           ],
         },
       }),
+    getStats: () =>
+      Promise.resolve({
+        statusCode: 200,
+        body: {
+          stats: [
+            {
+              total: 210,
+              avgByHour: 8.75,
+              maxByHour: 39,
+              minByHour: 1,
+              stdDevByHour: 9.661995998067205,
+              data: {
+                type: "door-closed",
+                thing: "raspi",
+              },
+            },
+          ],
+        },
+      }),
   },
   measurementService: {
     getTypes: () => Promise.resolve({ statusCode: 200, body: { types: [] } }),
@@ -54,13 +73,37 @@ jest.mock("lib/iotClient", () => ({
           ],
         },
       }),
+    getStats: () =>
+      Promise.resolve({
+        statusCode: 200,
+        body: {
+          stats: [
+            {
+              total: 210,
+              avgByHour: 8.75,
+              maxByHour: 39,
+              minByHour: 1,
+              stdDevByHour: 9.661995998067205,
+              data: {
+                type: "door-closed",
+                thing: "raspi",
+              },
+            },
+          ],
+        },
+      }),
+  },
+  timePeriodsService: {
+    getSupportedTimePeriods: () =>
+      Promise.resolve({
+        statusCode: 200,
+        body: {
+          timePeriods: ["year", "month", "day", "hour"],
+        },
+      }),
   },
 }));
 
-const mockDate = new Date("1970-1-1");
-const _Date = Date;
-global.Date = jest.fn(() => mockDate);
-global.Date.UTC = _Date.UTC;
-global.Date.parse = _Date.parse;
-global.Date.now = _Date.now;
-global.Date.toLocaleString = jest.fn(() => mockDate.toISOString());
+jest.mock("helpers/dateFormatter", () => ({
+  formatDate: () => "Mock Date",
+}));

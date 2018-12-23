@@ -1,6 +1,6 @@
 import React from "react";
-import Dropdown from "components/dropdown";
 import PropTypes from "prop-types";
+import Dropdown from "components/dropdown";
 
 const ParamsPanel = ({ type, observation, reset }) => (
   <div className="box">
@@ -8,6 +8,7 @@ const ParamsPanel = ({ type, observation, reset }) => (
       <div className="column is-5">
         <Dropdown
           {...type}
+          iconStyle="fa-angle-down"
           isLoading={false}
           isDisabled={false}
           onButtonClick={() => type.onButtonClick()}
@@ -17,6 +18,7 @@ const ParamsPanel = ({ type, observation, reset }) => (
       <div className="column is-5">
         <Dropdown
           {...observation}
+          iconStyle="fa-angle-down"
           onButtonClick={() => observation.onButtonClick()}
           onItemClick={item => observation.onItemClick(item)}
         />
