@@ -46,12 +46,12 @@ const DateFilter = ({ dateFilter }) => {
       )}
       <div className="columns">
         <div className="column is-10">
-          <button className="button is-info" onClick={() => dateFilter.selector.onChange()}>
+          <button id="time-period-button" className="button is-info" onClick={() => dateFilter.selector.onChange()}>
             {(dateFilter.selector.isCustomSelected && "Time Period") || "Custom"}
           </button>
         </div>
         <div className="column is-center">
-          <button className="delete is-medium" onClick={() => deleteFilter()} tabIndex={0}>
+          <button id="delete-button" className="delete is-medium" onClick={() => deleteFilter()} tabIndex={0}>
             Delete
           </button>
         </div>

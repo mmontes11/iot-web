@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/dateFilter renders DateFilter for selecting a custom time period 1`] = `
+<div
+  className="box date-filter"
+>
+  <div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <DatePicker
+          onChange={[Function]}
+          placeholder="Select start date:"
+          selected={null}
+        />
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column"
+      >
+        <DatePicker
+          onChange={[Function]}
+          placeholder="Select end date:"
+          selected={null}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-10"
+    >
+      <button
+        className="button is-info"
+        id="time-period-button"
+        onClick={[Function]}
+      >
+        Time Period
+      </button>
+    </div>
+    <div
+      className="column is-center"
+    >
+      <button
+        className="delete is-medium"
+        id="delete-button"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/dateFilter renders DateFilter for selecting a time period 1`] = `
+<div
+  className="box date-filter"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    >
+      <Dropdown
+        buttonStyle=""
+        iconStyle="fa-angle-down"
+        isActive={true}
+        isDisabled={false}
+        isLoading={false}
+        items={
+          Array [
+            "foo",
+            "bar",
+          ]
+        }
+        label="Select time period:"
+        onButtonClick={[Function]}
+        onItemClick={[Function]}
+        selectedItem={null}
+      />
+    </div>
+  </div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-10"
+    >
+      <button
+        className="button is-info"
+        id="time-period-button"
+        onClick={[Function]}
+      >
+        Custom
+      </button>
+    </div>
+    <div
+      className="column is-center"
+    >
+      <button
+        className="delete is-medium"
+        id="delete-button"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+`;

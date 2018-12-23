@@ -93,6 +93,15 @@ jest.mock("lib/iotClient", () => ({
         },
       }),
   },
+  timePeriodsService: {
+    getSupportedTimePeriods: () =>
+      Promise.resolve({
+        statusCode: 200,
+        body: {
+          timePeriods: ["year", "month", "day", "hour"],
+        },
+      }),
+  },
 }));
 
 jest.mock("helpers/dateFormatter", () => ({

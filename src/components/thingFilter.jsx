@@ -15,7 +15,12 @@ const ThingFilter = ({ thingFilter }) => (
         />
       </div>
       <div className="column is-center">
-        <button className="delete is-medium" onClick={() => thingFilter.onDelete(THING_FILTER_TYPE)} tabIndex={0}>
+        <button
+          id="delete-button"
+          className="delete is-medium"
+          onClick={() => thingFilter.onDelete(THING_FILTER_TYPE)}
+          tabIndex={0}
+        >
           Delete
         </button>
       </div>
