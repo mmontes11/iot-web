@@ -43,6 +43,7 @@ describe("containers/things", () => {
       things: {
         items: [thing],
         selectedItem: null,
+        shouldShowNotFoundError: false,
       },
     };
     const store = configureStore([thunk])(state);
@@ -61,6 +62,7 @@ describe("containers/things", () => {
       things: {
         items: [thing],
         selectedItem: thing,
+        shouldShowNotFoundError: false,
       },
     };
     const store = configureStore([thunk])(state);
@@ -79,6 +81,7 @@ describe("containers/things", () => {
       things: {
         items: [thing],
         selectedItem: thing,
+        shouldShowNotFoundError: false,
       },
     };
     const store = configureStore([thunk])(state);

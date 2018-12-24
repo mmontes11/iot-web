@@ -154,6 +154,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
               }
               selectThing={[Function]}
               selectedThing={null}
+              showNotFoundError={[Function]}
               things={Array []}
             >
               <ResetOnUnmount
@@ -208,6 +209,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
                 reset={[Function]}
                 selectThing={[Function]}
                 selectedThing={null}
+                showNotFoundError={[Function]}
                 things={Array []}
               >
                 <Things
@@ -262,18 +264,66 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
                   reset={[Function]}
                   selectThing={[Function]}
                   selectedThing={null}
+                  shouldShowNotFoundError={false}
+                  showNotFoundError={[Function]}
                   things={Array []}
                 >
-                  <div
-                    className="container is-fluid section"
-                  >
+                  <div>
                     <div
-                      className="columns"
+                      className="container is-fluid section"
                     >
                       <div
-                        className="column is-one-quarter"
-                      />
+                        className="columns"
+                      >
+                        <div
+                          className="column is-one-quarter"
+                        />
+                      </div>
                     </div>
+                    <Modal
+                      isActive={false}
+                      messageStyle="is-danger"
+                      onCloseClick={[Function]}
+                      subTitle="Thing not found"
+                      title="Error"
+                    >
+                      <div
+                        className="modal"
+                      >
+                        <div
+                          className="modal-background"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        />
+                        <div
+                          className="modal-content"
+                        >
+                          <article
+                            className="message is-medium is-danger"
+                          >
+                            <div
+                              className="message-header"
+                            >
+                              <p>
+                                Error
+                              </p>
+                            </div>
+                            <div
+                              className="message-body has-text-centered"
+                            >
+                              Thing not found
+                            </div>
+                          </article>
+                        </div>
+                        <button
+                          aria-label="close"
+                          className="modal-close is-large"
+                          onClick={[Function]}
+                        />
+                      </div>
+                    </Modal>
                   </div>
                 </Things>
               </ResetOnUnmount>
@@ -440,6 +490,7 @@ exports[`containers/things renders things in loading state 1`] = `
               }
               selectThing={[Function]}
               selectedThing={null}
+              showNotFoundError={[Function]}
               things={Array []}
             >
               <ResetOnUnmount
@@ -494,6 +545,7 @@ exports[`containers/things renders things in loading state 1`] = `
                 reset={[Function]}
                 selectThing={[Function]}
                 selectedThing={null}
+                showNotFoundError={[Function]}
                 things={Array []}
               >
                 <Things
@@ -548,6 +600,8 @@ exports[`containers/things renders things in loading state 1`] = `
                   reset={[Function]}
                   selectThing={[Function]}
                   selectedThing={null}
+                  shouldShowNotFoundError={false}
+                  showNotFoundError={[Function]}
                   things={Array []}
                 >
                   <Loader>
@@ -729,6 +783,7 @@ exports[`containers/things renders things with loaded things 1`] = `
               }
               selectThing={[Function]}
               selectedThing={null}
+              showNotFoundError={[Function]}
               things={
                 Array [
                   Object {
@@ -810,6 +865,7 @@ exports[`containers/things renders things with loaded things 1`] = `
                 reset={[Function]}
                 selectThing={[Function]}
                 selectedThing={null}
+                showNotFoundError={[Function]}
                 things={
                   Array [
                     Object {
@@ -891,6 +947,8 @@ exports[`containers/things renders things with loaded things 1`] = `
                   reset={[Function]}
                   selectThing={[Function]}
                   selectedThing={null}
+                  shouldShowNotFoundError={false}
+                  showNotFoundError={[Function]}
                   things={
                     Array [
                       Object {
@@ -920,45 +978,91 @@ exports[`containers/things renders things with loaded things 1`] = `
                     ]
                   }
                 >
-                  <div
-                    className="container is-fluid section"
-                  >
+                  <div>
                     <div
-                      className="columns"
+                      className="container is-fluid section"
                     >
                       <div
-                        className="column is-one-quarter"
+                        className="columns"
                       >
-                        <ThingItem
-                          isSelected={false}
-                          key="Zm9v"
-                          name="foo"
-                          onClick={[Function]}
+                        <div
+                          className="column is-one-quarter"
                         >
-                          <div
-                            className="thing-item-card"
+                          <ThingItem
+                            isSelected={false}
+                            key="Zm9v"
+                            name="foo"
                             onClick={[Function]}
-                            onKeyPress={[Function]}
-                            role="button"
-                            tabIndex={0}
                           >
                             <div
-                              className="card-content"
+                              className="thing-item-card"
+                              onClick={[Function]}
+                              onKeyPress={[Function]}
+                              role="button"
+                              tabIndex={0}
                             >
                               <div
-                                className="content"
+                                className="card-content"
                               >
-                                <p
-                                  className="title is-6"
+                                <div
+                                  className="content"
                                 >
-                                  foo
-                                </p>
+                                  <p
+                                    className="title is-6"
+                                  >
+                                    foo
+                                  </p>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </ThingItem>
+                          </ThingItem>
+                        </div>
                       </div>
                     </div>
+                    <Modal
+                      isActive={false}
+                      messageStyle="is-danger"
+                      onCloseClick={[Function]}
+                      subTitle="Thing not found"
+                      title="Error"
+                    >
+                      <div
+                        className="modal"
+                      >
+                        <div
+                          className="modal-background"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        />
+                        <div
+                          className="modal-content"
+                        >
+                          <article
+                            className="message is-medium is-danger"
+                          >
+                            <div
+                              className="message-header"
+                            >
+                              <p>
+                                Error
+                              </p>
+                            </div>
+                            <div
+                              className="message-body has-text-centered"
+                            >
+                              Thing not found
+                            </div>
+                          </article>
+                        </div>
+                        <button
+                          aria-label="close"
+                          className="modal-close is-large"
+                          onClick={[Function]}
+                        />
+                      </div>
+                    </Modal>
                   </div>
                 </Things>
               </ResetOnUnmount>
@@ -1150,6 +1254,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                   "topic": "bar",
                 }
               }
+              showNotFoundError={[Function]}
               things={
                 Array [
                   Object {
@@ -1256,6 +1361,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                     "topic": "bar",
                   }
                 }
+                showNotFoundError={[Function]}
                 things={
                   Array [
                     Object {
@@ -1362,6 +1468,8 @@ exports[`containers/things renders things with loaded things and selected thing 
                       "topic": "bar",
                     }
                   }
+                  shouldShowNotFoundError={false}
+                  showNotFoundError={[Function]}
                   things={
                     Array [
                       Object {
@@ -1391,264 +1499,253 @@ exports[`containers/things renders things with loaded things and selected thing 
                     ]
                   }
                 >
-                  <div
-                    className="container is-fluid section"
-                  >
+                  <div>
                     <div
-                      className="columns"
+                      className="container is-fluid section"
                     >
                       <div
-                        className="column is-one-quarter"
+                        className="columns"
                       >
-                        <ThingItem
-                          isSelected={true}
-                          key="Zm9v"
-                          name="foo"
-                          onClick={[Function]}
+                        <div
+                          className="column is-one-quarter"
                         >
-                          <div
-                            className="thing-item-card is-selected"
+                          <ThingItem
+                            isSelected={true}
+                            key="Zm9v"
+                            name="foo"
                             onClick={[Function]}
-                            onKeyPress={[Function]}
-                            role="button"
-                            tabIndex={0}
                           >
                             <div
-                              className="card-content"
+                              className="thing-item-card is-selected"
+                              onClick={[Function]}
+                              onKeyPress={[Function]}
+                              role="button"
+                              tabIndex={0}
                             >
                               <div
-                                className="content"
-                              >
-                                <p
-                                  className="title is-6"
-                                >
-                                  foo
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </ThingItem>
-                      </div>
-                      <div
-                        className="column is-three-quarters"
-                      >
-                        <ThingDetail
-                          onStatsClick={[Function]}
-                          thing={
-                            Object {
-                              "geometry": Object {
-                                "coordinates": Array [
-                                  -40.58457,
-                                  40.21339,
-                                ],
-                                "type": "Point",
-                              },
-                              "googleMapsUrl": "https://www.google.es/maps",
-                              "ip": "http://192.168.0.20",
-                              "lastObservation": "2018-08-18T10:30:04.158Z",
-                              "name": "foo",
-                              "supportedObservationTypes": Object {
-                                "event": Array [
-                                  "foo",
-                                  "bar",
-                                ],
-                                "measurement": Array [
-                                  "bar",
-                                  "foo",
-                                ],
-                              },
-                              "topic": "bar",
-                            }
-                          }
-                        >
-                          <div
-                            className="card"
-                          >
-                            <div
-                              className="card-content"
-                            >
-                              <div
-                                className="columns"
+                                className="card-content"
                               >
                                 <div
-                                  className="column is-three-fifths has-text-centered"
+                                  className="content"
                                 >
                                   <p
-                                    className="title is-3 has-text-primary is-spaced"
+                                    className="title is-6"
                                   >
                                     foo
                                   </p>
-                                  <p
-                                    className="title is-6"
-                                  >
-                                    <strong>
-                                      IP address:
-                                    </strong>
-                                     
-                                    <a
-                                      href="http://http://192.168.0.20"
-                                      rel="noopener noreferrer"
-                                      target="_blank"
-                                    >
-                                      http://192.168.0.20
-                                    </a>
-                                  </p>
-                                  <p
-                                    className="title is-6"
-                                  >
-                                    <strong>
-                                      MQTT topic:
-                                    </strong>
-                                     
-                                    <span
-                                      className="has-text-info"
-                                    >
-                                      bar
-                                    </span>
-                                  </p>
-                                  <p
-                                    className="title is-6"
-                                  >
-                                    <strong>
-                                      Last observation:
-                                    </strong>
-                                     
-                                    <span
-                                      className="has-text-info"
-                                    >
-                                      Mock Date
-                                    </span>
-                                  </p>
-                                  <TagList
-                                    label="Events:"
-                                    tagStyle="is-warning"
-                                    tags={
-                                      Array [
-                                        "foo",
-                                        "bar",
-                                      ]
-                                    }
-                                  >
-                                    <div
-                                      className="tag-list"
-                                    >
-                                      <p
-                                        className="tag-list-label is-6"
-                                      >
-                                        <strong>
-                                          Events:
-                                        </strong>
-                                      </p>
-                                      <div
-                                        className="tags"
-                                      >
-                                        <span
-                                          className="tag is-warning"
-                                          key="Zm9v"
-                                        >
-                                          foo
-                                        </span>
-                                        <span
-                                          className="tag is-warning"
-                                          key="YmFy"
-                                        >
-                                          bar
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </TagList>
-                                  <TagList
-                                    label="Measurements:"
-                                    tagStyle="is-warning"
-                                    tags={
-                                      Array [
-                                        "bar",
-                                        "foo",
-                                      ]
-                                    }
-                                  >
-                                    <div
-                                      className="tag-list"
-                                    >
-                                      <p
-                                        className="tag-list-label is-6"
-                                      >
-                                        <strong>
-                                          Measurements:
-                                        </strong>
-                                      </p>
-                                      <div
-                                        className="tags"
-                                      >
-                                        <span
-                                          className="tag is-warning"
-                                          key="YmFy"
-                                        >
-                                          bar
-                                        </span>
-                                        <span
-                                          className="tag is-warning"
-                                          key="Zm9v"
-                                        >
-                                          foo
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </TagList>
-                                  <ThingActions
-                                    googleMapsUrl="https://www.google.es/maps"
-                                    onStatsClick={[Function]}
+                                </div>
+                              </div>
+                            </div>
+                          </ThingItem>
+                        </div>
+                        <div
+                          className="column is-three-quarters"
+                        >
+                          <ThingDetail
+                            onStatsClick={[Function]}
+                            thing={
+                              Object {
+                                "geometry": Object {
+                                  "coordinates": Array [
+                                    -40.58457,
+                                    40.21339,
+                                  ],
+                                  "type": "Point",
+                                },
+                                "googleMapsUrl": "https://www.google.es/maps",
+                                "ip": "http://192.168.0.20",
+                                "lastObservation": "2018-08-18T10:30:04.158Z",
+                                "name": "foo",
+                                "supportedObservationTypes": Object {
+                                  "event": Array [
+                                    "foo",
+                                    "bar",
+                                  ],
+                                  "measurement": Array [
+                                    "bar",
+                                    "foo",
+                                  ],
+                                },
+                                "topic": "bar",
+                              }
+                            }
+                          >
+                            <div
+                              className="card"
+                            >
+                              <div
+                                className="card-content"
+                              >
+                                <div
+                                  className="columns"
+                                >
+                                  <div
+                                    className="column is-three-fifths has-text-centered"
                                   >
                                     <p
-                                      className="buttons is-horizontal-center"
+                                      className="title is-3 has-text-primary is-spaced"
                                     >
+                                      foo
+                                    </p>
+                                    <p
+                                      className="title is-6"
+                                    >
+                                      <strong>
+                                        IP address:
+                                      </strong>
+                                       
                                       <a
-                                        className="button is-medium"
-                                        href="https://www.google.es/maps"
-                                        id="google-maps-link"
+                                        href="http://http://192.168.0.20"
                                         rel="noopener noreferrer"
                                         target="_blank"
                                       >
-                                        <span
-                                          className="icon is-medium"
-                                        >
-                                          <i
-                                            className="fas fa-map-marked"
-                                          />
-                                        </span>
+                                        http://192.168.0.20
                                       </a>
-                                      <button
-                                        className="button is-medium"
-                                        id="stats-button"
-                                        onClick={[Function]}
-                                      >
-                                        <span
-                                          className="icon is-medium"
-                                        >
-                                          <i
-                                            className="fas fa-chart-bar"
-                                          />
-                                        </span>
-                                      </button>
                                     </p>
-                                  </ThingActions>
-                                </div>
-                                <div
-                                  className="column is-two-fifths"
-                                >
-                                  <Connect(withProps(withScriptjs(withGoogleMap(Map))))
-                                    marker={
-                                      Object {
-                                        "label": "foo",
-                                        "point": Object {
-                                          "lat": 40.21339,
-                                          "lng": -40.58457,
-                                        },
+                                    <p
+                                      className="title is-6"
+                                    >
+                                      <strong>
+                                        MQTT topic:
+                                      </strong>
+                                       
+                                      <span
+                                        className="has-text-info"
+                                      >
+                                        bar
+                                      </span>
+                                    </p>
+                                    <p
+                                      className="title is-6"
+                                    >
+                                      <strong>
+                                        Last observation:
+                                      </strong>
+                                       
+                                      <span
+                                        className="has-text-info"
+                                      >
+                                        Mock Date
+                                      </span>
+                                    </p>
+                                    <TagList
+                                      label="Events:"
+                                      tagStyle="is-warning"
+                                      tags={
+                                        Array [
+                                          "foo",
+                                          "bar",
+                                        ]
                                       }
-                                    }
+                                    >
+                                      <div
+                                        className="tag-list"
+                                      >
+                                        <p
+                                          className="tag-list-label is-6"
+                                        >
+                                          <strong>
+                                            Events:
+                                          </strong>
+                                        </p>
+                                        <div
+                                          className="tags"
+                                        >
+                                          <span
+                                            className="tag is-warning"
+                                            key="Zm9v"
+                                          >
+                                            foo
+                                          </span>
+                                          <span
+                                            className="tag is-warning"
+                                            key="YmFy"
+                                          >
+                                            bar
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </TagList>
+                                    <TagList
+                                      label="Measurements:"
+                                      tagStyle="is-warning"
+                                      tags={
+                                        Array [
+                                          "bar",
+                                          "foo",
+                                        ]
+                                      }
+                                    >
+                                      <div
+                                        className="tag-list"
+                                      >
+                                        <p
+                                          className="tag-list-label is-6"
+                                        >
+                                          <strong>
+                                            Measurements:
+                                          </strong>
+                                        </p>
+                                        <div
+                                          className="tags"
+                                        >
+                                          <span
+                                            className="tag is-warning"
+                                            key="YmFy"
+                                          >
+                                            bar
+                                          </span>
+                                          <span
+                                            className="tag is-warning"
+                                            key="Zm9v"
+                                          >
+                                            foo
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </TagList>
+                                    <ThingActions
+                                      googleMapsUrl="https://www.google.es/maps"
+                                      onStatsClick={[Function]}
+                                    >
+                                      <p
+                                        className="buttons is-horizontal-center"
+                                      >
+                                        <a
+                                          className="button is-medium"
+                                          href="https://www.google.es/maps"
+                                          id="google-maps-link"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                                        >
+                                          <span
+                                            className="icon is-medium"
+                                          >
+                                            <i
+                                              className="fas fa-map-marked"
+                                            />
+                                          </span>
+                                        </a>
+                                        <button
+                                          className="button is-medium"
+                                          id="stats-button"
+                                          onClick={[Function]}
+                                        >
+                                          <span
+                                            className="icon is-medium"
+                                          >
+                                            <i
+                                              className="fas fa-chart-bar"
+                                            />
+                                          </span>
+                                        </button>
+                                      </p>
+                                    </ThingActions>
+                                  </div>
+                                  <div
+                                    className="column is-two-fifths"
                                   >
-                                    <withProps(withScriptjs(withGoogleMap(Map)))
-                                      isDialogOpened={false}
+                                    <Connect(withProps(withScriptjs(withGoogleMap(Map))))
                                       marker={
                                         Object {
                                           "label": "foo",
@@ -1658,41 +1755,9 @@ exports[`containers/things renders things with loaded things and selected thing 
                                           },
                                         }
                                       }
-                                      toggleDialog={[Function]}
                                     >
-                                      <withScriptjs(withGoogleMap(Map))
-                                        center={
-                                          Object {
-                                            "lat": 40.21339,
-                                            "lng": -40.58457,
-                                          }
-                                        }
-                                        containerElement={
-                                          <div
-                                            className="map"
-                                          />
-                                        }
-                                        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                                      <withProps(withScriptjs(withGoogleMap(Map)))
                                         isDialogOpened={false}
-                                        label="foo"
-                                        loadingElement={
-                                          <div
-                                            style={
-                                              Object {
-                                                "height": "100%",
-                                              }
-                                            }
-                                          />
-                                        }
-                                        mapElement={
-                                          <div
-                                            style={
-                                              Object {
-                                                "height": "100%",
-                                              }
-                                            }
-                                          />
-                                        }
                                         marker={
                                           Object {
                                             "label": "foo",
@@ -1702,32 +1767,121 @@ exports[`containers/things renders things with loaded things and selected thing 
                                             },
                                           }
                                         }
-                                        point={
-                                          Object {
-                                            "lat": 40.21339,
-                                            "lng": -40.58457,
-                                          }
-                                        }
                                         toggleDialog={[Function]}
-                                        zoom={12}
                                       >
-                                        <div
-                                          style={
+                                        <withScriptjs(withGoogleMap(Map))
+                                          center={
                                             Object {
-                                              "height": "100%",
+                                              "lat": 40.21339,
+                                              "lng": -40.58457,
                                             }
                                           }
-                                        />
-                                      </withScriptjs(withGoogleMap(Map))>
-                                    </withProps(withScriptjs(withGoogleMap(Map)))>
-                                  </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+                                          containerElement={
+                                            <div
+                                              className="map"
+                                            />
+                                          }
+                                          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                                          isDialogOpened={false}
+                                          label="foo"
+                                          loadingElement={
+                                            <div
+                                              style={
+                                                Object {
+                                                  "height": "100%",
+                                                }
+                                              }
+                                            />
+                                          }
+                                          mapElement={
+                                            <div
+                                              style={
+                                                Object {
+                                                  "height": "100%",
+                                                }
+                                              }
+                                            />
+                                          }
+                                          marker={
+                                            Object {
+                                              "label": "foo",
+                                              "point": Object {
+                                                "lat": 40.21339,
+                                                "lng": -40.58457,
+                                              },
+                                            }
+                                          }
+                                          point={
+                                            Object {
+                                              "lat": 40.21339,
+                                              "lng": -40.58457,
+                                            }
+                                          }
+                                          toggleDialog={[Function]}
+                                          zoom={12}
+                                        >
+                                          <div
+                                            style={
+                                              Object {
+                                                "height": "100%",
+                                              }
+                                            }
+                                          />
+                                        </withScriptjs(withGoogleMap(Map))>
+                                      </withProps(withScriptjs(withGoogleMap(Map)))>
+                                    </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </ThingDetail>
+                          </ThingDetail>
+                        </div>
                       </div>
                     </div>
+                    <Modal
+                      isActive={false}
+                      messageStyle="is-danger"
+                      onCloseClick={[Function]}
+                      subTitle="Thing not found"
+                      title="Error"
+                    >
+                      <div
+                        className="modal"
+                      >
+                        <div
+                          className="modal-background"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        />
+                        <div
+                          className="modal-content"
+                        >
+                          <article
+                            className="message is-medium is-danger"
+                          >
+                            <div
+                              className="message-header"
+                            >
+                              <p>
+                                Error
+                              </p>
+                            </div>
+                            <div
+                              className="message-body has-text-centered"
+                            >
+                              Thing not found
+                            </div>
+                          </article>
+                        </div>
+                        <button
+                          aria-label="close"
+                          className="modal-close is-large"
+                          onClick={[Function]}
+                        />
+                      </div>
+                    </Modal>
                   </div>
                 </Things>
               </ResetOnUnmount>
@@ -1765,6 +1919,12 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
           },
           Object {
             "hash": "",
+            "pathname": "/things",
+            "search": "",
+            "state": undefined,
+          },
+          Object {
+            "hash": "",
             "pathname": "/stats",
             "search": "",
             "state": undefined,
@@ -1773,8 +1933,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
         "go": [Function],
         "goBack": [Function],
         "goForward": [Function],
-        "index": 1,
-        "length": 2,
+        "index": 2,
+        "length": 3,
         "listen": [Function],
         "location": Object {
           "hash": "",
@@ -1817,6 +1977,12 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                   },
                   Object {
                     "hash": "",
+                    "pathname": "/things",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  Object {
+                    "hash": "",
                     "pathname": "/stats",
                     "search": "",
                     "state": undefined,
@@ -1825,8 +1991,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                 "go": [Function],
                 "goBack": [Function],
                 "goForward": [Function],
-                "index": 1,
-                "length": 2,
+                "index": 2,
+                "length": 3,
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
@@ -1872,6 +2038,12 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                     },
                     Object {
                       "hash": "",
+                      "pathname": "/things",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    Object {
+                      "hash": "",
                       "pathname": "/stats",
                       "search": "",
                       "state": undefined,
@@ -1880,8 +2052,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                   "go": [Function],
                   "goBack": [Function],
                   "goForward": [Function],
-                  "index": 1,
-                  "length": 2,
+                  "index": 2,
+                  "length": 3,
                   "listen": [Function],
                   "location": Object {
                     "hash": "",
@@ -1937,6 +2109,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                   "topic": "bar",
                 }
               }
+              showNotFoundError={[Function]}
               things={
                 Array [
                   Object {
@@ -1983,6 +2156,12 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                       },
                       Object {
                         "hash": "",
+                        "pathname": "/things",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      Object {
+                        "hash": "",
                         "pathname": "/stats",
                         "search": "",
                         "state": undefined,
@@ -1991,8 +2170,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                     "go": [Function],
                     "goBack": [Function],
                     "goForward": [Function],
-                    "index": 1,
-                    "length": 2,
+                    "index": 2,
+                    "length": 3,
                     "listen": [Function],
                     "location": Object {
                       "hash": "",
@@ -2049,6 +2228,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                     "topic": "bar",
                   }
                 }
+                showNotFoundError={[Function]}
                 things={
                   Array [
                     Object {
@@ -2095,6 +2275,12 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                         },
                         Object {
                           "hash": "",
+                          "pathname": "/things",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        Object {
+                          "hash": "",
                           "pathname": "/stats",
                           "search": "",
                           "state": undefined,
@@ -2103,8 +2289,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                       "go": [Function],
                       "goBack": [Function],
                       "goForward": [Function],
-                      "index": 1,
-                      "length": 2,
+                      "index": 2,
+                      "length": 3,
                       "listen": [Function],
                       "location": Object {
                         "hash": "",
@@ -2161,6 +2347,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                       "topic": "bar",
                     }
                   }
+                  shouldShowNotFoundError={false}
+                  showNotFoundError={[Function]}
                   things={
                     Array [
                       Object {
@@ -2190,264 +2378,253 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                     ]
                   }
                 >
-                  <div
-                    className="container is-fluid section"
-                  >
+                  <div>
                     <div
-                      className="columns"
+                      className="container is-fluid section"
                     >
                       <div
-                        className="column is-one-quarter"
+                        className="columns"
                       >
-                        <ThingItem
-                          isSelected={true}
-                          key="Zm9v"
-                          name="foo"
-                          onClick={[Function]}
+                        <div
+                          className="column is-one-quarter"
                         >
-                          <div
-                            className="thing-item-card is-selected"
+                          <ThingItem
+                            isSelected={true}
+                            key="Zm9v"
+                            name="foo"
                             onClick={[Function]}
-                            onKeyPress={[Function]}
-                            role="button"
-                            tabIndex={0}
                           >
                             <div
-                              className="card-content"
+                              className="thing-item-card is-selected"
+                              onClick={[Function]}
+                              onKeyPress={[Function]}
+                              role="button"
+                              tabIndex={0}
                             >
                               <div
-                                className="content"
-                              >
-                                <p
-                                  className="title is-6"
-                                >
-                                  foo
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </ThingItem>
-                      </div>
-                      <div
-                        className="column is-three-quarters"
-                      >
-                        <ThingDetail
-                          onStatsClick={[Function]}
-                          thing={
-                            Object {
-                              "geometry": Object {
-                                "coordinates": Array [
-                                  -40.58457,
-                                  40.21339,
-                                ],
-                                "type": "Point",
-                              },
-                              "googleMapsUrl": "https://www.google.es/maps",
-                              "ip": "http://192.168.0.20",
-                              "lastObservation": "2018-08-18T10:30:04.158Z",
-                              "name": "foo",
-                              "supportedObservationTypes": Object {
-                                "event": Array [
-                                  "foo",
-                                  "bar",
-                                ],
-                                "measurement": Array [
-                                  "bar",
-                                  "foo",
-                                ],
-                              },
-                              "topic": "bar",
-                            }
-                          }
-                        >
-                          <div
-                            className="card"
-                          >
-                            <div
-                              className="card-content"
-                            >
-                              <div
-                                className="columns"
+                                className="card-content"
                               >
                                 <div
-                                  className="column is-three-fifths has-text-centered"
+                                  className="content"
                                 >
                                   <p
-                                    className="title is-3 has-text-primary is-spaced"
+                                    className="title is-6"
                                   >
                                     foo
                                   </p>
-                                  <p
-                                    className="title is-6"
-                                  >
-                                    <strong>
-                                      IP address:
-                                    </strong>
-                                     
-                                    <a
-                                      href="http://http://192.168.0.20"
-                                      rel="noopener noreferrer"
-                                      target="_blank"
-                                    >
-                                      http://192.168.0.20
-                                    </a>
-                                  </p>
-                                  <p
-                                    className="title is-6"
-                                  >
-                                    <strong>
-                                      MQTT topic:
-                                    </strong>
-                                     
-                                    <span
-                                      className="has-text-info"
-                                    >
-                                      bar
-                                    </span>
-                                  </p>
-                                  <p
-                                    className="title is-6"
-                                  >
-                                    <strong>
-                                      Last observation:
-                                    </strong>
-                                     
-                                    <span
-                                      className="has-text-info"
-                                    >
-                                      Mock Date
-                                    </span>
-                                  </p>
-                                  <TagList
-                                    label="Events:"
-                                    tagStyle="is-warning"
-                                    tags={
-                                      Array [
-                                        "foo",
-                                        "bar",
-                                      ]
-                                    }
-                                  >
-                                    <div
-                                      className="tag-list"
-                                    >
-                                      <p
-                                        className="tag-list-label is-6"
-                                      >
-                                        <strong>
-                                          Events:
-                                        </strong>
-                                      </p>
-                                      <div
-                                        className="tags"
-                                      >
-                                        <span
-                                          className="tag is-warning"
-                                          key="Zm9v"
-                                        >
-                                          foo
-                                        </span>
-                                        <span
-                                          className="tag is-warning"
-                                          key="YmFy"
-                                        >
-                                          bar
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </TagList>
-                                  <TagList
-                                    label="Measurements:"
-                                    tagStyle="is-warning"
-                                    tags={
-                                      Array [
-                                        "bar",
-                                        "foo",
-                                      ]
-                                    }
-                                  >
-                                    <div
-                                      className="tag-list"
-                                    >
-                                      <p
-                                        className="tag-list-label is-6"
-                                      >
-                                        <strong>
-                                          Measurements:
-                                        </strong>
-                                      </p>
-                                      <div
-                                        className="tags"
-                                      >
-                                        <span
-                                          className="tag is-warning"
-                                          key="YmFy"
-                                        >
-                                          bar
-                                        </span>
-                                        <span
-                                          className="tag is-warning"
-                                          key="Zm9v"
-                                        >
-                                          foo
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </TagList>
-                                  <ThingActions
-                                    googleMapsUrl="https://www.google.es/maps"
-                                    onStatsClick={[Function]}
+                                </div>
+                              </div>
+                            </div>
+                          </ThingItem>
+                        </div>
+                        <div
+                          className="column is-three-quarters"
+                        >
+                          <ThingDetail
+                            onStatsClick={[Function]}
+                            thing={
+                              Object {
+                                "geometry": Object {
+                                  "coordinates": Array [
+                                    -40.58457,
+                                    40.21339,
+                                  ],
+                                  "type": "Point",
+                                },
+                                "googleMapsUrl": "https://www.google.es/maps",
+                                "ip": "http://192.168.0.20",
+                                "lastObservation": "2018-08-18T10:30:04.158Z",
+                                "name": "foo",
+                                "supportedObservationTypes": Object {
+                                  "event": Array [
+                                    "foo",
+                                    "bar",
+                                  ],
+                                  "measurement": Array [
+                                    "bar",
+                                    "foo",
+                                  ],
+                                },
+                                "topic": "bar",
+                              }
+                            }
+                          >
+                            <div
+                              className="card"
+                            >
+                              <div
+                                className="card-content"
+                              >
+                                <div
+                                  className="columns"
+                                >
+                                  <div
+                                    className="column is-three-fifths has-text-centered"
                                   >
                                     <p
-                                      className="buttons is-horizontal-center"
+                                      className="title is-3 has-text-primary is-spaced"
                                     >
+                                      foo
+                                    </p>
+                                    <p
+                                      className="title is-6"
+                                    >
+                                      <strong>
+                                        IP address:
+                                      </strong>
+                                       
                                       <a
-                                        className="button is-medium"
-                                        href="https://www.google.es/maps"
-                                        id="google-maps-link"
+                                        href="http://http://192.168.0.20"
                                         rel="noopener noreferrer"
                                         target="_blank"
                                       >
-                                        <span
-                                          className="icon is-medium"
-                                        >
-                                          <i
-                                            className="fas fa-map-marked"
-                                          />
-                                        </span>
+                                        http://192.168.0.20
                                       </a>
-                                      <button
-                                        className="button is-medium"
-                                        id="stats-button"
-                                        onClick={[Function]}
-                                      >
-                                        <span
-                                          className="icon is-medium"
-                                        >
-                                          <i
-                                            className="fas fa-chart-bar"
-                                          />
-                                        </span>
-                                      </button>
                                     </p>
-                                  </ThingActions>
-                                </div>
-                                <div
-                                  className="column is-two-fifths"
-                                >
-                                  <Connect(withProps(withScriptjs(withGoogleMap(Map))))
-                                    marker={
-                                      Object {
-                                        "label": "foo",
-                                        "point": Object {
-                                          "lat": 40.21339,
-                                          "lng": -40.58457,
-                                        },
+                                    <p
+                                      className="title is-6"
+                                    >
+                                      <strong>
+                                        MQTT topic:
+                                      </strong>
+                                       
+                                      <span
+                                        className="has-text-info"
+                                      >
+                                        bar
+                                      </span>
+                                    </p>
+                                    <p
+                                      className="title is-6"
+                                    >
+                                      <strong>
+                                        Last observation:
+                                      </strong>
+                                       
+                                      <span
+                                        className="has-text-info"
+                                      >
+                                        Mock Date
+                                      </span>
+                                    </p>
+                                    <TagList
+                                      label="Events:"
+                                      tagStyle="is-warning"
+                                      tags={
+                                        Array [
+                                          "foo",
+                                          "bar",
+                                        ]
                                       }
-                                    }
+                                    >
+                                      <div
+                                        className="tag-list"
+                                      >
+                                        <p
+                                          className="tag-list-label is-6"
+                                        >
+                                          <strong>
+                                            Events:
+                                          </strong>
+                                        </p>
+                                        <div
+                                          className="tags"
+                                        >
+                                          <span
+                                            className="tag is-warning"
+                                            key="Zm9v"
+                                          >
+                                            foo
+                                          </span>
+                                          <span
+                                            className="tag is-warning"
+                                            key="YmFy"
+                                          >
+                                            bar
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </TagList>
+                                    <TagList
+                                      label="Measurements:"
+                                      tagStyle="is-warning"
+                                      tags={
+                                        Array [
+                                          "bar",
+                                          "foo",
+                                        ]
+                                      }
+                                    >
+                                      <div
+                                        className="tag-list"
+                                      >
+                                        <p
+                                          className="tag-list-label is-6"
+                                        >
+                                          <strong>
+                                            Measurements:
+                                          </strong>
+                                        </p>
+                                        <div
+                                          className="tags"
+                                        >
+                                          <span
+                                            className="tag is-warning"
+                                            key="YmFy"
+                                          >
+                                            bar
+                                          </span>
+                                          <span
+                                            className="tag is-warning"
+                                            key="Zm9v"
+                                          >
+                                            foo
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </TagList>
+                                    <ThingActions
+                                      googleMapsUrl="https://www.google.es/maps"
+                                      onStatsClick={[Function]}
+                                    >
+                                      <p
+                                        className="buttons is-horizontal-center"
+                                      >
+                                        <a
+                                          className="button is-medium"
+                                          href="https://www.google.es/maps"
+                                          id="google-maps-link"
+                                          rel="noopener noreferrer"
+                                          target="_blank"
+                                        >
+                                          <span
+                                            className="icon is-medium"
+                                          >
+                                            <i
+                                              className="fas fa-map-marked"
+                                            />
+                                          </span>
+                                        </a>
+                                        <button
+                                          className="button is-medium"
+                                          id="stats-button"
+                                          onClick={[Function]}
+                                        >
+                                          <span
+                                            className="icon is-medium"
+                                          >
+                                            <i
+                                              className="fas fa-chart-bar"
+                                            />
+                                          </span>
+                                        </button>
+                                      </p>
+                                    </ThingActions>
+                                  </div>
+                                  <div
+                                    className="column is-two-fifths"
                                   >
-                                    <withProps(withScriptjs(withGoogleMap(Map)))
-                                      isDialogOpened={false}
+                                    <Connect(withProps(withScriptjs(withGoogleMap(Map))))
                                       marker={
                                         Object {
                                           "label": "foo",
@@ -2457,41 +2634,9 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                           },
                                         }
                                       }
-                                      toggleDialog={[Function]}
                                     >
-                                      <withScriptjs(withGoogleMap(Map))
-                                        center={
-                                          Object {
-                                            "lat": 40.21339,
-                                            "lng": -40.58457,
-                                          }
-                                        }
-                                        containerElement={
-                                          <div
-                                            className="map"
-                                          />
-                                        }
-                                        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                                      <withProps(withScriptjs(withGoogleMap(Map)))
                                         isDialogOpened={false}
-                                        label="foo"
-                                        loadingElement={
-                                          <div
-                                            style={
-                                              Object {
-                                                "height": "100%",
-                                              }
-                                            }
-                                          />
-                                        }
-                                        mapElement={
-                                          <div
-                                            style={
-                                              Object {
-                                                "height": "100%",
-                                              }
-                                            }
-                                          />
-                                        }
                                         marker={
                                           Object {
                                             "label": "foo",
@@ -2501,32 +2646,121 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                             },
                                           }
                                         }
-                                        point={
-                                          Object {
-                                            "lat": 40.21339,
-                                            "lng": -40.58457,
-                                          }
-                                        }
                                         toggleDialog={[Function]}
-                                        zoom={12}
                                       >
-                                        <div
-                                          style={
+                                        <withScriptjs(withGoogleMap(Map))
+                                          center={
                                             Object {
-                                              "height": "100%",
+                                              "lat": 40.21339,
+                                              "lng": -40.58457,
                                             }
                                           }
-                                        />
-                                      </withScriptjs(withGoogleMap(Map))>
-                                    </withProps(withScriptjs(withGoogleMap(Map)))>
-                                  </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+                                          containerElement={
+                                            <div
+                                              className="map"
+                                            />
+                                          }
+                                          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                                          isDialogOpened={false}
+                                          label="foo"
+                                          loadingElement={
+                                            <div
+                                              style={
+                                                Object {
+                                                  "height": "100%",
+                                                }
+                                              }
+                                            />
+                                          }
+                                          mapElement={
+                                            <div
+                                              style={
+                                                Object {
+                                                  "height": "100%",
+                                                }
+                                              }
+                                            />
+                                          }
+                                          marker={
+                                            Object {
+                                              "label": "foo",
+                                              "point": Object {
+                                                "lat": 40.21339,
+                                                "lng": -40.58457,
+                                              },
+                                            }
+                                          }
+                                          point={
+                                            Object {
+                                              "lat": 40.21339,
+                                              "lng": -40.58457,
+                                            }
+                                          }
+                                          toggleDialog={[Function]}
+                                          zoom={12}
+                                        >
+                                          <div
+                                            style={
+                                              Object {
+                                                "height": "100%",
+                                              }
+                                            }
+                                          />
+                                        </withScriptjs(withGoogleMap(Map))>
+                                      </withProps(withScriptjs(withGoogleMap(Map)))>
+                                    </Connect(withProps(withScriptjs(withGoogleMap(Map))))>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </ThingDetail>
+                          </ThingDetail>
+                        </div>
                       </div>
                     </div>
+                    <Modal
+                      isActive={false}
+                      messageStyle="is-danger"
+                      onCloseClick={[Function]}
+                      subTitle="Thing not found"
+                      title="Error"
+                    >
+                      <div
+                        className="modal"
+                      >
+                        <div
+                          className="modal-background"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        />
+                        <div
+                          className="modal-content"
+                        >
+                          <article
+                            className="message is-medium is-danger"
+                          >
+                            <div
+                              className="message-header"
+                            >
+                              <p>
+                                Error
+                              </p>
+                            </div>
+                            <div
+                              className="message-body has-text-centered"
+                            >
+                              Thing not found
+                            </div>
+                          </article>
+                        </div>
+                        <button
+                          aria-label="close"
+                          className="modal-close is-large"
+                          onClick={[Function]}
+                        />
+                      </div>
+                    </Modal>
                   </div>
                 </Things>
               </ResetOnUnmount>

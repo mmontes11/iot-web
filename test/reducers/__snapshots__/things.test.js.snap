@@ -4,6 +4,7 @@ exports[`reducers/things has a default state 1`] = `
 Object {
   "items": Array [],
   "selectedItem": null,
+  "showNotFoundError": false,
 }
 `;
 
@@ -11,6 +12,7 @@ exports[`reducers/things reduces RESET 1`] = `
 Object {
   "items": Array [],
   "selectedItem": null,
+  "showNotFoundError": false,
 }
 `;
 
@@ -18,6 +20,7 @@ exports[`reducers/things reduces THING_SELECTED 1`] = `
 Object {
   "items": Array [],
   "selectedItem": "foo",
+  "shouldShowNotFoundError": false,
 }
 `;
 
@@ -28,6 +31,7 @@ Object {
     "bar",
   ],
   "selectedItem": null,
+  "shouldShowNotFoundError": false,
 }
 `;
 
@@ -35,6 +39,7 @@ exports[`reducers/things reduces nothing 1`] = `
 Object {
   "items": Array [],
   "selectedItem": null,
+  "shouldShowNotFoundError": false,
 }
 `;
 
@@ -42,6 +47,7 @@ exports[`reducers/things selects and deselects a thing 1`] = `
 Object {
   "items": Array [],
   "selectedItem": "foo",
+  "shouldShowNotFoundError": false,
 }
 `;
 
@@ -49,5 +55,6 @@ exports[`reducers/things selects and deselects a thing 2`] = `
 Object {
   "items": Array [],
   "selectedItem": null,
+  "shouldShowNotFoundError": false,
 }
 `;

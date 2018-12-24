@@ -4,6 +4,7 @@ import {
   THINGS_REQUEST,
   THINGS_REQUEST_SUCCESS,
   THINGS_REQUEST_ERROR,
+  SHOW_THING_NOT_FOUND_ERROR,
 } from "constants/actionTypes/things";
 import iotClient from "lib/iotClient";
 
@@ -20,4 +21,8 @@ export const getThings = () => dispatch => {
 
 export const selectThing = thing => dispatch => {
   dispatch({ type: THING_SELECTED, thing });
+};
+
+export const showThingNotFoundError = showNotFoundError => dispatch => {
+  dispatch({ type: SHOW_THING_NOT_FOUND_ERROR, showNotFoundError });
 };

@@ -475,6 +475,7 @@ Object {
   "things": Object {
     "items": Array [],
     "selectedItem": null,
+    "shouldShowNotFoundError": false,
   },
 }
 `;

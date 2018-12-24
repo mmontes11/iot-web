@@ -2653,6 +2653,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                 }
                                 selectThing={[Function]}
                                 selectedThing={null}
+                                showNotFoundError={[Function]}
                                 things={Array []}
                               >
                                 <ResetOnUnmount
@@ -2707,6 +2708,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                   reset={[Function]}
                                   selectThing={[Function]}
                                   selectedThing={null}
+                                  showNotFoundError={[Function]}
                                   things={Array []}
                                 >
                                   <Things
@@ -2761,18 +2763,66 @@ exports[`containers/app renders app with auth in / 1`] = `
                                     reset={[Function]}
                                     selectThing={[Function]}
                                     selectedThing={null}
+                                    shouldShowNotFoundError={false}
+                                    showNotFoundError={[Function]}
                                     things={Array []}
                                   >
-                                    <div
-                                      className="container is-fluid section"
-                                    >
+                                    <div>
                                       <div
-                                        className="columns"
+                                        className="container is-fluid section"
                                       >
                                         <div
-                                          className="column is-one-quarter"
-                                        />
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column is-one-quarter"
+                                          />
+                                        </div>
                                       </div>
+                                      <Modal
+                                        isActive={false}
+                                        messageStyle="is-danger"
+                                        onCloseClick={[Function]}
+                                        subTitle="Thing not found"
+                                        title="Error"
+                                      >
+                                        <div
+                                          className="modal"
+                                        >
+                                          <div
+                                            className="modal-background"
+                                            onClick={[Function]}
+                                            onKeyPress={[Function]}
+                                            role="button"
+                                            tabIndex={0}
+                                          />
+                                          <div
+                                            className="modal-content"
+                                          >
+                                            <article
+                                              className="message is-medium is-danger"
+                                            >
+                                              <div
+                                                className="message-header"
+                                              >
+                                                <p>
+                                                  Error
+                                                </p>
+                                              </div>
+                                              <div
+                                                className="message-body has-text-centered"
+                                              >
+                                                Thing not found
+                                              </div>
+                                            </article>
+                                          </div>
+                                          <button
+                                            aria-label="close"
+                                            className="modal-close is-large"
+                                            onClick={[Function]}
+                                          />
+                                        </div>
+                                      </Modal>
                                     </div>
                                   </Things>
                                 </ResetOnUnmount>
@@ -3594,6 +3644,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                 }
                                 selectThing={[Function]}
                                 selectedThing={null}
+                                showNotFoundError={[Function]}
                                 things={Array []}
                               >
                                 <ResetOnUnmount
@@ -3648,6 +3699,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                   reset={[Function]}
                                   selectThing={[Function]}
                                   selectedThing={null}
+                                  showNotFoundError={[Function]}
                                   things={Array []}
                                 >
                                   <Things
@@ -3702,18 +3754,66 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                     reset={[Function]}
                                     selectThing={[Function]}
                                     selectedThing={null}
+                                    shouldShowNotFoundError={false}
+                                    showNotFoundError={[Function]}
                                     things={Array []}
                                   >
-                                    <div
-                                      className="container is-fluid section"
-                                    >
+                                    <div>
                                       <div
-                                        className="columns"
+                                        className="container is-fluid section"
                                       >
                                         <div
-                                          className="column is-one-quarter"
-                                        />
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column is-one-quarter"
+                                          />
+                                        </div>
                                       </div>
+                                      <Modal
+                                        isActive={false}
+                                        messageStyle="is-danger"
+                                        onCloseClick={[Function]}
+                                        subTitle="Thing not found"
+                                        title="Error"
+                                      >
+                                        <div
+                                          className="modal"
+                                        >
+                                          <div
+                                            className="modal-background"
+                                            onClick={[Function]}
+                                            onKeyPress={[Function]}
+                                            role="button"
+                                            tabIndex={0}
+                                          />
+                                          <div
+                                            className="modal-content"
+                                          >
+                                            <article
+                                              className="message is-medium is-danger"
+                                            >
+                                              <div
+                                                className="message-header"
+                                              >
+                                                <p>
+                                                  Error
+                                                </p>
+                                              </div>
+                                              <div
+                                                className="message-body has-text-centered"
+                                              >
+                                                Thing not found
+                                              </div>
+                                            </article>
+                                          </div>
+                                          <button
+                                            aria-label="close"
+                                            className="modal-close is-large"
+                                            onClick={[Function]}
+                                          />
+                                        </div>
+                                      </Modal>
                                     </div>
                                   </Things>
                                 </ResetOnUnmount>
@@ -6808,6 +6908,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                 }
                                 selectThing={[Function]}
                                 selectedThing={null}
+                                showNotFoundError={[Function]}
                                 things={Array []}
                               >
                                 <ResetOnUnmount
@@ -6862,6 +6963,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                   reset={[Function]}
                                   selectThing={[Function]}
                                   selectedThing={null}
+                                  showNotFoundError={[Function]}
                                   things={Array []}
                                 >
                                   <Things
@@ -6916,18 +7018,66 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                     reset={[Function]}
                                     selectThing={[Function]}
                                     selectedThing={null}
+                                    shouldShowNotFoundError={false}
+                                    showNotFoundError={[Function]}
                                     things={Array []}
                                   >
-                                    <div
-                                      className="container is-fluid section"
-                                    >
+                                    <div>
                                       <div
-                                        className="columns"
+                                        className="container is-fluid section"
                                       >
                                         <div
-                                          className="column is-one-quarter"
-                                        />
+                                          className="columns"
+                                        >
+                                          <div
+                                            className="column is-one-quarter"
+                                          />
+                                        </div>
                                       </div>
+                                      <Modal
+                                        isActive={false}
+                                        messageStyle="is-danger"
+                                        onCloseClick={[Function]}
+                                        subTitle="Thing not found"
+                                        title="Error"
+                                      >
+                                        <div
+                                          className="modal"
+                                        >
+                                          <div
+                                            className="modal-background"
+                                            onClick={[Function]}
+                                            onKeyPress={[Function]}
+                                            role="button"
+                                            tabIndex={0}
+                                          />
+                                          <div
+                                            className="modal-content"
+                                          >
+                                            <article
+                                              className="message is-medium is-danger"
+                                            >
+                                              <div
+                                                className="message-header"
+                                              >
+                                                <p>
+                                                  Error
+                                                </p>
+                                              </div>
+                                              <div
+                                                className="message-body has-text-centered"
+                                              >
+                                                Thing not found
+                                              </div>
+                                            </article>
+                                          </div>
+                                          <button
+                                            aria-label="close"
+                                            className="modal-close is-large"
+                                            onClick={[Function]}
+                                          />
+                                        </div>
+                                      </Modal>
                                     </div>
                                   </Things>
                                 </ResetOnUnmount>
