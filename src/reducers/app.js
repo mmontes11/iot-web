@@ -7,7 +7,7 @@ const initialState = {
   showError: true,
 };
 
-export default (state = initialState, { type, showError }) => {
+export default (state = initialState, { type, showError, preserveError }) => {
   switch (type) {
     case TOGGLE_HAMBURGER_MENU:
       return { ...state, isHamburgerMenuExpanded: !state.isHamburgerMenuExpanded };
@@ -16,7 +16,11 @@ export default (state = initialState, { type, showError }) => {
     case SET_SHOW_ERROR:
       return { ...state, showError };
     case RESET:
+      if (preserveError) {
+        return { ...initialState, showError: state.showError };
+      }
       return initialState;
+
     default:
       return state;
   }

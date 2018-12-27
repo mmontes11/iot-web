@@ -9,8 +9,9 @@ const Main = () => (
     <Navbar />
     <main>
       <Switch>
-        <Route path="/things/:id" component={Things} />
+        <Route path="/things/:thing" component={Things} />
         <Route path="/things" component={Things} />
+        <Route path="/stats/:type/:observation" component={Stats} />
         <Route path="/stats" component={Stats} />
         <Route render={() => <Redirect to="/things" />} />
       </Switch>

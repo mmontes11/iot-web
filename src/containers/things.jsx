@@ -22,11 +22,11 @@ class Things extends React.Component {
       selectedThing,
       things,
       match: {
-        params: { id: thingId },
+        params: { thing: thingName },
       },
     } = this.props;
-    if (selectedThing == null && things.length > 0 && thingId) {
-      const thing = things.find(t => t.name === thingId);
+    if (selectedThing == null && things.length > 0 && thingName) {
+      const thing = things.find(t => t.name === thingName);
       if (thing) {
         this._selectThing(thing);
       } else {
@@ -107,7 +107,7 @@ Things.propTypes = {
 Things.defaultProps = {
   selectedThing: null,
   things: [],
-  shouldShowNotFoundError: false
+  shouldShowNotFoundError: false,
 };
 
 const withConnect = connect(

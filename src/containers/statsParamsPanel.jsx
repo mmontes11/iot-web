@@ -31,7 +31,7 @@ const StatsParamsPanel = ({
       onButtonClick: () => selectObservation(),
       onItemClick: item => {
         updateObservation(item);
-        onParamsSelected();
+        onParamsSelected(type.selectedItem, item);
       },
     }}
     reset={{

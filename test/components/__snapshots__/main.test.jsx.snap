@@ -2134,6 +2134,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                     }
                     reset={[Function]}
                     stats={Array []}
+                    updateParams={[Function]}
                   >
                     <Route>
                       <Connect(ResetOnUnmount)
@@ -2187,6 +2188,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                         }
                         reset={[Function]}
                         stats={Array []}
+                        updateParams={[Function]}
                       >
                         <ResetOnUnmount
                           getStats={[Function]}
@@ -2239,6 +2241,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                           }
                           reset={[Function]}
                           stats={Array []}
+                          updateParams={[Function]}
                         >
                           <Stats
                             getStats={[Function]}
@@ -2291,6 +2294,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                             }
                             reset={[Function]}
                             stats={Array []}
+                            updateParams={[Function]}
                           >
                             <div
                               className="container is-fluid section"
@@ -2331,6 +2335,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                         }
                                       }
                                       updateObservation={[Function]}
+                                      updateParams={[Function]}
                                       updateType={[Function]}
                                     >
                                       <Route>
@@ -2406,6 +2411,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             }
                                           }
                                           updateObservation={[Function]}
+                                          updateParams={[Function]}
                                           updateType={[Function]}
                                         >
                                           <ResetOnUnmount
@@ -2481,6 +2487,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               }
                                             }
                                             updateObservation={[Function]}
+                                            updateParams={[Function]}
                                             updateType={[Function]}
                                           >
                                             <StatsParamsPanel
@@ -2556,6 +2563,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                 }
                                               }
                                               updateObservation={[Function]}
+                                              updateParams={[Function]}
                                               updateType={[Function]}
                                             >
                                               <ParamsPanel

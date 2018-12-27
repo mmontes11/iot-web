@@ -1,5 +1,5 @@
 import { RESET } from "constants/actionTypes/common";
 
-export const reset = () => dispatch => {
-  dispatch({ type: RESET });
+export const reset = preserveError => dispatch => {
+  dispatch({ type: RESET, preserveError });
 };

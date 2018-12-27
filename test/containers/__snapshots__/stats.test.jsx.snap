@@ -105,6 +105,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
               },
             ]
           }
+          updateParams={[Function]}
         >
           <Route>
             <Connect(ResetOnUnmount)
@@ -204,6 +205,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                   },
                 ]
               }
+              updateParams={[Function]}
             >
               <ResetOnUnmount
                 getStats={[Function]}
@@ -302,6 +304,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                     },
                   ]
                 }
+                updateParams={[Function]}
               >
                 <Stats
                   getStats={[Function]}
@@ -400,6 +403,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                       },
                     ]
                   }
+                  updateParams={[Function]}
                 >
                   <div
                     className="container is-fluid section"
@@ -440,6 +444,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                               }
                             }
                             updateObservation={[Function]}
+                            updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <Route>
@@ -515,6 +520,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                   }
                                 }
                                 updateObservation={[Function]}
+                                updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ResetOnUnmount
@@ -590,6 +596,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                     }
                                   }
                                   updateObservation={[Function]}
+                                  updateParams={[Function]}
                                   updateType={[Function]}
                                 >
                                   <StatsParamsPanel
@@ -665,6 +672,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                       }
                                     }
                                     updateObservation={[Function]}
+                                    updateParams={[Function]}
                                     updateType={[Function]}
                                   >
                                     <ParamsPanel
@@ -1680,6 +1688,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
           isLoading={false}
           reset={[Function]}
           stats={Array []}
+          updateParams={[Function]}
         >
           <Route>
             <Connect(ResetOnUnmount)
@@ -1733,6 +1742,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
               }
               reset={[Function]}
               stats={Array []}
+              updateParams={[Function]}
             >
               <ResetOnUnmount
                 getStats={[Function]}
@@ -1785,6 +1795,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                 }
                 reset={[Function]}
                 stats={Array []}
+                updateParams={[Function]}
               >
                 <Stats
                   getStats={[Function]}
@@ -1837,6 +1848,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                   }
                   reset={[Function]}
                   stats={Array []}
+                  updateParams={[Function]}
                 >
                   <div
                     className="container is-fluid section"
@@ -1877,6 +1889,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                               }
                             }
                             updateObservation={[Function]}
+                            updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <Route>
@@ -1952,6 +1965,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                   }
                                 }
                                 updateObservation={[Function]}
+                                updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ResetOnUnmount
@@ -2027,6 +2041,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     }
                                   }
                                   updateObservation={[Function]}
+                                  updateParams={[Function]}
                                   updateType={[Function]}
                                 >
                                   <StatsParamsPanel
@@ -2102,6 +2117,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                       }
                                     }
                                     updateObservation={[Function]}
+                                    updateParams={[Function]}
                                     updateType={[Function]}
                                   >
                                     <ParamsPanel
@@ -2876,6 +2892,7 @@ exports[`containers/stats renders when loading stats 1`] = `
           isLoading={true}
           reset={[Function]}
           stats={Array []}
+          updateParams={[Function]}
         >
           <Route>
             <Connect(ResetOnUnmount)
@@ -2929,6 +2946,7 @@ exports[`containers/stats renders when loading stats 1`] = `
               }
               reset={[Function]}
               stats={Array []}
+              updateParams={[Function]}
             >
               <ResetOnUnmount
                 getStats={[Function]}
@@ -2981,6 +2999,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                 }
                 reset={[Function]}
                 stats={Array []}
+                updateParams={[Function]}
               >
                 <Stats
                   getStats={[Function]}
@@ -3033,6 +3052,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                   }
                   reset={[Function]}
                   stats={Array []}
+                  updateParams={[Function]}
                 >
                   <div
                     className="container is-fluid section"
@@ -3073,6 +3093,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                               }
                             }
                             updateObservation={[Function]}
+                            updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <Route>
@@ -3148,6 +3169,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                   }
                                 }
                                 updateObservation={[Function]}
+                                updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ResetOnUnmount
@@ -3223,6 +3245,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     }
                                   }
                                   updateObservation={[Function]}
+                                  updateParams={[Function]}
                                   updateType={[Function]}
                                 >
                                   <StatsParamsPanel
@@ -3298,6 +3321,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                       }
                                     }
                                     updateObservation={[Function]}
+                                    updateParams={[Function]}
                                     updateType={[Function]}
                                   >
                                     <ParamsPanel

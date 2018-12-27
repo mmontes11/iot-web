@@ -3,6 +3,7 @@ import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 import { normalizeStats } from "helpers/statsNormalizer";
 import iotClient from "lib/iotClient";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
+import { RESET } from "constants/actionTypes/common";
 
 const getParams = (filterItems, observation, thing, timePeriod, startDate, endDate) => {
   let params = {
@@ -63,6 +64,8 @@ const requestStats = (
       .getStats(params)
       .then(res => onSuccess(res))
       .catch(err => onError(err));
+  } else {
+    onError(new Error("Invalid type"));
   }
 };
 
@@ -105,6 +108,9 @@ export const getStats = () => (dispatch, getState) => {
       }
       dispatch({ type: STATS_UPDATED, stats });
     },
-    () => dispatch({ type: STATS_REQUEST_ERROR }),
+    () => {
+      dispatch({ type: STATS_REQUEST_ERROR });
+      dispatch({ type: RESET, preserveError: true });
+    },
   );
 };
