@@ -2084,7 +2084,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                   }
                 >
                   <withRouter(Connect(ResetOnUnmount))
+                    addCustomTimePeriodFilter={[Function]}
+                    addThingFilter={[Function]}
+                    addTimePeriodFilter={[Function]}
                     getStats={[Function]}
+                    hasError={false}
                     history={
                       Object {
                         "action": "POP",
@@ -2138,7 +2142,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                   >
                     <Route>
                       <Connect(ResetOnUnmount)
+                        addCustomTimePeriodFilter={[Function]}
+                        addThingFilter={[Function]}
+                        addTimePeriodFilter={[Function]}
                         getStats={[Function]}
+                        hasError={false}
                         history={
                           Object {
                             "action": "POP",
@@ -2191,7 +2199,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                         updateParams={[Function]}
                       >
                         <ResetOnUnmount
+                          addCustomTimePeriodFilter={[Function]}
+                          addThingFilter={[Function]}
+                          addTimePeriodFilter={[Function]}
                           getStats={[Function]}
+                          hasError={false}
                           history={
                             Object {
                               "action": "POP",
@@ -2244,7 +2256,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                           updateParams={[Function]}
                         >
                           <Stats
+                            addCustomTimePeriodFilter={[Function]}
+                            addThingFilter={[Function]}
+                            addTimePeriodFilter={[Function]}
                             getStats={[Function]}
+                            hasError={false}
                             history={
                               Object {
                                 "action": "POP",
@@ -2825,7 +2841,10 @@ exports[`components/main renders a main in /stats path 1`] = `
                                         onFiltersChange={[Function]}
                                       >
                                         <Connect(ResetOnUnmount)
+                                          addCustomTimePeriodFilter={[Function]}
                                           addFilterType={[Function]}
+                                          addThingFilter={[Function]}
+                                          addTimePeriodFilter={[Function]}
                                           dateFilter={
                                             Object {
                                               "custom": Object {
@@ -2921,7 +2940,10 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           updateTimePeriod={[Function]}
                                         >
                                           <ResetOnUnmount
+                                            addCustomTimePeriodFilter={[Function]}
                                             addFilterType={[Function]}
+                                            addThingFilter={[Function]}
+                                            addTimePeriodFilter={[Function]}
                                             dateFilter={
                                               Object {
                                                 "custom": Object {
@@ -3018,7 +3040,10 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             updateTimePeriod={[Function]}
                                           >
                                             <StatsFiltersPanel
+                                              addCustomTimePeriodFilter={[Function]}
                                               addFilterType={[Function]}
+                                              addThingFilter={[Function]}
+                                              addTimePeriodFilter={[Function]}
                                               dateFilter={
                                                 Object {
                                                   "custom": Object {
