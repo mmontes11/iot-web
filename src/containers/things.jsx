@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import ThingItem from "components/thingItem";
 import ThingDetail from "components/thingDetail";
 import Loader from "components/loader";
+import Modal from "components/modal";
 import * as thingActions from "actions/things";
 import * as reducerHelpers from "reducers";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
@@ -16,37 +17,72 @@ class Things extends React.Component {
       this.props.getThings();
     }
   }
+  componentDidUpdate() {
+    const {
+      selectedThing,
+      things,
+      match: {
+        params: { thing: thingName },
+      },
+    } = this.props;
+    if (selectedThing == null && things.length > 0 && thingName) {
+      const thing = things.find(t => t.name === thingName);
+      if (thing) {
+        this._selectThing(thing);
+      } else {
+        this._resetPathToRoot();
+        this.props.showNotFoundError(true);
+      }
+    }
+  }
   _isSelected = thing => this.props.selectedThing !== null && this.props.selectedThing.name === thing.name;
-  _onThingItemClick = thing => {
+  _selectThing = thing => {
     this.props.selectThing(thing);
+    if (this._isSelected(thing)) {
+      this._resetPathToRoot();
+    } else {
+      this.props.history.push(`/things/${thing.name}`);
+    }
+  };
+  _resetPathToRoot = () => {
+    this.props.history.push("/things");
   };
   _onStatsClick = () => {
     this.props.history.push("/stats");
   };
   render() {
-    const { isLoading, things, selectedThing } = this.props;
+    const { isLoading, things, selectedThing, shouldShowNotFoundError, showNotFoundError } = this.props;
     if (isLoading && things.length === 0) {
       return <Loader />;
     }
     return (
-      <div className="container is-fluid section">
-        <div className="columns">
-          <div className="column is-one-quarter">
-            {things.map(thing => (
-              <ThingItem
-                key={btoa(thing.name)}
-                name={thing.name}
-                isSelected={this._isSelected(thing)}
-                onClick={() => this._onThingItemClick(thing)}
-              />
-            ))}
-          </div>
-          {selectedThing && (
-            <div className="column is-three-quarters">
-              <ThingDetail thing={selectedThing} onStatsClick={this._onStatsClick} />
+      <div>
+        <div className="container is-fluid section">
+          <div className="columns">
+            <div className="column is-one-quarter">
+              {things.map(thing => (
+                <ThingItem
+                  key={btoa(thing.name)}
+                  name={thing.name}
+                  isSelected={this._isSelected(thing)}
+                  onClick={() => this._selectThing(thing)}
+                />
+              ))}
             </div>
-          )}
+            {selectedThing && (
+              <div className="column is-three-quarters">
+                <ThingDetail thing={selectedThing} onStatsClick={this._onStatsClick} />
+              </div>
+            )}
+          </div>
         </div>
+        <Modal
+          isActive={shouldShowNotFoundError}
+          onCloseClick={() => showNotFoundError(false)}
+          messageStyle="is-danger"
+          title="Error"
+          subTitle="Thing not found"
+        />
       </div>
     );
   }
@@ -60,14 +96,18 @@ Things.propTypes = {
   }),
   isLoading: PropTypes.bool.isRequired,
   things: PropTypes.arrayOf(PropTypes.shape({})),
+  shouldShowNotFoundError: PropTypes.bool,
+  showNotFoundError: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
+  match: PropTypes.shape({}).isRequired,
 };
 
 Things.defaultProps = {
   selectedThing: null,
   things: [],
+  shouldShowNotFoundError: false,
 };
 
 const withConnect = connect(
@@ -75,10 +115,12 @@ const withConnect = connect(
     isLoading: reducerHelpers.isLoading(state),
     things: state.things.items,
     selectedThing: state.things.selectedItem,
+    shouldShowNotFoundError: state.things.showNotFoundError,
   }),
   {
     getThings: thingActions.getThings,
     selectThing: thingActions.selectThing,
+    showNotFoundError: thingActions.showThingNotFoundError,
   },
 );
 

@@ -53,3 +53,8 @@ export const selectObservation = () => dispatch => {
 export const updateObservation = updatedObservation => dispatch => {
   dispatch({ type: OBSERVATION_UPDATED, updatedObservation });
 };
+
+export const updateParams = (updatedType, updatedObservation) => dispatch => {
+  dispatch({ type: TYPE_UPDATED, updatedType });
+  dispatch({ type: OBSERVATION_UPDATED, updatedObservation });
+};

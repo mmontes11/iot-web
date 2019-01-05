@@ -603,6 +603,7 @@ exports[`components/main renders a main in / path 1`] = `
                         }
                         selectThing={[Function]}
                         selectedThing={null}
+                        showNotFoundError={[Function]}
                         things={Array []}
                       >
                         <ResetOnUnmount
@@ -657,6 +658,7 @@ exports[`components/main renders a main in / path 1`] = `
                           reset={[Function]}
                           selectThing={[Function]}
                           selectedThing={null}
+                          showNotFoundError={[Function]}
                           things={Array []}
                         >
                           <Things
@@ -711,18 +713,66 @@ exports[`components/main renders a main in / path 1`] = `
                             reset={[Function]}
                             selectThing={[Function]}
                             selectedThing={null}
+                            shouldShowNotFoundError={false}
+                            showNotFoundError={[Function]}
                             things={Array []}
                           >
-                            <div
-                              className="container is-fluid section"
-                            >
+                            <div>
                               <div
-                                className="columns"
+                                className="container is-fluid section"
                               >
                                 <div
-                                  className="column is-one-quarter"
-                                />
+                                  className="columns"
+                                >
+                                  <div
+                                    className="column is-one-quarter"
+                                  />
+                                </div>
                               </div>
+                              <Modal
+                                isActive={false}
+                                messageStyle="is-danger"
+                                onCloseClick={[Function]}
+                                subTitle="Thing not found"
+                                title="Error"
+                              >
+                                <div
+                                  className="modal"
+                                >
+                                  <div
+                                    className="modal-background"
+                                    onClick={[Function]}
+                                    onKeyPress={[Function]}
+                                    role="button"
+                                    tabIndex={0}
+                                  />
+                                  <div
+                                    className="modal-content"
+                                  >
+                                    <article
+                                      className="message is-medium is-danger"
+                                    >
+                                      <div
+                                        className="message-header"
+                                      >
+                                        <p>
+                                          Error
+                                        </p>
+                                      </div>
+                                      <div
+                                        className="message-body has-text-centered"
+                                      >
+                                        Thing not found
+                                      </div>
+                                    </article>
+                                  </div>
+                                  <button
+                                    aria-label="close"
+                                    className="modal-close is-large"
+                                    onClick={[Function]}
+                                  />
+                                </div>
+                              </Modal>
                             </div>
                           </Things>
                         </ResetOnUnmount>
@@ -1343,6 +1393,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                         }
                         selectThing={[Function]}
                         selectedThing={null}
+                        showNotFoundError={[Function]}
                         things={Array []}
                       >
                         <ResetOnUnmount
@@ -1397,6 +1448,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                           reset={[Function]}
                           selectThing={[Function]}
                           selectedThing={null}
+                          showNotFoundError={[Function]}
                           things={Array []}
                         >
                           <Things
@@ -1451,18 +1503,66 @@ exports[`components/main renders a main in /foo path 1`] = `
                             reset={[Function]}
                             selectThing={[Function]}
                             selectedThing={null}
+                            shouldShowNotFoundError={false}
+                            showNotFoundError={[Function]}
                             things={Array []}
                           >
-                            <div
-                              className="container is-fluid section"
-                            >
+                            <div>
                               <div
-                                className="columns"
+                                className="container is-fluid section"
                               >
                                 <div
-                                  className="column is-one-quarter"
-                                />
+                                  className="columns"
+                                >
+                                  <div
+                                    className="column is-one-quarter"
+                                  />
+                                </div>
                               </div>
+                              <Modal
+                                isActive={false}
+                                messageStyle="is-danger"
+                                onCloseClick={[Function]}
+                                subTitle="Thing not found"
+                                title="Error"
+                              >
+                                <div
+                                  className="modal"
+                                >
+                                  <div
+                                    className="modal-background"
+                                    onClick={[Function]}
+                                    onKeyPress={[Function]}
+                                    role="button"
+                                    tabIndex={0}
+                                  />
+                                  <div
+                                    className="modal-content"
+                                  >
+                                    <article
+                                      className="message is-medium is-danger"
+                                    >
+                                      <div
+                                        className="message-header"
+                                      >
+                                        <p>
+                                          Error
+                                        </p>
+                                      </div>
+                                      <div
+                                        className="message-body has-text-centered"
+                                      >
+                                        Thing not found
+                                      </div>
+                                    </article>
+                                  </div>
+                                  <button
+                                    aria-label="close"
+                                    className="modal-close is-large"
+                                    onClick={[Function]}
+                                  />
+                                </div>
+                              </Modal>
                             </div>
                           </Things>
                         </ResetOnUnmount>
@@ -1984,7 +2084,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                   }
                 >
                   <withRouter(Connect(ResetOnUnmount))
+                    addCustomTimePeriodFilter={[Function]}
+                    addThingFilter={[Function]}
+                    addTimePeriodFilter={[Function]}
                     getStats={[Function]}
+                    hasError={false}
                     history={
                       Object {
                         "action": "POP",
@@ -2034,10 +2138,15 @@ exports[`components/main renders a main in /stats path 1`] = `
                     }
                     reset={[Function]}
                     stats={Array []}
+                    updateParams={[Function]}
                   >
                     <Route>
                       <Connect(ResetOnUnmount)
+                        addCustomTimePeriodFilter={[Function]}
+                        addThingFilter={[Function]}
+                        addTimePeriodFilter={[Function]}
                         getStats={[Function]}
+                        hasError={false}
                         history={
                           Object {
                             "action": "POP",
@@ -2087,9 +2196,14 @@ exports[`components/main renders a main in /stats path 1`] = `
                         }
                         reset={[Function]}
                         stats={Array []}
+                        updateParams={[Function]}
                       >
                         <ResetOnUnmount
+                          addCustomTimePeriodFilter={[Function]}
+                          addThingFilter={[Function]}
+                          addTimePeriodFilter={[Function]}
                           getStats={[Function]}
+                          hasError={false}
                           history={
                             Object {
                               "action": "POP",
@@ -2139,9 +2253,14 @@ exports[`components/main renders a main in /stats path 1`] = `
                           }
                           reset={[Function]}
                           stats={Array []}
+                          updateParams={[Function]}
                         >
                           <Stats
+                            addCustomTimePeriodFilter={[Function]}
+                            addThingFilter={[Function]}
+                            addTimePeriodFilter={[Function]}
                             getStats={[Function]}
+                            hasError={false}
                             history={
                               Object {
                                 "action": "POP",
@@ -2191,6 +2310,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                             }
                             reset={[Function]}
                             stats={Array []}
+                            updateParams={[Function]}
                           >
                             <div
                               className="container is-fluid section"
@@ -2231,6 +2351,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                         }
                                       }
                                       updateObservation={[Function]}
+                                      updateParams={[Function]}
                                       updateType={[Function]}
                                     >
                                       <Route>
@@ -2306,6 +2427,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             }
                                           }
                                           updateObservation={[Function]}
+                                          updateParams={[Function]}
                                           updateType={[Function]}
                                         >
                                           <ResetOnUnmount
@@ -2381,6 +2503,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               }
                                             }
                                             updateObservation={[Function]}
+                                            updateParams={[Function]}
                                             updateType={[Function]}
                                           >
                                             <StatsParamsPanel
@@ -2456,6 +2579,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                 }
                                               }
                                               updateObservation={[Function]}
+                                              updateParams={[Function]}
                                               updateType={[Function]}
                                             >
                                               <ParamsPanel
@@ -2717,7 +2841,10 @@ exports[`components/main renders a main in /stats path 1`] = `
                                         onFiltersChange={[Function]}
                                       >
                                         <Connect(ResetOnUnmount)
+                                          addCustomTimePeriodFilter={[Function]}
                                           addFilterType={[Function]}
+                                          addThingFilter={[Function]}
+                                          addTimePeriodFilter={[Function]}
                                           dateFilter={
                                             Object {
                                               "custom": Object {
@@ -2813,7 +2940,10 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           updateTimePeriod={[Function]}
                                         >
                                           <ResetOnUnmount
+                                            addCustomTimePeriodFilter={[Function]}
                                             addFilterType={[Function]}
+                                            addThingFilter={[Function]}
+                                            addTimePeriodFilter={[Function]}
                                             dateFilter={
                                               Object {
                                                 "custom": Object {
@@ -2910,7 +3040,10 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             updateTimePeriod={[Function]}
                                           >
                                             <StatsFiltersPanel
+                                              addCustomTimePeriodFilter={[Function]}
                                               addFilterType={[Function]}
+                                              addThingFilter={[Function]}
+                                              addTimePeriodFilter={[Function]}
                                               dateFilter={
                                                 Object {
                                                   "custom": Object {
@@ -3779,6 +3912,7 @@ exports[`components/main renders a main in /things path 1`] = `
                         }
                         selectThing={[Function]}
                         selectedThing={null}
+                        showNotFoundError={[Function]}
                         things={Array []}
                       >
                         <ResetOnUnmount
@@ -3833,6 +3967,7 @@ exports[`components/main renders a main in /things path 1`] = `
                           reset={[Function]}
                           selectThing={[Function]}
                           selectedThing={null}
+                          showNotFoundError={[Function]}
                           things={Array []}
                         >
                           <Things
@@ -3887,18 +4022,66 @@ exports[`components/main renders a main in /things path 1`] = `
                             reset={[Function]}
                             selectThing={[Function]}
                             selectedThing={null}
+                            shouldShowNotFoundError={false}
+                            showNotFoundError={[Function]}
                             things={Array []}
                           >
-                            <div
-                              className="container is-fluid section"
-                            >
+                            <div>
                               <div
-                                className="columns"
+                                className="container is-fluid section"
                               >
                                 <div
-                                  className="column is-one-quarter"
-                                />
+                                  className="columns"
+                                >
+                                  <div
+                                    className="column is-one-quarter"
+                                  />
+                                </div>
                               </div>
+                              <Modal
+                                isActive={false}
+                                messageStyle="is-danger"
+                                onCloseClick={[Function]}
+                                subTitle="Thing not found"
+                                title="Error"
+                              >
+                                <div
+                                  className="modal"
+                                >
+                                  <div
+                                    className="modal-background"
+                                    onClick={[Function]}
+                                    onKeyPress={[Function]}
+                                    role="button"
+                                    tabIndex={0}
+                                  />
+                                  <div
+                                    className="modal-content"
+                                  >
+                                    <article
+                                      className="message is-medium is-danger"
+                                    >
+                                      <div
+                                        className="message-header"
+                                      >
+                                        <p>
+                                          Error
+                                        </p>
+                                      </div>
+                                      <div
+                                        className="message-body has-text-centered"
+                                      >
+                                        Thing not found
+                                      </div>
+                                    </article>
+                                  </div>
+                                  <button
+                                    aria-label="close"
+                                    className="modal-close is-large"
+                                    onClick={[Function]}
+                                  />
+                                </div>
+                              </Modal>
                             </div>
                           </Things>
                         </ResetOnUnmount>

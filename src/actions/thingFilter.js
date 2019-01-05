@@ -6,8 +6,10 @@ import {
   THING_FILTERS_REQUEST_ERROR,
   THING_FILTERS_UPDATED,
 } from "constants/actionTypes/thingFilter";
+import { ADD_FILTER_TYPE } from "constants/actionTypes/filters";
 import iotClient from "lib/iotClient";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
+import { THING_FILTER_TYPE } from "constants/filterTypes";
 
 export const selectThingFilter = (type, isActive) => dispatch => {
   dispatch({ type: THING_FILTER_SELECT });
@@ -33,5 +35,10 @@ export const selectThingFilter = (type, isActive) => dispatch => {
 };
 
 export const updateThingFilter = thing => dispatch => {
+  dispatch({ type: THING_FILTER_UPDATED, updatedThingFilter: thing });
+};
+
+export const addThingFilter = thing => dispatch => {
+  dispatch({ type: ADD_FILTER_TYPE, addedFilterType: THING_FILTER_TYPE });
   dispatch({ type: THING_FILTER_UPDATED, updatedThingFilter: thing });
 };

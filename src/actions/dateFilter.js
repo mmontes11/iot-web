@@ -9,6 +9,8 @@ import {
   DATE_FILTER_START_DATE_UPDATED,
   DATE_FILTER_END_DATE_UPDATED,
 } from "constants/actionTypes/dateFilter";
+import { ADD_FILTER_TYPE } from "constants/actionTypes/filters";
+import { DATE_FILTER_TYPE } from "constants/filterTypes";
 import iotClient from "lib/iotClient";
 
 export const toggleDateFilterType = () => dispatch => {
@@ -41,4 +43,24 @@ export const updateStartDate = updatedStartDate => dispatch => {
 
 export const updateEndDate = updatedEndDate => dispatch => {
   dispatch({ type: DATE_FILTER_END_DATE_UPDATED, updatedEndDate });
+};
+
+export const addTimePeriodFilter = updatedTimePeriod => dispatch => {
+  dispatch({ type: ADD_FILTER_TYPE, addedFilterType: DATE_FILTER_TYPE });
+  dispatch({ type: DATE_FILTER_TIME_PERIOD_UPDATED, updatedTimePeriod });
+};
+
+export const addCustomTimePeriodFilter = (updatedStartDate, updatedEndDate) => dispatch => {
+  dispatch({ type: ADD_FILTER_TYPE, addedFilterType: DATE_FILTER_TYPE });
+  const startDate = new Date(updatedStartDate);
+  const endDate = new Date(updatedEndDate);
+  if (!Number.isNaN(startDate) || !Number.isNaN(endDate)) {
+    dispatch({ type: DATE_FILTER_SELECTOR_TOGGLE, isCustomSelected: true });
+  }
+  if (!Number.isNaN(startDate)) {
+    dispatch({ type: DATE_FILTER_START_DATE_UPDATED, updatedStartDate: startDate });
+  }
+  if (!Number.isNaN(endDate)) {
+    dispatch({ type: DATE_FILTER_END_DATE_UPDATED, updatedEndDate: endDate });
+  }
 };

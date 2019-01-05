@@ -55,7 +55,11 @@ exports[`containers/stats renders stats barcharts 1`] = `
     >
       <Connect(withRouter(Connect(ResetOnUnmount)))>
         <withRouter(Connect(ResetOnUnmount))
+          addCustomTimePeriodFilter={[Function]}
+          addThingFilter={[Function]}
+          addTimePeriodFilter={[Function]}
           getStats={[Function]}
+          hasError={false}
           isLoading={false}
           reset={[Function]}
           stats={
@@ -105,10 +109,15 @@ exports[`containers/stats renders stats barcharts 1`] = `
               },
             ]
           }
+          updateParams={[Function]}
         >
           <Route>
             <Connect(ResetOnUnmount)
+              addCustomTimePeriodFilter={[Function]}
+              addThingFilter={[Function]}
+              addTimePeriodFilter={[Function]}
               getStats={[Function]}
+              hasError={false}
               history={
                 Object {
                   "action": "POP",
@@ -204,9 +213,14 @@ exports[`containers/stats renders stats barcharts 1`] = `
                   },
                 ]
               }
+              updateParams={[Function]}
             >
               <ResetOnUnmount
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
                 getStats={[Function]}
+                hasError={false}
                 history={
                   Object {
                     "action": "POP",
@@ -302,9 +316,14 @@ exports[`containers/stats renders stats barcharts 1`] = `
                     },
                   ]
                 }
+                updateParams={[Function]}
               >
                 <Stats
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
                   getStats={[Function]}
+                  hasError={false}
                   history={
                     Object {
                       "action": "POP",
@@ -400,6 +419,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                       },
                     ]
                   }
+                  updateParams={[Function]}
                 >
                   <div
                     className="container is-fluid section"
@@ -440,6 +460,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                               }
                             }
                             updateObservation={[Function]}
+                            updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <Route>
@@ -515,6 +536,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                   }
                                 }
                                 updateObservation={[Function]}
+                                updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ResetOnUnmount
@@ -590,6 +612,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                     }
                                   }
                                   updateObservation={[Function]}
+                                  updateParams={[Function]}
                                   updateType={[Function]}
                                 >
                                   <StatsParamsPanel
@@ -665,6 +688,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                       }
                                     }
                                     updateObservation={[Function]}
+                                    updateParams={[Function]}
                                     updateType={[Function]}
                                   >
                                     <ParamsPanel
@@ -1167,7 +1191,10 @@ exports[`containers/stats renders stats barcharts 1`] = `
                               onFiltersChange={[Function]}
                             >
                               <Connect(ResetOnUnmount)
+                                addCustomTimePeriodFilter={[Function]}
                                 addFilterType={[Function]}
+                                addThingFilter={[Function]}
+                                addTimePeriodFilter={[Function]}
                                 dateFilter={
                                   Object {
                                     "custom": Object {
@@ -1263,7 +1290,10 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                 updateTimePeriod={[Function]}
                               >
                                 <ResetOnUnmount
+                                  addCustomTimePeriodFilter={[Function]}
                                   addFilterType={[Function]}
+                                  addThingFilter={[Function]}
+                                  addTimePeriodFilter={[Function]}
                                   dateFilter={
                                     Object {
                                       "custom": Object {
@@ -1360,7 +1390,10 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                   updateTimePeriod={[Function]}
                                 >
                                   <StatsFiltersPanel
+                                    addCustomTimePeriodFilter={[Function]}
                                     addFilterType={[Function]}
+                                    addThingFilter={[Function]}
+                                    addTimePeriodFilter={[Function]}
                                     dateFilter={
                                       Object {
                                         "custom": Object {
@@ -1676,14 +1709,23 @@ exports[`containers/stats renders stats in initial state 1`] = `
     >
       <Connect(withRouter(Connect(ResetOnUnmount)))>
         <withRouter(Connect(ResetOnUnmount))
+          addCustomTimePeriodFilter={[Function]}
+          addThingFilter={[Function]}
+          addTimePeriodFilter={[Function]}
           getStats={[Function]}
+          hasError={false}
           isLoading={false}
           reset={[Function]}
           stats={Array []}
+          updateParams={[Function]}
         >
           <Route>
             <Connect(ResetOnUnmount)
+              addCustomTimePeriodFilter={[Function]}
+              addThingFilter={[Function]}
+              addTimePeriodFilter={[Function]}
               getStats={[Function]}
+              hasError={false}
               history={
                 Object {
                   "action": "POP",
@@ -1733,9 +1775,14 @@ exports[`containers/stats renders stats in initial state 1`] = `
               }
               reset={[Function]}
               stats={Array []}
+              updateParams={[Function]}
             >
               <ResetOnUnmount
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
                 getStats={[Function]}
+                hasError={false}
                 history={
                   Object {
                     "action": "POP",
@@ -1785,9 +1832,14 @@ exports[`containers/stats renders stats in initial state 1`] = `
                 }
                 reset={[Function]}
                 stats={Array []}
+                updateParams={[Function]}
               >
                 <Stats
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
                   getStats={[Function]}
+                  hasError={false}
                   history={
                     Object {
                       "action": "POP",
@@ -1837,6 +1889,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                   }
                   reset={[Function]}
                   stats={Array []}
+                  updateParams={[Function]}
                 >
                   <div
                     className="container is-fluid section"
@@ -1877,6 +1930,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                               }
                             }
                             updateObservation={[Function]}
+                            updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <Route>
@@ -1952,6 +2006,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                   }
                                 }
                                 updateObservation={[Function]}
+                                updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ResetOnUnmount
@@ -2027,6 +2082,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     }
                                   }
                                   updateObservation={[Function]}
+                                  updateParams={[Function]}
                                   updateType={[Function]}
                                 >
                                   <StatsParamsPanel
@@ -2102,6 +2158,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                       }
                                     }
                                     updateObservation={[Function]}
+                                    updateParams={[Function]}
                                     updateType={[Function]}
                                   >
                                     <ParamsPanel
@@ -2363,7 +2420,10 @@ exports[`containers/stats renders stats in initial state 1`] = `
                               onFiltersChange={[Function]}
                             >
                               <Connect(ResetOnUnmount)
+                                addCustomTimePeriodFilter={[Function]}
                                 addFilterType={[Function]}
+                                addThingFilter={[Function]}
+                                addTimePeriodFilter={[Function]}
                                 dateFilter={
                                   Object {
                                     "custom": Object {
@@ -2459,7 +2519,10 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                 updateTimePeriod={[Function]}
                               >
                                 <ResetOnUnmount
+                                  addCustomTimePeriodFilter={[Function]}
                                   addFilterType={[Function]}
+                                  addThingFilter={[Function]}
+                                  addTimePeriodFilter={[Function]}
                                   dateFilter={
                                     Object {
                                       "custom": Object {
@@ -2556,7 +2619,10 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                   updateTimePeriod={[Function]}
                                 >
                                   <StatsFiltersPanel
+                                    addCustomTimePeriodFilter={[Function]}
                                     addFilterType={[Function]}
+                                    addThingFilter={[Function]}
+                                    addTimePeriodFilter={[Function]}
                                     dateFilter={
                                       Object {
                                         "custom": Object {
@@ -2872,14 +2938,23 @@ exports[`containers/stats renders when loading stats 1`] = `
     >
       <Connect(withRouter(Connect(ResetOnUnmount)))>
         <withRouter(Connect(ResetOnUnmount))
+          addCustomTimePeriodFilter={[Function]}
+          addThingFilter={[Function]}
+          addTimePeriodFilter={[Function]}
           getStats={[Function]}
+          hasError={false}
           isLoading={true}
           reset={[Function]}
           stats={Array []}
+          updateParams={[Function]}
         >
           <Route>
             <Connect(ResetOnUnmount)
+              addCustomTimePeriodFilter={[Function]}
+              addThingFilter={[Function]}
+              addTimePeriodFilter={[Function]}
               getStats={[Function]}
+              hasError={false}
               history={
                 Object {
                   "action": "POP",
@@ -2929,9 +3004,14 @@ exports[`containers/stats renders when loading stats 1`] = `
               }
               reset={[Function]}
               stats={Array []}
+              updateParams={[Function]}
             >
               <ResetOnUnmount
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
                 getStats={[Function]}
+                hasError={false}
                 history={
                   Object {
                     "action": "POP",
@@ -2981,9 +3061,14 @@ exports[`containers/stats renders when loading stats 1`] = `
                 }
                 reset={[Function]}
                 stats={Array []}
+                updateParams={[Function]}
               >
                 <Stats
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
                   getStats={[Function]}
+                  hasError={false}
                   history={
                     Object {
                       "action": "POP",
@@ -3033,6 +3118,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                   }
                   reset={[Function]}
                   stats={Array []}
+                  updateParams={[Function]}
                 >
                   <div
                     className="container is-fluid section"
@@ -3073,6 +3159,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                               }
                             }
                             updateObservation={[Function]}
+                            updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <Route>
@@ -3148,6 +3235,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                   }
                                 }
                                 updateObservation={[Function]}
+                                updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ResetOnUnmount
@@ -3223,6 +3311,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     }
                                   }
                                   updateObservation={[Function]}
+                                  updateParams={[Function]}
                                   updateType={[Function]}
                                 >
                                   <StatsParamsPanel
@@ -3298,6 +3387,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                       }
                                     }
                                     updateObservation={[Function]}
+                                    updateParams={[Function]}
                                     updateType={[Function]}
                                   >
                                     <ParamsPanel
@@ -3573,7 +3663,10 @@ exports[`containers/stats renders when loading stats 1`] = `
                               onFiltersChange={[Function]}
                             >
                               <Connect(ResetOnUnmount)
+                                addCustomTimePeriodFilter={[Function]}
                                 addFilterType={[Function]}
+                                addThingFilter={[Function]}
+                                addTimePeriodFilter={[Function]}
                                 dateFilter={
                                   Object {
                                     "custom": Object {
@@ -3669,7 +3762,10 @@ exports[`containers/stats renders when loading stats 1`] = `
                                 updateTimePeriod={[Function]}
                               >
                                 <ResetOnUnmount
+                                  addCustomTimePeriodFilter={[Function]}
                                   addFilterType={[Function]}
+                                  addThingFilter={[Function]}
+                                  addTimePeriodFilter={[Function]}
                                   dateFilter={
                                     Object {
                                       "custom": Object {
@@ -3766,7 +3862,10 @@ exports[`containers/stats renders when loading stats 1`] = `
                                   updateTimePeriod={[Function]}
                                 >
                                   <StatsFiltersPanel
+                                    addCustomTimePeriodFilter={[Function]}
                                     addFilterType={[Function]}
+                                    addThingFilter={[Function]}
+                                    addTimePeriodFilter={[Function]}
                                     dateFilter={
                                       Object {
                                         "custom": Object {

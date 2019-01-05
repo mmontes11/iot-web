@@ -74,6 +74,7 @@ Object {
   "things": Object {
     "items": Array [],
     "selectedItem": null,
+    "showNotFoundError": false,
   },
 }
 `;
@@ -146,6 +147,7 @@ Object {
   "things": Object {
     "items": Array [],
     "selectedItem": null,
+    "showNotFoundError": false,
   },
 }
 `;
@@ -218,6 +220,7 @@ Object {
   "things": Object {
     "items": Array [],
     "selectedItem": null,
+    "showNotFoundError": false,
   },
 }
 `;

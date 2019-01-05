@@ -6,7 +6,7 @@ const initialState = {
   error: null,
 };
 
-export default (state = initialState, { type, statusCode, error }) => {
+export default (state = initialState, { type, statusCode, error, preserveError }) => {
   if (/_REQUEST$/.test(type)) {
     return { ...state, pending: state.pending + 1 };
   }
@@ -17,6 +17,9 @@ export default (state = initialState, { type, statusCode, error }) => {
     return { ...state, pending: state.pending - 1, statusCode, error };
   }
   if (type === RESET) {
+    if (preserveError) {
+      return { ...initialState, error: state.error };
+    }
     return initialState;
   }
   return state;

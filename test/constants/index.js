@@ -17,6 +17,7 @@ export const initialState = {
   things: {
     items: [],
     selectedItem: null,
+    shouldShowNotFoundError: false,
   },
   stats: {
     params: {

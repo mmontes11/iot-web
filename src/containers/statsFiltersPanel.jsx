@@ -8,6 +8,7 @@ import FiltersPanel from "components/filtersPanel";
 import * as filterActions from "actions/filters";
 import * as thingFilterActions from "actions/thingFilter";
 import * as dateFilterActions from "actions/dateFilter";
+import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 
 const StatsFiltersPanel = ({
   onFiltersChange,
@@ -39,7 +40,12 @@ const StatsFiltersPanel = ({
       onButtonClick: () => selectThingFilter(statsType, thingFilter.isActive),
       onItemClick: item => {
         updateThingFilter(item);
-        onFiltersChange();
+        onFiltersChange(
+          item,
+          dateFilter.timePeriod.selectedItem,
+          dateFilter.custom.startDate,
+          dateFilter.custom.endDate,
+        );
       },
       onDelete: item => {
         deleteFilterType(item);
@@ -58,7 +64,7 @@ const StatsFiltersPanel = ({
         onButtonClick: () => selectTimePeriod(dateFilter.timePeriod.isActive),
         onItemClick: item => {
           updateTimePeriod(item);
-          onFiltersChange();
+          onFiltersChange(thingFilter.selectedItem, item, dateFilter.custom.startDate, dateFilter.custom.endDate);
         },
       },
       custom: {
@@ -66,20 +72,39 @@ const StatsFiltersPanel = ({
           selected: dateFilter.custom.startDate,
           onChange: date => {
             updateStartDate(date);
-            onFiltersChange();
+            onFiltersChange(
+              thingFilter.selectedItem,
+              dateFilter.timePeriod.selectedItem,
+              date,
+              dateFilter.custom.endDate,
+            );
           },
         },
         endDate: {
           selected: dateFilter.custom.endDate,
           onChange: date => {
             updateEndDate(date);
-            onFiltersChange();
+            onFiltersChange(
+              thingFilter.selectedItem,
+              dateFilter.timePeriod.selectedItem,
+              dateFilter.custom.startDate,
+              date,
+            );
           },
         },
       },
       onDelete: item => {
         deleteFilterType(item);
-        onFiltersChange();
+        if (item === THING_FILTER_TYPE) {
+          onFiltersChange(
+            undefined,
+            dateFilter.timePeriod.selectedItem,
+            dateFilter.custom.startDate,
+            dateFilter.custom.endDate,
+          );
+        } else if (item === DATE_FILTER_TYPE) {
+          onFiltersChange(thingFilter.selectedItem);
+        }
       },
     }}
     selectedFilters={selectedFilters}
