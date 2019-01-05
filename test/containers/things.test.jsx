@@ -96,14 +96,6 @@ describe("containers/things", () => {
       .find("ThingItem")
       .first()
       .simulate("click");
-    wrapper
-      .find("#google-maps-link")
-      .first()
-      .simulate("click");
-    wrapper
-      .find("#stats-button")
-      .first()
-      .simulate("click");
     expect(wrapper).toMatchSnapshot();
   });
 });

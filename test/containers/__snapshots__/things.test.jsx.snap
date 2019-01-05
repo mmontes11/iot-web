@@ -1542,7 +1542,8 @@ exports[`containers/things renders things with loaded things and selected thing 
                           className="column is-three-quarters"
                         >
                           <ThingDetail
-                            onStatsClick={[Function]}
+                            onEventStatsClick={[Function]}
+                            onMeasurementStatsClick={[Function]}
                             thing={
                               Object {
                                 "geometry": Object {
@@ -1705,38 +1706,86 @@ exports[`containers/things renders things with loaded things and selected thing 
                                       </div>
                                     </TagList>
                                     <ThingActions
-                                      googleMapsUrl="https://www.google.es/maps"
-                                      onStatsClick={[Function]}
+                                      onEventStatsClick={[Function]}
+                                      onMeasurementStatsClick={[Function]}
+                                      thing={
+                                        Object {
+                                          "geometry": Object {
+                                            "coordinates": Array [
+                                              -40.58457,
+                                              40.21339,
+                                            ],
+                                            "type": "Point",
+                                          },
+                                          "googleMapsUrl": "https://www.google.es/maps",
+                                          "ip": "http://192.168.0.20",
+                                          "lastObservation": "2018-08-18T10:30:04.158Z",
+                                          "name": "foo",
+                                          "supportedObservationTypes": Object {
+                                            "event": Array [
+                                              "foo",
+                                              "bar",
+                                            ],
+                                            "measurement": Array [
+                                              "bar",
+                                              "foo",
+                                            ],
+                                          },
+                                          "topic": "bar",
+                                        }
+                                      }
                                     >
                                       <p
                                         className="buttons is-horizontal-center"
                                       >
                                         <a
-                                          className="button is-medium"
+                                          className="button"
                                           href="https://www.google.es/maps"
                                           id="google-maps-link"
                                           rel="noopener noreferrer"
                                           target="_blank"
                                         >
                                           <span
-                                            className="icon is-medium"
+                                            className="icon"
                                           >
                                             <i
                                               className="fas fa-map-marked"
                                             />
                                           </span>
+                                          <span>
+                                            Google Maps
+                                          </span>
                                         </a>
                                         <button
-                                          className="button is-medium"
-                                          id="stats-button"
+                                          className="button"
+                                          id="event-stats-button"
                                           onClick={[Function]}
                                         >
                                           <span
-                                            className="icon is-medium"
+                                            className="icon"
                                           >
                                             <i
                                               className="fas fa-chart-bar"
                                             />
+                                          </span>
+                                          <span>
+                                            Event Stats
+                                          </span>
+                                        </button>
+                                        <button
+                                          className="button"
+                                          id="measurement-stats-button"
+                                          onClick={[Function]}
+                                        >
+                                          <span
+                                            className="icon"
+                                          >
+                                            <i
+                                              className="fas fa-chart-bar"
+                                            />
+                                          </span>
+                                          <span>
+                                            Measurement Stats
                                           </span>
                                         </button>
                                       </p>
@@ -1923,22 +1972,16 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
             "search": "",
             "state": undefined,
           },
-          Object {
-            "hash": "",
-            "pathname": "/stats",
-            "search": "",
-            "state": undefined,
-          },
         ],
         "go": [Function],
         "goBack": [Function],
         "goForward": [Function],
-        "index": 2,
-        "length": 3,
+        "index": 1,
+        "length": 2,
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "pathname": "/stats",
+          "pathname": "/things",
           "search": "",
           "state": undefined,
         },
@@ -1981,22 +2024,16 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                     "search": "",
                     "state": undefined,
                   },
-                  Object {
-                    "hash": "",
-                    "pathname": "/stats",
-                    "search": "",
-                    "state": undefined,
-                  },
                 ],
                 "go": [Function],
                 "goBack": [Function],
                 "goForward": [Function],
-                "index": 2,
-                "length": 3,
+                "index": 1,
+                "length": 2,
                 "listen": [Function],
                 "location": Object {
                   "hash": "",
-                  "pathname": "/stats",
+                  "pathname": "/things",
                   "search": "",
                   "state": undefined,
                 },
@@ -2007,7 +2044,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
             location={
               Object {
                 "hash": "",
-                "pathname": "/stats",
+                "pathname": "/things",
                 "search": "",
                 "state": undefined,
               }
@@ -2042,22 +2079,16 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                       "search": "",
                       "state": undefined,
                     },
-                    Object {
-                      "hash": "",
-                      "pathname": "/stats",
-                      "search": "",
-                      "state": undefined,
-                    },
                   ],
                   "go": [Function],
                   "goBack": [Function],
                   "goForward": [Function],
-                  "index": 2,
-                  "length": 3,
+                  "index": 1,
+                  "length": 2,
                   "listen": [Function],
                   "location": Object {
                     "hash": "",
-                    "pathname": "/stats",
+                    "pathname": "/things",
                     "search": "",
                     "state": undefined,
                   },
@@ -2069,7 +2100,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
               location={
                 Object {
                   "hash": "",
-                  "pathname": "/stats",
+                  "pathname": "/things",
                   "search": "",
                   "state": undefined,
                 }
@@ -2160,22 +2191,16 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                         "search": "",
                         "state": undefined,
                       },
-                      Object {
-                        "hash": "",
-                        "pathname": "/stats",
-                        "search": "",
-                        "state": undefined,
-                      },
                     ],
                     "go": [Function],
                     "goBack": [Function],
                     "goForward": [Function],
-                    "index": 2,
-                    "length": 3,
+                    "index": 1,
+                    "length": 2,
                     "listen": [Function],
                     "location": Object {
                       "hash": "",
-                      "pathname": "/stats",
+                      "pathname": "/things",
                       "search": "",
                       "state": undefined,
                     },
@@ -2187,7 +2212,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                 location={
                   Object {
                     "hash": "",
-                    "pathname": "/stats",
+                    "pathname": "/things",
                     "search": "",
                     "state": undefined,
                   }
@@ -2279,22 +2304,16 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                           "search": "",
                           "state": undefined,
                         },
-                        Object {
-                          "hash": "",
-                          "pathname": "/stats",
-                          "search": "",
-                          "state": undefined,
-                        },
                       ],
                       "go": [Function],
                       "goBack": [Function],
                       "goForward": [Function],
-                      "index": 2,
-                      "length": 3,
+                      "index": 1,
+                      "length": 2,
                       "listen": [Function],
                       "location": Object {
                         "hash": "",
-                        "pathname": "/stats",
+                        "pathname": "/things",
                         "search": "",
                         "state": undefined,
                       },
@@ -2306,7 +2325,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                   location={
                     Object {
                       "hash": "",
-                      "pathname": "/stats",
+                      "pathname": "/things",
                       "search": "",
                       "state": undefined,
                     }
@@ -2421,7 +2440,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                           className="column is-three-quarters"
                         >
                           <ThingDetail
-                            onStatsClick={[Function]}
+                            onEventStatsClick={[Function]}
+                            onMeasurementStatsClick={[Function]}
                             thing={
                               Object {
                                 "geometry": Object {
@@ -2584,38 +2604,86 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                       </div>
                                     </TagList>
                                     <ThingActions
-                                      googleMapsUrl="https://www.google.es/maps"
-                                      onStatsClick={[Function]}
+                                      onEventStatsClick={[Function]}
+                                      onMeasurementStatsClick={[Function]}
+                                      thing={
+                                        Object {
+                                          "geometry": Object {
+                                            "coordinates": Array [
+                                              -40.58457,
+                                              40.21339,
+                                            ],
+                                            "type": "Point",
+                                          },
+                                          "googleMapsUrl": "https://www.google.es/maps",
+                                          "ip": "http://192.168.0.20",
+                                          "lastObservation": "2018-08-18T10:30:04.158Z",
+                                          "name": "foo",
+                                          "supportedObservationTypes": Object {
+                                            "event": Array [
+                                              "foo",
+                                              "bar",
+                                            ],
+                                            "measurement": Array [
+                                              "bar",
+                                              "foo",
+                                            ],
+                                          },
+                                          "topic": "bar",
+                                        }
+                                      }
                                     >
                                       <p
                                         className="buttons is-horizontal-center"
                                       >
                                         <a
-                                          className="button is-medium"
+                                          className="button"
                                           href="https://www.google.es/maps"
                                           id="google-maps-link"
                                           rel="noopener noreferrer"
                                           target="_blank"
                                         >
                                           <span
-                                            className="icon is-medium"
+                                            className="icon"
                                           >
                                             <i
                                               className="fas fa-map-marked"
                                             />
                                           </span>
+                                          <span>
+                                            Google Maps
+                                          </span>
                                         </a>
                                         <button
-                                          className="button is-medium"
-                                          id="stats-button"
+                                          className="button"
+                                          id="event-stats-button"
                                           onClick={[Function]}
                                         >
                                           <span
-                                            className="icon is-medium"
+                                            className="icon"
                                           >
                                             <i
                                               className="fas fa-chart-bar"
                                             />
+                                          </span>
+                                          <span>
+                                            Event Stats
+                                          </span>
+                                        </button>
+                                        <button
+                                          className="button"
+                                          id="measurement-stats-button"
+                                          onClick={[Function]}
+                                        >
+                                          <span
+                                            className="icon"
+                                          >
+                                            <i
+                                              className="fas fa-chart-bar"
+                                            />
+                                          </span>
+                                          <span>
+                                            Measurement Stats
                                           </span>
                                         </button>
                                       </p>

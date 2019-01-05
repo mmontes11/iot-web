@@ -6,7 +6,7 @@ import Map from "containers/map";
 import { pointToLatLng } from "helpers/geometry";
 import { formatDate } from "helpers/dateFormatter";
 
-const ThingDetail = ({ thing, onStatsClick }) => (
+const ThingDetail = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => (
   <div className="card">
     <div className="card-content">
       <div className="columns">
@@ -27,7 +27,11 @@ const ThingDetail = ({ thing, onStatsClick }) => (
           </p>
           <TagList label="Events:" tags={thing.supportedObservationTypes.event} tagStyle="is-warning" />
           <TagList label="Measurements:" tags={thing.supportedObservationTypes.measurement} tagStyle="is-warning" />
-          <ThingActions googleMapsUrl={thing.googleMapsUrl} onStatsClick={() => onStatsClick()} />
+          <ThingActions
+            thing={thing}
+            onEventStatsClick={onEventStatsClick}
+            onMeasurementStatsClick={onMeasurementStatsClick}
+          />
         </div>
         <div className="column is-two-fifths">
           <Map marker={{ label: thing.name, point: pointToLatLng(thing.geometry) }} />
@@ -39,11 +43,8 @@ const ThingDetail = ({ thing, onStatsClick }) => (
 
 ThingDetail.propTypes = {
   thing: PropTypes.shape({}).isRequired,
-  onStatsClick: PropTypes.func,
-};
-
-ThingDetail.defaultProps = {
-  onStatsClick: null,
+  onEventStatsClick: PropTypes.func.isRequired,
+  onMeasurementStatsClick: PropTypes.func.isRequired,
 };
 
 export default ThingDetail;

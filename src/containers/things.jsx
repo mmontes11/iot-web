@@ -47,8 +47,15 @@ class Things extends React.Component {
   _resetPathToRoot = () => {
     this.props.history.push("/things");
   };
-  _onStatsClick = () => {
-    this.props.history.push("/stats");
+  _onEventStatsClick = thing => {
+    this.props.history.push(
+      `/stats/event/${thing.supportedObservationTypes.event[0]}?thing=${thing.name}&timePeriod=day`,
+    );
+  };
+  _onMeasurementStatsClick = thing => {
+    this.props.history.push(
+      `/stats/measurement/${thing.supportedObservationTypes.measurement[0]}?thing=${thing.name}&timePeriod=day`,
+    );
   };
   render() {
     const { isLoading, things, selectedThing, shouldShowNotFoundError, showNotFoundError } = this.props;
@@ -71,7 +78,11 @@ class Things extends React.Component {
             </div>
             {selectedThing && (
               <div className="column is-three-quarters">
-                <ThingDetail thing={selectedThing} onStatsClick={this._onStatsClick} />
+                <ThingDetail
+                  thing={selectedThing}
+                  onEventStatsClick={() => this._onEventStatsClick(selectedThing)}
+                  onMeasurementStatsClick={() => this._onMeasurementStatsClick(selectedThing)}
+                />
               </div>
             )}
           </div>

@@ -1,39 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ThingActions = ({ googleMapsUrl, onStatsClick }) => (
+const ThingActions = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => (
   <p className="buttons is-horizontal-center">
-    {googleMapsUrl && (
-      <a
-        id="google-maps-link"
-        className="button is-medium"
-        href={googleMapsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span className="icon is-medium">
+    {thing.googleMapsUrl && (
+      <a id="google-maps-link" className="button" href={thing.googleMapsUrl} target="_blank" rel="noopener noreferrer">
+        <span className="icon">
           <i className="fas fa-map-marked" />
         </span>
+        <span>Google Maps</span>
       </a>
     )}
-    {onStatsClick && (
-      <button id="stats-button" className="button is-medium" onClick={() => onStatsClick()}>
-        <span className="icon is-medium">
+    {thing.supportedObservationTypes.event.length > 0 && (
+      <button id="event-stats-button" className="button" onClick={() => onEventStatsClick()}>
+        <span className="icon">
           <i className="fas fa-chart-bar" />
         </span>
+        <span>Event Stats</span>
+      </button>
+    )}
+    {thing.supportedObservationTypes.measurement.length > 0 && (
+      <button id="measurement-stats-button" className="button" onClick={() => onMeasurementStatsClick()}>
+        <span className="icon">
+          <i className="fas fa-chart-bar" />
+        </span>
+        <span>Measurement Stats</span>
       </button>
     )}
   </p>
 );
 
 ThingActions.propTypes = {
-  googleMapsUrl: PropTypes.string,
-  onStatsClick: PropTypes.func,
-};
-
-ThingActions.defaultProps = {
-  googleMapsUrl: null,
-  onStatsClick: null,
+  thing: PropTypes.shape({}).isRequired,
+  onEventStatsClick: PropTypes.func.isRequired,
+  onMeasurementStatsClick: PropTypes.func.isRequired,
 };
 
 export default ThingActions;
