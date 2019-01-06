@@ -15,12 +15,12 @@ $navbar-box-shadow-color: hsl(0, 0%, 90%);
 
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/components/navbar.sass";
 @import "../../node_modules/bulma/sass/elements/_all.sass";
 @import "../../node_modules/bulma/sass/layout/_all.sass";
 @import "../../node_modules/bulma/sass/grid/columns.sass";
 @import "../../node_modules/bulma/sass/components/modal.sass";
 @import "../../node_modules/bulma/sass/components/message.sass";
-@import "../../node_modules/bulma/sass/components/navbar.sass";
 @import "../../node_modules/bulma/sass/components/card.sass";
 @import "../../node_modules/bulma/sass/components/dropdown.sass";
 @import "../../node_modules/react-datepicker/dist/react-datepicker.css";
