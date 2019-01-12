@@ -1,6 +1,6 @@
 {
   "name": "iot-web",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Martín Montes <martin11lrx@gmail.com>",
   "license": "MIT",
   "description": "React app for visualizing data about your things",
