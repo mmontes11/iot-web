@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/dropdown renders in active state 1`] = `
+<div
+  className="dropdown is-active"
+>
+  <div
+    className="dropdown-trigger"
+  >
+    <button
+      aria-controls="dropdown-menu"
+      aria-haspopup="true"
+      className="button"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <span>
+        Select item
+      </span>
+      <span
+        className="icon is-small"
+      >
+        <i
+          aria-hidden="true"
+          className="fas"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    className="dropdown-menu"
+    id="dropdown-menu"
+    role="menu"
+  >
+    <div
+      className="dropdown-content"
+    >
+      <div
+        className="dropdown-item"
+        key="Zm9v"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        foo
+      </div>
+      <div
+        className="dropdown-item"
+        key="YmFy"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        bar
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/dropdown renders in disabled state 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    className="dropdown-trigger"
+  >
+    <button
+      aria-controls="dropdown-menu"
+      aria-haspopup="true"
+      className="button"
+      disabled={true}
+      onClick={[Function]}
+    >
+      <span>
+        Select item
+      </span>
+      <span
+        className="icon is-small"
+      >
+        <i
+          aria-hidden="true"
+          className="fas"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    className="dropdown-menu"
+    id="dropdown-menu"
+    role="menu"
+  >
+    <div
+      className="dropdown-content"
+    >
+      <div
+        className="dropdown-item"
+        key="Zm9v"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        foo
+      </div>
+      <div
+        className="dropdown-item"
+        key="YmFy"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        bar
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/dropdown renders in initial state 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    className="dropdown-trigger"
+  >
+    <button
+      aria-controls="dropdown-menu"
+      aria-haspopup="true"
+      className="button"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <span>
+        Select item
+      </span>
+      <span
+        className="icon is-small"
+      >
+        <i
+          aria-hidden="true"
+          className="fas"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    className="dropdown-menu"
+    id="dropdown-menu"
+    role="menu"
+  >
+    <div
+      className="dropdown-content"
+    >
+      <div
+        className="dropdown-item"
+        key="Zm9v"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        foo
+      </div>
+      <div
+        className="dropdown-item"
+        key="YmFy"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        bar
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components/dropdown renders in loading state 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    className="dropdown-trigger"
+  >
+    <button
+      aria-controls="dropdown-menu"
+      aria-haspopup="true"
+      className="button is-loading"
+      disabled={false}
+      onClick={[Function]}
+    >
+      <span>
+        Select item
+      </span>
+      <span
+        className="icon is-small"
+      >
+        <i
+          aria-hidden="true"
+          className="fas"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    className="dropdown-menu"
+    id="dropdown-menu"
+    role="menu"
+  >
+    <div
+      className="dropdown-content"
+    >
+      <div
+        className="dropdown-item"
+        key="Zm9v"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        foo
+      </div>
+      <div
+        className="dropdown-item"
+        key="YmFy"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex={0}
+      >
+        bar
+      </div>
+    </div>
+  </div>
+</div>
+`;

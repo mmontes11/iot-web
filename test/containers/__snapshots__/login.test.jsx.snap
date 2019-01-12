@@ -1,0 +1,614 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers/login renders login in initial state and unmounts 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Connect(ResetOnUnmount))>
+    <Connect(ResetOnUnmount)
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      logout={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setUsername={[Function]}
+      username={null}
+    >
+      <ResetOnUnmount
+        isAuth={[Function]}
+        isLoading={false}
+        login={[Function]}
+        logout={[Function]}
+        password={null}
+        reset={[Function]}
+        setPassword={[Function]}
+        setUsername={[Function]}
+        username={null}
+      >
+        <Login
+          isAuth={[Function]}
+          isLoading={false}
+          login={[Function]}
+          logout={[Function]}
+          password={null}
+          reset={[Function]}
+          setPassword={[Function]}
+          setUsername={[Function]}
+          username={null}
+        >
+          <section
+            className="hero is-fullheight"
+          >
+            <div
+              className="hero-body"
+            >
+              <div
+                className="container has-text-centered"
+              >
+                <div
+                  className="column is-4 is-offset-4"
+                >
+                  <div
+                    className="box"
+                  >
+                    <p
+                      className="title is-1"
+                    >
+                      IoT
+                    </p>
+                    <form>
+                      <div
+                        className="field"
+                      >
+                        <div
+                          className="control has-icons-left"
+                        >
+                          <input
+                            className="input is-large"
+                            id="username-input"
+                            onChange={[Function]}
+                            placeholder="Username"
+                            value=""
+                          />
+                          <span
+                            className="icon is-large is-left"
+                          >
+                            <i
+                              className="fas fa-user"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className="field"
+                      >
+                        <div
+                          className="control has-icons-left"
+                        >
+                          <input
+                            className="input is-large"
+                            id="password-input"
+                            onChange={[Function]}
+                            placeholder="Password"
+                            type="password"
+                            value=""
+                          />
+                          <span
+                            className="icon is-large is-left"
+                          >
+                            <i
+                              className="fas fa-lock"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <button
+                        className="button is-block is-primary is-large is-fullwidth"
+                        disabled={false}
+                        id="login-button"
+                        onClick={[Function]}
+                      >
+                        Login
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Login>
+      </ResetOnUnmount>
+    </Connect(ResetOnUnmount)>
+  </Connect(Connect(ResetOnUnmount))>
+</Provider>
+`;
+
+exports[`containers/login renders login in loading state 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Connect(ResetOnUnmount))>
+    <Connect(ResetOnUnmount)
+      isAuth={[Function]}
+      isLoading={true}
+      login={[Function]}
+      logout={[Function]}
+      password="password"
+      setPassword={[Function]}
+      setUsername={[Function]}
+      username="username"
+    >
+      <ResetOnUnmount
+        isAuth={[Function]}
+        isLoading={true}
+        login={[Function]}
+        logout={[Function]}
+        password="password"
+        reset={[Function]}
+        setPassword={[Function]}
+        setUsername={[Function]}
+        username="username"
+      >
+        <Login
+          isAuth={[Function]}
+          isLoading={true}
+          login={[Function]}
+          logout={[Function]}
+          password="password"
+          reset={[Function]}
+          setPassword={[Function]}
+          setUsername={[Function]}
+          username="username"
+        >
+          <section
+            className="hero is-fullheight"
+          >
+            <div
+              className="hero-body"
+            >
+              <div
+                className="container has-text-centered"
+              >
+                <div
+                  className="column is-4 is-offset-4"
+                >
+                  <div
+                    className="box"
+                  >
+                    <p
+                      className="title is-1"
+                    >
+                      IoT
+                    </p>
+                    <form>
+                      <div
+                        className="field"
+                      >
+                        <div
+                          className="control has-icons-left"
+                        >
+                          <input
+                            className="input is-large"
+                            id="username-input"
+                            onChange={[Function]}
+                            placeholder="Username"
+                            value="username"
+                          />
+                          <span
+                            className="icon is-large is-left"
+                          >
+                            <i
+                              className="fas fa-user"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className="field"
+                      >
+                        <div
+                          className="control has-icons-left"
+                        >
+                          <input
+                            className="input is-large"
+                            id="password-input"
+                            onChange={[Function]}
+                            placeholder="Password"
+                            type="password"
+                            value="password"
+                          />
+                          <span
+                            className="icon is-large is-left"
+                          >
+                            <i
+                              className="fas fa-lock"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <button
+                        className="button is-block is-primary is-large is-fullwidth is-loading"
+                        disabled={true}
+                        id="login-button"
+                        onClick={[Function]}
+                      >
+                        Login
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Login>
+      </ResetOnUnmount>
+    </Connect(ResetOnUnmount)>
+  </Connect(Connect(ResetOnUnmount))>
+</Provider>
+`;
+
+exports[`containers/login simulates successful login 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Connect(ResetOnUnmount))>
+    <Connect(ResetOnUnmount)
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      logout={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setUsername={[Function]}
+      username={null}
+    >
+      <ResetOnUnmount
+        isAuth={[Function]}
+        isLoading={false}
+        login={[Function]}
+        logout={[Function]}
+        password={null}
+        reset={[Function]}
+        setPassword={[Function]}
+        setUsername={[Function]}
+        username={null}
+      >
+        <Login
+          isAuth={[Function]}
+          isLoading={false}
+          login={[Function]}
+          logout={[Function]}
+          password={null}
+          reset={[Function]}
+          setPassword={[Function]}
+          setUsername={[Function]}
+          username={null}
+        >
+          <section
+            className="hero is-fullheight"
+          >
+            <div
+              className="hero-body"
+            >
+              <div
+                className="container has-text-centered"
+              >
+                <div
+                  className="column is-4 is-offset-4"
+                >
+                  <div
+                    className="box"
+                  >
+                    <p
+                      className="title is-1"
+                    >
+                      IoT
+                    </p>
+                    <form>
+                      <div
+                        className="field"
+                      >
+                        <div
+                          className="control has-icons-left"
+                        >
+                          <input
+                            className="input is-large"
+                            id="username-input"
+                            onChange={[Function]}
+                            placeholder="Username"
+                            value=""
+                          />
+                          <span
+                            className="icon is-large is-left"
+                          >
+                            <i
+                              className="fas fa-user"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className="field"
+                      >
+                        <div
+                          className="control has-icons-left"
+                        >
+                          <input
+                            className="input is-large"
+                            id="password-input"
+                            onChange={[Function]}
+                            placeholder="Password"
+                            type="password"
+                            value=""
+                          />
+                          <span
+                            className="icon is-large is-left"
+                          >
+                            <i
+                              className="fas fa-lock"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <button
+                        className="button is-block is-primary is-large is-fullwidth"
+                        disabled={false}
+                        id="login-button"
+                        onClick={[Function]}
+                      >
+                        Login
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Login>
+      </ResetOnUnmount>
+    </Connect(ResetOnUnmount)>
+  </Connect(Connect(ResetOnUnmount))>
+</Provider>
+`;
+
+exports[`containers/login simulates successful login 2`] = `
+Object {
+  "app": Object {
+    "isHamburgerMenuExpanded": false,
+    "isMapDialogOpened": false,
+    "showError": true,
+  },
+  "auth": Object {
+    "isAuth": false,
+    "password": null,
+    "username": null,
+  },
+  "request": Object {
+    "error": null,
+    "pending": 0,
+    "statusCode": null,
+  },
+  "stats": Object {
+    "filters": Object {
+      "dateFilter": Object {
+        "custom": Object {
+          "endDate": null,
+          "startDate": null,
+        },
+        "isCustomSelected": false,
+        "timePeriod": Object {
+          "isActive": false,
+          "isDisabled": false,
+          "isLoading": false,
+          "items": Array [],
+          "selectedItem": null,
+        },
+      },
+      "items": Array [],
+      "thingFilter": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+      "type": Object {
+        "isActive": false,
+        "isDisabled": false,
+        "items": Array [
+          "date",
+          "thing",
+        ],
+      },
+    },
+    "isLoading": false,
+    "items": Array [],
+    "params": Object {
+      "observation": Object {
+        "isActive": false,
+        "isDisabled": true,
+        "isLoading": false,
+        "items": Array [],
+        "selectedItem": null,
+      },
+      "reset": Object {
+        "isDisabled": true,
+      },
+      "type": Object {
+        "isActive": false,
+        "items": Array [
+          "event",
+          "measurement",
+        ],
+        "selectedItem": null,
+      },
+    },
+  },
+  "things": Object {
+    "items": Array [],
+    "selectedItem": null,
+    "shouldShowNotFoundError": false,
+  },
+}
+`;
+
+exports[`containers/login simulates successful login 3`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Connect(ResetOnUnmount))>
+    <Connect(ResetOnUnmount)
+      isAuth={[Function]}
+      isLoading={false}
+      login={[Function]}
+      logout={[Function]}
+      password={null}
+      setPassword={[Function]}
+      setUsername={[Function]}
+      username={null}
+    >
+      <ResetOnUnmount
+        isAuth={[Function]}
+        isLoading={false}
+        login={[Function]}
+        logout={[Function]}
+        password={null}
+        reset={[Function]}
+        setPassword={[Function]}
+        setUsername={[Function]}
+        username={null}
+      >
+        <Login
+          isAuth={[Function]}
+          isLoading={false}
+          login={[Function]}
+          logout={[Function]}
+          password={null}
+          reset={[Function]}
+          setPassword={[Function]}
+          setUsername={[Function]}
+          username={null}
+        >
+          <section
+            className="hero is-fullheight"
+          >
+            <div
+              className="hero-body"
+            >
+              <div
+                className="container has-text-centered"
+              >
+                <div
+                  className="column is-4 is-offset-4"
+                >
+                  <div
+                    className="box"
+                  >
+                    <p
+                      className="title is-1"
+                    >
+                      IoT
+                    </p>
+                    <form>
+                      <div
+                        className="field"
+                      >
+                        <div
+                          className="control has-icons-left"
+                        >
+                          <input
+                            className="input is-large"
+                            id="username-input"
+                            onChange={[Function]}
+                            placeholder="Username"
+                            value=""
+                          />
+                          <span
+                            className="icon is-large is-left"
+                          >
+                            <i
+                              className="fas fa-user"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <div
+                        className="field"
+                      >
+                        <div
+                          className="control has-icons-left"
+                        >
+                          <input
+                            className="input is-large"
+                            id="password-input"
+                            onChange={[Function]}
+                            placeholder="Password"
+                            type="password"
+                            value=""
+                          />
+                          <span
+                            className="icon is-large is-left"
+                          >
+                            <i
+                              className="fas fa-lock"
+                            />
+                          </span>
+                        </div>
+                      </div>
+                      <button
+                        className="button is-block is-primary is-large is-fullwidth"
+                        disabled={false}
+                        id="login-button"
+                        onClick={[Function]}
+                      >
+                        Login
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Login>
+      </ResetOnUnmount>
+    </Connect(ResetOnUnmount)>
+  </Connect(Connect(ResetOnUnmount))>
+</Provider>
+`;
