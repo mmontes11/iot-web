@@ -1,6 +1,5 @@
 import { STATS_UPDATED, STATS_REQUEST, STATS_REQUEST_SUCCESS, STATS_REQUEST_ERROR } from "constants/actionTypes/stats";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
-import { normalizeStats } from "helpers/statsNormalizer";
 import iotClient from "lib/iotClient";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 import { RESET } from "constants/actionTypes/common";
@@ -101,12 +100,7 @@ export const getStats = () => (dispatch, getState) => {
     () => dispatch({ type: STATS_REQUEST }),
     res => {
       dispatch({ type: STATS_REQUEST_SUCCESS });
-      let stats;
-      const responseStats = res.body.stats;
-      if (responseStats) {
-        stats = responseStats.map(normalizeStats);
-      }
-      dispatch({ type: STATS_UPDATED, stats });
+      dispatch({ type: STATS_UPDATED, stats: res.body.stats });
     },
     () => {
       dispatch({ type: STATS_REQUEST_ERROR });

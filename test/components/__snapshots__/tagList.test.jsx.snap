@@ -18,13 +18,13 @@ exports[`components/tagList renders tags 1`] = `
   >
     <span
       className="tag is-warning"
-      key="Zm9v"
+      key="foo"
     >
       foo
     </span>
     <span
       className="tag is-warning"
-      key="YmFy"
+      key="bar"
     >
       bar
     </span>
@@ -41,13 +41,13 @@ exports[`components/tagList renders tags without label 1`] = `
   >
     <span
       className="tag is-warning"
-      key="Zm9v"
+      key="foo"
     >
       foo
     </span>
     <span
       className="tag is-warning"
-      key="YmFy"
+      key="bar"
     >
       bar
     </span>
@@ -71,13 +71,13 @@ exports[`components/tagList renders tags without style 1`] = `
   >
     <span
       className="tag"
-      key="Zm9v"
+      key="foo"
     >
       foo
     </span>
     <span
       className="tag"
-      key="YmFy"
+      key="bar"
     >
       bar
     </span>

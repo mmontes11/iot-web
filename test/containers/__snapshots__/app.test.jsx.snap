@@ -1250,7 +1250,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                     >
                                                                       <div
                                                                         className="dropdown-item"
-                                                                        key="ZXZlbnQ="
+                                                                        key="event"
                                                                         onClick={[Function]}
                                                                         onKeyPress={[Function]}
                                                                         role="button"
@@ -1260,7 +1260,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                       </div>
                                                                       <div
                                                                         className="dropdown-item"
-                                                                        key="bWVhc3VyZW1lbnQ="
+                                                                        key="measurement"
                                                                         onClick={[Function]}
                                                                         onKeyPress={[Function]}
                                                                         role="button"
@@ -1831,7 +1831,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                     >
                                                                       <div
                                                                         className="dropdown-item"
-                                                                        key="ZGF0ZQ=="
+                                                                        key="date"
                                                                         onClick={[Function]}
                                                                         onKeyPress={[Function]}
                                                                         role="button"
@@ -1841,7 +1841,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                       </div>
                                                                       <div
                                                                         className="dropdown-item"
-                                                                        key="dGhpbmc="
+                                                                        key="thing"
                                                                         onClick={[Function]}
                                                                         onKeyPress={[Function]}
                                                                         role="button"
@@ -5538,7 +5538,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                     >
                                                                       <div
                                                                         className="dropdown-item"
-                                                                        key="ZXZlbnQ="
+                                                                        key="event"
                                                                         onClick={[Function]}
                                                                         onKeyPress={[Function]}
                                                                         role="button"
@@ -5548,7 +5548,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                       </div>
                                                                       <div
                                                                         className="dropdown-item"
-                                                                        key="bWVhc3VyZW1lbnQ="
+                                                                        key="measurement"
                                                                         onClick={[Function]}
                                                                         onKeyPress={[Function]}
                                                                         role="button"
@@ -6119,7 +6119,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                     >
                                                                       <div
                                                                         className="dropdown-item"
-                                                                        key="ZGF0ZQ=="
+                                                                        key="date"
                                                                         onClick={[Function]}
                                                                         onKeyPress={[Function]}
                                                                         role="button"
@@ -6129,7 +6129,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                       </div>
                                                                       <div
                                                                         className="dropdown-item"
-                                                                        key="dGhpbmc="
+                                                                        key="thing"
                                                                         onClick={[Function]}
                                                                         onKeyPress={[Function]}
                                                                         role="button"

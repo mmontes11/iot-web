@@ -5,11 +5,11 @@ import { statsWithUnits, statsWithoutUnits } from "../constants";
 
 describe("components/barChart", () => {
   it("renders chart with units in title", () => {
-    const wrapper = shallow(<BarChart stats={statsWithUnits} />);
+    const wrapper = shallow(<BarChart {...statsWithUnits} />);
     expect(wrapper).toMatchSnapshot();
   });
   it("renders chart withou units in title", () => {
-    const wrapper = shallow(<BarChart stats={statsWithoutUnits} />);
+    const wrapper = shallow(<BarChart {...statsWithoutUnits} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

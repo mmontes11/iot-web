@@ -37,7 +37,7 @@ exports[`components/dropdown renders in active state 1`] = `
     >
       <div
         className="dropdown-item"
-        key="Zm9v"
+        key="foo"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -47,7 +47,7 @@ exports[`components/dropdown renders in active state 1`] = `
       </div>
       <div
         className="dropdown-item"
-        key="YmFy"
+        key="bar"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -97,7 +97,7 @@ exports[`components/dropdown renders in disabled state 1`] = `
     >
       <div
         className="dropdown-item"
-        key="Zm9v"
+        key="foo"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -107,7 +107,7 @@ exports[`components/dropdown renders in disabled state 1`] = `
       </div>
       <div
         className="dropdown-item"
-        key="YmFy"
+        key="bar"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -157,7 +157,7 @@ exports[`components/dropdown renders in initial state 1`] = `
     >
       <div
         className="dropdown-item"
-        key="Zm9v"
+        key="foo"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -167,7 +167,7 @@ exports[`components/dropdown renders in initial state 1`] = `
       </div>
       <div
         className="dropdown-item"
-        key="YmFy"
+        key="bar"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -217,7 +217,7 @@ exports[`components/dropdown renders in loading state 1`] = `
     >
       <div
         className="dropdown-item"
-        key="Zm9v"
+        key="foo"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"
@@ -227,7 +227,7 @@ exports[`components/dropdown renders in loading state 1`] = `
       </div>
       <div
         className="dropdown-item"
-        key="YmFy"
+        key="bar"
         onClick={[Function]}
         onKeyPress={[Function]}
         role="button"

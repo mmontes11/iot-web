@@ -2677,7 +2677,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                             >
                                                               <div
                                                                 className="dropdown-item"
-                                                                key="ZXZlbnQ="
+                                                                key="event"
                                                                 onClick={[Function]}
                                                                 onKeyPress={[Function]}
                                                                 role="button"
@@ -2687,7 +2687,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                               </div>
                                                               <div
                                                                 className="dropdown-item"
-                                                                key="bWVhc3VyZW1lbnQ="
+                                                                key="measurement"
                                                                 onClick={[Function]}
                                                                 onKeyPress={[Function]}
                                                                 role="button"
@@ -3258,7 +3258,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                             >
                                                               <div
                                                                 className="dropdown-item"
-                                                                key="ZGF0ZQ=="
+                                                                key="date"
                                                                 onClick={[Function]}
                                                                 onKeyPress={[Function]}
                                                                 role="button"
@@ -3268,7 +3268,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                               </div>
                                                               <div
                                                                 className="dropdown-item"
-                                                                key="dGhpbmc="
+                                                                key="thing"
                                                                 onClick={[Function]}
                                                                 onKeyPress={[Function]}
                                                                 role="button"

@@ -37,7 +37,7 @@ const Dropdown = ({
           {items &&
             items.map(item => (
               <div
-                key={btoa(item)}
+                key={item}
                 className="dropdown-item"
                 onClick={() => {
                   onItemClick(item);

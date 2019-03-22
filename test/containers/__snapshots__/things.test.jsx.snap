@@ -990,7 +990,7 @@ exports[`containers/things renders things with loaded things 1`] = `
                         >
                           <ThingItem
                             isSelected={false}
-                            key="Zm9v"
+                            key="foo"
                             name="foo"
                             onClick={[Function]}
                           >
@@ -1511,7 +1511,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                         >
                           <ThingItem
                             isSelected={true}
-                            key="Zm9v"
+                            key="foo"
                             name="foo"
                             onClick={[Function]}
                           >
@@ -1654,13 +1654,13 @@ exports[`containers/things renders things with loaded things and selected thing 
                                         >
                                           <span
                                             className="tag is-warning"
-                                            key="Zm9v"
+                                            key="foo"
                                           >
                                             foo
                                           </span>
                                           <span
                                             className="tag is-warning"
-                                            key="YmFy"
+                                            key="bar"
                                           >
                                             bar
                                           </span>
@@ -1692,13 +1692,13 @@ exports[`containers/things renders things with loaded things and selected thing 
                                         >
                                           <span
                                             className="tag is-warning"
-                                            key="YmFy"
+                                            key="bar"
                                           >
                                             bar
                                           </span>
                                           <span
                                             className="tag is-warning"
-                                            key="Zm9v"
+                                            key="foo"
                                           >
                                             foo
                                           </span>
@@ -2409,7 +2409,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                         >
                           <ThingItem
                             isSelected={true}
-                            key="Zm9v"
+                            key="foo"
                             name="foo"
                             onClick={[Function]}
                           >
@@ -2552,13 +2552,13 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                         >
                                           <span
                                             className="tag is-warning"
-                                            key="Zm9v"
+                                            key="foo"
                                           >
                                             foo
                                           </span>
                                           <span
                                             className="tag is-warning"
-                                            key="YmFy"
+                                            key="bar"
                                           >
                                             bar
                                           </span>
@@ -2590,13 +2590,13 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                         >
                                           <span
                                             className="tag is-warning"
-                                            key="YmFy"
+                                            key="bar"
                                           >
                                             bar
                                           </span>
                                           <span
                                             className="tag is-warning"
-                                            key="Zm9v"
+                                            key="foo"
                                           >
                                             foo
                                           </span>

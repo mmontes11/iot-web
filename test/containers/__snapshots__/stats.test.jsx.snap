@@ -67,45 +67,39 @@ exports[`containers/stats renders stats barcharts 1`] = `
               Object {
                 "data": Array [
                   Object {
-                    "name": "min",
+                    "thing": "raspi",
                     "value": 10,
                   },
                   Object {
-                    "name": "avg",
-                    "value": 20,
+                    "thing": "raspi2",
+                    "value": 11,
                   },
                   Object {
-                    "name": "max",
-                    "value": 30,
+                    "thing": "raspi3",
+                    "value": 12,
                   },
                 ],
-                "title": Object {
-                  "thing": "thing",
-                  "type": "measurement",
-                  "unit": Object {
-                    "symbol": "ºC",
-                  },
+                "type": "measurement",
+                "unit": Object {
+                  "symbol": "ºC",
                 },
               },
               Object {
                 "data": Array [
                   Object {
-                    "name": "min",
+                    "thing": "raspi",
                     "value": 10,
                   },
                   Object {
-                    "name": "avg",
-                    "value": 20,
+                    "thing": "raspi2",
+                    "value": 11,
                   },
                   Object {
-                    "name": "max",
-                    "value": 30,
+                    "thing": "raspi3",
+                    "value": 12,
                   },
                 ],
-                "title": Object {
-                  "thing": "thing",
-                  "type": "event",
-                },
+                "type": "measurement2",
               },
             ]
           }
@@ -171,45 +165,39 @@ exports[`containers/stats renders stats barcharts 1`] = `
                   Object {
                     "data": Array [
                       Object {
-                        "name": "min",
+                        "thing": "raspi",
                         "value": 10,
                       },
                       Object {
-                        "name": "avg",
-                        "value": 20,
+                        "thing": "raspi2",
+                        "value": 11,
                       },
                       Object {
-                        "name": "max",
-                        "value": 30,
+                        "thing": "raspi3",
+                        "value": 12,
                       },
                     ],
-                    "title": Object {
-                      "thing": "thing",
-                      "type": "measurement",
-                      "unit": Object {
-                        "symbol": "ºC",
-                      },
+                    "type": "measurement",
+                    "unit": Object {
+                      "symbol": "ºC",
                     },
                   },
                   Object {
                     "data": Array [
                       Object {
-                        "name": "min",
+                        "thing": "raspi",
                         "value": 10,
                       },
                       Object {
-                        "name": "avg",
-                        "value": 20,
+                        "thing": "raspi2",
+                        "value": 11,
                       },
                       Object {
-                        "name": "max",
-                        "value": 30,
+                        "thing": "raspi3",
+                        "value": 12,
                       },
                     ],
-                    "title": Object {
-                      "thing": "thing",
-                      "type": "event",
-                    },
+                    "type": "measurement2",
                   },
                 ]
               }
@@ -274,45 +262,39 @@ exports[`containers/stats renders stats barcharts 1`] = `
                     Object {
                       "data": Array [
                         Object {
-                          "name": "min",
+                          "thing": "raspi",
                           "value": 10,
                         },
                         Object {
-                          "name": "avg",
-                          "value": 20,
+                          "thing": "raspi2",
+                          "value": 11,
                         },
                         Object {
-                          "name": "max",
-                          "value": 30,
+                          "thing": "raspi3",
+                          "value": 12,
                         },
                       ],
-                      "title": Object {
-                        "thing": "thing",
-                        "type": "measurement",
-                        "unit": Object {
-                          "symbol": "ºC",
-                        },
+                      "type": "measurement",
+                      "unit": Object {
+                        "symbol": "ºC",
                       },
                     },
                     Object {
                       "data": Array [
                         Object {
-                          "name": "min",
+                          "thing": "raspi",
                           "value": 10,
                         },
                         Object {
-                          "name": "avg",
-                          "value": 20,
+                          "thing": "raspi2",
+                          "value": 11,
                         },
                         Object {
-                          "name": "max",
-                          "value": 30,
+                          "thing": "raspi3",
+                          "value": 12,
                         },
                       ],
-                      "title": Object {
-                        "thing": "thing",
-                        "type": "event",
-                      },
+                      "type": "measurement2",
                     },
                   ]
                 }
@@ -377,45 +359,39 @@ exports[`containers/stats renders stats barcharts 1`] = `
                       Object {
                         "data": Array [
                           Object {
-                            "name": "min",
+                            "thing": "raspi",
                             "value": 10,
                           },
                           Object {
-                            "name": "avg",
-                            "value": 20,
+                            "thing": "raspi2",
+                            "value": 11,
                           },
                           Object {
-                            "name": "max",
-                            "value": 30,
+                            "thing": "raspi3",
+                            "value": 12,
                           },
                         ],
-                        "title": Object {
-                          "thing": "thing",
-                          "type": "measurement",
-                          "unit": Object {
-                            "symbol": "ºC",
-                          },
+                        "type": "measurement",
+                        "unit": Object {
+                          "symbol": "ºC",
                         },
                       },
                       Object {
                         "data": Array [
                           Object {
-                            "name": "min",
+                            "thing": "raspi",
                             "value": 10,
                           },
                           Object {
-                            "name": "avg",
-                            "value": 20,
+                            "thing": "raspi2",
+                            "value": 11,
                           },
                           Object {
-                            "name": "max",
-                            "value": 30,
+                            "thing": "raspi3",
+                            "value": 12,
                           },
                         ],
-                        "title": Object {
-                          "thing": "thing",
-                          "type": "event",
-                        },
+                        "type": "measurement2",
                       },
                     ]
                   }
@@ -786,7 +762,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                                   >
                                                     <div
                                                       className="dropdown-item"
-                                                      key="ZXZlbnQ="
+                                                      key="event"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -796,7 +772,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                                     </div>
                                                     <div
                                                       className="dropdown-item"
-                                                      key="bWVhc3VyZW1lbnQ="
+                                                      key="measurement"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -893,30 +869,27 @@ exports[`containers/stats renders stats barcharts 1`] = `
                           </withRouter(Connect(ResetOnUnmount))>
                         </Connect(withRouter(Connect(ResetOnUnmount)))>
                         <BarChart
-                          key="bWVhc3VyZW1lbnQtdGhpbmc="
-                          stats={
-                            Object {
-                              "data": Array [
-                                Object {
-                                  "name": "min",
-                                  "value": 10,
-                                },
-                                Object {
-                                  "name": "avg",
-                                  "value": 20,
-                                },
-                                Object {
-                                  "name": "max",
-                                  "value": 30,
-                                },
-                              ],
-                              "title": Object {
-                                "thing": "thing",
-                                "type": "measurement",
-                                "unit": Object {
-                                  "symbol": "ºC",
-                                },
+                          data={
+                            Array [
+                              Object {
+                                "thing": "raspi",
+                                "value": 10,
                               },
+                              Object {
+                                "thing": "raspi2",
+                                "value": 11,
+                              },
+                              Object {
+                                "thing": "raspi3",
+                                "value": 12,
+                              },
+                            ]
+                          }
+                          key="measurement"
+                          type="measurement"
+                          unit={
+                            Object {
+                              "symbol": "ºC",
                             }
                           }
                         >
@@ -932,7 +905,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                 <p
                                   className="title is-3 has-text-primary has-text-centered is-spaced"
                                 >
-                                  measurement stats of thing (ºC)
+                                  measurement (ºC)
                                 </p>
                                 <div
                                   className="barchart"
@@ -960,16 +933,16 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                         data={
                                           Array [
                                             Object {
-                                              "name": "min",
+                                              "thing": "raspi",
                                               "value": 10,
                                             },
                                             Object {
-                                              "name": "avg",
-                                              "value": 20,
+                                              "thing": "raspi2",
+                                              "value": 11,
                                             },
                                             Object {
-                                              "name": "max",
-                                              "value": 30,
+                                              "thing": "raspi3",
+                                              "value": 12,
                                             },
                                           ]
                                         }
@@ -1015,29 +988,25 @@ exports[`containers/stats renders stats barcharts 1`] = `
                           </div>
                         </BarChart>
                         <BarChart
-                          key="ZXZlbnQtdGhpbmc="
-                          stats={
-                            Object {
-                              "data": Array [
-                                Object {
-                                  "name": "min",
-                                  "value": 10,
-                                },
-                                Object {
-                                  "name": "avg",
-                                  "value": 20,
-                                },
-                                Object {
-                                  "name": "max",
-                                  "value": 30,
-                                },
-                              ],
-                              "title": Object {
-                                "thing": "thing",
-                                "type": "event",
+                          data={
+                            Array [
+                              Object {
+                                "thing": "raspi",
+                                "value": 10,
                               },
-                            }
+                              Object {
+                                "thing": "raspi2",
+                                "value": 11,
+                              },
+                              Object {
+                                "thing": "raspi3",
+                                "value": 12,
+                              },
+                            ]
                           }
+                          key="measurement2"
+                          type="measurement2"
+                          unit={null}
                         >
                           <div
                             className="box"
@@ -1051,7 +1020,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                 <p
                                   className="title is-3 has-text-primary has-text-centered is-spaced"
                                 >
-                                  event stats of thing
+                                  measurement2
                                 </p>
                                 <div
                                   className="barchart"
@@ -1079,16 +1048,16 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                         data={
                                           Array [
                                             Object {
-                                              "name": "min",
+                                              "thing": "raspi",
                                               "value": 10,
                                             },
                                             Object {
-                                              "name": "avg",
-                                              "value": 20,
+                                              "thing": "raspi2",
+                                              "value": 11,
                                             },
                                             Object {
-                                              "name": "max",
-                                              "value": 30,
+                                              "thing": "raspi3",
+                                              "value": 12,
                                             },
                                           ]
                                         }
@@ -1608,7 +1577,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                                   >
                                                     <div
                                                       className="dropdown-item"
-                                                      key="ZGF0ZQ=="
+                                                      key="date"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -1618,7 +1587,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                                     </div>
                                                     <div
                                                       className="dropdown-item"
-                                                      key="dGhpbmc="
+                                                      key="thing"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -2256,7 +2225,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                                   >
                                                     <div
                                                       className="dropdown-item"
-                                                      key="ZXZlbnQ="
+                                                      key="event"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -2266,7 +2235,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                                     </div>
                                                     <div
                                                       className="dropdown-item"
-                                                      key="bWVhc3VyZW1lbnQ="
+                                                      key="measurement"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -2837,7 +2806,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                                   >
                                                     <div
                                                       className="dropdown-item"
-                                                      key="ZGF0ZQ=="
+                                                      key="date"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -2847,7 +2816,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                                     </div>
                                                     <div
                                                       className="dropdown-item"
-                                                      key="dGhpbmc="
+                                                      key="thing"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -3485,7 +3454,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                                   >
                                                     <div
                                                       className="dropdown-item"
-                                                      key="ZXZlbnQ="
+                                                      key="event"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -3495,7 +3464,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                                     </div>
                                                     <div
                                                       className="dropdown-item"
-                                                      key="bWVhc3VyZW1lbnQ="
+                                                      key="measurement"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -4080,7 +4049,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                                   >
                                                     <div
                                                       className="dropdown-item"
-                                                      key="ZGF0ZQ=="
+                                                      key="date"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"
@@ -4090,7 +4059,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                                     </div>
                                                     <div
                                                       className="dropdown-item"
-                                                      key="dGhpbmc="
+                                                      key="thing"
                                                       onClick={[Function]}
                                                       onKeyPress={[Function]}
                                                       role="button"

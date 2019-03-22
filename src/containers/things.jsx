@@ -69,7 +69,7 @@ class Things extends React.Component {
             <div className="column is-one-quarter">
               {things.map(thing => (
                 <ThingItem
-                  key={btoa(thing.name)}
+                  key={thing.name}
                   name={thing.name}
                   isSelected={this._isSelected(thing)}
                   onClick={() => this._selectThing(thing)}

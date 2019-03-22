@@ -13,7 +13,7 @@ exports[`components/barChart renders chart with units in title 1`] = `
       <p
         className="title is-3 has-text-primary has-text-centered is-spaced"
       >
-        measurement stats of thing (ºC)
+        measurement (ºC)
       </p>
       <div
         className="barchart"
@@ -29,16 +29,16 @@ exports[`components/barChart renders chart with units in title 1`] = `
             data={
               Array [
                 Object {
-                  "name": "min",
+                  "thing": "raspi",
                   "value": 10,
                 },
                 Object {
-                  "name": "avg",
-                  "value": 20,
+                  "thing": "raspi2",
+                  "value": 11,
                 },
                 Object {
-                  "name": "max",
-                  "value": 30,
+                  "thing": "raspi3",
+                  "value": 12,
                 },
               ]
             }
@@ -69,7 +69,7 @@ exports[`components/barChart renders chart with units in title 1`] = `
               allowDataOverflow={false}
               allowDecimals={true}
               allowDuplicatedCategory={true}
-              dataKey="name"
+              dataKey="thing"
               domain={
                 Array [
                   0,
@@ -151,15 +151,22 @@ exports[`components/barChart renders chart with units in title 1`] = `
               }
               wrapperStyle={Object {}}
             />
+            <Legend
+              align="center"
+              iconSize={14}
+              layout="horizontal"
+              verticalAlign="bottom"
+            />
             <Bar
               animationBegin={0}
               animationDuration={400}
               animationEasing="ease"
               data={Array []}
               dataKey="value"
-              fill="#70c1b3"
+              fill="#247ba0"
               hide={false}
               isAnimationActive={true}
+              key="value"
               layout="vertical"
               legendType="rect"
               minPointSize={0}
@@ -189,7 +196,7 @@ exports[`components/barChart renders chart withou units in title 1`] = `
       <p
         className="title is-3 has-text-primary has-text-centered is-spaced"
       >
-        event stats of thing
+        measurement2
       </p>
       <div
         className="barchart"
@@ -205,16 +212,16 @@ exports[`components/barChart renders chart withou units in title 1`] = `
             data={
               Array [
                 Object {
-                  "name": "min",
+                  "thing": "raspi",
                   "value": 10,
                 },
                 Object {
-                  "name": "avg",
-                  "value": 20,
+                  "thing": "raspi2",
+                  "value": 11,
                 },
                 Object {
-                  "name": "max",
-                  "value": 30,
+                  "thing": "raspi3",
+                  "value": 12,
                 },
               ]
             }
@@ -245,7 +252,7 @@ exports[`components/barChart renders chart withou units in title 1`] = `
               allowDataOverflow={false}
               allowDecimals={true}
               allowDuplicatedCategory={true}
-              dataKey="name"
+              dataKey="thing"
               domain={
                 Array [
                   0,
@@ -327,15 +334,22 @@ exports[`components/barChart renders chart withou units in title 1`] = `
               }
               wrapperStyle={Object {}}
             />
+            <Legend
+              align="center"
+              iconSize={14}
+              layout="horizontal"
+              verticalAlign="bottom"
+            />
             <Bar
               animationBegin={0}
               animationDuration={400}
               animationEasing="ease"
               data={Array []}
               dataKey="value"
-              fill="#70c1b3"
+              fill="#247ba0"
               hide={false}
               isAnimationActive={true}
+              key="value"
               layout="vertical"
               legendType="rect"
               minPointSize={0}

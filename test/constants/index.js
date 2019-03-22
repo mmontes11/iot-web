@@ -90,44 +90,38 @@ export const thing = {
 export const statsWithUnits = {
   data: [
     {
-      name: "min",
+      thing: "raspi",
       value: 10,
     },
     {
-      name: "avg",
-      value: 20,
+      thing: "raspi2",
+      value: 11,
     },
     {
-      name: "max",
-      value: 30,
+      thing: "raspi3",
+      value: 12,
     },
   ],
-  title: {
-    type: "measurement",
-    thing: "thing",
-    unit: {
-      symbol: "ºC",
-    },
-  },
+  type: "measurement",
+  unit: {
+    symbol: "ºC",
+  }
 };
 
 export const statsWithoutUnits = {
   data: [
     {
-      name: "min",
+      thing: "raspi",
       value: 10,
     },
     {
-      name: "avg",
-      value: 20,
+      thing: "raspi2",
+      value: 11,
     },
     {
-      name: "max",
-      value: 30,
+      thing: "raspi3",
+      value: 12,
     },
   ],
-  title: {
-    type: "event",
-    thing: "thing",
-  },
+  type: "measurement2"
 };

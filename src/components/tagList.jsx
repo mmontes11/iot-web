@@ -16,7 +16,7 @@ const TagList = ({ label, tags, tagStyle }) => {
       )}
       <div className="tags">
         {tags.map(tag => (
-          <span key={btoa(tag)} className={tagClass}>
+          <span key={tag} className={tagClass}>
             {tag}
           </span>
         ))}
