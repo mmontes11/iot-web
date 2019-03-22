@@ -1,6 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import configureStore from "redux-mock-store";
+import { Provider } from "react-redux";
 import { MemoryRouter } from "react-router-dom";
 import thunk from "redux-thunk";
 import App from "containers/app";
@@ -10,9 +11,11 @@ describe("containers/app", () => {
   it("renders the app without auth", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <App store={store} />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/"]} keyLength={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -28,36 +31,44 @@ describe("containers/app", () => {
   it("renders app with auth in /", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <App store={store} />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/"]} keyLength={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
   it("renders the app with auth in /foo", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/foo"]} keyLength={0}>
-        <App store={store} />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/foo"]} keyLength={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
   it("renders the with auth in /things", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/things"]} keyLength={0}>
-        <App store={store} />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/things"]} keyLength={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
   it("renders the with auth in /stats", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
-        <App store={store} />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -78,9 +89,11 @@ describe("containers/app", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
-        <App store={store} />
-      </MemoryRouter>,
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });

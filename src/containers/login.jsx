@@ -87,7 +87,7 @@ Login.defaultProps = {
   password: "",
 };
 
-const withRouter = connect(
+const withConnect = connect(
   state => ({
     username: state.auth.username,
     password: state.auth.password,
@@ -97,6 +97,6 @@ const withRouter = connect(
 );
 
 export default compose(
-  withRouter,
+  withConnect,
   withResetOnUnmount,
 )(Login);

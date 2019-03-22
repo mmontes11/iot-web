@@ -53,56 +53,16 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
         }
       }
     >
-      <withRouter(Connect(Connect(ResetOnUnmount)))>
-        <Route>
-          <Connect(Connect(ResetOnUnmount))
-            history={
-              Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-            location={
-              Object {
-                "hash": "",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              }
-            }
-            match={
-              Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              }
-            }
-          >
+      <Connect(withRouter(Connect(ResetOnUnmount)))>
+        <withRouter(Connect(ResetOnUnmount))
+          getThings={[Function]}
+          isLoading={false}
+          selectThing={[Function]}
+          selectedThing={null}
+          showNotFoundError={[Function]}
+          things={Array []}
+        >
+          <Route>
             <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
@@ -328,9 +288,9 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
                 </Things>
               </ResetOnUnmount>
             </Connect(ResetOnUnmount)>
-          </Connect(Connect(ResetOnUnmount))>
-        </Route>
-      </withRouter(Connect(Connect(ResetOnUnmount)))>
+          </Route>
+        </withRouter(Connect(ResetOnUnmount))>
+      </Connect(withRouter(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -389,56 +349,16 @@ exports[`containers/things renders things in loading state 1`] = `
         }
       }
     >
-      <withRouter(Connect(Connect(ResetOnUnmount)))>
-        <Route>
-          <Connect(Connect(ResetOnUnmount))
-            history={
-              Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
-                },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-            location={
-              Object {
-                "hash": "",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              }
-            }
-            match={
-              Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              }
-            }
-          >
+      <Connect(withRouter(Connect(ResetOnUnmount)))>
+        <withRouter(Connect(ResetOnUnmount))
+          getThings={[Function]}
+          isLoading={true}
+          selectThing={[Function]}
+          selectedThing={null}
+          showNotFoundError={[Function]}
+          things={Array []}
+        >
+          <Route>
             <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
@@ -621,9 +541,9 @@ exports[`containers/things renders things in loading state 1`] = `
                 </Things>
               </ResetOnUnmount>
             </Connect(ResetOnUnmount)>
-          </Connect(Connect(ResetOnUnmount))>
-        </Route>
-      </withRouter(Connect(Connect(ResetOnUnmount)))>
+          </Route>
+        </withRouter(Connect(ResetOnUnmount))>
+      </Connect(withRouter(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -682,56 +602,43 @@ exports[`containers/things renders things with loaded things 1`] = `
         }
       }
     >
-      <withRouter(Connect(Connect(ResetOnUnmount)))>
-        <Route>
-          <Connect(Connect(ResetOnUnmount))
-            history={
+      <Connect(withRouter(Connect(ResetOnUnmount)))>
+        <withRouter(Connect(ResetOnUnmount))
+          getThings={[Function]}
+          isLoading={false}
+          selectThing={[Function]}
+          selectedThing={null}
+          showNotFoundError={[Function]}
+          things={
+            Array [
               Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
+                "geometry": Object {
+                  "coordinates": Array [
+                    -40.58457,
+                    40.21339,
+                  ],
+                  "type": "Point",
                 },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-            location={
-              Object {
-                "hash": "",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              }
-            }
-            match={
-              Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              }
-            }
-          >
+                "googleMapsUrl": "https://www.google.es/maps",
+                "ip": "http://192.168.0.20",
+                "lastObservation": "2018-08-18T10:30:04.158Z",
+                "name": "foo",
+                "supportedObservationTypes": Object {
+                  "event": Array [
+                    "foo",
+                    "bar",
+                  ],
+                  "measurement": Array [
+                    "bar",
+                    "foo",
+                  ],
+                },
+                "topic": "bar",
+              },
+            ]
+          }
+        >
+          <Route>
             <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
@@ -1067,9 +974,9 @@ exports[`containers/things renders things with loaded things 1`] = `
                 </Things>
               </ResetOnUnmount>
             </Connect(ResetOnUnmount)>
-          </Connect(Connect(ResetOnUnmount))>
-        </Route>
-      </withRouter(Connect(Connect(ResetOnUnmount)))>
+          </Route>
+        </withRouter(Connect(ResetOnUnmount))>
+      </Connect(withRouter(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -1128,56 +1035,68 @@ exports[`containers/things renders things with loaded things and selected thing 
         }
       }
     >
-      <withRouter(Connect(Connect(ResetOnUnmount)))>
-        <Route>
-          <Connect(Connect(ResetOnUnmount))
-            history={
-              Object {
-                "action": "POP",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
+      <Connect(withRouter(Connect(ResetOnUnmount)))>
+        <withRouter(Connect(ResetOnUnmount))
+          getThings={[Function]}
+          isLoading={false}
+          selectThing={[Function]}
+          selectedThing={
+            Object {
+              "geometry": Object {
+                "coordinates": Array [
+                  -40.58457,
+                  40.21339,
                 ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 0,
-                "length": 1,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "pathname": "/",
-                  "search": "",
-                  "state": undefined,
+                "type": "Point",
+              },
+              "googleMapsUrl": "https://www.google.es/maps",
+              "ip": "http://192.168.0.20",
+              "lastObservation": "2018-08-18T10:30:04.158Z",
+              "name": "foo",
+              "supportedObservationTypes": Object {
+                "event": Array [
+                  "foo",
+                  "bar",
+                ],
+                "measurement": Array [
+                  "bar",
+                  "foo",
+                ],
+              },
+              "topic": "bar",
+            }
+          }
+          showNotFoundError={[Function]}
+          things={
+            Array [
+              Object {
+                "geometry": Object {
+                  "coordinates": Array [
+                    -40.58457,
+                    40.21339,
+                  ],
+                  "type": "Point",
                 },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-            location={
-              Object {
-                "hash": "",
-                "pathname": "/",
-                "search": "",
-                "state": undefined,
-              }
-            }
-            match={
-              Object {
-                "isExact": true,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              }
-            }
-          >
+                "googleMapsUrl": "https://www.google.es/maps",
+                "ip": "http://192.168.0.20",
+                "lastObservation": "2018-08-18T10:30:04.158Z",
+                "name": "foo",
+                "supportedObservationTypes": Object {
+                  "event": Array [
+                    "foo",
+                    "bar",
+                  ],
+                  "measurement": Array [
+                    "bar",
+                    "foo",
+                  ],
+                },
+                "topic": "bar",
+              },
+            ]
+          }
+        >
+          <Route>
             <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
@@ -1935,9 +1854,9 @@ exports[`containers/things renders things with loaded things and selected thing 
                 </Things>
               </ResetOnUnmount>
             </Connect(ResetOnUnmount)>
-          </Connect(Connect(ResetOnUnmount))>
-        </Route>
-      </withRouter(Connect(Connect(ResetOnUnmount)))>
+          </Route>
+        </withRouter(Connect(ResetOnUnmount))>
+      </Connect(withRouter(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>
@@ -2002,62 +1921,68 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
         }
       }
     >
-      <withRouter(Connect(Connect(ResetOnUnmount)))>
-        <Route>
-          <Connect(Connect(ResetOnUnmount))
-            history={
-              Object {
-                "action": "PUSH",
-                "block": [Function],
-                "canGo": [Function],
-                "createHref": [Function],
-                "entries": Array [
-                  Object {
-                    "hash": "",
-                    "pathname": "/",
-                    "search": "",
-                    "state": undefined,
-                  },
-                  Object {
-                    "hash": "",
-                    "pathname": "/things",
-                    "search": "",
-                    "state": undefined,
-                  },
+      <Connect(withRouter(Connect(ResetOnUnmount)))>
+        <withRouter(Connect(ResetOnUnmount))
+          getThings={[Function]}
+          isLoading={false}
+          selectThing={[Function]}
+          selectedThing={
+            Object {
+              "geometry": Object {
+                "coordinates": Array [
+                  -40.58457,
+                  40.21339,
                 ],
-                "go": [Function],
-                "goBack": [Function],
-                "goForward": [Function],
-                "index": 1,
-                "length": 2,
-                "listen": [Function],
-                "location": Object {
-                  "hash": "",
-                  "pathname": "/things",
-                  "search": "",
-                  "state": undefined,
+                "type": "Point",
+              },
+              "googleMapsUrl": "https://www.google.es/maps",
+              "ip": "http://192.168.0.20",
+              "lastObservation": "2018-08-18T10:30:04.158Z",
+              "name": "foo",
+              "supportedObservationTypes": Object {
+                "event": Array [
+                  "foo",
+                  "bar",
+                ],
+                "measurement": Array [
+                  "bar",
+                  "foo",
+                ],
+              },
+              "topic": "bar",
+            }
+          }
+          showNotFoundError={[Function]}
+          things={
+            Array [
+              Object {
+                "geometry": Object {
+                  "coordinates": Array [
+                    -40.58457,
+                    40.21339,
+                  ],
+                  "type": "Point",
                 },
-                "push": [Function],
-                "replace": [Function],
-              }
-            }
-            location={
-              Object {
-                "hash": "",
-                "pathname": "/things",
-                "search": "",
-                "state": undefined,
-              }
-            }
-            match={
-              Object {
-                "isExact": false,
-                "params": Object {},
-                "path": "/",
-                "url": "/",
-              }
-            }
-          >
+                "googleMapsUrl": "https://www.google.es/maps",
+                "ip": "http://192.168.0.20",
+                "lastObservation": "2018-08-18T10:30:04.158Z",
+                "name": "foo",
+                "supportedObservationTypes": Object {
+                  "event": Array [
+                    "foo",
+                    "bar",
+                  ],
+                  "measurement": Array [
+                    "bar",
+                    "foo",
+                  ],
+                },
+                "topic": "bar",
+              },
+            ]
+          }
+        >
+          <Route>
             <Connect(ResetOnUnmount)
               getThings={[Function]}
               history={
@@ -2100,14 +2025,14 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
               location={
                 Object {
                   "hash": "",
-                  "pathname": "/things",
+                  "pathname": "/",
                   "search": "",
                   "state": undefined,
                 }
               }
               match={
                 Object {
-                  "isExact": false,
+                  "isExact": true,
                   "params": Object {},
                   "path": "/",
                   "url": "/",
@@ -2212,14 +2137,14 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                 location={
                   Object {
                     "hash": "",
-                    "pathname": "/things",
+                    "pathname": "/",
                     "search": "",
                     "state": undefined,
                   }
                 }
                 match={
                   Object {
-                    "isExact": false,
+                    "isExact": true,
                     "params": Object {},
                     "path": "/",
                     "url": "/",
@@ -2325,14 +2250,14 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                   location={
                     Object {
                       "hash": "",
-                      "pathname": "/things",
+                      "pathname": "/",
                       "search": "",
                       "state": undefined,
                     }
                   }
                   match={
                     Object {
-                      "isExact": false,
+                      "isExact": true,
                       "params": Object {},
                       "path": "/",
                       "url": "/",
@@ -2833,9 +2758,9 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                 </Things>
               </ResetOnUnmount>
             </Connect(ResetOnUnmount)>
-          </Connect(Connect(ResetOnUnmount))>
-        </Route>
-      </withRouter(Connect(Connect(ResetOnUnmount)))>
+          </Route>
+        </withRouter(Connect(ResetOnUnmount))>
+      </Connect(withRouter(Connect(ResetOnUnmount)))>
     </Provider>
   </Router>
 </MemoryRouter>

@@ -136,7 +136,7 @@ const withConnect = connect(
 );
 
 export default compose(
-  withRouter,
   withConnect,
+  withRouter,
   withResetOnUnmount,
 )(Things);

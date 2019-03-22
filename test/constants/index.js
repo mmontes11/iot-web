@@ -105,7 +105,7 @@ export const statsWithUnits = {
   type: "measurement",
   unit: {
     symbol: "ºC",
-  }
+  },
 };
 
 export const statsWithoutUnits = {
@@ -123,5 +123,5 @@ export const statsWithoutUnits = {
       value: 12,
     },
   ],
-  type: "measurement2"
+  type: "measurement2",
 };

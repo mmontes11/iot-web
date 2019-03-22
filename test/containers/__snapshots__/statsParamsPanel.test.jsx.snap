@@ -45,7 +45,7 @@ exports[`containers/statsParamsPanel renders before selecting observation 1`] = 
       }
     }
   >
-    <Connect(withRouter(Connect(ResetOnUnmount)))
+    <Connect(Connect(ResetOnUnmount))
       onParamsSelected={[Function]}
       onReset={[Function]}
     />
@@ -98,7 +98,7 @@ exports[`containers/statsParamsPanel renders before selecting observation 2`] = 
       }
     }
   >
-    <Connect(withRouter(Connect(ResetOnUnmount)))
+    <Connect(Connect(ResetOnUnmount))
       onParamsSelected={[Function]}
       onReset={[Function]}
     />
@@ -151,7 +151,7 @@ exports[`containers/statsParamsPanel renders before selecting type 1`] = `
       }
     }
   >
-    <Connect(withRouter(Connect(ResetOnUnmount)))
+    <Connect(Connect(ResetOnUnmount))
       onParamsSelected={[Function]}
       onReset={[Function]}
     />
@@ -204,7 +204,7 @@ exports[`containers/statsParamsPanel renders in initial state 1`] = `
       }
     }
   >
-    <Connect(withRouter(Connect(ResetOnUnmount)))
+    <Connect(Connect(ResetOnUnmount))
       onParamsSelected={[Function]}
       onReset={[Function]}
     />
@@ -257,7 +257,7 @@ exports[`containers/statsParamsPanel renders when loading observations 1`] = `
       }
     }
   >
-    <Connect(withRouter(Connect(ResetOnUnmount)))
+    <Connect(Connect(ResetOnUnmount))
       onParamsSelected={[Function]}
       onReset={[Function]}
     />
@@ -310,7 +310,7 @@ exports[`containers/statsParamsPanel renders when observation is selected 1`] = 
       }
     }
   >
-    <Connect(withRouter(Connect(ResetOnUnmount)))
+    <Connect(Connect(ResetOnUnmount))
       onParamsSelected={[Function]}
       onReset={[Function]}
     />
@@ -363,7 +363,7 @@ exports[`containers/statsParamsPanel renders when type is selected 1`] = `
       }
     }
   >
-    <Connect(withRouter(Connect(ResetOnUnmount)))
+    <Connect(Connect(ResetOnUnmount))
       onParamsSelected={[Function]}
       onReset={[Function]}
     />

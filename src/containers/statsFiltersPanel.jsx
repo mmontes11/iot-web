@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import { compose } from "recompose";
 import PropTypes from "prop-types";
@@ -146,7 +145,6 @@ const withConnect = connect(
 );
 
 export default compose(
-  withRouter,
   withConnect,
   withResetOnUnmount,
 )(StatsFiltersPanel);

@@ -455,7 +455,7 @@ exports[`components/main renders a main in / path 1`] = `
                 }
                 path="/things"
               >
-                <withRouter(Connect(Connect(ResetOnUnmount)))
+                <Connect(withRouter(Connect(ResetOnUnmount)))
                   history={
                     Object {
                       "action": "REPLACE",
@@ -503,55 +503,61 @@ exports[`components/main renders a main in / path 1`] = `
                     }
                   }
                 >
-                  <Route>
-                    <Connect(Connect(ResetOnUnmount))
-                      history={
-                        Object {
-                          "action": "REPLACE",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/things",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
+                  <withRouter(Connect(ResetOnUnmount))
+                    getThings={[Function]}
+                    history={
+                      Object {
+                        "action": "REPLACE",
+                        "block": [Function],
+                        "canGo": [Function],
+                        "createHref": [Function],
+                        "entries": Array [
+                          Object {
                             "hash": "",
                             "pathname": "/things",
                             "search": "",
                             "state": undefined,
                           },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      location={
-                        Object {
+                        ],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "index": 0,
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
                           "hash": "",
                           "pathname": "/things",
                           "search": "",
                           "state": undefined,
-                        }
+                        },
+                        "push": [Function],
+                        "replace": [Function],
                       }
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/things",
-                          "url": "/things",
-                        }
+                    }
+                    isLoading={false}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/things",
+                        "search": "",
+                        "state": undefined,
                       }
-                    >
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/things",
+                        "url": "/things",
+                      }
+                    }
+                    selectThing={[Function]}
+                    selectedThing={null}
+                    showNotFoundError={[Function]}
+                    things={Array []}
+                  >
+                    <Route>
                       <Connect(ResetOnUnmount)
                         getThings={[Function]}
                         history={
@@ -777,9 +783,9 @@ exports[`components/main renders a main in / path 1`] = `
                           </Things>
                         </ResetOnUnmount>
                       </Connect(ResetOnUnmount)>
-                    </Connect(Connect(ResetOnUnmount))>
-                  </Route>
-                </withRouter(Connect(Connect(ResetOnUnmount)))>
+                    </Route>
+                  </withRouter(Connect(ResetOnUnmount))>
+                </Connect(withRouter(Connect(ResetOnUnmount)))>
               </Route>
             </Switch>
           </main>
@@ -1245,7 +1251,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                 }
                 path="/things"
               >
-                <withRouter(Connect(Connect(ResetOnUnmount)))
+                <Connect(withRouter(Connect(ResetOnUnmount)))
                   history={
                     Object {
                       "action": "REPLACE",
@@ -1293,55 +1299,61 @@ exports[`components/main renders a main in /foo path 1`] = `
                     }
                   }
                 >
-                  <Route>
-                    <Connect(Connect(ResetOnUnmount))
-                      history={
-                        Object {
-                          "action": "REPLACE",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/things",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
+                  <withRouter(Connect(ResetOnUnmount))
+                    getThings={[Function]}
+                    history={
+                      Object {
+                        "action": "REPLACE",
+                        "block": [Function],
+                        "canGo": [Function],
+                        "createHref": [Function],
+                        "entries": Array [
+                          Object {
                             "hash": "",
                             "pathname": "/things",
                             "search": "",
                             "state": undefined,
                           },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      location={
-                        Object {
+                        ],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "index": 0,
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
                           "hash": "",
                           "pathname": "/things",
                           "search": "",
                           "state": undefined,
-                        }
+                        },
+                        "push": [Function],
+                        "replace": [Function],
                       }
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/things",
-                          "url": "/things",
-                        }
+                    }
+                    isLoading={false}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/things",
+                        "search": "",
+                        "state": undefined,
                       }
-                    >
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/things",
+                        "url": "/things",
+                      }
+                    }
+                    selectThing={[Function]}
+                    selectedThing={null}
+                    showNotFoundError={[Function]}
+                    things={Array []}
+                  >
+                    <Route>
                       <Connect(ResetOnUnmount)
                         getThings={[Function]}
                         history={
@@ -1567,9 +1579,9 @@ exports[`components/main renders a main in /foo path 1`] = `
                           </Things>
                         </ResetOnUnmount>
                       </Connect(ResetOnUnmount)>
-                    </Connect(Connect(ResetOnUnmount))>
-                  </Route>
-                </withRouter(Connect(Connect(ResetOnUnmount)))>
+                    </Route>
+                  </withRouter(Connect(ResetOnUnmount))>
+                </Connect(withRouter(Connect(ResetOnUnmount)))>
               </Route>
             </Switch>
           </main>
@@ -2321,11 +2333,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                                 <div
                                   className="column is-three-quarters"
                                 >
-                                  <Connect(withRouter(Connect(ResetOnUnmount)))
+                                  <Connect(Connect(ResetOnUnmount))
                                     onParamsSelected={[Function]}
                                     onReset={[Function]}
                                   >
-                                    <withRouter(Connect(ResetOnUnmount))
+                                    <Connect(ResetOnUnmount)
                                       isResetDisabled={true}
                                       observation={
                                         Object {
@@ -2354,55 +2366,38 @@ exports[`components/main renders a main in /stats path 1`] = `
                                       updateParams={[Function]}
                                       updateType={[Function]}
                                     >
-                                      <Route>
-                                        <Connect(ResetOnUnmount)
-                                          history={
-                                            Object {
-                                              "action": "POP",
-                                              "block": [Function],
-                                              "canGo": [Function],
-                                              "createHref": [Function],
-                                              "entries": Array [
-                                                Object {
-                                                  "hash": "",
-                                                  "pathname": "/stats",
-                                                  "search": "",
-                                                  "state": undefined,
-                                                },
-                                              ],
-                                              "go": [Function],
-                                              "goBack": [Function],
-                                              "goForward": [Function],
-                                              "index": 0,
-                                              "length": 1,
-                                              "listen": [Function],
-                                              "location": Object {
-                                                "hash": "",
-                                                "pathname": "/stats",
-                                                "search": "",
-                                                "state": undefined,
-                                              },
-                                              "push": [Function],
-                                              "replace": [Function],
-                                            }
+                                      <ResetOnUnmount
+                                        isResetDisabled={true}
+                                        observation={
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": true,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "selectedItem": null,
                                           }
+                                        }
+                                        onParamsSelected={[Function]}
+                                        onReset={[Function]}
+                                        reset={[Function]}
+                                        selectObservation={[Function]}
+                                        selectType={[Function]}
+                                        type={
+                                          Object {
+                                            "isActive": false,
+                                            "items": Array [
+                                              "event",
+                                              "measurement",
+                                            ],
+                                            "selectedItem": null,
+                                          }
+                                        }
+                                        updateObservation={[Function]}
+                                        updateParams={[Function]}
+                                        updateType={[Function]}
+                                      >
+                                        <StatsParamsPanel
                                           isResetDisabled={true}
-                                          location={
-                                            Object {
-                                              "hash": "",
-                                              "pathname": "/stats",
-                                              "search": "",
-                                              "state": undefined,
-                                            }
-                                          }
-                                          match={
-                                            Object {
-                                              "isExact": true,
-                                              "params": Object {},
-                                              "path": "/stats",
-                                              "url": "/stats",
-                                            }
-                                          }
                                           observation={
                                             Object {
                                               "isActive": false,
@@ -2414,6 +2409,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           }
                                           onParamsSelected={[Function]}
                                           onReset={[Function]}
+                                          reset={[Function]}
                                           selectObservation={[Function]}
                                           selectType={[Function]}
                                           type={
@@ -2430,68 +2426,25 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           updateParams={[Function]}
                                           updateType={[Function]}
                                         >
-                                          <ResetOnUnmount
-                                            history={
-                                              Object {
-                                                "action": "POP",
-                                                "block": [Function],
-                                                "canGo": [Function],
-                                                "createHref": [Function],
-                                                "entries": Array [
-                                                  Object {
-                                                    "hash": "",
-                                                    "pathname": "/stats",
-                                                    "search": "",
-                                                    "state": undefined,
-                                                  },
-                                                ],
-                                                "go": [Function],
-                                                "goBack": [Function],
-                                                "goForward": [Function],
-                                                "index": 0,
-                                                "length": 1,
-                                                "listen": [Function],
-                                                "location": Object {
-                                                  "hash": "",
-                                                  "pathname": "/stats",
-                                                  "search": "",
-                                                  "state": undefined,
-                                                },
-                                                "push": [Function],
-                                                "replace": [Function],
-                                              }
-                                            }
-                                            isResetDisabled={true}
-                                            location={
-                                              Object {
-                                                "hash": "",
-                                                "pathname": "/stats",
-                                                "search": "",
-                                                "state": undefined,
-                                              }
-                                            }
-                                            match={
-                                              Object {
-                                                "isExact": true,
-                                                "params": Object {},
-                                                "path": "/stats",
-                                                "url": "/stats",
-                                              }
-                                            }
+                                          <ParamsPanel
                                             observation={
                                               Object {
                                                 "isActive": false,
                                                 "isDisabled": true,
                                                 "isLoading": false,
                                                 "items": Array [],
+                                                "label": "Select observation",
+                                                "onButtonClick": [Function],
+                                                "onItemClick": [Function],
                                                 "selectedItem": null,
                                               }
                                             }
-                                            onParamsSelected={[Function]}
-                                            onReset={[Function]}
-                                            reset={[Function]}
-                                            selectObservation={[Function]}
-                                            selectType={[Function]}
+                                            reset={
+                                              Object {
+                                                "isDisabled": true,
+                                                "onReset": [Function],
+                                              }
+                                            }
                                             type={
                                               Object {
                                                 "isActive": false,
@@ -2499,348 +2452,294 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                   "event",
                                                   "measurement",
                                                 ],
+                                                "label": "Select type",
+                                                "onButtonClick": [Function],
+                                                "onItemClick": [Function],
                                                 "selectedItem": null,
                                               }
                                             }
-                                            updateObservation={[Function]}
-                                            updateParams={[Function]}
-                                            updateType={[Function]}
                                           >
-                                            <StatsParamsPanel
-                                              history={
-                                                Object {
-                                                  "action": "POP",
-                                                  "block": [Function],
-                                                  "canGo": [Function],
-                                                  "createHref": [Function],
-                                                  "entries": Array [
-                                                    Object {
-                                                      "hash": "",
-                                                      "pathname": "/stats",
-                                                      "search": "",
-                                                      "state": undefined,
-                                                    },
-                                                  ],
-                                                  "go": [Function],
-                                                  "goBack": [Function],
-                                                  "goForward": [Function],
-                                                  "index": 0,
-                                                  "length": 1,
-                                                  "listen": [Function],
-                                                  "location": Object {
-                                                    "hash": "",
-                                                    "pathname": "/stats",
-                                                    "search": "",
-                                                    "state": undefined,
-                                                  },
-                                                  "push": [Function],
-                                                  "replace": [Function],
-                                                }
-                                              }
-                                              isResetDisabled={true}
-                                              location={
-                                                Object {
-                                                  "hash": "",
-                                                  "pathname": "/stats",
-                                                  "search": "",
-                                                  "state": undefined,
-                                                }
-                                              }
-                                              match={
-                                                Object {
-                                                  "isExact": true,
-                                                  "params": Object {},
-                                                  "path": "/stats",
-                                                  "url": "/stats",
-                                                }
-                                              }
-                                              observation={
-                                                Object {
-                                                  "isActive": false,
-                                                  "isDisabled": true,
-                                                  "isLoading": false,
-                                                  "items": Array [],
-                                                  "selectedItem": null,
-                                                }
-                                              }
-                                              onParamsSelected={[Function]}
-                                              onReset={[Function]}
-                                              reset={[Function]}
-                                              selectObservation={[Function]}
-                                              selectType={[Function]}
-                                              type={
-                                                Object {
-                                                  "isActive": false,
-                                                  "items": Array [
-                                                    "event",
-                                                    "measurement",
-                                                  ],
-                                                  "selectedItem": null,
-                                                }
-                                              }
-                                              updateObservation={[Function]}
-                                              updateParams={[Function]}
-                                              updateType={[Function]}
+                                            <div
+                                              className="box"
                                             >
-                                              <ParamsPanel
-                                                observation={
-                                                  Object {
-                                                    "isActive": false,
-                                                    "isDisabled": true,
-                                                    "isLoading": false,
-                                                    "items": Array [],
-                                                    "label": "Select observation",
-                                                    "onButtonClick": [Function],
-                                                    "onItemClick": [Function],
-                                                    "selectedItem": null,
-                                                  }
-                                                }
-                                                reset={
-                                                  Object {
-                                                    "isDisabled": true,
-                                                    "onReset": [Function],
-                                                  }
-                                                }
-                                                type={
-                                                  Object {
-                                                    "isActive": false,
-                                                    "items": Array [
-                                                      "event",
-                                                      "measurement",
-                                                    ],
-                                                    "label": "Select type",
-                                                    "onButtonClick": [Function],
-                                                    "onItemClick": [Function],
-                                                    "selectedItem": null,
-                                                  }
-                                                }
+                                              <div
+                                                className="columns"
                                               >
                                                 <div
-                                                  className="box"
+                                                  className="column is-5"
                                                 >
-                                                  <div
-                                                    className="columns"
+                                                  <Dropdown
+                                                    buttonStyle=""
+                                                    iconStyle="fa-angle-down"
+                                                    isActive={false}
+                                                    isDisabled={false}
+                                                    isLoading={false}
+                                                    items={
+                                                      Array [
+                                                        "event",
+                                                        "measurement",
+                                                      ]
+                                                    }
+                                                    label="Select type"
+                                                    onButtonClick={[Function]}
+                                                    onItemClick={[Function]}
+                                                    selectedItem={null}
                                                   >
                                                     <div
-                                                      className="column is-5"
+                                                      className="dropdown"
                                                     >
-                                                      <Dropdown
-                                                        buttonStyle=""
-                                                        iconStyle="fa-angle-down"
-                                                        isActive={false}
-                                                        isDisabled={false}
-                                                        isLoading={false}
-                                                        items={
-                                                          Array [
-                                                            "event",
-                                                            "measurement",
-                                                          ]
-                                                        }
-                                                        label="Select type"
-                                                        onButtonClick={[Function]}
-                                                        onItemClick={[Function]}
-                                                        selectedItem={null}
+                                                      <div
+                                                        className="dropdown-trigger"
                                                       >
-                                                        <div
-                                                          className="dropdown"
+                                                        <button
+                                                          aria-controls="dropdown-menu"
+                                                          aria-haspopup="true"
+                                                          className="button"
+                                                          disabled={false}
+                                                          onClick={[Function]}
                                                         >
-                                                          <div
-                                                            className="dropdown-trigger"
+                                                          <span>
+                                                            Select type
+                                                          </span>
+                                                          <span
+                                                            className="icon is-small"
                                                           >
-                                                            <button
-                                                              aria-controls="dropdown-menu"
-                                                              aria-haspopup="true"
-                                                              className="button"
-                                                              disabled={false}
-                                                              onClick={[Function]}
-                                                            >
-                                                              <span>
-                                                                Select type
-                                                              </span>
-                                                              <span
-                                                                className="icon is-small"
-                                                              >
-                                                                <i
-                                                                  aria-hidden="true"
-                                                                  className="fas fa-angle-down"
-                                                                />
-                                                              </span>
-                                                            </button>
-                                                          </div>
-                                                          <div
-                                                            className="dropdown-menu"
-                                                            id="dropdown-menu"
-                                                            role="menu"
-                                                          >
-                                                            <div
-                                                              className="dropdown-content"
-                                                            >
-                                                              <div
-                                                                className="dropdown-item"
-                                                                key="event"
-                                                                onClick={[Function]}
-                                                                onKeyPress={[Function]}
-                                                                role="button"
-                                                                tabIndex={0}
-                                                              >
-                                                                event
-                                                              </div>
-                                                              <div
-                                                                className="dropdown-item"
-                                                                key="measurement"
-                                                                onClick={[Function]}
-                                                                onKeyPress={[Function]}
-                                                                role="button"
-                                                                tabIndex={0}
-                                                              >
-                                                                measurement
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </Dropdown>
-                                                    </div>
-                                                    <div
-                                                      className="column is-5"
-                                                    >
-                                                      <Dropdown
-                                                        buttonStyle=""
-                                                        iconStyle="fa-angle-down"
-                                                        isActive={false}
-                                                        isDisabled={true}
-                                                        isLoading={false}
-                                                        items={Array []}
-                                                        label="Select observation"
-                                                        onButtonClick={[Function]}
-                                                        onItemClick={[Function]}
-                                                        selectedItem={null}
-                                                      >
-                                                        <div
-                                                          className="dropdown"
-                                                        >
-                                                          <div
-                                                            className="dropdown-trigger"
-                                                          >
-                                                            <button
-                                                              aria-controls="dropdown-menu"
-                                                              aria-haspopup="true"
-                                                              className="button"
-                                                              disabled={true}
-                                                              onClick={[Function]}
-                                                            >
-                                                              <span>
-                                                                Select observation
-                                                              </span>
-                                                              <span
-                                                                className="icon is-small"
-                                                              >
-                                                                <i
-                                                                  aria-hidden="true"
-                                                                  className="fas fa-angle-down"
-                                                                />
-                                                              </span>
-                                                            </button>
-                                                          </div>
-                                                          <div
-                                                            className="dropdown-menu"
-                                                            id="dropdown-menu"
-                                                            role="menu"
-                                                          >
-                                                            <div
-                                                              className="dropdown-content"
+                                                            <i
+                                                              aria-hidden="true"
+                                                              className="fas fa-angle-down"
                                                             />
+                                                          </span>
+                                                        </button>
+                                                      </div>
+                                                      <div
+                                                        className="dropdown-menu"
+                                                        id="dropdown-menu"
+                                                        role="menu"
+                                                      >
+                                                        <div
+                                                          className="dropdown-content"
+                                                        >
+                                                          <div
+                                                            className="dropdown-item"
+                                                            key="event"
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                          >
+                                                            event
+                                                          </div>
+                                                          <div
+                                                            className="dropdown-item"
+                                                            key="measurement"
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                          >
+                                                            measurement
                                                           </div>
                                                         </div>
-                                                      </Dropdown>
+                                                      </div>
                                                     </div>
-                                                    <div
-                                                      className="column"
-                                                    >
-                                                      <button
-                                                        className="button is-warning is-fullwidth"
-                                                        disabled={true}
-                                                        onClick={[Function]}
-                                                      >
-                                                        <span>
-                                                          Reset
-                                                        </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-eraser"
-                                                          />
-                                                        </span>
-                                                      </button>
-                                                    </div>
-                                                  </div>
+                                                  </Dropdown>
                                                 </div>
-                                              </ParamsPanel>
-                                            </StatsParamsPanel>
-                                          </ResetOnUnmount>
-                                        </Connect(ResetOnUnmount)>
-                                      </Route>
-                                    </withRouter(Connect(ResetOnUnmount))>
-                                  </Connect(withRouter(Connect(ResetOnUnmount)))>
+                                                <div
+                                                  className="column is-5"
+                                                >
+                                                  <Dropdown
+                                                    buttonStyle=""
+                                                    iconStyle="fa-angle-down"
+                                                    isActive={false}
+                                                    isDisabled={true}
+                                                    isLoading={false}
+                                                    items={Array []}
+                                                    label="Select observation"
+                                                    onButtonClick={[Function]}
+                                                    onItemClick={[Function]}
+                                                    selectedItem={null}
+                                                  >
+                                                    <div
+                                                      className="dropdown"
+                                                    >
+                                                      <div
+                                                        className="dropdown-trigger"
+                                                      >
+                                                        <button
+                                                          aria-controls="dropdown-menu"
+                                                          aria-haspopup="true"
+                                                          className="button"
+                                                          disabled={true}
+                                                          onClick={[Function]}
+                                                        >
+                                                          <span>
+                                                            Select observation
+                                                          </span>
+                                                          <span
+                                                            className="icon is-small"
+                                                          >
+                                                            <i
+                                                              aria-hidden="true"
+                                                              className="fas fa-angle-down"
+                                                            />
+                                                          </span>
+                                                        </button>
+                                                      </div>
+                                                      <div
+                                                        className="dropdown-menu"
+                                                        id="dropdown-menu"
+                                                        role="menu"
+                                                      >
+                                                        <div
+                                                          className="dropdown-content"
+                                                        />
+                                                      </div>
+                                                    </div>
+                                                  </Dropdown>
+                                                </div>
+                                                <div
+                                                  className="column"
+                                                >
+                                                  <button
+                                                    className="button is-warning is-fullwidth"
+                                                    disabled={true}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      Reset
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-eraser"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </ParamsPanel>
+                                        </StatsParamsPanel>
+                                      </ResetOnUnmount>
+                                    </Connect(ResetOnUnmount)>
+                                  </Connect(Connect(ResetOnUnmount))>
                                 </div>
                                 <div
                                   className="column is-one-quarter"
                                 >
-                                  <withRouter(Connect(Connect(ResetOnUnmount)))
+                                  <Connect(Connect(ResetOnUnmount))
                                     onFiltersChange={[Function]}
                                   >
-                                    <Route>
-                                      <Connect(Connect(ResetOnUnmount))
-                                        history={
+                                    <Connect(ResetOnUnmount)
+                                      addCustomTimePeriodFilter={[Function]}
+                                      addFilterType={[Function]}
+                                      addThingFilter={[Function]}
+                                      addTimePeriodFilter={[Function]}
+                                      dateFilter={
+                                        Object {
+                                          "custom": Object {
+                                            "endDate": null,
+                                            "startDate": null,
+                                          },
+                                          "isCustomSelected": false,
+                                          "timePeriod": Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "selectedItem": null,
+                                          },
+                                        }
+                                      }
+                                      deleteFilterType={[Function]}
+                                      onFiltersChange={[Function]}
+                                      selectFilterType={[Function]}
+                                      selectThingFilter={[Function]}
+                                      selectTimePeriod={[Function]}
+                                      selectedFilters={Array []}
+                                      statsType={null}
+                                      thingFilter={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "isLoading": false,
+                                          "items": Array [],
+                                          "selectedItem": null,
+                                        }
+                                      }
+                                      toggleDateFilterType={[Function]}
+                                      type={
+                                        Object {
+                                          "isActive": false,
+                                          "isDisabled": false,
+                                          "items": Array [
+                                            "date",
+                                            "thing",
+                                          ],
+                                        }
+                                      }
+                                      updateEndDate={[Function]}
+                                      updateStartDate={[Function]}
+                                      updateThingFilter={[Function]}
+                                      updateTimePeriod={[Function]}
+                                    >
+                                      <ResetOnUnmount
+                                        addCustomTimePeriodFilter={[Function]}
+                                        addFilterType={[Function]}
+                                        addThingFilter={[Function]}
+                                        addTimePeriodFilter={[Function]}
+                                        dateFilter={
                                           Object {
-                                            "action": "POP",
-                                            "block": [Function],
-                                            "canGo": [Function],
-                                            "createHref": [Function],
-                                            "entries": Array [
-                                              Object {
-                                                "hash": "",
-                                                "pathname": "/stats",
-                                                "search": "",
-                                                "state": undefined,
-                                              },
-                                            ],
-                                            "go": [Function],
-                                            "goBack": [Function],
-                                            "goForward": [Function],
-                                            "index": 0,
-                                            "length": 1,
-                                            "listen": [Function],
-                                            "location": Object {
-                                              "hash": "",
-                                              "pathname": "/stats",
-                                              "search": "",
-                                              "state": undefined,
+                                            "custom": Object {
+                                              "endDate": null,
+                                              "startDate": null,
                                             },
-                                            "push": [Function],
-                                            "replace": [Function],
+                                            "isCustomSelected": false,
+                                            "timePeriod": Object {
+                                              "isActive": false,
+                                              "isDisabled": false,
+                                              "isLoading": false,
+                                              "items": Array [],
+                                              "selectedItem": null,
+                                            },
                                           }
                                         }
-                                        location={
-                                          Object {
-                                            "hash": "",
-                                            "pathname": "/stats",
-                                            "search": "",
-                                            "state": undefined,
-                                          }
-                                        }
-                                        match={
-                                          Object {
-                                            "isExact": true,
-                                            "params": Object {},
-                                            "path": "/stats",
-                                            "url": "/stats",
-                                          }
-                                        }
+                                        deleteFilterType={[Function]}
                                         onFiltersChange={[Function]}
+                                        reset={[Function]}
+                                        selectFilterType={[Function]}
+                                        selectThingFilter={[Function]}
+                                        selectTimePeriod={[Function]}
+                                        selectedFilters={Array []}
+                                        statsType={null}
+                                        thingFilter={
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "selectedItem": null,
+                                          }
+                                        }
+                                        toggleDateFilterType={[Function]}
+                                        type={
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "items": Array [
+                                              "date",
+                                              "thing",
+                                            ],
+                                          }
+                                        }
+                                        updateEndDate={[Function]}
+                                        updateStartDate={[Function]}
+                                        updateThingFilter={[Function]}
+                                        updateTimePeriod={[Function]}
                                       >
-                                        <Connect(ResetOnUnmount)
+                                        <StatsFiltersPanel
                                           addCustomTimePeriodFilter={[Function]}
                                           addFilterType={[Function]}
                                           addThingFilter={[Function]}
@@ -2862,53 +2761,8 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             }
                                           }
                                           deleteFilterType={[Function]}
-                                          history={
-                                            Object {
-                                              "action": "POP",
-                                              "block": [Function],
-                                              "canGo": [Function],
-                                              "createHref": [Function],
-                                              "entries": Array [
-                                                Object {
-                                                  "hash": "",
-                                                  "pathname": "/stats",
-                                                  "search": "",
-                                                  "state": undefined,
-                                                },
-                                              ],
-                                              "go": [Function],
-                                              "goBack": [Function],
-                                              "goForward": [Function],
-                                              "index": 0,
-                                              "length": 1,
-                                              "listen": [Function],
-                                              "location": Object {
-                                                "hash": "",
-                                                "pathname": "/stats",
-                                                "search": "",
-                                                "state": undefined,
-                                              },
-                                              "push": [Function],
-                                              "replace": [Function],
-                                            }
-                                          }
-                                          location={
-                                            Object {
-                                              "hash": "",
-                                              "pathname": "/stats",
-                                              "search": "",
-                                              "state": undefined,
-                                            }
-                                          }
-                                          match={
-                                            Object {
-                                              "isExact": true,
-                                              "params": Object {},
-                                              "path": "/stats",
-                                              "url": "/stats",
-                                            }
-                                          }
                                           onFiltersChange={[Function]}
+                                          reset={[Function]}
                                           selectFilterType={[Function]}
                                           selectThingFilter={[Function]}
                                           selectTimePeriod={[Function]}
@@ -2939,91 +2793,51 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           updateThingFilter={[Function]}
                                           updateTimePeriod={[Function]}
                                         >
-                                          <ResetOnUnmount
-                                            addCustomTimePeriodFilter={[Function]}
-                                            addFilterType={[Function]}
-                                            addThingFilter={[Function]}
-                                            addTimePeriodFilter={[Function]}
+                                          <FiltersPanel
                                             dateFilter={
                                               Object {
                                                 "custom": Object {
-                                                  "endDate": null,
-                                                  "startDate": null,
+                                                  "endDate": Object {
+                                                    "onChange": [Function],
+                                                    "selected": null,
+                                                  },
+                                                  "startDate": Object {
+                                                    "onChange": [Function],
+                                                    "selected": null,
+                                                  },
                                                 },
                                                 "isCustomSelected": false,
+                                                "onDelete": [Function],
+                                                "selector": Object {
+                                                  "isCustomSelected": false,
+                                                  "onChange": [Function],
+                                                },
                                                 "timePeriod": Object {
                                                   "isActive": false,
                                                   "isDisabled": false,
                                                   "isLoading": false,
                                                   "items": Array [],
+                                                  "label": "Select Time Period:",
+                                                  "onButtonClick": [Function],
+                                                  "onItemClick": [Function],
                                                   "selectedItem": null,
                                                 },
                                               }
                                             }
-                                            deleteFilterType={[Function]}
-                                            history={
-                                              Object {
-                                                "action": "POP",
-                                                "block": [Function],
-                                                "canGo": [Function],
-                                                "createHref": [Function],
-                                                "entries": Array [
-                                                  Object {
-                                                    "hash": "",
-                                                    "pathname": "/stats",
-                                                    "search": "",
-                                                    "state": undefined,
-                                                  },
-                                                ],
-                                                "go": [Function],
-                                                "goBack": [Function],
-                                                "goForward": [Function],
-                                                "index": 0,
-                                                "length": 1,
-                                                "listen": [Function],
-                                                "location": Object {
-                                                  "hash": "",
-                                                  "pathname": "/stats",
-                                                  "search": "",
-                                                  "state": undefined,
-                                                },
-                                                "push": [Function],
-                                                "replace": [Function],
-                                              }
-                                            }
-                                            location={
-                                              Object {
-                                                "hash": "",
-                                                "pathname": "/stats",
-                                                "search": "",
-                                                "state": undefined,
-                                              }
-                                            }
-                                            match={
-                                              Object {
-                                                "isExact": true,
-                                                "params": Object {},
-                                                "path": "/stats",
-                                                "url": "/stats",
-                                              }
-                                            }
-                                            onFiltersChange={[Function]}
-                                            reset={[Function]}
-                                            selectFilterType={[Function]}
-                                            selectThingFilter={[Function]}
-                                            selectTimePeriod={[Function]}
                                             selectedFilters={Array []}
-                                            statsType={null}
                                             thingFilter={
                                               Object {
                                                 "isActive": false,
                                                 "isDisabled": false,
                                                 "isLoading": false,
                                                 "items": Array [],
+                                                "label": "Select Thing: ",
+                                                "onButtonClick": [Function],
+                                                "onDelete": [Function],
+                                                "onItemClick": [Function],
                                                 "selectedItem": null,
                                               }
                                             }
-                                            toggleDateFilterType={[Function]}
                                             type={
                                               Object {
                                                 "isActive": false,
@@ -3032,264 +2846,102 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                   "date",
                                                   "thing",
                                                 ],
+                                                "onButtonClick": [Function],
+                                                "onItemClick": [Function],
                                               }
                                             }
-                                            updateEndDate={[Function]}
-                                            updateStartDate={[Function]}
-                                            updateThingFilter={[Function]}
-                                            updateTimePeriod={[Function]}
                                           >
-                                            <StatsFiltersPanel
-                                              addCustomTimePeriodFilter={[Function]}
-                                              addFilterType={[Function]}
-                                              addThingFilter={[Function]}
-                                              addTimePeriodFilter={[Function]}
-                                              dateFilter={
-                                                Object {
-                                                  "custom": Object {
-                                                    "endDate": null,
-                                                    "startDate": null,
-                                                  },
-                                                  "isCustomSelected": false,
-                                                  "timePeriod": Object {
-                                                    "isActive": false,
-                                                    "isDisabled": false,
-                                                    "isLoading": false,
-                                                    "items": Array [],
-                                                    "selectedItem": null,
-                                                  },
-                                                }
-                                              }
-                                              deleteFilterType={[Function]}
-                                              history={
-                                                Object {
-                                                  "action": "POP",
-                                                  "block": [Function],
-                                                  "canGo": [Function],
-                                                  "createHref": [Function],
-                                                  "entries": Array [
-                                                    Object {
-                                                      "hash": "",
-                                                      "pathname": "/stats",
-                                                      "search": "",
-                                                      "state": undefined,
-                                                    },
-                                                  ],
-                                                  "go": [Function],
-                                                  "goBack": [Function],
-                                                  "goForward": [Function],
-                                                  "index": 0,
-                                                  "length": 1,
-                                                  "listen": [Function],
-                                                  "location": Object {
-                                                    "hash": "",
-                                                    "pathname": "/stats",
-                                                    "search": "",
-                                                    "state": undefined,
-                                                  },
-                                                  "push": [Function],
-                                                  "replace": [Function],
-                                                }
-                                              }
-                                              location={
-                                                Object {
-                                                  "hash": "",
-                                                  "pathname": "/stats",
-                                                  "search": "",
-                                                  "state": undefined,
-                                                }
-                                              }
-                                              match={
-                                                Object {
-                                                  "isExact": true,
-                                                  "params": Object {},
-                                                  "path": "/stats",
-                                                  "url": "/stats",
-                                                }
-                                              }
-                                              onFiltersChange={[Function]}
-                                              reset={[Function]}
-                                              selectFilterType={[Function]}
-                                              selectThingFilter={[Function]}
-                                              selectTimePeriod={[Function]}
-                                              selectedFilters={Array []}
-                                              statsType={null}
-                                              thingFilter={
-                                                Object {
-                                                  "isActive": false,
-                                                  "isDisabled": false,
-                                                  "isLoading": false,
-                                                  "items": Array [],
-                                                  "selectedItem": null,
-                                                }
-                                              }
-                                              toggleDateFilterType={[Function]}
-                                              type={
-                                                Object {
-                                                  "isActive": false,
-                                                  "isDisabled": false,
-                                                  "items": Array [
-                                                    "date",
-                                                    "thing",
-                                                  ],
-                                                }
-                                              }
-                                              updateEndDate={[Function]}
-                                              updateStartDate={[Function]}
-                                              updateThingFilter={[Function]}
-                                              updateTimePeriod={[Function]}
+                                            <div
+                                              className="box"
                                             >
-                                              <FiltersPanel
-                                                dateFilter={
-                                                  Object {
-                                                    "custom": Object {
-                                                      "endDate": Object {
-                                                        "onChange": [Function],
-                                                        "selected": null,
-                                                      },
-                                                      "startDate": Object {
-                                                        "onChange": [Function],
-                                                        "selected": null,
-                                                      },
-                                                    },
-                                                    "isCustomSelected": false,
-                                                    "onDelete": [Function],
-                                                    "selector": Object {
-                                                      "isCustomSelected": false,
-                                                      "onChange": [Function],
-                                                    },
-                                                    "timePeriod": Object {
-                                                      "isActive": false,
-                                                      "isDisabled": false,
-                                                      "isLoading": false,
-                                                      "items": Array [],
-                                                      "label": "Select Time Period:",
-                                                      "onButtonClick": [Function],
-                                                      "onItemClick": [Function],
-                                                      "selectedItem": null,
-                                                    },
-                                                  }
-                                                }
-                                                selectedFilters={Array []}
-                                                thingFilter={
-                                                  Object {
-                                                    "isActive": false,
-                                                    "isDisabled": false,
-                                                    "isLoading": false,
-                                                    "items": Array [],
-                                                    "label": "Select Thing: ",
-                                                    "onButtonClick": [Function],
-                                                    "onDelete": [Function],
-                                                    "onItemClick": [Function],
-                                                    "selectedItem": null,
-                                                  }
-                                                }
-                                                type={
-                                                  Object {
-                                                    "isActive": false,
-                                                    "isDisabled": false,
-                                                    "items": Array [
-                                                      "date",
-                                                      "thing",
-                                                    ],
-                                                    "onButtonClick": [Function],
-                                                    "onItemClick": [Function],
-                                                  }
-                                                }
+                                              <div
+                                                className="columns"
                                               >
                                                 <div
-                                                  className="box"
+                                                  className="column"
                                                 >
-                                                  <div
-                                                    className="columns"
+                                                  <Dropdown
+                                                    buttonStyle="is-primary"
+                                                    iconStyle="fa-plus"
+                                                    isActive={false}
+                                                    isDisabled={false}
+                                                    isLoading={false}
+                                                    items={
+                                                      Array [
+                                                        "date",
+                                                        "thing",
+                                                      ]
+                                                    }
+                                                    label="Filters"
+                                                    onButtonClick={[Function]}
+                                                    onItemClick={[Function]}
                                                   >
                                                     <div
-                                                      className="column"
+                                                      className="dropdown"
                                                     >
-                                                      <Dropdown
-                                                        buttonStyle="is-primary"
-                                                        iconStyle="fa-plus"
-                                                        isActive={false}
-                                                        isDisabled={false}
-                                                        isLoading={false}
-                                                        items={
-                                                          Array [
-                                                            "date",
-                                                            "thing",
-                                                          ]
-                                                        }
-                                                        label="Filters"
-                                                        onButtonClick={[Function]}
-                                                        onItemClick={[Function]}
+                                                      <div
+                                                        className="dropdown-trigger"
+                                                      >
+                                                        <button
+                                                          aria-controls="dropdown-menu"
+                                                          aria-haspopup="true"
+                                                          className="button is-primary"
+                                                          disabled={false}
+                                                          onClick={[Function]}
+                                                        >
+                                                          <span>
+                                                            Filters
+                                                          </span>
+                                                          <span
+                                                            className="icon is-small"
+                                                          >
+                                                            <i
+                                                              aria-hidden="true"
+                                                              className="fas fa-plus"
+                                                            />
+                                                          </span>
+                                                        </button>
+                                                      </div>
+                                                      <div
+                                                        className="dropdown-menu"
+                                                        id="dropdown-menu"
+                                                        role="menu"
                                                       >
                                                         <div
-                                                          className="dropdown"
+                                                          className="dropdown-content"
                                                         >
                                                           <div
-                                                            className="dropdown-trigger"
+                                                            className="dropdown-item"
+                                                            key="date"
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
                                                           >
-                                                            <button
-                                                              aria-controls="dropdown-menu"
-                                                              aria-haspopup="true"
-                                                              className="button is-primary"
-                                                              disabled={false}
-                                                              onClick={[Function]}
-                                                            >
-                                                              <span>
-                                                                Filters
-                                                              </span>
-                                                              <span
-                                                                className="icon is-small"
-                                                              >
-                                                                <i
-                                                                  aria-hidden="true"
-                                                                  className="fas fa-plus"
-                                                                />
-                                                              </span>
-                                                            </button>
+                                                            date
                                                           </div>
                                                           <div
-                                                            className="dropdown-menu"
-                                                            id="dropdown-menu"
-                                                            role="menu"
+                                                            className="dropdown-item"
+                                                            key="thing"
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
                                                           >
-                                                            <div
-                                                              className="dropdown-content"
-                                                            >
-                                                              <div
-                                                                className="dropdown-item"
-                                                                key="date"
-                                                                onClick={[Function]}
-                                                                onKeyPress={[Function]}
-                                                                role="button"
-                                                                tabIndex={0}
-                                                              >
-                                                                date
-                                                              </div>
-                                                              <div
-                                                                className="dropdown-item"
-                                                                key="thing"
-                                                                onClick={[Function]}
-                                                                onKeyPress={[Function]}
-                                                                role="button"
-                                                                tabIndex={0}
-                                                              >
-                                                                thing
-                                                              </div>
-                                                            </div>
+                                                            thing
                                                           </div>
                                                         </div>
-                                                      </Dropdown>
+                                                      </div>
                                                     </div>
-                                                  </div>
+                                                  </Dropdown>
                                                 </div>
-                                              </FiltersPanel>
-                                            </StatsFiltersPanel>
-                                          </ResetOnUnmount>
-                                        </Connect(ResetOnUnmount)>
-                                      </Connect(Connect(ResetOnUnmount))>
-                                    </Route>
-                                  </withRouter(Connect(Connect(ResetOnUnmount)))>
+                                              </div>
+                                            </div>
+                                          </FiltersPanel>
+                                        </StatsFiltersPanel>
+                                      </ResetOnUnmount>
+                                    </Connect(ResetOnUnmount)>
+                                  </Connect(Connect(ResetOnUnmount))>
                                 </div>
                               </div>
                             </div>
@@ -3764,7 +3416,7 @@ exports[`components/main renders a main in /things path 1`] = `
                 }
                 path="/things"
               >
-                <withRouter(Connect(Connect(ResetOnUnmount)))
+                <Connect(withRouter(Connect(ResetOnUnmount)))
                   history={
                     Object {
                       "action": "POP",
@@ -3812,55 +3464,61 @@ exports[`components/main renders a main in /things path 1`] = `
                     }
                   }
                 >
-                  <Route>
-                    <Connect(Connect(ResetOnUnmount))
-                      history={
-                        Object {
-                          "action": "POP",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/things",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
+                  <withRouter(Connect(ResetOnUnmount))
+                    getThings={[Function]}
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "canGo": [Function],
+                        "createHref": [Function],
+                        "entries": Array [
+                          Object {
                             "hash": "",
                             "pathname": "/things",
                             "search": "",
                             "state": undefined,
                           },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      location={
-                        Object {
+                        ],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "index": 0,
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
                           "hash": "",
                           "pathname": "/things",
                           "search": "",
                           "state": undefined,
-                        }
+                        },
+                        "push": [Function],
+                        "replace": [Function],
                       }
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/things",
-                          "url": "/things",
-                        }
+                    }
+                    isLoading={false}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/things",
+                        "search": "",
+                        "state": undefined,
                       }
-                    >
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/things",
+                        "url": "/things",
+                      }
+                    }
+                    selectThing={[Function]}
+                    selectedThing={null}
+                    showNotFoundError={[Function]}
+                    things={Array []}
+                  >
+                    <Route>
                       <Connect(ResetOnUnmount)
                         getThings={[Function]}
                         history={
@@ -4086,9 +3744,9 @@ exports[`components/main renders a main in /things path 1`] = `
                           </Things>
                         </ResetOnUnmount>
                       </Connect(ResetOnUnmount)>
-                    </Connect(Connect(ResetOnUnmount))>
-                  </Route>
-                </withRouter(Connect(Connect(ResetOnUnmount)))>
+                    </Route>
+                  </withRouter(Connect(ResetOnUnmount))>
+                </Connect(withRouter(Connect(ResetOnUnmount)))>
               </Route>
             </Switch>
           </main>

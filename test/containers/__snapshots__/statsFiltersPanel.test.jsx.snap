@@ -45,7 +45,7 @@ exports[`containers/statFiltersPanel renders in in initial state 1`] = `
       }
     }
   >
-    <withRouter(Connect(Connect(ResetOnUnmount)))
+    <Connect(Connect(ResetOnUnmount))
       onFiltersChange={[Function]}
     />
   </Provider>
