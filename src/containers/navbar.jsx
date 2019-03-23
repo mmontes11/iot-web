@@ -56,6 +56,12 @@ class Navbar extends React.Component {
               </span>
               <span>Stats</span>
             </NavLink>
+            <NavLink to="/measurements" className="navbar-item" activeClassName="navbar-item-active">
+              <span className="icon">
+                <i className="fas fa-database" />
+              </span>
+              <span>Measurements</span>
+            </NavLink>
           </div>
           <div className="navbar-end">
             <div className="navbar-item">

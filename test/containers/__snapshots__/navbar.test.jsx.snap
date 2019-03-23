@@ -381,6 +381,41 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                             </Link>
                           </Route>
                         </NavLink>
+                        <NavLink
+                          activeClassName="navbar-item-active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/measurements"
+                        >
+                          <Route
+                            path="\\\\/measurements"
+                          >
+                            <Link
+                              aria-current={null}
+                              className="navbar-item"
+                              replace={false}
+                              to="/measurements"
+                            >
+                              <a
+                                aria-current={null}
+                                className="navbar-item"
+                                href="/measurements"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-database"
+                                  />
+                                </span>
+                                <span>
+                                  Measurements
+                                </span>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
                       </div>
                       <div
                         className="navbar-end"
@@ -803,6 +838,41 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                                 </span>
                                 <span>
                                   Stats
+                                </span>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                        <NavLink
+                          activeClassName="navbar-item-active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/measurements"
+                        >
+                          <Route
+                            path="\\\\/measurements"
+                          >
+                            <Link
+                              aria-current={null}
+                              className="navbar-item"
+                              replace={false}
+                              to="/measurements"
+                            >
+                              <a
+                                aria-current={null}
+                                className="navbar-item"
+                                href="/measurements"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="icon"
+                                >
+                                  <i
+                                    className="fas fa-database"
+                                  />
+                                </span>
+                                <span>
+                                  Measurements
                                 </span>
                               </a>
                             </Link>

@@ -392,6 +392,41 @@ exports[`components/main renders a main in / path 1`] = `
                                 </Link>
                               </Route>
                             </NavLink>
+                            <NavLink
+                              activeClassName="navbar-item-active"
+                              aria-current="page"
+                              className="navbar-item"
+                              to="/measurements"
+                            >
+                              <Route
+                                path="\\\\/measurements"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  replace={false}
+                                  to="/measurements"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="navbar-item"
+                                    href="/measurements"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className="icon"
+                                    >
+                                      <i
+                                        className="fas fa-database"
+                                      />
+                                    </span>
+                                    <span>
+                                      Measurements
+                                    </span>
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
                           </div>
                           <div
                             className="navbar-end"
@@ -1188,6 +1223,41 @@ exports[`components/main renders a main in /foo path 1`] = `
                                 </Link>
                               </Route>
                             </NavLink>
+                            <NavLink
+                              activeClassName="navbar-item-active"
+                              aria-current="page"
+                              className="navbar-item"
+                              to="/measurements"
+                            >
+                              <Route
+                                path="\\\\/measurements"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  replace={false}
+                                  to="/measurements"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="navbar-item"
+                                    href="/measurements"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className="icon"
+                                    >
+                                      <i
+                                        className="fas fa-database"
+                                      />
+                                    </span>
+                                    <span>
+                                      Measurements
+                                    </span>
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
                           </div>
                           <div
                             className="navbar-end"
@@ -1979,6 +2049,41 @@ exports[`components/main renders a main in /stats path 1`] = `
                                     </span>
                                     <span>
                                       Stats
+                                    </span>
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="navbar-item-active"
+                              aria-current="page"
+                              className="navbar-item"
+                              to="/measurements"
+                            >
+                              <Route
+                                path="\\\\/measurements"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  replace={false}
+                                  to="/measurements"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="navbar-item"
+                                    href="/measurements"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className="icon"
+                                    >
+                                      <i
+                                        className="fas fa-database"
+                                      />
+                                    </span>
+                                    <span>
+                                      Measurements
                                     </span>
                                   </a>
                                 </Link>
@@ -3348,6 +3453,41 @@ exports[`components/main renders a main in /things path 1`] = `
                                     </span>
                                     <span>
                                       Stats
+                                    </span>
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="navbar-item-active"
+                              aria-current="page"
+                              className="navbar-item"
+                              to="/measurements"
+                            >
+                              <Route
+                                path="\\\\/measurements"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  replace={false}
+                                  to="/measurements"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="navbar-item"
+                                    href="/measurements"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className="icon"
+                                    >
+                                      <i
+                                        className="fas fa-database"
+                                      />
+                                    </span>
+                                    <span>
+                                      Measurements
                                     </span>
                                   </a>
                                 </Link>
