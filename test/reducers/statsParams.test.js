@@ -1,5 +1,5 @@
 import deepFreeze from "deep-freeze";
-import paramsReducer, { initialState as paramsInitialState } from "reducers/params";
+import paramsReducer, { initialState as paramsInitialState } from "reducers/statsParams";
 import {
   TYPE_SELECT,
   TYPE_UPDATED,
