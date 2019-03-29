@@ -899,10 +899,9 @@ exports[`containers/app renders app in error state 1`] = `
                                               type={
                                                 Object {
                                                   "isActive": false,
-                                                  "items": Array [
-                                                    "event",
-                                                    "measurement",
-                                                  ],
+                                                  "isDisabled": true,
+                                                  "isLoading": false,
+                                                  "items": Array [],
                                                   "selectedItem": null,
                                                 }
                                               }
@@ -929,10 +928,9 @@ exports[`containers/app renders app in error state 1`] = `
                                                 type={
                                                   Object {
                                                     "isActive": false,
-                                                    "items": Array [
-                                                      "event",
-                                                      "measurement",
-                                                    ],
+                                                    "isDisabled": true,
+                                                    "isLoading": false,
+                                                    "items": Array [],
                                                     "selectedItem": null,
                                                   }
                                                 }
@@ -959,10 +957,9 @@ exports[`containers/app renders app in error state 1`] = `
                                                   type={
                                                     Object {
                                                       "isActive": false,
-                                                      "items": Array [
-                                                        "event",
-                                                        "measurement",
-                                                      ],
+                                                      "isDisabled": true,
+                                                      "isLoading": false,
+                                                      "items": Array [],
                                                       "selectedItem": null,
                                                     }
                                                   }
@@ -992,10 +989,9 @@ exports[`containers/app renders app in error state 1`] = `
                                                     type={
                                                       Object {
                                                         "isActive": false,
-                                                        "items": Array [
-                                                          "event",
-                                                          "measurement",
-                                                        ],
+                                                        "isDisabled": true,
+                                                        "isLoading": false,
+                                                        "items": Array [],
                                                         "label": "Select type",
                                                         "onButtonClick": [Function],
                                                         "onItemClick": [Function],
@@ -1018,12 +1014,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                             isActive={false}
                                                             isDisabled={false}
                                                             isLoading={false}
-                                                            items={
-                                                              Array [
-                                                                "event",
-                                                                "measurement",
-                                                              ]
-                                                            }
+                                                            items={Array []}
                                                             label="Select type"
                                                             onButtonClick={[Function]}
                                                             onItemClick={[Function]}
@@ -1062,28 +1053,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                               >
                                                                 <div
                                                                   className="dropdown-content"
-                                                                >
-                                                                  <div
-                                                                    className="dropdown-item"
-                                                                    key="event"
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
-                                                                  >
-                                                                    event
-                                                                  </div>
-                                                                  <div
-                                                                    className="dropdown-item"
-                                                                    key="measurement"
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
-                                                                  >
-                                                                    measurement
-                                                                  </div>
-                                                                </div>
+                                                                />
                                                               </div>
                                                             </div>
                                                           </Dropdown>
@@ -1219,8 +1189,8 @@ exports[`containers/app renders app in error state 1`] = `
                                                   "isActive": false,
                                                   "isDisabled": false,
                                                   "items": Array [
-                                                    "date",
                                                     "thing",
+                                                    "date",
                                                   ],
                                                 }
                                               }
@@ -1273,8 +1243,8 @@ exports[`containers/app renders app in error state 1`] = `
                                                     "isActive": false,
                                                     "isDisabled": false,
                                                     "items": Array [
-                                                      "date",
                                                       "thing",
+                                                      "date",
                                                     ],
                                                   }
                                                 }
@@ -1327,8 +1297,8 @@ exports[`containers/app renders app in error state 1`] = `
                                                       "isActive": false,
                                                       "isDisabled": false,
                                                       "items": Array [
-                                                        "date",
                                                         "thing",
+                                                        "date",
                                                       ],
                                                     }
                                                   }
@@ -1387,8 +1357,8 @@ exports[`containers/app renders app in error state 1`] = `
                                                         "isActive": false,
                                                         "isDisabled": false,
                                                         "items": Array [
-                                                          "date",
                                                           "thing",
+                                                          "date",
                                                         ],
                                                         "onButtonClick": [Function],
                                                         "onItemClick": [Function],
@@ -1412,8 +1382,8 @@ exports[`containers/app renders app in error state 1`] = `
                                                             isLoading={false}
                                                             items={
                                                               Array [
-                                                                "date",
                                                                 "thing",
+                                                                "date",
                                                               ]
                                                             }
                                                             label="Filters"
@@ -1456,16 +1426,6 @@ exports[`containers/app renders app in error state 1`] = `
                                                                 >
                                                                   <div
                                                                     className="dropdown-item"
-                                                                    key="date"
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
-                                                                  >
-                                                                    date
-                                                                  </div>
-                                                                  <div
-                                                                    className="dropdown-item"
                                                                     key="thing"
                                                                     onClick={[Function]}
                                                                     onKeyPress={[Function]}
@@ -1473,6 +1433,16 @@ exports[`containers/app renders app in error state 1`] = `
                                                                     tabIndex={0}
                                                                   >
                                                                     thing
+                                                                  </div>
+                                                                  <div
+                                                                    className="dropdown-item"
+                                                                    key="date"
+                                                                    onClick={[Function]}
+                                                                    onKeyPress={[Function]}
+                                                                    role="button"
+                                                                    tabIndex={0}
+                                                                  >
+                                                                    date
                                                                   </div>
                                                                 </div>
                                                               </div>
@@ -2243,6 +2213,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                             }
                             selectThing={[Function]}
                             selectedThing={null}
+                            shouldShowNotFoundError={false}
                             showNotFoundError={[Function]}
                             things={Array []}
                           >
@@ -2298,6 +2269,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                 }
                                 selectThing={[Function]}
                                 selectedThing={null}
+                                shouldShowNotFoundError={false}
                                 showNotFoundError={[Function]}
                                 things={Array []}
                               >
@@ -2353,6 +2325,7 @@ exports[`containers/app renders app with auth in / 1`] = `
                                   reset={[Function]}
                                   selectThing={[Function]}
                                   selectedThing={null}
+                                  shouldShowNotFoundError={false}
                                   showNotFoundError={[Function]}
                                   things={Array []}
                                 >
@@ -3223,6 +3196,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                             }
                             selectThing={[Function]}
                             selectedThing={null}
+                            shouldShowNotFoundError={false}
                             showNotFoundError={[Function]}
                             things={Array []}
                           >
@@ -3278,6 +3252,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                 }
                                 selectThing={[Function]}
                                 selectedThing={null}
+                                shouldShowNotFoundError={false}
                                 showNotFoundError={[Function]}
                                 things={Array []}
                               >
@@ -3333,6 +3308,7 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                   reset={[Function]}
                                   selectThing={[Function]}
                                   selectedThing={null}
+                                  shouldShowNotFoundError={false}
                                   showNotFoundError={[Function]}
                                   things={Array []}
                                 >
@@ -4736,10 +4712,9 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                               type={
                                                 Object {
                                                   "isActive": false,
-                                                  "items": Array [
-                                                    "event",
-                                                    "measurement",
-                                                  ],
+                                                  "isDisabled": true,
+                                                  "isLoading": false,
+                                                  "items": Array [],
                                                   "selectedItem": null,
                                                 }
                                               }
@@ -4766,10 +4741,9 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                 type={
                                                   Object {
                                                     "isActive": false,
-                                                    "items": Array [
-                                                      "event",
-                                                      "measurement",
-                                                    ],
+                                                    "isDisabled": true,
+                                                    "isLoading": false,
+                                                    "items": Array [],
                                                     "selectedItem": null,
                                                   }
                                                 }
@@ -4796,10 +4770,9 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                   type={
                                                     Object {
                                                       "isActive": false,
-                                                      "items": Array [
-                                                        "event",
-                                                        "measurement",
-                                                      ],
+                                                      "isDisabled": true,
+                                                      "isLoading": false,
+                                                      "items": Array [],
                                                       "selectedItem": null,
                                                     }
                                                   }
@@ -4829,10 +4802,9 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                     type={
                                                       Object {
                                                         "isActive": false,
-                                                        "items": Array [
-                                                          "event",
-                                                          "measurement",
-                                                        ],
+                                                        "isDisabled": true,
+                                                        "isLoading": false,
+                                                        "items": Array [],
                                                         "label": "Select type",
                                                         "onButtonClick": [Function],
                                                         "onItemClick": [Function],
@@ -4855,12 +4827,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                             isActive={false}
                                                             isDisabled={false}
                                                             isLoading={false}
-                                                            items={
-                                                              Array [
-                                                                "event",
-                                                                "measurement",
-                                                              ]
-                                                            }
+                                                            items={Array []}
                                                             label="Select type"
                                                             onButtonClick={[Function]}
                                                             onItemClick={[Function]}
@@ -4899,28 +4866,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                               >
                                                                 <div
                                                                   className="dropdown-content"
-                                                                >
-                                                                  <div
-                                                                    className="dropdown-item"
-                                                                    key="event"
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
-                                                                  >
-                                                                    event
-                                                                  </div>
-                                                                  <div
-                                                                    className="dropdown-item"
-                                                                    key="measurement"
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
-                                                                  >
-                                                                    measurement
-                                                                  </div>
-                                                                </div>
+                                                                />
                                                               </div>
                                                             </div>
                                                           </Dropdown>
@@ -5056,8 +5002,8 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                   "isActive": false,
                                                   "isDisabled": false,
                                                   "items": Array [
-                                                    "date",
                                                     "thing",
+                                                    "date",
                                                   ],
                                                 }
                                               }
@@ -5110,8 +5056,8 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                     "isActive": false,
                                                     "isDisabled": false,
                                                     "items": Array [
-                                                      "date",
                                                       "thing",
+                                                      "date",
                                                     ],
                                                   }
                                                 }
@@ -5164,8 +5110,8 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                       "isActive": false,
                                                       "isDisabled": false,
                                                       "items": Array [
-                                                        "date",
                                                         "thing",
+                                                        "date",
                                                       ],
                                                     }
                                                   }
@@ -5224,8 +5170,8 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                         "isActive": false,
                                                         "isDisabled": false,
                                                         "items": Array [
-                                                          "date",
                                                           "thing",
+                                                          "date",
                                                         ],
                                                         "onButtonClick": [Function],
                                                         "onItemClick": [Function],
@@ -5249,8 +5195,8 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                             isLoading={false}
                                                             items={
                                                               Array [
-                                                                "date",
                                                                 "thing",
+                                                                "date",
                                                               ]
                                                             }
                                                             label="Filters"
@@ -5293,16 +5239,6 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                 >
                                                                   <div
                                                                     className="dropdown-item"
-                                                                    key="date"
-                                                                    onClick={[Function]}
-                                                                    onKeyPress={[Function]}
-                                                                    role="button"
-                                                                    tabIndex={0}
-                                                                  >
-                                                                    date
-                                                                  </div>
-                                                                  <div
-                                                                    className="dropdown-item"
                                                                     key="thing"
                                                                     onClick={[Function]}
                                                                     onKeyPress={[Function]}
@@ -5310,6 +5246,16 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                     tabIndex={0}
                                                                   >
                                                                     thing
+                                                                  </div>
+                                                                  <div
+                                                                    className="dropdown-item"
+                                                                    key="date"
+                                                                    onClick={[Function]}
+                                                                    onKeyPress={[Function]}
+                                                                    role="button"
+                                                                    tabIndex={0}
+                                                                  >
+                                                                    date
                                                                   </div>
                                                                 </div>
                                                               </div>
@@ -6080,6 +6026,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                             }
                             selectThing={[Function]}
                             selectedThing={null}
+                            shouldShowNotFoundError={false}
                             showNotFoundError={[Function]}
                             things={Array []}
                           >
@@ -6135,6 +6082,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                 }
                                 selectThing={[Function]}
                                 selectedThing={null}
+                                shouldShowNotFoundError={false}
                                 showNotFoundError={[Function]}
                                 things={Array []}
                               >
@@ -6190,6 +6138,7 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                   reset={[Function]}
                                   selectThing={[Function]}
                                   selectedThing={null}
+                                  shouldShowNotFoundError={false}
                                   showNotFoundError={[Function]}
                                   things={Array []}
                                 >

@@ -3,6 +3,7 @@ import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 import iotClient from "lib/iotClient";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 import { RESET } from "constants/actionTypes/common";
+import * as fromState from "reducers";
 
 const getParams = (filterItems, observation, thing, timePeriod, startDate, endDate) => {
   let params = {
@@ -69,31 +70,24 @@ const requestStats = (
 };
 
 export const getStats = () => (dispatch, getState) => {
+  const state = getState();
+  const filterItems = state.filters.items;
+  const type = fromState.getFirstParam(state).selectedItem;
+  const observation = fromState.getSecondParam(state).selectedItem;
+  const thing = state.filters.thingFilter.selectedItem;
   const {
-    stats: {
-      params: {
-        type: { selectedItem: selectedType },
-        observation: { selectedItem: selectedObservation },
-      },
-      filters: {
-        thingFilter: { selectedItem: selectedThingFilter },
-        dateFilter: {
-          timePeriod: { selectedItem: selectedTimePeriod },
-          custom: { startDate, endDate },
-        },
-        items: filterItems,
-      },
-    },
-  } = getState();
-  if (!selectedType || !selectedObservation) {
+    timePeriod: { selectedItem: selectedTimePeriod },
+    custom: { startDate, endDate },
+  } = state.filters.dateFilter;
+  if (!type || !observation) {
     return;
   }
   dispatch({ type: STATS_REQUEST });
   requestStats(
     filterItems,
-    selectedType,
-    selectedObservation,
-    selectedThingFilter,
+    type,
+    observation,
+    thing,
     selectedTimePeriod,
     startDate,
     endDate,

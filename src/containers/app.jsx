@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { compose } from "recompose";
 import "styles/index.scss";
-import * as reducerHelpers from "reducers";
+import * as fromState from "reducers";
 import * as appActions from "actions/app";
 import Login from "containers/login";
 import Main from "components/main";
@@ -32,7 +32,7 @@ App.propTypes = {
 const withConnect = connect(
   state => ({
     isAuth: state.auth.isAuth,
-    shouldShowError: reducerHelpers.hasError(state) && state.app.showError,
+    shouldShowError: fromState.shouldShowError(state),
   }),
   { setShowError: appActions.setShowError },
 );

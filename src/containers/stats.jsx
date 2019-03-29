@@ -11,7 +11,7 @@ import BarChart from "components/barChart";
 import Loader from "components/loader";
 import * as statsActions from "actions/stats";
 import * as commonActions from "actions/common";
-import * as reducerHelpers from "reducers";
+import * as fromState from "reducers";
 import { updateParams } from "actions/params";
 import { addThingFilter } from "actions/thingFilter";
 import { addTimePeriodFilter, addCustomTimePeriodFilter } from "actions/dateFilter";
@@ -129,8 +129,8 @@ Stats.propTypes = {
 const withConnect = connect(
   state => ({
     stats: state.stats.items,
-    isLoading: state.stats.isLoading && reducerHelpers.isLoading(state),
-    hasError: reducerHelpers.hasError(state),
+    isLoading: state.stats.isLoading,
+    hasError: fromState.hasError(state),
   }),
   { ...statsActions, ...commonActions, updateParams, addThingFilter, addTimePeriodFilter, addCustomTimePeriodFilter },
 );

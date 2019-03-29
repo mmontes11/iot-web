@@ -1,7 +1,7 @@
 import { IS_AUTH, SET_PASSWORD, SET_USERNAME } from "constants/actionTypes/auth";
 import { RESET } from "constants/actionTypes/common";
 
-const initialState = {
+export const initialState = {
   isAuth: false,
   username: null,
   password: null,

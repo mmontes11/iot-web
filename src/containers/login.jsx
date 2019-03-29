@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { compose } from "recompose";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import * as reducerHelpers from "reducers";
+import * as fromState from "reducers";
 import * as authActions from "actions/auth";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
 
@@ -91,7 +91,7 @@ const withConnect = connect(
   state => ({
     username: state.auth.username,
     password: state.auth.password,
-    isLoading: reducerHelpers.isLoading(state),
+    isLoading: fromState.isLoading(state),
   }),
   authActions,
 );

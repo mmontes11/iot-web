@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducers/params has a default state 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": true,
+  },
+}
+`;
+
+exports[`reducers/params reduces PARAM_ITEMS_UPDATED 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": true,
+  },
+}
+`;
+
+exports[`reducers/params reduces PARAM_REQUEST 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": true,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": true,
+  },
+}
+`;
+
+exports[`reducers/params reduces PARAM_REQUEST_ERROR 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": true,
+  },
+}
+`;
+
+exports[`reducers/params reduces PARAM_REQUEST_SUCCESS 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": false,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": true,
+  },
+}
+`;
+
+exports[`reducers/params reduces PARAM_SELECT 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": true,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": true,
+  },
+}
+`;
+
+exports[`reducers/params reduces RESET 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": true,
+  },
+}
+`;
+
+exports[`reducers/params reduces nothing 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": true,
+  },
+}
+`;
+
+exports[`reducers/params updates FIRST_PARAM 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": "foo",
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "reset": Object {
+    "isDisabled": false,
+  },
+}
+`;
+
+exports[`reducers/params updates SECOND_PARAM 1`] = `
+Object {
+  "FIRST_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": null,
+  },
+  "SECOND_PARAM": Object {
+    "isActive": false,
+    "isDisabled": true,
+    "isLoading": false,
+    "items": Array [],
+    "selectedItem": "bar",
+  },
+  "reset": Object {
+    "isDisabled": false,
+  },
+}
+`;

@@ -589,6 +589,7 @@ exports[`components/main renders a main in / path 1`] = `
                     }
                     selectThing={[Function]}
                     selectedThing={null}
+                    shouldShowNotFoundError={false}
                     showNotFoundError={[Function]}
                     things={Array []}
                   >
@@ -644,6 +645,7 @@ exports[`components/main renders a main in / path 1`] = `
                         }
                         selectThing={[Function]}
                         selectedThing={null}
+                        shouldShowNotFoundError={false}
                         showNotFoundError={[Function]}
                         things={Array []}
                       >
@@ -699,6 +701,7 @@ exports[`components/main renders a main in / path 1`] = `
                           reset={[Function]}
                           selectThing={[Function]}
                           selectedThing={null}
+                          shouldShowNotFoundError={false}
                           showNotFoundError={[Function]}
                           things={Array []}
                         >
@@ -1420,6 +1423,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                     }
                     selectThing={[Function]}
                     selectedThing={null}
+                    shouldShowNotFoundError={false}
                     showNotFoundError={[Function]}
                     things={Array []}
                   >
@@ -1475,6 +1479,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                         }
                         selectThing={[Function]}
                         selectedThing={null}
+                        shouldShowNotFoundError={false}
                         showNotFoundError={[Function]}
                         things={Array []}
                       >
@@ -1530,6 +1535,7 @@ exports[`components/main renders a main in /foo path 1`] = `
                           reset={[Function]}
                           selectThing={[Function]}
                           selectedThing={null}
+                          shouldShowNotFoundError={false}
                           showNotFoundError={[Function]}
                           things={Array []}
                         >
@@ -2460,10 +2466,9 @@ exports[`components/main renders a main in /stats path 1`] = `
                                       type={
                                         Object {
                                           "isActive": false,
-                                          "items": Array [
-                                            "event",
-                                            "measurement",
-                                          ],
+                                          "isDisabled": true,
+                                          "isLoading": false,
+                                          "items": Array [],
                                           "selectedItem": null,
                                         }
                                       }
@@ -2490,10 +2495,9 @@ exports[`components/main renders a main in /stats path 1`] = `
                                         type={
                                           Object {
                                             "isActive": false,
-                                            "items": Array [
-                                              "event",
-                                              "measurement",
-                                            ],
+                                            "isDisabled": true,
+                                            "isLoading": false,
+                                            "items": Array [],
                                             "selectedItem": null,
                                           }
                                         }
@@ -2520,10 +2524,9 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           type={
                                             Object {
                                               "isActive": false,
-                                              "items": Array [
-                                                "event",
-                                                "measurement",
-                                              ],
+                                              "isDisabled": true,
+                                              "isLoading": false,
+                                              "items": Array [],
                                               "selectedItem": null,
                                             }
                                           }
@@ -2553,10 +2556,9 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             type={
                                               Object {
                                                 "isActive": false,
-                                                "items": Array [
-                                                  "event",
-                                                  "measurement",
-                                                ],
+                                                "isDisabled": true,
+                                                "isLoading": false,
+                                                "items": Array [],
                                                 "label": "Select type",
                                                 "onButtonClick": [Function],
                                                 "onItemClick": [Function],
@@ -2579,12 +2581,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                     isActive={false}
                                                     isDisabled={false}
                                                     isLoading={false}
-                                                    items={
-                                                      Array [
-                                                        "event",
-                                                        "measurement",
-                                                      ]
-                                                    }
+                                                    items={Array []}
                                                     label="Select type"
                                                     onButtonClick={[Function]}
                                                     onItemClick={[Function]}
@@ -2623,28 +2620,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                       >
                                                         <div
                                                           className="dropdown-content"
-                                                        >
-                                                          <div
-                                                            className="dropdown-item"
-                                                            key="event"
-                                                            onClick={[Function]}
-                                                            onKeyPress={[Function]}
-                                                            role="button"
-                                                            tabIndex={0}
-                                                          >
-                                                            event
-                                                          </div>
-                                                          <div
-                                                            className="dropdown-item"
-                                                            key="measurement"
-                                                            onClick={[Function]}
-                                                            onKeyPress={[Function]}
-                                                            role="button"
-                                                            tabIndex={0}
-                                                          >
-                                                            measurement
-                                                          </div>
-                                                        </div>
+                                                        />
                                                       </div>
                                                     </div>
                                                   </Dropdown>
@@ -2780,8 +2756,8 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           "isActive": false,
                                           "isDisabled": false,
                                           "items": Array [
-                                            "date",
                                             "thing",
+                                            "date",
                                           ],
                                         }
                                       }
@@ -2834,8 +2810,8 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             "isActive": false,
                                             "isDisabled": false,
                                             "items": Array [
-                                              "date",
                                               "thing",
+                                              "date",
                                             ],
                                           }
                                         }
@@ -2888,8 +2864,8 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               "isActive": false,
                                               "isDisabled": false,
                                               "items": Array [
-                                                "date",
                                                 "thing",
+                                                "date",
                                               ],
                                             }
                                           }
@@ -2948,8 +2924,8 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                 "isActive": false,
                                                 "isDisabled": false,
                                                 "items": Array [
-                                                  "date",
                                                   "thing",
+                                                  "date",
                                                 ],
                                                 "onButtonClick": [Function],
                                                 "onItemClick": [Function],
@@ -2973,8 +2949,8 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                     isLoading={false}
                                                     items={
                                                       Array [
-                                                        "date",
                                                         "thing",
+                                                        "date",
                                                       ]
                                                     }
                                                     label="Filters"
@@ -3017,16 +2993,6 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                         >
                                                           <div
                                                             className="dropdown-item"
-                                                            key="date"
-                                                            onClick={[Function]}
-                                                            onKeyPress={[Function]}
-                                                            role="button"
-                                                            tabIndex={0}
-                                                          >
-                                                            date
-                                                          </div>
-                                                          <div
-                                                            className="dropdown-item"
                                                             key="thing"
                                                             onClick={[Function]}
                                                             onKeyPress={[Function]}
@@ -3034,6 +3000,16 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                             tabIndex={0}
                                                           >
                                                             thing
+                                                          </div>
+                                                          <div
+                                                            className="dropdown-item"
+                                                            key="date"
+                                                            onClick={[Function]}
+                                                            onKeyPress={[Function]}
+                                                            role="button"
+                                                            tabIndex={0}
+                                                          >
+                                                            date
                                                           </div>
                                                         </div>
                                                       </div>
@@ -3655,6 +3631,7 @@ exports[`components/main renders a main in /things path 1`] = `
                     }
                     selectThing={[Function]}
                     selectedThing={null}
+                    shouldShowNotFoundError={false}
                     showNotFoundError={[Function]}
                     things={Array []}
                   >
@@ -3710,6 +3687,7 @@ exports[`components/main renders a main in /things path 1`] = `
                         }
                         selectThing={[Function]}
                         selectedThing={null}
+                        shouldShowNotFoundError={false}
                         showNotFoundError={[Function]}
                         things={Array []}
                       >
@@ -3765,6 +3743,7 @@ exports[`components/main renders a main in /things path 1`] = `
                           reset={[Function]}
                           selectThing={[Function]}
                           selectedThing={null}
+                          shouldShowNotFoundError={false}
                           showNotFoundError={[Function]}
                           things={Array []}
                         >

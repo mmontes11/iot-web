@@ -5,6 +5,7 @@ import { compose } from "recompose";
 import PropTypes from "prop-types";
 import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
+import * as fromState from "reducers";
 
 const StatsParamsPanel = ({
   onParamsSelected,
@@ -42,9 +43,9 @@ const StatsParamsPanel = ({
 
 const withConnect = connect(
   state => ({
-    type: state.stats.params.type,
-    observation: state.stats.params.observation,
-    isResetDisabled: state.stats.params.reset.isDisabled && state.stats.filters.items.length === 0,
+    type: fromState.getFirstParam(state),
+    observation: fromState.getSecondParam(state),
+    isResetDisabled: fromState.isResetDisabled(state),
   }),
   { ...paramsActions },
 );

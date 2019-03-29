@@ -10,47 +10,59 @@ Object {
     "showError": true,
   },
   "auth": false,
-  "measurements": Object {
-    "filters": Object {
-      "dateFilter": Object {
-        "custom": Object {
-          "endDate": null,
-          "startDate": null,
-        },
-        "isCustomSelected": false,
-        "timePeriod": Object {
-          "isActive": false,
-          "isDisabled": false,
-          "isLoading": false,
-          "items": Array [],
-          "selectedItem": null,
-        },
+  "filters": Object {
+    "dateFilter": Object {
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
       },
-      "items": Array [],
-      "thingFilter": Object {
+      "isCustomSelected": false,
+      "timePeriod": Object {
         "isActive": false,
         "isDisabled": false,
         "isLoading": false,
         "items": Array [],
         "selectedItem": null,
       },
-      "type": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "items": Array [
-          "thing",
-          "date",
-        ],
-      },
     },
+    "items": Array [],
+    "thingFilter": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "thing",
+        "date",
+      ],
+    },
+  },
+  "measurements": Object {
     "isLoading": false,
     "items": Array [],
-    "params": Object {
-      "groupBy": null,
-      "observation": null,
-      "reset": Object {
-        "isDisabled": true,
-      },
+  },
+  "params": Object {
+    "FIRST_PARAM": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "SECOND_PARAM": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
     },
   },
   "request": Object {
@@ -59,60 +71,8 @@ Object {
     "statusCode": null,
   },
   "stats": Object {
-    "filters": Object {
-      "dateFilter": Object {
-        "custom": Object {
-          "endDate": null,
-          "startDate": null,
-        },
-        "isCustomSelected": false,
-        "timePeriod": Object {
-          "isActive": false,
-          "isDisabled": false,
-          "isLoading": false,
-          "items": Array [],
-          "selectedItem": null,
-        },
-      },
-      "items": Array [],
-      "thingFilter": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "isLoading": false,
-        "items": Array [],
-        "selectedItem": null,
-      },
-      "type": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "items": Array [
-          "thing",
-          "date",
-        ],
-      },
-    },
     "isLoading": false,
     "items": Array [],
-    "params": Object {
-      "observation": Object {
-        "isActive": false,
-        "isDisabled": true,
-        "isLoading": false,
-        "items": Array [],
-        "selectedItem": null,
-      },
-      "reset": Object {
-        "isDisabled": true,
-      },
-      "type": Object {
-        "isActive": false,
-        "items": Array [
-          "event",
-          "measurement",
-        ],
-        "selectedItem": null,
-      },
-    },
   },
   "things": Object {
     "items": Array [],
@@ -130,105 +90,65 @@ Object {
     "showError": true,
   },
   "auth": "AUTH",
-  "measurements": Object {
-    "filters": Object {
-      "dateFilter": Object {
-        "custom": Object {
-          "endDate": null,
-          "startDate": null,
-        },
-        "isCustomSelected": false,
-        "timePeriod": Object {
-          "isActive": false,
-          "isDisabled": false,
-          "isLoading": false,
-          "items": Array [],
-          "selectedItem": null,
-        },
+  "filters": Object {
+    "dateFilter": Object {
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
       },
-      "items": Array [],
-      "thingFilter": Object {
+      "isCustomSelected": false,
+      "timePeriod": Object {
         "isActive": false,
         "isDisabled": false,
         "isLoading": false,
         "items": Array [],
         "selectedItem": null,
       },
-      "type": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "items": Array [
-          "thing",
-          "date",
-        ],
-      },
     },
+    "items": Array [],
+    "thingFilter": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "thing",
+        "date",
+      ],
+    },
+  },
+  "measurements": Object {
     "isLoading": false,
     "items": Array [],
-    "params": Object {
-      "groupBy": null,
-      "observation": null,
-      "reset": Object {
-        "isDisabled": true,
-      },
+  },
+  "params": Object {
+    "FIRST_PARAM": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "SECOND_PARAM": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
     },
   },
   "request": "REQUEST",
   "stats": Object {
-    "filters": Object {
-      "dateFilter": Object {
-        "custom": Object {
-          "endDate": null,
-          "startDate": null,
-        },
-        "isCustomSelected": false,
-        "timePeriod": Object {
-          "isActive": false,
-          "isDisabled": false,
-          "isLoading": false,
-          "items": Array [],
-          "selectedItem": null,
-        },
-      },
-      "items": Array [],
-      "thingFilter": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "isLoading": false,
-        "items": Array [],
-        "selectedItem": null,
-      },
-      "type": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "items": Array [
-          "thing",
-          "date",
-        ],
-      },
-    },
     "isLoading": false,
     "items": Array [],
-    "params": Object {
-      "observation": Object {
-        "isActive": false,
-        "isDisabled": true,
-        "isLoading": false,
-        "items": Array [],
-        "selectedItem": null,
-      },
-      "reset": Object {
-        "isDisabled": true,
-      },
-      "type": Object {
-        "isActive": false,
-        "items": Array [
-          "event",
-          "measurement",
-        ],
-        "selectedItem": null,
-      },
-    },
   },
   "things": Object {
     "items": Array [],
@@ -246,105 +166,65 @@ Object {
     "showError": true,
   },
   "auth": "STATE",
-  "measurements": Object {
-    "filters": Object {
-      "dateFilter": Object {
-        "custom": Object {
-          "endDate": null,
-          "startDate": null,
-        },
-        "isCustomSelected": false,
-        "timePeriod": Object {
-          "isActive": false,
-          "isDisabled": false,
-          "isLoading": false,
-          "items": Array [],
-          "selectedItem": null,
-        },
+  "filters": Object {
+    "dateFilter": Object {
+      "custom": Object {
+        "endDate": null,
+        "startDate": null,
       },
-      "items": Array [],
-      "thingFilter": Object {
+      "isCustomSelected": false,
+      "timePeriod": Object {
         "isActive": false,
         "isDisabled": false,
         "isLoading": false,
         "items": Array [],
         "selectedItem": null,
       },
-      "type": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "items": Array [
-          "thing",
-          "date",
-        ],
-      },
     },
+    "items": Array [],
+    "thingFilter": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "type": Object {
+      "isActive": false,
+      "isDisabled": false,
+      "items": Array [
+        "thing",
+        "date",
+      ],
+    },
+  },
+  "measurements": Object {
     "isLoading": false,
     "items": Array [],
-    "params": Object {
-      "groupBy": null,
-      "observation": null,
-      "reset": Object {
-        "isDisabled": true,
-      },
+  },
+  "params": Object {
+    "FIRST_PARAM": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "SECOND_PARAM": Object {
+      "isActive": false,
+      "isDisabled": true,
+      "isLoading": false,
+      "items": Array [],
+      "selectedItem": null,
+    },
+    "reset": Object {
+      "isDisabled": true,
     },
   },
   "request": "REQUEST",
   "stats": Object {
-    "filters": Object {
-      "dateFilter": Object {
-        "custom": Object {
-          "endDate": null,
-          "startDate": null,
-        },
-        "isCustomSelected": false,
-        "timePeriod": Object {
-          "isActive": false,
-          "isDisabled": false,
-          "isLoading": false,
-          "items": Array [],
-          "selectedItem": null,
-        },
-      },
-      "items": Array [],
-      "thingFilter": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "isLoading": false,
-        "items": Array [],
-        "selectedItem": null,
-      },
-      "type": Object {
-        "isActive": false,
-        "isDisabled": false,
-        "items": Array [
-          "thing",
-          "date",
-        ],
-      },
-    },
     "isLoading": false,
     "items": Array [],
-    "params": Object {
-      "observation": Object {
-        "isActive": false,
-        "isDisabled": true,
-        "isLoading": false,
-        "items": Array [],
-        "selectedItem": null,
-      },
-      "reset": Object {
-        "isDisabled": true,
-      },
-      "type": Object {
-        "isActive": false,
-        "items": Array [
-          "event",
-          "measurement",
-        ],
-        "selectedItem": null,
-      },
-    },
   },
   "things": Object {
     "items": Array [],

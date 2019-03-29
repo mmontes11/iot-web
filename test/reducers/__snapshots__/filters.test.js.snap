@@ -136,8 +136,8 @@ Object {
     "isActive": false,
     "isDisabled": false,
     "items": Array [
-      "date",
       "thing",
+      "date",
     ],
   },
 }
@@ -173,8 +173,8 @@ Object {
     "isActive": false,
     "isDisabled": false,
     "items": Array [
-      "date",
       "thing",
+      "date",
     ],
   },
 }
@@ -211,8 +211,8 @@ Object {
     "isActive": false,
     "isDisabled": true,
     "items": Array [
-      "date",
       "thing",
+      "date",
       "WHATEVER",
     ],
   },
@@ -247,8 +247,8 @@ Object {
     "isActive": true,
     "isDisabled": false,
     "items": Array [
-      "date",
       "thing",
+      "date",
     ],
   },
 }
@@ -317,8 +317,8 @@ Object {
     "isActive": false,
     "isDisabled": false,
     "items": Array [
-      "date",
       "thing",
+      "date",
     ],
   },
 }

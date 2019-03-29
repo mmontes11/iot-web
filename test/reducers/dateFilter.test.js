@@ -14,7 +14,7 @@ import {
 import { RESET } from "constants/actionTypes/common";
 import { initialState } from "../constants/index";
 
-const thingFilterInitialState = initialState.stats.filters.dateFilter;
+const thingFilterInitialState = initialState.filters.dateFilter;
 deepFreeze(thingFilterInitialState);
 
 describe("reducers/dateFilter", () => {

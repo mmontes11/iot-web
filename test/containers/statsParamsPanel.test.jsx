@@ -22,15 +22,12 @@ describe("containers/statsParamsPanel", () => {
   it("renders before selecting type", () => {
     const state = {
       ...initialState,
-      stats: {
-        ...initialState.stats,
-        params: {
-          ...initialState.stats.params,
-          type: {
-            items: ["event", "measurement"],
-            isActive: true,
-            selectedItem: null,
-          },
+      params: {
+        ...initialState.params,
+        type: {
+          items: ["event", "measurement"],
+          isActive: true,
+          selectedItem: null,
         },
       },
     };
@@ -47,15 +44,12 @@ describe("containers/statsParamsPanel", () => {
   it("renders when type is selected", () => {
     const state = {
       ...initialState,
-      stats: {
-        ...initialState.stats,
-        params: {
-          ...initialState.stats.params,
-          type: {
-            items: ["event", "measurement"],
-            isActive: false,
-            selectedItem: "event",
-          },
+      params: {
+        ...initialState.params,
+        type: {
+          items: ["event", "measurement"],
+          isActive: false,
+          selectedItem: "event",
         },
       },
     };
@@ -72,17 +66,14 @@ describe("containers/statsParamsPanel", () => {
   it("renders when loading observations", () => {
     const state = {
       ...initialState,
-      stats: {
-        ...initialState.stats,
-        params: {
-          ...initialState.stats.params,
-          observation: {
-            items: [],
-            isActive: false,
-            isLoading: true,
-            isDisabled: true,
-            selectedItem: null,
-          },
+      params: {
+        ...initialState.params,
+        observation: {
+          items: [],
+          isActive: false,
+          isLoading: true,
+          isDisabled: true,
+          selectedItem: null,
         },
       },
     };
@@ -99,17 +90,14 @@ describe("containers/statsParamsPanel", () => {
   it("renders before selecting observation", () => {
     const state = {
       ...initialState,
-      stats: {
-        ...initialState.stats,
-        params: {
-          ...initialState.stats.params,
-          observation: {
-            items: ["temperature", "humidity"],
-            isActive: false,
-            isLoading: false,
-            isDisabled: false,
-            selectedItem: null,
-          },
+      params: {
+        ...initialState.params,
+        observation: {
+          items: ["temperature", "humidity"],
+          isActive: false,
+          isLoading: false,
+          isDisabled: false,
+          selectedItem: null,
         },
       },
     };
@@ -126,17 +114,14 @@ describe("containers/statsParamsPanel", () => {
   it("renders before selecting observation", () => {
     const state = {
       ...initialState,
-      stats: {
-        ...initialState.stats,
-        params: {
-          ...initialState.stats.params,
-          observation: {
-            items: ["temperature", "humidity"],
-            isActive: false,
-            isLoading: false,
-            isDisabled: false,
-            selectedItem: null,
-          },
+      params: {
+        ...initialState.params,
+        observation: {
+          items: ["temperature", "humidity"],
+          isActive: false,
+          isLoading: false,
+          isDisabled: false,
+          selectedItem: null,
         },
       },
     };
@@ -153,17 +138,14 @@ describe("containers/statsParamsPanel", () => {
   it("renders when observation is selected", () => {
     const state = {
       ...initialState,
-      stats: {
-        ...initialState.stats,
-        params: {
-          ...initialState.stats.params,
-          observation: {
-            items: ["temperature", "humidity"],
-            isActive: false,
-            isLoading: false,
-            isDisabled: false,
-            selectedItem: "temperature",
-          },
+      params: {
+        ...initialState.params,
+        observation: {
+          items: ["temperature", "humidity"],
+          isActive: false,
+          isLoading: false,
+          isDisabled: false,
+          selectedItem: "temperature",
         },
       },
     };

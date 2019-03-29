@@ -59,6 +59,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
           isLoading={false}
           selectThing={[Function]}
           selectedThing={null}
+          shouldShowNotFoundError={false}
           showNotFoundError={[Function]}
           things={Array []}
         >
@@ -114,6 +115,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
               }
               selectThing={[Function]}
               selectedThing={null}
+              shouldShowNotFoundError={false}
               showNotFoundError={[Function]}
               things={Array []}
             >
@@ -169,6 +171,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
                 reset={[Function]}
                 selectThing={[Function]}
                 selectedThing={null}
+                shouldShowNotFoundError={false}
                 showNotFoundError={[Function]}
                 things={Array []}
               >
@@ -355,6 +358,7 @@ exports[`containers/things renders things in loading state 1`] = `
           isLoading={true}
           selectThing={[Function]}
           selectedThing={null}
+          shouldShowNotFoundError={false}
           showNotFoundError={[Function]}
           things={Array []}
         >
@@ -410,6 +414,7 @@ exports[`containers/things renders things in loading state 1`] = `
               }
               selectThing={[Function]}
               selectedThing={null}
+              shouldShowNotFoundError={false}
               showNotFoundError={[Function]}
               things={Array []}
             >
@@ -465,6 +470,7 @@ exports[`containers/things renders things in loading state 1`] = `
                 reset={[Function]}
                 selectThing={[Function]}
                 selectedThing={null}
+                shouldShowNotFoundError={false}
                 showNotFoundError={[Function]}
                 things={Array []}
               >

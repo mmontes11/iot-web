@@ -1,13 +1,9 @@
 import { RESET } from "constants/actionTypes/common";
 import { STATS_REQUEST, STATS_REQUEST_SUCCESS, STATS_REQUEST_ERROR, STATS_UPDATED } from "constants/actionTypes/stats";
-import paramsReducer, { initialState as paramsInitialState } from "reducers/statsParams";
-import filtersReducer, { initialState as filtersInitialState } from "reducers/filters";
 
-const initialState = {
+export const initialState = {
   items: [],
   isLoading: false,
-  params: paramsInitialState,
-  filters: filtersInitialState,
 };
 
 export default (state = initialState, action) => {
@@ -23,6 +19,6 @@ export default (state = initialState, action) => {
     case RESET:
       return initialState;
     default:
-      return { ...state, params: paramsReducer(state.params, action), filters: filtersReducer(state.filters, action) };
+      return state;
   }
 };

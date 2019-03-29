@@ -7,6 +7,7 @@ import FiltersPanel from "components/filtersPanel";
 import * as filterActions from "actions/filters";
 import * as thingFilterActions from "actions/thingFilter";
 import * as dateFilterActions from "actions/dateFilter";
+import * as fromState from "reducers";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 
 const StatsFiltersPanel = ({
@@ -135,11 +136,11 @@ StatsFiltersPanel.defaultProps = {
 
 const withConnect = connect(
   state => ({
-    type: state.stats.filters.type,
-    statsType: state.stats.params.type.selectedItem,
-    thingFilter: state.stats.filters.thingFilter,
-    dateFilter: state.stats.filters.dateFilter,
-    selectedFilters: state.stats.filters.items,
+    statsType: fromState.getFirstParam(state).selectedItem,
+    type: state.filters.type,
+    thingFilter: state.filters.thingFilter,
+    dateFilter: state.filters.dateFilter,
+    selectedFilters: state.filters.items,
   }),
   { ...filterActions, ...thingFilterActions, ...dateFilterActions },
 );
