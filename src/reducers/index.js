@@ -20,6 +20,5 @@ export default combineReducers({
 export const isLoading = state => fromRequest.isLoading(state.request);
 export const hasError = state => fromRequest.hasError(state.request);
 export const shouldShowError = state => hasError(state) && state.app.showError;
-export const getFirstParam = state => fromParams.getFirstParam(state.params);
-export const getSecondParam = state => fromParams.getSecondParam(state.params);
-export const isResetDisabled = state => state.params.reset.isDisabled && state.filters.items.length === 0;
+export const getParam = (state, param) => fromParams.getParam(state.params, param);
+export const isResetDisabled = state => state.params.isResetDisabled && state.filters.items.length === 0;

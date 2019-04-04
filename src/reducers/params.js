@@ -1,67 +1,83 @@
 import {
   PARAM_SELECT,
-  PARAM_UPDATED,
+  PARAM_UPDATE,
+  PARAM_RESET,
   PARAM_REQUEST,
   PARAM_REQUEST_SUCCESS,
   PARAM_REQUEST_ERROR,
   PARAM_ITEMS_UPDATED,
 } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
-import { FIRST_PARAM, SECOND_PARAM } from "constants/params";
+import deepEqual from "deep-equal";
+
+export const initialState = {
+  byId: {},
+  allIds: [],
+  isResetDisabled: true,
+};
 
 const paramInitialState = {
   items: [],
   isActive: false,
   isLoading: false,
-  isDisabled: true,
+  isDisabled: false,
   selectedItem: null,
 };
 
-export const initialState = {
-  [FIRST_PARAM]: paramInitialState,
-  [SECOND_PARAM]: paramInitialState,
-  reset: {
-    isDisabled: true,
-  },
+const addParamIfNeeded = (state, paramId) => {
+  if (state.allIds.includes(paramId)) {
+    return state;
+  }
+  return {
+    ...state,
+    byId: {
+      ...state.byId,
+      [paramId]: paramInitialState,
+    },
+    allIds: [...state.allIds, paramId],
+  };
 };
 
-export default (state = initialState, { type, param: paramName, selectedItem, items }) => {
+const updateParam = (state, paramId, param) => ({
+  ...state,
+  byId: {
+    ...state.byId,
+    [paramId]: param,
+  },
+});
+
+const allParamsInInitialState = state => Object.values(state.byId).every(param => deepEqual(param, paramInitialState));
+
+export default (state = initialState, { type, param: paramId, selectedItem, items }) => {
   if (type === RESET) {
     return initialState;
   }
-  if (!paramName) {
+  if (!paramId) {
     return state;
   }
-  const param = state[paramName];
+  let newState = { ...state };
+  newState = addParamIfNeeded(newState, paramId);
+  const param = newState.byId[paramId];
   switch (type) {
     case PARAM_SELECT:
-      return { ...state, [paramName]: { ...param, isActive: !param.isActive } };
-    case PARAM_UPDATED: {
-      let newState = {
-        ...state,
-        [paramName]: { ...param, isActive: false, selectedItem },
-        reset: { ...state.reset, isDisabled: false },
-      };
-      if (paramName === FIRST_PARAM) {
-        newState = {
-          ...newState,
-          [SECOND_PARAM]: paramInitialState,
-        };
-      }
-      return newState;
+      return updateParam(newState, paramId, { ...param, isActive: !param.isActive });
+    case PARAM_UPDATE:
+      return { ...updateParam(newState, paramId, { ...param, isActive: false, selectedItem }), isResetDisabled: false };
+    case PARAM_RESET: {
+      const newStateWithResetParam = updateParam(newState, paramId, paramInitialState);
+      return { ...newStateWithResetParam, isResetDisabled: allParamsInInitialState(newStateWithResetParam) };
     }
     case PARAM_REQUEST:
-      return { ...state, [paramName]: { ...param, isLoading: true, isDisabled: true } };
+      return updateParam(newState, paramId, { ...param, isLoading: true, isDisabled: true });
     case PARAM_REQUEST_SUCCESS:
-      return { ...state, [paramName]: { ...param, isLoading: false, isDisabled: false } };
+      return updateParam(newState, paramId, { ...param, isLoading: false, isDisabled: false });
     case PARAM_REQUEST_ERROR:
-      return { ...state, [paramName]: { ...param, isLoading: false, isDisabled: true } };
+      return updateParam(newState, paramId, { ...param, isLoading: false, isDisabled: false });
     case PARAM_ITEMS_UPDATED:
-      return { ...state, [paramName]: { ...param, items } };
+      return updateParam(newState, paramId, { ...param, items });
     default:
       return state;
   }
 };
 
-export const getFirstParam = state => state[FIRST_PARAM];
-export const getSecondParam = state => state[SECOND_PARAM];
+export const getParam = (state, paramName) => state.byId[paramName] || {};

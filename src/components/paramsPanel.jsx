@@ -2,28 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 import Dropdown from "components/dropdown";
 
-const ParamsPanel = ({ type, observation, reset }) => (
+const ParamsPanel = ({ params, reset }) => (
   <div className="box">
     <div className="columns">
-      <div className="column is-5">
-        <Dropdown
-          {...type}
-          iconStyle="fa-angle-down"
-          isLoading={false}
-          isDisabled={false}
-          onButtonClick={() => type.onButtonClick()}
-          onItemClick={item => type.onItemClick(item)}
-        />
-      </div>
-      <div className="column is-5">
-        <Dropdown
-          {...observation}
-          iconStyle="fa-angle-down"
-          onButtonClick={() => observation.onButtonClick()}
-          onItemClick={item => observation.onItemClick(item)}
-        />
-      </div>
-      <div className="column">
+      {params.map(param => {
+        const { key, label, items, isActive, isLoading, isDisabled, onButtonClick, onItemClick } = param;
+        return (
+          <div key={key} className="column">
+            <Dropdown
+              label={label}
+              items={items}
+              isActive={isActive}
+              isLoading={isLoading}
+              isDisabled={isDisabled}
+              onButtonClick={() => onButtonClick()}
+              onItemClick={item => onItemClick(item)}
+            />
+          </div>
+        );
+      })}
+      <div className="column is-2">
         <button className="button is-warning is-fullwidth" disabled={reset.isDisabled} onClick={() => reset.onReset()}>
           <span>Reset</span>
           <span className="icon is-small">
@@ -35,23 +33,20 @@ const ParamsPanel = ({ type, observation, reset }) => (
   </div>
 );
 
+const paramShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  iconStyle: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  isActive: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  isDisabled: PropTypes.bool.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
+  onItemClick: PropTypes.func.isRequired,
+});
+
 ParamsPanel.propTypes = {
-  type: PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    isActive: PropTypes.bool.isRequired,
-    onButtonClick: PropTypes.func.isRequired,
-    onItemClick: PropTypes.func.isRequired,
-  }).isRequired,
-  observation: PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-    isActive: PropTypes.bool.isRequired,
-    isLoading: PropTypes.bool.isRequired,
-    isDisabled: PropTypes.bool.isRequired,
-    onButtonClick: PropTypes.func.isRequired,
-    onItemClick: PropTypes.func.isRequired,
-  }).isRequired,
+  params: PropTypes.arrayOf(paramShape).isRequired,
   reset: PropTypes.shape({
     isDisabled: PropTypes.bool.isRequired,
     onReset: PropTypes.func.isRequired,

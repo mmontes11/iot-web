@@ -5,7 +5,11 @@ import { thing } from "../constants";
 
 describe("components/thingDetail", () => {
   const wrapper = shallow(
-    <ThingDetail thing={thing} onEventStatsClick={() => undefined} onMeasruementStatsClick={() => undefined} />,
+    <ThingDetail 
+      thing={thing} 
+      onEventStatsClick={() => undefined} 
+      onMeasurementStatsClick={() => undefined} 
+    />,
   );
   it("renders", () => {
     expect(wrapper).toMatchSnapshot();

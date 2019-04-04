@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
+import { TYPE, OBSERVATION } from "constants/params";
 
 const StatsParamsPanel = ({
   onParamsSelected,
@@ -19,21 +20,31 @@ const StatsParamsPanel = ({
   updateObservation,
 }) => (
   <ParamsPanel
-    type={{
-      ...type,
-      label: type.selectedItem || "Select type",
-      onButtonClick: () => selectType(),
-      onItemClick: item => updateType(item),
-    }}
-    observation={{
-      ...observation,
-      label: observation.selectedItem || "Select observation",
-      onButtonClick: () => selectObservation(),
-      onItemClick: item => {
-        updateObservation(item);
-        onParamsSelected(type.selectedItem, item);
+    params={[
+      {
+        key: "type",
+        label: type.selectedItem || "Select type",
+        items: type.items || [],
+        isActive: type.isActive || false,
+        isLoading: false,
+        isDisabled: false,
+        onButtonClick: () => selectType(),
+        onItemClick: item => updateType(item),
       },
-    }}
+      {
+        key: "observation",
+        label: observation.selectedItem || "Select observation",
+        items: observation.items || [],
+        isActive: observation.isActive || false,
+        isLoading: observation.isLoading || false,
+        isDisabled: observation.isDisabled || false,
+        onButtonClick: () => selectObservation(),
+        onItemClick: item => {
+          updateObservation(item);
+          onParamsSelected(type.selectedItem, item);
+        },
+      },
+    ]}
     reset={{
       isDisabled: isResetDisabled,
       onReset: () => onReset(),
@@ -43,8 +54,8 @@ const StatsParamsPanel = ({
 
 const withConnect = connect(
   state => ({
-    type: fromState.getFirstParam(state),
-    observation: fromState.getSecondParam(state),
+    type: fromState.getParam(state, TYPE),
+    observation: fromState.getParam(state, OBSERVATION),
     isResetDisabled: fromState.isResetDisabled(state),
   }),
   { ...paramsActions },

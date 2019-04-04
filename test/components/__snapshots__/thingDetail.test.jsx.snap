@@ -81,6 +81,7 @@ exports[`components/thingDetail renders 1`] = `
         />
         <ThingActions
           onEventStatsClick={[Function]}
+          onMeasurementStatsClick={[Function]}
           thing={
             Object {
               "geometry": Object {

@@ -2,14 +2,15 @@ import deepFreeze from "deep-freeze";
 import paramsReducer, { initialState as paramsInitialState } from "reducers/params";
 import {
   PARAM_SELECT,
-  PARAM_UPDATED,
+  PARAM_UPDATE,
+  PARAM_RESET,
   PARAM_REQUEST,
   PARAM_REQUEST_SUCCESS,
   PARAM_REQUEST_ERROR,
   PARAM_ITEMS_UPDATED,
 } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
-import { FIRST_PARAM, SECOND_PARAM } from "constants/params";
+import { TYPE, OBSERVATION } from "constants/params";
 
 deepFreeze(paramsInitialState);
 
@@ -21,33 +22,32 @@ describe("reducers/params", () => {
     expect(paramsReducer(paramsInitialState, { type: "WHATEVER" })).toMatchSnapshot();
   });
   it("reduces PARAM_SELECT", () => {
-    expect(paramsReducer(paramsInitialState, { type: PARAM_SELECT, param: FIRST_PARAM })).toMatchSnapshot();
+    expect(paramsReducer(paramsInitialState, { type: PARAM_SELECT, param: TYPE })).toMatchSnapshot();
   });
-  it("updates FIRST_PARAM", () => {
+  it("reduces PARAM_UPDATE by updating TYPE", () => {
     expect(
-      paramsReducer(paramsInitialState, { type: PARAM_UPDATED, param: FIRST_PARAM, selectedItem: "foo" }),
+      paramsReducer(paramsInitialState, { type: PARAM_UPDATE, param: TYPE, selectedItem: "foo" }),
     ).toMatchSnapshot();
   });
-  it("updates SECOND_PARAM", () => {
-    expect(
-      paramsReducer(paramsInitialState, { type: PARAM_UPDATED, param: SECOND_PARAM, selectedItem: "bar" }),
-    ).toMatchSnapshot();
+  it("reduces PARAM_RESET by reseting TYPE", () => {
+    paramsReducer(paramsInitialState, { type: PARAM_UPDATE, param: TYPE, selectedItem: "foo" });
+    expect(paramsReducer(paramsInitialState, { type: PARAM_RESET, param: TYPE })).toMatchSnapshot();
   });
   it("reduces PARAM_REQUEST", () => {
-    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST, param: FIRST_PARAM })).toMatchSnapshot();
+    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST, param: TYPE })).toMatchSnapshot();
   });
   it("reduces PARAM_REQUEST_SUCCESS", () => {
-    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST_SUCCESS, param: FIRST_PARAM })).toMatchSnapshot();
+    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST_SUCCESS, param: TYPE })).toMatchSnapshot();
   });
   it("reduces PARAM_REQUEST_ERROR", () => {
-    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST_ERROR, param: FIRST_PARAM })).toMatchSnapshot();
+    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST_ERROR, param: TYPE })).toMatchSnapshot();
   });
   it("reduces PARAM_ITEMS_UPDATED", () => {
     expect(
       paramsReducer(paramsInitialState, {
         type: PARAM_ITEMS_UPDATED,
-        param: FIRST_PARAM,
-        items: [],
+        param: TYPE,
+        items: ["foo", "bar"],
       }),
     ).toMatchSnapshot();
   });

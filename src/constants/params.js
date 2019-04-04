@@ -1,2 +1,2 @@
-export const FIRST_PARAM = "FIRST_PARAM";
-export const SECOND_PARAM = "SECOND_PARAM";
+export const TYPE = "TYPE";
+export const OBSERVATION = "OBSERVATION";

@@ -58,7 +58,7 @@ const Dropdown = ({
 Dropdown.propTypes = {
   label: PropTypes.string.isRequired,
   buttonStyle: PropTypes.string,
-  iconStyle: PropTypes.string.isRequired,
+  iconStyle: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   isActive: PropTypes.bool.isRequired,
   isLoading: PropTypes.bool.isRequired,
@@ -69,6 +69,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   buttonStyle: "",
+  iconStyle: "fa-angle-down",
 };
 
 export default Dropdown;

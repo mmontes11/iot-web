@@ -973,23 +973,9 @@ Object {
     },
   },
   "params": Object {
-    "FIRST_PARAM": Object {
-      "isActive": false,
-      "isDisabled": true,
-      "isLoading": false,
-      "items": Array [],
-      "selectedItem": null,
-    },
-    "SECOND_PARAM": Object {
-      "isActive": false,
-      "isDisabled": true,
-      "isLoading": false,
-      "items": Array [],
-      "selectedItem": null,
-    },
-    "reset": Object {
-      "isDisabled": true,
-    },
+    "allIds": Array [],
+    "byId": Object {},
+    "isResetDisabled": true,
   },
   "request": Object {
     "error": null,

@@ -252,119 +252,71 @@ exports[`containers/stats renders stats barcharts 1`] = `
                         >
                           <Connect(ResetOnUnmount)
                             isResetDisabled={true}
-                            observation={
-                              Object {
-                                "isActive": false,
-                                "isDisabled": true,
-                                "isLoading": false,
-                                "items": Array [],
-                                "selectedItem": null,
-                              }
-                            }
+                            observation={Object {}}
                             onParamsSelected={[Function]}
                             onReset={[Function]}
                             selectObservation={[Function]}
                             selectType={[Function]}
-                            type={
-                              Object {
-                                "isActive": false,
-                                "isDisabled": true,
-                                "isLoading": false,
-                                "items": Array [],
-                                "selectedItem": null,
-                              }
-                            }
+                            type={Object {}}
                             updateObservation={[Function]}
                             updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <ResetOnUnmount
                               isResetDisabled={true}
-                              observation={
-                                Object {
-                                  "isActive": false,
-                                  "isDisabled": true,
-                                  "isLoading": false,
-                                  "items": Array [],
-                                  "selectedItem": null,
-                                }
-                              }
+                              observation={Object {}}
                               onParamsSelected={[Function]}
                               onReset={[Function]}
                               reset={[Function]}
                               selectObservation={[Function]}
                               selectType={[Function]}
-                              type={
-                                Object {
-                                  "isActive": false,
-                                  "isDisabled": true,
-                                  "isLoading": false,
-                                  "items": Array [],
-                                  "selectedItem": null,
-                                }
-                              }
+                              type={Object {}}
                               updateObservation={[Function]}
                               updateParams={[Function]}
                               updateType={[Function]}
                             >
                               <StatsParamsPanel
                                 isResetDisabled={true}
-                                observation={
-                                  Object {
-                                    "isActive": false,
-                                    "isDisabled": true,
-                                    "isLoading": false,
-                                    "items": Array [],
-                                    "selectedItem": null,
-                                  }
-                                }
+                                observation={Object {}}
                                 onParamsSelected={[Function]}
                                 onReset={[Function]}
                                 reset={[Function]}
                                 selectObservation={[Function]}
                                 selectType={[Function]}
-                                type={
-                                  Object {
-                                    "isActive": false,
-                                    "isDisabled": true,
-                                    "isLoading": false,
-                                    "items": Array [],
-                                    "selectedItem": null,
-                                  }
-                                }
+                                type={Object {}}
                                 updateObservation={[Function]}
                                 updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ParamsPanel
-                                  observation={
-                                    Object {
-                                      "isActive": false,
-                                      "isDisabled": true,
-                                      "isLoading": false,
-                                      "items": Array [],
-                                      "label": "Select observation",
-                                      "onButtonClick": [Function],
-                                      "onItemClick": [Function],
-                                      "selectedItem": null,
-                                    }
+                                  params={
+                                    Array [
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "key": "type",
+                                        "label": "Select type",
+                                        "onButtonClick": [Function],
+                                        "onItemClick": [Function],
+                                      },
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "key": "observation",
+                                        "label": "Select observation",
+                                        "onButtonClick": [Function],
+                                        "onItemClick": [Function],
+                                      },
+                                    ]
                                   }
                                   reset={
                                     Object {
                                       "isDisabled": true,
                                       "onReset": [Function],
-                                    }
-                                  }
-                                  type={
-                                    Object {
-                                      "isActive": false,
-                                      "isDisabled": true,
-                                      "isLoading": false,
-                                      "items": Array [],
-                                      "label": "Select type",
-                                      "onButtonClick": [Function],
-                                      "onItemClick": [Function],
-                                      "selectedItem": null,
                                     }
                                   }
                                 >
@@ -375,7 +327,8 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                       className="columns"
                                     >
                                       <div
-                                        className="column is-5"
+                                        className="column"
+                                        key="type"
                                       >
                                         <Dropdown
                                           buttonStyle=""
@@ -387,7 +340,6 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                           label="Select type"
                                           onButtonClick={[Function]}
                                           onItemClick={[Function]}
-                                          selectedItem={null}
                                         >
                                           <div
                                             className="dropdown"
@@ -428,19 +380,19 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                         </Dropdown>
                                       </div>
                                       <div
-                                        className="column is-5"
+                                        className="column"
+                                        key="observation"
                                       >
                                         <Dropdown
                                           buttonStyle=""
                                           iconStyle="fa-angle-down"
                                           isActive={false}
-                                          isDisabled={true}
+                                          isDisabled={false}
                                           isLoading={false}
                                           items={Array []}
                                           label="Select observation"
                                           onButtonClick={[Function]}
                                           onItemClick={[Function]}
-                                          selectedItem={null}
                                         >
                                           <div
                                             className="dropdown"
@@ -452,7 +404,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                                 aria-controls="dropdown-menu"
                                                 aria-haspopup="true"
                                                 className="button"
-                                                disabled={true}
+                                                disabled={false}
                                                 onClick={[Function]}
                                               >
                                                 <span>
@@ -481,7 +433,7 @@ exports[`containers/stats renders stats barcharts 1`] = `
                                         </Dropdown>
                                       </div>
                                       <div
-                                        className="column"
+                                        className="column is-2"
                                       >
                                         <button
                                           className="button is-warning is-fullwidth"
@@ -542,7 +494,6 @@ exports[`containers/stats renders stats barcharts 1`] = `
                             selectThingFilter={[Function]}
                             selectTimePeriod={[Function]}
                             selectedFilters={Array []}
-                            statsType={null}
                             thingFilter={
                               Object {
                                 "isActive": false,
@@ -596,7 +547,6 @@ exports[`containers/stats renders stats barcharts 1`] = `
                               selectThingFilter={[Function]}
                               selectTimePeriod={[Function]}
                               selectedFilters={Array []}
-                              statsType={null}
                               thingFilter={
                                 Object {
                                   "isActive": false,
@@ -1091,119 +1041,71 @@ exports[`containers/stats renders stats in initial state 1`] = `
                         >
                           <Connect(ResetOnUnmount)
                             isResetDisabled={true}
-                            observation={
-                              Object {
-                                "isActive": false,
-                                "isDisabled": true,
-                                "isLoading": false,
-                                "items": Array [],
-                                "selectedItem": null,
-                              }
-                            }
+                            observation={Object {}}
                             onParamsSelected={[Function]}
                             onReset={[Function]}
                             selectObservation={[Function]}
                             selectType={[Function]}
-                            type={
-                              Object {
-                                "isActive": false,
-                                "isDisabled": true,
-                                "isLoading": false,
-                                "items": Array [],
-                                "selectedItem": null,
-                              }
-                            }
+                            type={Object {}}
                             updateObservation={[Function]}
                             updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <ResetOnUnmount
                               isResetDisabled={true}
-                              observation={
-                                Object {
-                                  "isActive": false,
-                                  "isDisabled": true,
-                                  "isLoading": false,
-                                  "items": Array [],
-                                  "selectedItem": null,
-                                }
-                              }
+                              observation={Object {}}
                               onParamsSelected={[Function]}
                               onReset={[Function]}
                               reset={[Function]}
                               selectObservation={[Function]}
                               selectType={[Function]}
-                              type={
-                                Object {
-                                  "isActive": false,
-                                  "isDisabled": true,
-                                  "isLoading": false,
-                                  "items": Array [],
-                                  "selectedItem": null,
-                                }
-                              }
+                              type={Object {}}
                               updateObservation={[Function]}
                               updateParams={[Function]}
                               updateType={[Function]}
                             >
                               <StatsParamsPanel
                                 isResetDisabled={true}
-                                observation={
-                                  Object {
-                                    "isActive": false,
-                                    "isDisabled": true,
-                                    "isLoading": false,
-                                    "items": Array [],
-                                    "selectedItem": null,
-                                  }
-                                }
+                                observation={Object {}}
                                 onParamsSelected={[Function]}
                                 onReset={[Function]}
                                 reset={[Function]}
                                 selectObservation={[Function]}
                                 selectType={[Function]}
-                                type={
-                                  Object {
-                                    "isActive": false,
-                                    "isDisabled": true,
-                                    "isLoading": false,
-                                    "items": Array [],
-                                    "selectedItem": null,
-                                  }
-                                }
+                                type={Object {}}
                                 updateObservation={[Function]}
                                 updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ParamsPanel
-                                  observation={
-                                    Object {
-                                      "isActive": false,
-                                      "isDisabled": true,
-                                      "isLoading": false,
-                                      "items": Array [],
-                                      "label": "Select observation",
-                                      "onButtonClick": [Function],
-                                      "onItemClick": [Function],
-                                      "selectedItem": null,
-                                    }
+                                  params={
+                                    Array [
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "key": "type",
+                                        "label": "Select type",
+                                        "onButtonClick": [Function],
+                                        "onItemClick": [Function],
+                                      },
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "key": "observation",
+                                        "label": "Select observation",
+                                        "onButtonClick": [Function],
+                                        "onItemClick": [Function],
+                                      },
+                                    ]
                                   }
                                   reset={
                                     Object {
                                       "isDisabled": true,
                                       "onReset": [Function],
-                                    }
-                                  }
-                                  type={
-                                    Object {
-                                      "isActive": false,
-                                      "isDisabled": true,
-                                      "isLoading": false,
-                                      "items": Array [],
-                                      "label": "Select type",
-                                      "onButtonClick": [Function],
-                                      "onItemClick": [Function],
-                                      "selectedItem": null,
                                     }
                                   }
                                 >
@@ -1214,7 +1116,8 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                       className="columns"
                                     >
                                       <div
-                                        className="column is-5"
+                                        className="column"
+                                        key="type"
                                       >
                                         <Dropdown
                                           buttonStyle=""
@@ -1226,7 +1129,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                           label="Select type"
                                           onButtonClick={[Function]}
                                           onItemClick={[Function]}
-                                          selectedItem={null}
                                         >
                                           <div
                                             className="dropdown"
@@ -1267,19 +1169,19 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                         </Dropdown>
                                       </div>
                                       <div
-                                        className="column is-5"
+                                        className="column"
+                                        key="observation"
                                       >
                                         <Dropdown
                                           buttonStyle=""
                                           iconStyle="fa-angle-down"
                                           isActive={false}
-                                          isDisabled={true}
+                                          isDisabled={false}
                                           isLoading={false}
                                           items={Array []}
                                           label="Select observation"
                                           onButtonClick={[Function]}
                                           onItemClick={[Function]}
-                                          selectedItem={null}
                                         >
                                           <div
                                             className="dropdown"
@@ -1291,7 +1193,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                                 aria-controls="dropdown-menu"
                                                 aria-haspopup="true"
                                                 className="button"
-                                                disabled={true}
+                                                disabled={false}
                                                 onClick={[Function]}
                                               >
                                                 <span>
@@ -1320,7 +1222,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                         </Dropdown>
                                       </div>
                                       <div
-                                        className="column"
+                                        className="column is-2"
                                       >
                                         <button
                                           className="button is-warning is-fullwidth"
@@ -1381,7 +1283,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                             selectThingFilter={[Function]}
                             selectTimePeriod={[Function]}
                             selectedFilters={Array []}
-                            statsType={null}
                             thingFilter={
                               Object {
                                 "isActive": false,
@@ -1435,7 +1336,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                               selectThingFilter={[Function]}
                               selectTimePeriod={[Function]}
                               selectedFilters={Array []}
-                              statsType={null}
                               thingFilter={
                                 Object {
                                   "isActive": false,
@@ -1930,119 +1830,71 @@ exports[`containers/stats renders when loading stats 1`] = `
                         >
                           <Connect(ResetOnUnmount)
                             isResetDisabled={true}
-                            observation={
-                              Object {
-                                "isActive": false,
-                                "isDisabled": true,
-                                "isLoading": false,
-                                "items": Array [],
-                                "selectedItem": null,
-                              }
-                            }
+                            observation={Object {}}
                             onParamsSelected={[Function]}
                             onReset={[Function]}
                             selectObservation={[Function]}
                             selectType={[Function]}
-                            type={
-                              Object {
-                                "isActive": false,
-                                "isDisabled": true,
-                                "isLoading": false,
-                                "items": Array [],
-                                "selectedItem": null,
-                              }
-                            }
+                            type={Object {}}
                             updateObservation={[Function]}
                             updateParams={[Function]}
                             updateType={[Function]}
                           >
                             <ResetOnUnmount
                               isResetDisabled={true}
-                              observation={
-                                Object {
-                                  "isActive": false,
-                                  "isDisabled": true,
-                                  "isLoading": false,
-                                  "items": Array [],
-                                  "selectedItem": null,
-                                }
-                              }
+                              observation={Object {}}
                               onParamsSelected={[Function]}
                               onReset={[Function]}
                               reset={[Function]}
                               selectObservation={[Function]}
                               selectType={[Function]}
-                              type={
-                                Object {
-                                  "isActive": false,
-                                  "isDisabled": true,
-                                  "isLoading": false,
-                                  "items": Array [],
-                                  "selectedItem": null,
-                                }
-                              }
+                              type={Object {}}
                               updateObservation={[Function]}
                               updateParams={[Function]}
                               updateType={[Function]}
                             >
                               <StatsParamsPanel
                                 isResetDisabled={true}
-                                observation={
-                                  Object {
-                                    "isActive": false,
-                                    "isDisabled": true,
-                                    "isLoading": false,
-                                    "items": Array [],
-                                    "selectedItem": null,
-                                  }
-                                }
+                                observation={Object {}}
                                 onParamsSelected={[Function]}
                                 onReset={[Function]}
                                 reset={[Function]}
                                 selectObservation={[Function]}
                                 selectType={[Function]}
-                                type={
-                                  Object {
-                                    "isActive": false,
-                                    "isDisabled": true,
-                                    "isLoading": false,
-                                    "items": Array [],
-                                    "selectedItem": null,
-                                  }
-                                }
+                                type={Object {}}
                                 updateObservation={[Function]}
                                 updateParams={[Function]}
                                 updateType={[Function]}
                               >
                                 <ParamsPanel
-                                  observation={
-                                    Object {
-                                      "isActive": false,
-                                      "isDisabled": true,
-                                      "isLoading": false,
-                                      "items": Array [],
-                                      "label": "Select observation",
-                                      "onButtonClick": [Function],
-                                      "onItemClick": [Function],
-                                      "selectedItem": null,
-                                    }
+                                  params={
+                                    Array [
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "key": "type",
+                                        "label": "Select type",
+                                        "onButtonClick": [Function],
+                                        "onItemClick": [Function],
+                                      },
+                                      Object {
+                                        "isActive": false,
+                                        "isDisabled": false,
+                                        "isLoading": false,
+                                        "items": Array [],
+                                        "key": "observation",
+                                        "label": "Select observation",
+                                        "onButtonClick": [Function],
+                                        "onItemClick": [Function],
+                                      },
+                                    ]
                                   }
                                   reset={
                                     Object {
                                       "isDisabled": true,
                                       "onReset": [Function],
-                                    }
-                                  }
-                                  type={
-                                    Object {
-                                      "isActive": false,
-                                      "isDisabled": true,
-                                      "isLoading": false,
-                                      "items": Array [],
-                                      "label": "Select type",
-                                      "onButtonClick": [Function],
-                                      "onItemClick": [Function],
-                                      "selectedItem": null,
                                     }
                                   }
                                 >
@@ -2053,7 +1905,8 @@ exports[`containers/stats renders when loading stats 1`] = `
                                       className="columns"
                                     >
                                       <div
-                                        className="column is-5"
+                                        className="column"
+                                        key="type"
                                       >
                                         <Dropdown
                                           buttonStyle=""
@@ -2065,7 +1918,6 @@ exports[`containers/stats renders when loading stats 1`] = `
                                           label="Select type"
                                           onButtonClick={[Function]}
                                           onItemClick={[Function]}
-                                          selectedItem={null}
                                         >
                                           <div
                                             className="dropdown"
@@ -2106,19 +1958,19 @@ exports[`containers/stats renders when loading stats 1`] = `
                                         </Dropdown>
                                       </div>
                                       <div
-                                        className="column is-5"
+                                        className="column"
+                                        key="observation"
                                       >
                                         <Dropdown
                                           buttonStyle=""
                                           iconStyle="fa-angle-down"
                                           isActive={false}
-                                          isDisabled={true}
+                                          isDisabled={false}
                                           isLoading={false}
                                           items={Array []}
                                           label="Select observation"
                                           onButtonClick={[Function]}
                                           onItemClick={[Function]}
-                                          selectedItem={null}
                                         >
                                           <div
                                             className="dropdown"
@@ -2130,7 +1982,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                                 aria-controls="dropdown-menu"
                                                 aria-haspopup="true"
                                                 className="button"
-                                                disabled={true}
+                                                disabled={false}
                                                 onClick={[Function]}
                                               >
                                                 <span>
@@ -2159,7 +2011,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                         </Dropdown>
                                       </div>
                                       <div
-                                        className="column"
+                                        className="column is-2"
                                       >
                                         <button
                                           className="button is-warning is-fullwidth"
@@ -2220,7 +2072,6 @@ exports[`containers/stats renders when loading stats 1`] = `
                             selectThingFilter={[Function]}
                             selectTimePeriod={[Function]}
                             selectedFilters={Array []}
-                            statsType={null}
                             thingFilter={
                               Object {
                                 "isActive": false,
@@ -2274,7 +2125,6 @@ exports[`containers/stats renders when loading stats 1`] = `
                               selectThingFilter={[Function]}
                               selectTimePeriod={[Function]}
                               selectedFilters={Array []}
-                              statsType={null}
                               thingFilter={
                                 Object {
                                   "isActive": false,
