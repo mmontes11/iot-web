@@ -2243,6 +2243,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                       }
                     }
                     isLoading={false}
+                    items={Array []}
                     location={
                       Object {
                         "hash": "",
@@ -2260,7 +2261,6 @@ exports[`components/main renders a main in /stats path 1`] = `
                       }
                     }
                     reset={[Function]}
-                    stats={Array []}
                     updateParams={[Function]}
                   >
                     <Route>
@@ -2301,6 +2301,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                           }
                         }
                         isLoading={false}
+                        items={Array []}
                         location={
                           Object {
                             "hash": "",
@@ -2318,7 +2319,6 @@ exports[`components/main renders a main in /stats path 1`] = `
                           }
                         }
                         reset={[Function]}
-                        stats={Array []}
                         updateParams={[Function]}
                       >
                         <ResetOnUnmount
@@ -2358,6 +2358,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                             }
                           }
                           isLoading={false}
+                          items={Array []}
                           location={
                             Object {
                               "hash": "",
@@ -2375,7 +2376,6 @@ exports[`components/main renders a main in /stats path 1`] = `
                             }
                           }
                           reset={[Function]}
-                          stats={Array []}
                           updateParams={[Function]}
                         >
                           <Stats
@@ -2415,6 +2415,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                               }
                             }
                             isLoading={false}
+                            items={Array []}
                             location={
                               Object {
                                 "hash": "",
@@ -2432,7 +2433,6 @@ exports[`components/main renders a main in /stats path 1`] = `
                               }
                             }
                             reset={[Function]}
-                            stats={Array []}
                             updateParams={[Function]}
                           >
                             <div

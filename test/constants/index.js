@@ -4,7 +4,7 @@ import { initialState as auth } from "reducers/auth";
 import { initialState as things } from "reducers/things";
 import { initialState as params } from "reducers/params";
 import { initialState as filters } from "reducers/filters";
-import { initialState as stats } from "reducers/stats";
+import { initialState as data } from "reducers/data";
 
 export const initialState = {
   app,
@@ -13,7 +13,7 @@ export const initialState = {
   things,
   params,
   filters,
-  stats,
+  data,
 };
 
 export const thing = {

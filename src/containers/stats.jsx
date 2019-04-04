@@ -9,18 +9,18 @@ import StatsParamsPanel from "containers/statsParamsPanel";
 import StatsFiltersPanel from "containers/statsFiltersPanel";
 import BarChart from "components/barChart";
 import Loader from "components/loader";
-import * as statsActions from "actions/stats";
+import * as dataActions from "actions/data";
 import * as commonActions from "actions/common";
 import * as fromState from "reducers";
 import { updateParams } from "actions/params";
 import { addThingFilter } from "actions/thingFilter";
 import { addTimePeriodFilter, addCustomTimePeriodFilter } from "actions/dateFilter";
 
-const renderChart = (stats, isLoading) => {
+const renderChart = (items, isLoading) => {
   if (isLoading) {
     return <Loader />;
-  } else if (stats) {
-    return stats.map(statsItem => <BarChart key={statsItem.type} {...statsItem} />);
+  } else if (items) {
+    return items.map(item => <BarChart key={item.type} {...item} />);
   }
   return null;
 };
@@ -92,13 +92,13 @@ class Stats extends React.Component {
     getStats();
   };
   render() {
-    const { stats, isLoading, reset } = this.props;
+    const { items, isLoading, reset } = this.props;
     return (
       <div className="container is-fluid section">
         <div className="columns">
           <div className="column is-three-quarters">
             <StatsParamsPanel onParamsSelected={this._onParamsSelected} onReset={() => reset()} />
-            {renderChart(stats, isLoading)}
+            {renderChart(items, isLoading)}
           </div>
           <div className="column is-one-quarter">
             <StatsFiltersPanel onFiltersChange={this._onFiltersChange} />
@@ -110,7 +110,7 @@ class Stats extends React.Component {
 }
 
 Stats.propTypes = {
-  stats: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   isLoading: PropTypes.bool.isRequired,
   hasError: PropTypes.bool.isRequired,
   getStats: PropTypes.func.isRequired,
@@ -128,11 +128,11 @@ Stats.propTypes = {
 
 const withConnect = connect(
   state => ({
-    stats: state.stats.items,
-    isLoading: state.stats.isLoading,
+    items: state.data.items,
+    isLoading: state.data.isLoading,
     hasError: fromState.hasError(state),
   }),
-  { ...statsActions, ...commonActions, updateParams, addThingFilter, addTimePeriodFilter, addCustomTimePeriodFilter },
+  { ...dataActions, ...commonActions, updateParams, addThingFilter, addTimePeriodFilter, addCustomTimePeriodFilter },
 );
 
 export default compose(

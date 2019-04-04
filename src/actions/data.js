@@ -1,4 +1,4 @@
-import { STATS_UPDATED, STATS_REQUEST, STATS_REQUEST_SUCCESS, STATS_REQUEST_ERROR } from "constants/actionTypes/stats";
+import { DATA_UPDATED, DATA_REQUEST, DATA_REQUEST_SUCCESS, DATA_REQUEST_ERROR } from "constants/actionTypes/data";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 import iotClient from "lib/iotClient";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
@@ -82,7 +82,6 @@ export const getStats = () => (dispatch, getState) => {
   if (!type || !observation) {
     return;
   }
-  dispatch({ type: STATS_REQUEST });
   requestStats(
     filterItems,
     type,
@@ -91,13 +90,13 @@ export const getStats = () => (dispatch, getState) => {
     selectedTimePeriod,
     startDate,
     endDate,
-    () => dispatch({ type: STATS_REQUEST }),
+    () => dispatch({ type: DATA_REQUEST }),
     res => {
-      dispatch({ type: STATS_REQUEST_SUCCESS });
-      dispatch({ type: STATS_UPDATED, stats: res.body.stats });
+      dispatch({ type: DATA_REQUEST_SUCCESS });
+      dispatch({ type: DATA_UPDATED, items: res.body.stats });
     },
     () => {
-      dispatch({ type: STATS_REQUEST_ERROR });
+      dispatch({ type: DATA_REQUEST_ERROR });
       dispatch({ type: RESET, preserveError: true });
     },
   );

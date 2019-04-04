@@ -936,6 +936,10 @@ Object {
     "password": null,
     "username": null,
   },
+  "data": Object {
+    "isLoading": false,
+    "items": Array [],
+  },
   "filters": Object {
     "dateFilter": Object {
       "custom": Object {
@@ -991,10 +995,6 @@ Object {
     "error": null,
     "pending": 0,
     "statusCode": null,
-  },
-  "stats": Object {
-    "isLoading": false,
-    "items": Array [],
   },
   "things": Object {
     "items": Array [],

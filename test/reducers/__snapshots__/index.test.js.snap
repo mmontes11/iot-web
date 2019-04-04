@@ -10,6 +10,10 @@ Object {
     "showError": true,
   },
   "auth": false,
+  "data": Object {
+    "isLoading": false,
+    "items": Array [],
+  },
   "filters": Object {
     "dateFilter": Object {
       "custom": Object {
@@ -41,10 +45,6 @@ Object {
         "date",
       ],
     },
-  },
-  "measurements": Object {
-    "isLoading": false,
-    "items": Array [],
   },
   "params": Object {
     "FIRST_PARAM": Object {
@@ -70,10 +70,6 @@ Object {
     "pending": 0,
     "statusCode": null,
   },
-  "stats": Object {
-    "isLoading": false,
-    "items": Array [],
-  },
   "things": Object {
     "items": Array [],
     "selectedItem": null,
@@ -90,6 +86,10 @@ Object {
     "showError": true,
   },
   "auth": "AUTH",
+  "data": Object {
+    "isLoading": false,
+    "items": Array [],
+  },
   "filters": Object {
     "dateFilter": Object {
       "custom": Object {
@@ -122,10 +122,6 @@ Object {
       ],
     },
   },
-  "measurements": Object {
-    "isLoading": false,
-    "items": Array [],
-  },
   "params": Object {
     "FIRST_PARAM": Object {
       "isActive": false,
@@ -146,10 +142,6 @@ Object {
     },
   },
   "request": "REQUEST",
-  "stats": Object {
-    "isLoading": false,
-    "items": Array [],
-  },
   "things": Object {
     "items": Array [],
     "selectedItem": null,
@@ -166,6 +158,10 @@ Object {
     "showError": true,
   },
   "auth": "STATE",
+  "data": Object {
+    "isLoading": false,
+    "items": Array [],
+  },
   "filters": Object {
     "dateFilter": Object {
       "custom": Object {
@@ -198,10 +194,6 @@ Object {
       ],
     },
   },
-  "measurements": Object {
-    "isLoading": false,
-    "items": Array [],
-  },
   "params": Object {
     "FIRST_PARAM": Object {
       "isActive": false,
@@ -222,10 +214,6 @@ Object {
     },
   },
   "request": "REQUEST",
-  "stats": Object {
-    "isLoading": false,
-    "items": Array [],
-  },
   "things": Object {
     "items": Array [],
     "selectedItem": null,

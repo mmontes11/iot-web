@@ -5,18 +5,16 @@ import auth from "reducers/auth";
 import things from "reducers/things";
 import params, * as fromParams from "reducers/params";
 import filters from "reducers/filters";
-import stats from "reducers/stats";
-import measurements from "reducers/measurements";
+import data from "reducers/data";
 
 export default combineReducers({
   app,
   auth,
   request,
+  things,
   params,
   filters,
-  things,
-  stats,
-  measurements,
+  data,
 });
 
 export const isLoading = state => fromRequest.isLoading(state.request);
