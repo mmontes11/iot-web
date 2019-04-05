@@ -12,7 +12,7 @@ import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 import { TYPE } from "constants/params";
 
 const StatsFiltersPanel = ({
-  onFiltersChange,
+  onFiltersSelected,
   type,
   statsType,
   thingFilter,
@@ -41,7 +41,7 @@ const StatsFiltersPanel = ({
       onButtonClick: () => selectThingFilter(statsType, thingFilter.isActive),
       onItemClick: item => {
         updateThingFilter(item);
-        onFiltersChange(
+        onFiltersSelected(
           item,
           dateFilter.timePeriod.selectedItem,
           dateFilter.custom.startDate,
@@ -50,7 +50,7 @@ const StatsFiltersPanel = ({
       },
       onDelete: item => {
         deleteFilterType(item);
-        onFiltersChange();
+        onFiltersSelected();
       },
     }}
     dateFilter={{
@@ -65,7 +65,7 @@ const StatsFiltersPanel = ({
         onButtonClick: () => selectTimePeriod(dateFilter.timePeriod.isActive),
         onItemClick: item => {
           updateTimePeriod(item);
-          onFiltersChange(thingFilter.selectedItem, item, dateFilter.custom.startDate, dateFilter.custom.endDate);
+          onFiltersSelected(thingFilter.selectedItem, item, dateFilter.custom.startDate, dateFilter.custom.endDate);
         },
       },
       custom: {
@@ -73,7 +73,7 @@ const StatsFiltersPanel = ({
           selected: dateFilter.custom.startDate,
           onChange: date => {
             updateStartDate(date);
-            onFiltersChange(
+            onFiltersSelected(
               thingFilter.selectedItem,
               dateFilter.timePeriod.selectedItem,
               date,
@@ -85,7 +85,7 @@ const StatsFiltersPanel = ({
           selected: dateFilter.custom.endDate,
           onChange: date => {
             updateEndDate(date);
-            onFiltersChange(
+            onFiltersSelected(
               thingFilter.selectedItem,
               dateFilter.timePeriod.selectedItem,
               dateFilter.custom.startDate,
@@ -97,14 +97,14 @@ const StatsFiltersPanel = ({
       onDelete: item => {
         deleteFilterType(item);
         if (item === THING_FILTER_TYPE) {
-          onFiltersChange(
+          onFiltersSelected(
             undefined,
             dateFilter.timePeriod.selectedItem,
             dateFilter.custom.startDate,
             dateFilter.custom.endDate,
           );
         } else if (item === DATE_FILTER_TYPE) {
-          onFiltersChange(thingFilter.selectedItem);
+          onFiltersSelected(thingFilter.selectedItem);
         }
       },
     }}
@@ -113,7 +113,7 @@ const StatsFiltersPanel = ({
 );
 
 StatsFiltersPanel.propTypes = {
-  onFiltersChange: PropTypes.func.isRequired,
+  onFiltersSelected: PropTypes.func.isRequired,
   type: PropTypes.shape({}).isRequired,
   statsType: PropTypes.string,
   thingFilter: PropTypes.shape({}).isRequired,

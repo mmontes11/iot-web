@@ -10,7 +10,7 @@ import {
   PARAM_ITEMS_UPDATED,
 } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
-import { TYPE, OBSERVATION } from "constants/params";
+import { TYPE } from "constants/params";
 
 deepFreeze(paramsInitialState);
 

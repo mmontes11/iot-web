@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import { compose } from "recompose";
+import PropTypes from "prop-types";
 import "styles/index.scss";
 import * as fromState from "reducers";
 import * as appActions from "actions/app";

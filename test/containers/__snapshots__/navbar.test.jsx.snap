@@ -385,21 +385,21 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                           activeClassName="navbar-item-active"
                           aria-current="page"
                           className="navbar-item"
-                          to="/measurements"
+                          to="/data"
                         >
                           <Route
-                            path="\\\\/measurements"
+                            path="\\\\/data"
                           >
                             <Link
                               aria-current={null}
                               className="navbar-item"
                               replace={false}
-                              to="/measurements"
+                              to="/data"
                             >
                               <a
                                 aria-current={null}
                                 className="navbar-item"
-                                href="/measurements"
+                                href="/data"
                                 onClick={[Function]}
                               >
                                 <span
@@ -410,7 +410,7 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                                   />
                                 </span>
                                 <span>
-                                  Measurements
+                                  Data
                                 </span>
                               </a>
                             </Link>
@@ -847,21 +847,21 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                           activeClassName="navbar-item-active"
                           aria-current="page"
                           className="navbar-item"
-                          to="/measurements"
+                          to="/data"
                         >
                           <Route
-                            path="\\\\/measurements"
+                            path="\\\\/data"
                           >
                             <Link
                               aria-current={null}
                               className="navbar-item"
                               replace={false}
-                              to="/measurements"
+                              to="/data"
                             >
                               <a
                                 aria-current={null}
                                 className="navbar-item"
-                                href="/measurements"
+                                href="/data"
                                 onClick={[Function]}
                               >
                                 <span
@@ -872,7 +872,7 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                                   />
                                 </span>
                                 <span>
-                                  Measurements
+                                  Data
                                 </span>
                               </a>
                             </Link>
