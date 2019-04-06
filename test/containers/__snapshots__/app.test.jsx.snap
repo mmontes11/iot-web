@@ -977,7 +977,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                           },
                                                           Object {
                                                             "isActive": false,
-                                                            "isDisabled": false,
+                                                            "isDisabled": true,
                                                             "isLoading": false,
                                                             "items": Array [],
                                                             "key": "observation",
@@ -1061,7 +1061,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                               buttonStyle=""
                                                               iconStyle="fa-angle-down"
                                                               isActive={false}
-                                                              isDisabled={false}
+                                                              isDisabled={true}
                                                               isLoading={false}
                                                               items={Array []}
                                                               label="Select observation"
@@ -1078,7 +1078,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                                     aria-controls="dropdown-menu"
                                                                     aria-haspopup="true"
                                                                     className="button"
-                                                                    disabled={false}
+                                                                    disabled={true}
                                                                     onClick={[Function]}
                                                                   >
                                                                     <span>
@@ -4794,7 +4794,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                           },
                                                           Object {
                                                             "isActive": false,
-                                                            "isDisabled": false,
+                                                            "isDisabled": true,
                                                             "isLoading": false,
                                                             "items": Array [],
                                                             "key": "observation",
@@ -4878,7 +4878,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                               buttonStyle=""
                                                               iconStyle="fa-angle-down"
                                                               isActive={false}
-                                                              isDisabled={false}
+                                                              isDisabled={true}
                                                               isLoading={false}
                                                               items={Array []}
                                                               label="Select observation"
@@ -4895,7 +4895,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                                     aria-controls="dropdown-menu"
                                                                     aria-haspopup="true"
                                                                     className="button"
-                                                                    disabled={false}
+                                                                    disabled={true}
                                                                     onClick={[Function]}
                                                                   >
                                                                     <span>

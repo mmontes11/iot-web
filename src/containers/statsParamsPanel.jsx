@@ -8,6 +8,13 @@ import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
 import { TYPE, OBSERVATION } from "constants/params";
 
+const isObservationDisabled = observation => {
+  if (observation && observation.isDisabled !== undefined) {
+    return observation.isDisabled;
+  }
+  return true;
+};
+
 const StatsParamsPanel = ({
   onParamsSelected,
   onReset,
@@ -26,8 +33,8 @@ const StatsParamsPanel = ({
         label: type.selectedItem || "Select type",
         items: type.items || [],
         isActive: type.isActive || false,
-        isLoading: false,
-        isDisabled: false,
+        isLoading: type.isLoading || false,
+        isDisabled: type.isDisabled || false,
         onButtonClick: () => selectType(),
         onItemClick: item => updateType(item),
       },
@@ -37,7 +44,7 @@ const StatsParamsPanel = ({
         items: observation.items || [],
         isActive: observation.isActive || false,
         isLoading: observation.isLoading || false,
-        isDisabled: observation.isDisabled || false,
+        isDisabled: isObservationDisabled(observation),
         onButtonClick: () => selectObservation(),
         onItemClick: item => {
           updateObservation(item);
