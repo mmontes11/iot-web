@@ -14,23 +14,24 @@ export const handleDataParams = (path, getData, reset) => WrappedComponent => {
     componentDidMount() {
       const {
         match: {
-          params: { type, observation },
+          params: { type, observation, groupBy },
         },
         location: { search },
       } = this.props;
-      if (type && observation) {
-        const queryParams = QueryString.parse(search);
-        if (queryParams.thing) {
-          this.props.addThingFilter(queryParams.thing);
-        }
-        if (queryParams.timePeriod) {
-          this.props.addTimePeriodFilter(queryParams.timePeriod);
-        } else if (queryParams.startDate || queryParams.endDate) {
-          this.props.addCustomTimePeriodFilter(queryParams.startDate, queryParams.endDate);
-        }
-        this.props.updateParams(type, observation);
-        getData();
+      if (!type || !observation) {
+        return;
       }
+      const queryParams = QueryString.parse(search);
+      if (queryParams.thing) {
+        this.props.addThingFilter(queryParams.thing);
+      }
+      if (queryParams.timePeriod) {
+        this.props.addTimePeriodFilter(queryParams.timePeriod);
+      } else if (queryParams.startDate || queryParams.endDate) {
+        this.props.addCustomTimePeriodFilter(queryParams.startDate, queryParams.endDate);
+      }
+      this.props.updateParams(type, observation, groupBy);
+      getData();
     }
     componentDidUpdate() {
       const {
@@ -43,9 +44,20 @@ export const handleDataParams = (path, getData, reset) => WrappedComponent => {
         this._pushRootPath();
       }
     }
-    _onParamsSelected = (type, observation) => {
-      const { history, location } = this.props;
-      history.push(`/${path}/${type}/${observation}${location.search}`);
+    _onParamsSelected = (type, observation, groupBy) => {
+      if (!type || !observation) {
+        return;
+      }
+      const {
+        history,
+        location: { search },
+      } = this.props;
+      let basePath = `/${path}/${type}/${observation}`;
+      if (groupBy) {
+        basePath += `/${groupBy}`;
+      }
+      basePath += `${search}`;
+      history.push(basePath);
       getData();
     };
     _onFiltersSelected = (thing, timePeriod, startDate, endDate) => {

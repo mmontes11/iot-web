@@ -11,7 +11,7 @@ import * as fromState from "reducers";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 import { TYPE } from "constants/params";
 
-const StatsFiltersPanel = ({
+const FiltersPanelContainer = ({
   onFiltersSelected,
   type,
   statsType,
@@ -112,7 +112,7 @@ const StatsFiltersPanel = ({
   />
 );
 
-StatsFiltersPanel.propTypes = {
+FiltersPanelContainer.propTypes = {
   onFiltersSelected: PropTypes.func.isRequired,
   type: PropTypes.shape({}).isRequired,
   statsType: PropTypes.string,
@@ -131,7 +131,7 @@ StatsFiltersPanel.propTypes = {
   updateEndDate: PropTypes.func.isRequired,
 };
 
-StatsFiltersPanel.defaultProps = {
+FiltersPanelContainer.defaultProps = {
   statsType: null,
 };
 
@@ -149,4 +149,4 @@ const withConnect = connect(
 export default compose(
   withConnect,
   withResetOnUnmount,
-)(StatsFiltersPanel);
+)(FiltersPanelContainer);

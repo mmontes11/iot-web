@@ -7,7 +7,7 @@ import store from "config/store";
 import { getStats } from "actions/data";
 import { reset } from "actions/common";
 import StatsParamsPanel from "containers/statsParamsPanel";
-import StatsFiltersPanel from "containers/statsFiltersPanel";
+import FiltersPanelContainer from "containers/filtersPanelContainer";
 import Charts from "containers/charts";
 import { BARCHART } from "constants/chartTypes";
 
@@ -19,7 +19,7 @@ const Stats = ({ onParamsSelected, onFiltersSelected, onReset }) => (
         <Charts chartType={BARCHART} />
       </div>
       <div className="column is-one-quarter">
-        <StatsFiltersPanel onFiltersSelected={onFiltersSelected} />
+        <FiltersPanelContainer onFiltersSelected={onFiltersSelected} />
       </div>
     </div>
   </div>

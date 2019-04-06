@@ -4,6 +4,7 @@ exports[`reducers/data has a default state 1`] = `
 Object {
   "isLoading": false,
   "items": Array [],
+  "things": Array [],
 }
 `;
 
@@ -11,6 +12,7 @@ exports[`reducers/data reduces DATA_REQUEST 1`] = `
 Object {
   "isLoading": true,
   "items": Array [],
+  "things": Array [],
 }
 `;
 
@@ -18,6 +20,7 @@ exports[`reducers/data reduces DATA_REQUEST_ERROR 1`] = `
 Object {
   "isLoading": false,
   "items": Array [],
+  "things": Array [],
 }
 `;
 
@@ -25,6 +28,7 @@ exports[`reducers/data reduces DATA_REQUEST_SUCCESS 1`] = `
 Object {
   "isLoading": false,
   "items": Array [],
+  "things": Array [],
 }
 `;
 
@@ -32,6 +36,7 @@ exports[`reducers/data reduces DATA_UPDATED 1`] = `
 Object {
   "isLoading": false,
   "items": Array [],
+  "things": undefined,
 }
 `;
 
@@ -39,6 +44,7 @@ exports[`reducers/data reduces RESET 1`] = `
 Object {
   "isLoading": false,
   "items": Array [],
+  "things": Array [],
 }
 `;
 
@@ -46,5 +52,6 @@ exports[`reducers/data reduces nothing 1`] = `
 Object {
   "isLoading": false,
   "items": Array [],
+  "things": Array [],
 }
 `;

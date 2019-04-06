@@ -2496,9 +2496,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                                         observation={Object {}}
                                         onParamsSelected={[Function]}
                                         onReset={[Function]}
+                                        selectGroupBy={[Function]}
                                         selectObservation={[Function]}
                                         selectType={[Function]}
                                         type={Object {}}
+                                        updateGroupBy={[Function]}
                                         updateObservation={[Function]}
                                         updateParams={[Function]}
                                         updateType={[Function]}
@@ -2509,9 +2511,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           onParamsSelected={[Function]}
                                           onReset={[Function]}
                                           reset={[Function]}
+                                          selectGroupBy={[Function]}
                                           selectObservation={[Function]}
                                           selectType={[Function]}
                                           type={Object {}}
+                                          updateGroupBy={[Function]}
                                           updateObservation={[Function]}
                                           updateParams={[Function]}
                                           updateType={[Function]}
@@ -2522,9 +2526,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                                             onParamsSelected={[Function]}
                                             onReset={[Function]}
                                             reset={[Function]}
+                                            selectGroupBy={[Function]}
                                             selectObservation={[Function]}
                                             selectType={[Function]}
                                             type={Object {}}
+                                            updateGroupBy={[Function]}
                                             updateObservation={[Function]}
                                             updateParams={[Function]}
                                             updateType={[Function]}
@@ -2706,9 +2712,11 @@ exports[`components/main renders a main in /stats path 1`] = `
                                     >
                                       <Charts
                                         chartType="BARCHART"
+                                        data={null}
                                         dispatch={[Function]}
                                         isLoading={false}
                                         items={Array []}
+                                        things={Array []}
                                       />
                                     </Connect(Charts)>
                                   </div>
@@ -2823,7 +2831,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                           updateThingFilter={[Function]}
                                           updateTimePeriod={[Function]}
                                         >
-                                          <StatsFiltersPanel
+                                          <FiltersPanelContainer
                                             addCustomTimePeriodFilter={[Function]}
                                             addFilterType={[Function]}
                                             addThingFilter={[Function]}
@@ -3022,7 +3030,7 @@ exports[`components/main renders a main in /stats path 1`] = `
                                                 </div>
                                               </div>
                                             </FiltersPanel>
-                                          </StatsFiltersPanel>
+                                          </FiltersPanelContainer>
                                         </ResetOnUnmount>
                                       </Connect(ResetOnUnmount)>
                                     </Connect(Connect(ResetOnUnmount))>

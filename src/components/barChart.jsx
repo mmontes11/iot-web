@@ -10,11 +10,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-
-const colorForBar = index => {
-  const barColors = ["#247ba0", "#70c1b3", "#b2dbbf"];
-  return barColors[index % barColors.length];
-};
+import { colorForIndex } from "helpers/chart";
 
 const BarChart = ({ data }) => {
   const dataElement = data[0];
@@ -29,7 +25,7 @@ const BarChart = ({ data }) => {
         <Tooltip />
         <Legend />
         {barKeys.map((barKey, index) => (
-          <Bar key={barKey} dataKey={barKey} fill={colorForBar(index)} />
+          <Bar key={barKey} dataKey={barKey} fill={colorForIndex(index)} />
         ))}
       </RechartsBarChart>
     </ResponsiveContainer>

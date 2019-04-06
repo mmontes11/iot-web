@@ -939,6 +939,7 @@ Object {
   "data": Object {
     "isLoading": false,
     "items": Array [],
+    "things": Array [],
   },
   "filters": Object {
     "dateFilter": Object {

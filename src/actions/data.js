@@ -4,32 +4,38 @@ import iotClient from "lib/iotClient";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 import { RESET } from "constants/actionTypes/common";
 import * as fromState from "reducers";
-import { TYPE, OBSERVATION } from "constants/params";
+import { TYPE, OBSERVATION, GROUPBY } from "constants/params";
 
-const getParams = (filterItems, observation, thing, timePeriod, startDate, endDate) => {
+const getParams = (filterItems, observation, groupBy, thing, timePeriod, startDate, endDate) => {
   let params = {
     type: observation,
   };
-  if (filterItems.includes(THING_FILTER_TYPE) && thing !== null) {
+  if (groupBy) {
+    params = {
+      ...params,
+      groupBy,
+    };
+  }
+  if (filterItems.includes(THING_FILTER_TYPE) && thing) {
     params = {
       ...params,
       thing,
     };
   }
   if (filterItems.includes(DATE_FILTER_TYPE)) {
-    if (timePeriod != null) {
+    if (timePeriod) {
       params = {
         ...params,
         timePeriod,
       };
     } else {
-      if (startDate !== null) {
+      if (startDate) {
         params = {
           ...params,
           startDate: startDate.toISOString(),
         };
       }
-      if (endDate != null) {
+      if (endDate) {
         params = {
           ...params,
           endDate: endDate.toISOString(),
@@ -52,7 +58,7 @@ const requestStats = (
   onSuccess,
   onError,
 ) => {
-  const params = getParams(filterItems, observation, thing, timePeriod, startDate, endDate);
+  const params = getParams(filterItems, observation, null, thing, timePeriod, startDate, endDate);
   if (type === EVENT_TYPE) {
     onStart();
     iotClient.eventService
@@ -95,6 +101,72 @@ export const getStats = () => (dispatch, getState) => {
     res => {
       dispatch({ type: DATA_REQUEST_SUCCESS });
       dispatch({ type: DATA_UPDATED, items: res.body.stats });
+    },
+    () => {
+      dispatch({ type: DATA_REQUEST_ERROR });
+      dispatch({ type: RESET, preserveError: true });
+    },
+  );
+};
+
+const requestData = (
+  filterItems,
+  type,
+  observation,
+  groupBy,
+  thing,
+  timePeriod,
+  startDate,
+  endDate,
+  onStart,
+  onSuccess,
+  onError,
+) => {
+  const params = getParams(filterItems, observation, groupBy, thing, timePeriod, startDate, endDate);
+  if (type === EVENT_TYPE) {
+    onStart();
+    iotClient.eventService
+      .getData(params)
+      .then(res => onSuccess(res))
+      .catch(err => onError(err));
+  } else if (type === MEASUREMENT_TYPE) {
+    onStart();
+    iotClient.measurementService
+      .getData(params)
+      .then(res => onSuccess(res))
+      .catch(err => onError(err));
+  } else {
+    onError(new Error("Invalid type"));
+  }
+};
+
+export const getData = () => (dispatch, getState) => {
+  const state = getState();
+  const filterItems = state.filters.items;
+  const type = fromState.getParam(state, TYPE).selectedItem;
+  const observation = fromState.getParam(state, OBSERVATION).selectedItem;
+  const groupBy = fromState.getParam(state, GROUPBY).selectedItem;
+  const thing = state.filters.thingFilter.selectedItem;
+  const {
+    timePeriod: { selectedItem: selectedTimePeriod },
+    custom: { startDate, endDate },
+  } = state.filters.dateFilter;
+  if (!type || !observation) {
+    return;
+  }
+  requestData(
+    filterItems,
+    type,
+    observation,
+    groupBy,
+    thing,
+    selectedTimePeriod,
+    startDate,
+    endDate,
+    () => dispatch({ type: DATA_REQUEST }),
+    ({ body: { data, things } }) => {
+      dispatch({ type: DATA_REQUEST_SUCCESS });
+      dispatch({ type: DATA_UPDATED, items: data, things });
     },
     () => {
       dispatch({ type: DATA_REQUEST_ERROR });

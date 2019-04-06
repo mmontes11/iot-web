@@ -6,19 +6,22 @@ import PropTypes from "prop-types";
 import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
-import { TYPE, OBSERVATION } from "constants/params";
+import { TYPE, OBSERVATION, GROUPBY } from "constants/params";
 import { isObservationDisabled } from "helpers/paramsPanel";
 
-const StatsParamsPanel = ({
+const DataParamsPanel = ({
   onParamsSelected,
   onReset,
   type,
   observation,
+  groupBy,
   isResetDisabled,
   selectType,
   updateType,
   selectObservation,
   updateObservation,
+  selectGroupBy,
+  updateGroupBy,
 }) => (
   <ParamsPanel
     params={[
@@ -42,7 +45,20 @@ const StatsParamsPanel = ({
         onButtonClick: () => selectObservation(),
         onItemClick: item => {
           updateObservation(item);
-          onParamsSelected(type.selectedItem, item);
+          onParamsSelected(type.selectedItem, item, groupBy.selectedItem);
+        },
+      },
+      {
+        key: "groupBy",
+        label: groupBy.selectedItem || "Group by",
+        items: groupBy.items || [],
+        isActive: groupBy.isActive || false,
+        isLoading: groupBy.isLoading || false,
+        isDisabled: groupBy.isDisabled || false,
+        onButtonClick: () => selectGroupBy(),
+        onItemClick: item => {
+          updateGroupBy(item);
+          onParamsSelected(type.selectedItem, observation.selectedItem, item);
         },
       },
     ]}
@@ -57,24 +73,28 @@ const withConnect = connect(
   state => ({
     type: fromState.getParam(state, TYPE),
     observation: fromState.getParam(state, OBSERVATION),
+    groupBy: fromState.getParam(state, GROUPBY),
     isResetDisabled: fromState.isResetDisabled(state),
   }),
   { ...paramsActions },
 );
 
-StatsParamsPanel.propTypes = {
+DataParamsPanel.propTypes = {
   onParamsSelected: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
   type: PropTypes.shape({}).isRequired,
   observation: PropTypes.shape({}).isRequired,
+  groupBy: PropTypes.shape({}).isRequired,
   isResetDisabled: PropTypes.bool.isRequired,
   selectType: PropTypes.func.isRequired,
   updateType: PropTypes.func.isRequired,
   selectObservation: PropTypes.func.isRequired,
   updateObservation: PropTypes.func.isRequired,
+  selectGroupBy: PropTypes.func.isRequired,
+  updateGroupBy: PropTypes.func.isRequired,
 };
 
 export default compose(
   withConnect,
   withResetOnUnmount,
-)(StatsParamsPanel);
+)(DataParamsPanel);

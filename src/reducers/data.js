@@ -3,10 +3,11 @@ import { DATA_REQUEST, DATA_REQUEST_SUCCESS, DATA_REQUEST_ERROR, DATA_UPDATED } 
 
 export const initialState = {
   items: [],
+  things: [],
   isLoading: false,
 };
 
-export default (state = initialState, { type, items }) => {
+export default (state = initialState, { type, items, things }) => {
   switch (type) {
     case DATA_REQUEST:
       return { ...state, isLoading: true };
@@ -15,7 +16,7 @@ export default (state = initialState, { type, items }) => {
     case DATA_REQUEST_ERROR:
       return { ...state, isLoading: false };
     case DATA_UPDATED:
-      return { ...state, items };
+      return { ...state, items, things };
     case RESET:
       return initialState;
     default:

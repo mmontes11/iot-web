@@ -929,9 +929,11 @@ exports[`containers/app renders app in error state 1`] = `
                                                 observation={Object {}}
                                                 onParamsSelected={[Function]}
                                                 onReset={[Function]}
+                                                selectGroupBy={[Function]}
                                                 selectObservation={[Function]}
                                                 selectType={[Function]}
                                                 type={Object {}}
+                                                updateGroupBy={[Function]}
                                                 updateObservation={[Function]}
                                                 updateParams={[Function]}
                                                 updateType={[Function]}
@@ -942,9 +944,11 @@ exports[`containers/app renders app in error state 1`] = `
                                                   onParamsSelected={[Function]}
                                                   onReset={[Function]}
                                                   reset={[Function]}
+                                                  selectGroupBy={[Function]}
                                                   selectObservation={[Function]}
                                                   selectType={[Function]}
                                                   type={Object {}}
+                                                  updateGroupBy={[Function]}
                                                   updateObservation={[Function]}
                                                   updateParams={[Function]}
                                                   updateType={[Function]}
@@ -955,9 +959,11 @@ exports[`containers/app renders app in error state 1`] = `
                                                     onParamsSelected={[Function]}
                                                     onReset={[Function]}
                                                     reset={[Function]}
+                                                    selectGroupBy={[Function]}
                                                     selectObservation={[Function]}
                                                     selectType={[Function]}
                                                     type={Object {}}
+                                                    updateGroupBy={[Function]}
                                                     updateObservation={[Function]}
                                                     updateParams={[Function]}
                                                     updateType={[Function]}
@@ -1139,9 +1145,11 @@ exports[`containers/app renders app in error state 1`] = `
                                             >
                                               <Charts
                                                 chartType="BARCHART"
+                                                data={null}
                                                 dispatch={[Function]}
                                                 isLoading={false}
                                                 items={Array []}
+                                                things={Array []}
                                               />
                                             </Connect(Charts)>
                                           </div>
@@ -1256,7 +1264,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                   updateThingFilter={[Function]}
                                                   updateTimePeriod={[Function]}
                                                 >
-                                                  <StatsFiltersPanel
+                                                  <FiltersPanelContainer
                                                     addCustomTimePeriodFilter={[Function]}
                                                     addFilterType={[Function]}
                                                     addThingFilter={[Function]}
@@ -1455,7 +1463,7 @@ exports[`containers/app renders app in error state 1`] = `
                                                         </div>
                                                       </div>
                                                     </FiltersPanel>
-                                                  </StatsFiltersPanel>
+                                                  </FiltersPanelContainer>
                                                 </ResetOnUnmount>
                                               </Connect(ResetOnUnmount)>
                                             </Connect(Connect(ResetOnUnmount))>
@@ -4746,9 +4754,11 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                 observation={Object {}}
                                                 onParamsSelected={[Function]}
                                                 onReset={[Function]}
+                                                selectGroupBy={[Function]}
                                                 selectObservation={[Function]}
                                                 selectType={[Function]}
                                                 type={Object {}}
+                                                updateGroupBy={[Function]}
                                                 updateObservation={[Function]}
                                                 updateParams={[Function]}
                                                 updateType={[Function]}
@@ -4759,9 +4769,11 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                   onParamsSelected={[Function]}
                                                   onReset={[Function]}
                                                   reset={[Function]}
+                                                  selectGroupBy={[Function]}
                                                   selectObservation={[Function]}
                                                   selectType={[Function]}
                                                   type={Object {}}
+                                                  updateGroupBy={[Function]}
                                                   updateObservation={[Function]}
                                                   updateParams={[Function]}
                                                   updateType={[Function]}
@@ -4772,9 +4784,11 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                     onParamsSelected={[Function]}
                                                     onReset={[Function]}
                                                     reset={[Function]}
+                                                    selectGroupBy={[Function]}
                                                     selectObservation={[Function]}
                                                     selectType={[Function]}
                                                     type={Object {}}
+                                                    updateGroupBy={[Function]}
                                                     updateObservation={[Function]}
                                                     updateParams={[Function]}
                                                     updateType={[Function]}
@@ -4956,9 +4970,11 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                             >
                                               <Charts
                                                 chartType="BARCHART"
+                                                data={null}
                                                 dispatch={[Function]}
                                                 isLoading={false}
                                                 items={Array []}
+                                                things={Array []}
                                               />
                                             </Connect(Charts)>
                                           </div>
@@ -5073,7 +5089,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                   updateThingFilter={[Function]}
                                                   updateTimePeriod={[Function]}
                                                 >
-                                                  <StatsFiltersPanel
+                                                  <FiltersPanelContainer
                                                     addCustomTimePeriodFilter={[Function]}
                                                     addFilterType={[Function]}
                                                     addThingFilter={[Function]}
@@ -5272,7 +5288,7 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                         </div>
                                                       </div>
                                                     </FiltersPanel>
-                                                  </StatsFiltersPanel>
+                                                  </FiltersPanelContainer>
                                                 </ResetOnUnmount>
                                               </Connect(ResetOnUnmount)>
                                             </Connect(Connect(ResetOnUnmount))>

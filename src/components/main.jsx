@@ -14,6 +14,7 @@ const Main = () => (
         <Route path="/things" component={Things} />
         <Route path="/stats/:type/:observation" component={Stats} />
         <Route path="/stats" component={Stats} />
+        <Route path="/data/:type/:observation/:groupBy?" component={Data} />
         <Route path="/data" component={Data} />
         <Route render={() => <Redirect to="/things" />} />
       </Switch>
