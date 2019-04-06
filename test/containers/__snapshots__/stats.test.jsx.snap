@@ -138,8 +138,6 @@ exports[`containers/stats renders stats barcharts 1`] = `
                   "replace": [Function],
                 }
               }
-              isLoading={false}
-              items={Array []}
               location={
                 Object {
                   "hash": "",
@@ -193,8 +191,6 @@ exports[`containers/stats renders stats barcharts 1`] = `
                     "replace": [Function],
                   }
                 }
-                isLoading={false}
-                items={Array []}
                 location={
                   Object {
                     "hash": "",
@@ -251,8 +247,6 @@ exports[`containers/stats renders stats barcharts 1`] = `
                       "replace": [Function],
                     }
                   }
-                  isLoading={false}
-                  items={Array []}
                   location={
                     Object {
                       "hash": "",
@@ -310,8 +304,6 @@ exports[`containers/stats renders stats barcharts 1`] = `
                         "replace": [Function],
                       }
                     }
-                    isLoading={false}
-                    items={Array []}
                     location={
                       Object {
                         "hash": "",
@@ -557,6 +549,16 @@ exports[`containers/stats renders stats barcharts 1`] = `
                               </ResetOnUnmount>
                             </Connect(ResetOnUnmount)>
                           </Connect(Connect(ResetOnUnmount))>
+                          <Connect(Charts)
+                            chartType="BARCHART"
+                          >
+                            <Charts
+                              chartType="BARCHART"
+                              dispatch={[Function]}
+                              isLoading={false}
+                              items={Array []}
+                            />
+                          </Connect(Charts)>
                         </div>
                         <div
                           className="column is-one-quarter"
@@ -1025,8 +1027,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                   "replace": [Function],
                 }
               }
-              isLoading={false}
-              items={Array []}
               location={
                 Object {
                   "hash": "",
@@ -1080,8 +1080,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                     "replace": [Function],
                   }
                 }
-                isLoading={false}
-                items={Array []}
                 location={
                   Object {
                     "hash": "",
@@ -1138,8 +1136,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                       "replace": [Function],
                     }
                   }
-                  isLoading={false}
-                  items={Array []}
                   location={
                     Object {
                       "hash": "",
@@ -1197,8 +1193,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                         "replace": [Function],
                       }
                     }
-                    isLoading={false}
-                    items={Array []}
                     location={
                       Object {
                         "hash": "",
@@ -1444,6 +1438,16 @@ exports[`containers/stats renders stats in initial state 1`] = `
                               </ResetOnUnmount>
                             </Connect(ResetOnUnmount)>
                           </Connect(Connect(ResetOnUnmount))>
+                          <Connect(Charts)
+                            chartType="BARCHART"
+                          >
+                            <Charts
+                              chartType="BARCHART"
+                              dispatch={[Function]}
+                              isLoading={false}
+                              items={Array []}
+                            />
+                          </Connect(Charts)>
                         </div>
                         <div
                           className="column is-one-quarter"
@@ -1912,8 +1916,6 @@ exports[`containers/stats renders when loading stats 1`] = `
                   "replace": [Function],
                 }
               }
-              isLoading={false}
-              items={Array []}
               location={
                 Object {
                   "hash": "",
@@ -1967,8 +1969,6 @@ exports[`containers/stats renders when loading stats 1`] = `
                     "replace": [Function],
                   }
                 }
-                isLoading={false}
-                items={Array []}
                 location={
                   Object {
                     "hash": "",
@@ -2025,8 +2025,6 @@ exports[`containers/stats renders when loading stats 1`] = `
                       "replace": [Function],
                     }
                   }
-                  isLoading={false}
-                  items={Array []}
                   location={
                     Object {
                       "hash": "",
@@ -2084,8 +2082,6 @@ exports[`containers/stats renders when loading stats 1`] = `
                         "replace": [Function],
                       }
                     }
-                    isLoading={false}
-                    items={Array []}
                     location={
                       Object {
                         "hash": "",
@@ -2331,6 +2327,16 @@ exports[`containers/stats renders when loading stats 1`] = `
                               </ResetOnUnmount>
                             </Connect(ResetOnUnmount)>
                           </Connect(Connect(ResetOnUnmount))>
+                          <Connect(Charts)
+                            chartType="BARCHART"
+                          >
+                            <Charts
+                              chartType="BARCHART"
+                              dispatch={[Function]}
+                              isLoading={false}
+                              items={Array []}
+                            />
+                          </Connect(Charts)>
                         </div>
                         <div
                           className="column is-one-quarter"

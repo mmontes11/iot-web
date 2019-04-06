@@ -109,8 +109,6 @@ export const handleDataParams = (path, getData, reset) => WrappedComponent => {
   };
   const withConnect = connect(
     state => ({
-      items: state.data.items,
-      isLoading: state.data.isLoading,
       hasError: fromState.hasError(state),
     }),
     { updateParams, addThingFilter, addTimePeriodFilter, addCustomTimePeriodFilter },

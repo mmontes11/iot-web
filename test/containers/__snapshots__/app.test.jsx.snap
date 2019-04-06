@@ -723,8 +723,6 @@ exports[`containers/app renders app in error state 1`] = `
                                     "replace": [Function],
                                   }
                                 }
-                                isLoading={false}
-                                items={Array []}
                                 location={
                                   Object {
                                     "hash": "",
@@ -778,8 +776,6 @@ exports[`containers/app renders app in error state 1`] = `
                                       "replace": [Function],
                                     }
                                   }
-                                  isLoading={false}
-                                  items={Array []}
                                   location={
                                     Object {
                                       "hash": "",
@@ -836,8 +832,6 @@ exports[`containers/app renders app in error state 1`] = `
                                         "replace": [Function],
                                       }
                                     }
-                                    isLoading={false}
-                                    items={Array []}
                                     location={
                                       Object {
                                         "hash": "",
@@ -895,8 +889,6 @@ exports[`containers/app renders app in error state 1`] = `
                                           "replace": [Function],
                                         }
                                       }
-                                      isLoading={false}
-                                      items={Array []}
                                       location={
                                         Object {
                                           "hash": "",
@@ -1142,6 +1134,16 @@ exports[`containers/app renders app in error state 1`] = `
                                                 </ResetOnUnmount>
                                               </Connect(ResetOnUnmount)>
                                             </Connect(Connect(ResetOnUnmount))>
+                                            <Connect(Charts)
+                                              chartType="BARCHART"
+                                            >
+                                              <Charts
+                                                chartType="BARCHART"
+                                                dispatch={[Function]}
+                                                isLoading={false}
+                                                items={Array []}
+                                              />
+                                            </Connect(Charts)>
                                           </div>
                                           <div
                                             className="column is-one-quarter"
@@ -4538,8 +4540,6 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                     "replace": [Function],
                                   }
                                 }
-                                isLoading={false}
-                                items={Array []}
                                 location={
                                   Object {
                                     "hash": "",
@@ -4593,8 +4593,6 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                       "replace": [Function],
                                     }
                                   }
-                                  isLoading={false}
-                                  items={Array []}
                                   location={
                                     Object {
                                       "hash": "",
@@ -4651,8 +4649,6 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                         "replace": [Function],
                                       }
                                     }
-                                    isLoading={false}
-                                    items={Array []}
                                     location={
                                       Object {
                                         "hash": "",
@@ -4710,8 +4706,6 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                           "replace": [Function],
                                         }
                                       }
-                                      isLoading={false}
-                                      items={Array []}
                                       location={
                                         Object {
                                           "hash": "",
@@ -4957,6 +4951,16 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                 </ResetOnUnmount>
                                               </Connect(ResetOnUnmount)>
                                             </Connect(Connect(ResetOnUnmount))>
+                                            <Connect(Charts)
+                                              chartType="BARCHART"
+                                            >
+                                              <Charts
+                                                chartType="BARCHART"
+                                                dispatch={[Function]}
+                                                isLoading={false}
+                                                items={Array []}
+                                              />
+                                            </Connect(Charts)>
                                           </div>
                                           <div
                                             className="column is-one-quarter"
