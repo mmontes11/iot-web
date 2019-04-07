@@ -2712,7 +2712,6 @@ exports[`components/main renders a main in /stats path 1`] = `
                                     >
                                       <Charts
                                         chartType="BARCHART"
-                                        data={null}
                                         dispatch={[Function]}
                                         isLoading={false}
                                         items={Array []}

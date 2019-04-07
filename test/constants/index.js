@@ -70,3 +70,54 @@ export const statsWithoutUnits = {
   ],
   type: "measurement2",
 };
+
+export const statsItem = {
+  data: [
+    {
+      thing: "arduino",
+      avg: 79,
+      max: 79,
+      min: 79,
+      stdDev: 0,
+    },
+  ],
+  type: "temperature",
+  unit: {
+    name: "degrees",
+    symbol: "°C",
+  },
+};
+
+export const eventDataItem = {
+  items: [
+    {
+      values: [
+        {
+          thing: "arduino",
+          value: 1200,
+        },
+      ],
+      phenomenonTime: "2019-04-06T18:59:00.000Z",
+    },
+  ],
+  type: "door-opened",
+};
+
+export const measurementDataItem = {
+  items: [
+    {
+      values: [
+        {
+          thing: "arduino",
+          value: 79,
+        },
+      ],
+      phenomenonTime: "2019-04-06T18:59:00.000Z",
+    },
+  ],
+  type: "temperature",
+  unit: {
+    name: "degrees",
+    symbol: "°C",
+  },
+};

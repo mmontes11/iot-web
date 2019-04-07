@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers/stats renders stats barcharts 1`] = `
+exports[`containers/stats renders stats 1`] = `
 <MemoryRouter
   initialEntries={
     Array [
@@ -560,12 +560,292 @@ exports[`containers/stats renders stats barcharts 1`] = `
                           >
                             <Charts
                               chartType="BARCHART"
-                              data={null}
                               dispatch={[Function]}
                               isLoading={false}
-                              items={Array []}
+                              items={
+                                Array [
+                                  Object {
+                                    "data": Array [
+                                      Object {
+                                        "thing": "raspi",
+                                        "value": 10,
+                                      },
+                                      Object {
+                                        "thing": "raspi2",
+                                        "value": 11,
+                                      },
+                                      Object {
+                                        "thing": "raspi3",
+                                        "value": 12,
+                                      },
+                                    ],
+                                    "type": "measurement",
+                                    "unit": Object {
+                                      "symbol": "ºC",
+                                    },
+                                  },
+                                  Object {
+                                    "data": Array [
+                                      Object {
+                                        "thing": "raspi",
+                                        "value": 10,
+                                      },
+                                      Object {
+                                        "thing": "raspi2",
+                                        "value": 11,
+                                      },
+                                      Object {
+                                        "thing": "raspi3",
+                                        "value": 12,
+                                      },
+                                    ],
+                                    "type": "measurement2",
+                                  },
+                                ]
+                              }
                               things={Array []}
-                            />
+                            >
+                              <ChartBox
+                                key="measurement"
+                                type="measurement"
+                                unit={
+                                  Object {
+                                    "symbol": "ºC",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="box"
+                                >
+                                  <div
+                                    className="columns"
+                                  >
+                                    <div
+                                      className="column"
+                                    >
+                                      <p
+                                        className="title is-3 has-text-primary has-text-centered is-spaced"
+                                      >
+                                        measurement (ºC)
+                                      </p>
+                                      <div
+                                        className="chart"
+                                      >
+                                        <BarChart
+                                          data={
+                                            Array [
+                                              Object {
+                                                "thing": "raspi",
+                                                "value": 10,
+                                              },
+                                              Object {
+                                                "thing": "raspi2",
+                                                "value": 11,
+                                              },
+                                              Object {
+                                                "thing": "raspi3",
+                                                "value": 12,
+                                              },
+                                            ]
+                                          }
+                                        >
+                                          <ResponsiveContainer
+                                            debounce={0}
+                                            height="100%"
+                                            width="100%"
+                                          >
+                                            <div
+                                              className="recharts-responsive-container"
+                                              style={
+                                                Object {
+                                                  "height": "100%",
+                                                  "maxHeight": undefined,
+                                                  "minHeight": undefined,
+                                                  "minWidth": undefined,
+                                                  "width": "100%",
+                                                }
+                                              }
+                                            >
+                                              <BarChart
+                                                barCategoryGap="10%"
+                                                barGap={4}
+                                                data={
+                                                  Array [
+                                                    Object {
+                                                      "thing": "raspi",
+                                                      "value": 10,
+                                                    },
+                                                    Object {
+                                                      "thing": "raspi2",
+                                                      "value": 11,
+                                                    },
+                                                    Object {
+                                                      "thing": "raspi3",
+                                                      "value": 12,
+                                                    },
+                                                  ]
+                                                }
+                                                height={0}
+                                                layout="horizontal"
+                                                margin={
+                                                  Object {
+                                                    "bottom": 5,
+                                                    "left": 5,
+                                                    "right": 5,
+                                                    "top": 5,
+                                                  }
+                                                }
+                                                reverseStackOrder={false}
+                                                stackOffset="none"
+                                                width={0}
+                                              />
+                                              <ResizeDetector
+                                                handleHeight={true}
+                                                handleWidth={true}
+                                                onResize={[Function]}
+                                                refreshRate={1000}
+                                                resizableElementId=""
+                                                skipOnMount={false}
+                                              >
+                                                <div
+                                                  style={
+                                                    Object {
+                                                      "display": "none",
+                                                      "height": 0,
+                                                      "position": "absolute",
+                                                      "visibility": "hidden",
+                                                      "width": 0,
+                                                    }
+                                                  }
+                                                />
+                                              </ResizeDetector>
+                                            </div>
+                                          </ResponsiveContainer>
+                                        </BarChart>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </ChartBox>
+                              <ChartBox
+                                key="measurement2"
+                                type="measurement2"
+                                unit={null}
+                              >
+                                <div
+                                  className="box"
+                                >
+                                  <div
+                                    className="columns"
+                                  >
+                                    <div
+                                      className="column"
+                                    >
+                                      <p
+                                        className="title is-3 has-text-primary has-text-centered is-spaced"
+                                      >
+                                        measurement2
+                                      </p>
+                                      <div
+                                        className="chart"
+                                      >
+                                        <BarChart
+                                          data={
+                                            Array [
+                                              Object {
+                                                "thing": "raspi",
+                                                "value": 10,
+                                              },
+                                              Object {
+                                                "thing": "raspi2",
+                                                "value": 11,
+                                              },
+                                              Object {
+                                                "thing": "raspi3",
+                                                "value": 12,
+                                              },
+                                            ]
+                                          }
+                                        >
+                                          <ResponsiveContainer
+                                            debounce={0}
+                                            height="100%"
+                                            width="100%"
+                                          >
+                                            <div
+                                              className="recharts-responsive-container"
+                                              style={
+                                                Object {
+                                                  "height": "100%",
+                                                  "maxHeight": undefined,
+                                                  "minHeight": undefined,
+                                                  "minWidth": undefined,
+                                                  "width": "100%",
+                                                }
+                                              }
+                                            >
+                                              <BarChart
+                                                barCategoryGap="10%"
+                                                barGap={4}
+                                                data={
+                                                  Array [
+                                                    Object {
+                                                      "thing": "raspi",
+                                                      "value": 10,
+                                                    },
+                                                    Object {
+                                                      "thing": "raspi2",
+                                                      "value": 11,
+                                                    },
+                                                    Object {
+                                                      "thing": "raspi3",
+                                                      "value": 12,
+                                                    },
+                                                  ]
+                                                }
+                                                height={0}
+                                                layout="horizontal"
+                                                margin={
+                                                  Object {
+                                                    "bottom": 5,
+                                                    "left": 5,
+                                                    "right": 5,
+                                                    "top": 5,
+                                                  }
+                                                }
+                                                reverseStackOrder={false}
+                                                stackOffset="none"
+                                                width={0}
+                                              />
+                                              <ResizeDetector
+                                                handleHeight={true}
+                                                handleWidth={true}
+                                                onResize={[Function]}
+                                                refreshRate={1000}
+                                                resizableElementId=""
+                                                skipOnMount={false}
+                                              >
+                                                <div
+                                                  style={
+                                                    Object {
+                                                      "display": "none",
+                                                      "height": 0,
+                                                      "position": "absolute",
+                                                      "visibility": "hidden",
+                                                      "width": 0,
+                                                    }
+                                                  }
+                                                />
+                                              </ResizeDetector>
+                                            </div>
+                                          </ResponsiveContainer>
+                                        </BarChart>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </ChartBox>
+                            </Charts>
                           </Connect(Charts)>
                         </div>
                         <div
@@ -1457,7 +1737,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                           >
                             <Charts
                               chartType="BARCHART"
-                              data={null}
                               dispatch={[Function]}
                               isLoading={false}
                               items={Array []}
@@ -2354,12 +2633,26 @@ exports[`containers/stats renders when loading stats 1`] = `
                           >
                             <Charts
                               chartType="BARCHART"
-                              data={null}
                               dispatch={[Function]}
-                              isLoading={false}
+                              isLoading={true}
                               items={Array []}
                               things={Array []}
-                            />
+                            >
+                              <Loader>
+                                <div
+                                  className="is-horizontal-center"
+                                >
+                                  <figure
+                                    className="image is-128x128"
+                                  >
+                                    <img
+                                      alt="Loader"
+                                      src="test-file-stub"
+                                    />
+                                  </figure>
+                                </div>
+                              </Loader>
+                            </Charts>
                           </Connect(Charts)>
                         </div>
                         <div

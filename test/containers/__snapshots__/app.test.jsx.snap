@@ -1145,7 +1145,6 @@ exports[`containers/app renders app in error state 1`] = `
                                             >
                                               <Charts
                                                 chartType="BARCHART"
-                                                data={null}
                                                 dispatch={[Function]}
                                                 isLoading={false}
                                                 items={Array []}
@@ -4970,7 +4969,6 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                             >
                                               <Charts
                                                 chartType="BARCHART"
-                                                data={null}
                                                 dispatch={[Function]}
                                                 isLoading={false}
                                                 items={Array []}

@@ -5,6 +5,7 @@ import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
 import StatsParamsPanel from "containers/statsParamsPanel";
+import { TYPE } from "constants/params";
 import { initialState } from "../constants";
 
 describe("containers/statsParamsPanel", () => {
@@ -19,16 +20,20 @@ describe("containers/statsParamsPanel", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders before selecting type", () => {
+  it("renders when TYPE is selected", () => {
     const state = {
       ...initialState,
       params: {
-        ...initialState.params,
-        type: {
-          items: ["event", "measurement"],
-          isActive: true,
-          selectedItem: null,
+        byId: {
+          TYPE: {
+            items: ["event", "measurement"],
+            isActive: false,
+            isLoading: false,
+            isDisabled: false,
+            selectedItem: "event",
+          },
         },
+        allIds: [TYPE],
       },
     };
     const store = configureStore([thunk])(state);
@@ -41,112 +46,20 @@ describe("containers/statsParamsPanel", () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it("renders when type is selected", () => {
+  it("renders when loading TYPE", () => {
     const state = {
       ...initialState,
       params: {
-        ...initialState.params,
-        type: {
-          items: ["event", "measurement"],
-          isActive: false,
-          selectedItem: "event",
+        byId: {
+          TYPE: {
+            items: ["event", "measurement"],
+            isActive: false,
+            isLoading: true,
+            isDisabled: false,
+            selectedItem: null,
+          },
         },
-      },
-    };
-    const store = configureStore([thunk])(state);
-    const wrapper = shallow(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <StatsParamsPanel onParamsSelected={() => undefined} onReset={() => undefined} />
-        </Provider>
-      </MemoryRouter>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-  it("renders when loading observations", () => {
-    const state = {
-      ...initialState,
-      params: {
-        ...initialState.params,
-        observation: {
-          items: [],
-          isActive: false,
-          isLoading: true,
-          isDisabled: true,
-          selectedItem: null,
-        },
-      },
-    };
-    const store = configureStore([thunk])(state);
-    const wrapper = shallow(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <StatsParamsPanel onParamsSelected={() => undefined} onReset={() => undefined} />
-        </Provider>
-      </MemoryRouter>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-  it("renders before selecting observation", () => {
-    const state = {
-      ...initialState,
-      params: {
-        ...initialState.params,
-        observation: {
-          items: ["temperature", "humidity"],
-          isActive: false,
-          isLoading: false,
-          isDisabled: false,
-          selectedItem: null,
-        },
-      },
-    };
-    const store = configureStore([thunk])(state);
-    const wrapper = shallow(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <StatsParamsPanel onParamsSelected={() => undefined} onReset={() => undefined} />
-        </Provider>
-      </MemoryRouter>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-  it("renders before selecting observation", () => {
-    const state = {
-      ...initialState,
-      params: {
-        ...initialState.params,
-        observation: {
-          items: ["temperature", "humidity"],
-          isActive: false,
-          isLoading: false,
-          isDisabled: false,
-          selectedItem: null,
-        },
-      },
-    };
-    const store = configureStore([thunk])(state);
-    const wrapper = shallow(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <StatsParamsPanel onParamsSelected={() => undefined} onReset={() => undefined} />
-        </Provider>
-      </MemoryRouter>,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-  it("renders when observation is selected", () => {
-    const state = {
-      ...initialState,
-      params: {
-        ...initialState.params,
-        observation: {
-          items: ["temperature", "humidity"],
-          isActive: false,
-          isLoading: false,
-          isDisabled: false,
-          selectedItem: "temperature",
-        },
+        allIds: [TYPE],
       },
     };
     const store = configureStore([thunk])(state);

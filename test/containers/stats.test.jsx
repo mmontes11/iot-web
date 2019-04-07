@@ -27,8 +27,8 @@ describe("containers/stats", () => {
         statusCode: null,
         error: null,
       },
-      stats: {
-        ...initialState.stats,
+      data: {
+        ...initialState.data,
         isLoading: true,
         items: [],
       },
@@ -43,11 +43,11 @@ describe("containers/stats", () => {
     );
     expect(wrapperLoading).toMatchSnapshot();
   });
-  it("renders stats barcharts", () => {
+  it("renders stats", () => {
     const state = {
       ...initialState,
-      stats: {
-        ...initialState.stats,
+      data: {
+        ...initialState.data,
         isLoading: false,
         items: [statsWithUnits, statsWithoutUnits],
       },

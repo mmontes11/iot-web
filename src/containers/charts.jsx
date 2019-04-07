@@ -38,13 +38,13 @@ const Charts = ({ chartType, items, things, isLoading }) => {
 
 Charts.propTypes = {
   chartType: PropTypes.oneOf([BARCHART, LINECHART]).isRequired,
-  data: PropTypes.arrayOf(PropTypes.shape({})),
+  items: PropTypes.arrayOf(PropTypes.shape({})),
   things: PropTypes.arrayOf(PropTypes.string),
   isLoading: PropTypes.bool.isRequired,
 };
 
 Charts.defaultProps = {
-  data: null,
+  items: null,
   things: null,
 };
 
