@@ -7,6 +7,7 @@ import { compose } from "recompose";
 import * as actionsAuth from "actions/auth";
 import * as appActions from "actions/app";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
+import LanguageSelector from "containers/languageSelector";
 
 const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
   const navbarBurgerClass = classNames("navbar-burger", "burger", {
@@ -56,6 +57,7 @@ const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
           </NavLink>
         </div>
         <div className="navbar-end">
+          <LanguageSelector />
           <div className="navbar-item">
             <div className="field">
               <p className="control">

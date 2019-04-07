@@ -6,6 +6,7 @@ import things from "reducers/things";
 import params, * as fromParams from "reducers/params";
 import filters from "reducers/filters";
 import data from "reducers/data";
+import localization from "reducers/localization";
 
 export default combineReducers({
   app,
@@ -15,6 +16,7 @@ export default combineReducers({
   params,
   filters,
   data,
+  localization,
 });
 
 export const isLoading = state => fromRequest.isLoading(state.request);
