@@ -13,7 +13,7 @@ import { RESET } from "constants/actionTypes/common";
 
 import { initialState } from "../constants/index";
 
-const thingFilterInitialState = initialState.stats.filters.thingFilter;
+const thingFilterInitialState = initialState.filters.thingFilter;
 deepFreeze(thingFilterInitialState);
 
 describe("reducers/thingFilter", () => {

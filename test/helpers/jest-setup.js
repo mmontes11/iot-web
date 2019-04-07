@@ -104,6 +104,6 @@ jest.mock("lib/iotClient", () => ({
   },
 }));
 
-jest.mock("helpers/dateFormatter", () => ({
+jest.mock("helpers/date", () => ({
   formatDate: () => "Mock Date",
 }));

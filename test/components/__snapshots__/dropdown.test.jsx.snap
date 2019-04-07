@@ -22,7 +22,7 @@ exports[`components/dropdown renders in active state 1`] = `
       >
         <i
           aria-hidden="true"
-          className="fas"
+          className="fas fa-angle-down"
         />
       </span>
     </button>
@@ -82,7 +82,7 @@ exports[`components/dropdown renders in disabled state 1`] = `
       >
         <i
           aria-hidden="true"
-          className="fas"
+          className="fas fa-angle-down"
         />
       </span>
     </button>
@@ -142,7 +142,7 @@ exports[`components/dropdown renders in initial state 1`] = `
       >
         <i
           aria-hidden="true"
-          className="fas"
+          className="fas fa-angle-down"
         />
       </span>
     </button>
@@ -202,7 +202,7 @@ exports[`components/dropdown renders in loading state 1`] = `
       >
         <i
           aria-hidden="true"
-          className="fas"
+          className="fas fa-angle-down"
         />
       </span>
     </button>

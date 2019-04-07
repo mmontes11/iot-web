@@ -1,7 +1,7 @@
 import { THINGS_UPDATED, THING_SELECTED, SHOW_THING_NOT_FOUND_ERROR } from "constants/actionTypes/things";
 import { RESET } from "constants/actionTypes/common";
 
-const initialState = {
+export const initialState = {
   items: [],
   selectedItem: null,
   showNotFoundError: false,

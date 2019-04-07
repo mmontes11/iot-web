@@ -5,6 +5,9 @@ import { compose } from "recompose";
 import PropTypes from "prop-types";
 import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
+import * as fromState from "reducers";
+import { TYPE, OBSERVATION } from "constants/params";
+import { isObservationDisabled } from "helpers/paramsPanel";
 
 const StatsParamsPanel = ({
   onParamsSelected,
@@ -18,21 +21,31 @@ const StatsParamsPanel = ({
   updateObservation,
 }) => (
   <ParamsPanel
-    type={{
-      ...type,
-      label: type.selectedItem || "Select type",
-      onButtonClick: () => selectType(),
-      onItemClick: item => updateType(item),
-    }}
-    observation={{
-      ...observation,
-      label: observation.selectedItem || "Select observation",
-      onButtonClick: () => selectObservation(),
-      onItemClick: item => {
-        updateObservation(item);
-        onParamsSelected(type.selectedItem, item);
+    params={[
+      {
+        key: "type",
+        label: type.selectedItem || "Select type",
+        items: type.items || [],
+        isActive: type.isActive || false,
+        isLoading: type.isLoading || false,
+        isDisabled: type.isDisabled || false,
+        onButtonClick: () => selectType(),
+        onItemClick: item => updateType(item),
       },
-    }}
+      {
+        key: "observation",
+        label: observation.selectedItem || "Select observation",
+        items: observation.items || [],
+        isActive: observation.isActive || false,
+        isLoading: observation.isLoading || false,
+        isDisabled: isObservationDisabled(observation),
+        onButtonClick: () => selectObservation(),
+        onItemClick: item => {
+          updateObservation(item);
+          onParamsSelected(type.selectedItem, item);
+        },
+      },
+    ]}
     reset={{
       isDisabled: isResetDisabled,
       onReset: () => onReset(),
@@ -42,9 +55,9 @@ const StatsParamsPanel = ({
 
 const withConnect = connect(
   state => ({
-    type: state.stats.params.type,
-    observation: state.stats.params.observation,
-    isResetDisabled: state.stats.params.reset.isDisabled && state.stats.filters.items.length === 0,
+    type: fromState.getParam(state, TYPE),
+    observation: fromState.getParam(state, OBSERVATION),
+    isResetDisabled: fromState.isResetDisabled(state),
   }),
   { ...paramsActions },
 );

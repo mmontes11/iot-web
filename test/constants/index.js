@@ -1,74 +1,19 @@
+import { initialState as app } from "reducers/app";
+import { initialState as request } from "reducers/request";
+import { initialState as auth } from "reducers/auth";
+import { initialState as things } from "reducers/things";
+import { initialState as params } from "reducers/params";
+import { initialState as filters } from "reducers/filters";
+import { initialState as data } from "reducers/data";
+
 export const initialState = {
-  app: {
-    isHamburgerMenuExpanded: false,
-    isMapDialogOpened: false,
-    showError: true,
-  },
-  auth: {
-    isAuth: false,
-    username: null,
-    password: null,
-  },
-  request: {
-    pending: 0,
-    statusCode: null,
-    error: null,
-  },
-  things: {
-    items: [],
-    selectedItem: null,
-    shouldShowNotFoundError: false,
-  },
-  stats: {
-    params: {
-      type: {
-        items: ["event", "measurement"],
-        isActive: false,
-        selectedItem: null,
-      },
-      observation: {
-        items: [],
-        isActive: false,
-        isLoading: false,
-        isDisabled: true,
-        selectedItem: null,
-      },
-      reset: {
-        isDisabled: true,
-      },
-    },
-    filters: {
-      type: {
-        items: ["date", "thing"],
-        isActive: false,
-        isDisabled: false,
-      },
-      thingFilter: {
-        isLoading: false,
-        isActive: false,
-        isDisabled: false,
-        items: [],
-        selectedItem: null,
-      },
-      dateFilter: {
-        isCustomSelected: false,
-        timePeriod: {
-          isLoading: false,
-          isActive: false,
-          isDisabled: false,
-          items: [],
-          selectedItem: null,
-        },
-        custom: {
-          startDate: null,
-          endDate: null,
-        },
-      },
-      items: [],
-    },
-    items: [],
-    isLoading: false,
-  },
+  app,
+  request,
+  auth,
+  things,
+  params,
+  filters,
+  data,
 };
 
 export const thing = {
@@ -124,4 +69,55 @@ export const statsWithoutUnits = {
     },
   ],
   type: "measurement2",
+};
+
+export const statsItem = {
+  data: [
+    {
+      thing: "arduino",
+      avg: 79,
+      max: 79,
+      min: 79,
+      stdDev: 0,
+    },
+  ],
+  type: "temperature",
+  unit: {
+    name: "degrees",
+    symbol: "°C",
+  },
+};
+
+export const eventDataItem = {
+  items: [
+    {
+      values: [
+        {
+          thing: "arduino",
+          value: 1200,
+        },
+      ],
+      phenomenonTime: "2019-04-06T18:59:00.000Z",
+    },
+  ],
+  type: "door-opened",
+};
+
+export const measurementDataItem = {
+  items: [
+    {
+      values: [
+        {
+          thing: "arduino",
+          value: 79,
+        },
+      ],
+      phenomenonTime: "2019-04-06T18:59:00.000Z",
+    },
+  ],
+  type: "temperature",
+  unit: {
+    name: "degrees",
+    symbol: "°C",
+  },
 };

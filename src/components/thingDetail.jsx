@@ -4,7 +4,7 @@ import TagList from "components/tagList";
 import ThingActions from "components/thingActions";
 import Map from "containers/map";
 import { pointToLatLng } from "helpers/geometry";
-import { formatDate } from "helpers/dateFormatter";
+import { formatDate } from "helpers/date";
 
 const ThingDetail = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => (
   <div className="card">

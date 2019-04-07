@@ -1,16 +1,16 @@
 import deepFreeze from "deep-freeze";
 import paramsReducer, { initialState as paramsInitialState } from "reducers/params";
 import {
-  TYPE_SELECT,
-  TYPE_UPDATED,
-  OBSERVATION_SELECT,
-  OBSERVATION_UPDATED,
-  OBSERVATIONS_REQUEST,
-  OBSERVATIONS_REQUEST_SUCCESS,
-  OBSERVATIONS_REQUEST_ERROR,
-  OBSERVATIONS_UPDATED,
+  PARAM_SELECT,
+  PARAM_UPDATE,
+  PARAM_RESET,
+  PARAM_REQUEST,
+  PARAM_REQUEST_SUCCESS,
+  PARAM_REQUEST_ERROR,
+  PARAM_ITEMS_UPDATED,
 } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
+import { TYPE } from "constants/params";
 
 deepFreeze(paramsInitialState);
 
@@ -21,31 +21,35 @@ describe("reducers/params", () => {
   it("reduces nothing", () => {
     expect(paramsReducer(paramsInitialState, { type: "WHATEVER" })).toMatchSnapshot();
   });
-  it("reduces TYPE_SELECT", () => {
-    expect(paramsReducer(paramsInitialState, { type: TYPE_SELECT })).toMatchSnapshot();
+  it("reduces PARAM_SELECT", () => {
+    expect(paramsReducer(paramsInitialState, { type: PARAM_SELECT, param: TYPE })).toMatchSnapshot();
   });
-  it("reduces TYPE_UPDATED", () => {
-    expect(paramsReducer(paramsInitialState, { type: TYPE_UPDATED, updatedType: "foo" })).toMatchSnapshot();
-  });
-  it("reduces OBSERVATION_SELECT", () => {
-    expect(paramsReducer(paramsInitialState, { type: OBSERVATION_SELECT })).toMatchSnapshot();
-  });
-  it("reduces OBSERVATION_UPDATED", () => {
+  it("reduces PARAM_UPDATE by updating TYPE", () => {
     expect(
-      paramsReducer(paramsInitialState, { type: OBSERVATION_UPDATED, updatedObservation: "foo" }),
+      paramsReducer(paramsInitialState, { type: PARAM_UPDATE, param: TYPE, selectedItem: "foo" }),
     ).toMatchSnapshot();
   });
-  it("reduces OBSERVATIONS_REQUEST", () => {
-    expect(paramsReducer(paramsInitialState, { type: OBSERVATIONS_REQUEST })).toMatchSnapshot();
+  it("reduces PARAM_RESET by reseting TYPE", () => {
+    paramsReducer(paramsInitialState, { type: PARAM_UPDATE, param: TYPE, selectedItem: "foo" });
+    expect(paramsReducer(paramsInitialState, { type: PARAM_RESET, param: TYPE })).toMatchSnapshot();
   });
-  it("reduces OBSERVATIONS_REQUEST_SUCCESS", () => {
-    expect(paramsReducer(paramsInitialState, { type: OBSERVATIONS_REQUEST_SUCCESS })).toMatchSnapshot();
+  it("reduces PARAM_REQUEST", () => {
+    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST, param: TYPE })).toMatchSnapshot();
   });
-  it("reduces OBSERVATIONS_REQUEST_ERROR", () => {
-    expect(paramsReducer(paramsInitialState, { type: OBSERVATIONS_REQUEST_ERROR })).toMatchSnapshot();
+  it("reduces PARAM_REQUEST_SUCCESS", () => {
+    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST_SUCCESS, param: TYPE })).toMatchSnapshot();
   });
-  it("reduces OBSERVATIONS_UPDATED", () => {
-    expect(paramsReducer(paramsInitialState, { type: OBSERVATIONS_UPDATED, observations: [] })).toMatchSnapshot();
+  it("reduces PARAM_REQUEST_ERROR", () => {
+    expect(paramsReducer(paramsInitialState, { type: PARAM_REQUEST_ERROR, param: TYPE })).toMatchSnapshot();
+  });
+  it("reduces PARAM_ITEMS_UPDATED", () => {
+    expect(
+      paramsReducer(paramsInitialState, {
+        type: PARAM_ITEMS_UPDATED,
+        param: TYPE,
+        items: ["foo", "bar"],
+      }),
+    ).toMatchSnapshot();
   });
   it("reduces RESET", () => {
     expect(paramsReducer(paramsInitialState, { type: RESET })).toMatchSnapshot();

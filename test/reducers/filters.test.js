@@ -5,7 +5,7 @@ import { FILTER_TYPE_SELECT, ADD_FILTER_TYPE, DELETE_FILTER_TYPE } from "constan
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE, FILTER_TYPES } from "constants/filterTypes";
 import { initialState } from "../constants/index";
 
-const filtersInitialState = initialState.stats.filters;
+const filtersInitialState = initialState.filters;
 deepFreeze(filtersInitialState);
 
 describe("reducers/filters", () => {

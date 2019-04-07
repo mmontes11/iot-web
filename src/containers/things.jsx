@@ -8,7 +8,7 @@ import ThingDetail from "components/thingDetail";
 import Loader from "components/loader";
 import Modal from "components/modal";
 import * as thingActions from "actions/things";
-import * as reducerHelpers from "reducers";
+import * as fromState from "reducers";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
 
 class Things extends React.Component {
@@ -123,7 +123,7 @@ Things.defaultProps = {
 
 const withConnect = connect(
   state => ({
-    isLoading: reducerHelpers.isLoading(state),
+    isLoading: fromState.isLoading(state),
     things: state.things.items,
     selectedThing: state.things.selectedItem,
     shouldShowNotFoundError: state.things.showNotFoundError,
