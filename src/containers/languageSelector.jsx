@@ -6,16 +6,16 @@ import LanguageItem from "components/languageItem";
 
 const LanguageSelector = ({ selectedLanguage, languages, updateLanguage }) => (
   <div className="navbar-item has-dropdown is-hoverable">
-    <a className="navbar-link" rel="noopener noreferrer">
+    <button className="navbar-link button is-white">
       <LanguageItem language={selectedLanguage} />
-    </a>
+    </button>
     <div className="navbar-dropdown">
       {languages
         .filter(lang => lang !== selectedLanguage)
         .map(lang => (
-          <a key={lang} className="navbar-item" onClick={() => updateLanguage(lang)} rel="noopener noreferrer">
+          <button key={lang} className="navbar-item button is-white" onClick={() => updateLanguage(lang)}>
             <LanguageItem language={lang} />
-          </a>
+          </button>
         ))}
     </div>
   </div>
