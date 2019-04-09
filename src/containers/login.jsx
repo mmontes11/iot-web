@@ -6,8 +6,9 @@ import classNames from "classnames";
 import * as fromState from "reducers";
 import * as authActions from "actions/auth";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
+import { injectIntl, intlShape } from "react-intl";
 
-const Login = ({ username, password, isLoading, setUsername, setPassword, login }) => {
+const Login = ({ intl: { formatMessage }, username, password, isLoading, setUsername, setPassword, login }) => {
   const btnClass = classNames("button", "is-block", "is-primary", "is-large", "is-fullwidth", {
     "is-loading": isLoading,
   });
@@ -17,14 +18,14 @@ const Login = ({ username, password, isLoading, setUsername, setPassword, login 
         <div className="container has-text-centered">
           <div className="column is-4 is-offset-4">
             <div className="box">
-              <p className="title is-1">IoT</p>
+              <p className="title is-1">{formatMessage({ id: "IoT" })}</p>
               <form>
                 <div className="field">
                   <div className="control has-icons-left">
                     <input
                       id="username-input"
                       className="input is-large"
-                      placeholder="Username"
+                      placeholder={formatMessage({ id: "Username" })}
                       onChange={({ target: { value } }) => setUsername(value)}
                       value={username || ""}
                     />
@@ -39,7 +40,7 @@ const Login = ({ username, password, isLoading, setUsername, setPassword, login 
                       id="password-input"
                       className="input is-large"
                       type="password"
-                      placeholder="Password"
+                      placeholder={formatMessage({ id: "Password" })}
                       onChange={({ target: { value } }) => setPassword(value)}
                       value={password || ""}
                     />
@@ -57,7 +58,7 @@ const Login = ({ username, password, isLoading, setUsername, setPassword, login 
                   }}
                   disabled={isLoading}
                 >
-                  Login
+                  {formatMessage({ id: "Login" })}
                 </button>
               </form>
             </div>
@@ -69,6 +70,7 @@ const Login = ({ username, password, isLoading, setUsername, setPassword, login 
 };
 
 Login.propTypes = {
+  intl: intlShape.isRequired,
   username: PropTypes.string,
   password: PropTypes.string,
   isLoading: PropTypes.bool.isRequired,
@@ -94,4 +96,5 @@ const withConnect = connect(
 export default compose(
   withConnect,
   withResetOnUnmount,
+  injectIntl,
 )(Login);

@@ -5,6 +5,7 @@ import ThingActions from "components/thingActions";
 import Map from "containers/map";
 import { pointToLatLng } from "helpers/geometry";
 import { formatDate } from "helpers/date";
+import { FormattedMessage } from "react-intl";
 
 const ThingDetail = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => (
   <div className="card">
@@ -13,16 +14,17 @@ const ThingDetail = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => (
         <div className="column is-three-fifths has-text-centered">
           <p className="title is-3 has-text-primary is-spaced">{thing.name}</p>
           <p className="title is-6">
-            <strong>IP address:</strong>{" "}
+            <FormattedMessage id="IP address:">{txt => <strong>{txt}</strong>}</FormattedMessage>{" "}
             <a href={`http://${thing.ip}`} target="_blank" rel="noopener noreferrer">
               {thing.ip}
             </a>
           </p>
           <p className="title is-6">
-            <strong>MQTT topic:</strong> <span className="has-text-info">{thing.topic}</span>
+            <FormattedMessage id="MQTT topic:">{txt => <strong>{txt}</strong>}</FormattedMessage>{" "}
+            <span className="has-text-info">{thing.topic}</span>
           </p>
           <p className="title is-6">
-            <strong>Last observation:</strong>{" "}
+            <FormattedMessage id="Last observation:">{txt => <strong>{txt}</strong>}</FormattedMessage>{" "}
             <span className="has-text-info">{formatDate(thing.lastObservation)}</span>
           </p>
           <TagList label="Events:" tags={thing.supportedObservationTypes.event} tagStyle="is-warning" />

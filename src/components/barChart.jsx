@@ -11,8 +11,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { colorForIndex } from "helpers/chart";
+import { injectIntl, intlShape } from "react-intl";
 
-const BarChart = ({ data }) => {
+const BarChart = ({ intl: { formatMessage }, data }) => {
   const dataElement = data[0];
   const thingKey = "thing";
   const barKeys = Object.keys(dataElement).filter(key => key !== thingKey);
@@ -25,7 +26,7 @@ const BarChart = ({ data }) => {
         <Tooltip />
         <Legend />
         {barKeys.map((barKey, index) => (
-          <Bar key={barKey} dataKey={barKey} fill={colorForIndex(index)} />
+          <Bar key={barKey} name={formatMessage({ id: barKey })} dataKey={barKey} fill={colorForIndex(index)} />
         ))}
       </RechartsBarChart>
     </ResponsiveContainer>
@@ -33,7 +34,8 @@ const BarChart = ({ data }) => {
 };
 
 BarChart.propTypes = {
+  intl: intlShape.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
-export default BarChart;
+export default injectIntl(BarChart);

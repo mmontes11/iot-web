@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Dropdown from "components/dropdown";
+import { FormattedMessage } from "react-intl";
 
 const ParamsPanel = ({ params, reset }) => (
   <div className="box">
@@ -23,7 +24,7 @@ const ParamsPanel = ({ params, reset }) => (
       })}
       <div className="column is-2">
         <button className="button is-warning is-fullwidth" disabled={reset.isDisabled} onClick={() => reset.onReset()}>
-          <span>Reset</span>
+          <FormattedMessage id="Reset" />
           <span className="icon is-small">
             <i className="fas fa-eraser" aria-hidden="true" />
           </span>

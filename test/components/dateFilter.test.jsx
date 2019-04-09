@@ -1,5 +1,7 @@
 import React from "react";
 import DateFilter from "components/dateFilter";
+import IntlProvider from "containers/intlProvider";
+import store from "config/store";
 import { shallow } from "enzyme";
 
 describe("components/dateFilter", () => {
@@ -31,7 +33,11 @@ describe("components/dateFilter", () => {
       },
       onDelete: () => undefined,
     };
-    const wrapper = shallow(<DateFilter dateFilter={dateFilter} />);
+    const wrapper = shallow(
+      <IntlProvider store={store}>
+        <DateFilter dateFilter={dateFilter} />
+      </IntlProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
   it("renders DateFilter for selecting a custom time period", () => {
@@ -61,7 +67,11 @@ describe("components/dateFilter", () => {
       },
       onDelete: () => undefined,
     };
-    const wrapper = shallow(<DateFilter dateFilter={dateFilter} />);
+    const wrapper = shallow(
+      <IntlProvider store={store}>
+        <DateFilter dateFilter={dateFilter} />
+      </IntlProvider>,
+    );
     expect(wrapper).toMatchSnapshot();
   });
   it("simulates clicks on buttons", () => {
@@ -93,7 +103,11 @@ describe("components/dateFilter", () => {
       },
       onDelete,
     };
-    const wrapper = shallow(<DateFilter dateFilter={dateFilter} />);
+    const wrapper = shallow(
+      <IntlProvider store={store}>
+        <DateFilter dateFilter={dateFilter} />
+      </IntlProvider>,
+    );
     wrapper.find("#time-period-button").simulate("click");
     expect(onSelectorChange).toHaveBeenCalled();
     wrapper.find("#delete-button").simulate("click");

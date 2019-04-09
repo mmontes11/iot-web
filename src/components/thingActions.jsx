@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FormattedMessage } from "react-intl";
 
 const ThingActions = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => (
   <p className="buttons is-horizontal-center">
@@ -8,7 +9,7 @@ const ThingActions = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => 
         <span className="icon">
           <i className="fas fa-map-marked" />
         </span>
-        <span>Google Maps</span>
+        <FormattedMessage id="Google maps" />
       </a>
     )}
     {thing.supportedObservationTypes.event.length > 0 && (
@@ -17,6 +18,7 @@ const ThingActions = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => 
           <i className="fas fa-chart-bar" />
         </span>
         <span>Event Stats</span>
+        <FormattedMessage id="Event stats" />
       </button>
     )}
     {thing.supportedObservationTypes.measurement.length > 0 && (
@@ -24,7 +26,7 @@ const ThingActions = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => 
         <span className="icon">
           <i className="fas fa-chart-bar" />
         </span>
-        <span>Measurement Stats</span>
+        <FormattedMessage id="Measurement stats" />
       </button>
     )}
   </p>

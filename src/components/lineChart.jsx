@@ -26,17 +26,6 @@ const axisProps = {
   tickLine: false,
 };
 
-const lineProps = (thing, index) => ({
-  key: `${thing}${index}`,
-  name: thing,
-  type: "monotone",
-  strokeWidth: 3,
-  dot: false,
-  isAnimationActive: true,
-  dataKey: item => dataKey(item, thing),
-  stroke: colorForIndex(index),
-});
-
 const LineChart = ({ data, things }) => (
   <ResponsiveContainer>
     <RechartsLineChart data={data}>
@@ -46,7 +35,15 @@ const LineChart = ({ data, things }) => (
       <Tooltip />
       <Legend />
       {things.map((thing, index) => (
-        <Line {...lineProps(thing, index)} />
+        <Line
+          key={thing}
+          name={thing}
+          type="monotone"
+          strokeWidth={3}
+          dot={false}
+          dataKey={item => dataKey(item, thing)}
+          stroke={colorForIndex(index)}
+        />
       ))}
     </RechartsLineChart>
   </ResponsiveContainer>

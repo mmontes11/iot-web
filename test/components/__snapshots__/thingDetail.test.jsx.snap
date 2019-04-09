@@ -21,9 +21,12 @@ exports[`components/thingDetail renders 1`] = `
         <p
           className="title is-6"
         >
-          <strong>
-            IP address:
-          </strong>
+          <FormattedMessage
+            id="IP address:"
+            values={Object {}}
+          >
+            <Component />
+          </FormattedMessage>
            
           <a
             href="http://http://192.168.0.20"
@@ -36,9 +39,12 @@ exports[`components/thingDetail renders 1`] = `
         <p
           className="title is-6"
         >
-          <strong>
-            MQTT topic:
-          </strong>
+          <FormattedMessage
+            id="MQTT topic:"
+            values={Object {}}
+          >
+            <Component />
+          </FormattedMessage>
            
           <span
             className="has-text-info"
@@ -49,9 +55,12 @@ exports[`components/thingDetail renders 1`] = `
         <p
           className="title is-6"
         >
-          <strong>
-            Last observation:
-          </strong>
+          <FormattedMessage
+            id="Last observation:"
+            values={Object {}}
+          >
+            <Component />
+          </FormattedMessage>
            
           <span
             className="has-text-info"

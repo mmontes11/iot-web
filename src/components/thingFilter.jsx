@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Dropdown from "components/dropdown";
 import { THING_FILTER_TYPE } from "constants/filterTypes";
+import { FormattedMessage } from "react-intl";
 
 const ThingFilter = ({ thingFilter }) => (
   <div className="box">
@@ -21,7 +22,7 @@ const ThingFilter = ({ thingFilter }) => (
           onClick={() => thingFilter.onDelete(THING_FILTER_TYPE)}
           tabIndex={0}
         >
-          Delete
+          <FormattedMessage id="Delete" />
         </button>
       </div>
     </div>

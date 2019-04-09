@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import { FormattedMessage } from "react-intl";
 
 const Dropdown = ({
   label,
@@ -26,7 +27,9 @@ const Dropdown = ({
           onClick={() => onButtonClick()}
           disabled={isDisabled}
         >
-          <span>{label}</span>
+          <span>
+            <FormattedMessage id={label} defaultMessage={label} />
+          </span>
           <span className="icon is-small">
             <i className={iconClass} aria-hidden="true" />
           </span>
@@ -46,7 +49,7 @@ const Dropdown = ({
                 role="button"
                 tabIndex={0}
               >
-                {item}
+                <FormattedMessage id={item} defaultMessage={item} />
               </div>
             ))}
         </div>

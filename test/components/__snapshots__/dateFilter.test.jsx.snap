@@ -1,122 +1,274 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/dateFilter renders DateFilter for selecting a custom time period 1`] = `
-<div
-  className="box date-filter"
+<IntlProvider
+  dispatch={[Function]}
+  locale="en"
+  messages={
+    Object {
+      "Custom": "Custom",
+      "Data": "Data",
+      "Delete": "Delete",
+      "Error": "Error",
+      "Event stats": "Event stats",
+      "Events:": "Events:",
+      "Filters": "Filters",
+      "Google maps": "Google maps",
+      "Group by": "Group by",
+      "IP address:": "IP address:",
+      "IoT": "IoT",
+      "Last observation:": "Last observation:",
+      "Login": "Login",
+      "Logout": "Logout",
+      "MQTT topic:": "MQTT topic:",
+      "Measurement stats": "Measurement stats",
+      "Measurements:": "Measurements:",
+      "Password": "Password",
+      "Request failed": "Request failed",
+      "Reset": "Reset",
+      "Select end date": "Select end date",
+      "Select observation": "Select observation",
+      "Select start date": "Select start date",
+      "Select thing": "Select thing",
+      "Select time period": "Select time period",
+      "Select type": "Select type",
+      "Stats": "Stats",
+      "Thing not found": "Thing not found",
+      "Things": "Things",
+      "Time": "Time",
+      "Time period": "Time period",
+      "Username": "Username",
+      "avg": "Average",
+      "avgByHour": "Average by hour",
+      "date": "Date",
+      "day": "Day",
+      "door-closed": "Door closed",
+      "door-opened": "Door opened",
+      "en": "English",
+      "es": "Spanish",
+      "event": "Event",
+      "hour": "Hour",
+      "humidity": "Humidity",
+      "humidity-indoor": "Humidity indoor",
+      "humidity-outdoor": "Humidity outdoor",
+      "max": "Maximum",
+      "maxByHour": "Maximum by hour",
+      "measurement": "Mesasurement",
+      "min": "Minimum",
+      "minByHour": "Minimum by hour",
+      "minute": "Minute",
+      "month": "Month",
+      "second": "Second",
+      "stdDev": "Standard deviation",
+      "stdDevByHour": "Standard deviation by hour",
+      "temperature": "Temperature",
+      "temperature-indoor": "Temperature indoor",
+      "temperature-outdoor": "Temperature outdoor",
+      "thing": "Thing",
+      "total": "Total",
+      "week": "Week",
+      "year": "Year",
+    }
+  }
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "clear": [Function],
+        "get": [Function],
+        "notify": [Function],
+        "subscribe": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "unsubscribe": [Function],
+    }
+  }
 >
-  <div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <DatePicker
-          onChange={[Function]}
-          placeholder="Select start date:"
-          selected={null}
-        />
-      </div>
-    </div>
-    <div
-      className="columns"
-    >
-      <div
-        className="column"
-      >
-        <DatePicker
-          onChange={[Function]}
-          placeholder="Select end date:"
-          selected={null}
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    className="columns"
-  >
-    <div
-      className="column is-10"
-    >
-      <button
-        className="button is-info"
-        id="time-period-button"
-        onClick={[Function]}
-      >
-        Time Period
-      </button>
-    </div>
-    <div
-      className="column is-center"
-    >
-      <button
-        className="delete is-medium"
-        id="delete-button"
-        onClick={[Function]}
-        tabIndex={0}
-      >
-        Delete
-      </button>
-    </div>
-  </div>
-</div>
+  <InjectIntl(DateFilter)
+    dateFilter={
+      Object {
+        "custom": Object {
+          "endDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+          "startDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+        },
+        "onDelete": [Function],
+        "selector": Object {
+          "isCustomSelected": true,
+          "onChange": [Function],
+        },
+        "timePeriod": Object {
+          "isActive": true,
+          "isDisabled": false,
+          "isLoading": false,
+          "items": Array [
+            "foo",
+            "bar",
+          ],
+          "onButtonClick": [Function],
+          "onItemClick": [Function],
+          "selectedItem": null,
+        },
+      }
+    }
+  />
+</IntlProvider>
 `;
 
 exports[`components/dateFilter renders DateFilter for selecting a time period 1`] = `
-<div
-  className="box date-filter"
+<IntlProvider
+  dispatch={[Function]}
+  locale="en"
+  messages={
+    Object {
+      "Custom": "Custom",
+      "Data": "Data",
+      "Delete": "Delete",
+      "Error": "Error",
+      "Event stats": "Event stats",
+      "Events:": "Events:",
+      "Filters": "Filters",
+      "Google maps": "Google maps",
+      "Group by": "Group by",
+      "IP address:": "IP address:",
+      "IoT": "IoT",
+      "Last observation:": "Last observation:",
+      "Login": "Login",
+      "Logout": "Logout",
+      "MQTT topic:": "MQTT topic:",
+      "Measurement stats": "Measurement stats",
+      "Measurements:": "Measurements:",
+      "Password": "Password",
+      "Request failed": "Request failed",
+      "Reset": "Reset",
+      "Select end date": "Select end date",
+      "Select observation": "Select observation",
+      "Select start date": "Select start date",
+      "Select thing": "Select thing",
+      "Select time period": "Select time period",
+      "Select type": "Select type",
+      "Stats": "Stats",
+      "Thing not found": "Thing not found",
+      "Things": "Things",
+      "Time": "Time",
+      "Time period": "Time period",
+      "Username": "Username",
+      "avg": "Average",
+      "avgByHour": "Average by hour",
+      "date": "Date",
+      "day": "Day",
+      "door-closed": "Door closed",
+      "door-opened": "Door opened",
+      "en": "English",
+      "es": "Spanish",
+      "event": "Event",
+      "hour": "Hour",
+      "humidity": "Humidity",
+      "humidity-indoor": "Humidity indoor",
+      "humidity-outdoor": "Humidity outdoor",
+      "max": "Maximum",
+      "maxByHour": "Maximum by hour",
+      "measurement": "Mesasurement",
+      "min": "Minimum",
+      "minByHour": "Minimum by hour",
+      "minute": "Minute",
+      "month": "Month",
+      "second": "Second",
+      "stdDev": "Standard deviation",
+      "stdDevByHour": "Standard deviation by hour",
+      "temperature": "Temperature",
+      "temperature-indoor": "Temperature indoor",
+      "temperature-outdoor": "Temperature outdoor",
+      "thing": "Thing",
+      "total": "Total",
+      "week": "Week",
+      "year": "Year",
+    }
+  }
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "clear": [Function],
+        "get": [Function],
+        "notify": [Function],
+        "subscribe": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "unsubscribe": [Function],
+    }
+  }
 >
-  <div
-    className="columns"
-  >
-    <div
-      className="column"
-    >
-      <Dropdown
-        buttonStyle=""
-        iconStyle="fa-angle-down"
-        isActive={true}
-        isDisabled={false}
-        isLoading={false}
-        items={
-          Array [
+  <InjectIntl(DateFilter)
+    dateFilter={
+      Object {
+        "custom": Object {
+          "endDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+          "startDate": Object {
+            "onChange": [Function],
+            "selected": null,
+          },
+        },
+        "onDelete": [Function],
+        "selector": Object {
+          "isCustomSelected": false,
+          "onChange": [Function],
+        },
+        "timePeriod": Object {
+          "isActive": true,
+          "isDisabled": false,
+          "isLoading": false,
+          "items": Array [
             "foo",
             "bar",
-          ]
-        }
-        label="Select time period:"
-        onButtonClick={[Function]}
-        onItemClick={[Function]}
-        selectedItem={null}
-      />
-    </div>
-  </div>
-  <div
-    className="columns"
-  >
-    <div
-      className="column is-10"
-    >
-      <button
-        className="button is-info"
-        id="time-period-button"
-        onClick={[Function]}
-      >
-        Custom
-      </button>
-    </div>
-    <div
-      className="column is-center"
-    >
-      <button
-        className="delete is-medium"
-        id="delete-button"
-        onClick={[Function]}
-        tabIndex={0}
-      >
-        Delete
-      </button>
-    </div>
-  </div>
-</div>
+          ],
+          "label": "Select time period:",
+          "onButtonClick": [Function],
+          "onItemClick": [Function],
+          "selectedItem": null,
+        },
+      }
+    }
+  />
+</IntlProvider>
 `;
