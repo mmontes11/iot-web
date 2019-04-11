@@ -12,6 +12,7 @@ import {
 } from "recharts";
 import { colorForIndex } from "helpers/chart";
 import { formatDate } from "helpers/date";
+import { injectIntl, intlShape } from "react-intl";
 
 const dataKey = (item, thing) => {
   const data = item.values.find(el => el.thing === thing);
@@ -26,7 +27,7 @@ const axisProps = {
   tickLine: false,
 };
 
-const LineChart = ({ data, things }) => (
+const LineChart = ({ intl: { formatMessage }, data, things }) => (
   <ResponsiveContainer>
     <RechartsLineChart data={data}>
       <XAxis dataKey="phenomenonTime" tickFormatter={item => formatDate(item)} {...axisProps} />
@@ -37,7 +38,7 @@ const LineChart = ({ data, things }) => (
       {things.map((thing, index) => (
         <Line
           key={thing}
-          name={thing}
+          name={formatMessage({ id: thing, defaultMessage: thing })}
           type="monotone"
           strokeWidth={3}
           dot={false}
@@ -50,8 +51,9 @@ const LineChart = ({ data, things }) => (
 );
 
 LineChart.propTypes = {
+  intl: intlShape.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   things: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default LineChart;
+export default injectIntl(LineChart);

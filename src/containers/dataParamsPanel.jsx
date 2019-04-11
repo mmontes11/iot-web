@@ -27,7 +27,7 @@ const DataParamsPanel = ({
     params={[
       {
         key: "type",
-        label: type.selectedItem || "Select type",
+        label: type.selectedItem || "Type",
         items: type.items || [],
         isActive: type.isActive || false,
         isLoading: type.isLoading || false,
@@ -37,7 +37,7 @@ const DataParamsPanel = ({
       },
       {
         key: "observation",
-        label: observation.selectedItem || "Select observation",
+        label: observation.selectedItem || "Observation",
         items: observation.items || [],
         isActive: observation.isActive || false,
         isLoading: observation.isLoading || false,

@@ -17,7 +17,6 @@ const ThingActions = ({ thing, onEventStatsClick, onMeasurementStatsClick }) => 
         <span className="icon">
           <i className="fas fa-chart-bar" />
         </span>
-        <span>Event Stats</span>
         <FormattedMessage id="Event stats" />
       </button>
     )}

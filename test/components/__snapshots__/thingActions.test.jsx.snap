@@ -35,9 +35,6 @@ exports[`components/thingActions renders 1`] = `
         className="fas fa-chart-bar"
       />
     </span>
-    <span>
-      Event Stats
-    </span>
     <FormattedMessage
       id="Event stats"
       values={Object {}}

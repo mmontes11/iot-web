@@ -37,7 +37,7 @@ const FiltersPanelContainer = ({
     }}
     thingFilter={{
       ...thingFilter,
-      label: thingFilter.selectedItem || "Select thing",
+      label: thingFilter.selectedItem || "Thing",
       onButtonClick: () => selectThingFilter(statsType, thingFilter.isActive),
       onItemClick: item => {
         updateThingFilter(item);
@@ -61,7 +61,7 @@ const FiltersPanelContainer = ({
       },
       timePeriod: {
         ...dateFilter.timePeriod,
-        label: dateFilter.timePeriod.selectedItem || "Select time period",
+        label: dateFilter.timePeriod.selectedItem || "Time period",
         onButtonClick: () => selectTimePeriod(dateFilter.timePeriod.isActive),
         onItemClick: item => {
           updateTimePeriod(item);

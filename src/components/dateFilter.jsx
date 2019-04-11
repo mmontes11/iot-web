@@ -28,7 +28,7 @@ const DateFilter = ({ intl: { formatMessage }, dateFilter }) => {
           <div className="columns">
             <div className="column">
               <DatePicker
-                placeholder={formatMessage({ id: "Select start date" })}
+                placeholder={formatMessage({ id: "Start date" })}
                 selected={dateFilter.custom.startDate.selected}
                 onChange={date => dateFilter.custom.startDate.onChange(date)}
               />
@@ -37,7 +37,7 @@ const DateFilter = ({ intl: { formatMessage }, dateFilter }) => {
           <div className="columns">
             <div className="column">
               <DatePicker
-                placeholder={formatMessage({ id: "Select end date" })}
+                placeholder={formatMessage({ id: "End date" })}
                 selected={dateFilter.custom.endDate.selected}
                 onChange={date => dateFilter.custom.endDate.onChange(date)}
               />

@@ -26,7 +26,12 @@ const BarChart = ({ intl: { formatMessage }, data }) => {
         <Tooltip />
         <Legend />
         {barKeys.map((barKey, index) => (
-          <Bar key={barKey} name={formatMessage({ id: barKey })} dataKey={barKey} fill={colorForIndex(index)} />
+          <Bar
+            key={barKey}
+            name={formatMessage({ id: barKey, defaultMessage: barKey })}
+            dataKey={barKey}
+            fill={colorForIndex(index)}
+          />
         ))}
       </RechartsBarChart>
     </ResponsiveContainer>
