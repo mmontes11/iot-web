@@ -11,8 +11,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { colorForIndex } from "helpers/chart";
-import { formatDate } from "helpers/date";
 import { injectIntl, intlShape } from "react-intl";
+import { formatDateTime } from "helpers/date";
 
 const dataKey = (item, thing) => {
   const data = item.values.find(el => el.thing === thing);
@@ -27,13 +27,20 @@ const axisProps = {
   tickLine: false,
 };
 
-const LineChart = ({ intl: { formatMessage }, data, things }) => (
+const LineChart = ({ intl: { formatMessage, formatNumber, formatDate, formatTime }, data, things }) => (
   <ResponsiveContainer>
     <RechartsLineChart data={data}>
-      <XAxis dataKey="phenomenonTime" tickFormatter={item => formatDate(item)} {...axisProps} />
-      <YAxis {...axisProps} />
+      <XAxis
+        dataKey="phenomenonTime"
+        tickFormatter={tick => formatDateTime(tick, formatDate, formatTime)}
+        {...axisProps}
+      />
+      <YAxis {...axisProps} tickFormatter={tick => formatNumber(tick)} />
       <CartesianGrid strokeDasharray="3 3" />
-      <Tooltip />
+      <Tooltip
+        labelFormatter={label => formatDateTime(label, formatDate, formatTime)}
+        formatter={value => formatNumber(value)}
+      />
       <Legend />
       {things.map((thing, index) => (
         <Line

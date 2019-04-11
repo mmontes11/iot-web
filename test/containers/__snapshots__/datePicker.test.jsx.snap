@@ -101,7 +101,7 @@ exports[`components/datePicker renders in initial state 1`] = `
     }
   }
 >
-  <InjectIntl(DatePicker)
+  <Connect(DatePicker)
     onChange={[Function]}
     placeholder="Select date:"
   />

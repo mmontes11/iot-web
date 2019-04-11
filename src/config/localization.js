@@ -1,4 +1,16 @@
+import { addLocaleData } from "react-intl";
+import en from "react-intl/locale-data/en";
+import es from "react-intl/locale-data/es";
+import { registerLocale } from "react-datepicker";
+import localeES from "date-fns/locale/es";
+import localeEN from "date-fns/locale/en-GB";
 import { getLanguage } from "helpers/localStorage";
+
+export const setupLocalization = () => {
+  addLocaleData([...en, ...es]);
+  registerLocale("es", localeES);
+  registerLocale("en", localeEN);
+};
 
 export const supportedLanguages = ["en", "es"];
 

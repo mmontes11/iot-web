@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Dropdown from "components/dropdown";
-import DatePicker from "components/datePicker";
+import DatePicker from "containers/datePicker";
 import { DATE_FILTER_TYPE } from "constants/filterTypes";
 import { injectIntl, intlShape } from "react-intl";
 

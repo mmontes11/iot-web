@@ -13,7 +13,7 @@ import {
 import { colorForIndex } from "helpers/chart";
 import { injectIntl, intlShape } from "react-intl";
 
-const BarChart = ({ intl: { formatMessage }, data }) => {
+const BarChart = ({ intl: { formatMessage, formatNumber }, data }) => {
   const dataElement = data[0];
   const thingKey = "thing";
   const barKeys = Object.keys(dataElement).filter(key => key !== thingKey);
@@ -22,8 +22,8 @@ const BarChart = ({ intl: { formatMessage }, data }) => {
       <RechartsBarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey={thingKey} />
-        <YAxis />
-        <Tooltip />
+        <YAxis tickFormatter={tick => formatNumber(tick)} />
+        <Tooltip formatter={value => formatNumber(value)} />
         <Legend />
         {barKeys.map((barKey, index) => (
           <Bar

@@ -6,11 +6,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "containers/app";
 import store from "config/store";
 import { isAuth } from "actions/auth";
-import { addLocaleData } from "react-intl";
-import en from "react-intl/locale-data/en";
-import es from "react-intl/locale-data/es";
+import { setupLocalization } from "config/localization";
 
-addLocaleData([...en, ...es]);
+setupLocalization();
 
 render(
   <Provider store={store}>

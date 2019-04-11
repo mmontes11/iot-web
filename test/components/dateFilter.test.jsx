@@ -1,4 +1,5 @@
 import React from "react";
+import { Provider } from "react-redux";
 import DateFilter from "components/dateFilter";
 import IntlProvider from "containers/intlProvider";
 import { shallow, mount } from "enzyme";
@@ -34,9 +35,11 @@ describe("components/dateFilter", () => {
       onDelete: () => undefined,
     };
     const wrapper = shallow(
-      <IntlProvider store={defaultStore}>
-        <DateFilter dateFilter={dateFilter} />
-      </IntlProvider>,
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <DateFilter dateFilter={dateFilter} />
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -68,9 +71,11 @@ describe("components/dateFilter", () => {
       onDelete: () => undefined,
     };
     const wrapper = shallow(
-      <IntlProvider store={defaultStore}>
-        <DateFilter dateFilter={dateFilter} />
-      </IntlProvider>,
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <DateFilter dateFilter={dateFilter} />
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -104,9 +109,11 @@ describe("components/dateFilter", () => {
       onDelete,
     };
     const wrapper = mount(
-      <IntlProvider store={defaultStore}>
-        <DateFilter dateFilter={dateFilter} />
-      </IntlProvider>,
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <DateFilter dateFilter={dateFilter} />
+        </IntlProvider>
+      </Provider>,
     );
     wrapper.find("#time-period-button").simulate("click");
     expect(onSelectorChange).toHaveBeenCalled();
