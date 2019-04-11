@@ -5,17 +5,19 @@ import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
 import Things from "containers/things";
-import { initialState, thing } from "../constants";
+import IntlProvider from "containers/intlProvider";
+import { initialState, defaultStore, thing } from "../constants";
 
 describe("containers/things", () => {
   it("renders things in initial state and unmounts", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <Things />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <Things />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
@@ -29,11 +31,13 @@ describe("containers/things", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapperLoading = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <Things />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={store}>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <Things />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapperLoading).toMatchSnapshot();
   });
@@ -48,11 +52,13 @@ describe("containers/things", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <Things />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={store}>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <Things />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -67,11 +73,13 @@ describe("containers/things", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <Things />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={store}>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <Things />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -86,11 +94,13 @@ describe("containers/things", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <Things />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={store}>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <Things />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     wrapper
       .find("ThingItem")

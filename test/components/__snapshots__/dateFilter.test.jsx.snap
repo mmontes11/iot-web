@@ -72,11 +72,12 @@ exports[`components/dateFilter renders DateFilter for selecting a custom time pe
   }
   store={
     Object {
+      "clearActions": [Function],
       "dispatch": [Function],
+      "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
       "subscribe": [Function],
-      Symbol(observable): [Function],
     }
   }
   storeSubscription={
@@ -90,11 +91,12 @@ exports[`components/dateFilter renders DateFilter for selecting a custom time pe
       "onStateChange": [Function],
       "parentSub": undefined,
       "store": Object {
+        "clearActions": [Function],
         "dispatch": [Function],
+        "getActions": [Function],
         "getState": [Function],
         "replaceReducer": [Function],
         "subscribe": [Function],
-        Symbol(observable): [Function],
       },
       "unsubscribe": [Function],
     }
@@ -208,11 +210,12 @@ exports[`components/dateFilter renders DateFilter for selecting a time period 1`
   }
   store={
     Object {
+      "clearActions": [Function],
       "dispatch": [Function],
+      "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
       "subscribe": [Function],
-      Symbol(observable): [Function],
     }
   }
   storeSubscription={
@@ -226,11 +229,12 @@ exports[`components/dateFilter renders DateFilter for selecting a time period 1`
       "onStateChange": [Function],
       "parentSub": undefined,
       "store": Object {
+        "clearActions": [Function],
         "dispatch": [Function],
+        "getActions": [Function],
         "getState": [Function],
         "replaceReducer": [Function],
         "subscribe": [Function],
-        Symbol(observable): [Function],
       },
       "unsubscribe": [Function],
     }

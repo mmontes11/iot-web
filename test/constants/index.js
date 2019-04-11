@@ -1,3 +1,5 @@
+import configureStore from "redux-mock-store";
+import thunk from "redux-thunk";
 import { initialState as app } from "reducers/app";
 import { initialState as request } from "reducers/request";
 import { initialState as auth } from "reducers/auth";
@@ -5,16 +7,20 @@ import { initialState as things } from "reducers/things";
 import { initialState as params } from "reducers/params";
 import { initialState as filters } from "reducers/filters";
 import { initialState as data } from "reducers/data";
+import { initialState as localization } from "reducers/localization";
 
 export const initialState = {
   app,
-  request,
   auth,
+  request,
   things,
   params,
   filters,
   data,
+  localization,
 };
+
+export const defaultStore = configureStore([thunk])(initialState);
 
 export const thing = {
   name: "foo",

@@ -2,7 +2,7 @@ import { getSelectedLanguage, getLanguages, getTranslations } from "config/local
 import { UPDATE_LANGUAGE } from "constants/actionTypes/localization";
 
 const selectedLanguage = getSelectedLanguage();
-const initialState = {
+export const initialState = {
   selectedLanguage,
   languages: getLanguages(selectedLanguage),
   translations: getTranslations(selectedLanguage),

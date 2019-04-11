@@ -6,17 +6,16 @@ import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
 import Charts from "containers/charts";
 import { BARCHART, LINECHART } from "constants/chartTypes";
-import { initialState, statsItem, eventDataItem, measurementDataItem } from "../constants";
+import { initialState, defaultStore, statsItem, eventDataItem, measurementDataItem } from "../constants";
 
 describe("containers/charts", () => {
   it("renders nothing", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
+      <Provider store={defaultStore}>
+        <MemoryRouter initialEntries={["/"]} keyLength={0}>
           <Charts charType="foo" />
-        </Provider>
-      </MemoryRouter>,
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -31,11 +30,11 @@ describe("containers/charts", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/"]} keyLength={0}>
           <Charts charType={BARCHART} />
-        </Provider>
-      </MemoryRouter>,
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -50,11 +49,11 @@ describe("containers/charts", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/"]} keyLength={0}>
           <Charts charType={BARCHART} />
-        </Provider>
-      </MemoryRouter>,
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -69,11 +68,11 @@ describe("containers/charts", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/"]} keyLength={0}>
           <Charts charType={LINECHART} />
-        </Provider>
-      </MemoryRouter>,
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
@@ -88,11 +87,11 @@ describe("containers/charts", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/"]} keyLength={0}>
           <Charts charType={LINECHART} />
-        </Provider>
-      </MemoryRouter>,
+        </MemoryRouter>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });

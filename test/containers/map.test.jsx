@@ -5,31 +5,28 @@ import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import Map from "containers/map";
 import { pointToLatLng } from "helpers/geometry";
-import { initialState, thing } from "../constants/index";
+import { initialState, defaultStore, thing } from "../constants/index";
 
 describe("containers/map", () => {
   it("renders a map", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <Provider store={store}>
+      <Provider store={defaultStore}>
         <Map />
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
   it("renders a map with marker", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <Provider store={store}>
+      <Provider store={defaultStore}>
         <Map marker={{ point: pointToLatLng(thing.geometry) }} />
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
   it("renders a map with label and marker", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <Provider store={store}>
+      <Provider store={defaultStore}>
         <Map marker={{ label: thing.name, point: pointToLatLng(thing.geometry) }} />
       </Provider>,
     );

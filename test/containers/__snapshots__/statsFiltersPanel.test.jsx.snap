@@ -1,53 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`containers/statFiltersPanel renders in in initial state 1`] = `
-<Router
-  history={
-    Object {
-      "action": "POP",
-      "block": [Function],
-      "canGo": [Function],
-      "createHref": [Function],
-      "entries": Array [
-        Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-      ],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "index": 0,
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
-    }
+<MemoryRouter
+  initialEntries={
+    Array [
+      "/",
+    ]
   }
+  keyLength={0}
 >
-  <Provider
-    store={
-      Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      }
-    }
-  >
-    <Connect(Connect(ResetOnUnmount))
-      onFiltersChange={[Function]}
-    />
-  </Provider>
-</Router>
+  <Connect(Connect(ResetOnUnmount))
+    onFiltersChange={[Function]}
+  />
+</MemoryRouter>
 `;

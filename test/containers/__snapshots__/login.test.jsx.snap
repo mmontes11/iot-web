@@ -13,123 +13,411 @@ exports[`containers/login renders login in initial state and unmounts 1`] = `
     }
   }
 >
-  <Connect(Connect(ResetOnUnmount))>
-    <Connect(ResetOnUnmount)
-      isAuth={[Function]}
-      isLoading={false}
-      login={[Function]}
-      logout={[Function]}
-      password={null}
-      setPassword={[Function]}
-      setUsername={[Function]}
-      username={null}
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurements:": "Measurements:",
+          "Password": "Password",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Select end date": "Select end date",
+          "Select observation": "Select observation",
+          "Select start date": "Select start date",
+          "Select thing": "Select thing",
+          "Select time period": "Select time period",
+          "Select type": "Select type",
+          "Stats": "Stats",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
     >
-      <ResetOnUnmount
-        isAuth={[Function]}
-        isLoading={false}
-        login={[Function]}
-        logout={[Function]}
-        password={null}
-        reset={[Function]}
-        setPassword={[Function]}
-        setUsername={[Function]}
-        username={null}
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurements:": "Measurements:",
+            "Password": "Password",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Select end date": "Select end date",
+            "Select observation": "Select observation",
+            "Select start date": "Select start date",
+            "Select thing": "Select thing",
+            "Select time period": "Select time period",
+            "Select type": "Select type",
+            "Stats": "Stats",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
       >
-        <Login
-          isAuth={[Function]}
-          isLoading={false}
-          login={[Function]}
-          logout={[Function]}
-          password={null}
-          reset={[Function]}
-          setPassword={[Function]}
-          setUsername={[Function]}
-          username={null}
-        >
-          <section
-            className="hero is-fullheight"
+        <Connect(Connect(ResetOnUnmount))>
+          <Connect(ResetOnUnmount)
+            isAuth={[Function]}
+            isLoading={false}
+            login={[Function]}
+            logout={[Function]}
+            password={null}
+            setPassword={[Function]}
+            setUsername={[Function]}
+            username={null}
           >
-            <div
-              className="hero-body"
+            <ResetOnUnmount
+              isAuth={[Function]}
+              isLoading={false}
+              login={[Function]}
+              logout={[Function]}
+              password={null}
+              reset={[Function]}
+              setPassword={[Function]}
+              setUsername={[Function]}
+              username={null}
             >
-              <div
-                className="container has-text-centered"
+              <InjectIntl(Login)
+                isAuth={[Function]}
+                isLoading={false}
+                login={[Function]}
+                logout={[Function]}
+                password={null}
+                reset={[Function]}
+                setPassword={[Function]}
+                setUsername={[Function]}
+                username={null}
               >
-                <div
-                  className="column is-4 is-offset-4"
+                <Login
+                  intl={
+                    Object {
+                      "defaultFormats": Object {},
+                      "defaultLocale": "en",
+                      "formatDate": [Function],
+                      "formatHTMLMessage": [Function],
+                      "formatMessage": [Function],
+                      "formatNumber": [Function],
+                      "formatPlural": [Function],
+                      "formatRelative": [Function],
+                      "formatTime": [Function],
+                      "formats": Object {},
+                      "formatters": Object {
+                        "getDateTimeFormat": [Function],
+                        "getMessageFormat": [Function],
+                        "getNumberFormat": [Function],
+                        "getPluralFormat": [Function],
+                        "getRelativeFormat": [Function],
+                      },
+                      "locale": "en",
+                      "messages": Object {
+                        "Custom": "Custom",
+                        "Data": "Data",
+                        "Delete": "Delete",
+                        "Error": "Error",
+                        "Event stats": "Event stats",
+                        "Events:": "Events:",
+                        "Filters": "Filters",
+                        "Google maps": "Google maps",
+                        "Group by": "Group by",
+                        "IP address:": "IP address:",
+                        "IoT": "IoT",
+                        "Last observation:": "Last observation:",
+                        "Login": "Login",
+                        "Logout": "Logout",
+                        "MQTT topic:": "MQTT topic:",
+                        "Measurement stats": "Measurement stats",
+                        "Measurements:": "Measurements:",
+                        "Password": "Password",
+                        "Request failed": "Request failed",
+                        "Reset": "Reset",
+                        "Select end date": "Select end date",
+                        "Select observation": "Select observation",
+                        "Select start date": "Select start date",
+                        "Select thing": "Select thing",
+                        "Select time period": "Select time period",
+                        "Select type": "Select type",
+                        "Stats": "Stats",
+                        "Thing not found": "Thing not found",
+                        "Things": "Things",
+                        "Time": "Time",
+                        "Time period": "Time period",
+                        "Username": "Username",
+                        "avg": "Average",
+                        "avgByHour": "Average by hour",
+                        "date": "Date",
+                        "day": "Day",
+                        "door-closed": "Door closed",
+                        "door-opened": "Door opened",
+                        "en": "English",
+                        "es": "Spanish",
+                        "event": "Event",
+                        "hour": "Hour",
+                        "humidity": "Humidity",
+                        "humidity-indoor": "Humidity indoor",
+                        "humidity-outdoor": "Humidity outdoor",
+                        "max": "Maximum",
+                        "maxByHour": "Maximum by hour",
+                        "measurement": "Mesasurement",
+                        "min": "Minimum",
+                        "minByHour": "Minimum by hour",
+                        "minute": "Minute",
+                        "month": "Month",
+                        "second": "Second",
+                        "stdDev": "Standard deviation",
+                        "stdDevByHour": "Standard deviation by hour",
+                        "temperature": "Temperature",
+                        "temperature-indoor": "Temperature indoor",
+                        "temperature-outdoor": "Temperature outdoor",
+                        "thing": "Thing",
+                        "total": "Total",
+                        "week": "Week",
+                        "year": "Year",
+                      },
+                      "now": [Function],
+                      "onError": [Function],
+                      "textComponent": "span",
+                      "timeZone": null,
+                    }
+                  }
+                  isAuth={[Function]}
+                  isLoading={false}
+                  login={[Function]}
+                  logout={[Function]}
+                  password={null}
+                  reset={[Function]}
+                  setPassword={[Function]}
+                  setUsername={[Function]}
+                  username={null}
                 >
-                  <div
-                    className="box"
+                  <section
+                    className="hero is-fullheight"
                   >
-                    <p
-                      className="title is-1"
+                    <div
+                      className="hero-body"
                     >
-                      IoT
-                    </p>
-                    <form>
                       <div
-                        className="field"
+                        className="container has-text-centered"
                       >
                         <div
-                          className="control has-icons-left"
+                          className="column is-4 is-offset-4"
                         >
-                          <input
-                            className="input is-large"
-                            id="username-input"
-                            onChange={[Function]}
-                            placeholder="Username"
-                            value=""
-                          />
-                          <span
-                            className="icon is-large is-left"
+                          <div
+                            className="box"
                           >
-                            <i
-                              className="fas fa-user"
-                            />
-                          </span>
+                            <p
+                              className="title is-1"
+                            >
+                              IoT
+                            </p>
+                            <form>
+                              <div
+                                className="field"
+                              >
+                                <div
+                                  className="control has-icons-left"
+                                >
+                                  <input
+                                    className="input is-large"
+                                    id="username-input"
+                                    onChange={[Function]}
+                                    placeholder="Username"
+                                    value=""
+                                  />
+                                  <span
+                                    className="icon is-large is-left"
+                                  >
+                                    <i
+                                      className="fas fa-user"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <div
+                                className="field"
+                              >
+                                <div
+                                  className="control has-icons-left"
+                                >
+                                  <input
+                                    className="input is-large"
+                                    id="password-input"
+                                    onChange={[Function]}
+                                    placeholder="Password"
+                                    type="password"
+                                    value=""
+                                  />
+                                  <span
+                                    className="icon is-large is-left"
+                                  >
+                                    <i
+                                      className="fas fa-lock"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <button
+                                className="button is-block is-primary is-large is-fullwidth"
+                                disabled={false}
+                                id="login-button"
+                                onClick={[Function]}
+                              >
+                                Login
+                              </button>
+                            </form>
+                          </div>
                         </div>
                       </div>
-                      <div
-                        className="field"
-                      >
-                        <div
-                          className="control has-icons-left"
-                        >
-                          <input
-                            className="input is-large"
-                            id="password-input"
-                            onChange={[Function]}
-                            placeholder="Password"
-                            type="password"
-                            value=""
-                          />
-                          <span
-                            className="icon is-large is-left"
-                          >
-                            <i
-                              className="fas fa-lock"
-                            />
-                          </span>
-                        </div>
-                      </div>
-                      <button
-                        className="button is-block is-primary is-large is-fullwidth"
-                        disabled={false}
-                        id="login-button"
-                        onClick={[Function]}
-                      >
-                        Login
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </Login>
-      </ResetOnUnmount>
-    </Connect(ResetOnUnmount)>
-  </Connect(Connect(ResetOnUnmount))>
+                    </div>
+                  </section>
+                </Login>
+              </InjectIntl(Login)>
+            </ResetOnUnmount>
+          </Connect(ResetOnUnmount)>
+        </Connect(Connect(ResetOnUnmount))>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
 </Provider>
 `;
 
@@ -146,123 +434,411 @@ exports[`containers/login renders login in loading state 1`] = `
     }
   }
 >
-  <Connect(Connect(ResetOnUnmount))>
-    <Connect(ResetOnUnmount)
-      isAuth={[Function]}
-      isLoading={true}
-      login={[Function]}
-      logout={[Function]}
-      password="password"
-      setPassword={[Function]}
-      setUsername={[Function]}
-      username="username"
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurements:": "Measurements:",
+          "Password": "Password",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Select end date": "Select end date",
+          "Select observation": "Select observation",
+          "Select start date": "Select start date",
+          "Select thing": "Select thing",
+          "Select time period": "Select time period",
+          "Select type": "Select type",
+          "Stats": "Stats",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
     >
-      <ResetOnUnmount
-        isAuth={[Function]}
-        isLoading={true}
-        login={[Function]}
-        logout={[Function]}
-        password="password"
-        reset={[Function]}
-        setPassword={[Function]}
-        setUsername={[Function]}
-        username="username"
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurements:": "Measurements:",
+            "Password": "Password",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Select end date": "Select end date",
+            "Select observation": "Select observation",
+            "Select start date": "Select start date",
+            "Select thing": "Select thing",
+            "Select time period": "Select time period",
+            "Select type": "Select type",
+            "Stats": "Stats",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
       >
-        <Login
-          isAuth={[Function]}
-          isLoading={true}
-          login={[Function]}
-          logout={[Function]}
-          password="password"
-          reset={[Function]}
-          setPassword={[Function]}
-          setUsername={[Function]}
-          username="username"
-        >
-          <section
-            className="hero is-fullheight"
+        <Connect(Connect(ResetOnUnmount))>
+          <Connect(ResetOnUnmount)
+            isAuth={[Function]}
+            isLoading={true}
+            login={[Function]}
+            logout={[Function]}
+            password="password"
+            setPassword={[Function]}
+            setUsername={[Function]}
+            username="username"
           >
-            <div
-              className="hero-body"
+            <ResetOnUnmount
+              isAuth={[Function]}
+              isLoading={true}
+              login={[Function]}
+              logout={[Function]}
+              password="password"
+              reset={[Function]}
+              setPassword={[Function]}
+              setUsername={[Function]}
+              username="username"
             >
-              <div
-                className="container has-text-centered"
+              <InjectIntl(Login)
+                isAuth={[Function]}
+                isLoading={true}
+                login={[Function]}
+                logout={[Function]}
+                password="password"
+                reset={[Function]}
+                setPassword={[Function]}
+                setUsername={[Function]}
+                username="username"
               >
-                <div
-                  className="column is-4 is-offset-4"
+                <Login
+                  intl={
+                    Object {
+                      "defaultFormats": Object {},
+                      "defaultLocale": "en",
+                      "formatDate": [Function],
+                      "formatHTMLMessage": [Function],
+                      "formatMessage": [Function],
+                      "formatNumber": [Function],
+                      "formatPlural": [Function],
+                      "formatRelative": [Function],
+                      "formatTime": [Function],
+                      "formats": Object {},
+                      "formatters": Object {
+                        "getDateTimeFormat": [Function],
+                        "getMessageFormat": [Function],
+                        "getNumberFormat": [Function],
+                        "getPluralFormat": [Function],
+                        "getRelativeFormat": [Function],
+                      },
+                      "locale": "en",
+                      "messages": Object {
+                        "Custom": "Custom",
+                        "Data": "Data",
+                        "Delete": "Delete",
+                        "Error": "Error",
+                        "Event stats": "Event stats",
+                        "Events:": "Events:",
+                        "Filters": "Filters",
+                        "Google maps": "Google maps",
+                        "Group by": "Group by",
+                        "IP address:": "IP address:",
+                        "IoT": "IoT",
+                        "Last observation:": "Last observation:",
+                        "Login": "Login",
+                        "Logout": "Logout",
+                        "MQTT topic:": "MQTT topic:",
+                        "Measurement stats": "Measurement stats",
+                        "Measurements:": "Measurements:",
+                        "Password": "Password",
+                        "Request failed": "Request failed",
+                        "Reset": "Reset",
+                        "Select end date": "Select end date",
+                        "Select observation": "Select observation",
+                        "Select start date": "Select start date",
+                        "Select thing": "Select thing",
+                        "Select time period": "Select time period",
+                        "Select type": "Select type",
+                        "Stats": "Stats",
+                        "Thing not found": "Thing not found",
+                        "Things": "Things",
+                        "Time": "Time",
+                        "Time period": "Time period",
+                        "Username": "Username",
+                        "avg": "Average",
+                        "avgByHour": "Average by hour",
+                        "date": "Date",
+                        "day": "Day",
+                        "door-closed": "Door closed",
+                        "door-opened": "Door opened",
+                        "en": "English",
+                        "es": "Spanish",
+                        "event": "Event",
+                        "hour": "Hour",
+                        "humidity": "Humidity",
+                        "humidity-indoor": "Humidity indoor",
+                        "humidity-outdoor": "Humidity outdoor",
+                        "max": "Maximum",
+                        "maxByHour": "Maximum by hour",
+                        "measurement": "Mesasurement",
+                        "min": "Minimum",
+                        "minByHour": "Minimum by hour",
+                        "minute": "Minute",
+                        "month": "Month",
+                        "second": "Second",
+                        "stdDev": "Standard deviation",
+                        "stdDevByHour": "Standard deviation by hour",
+                        "temperature": "Temperature",
+                        "temperature-indoor": "Temperature indoor",
+                        "temperature-outdoor": "Temperature outdoor",
+                        "thing": "Thing",
+                        "total": "Total",
+                        "week": "Week",
+                        "year": "Year",
+                      },
+                      "now": [Function],
+                      "onError": [Function],
+                      "textComponent": "span",
+                      "timeZone": null,
+                    }
+                  }
+                  isAuth={[Function]}
+                  isLoading={true}
+                  login={[Function]}
+                  logout={[Function]}
+                  password="password"
+                  reset={[Function]}
+                  setPassword={[Function]}
+                  setUsername={[Function]}
+                  username="username"
                 >
-                  <div
-                    className="box"
+                  <section
+                    className="hero is-fullheight"
                   >
-                    <p
-                      className="title is-1"
+                    <div
+                      className="hero-body"
                     >
-                      IoT
-                    </p>
-                    <form>
                       <div
-                        className="field"
+                        className="container has-text-centered"
                       >
                         <div
-                          className="control has-icons-left"
+                          className="column is-4 is-offset-4"
                         >
-                          <input
-                            className="input is-large"
-                            id="username-input"
-                            onChange={[Function]}
-                            placeholder="Username"
-                            value="username"
-                          />
-                          <span
-                            className="icon is-large is-left"
+                          <div
+                            className="box"
                           >
-                            <i
-                              className="fas fa-user"
-                            />
-                          </span>
+                            <p
+                              className="title is-1"
+                            >
+                              IoT
+                            </p>
+                            <form>
+                              <div
+                                className="field"
+                              >
+                                <div
+                                  className="control has-icons-left"
+                                >
+                                  <input
+                                    className="input is-large"
+                                    id="username-input"
+                                    onChange={[Function]}
+                                    placeholder="Username"
+                                    value="username"
+                                  />
+                                  <span
+                                    className="icon is-large is-left"
+                                  >
+                                    <i
+                                      className="fas fa-user"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <div
+                                className="field"
+                              >
+                                <div
+                                  className="control has-icons-left"
+                                >
+                                  <input
+                                    className="input is-large"
+                                    id="password-input"
+                                    onChange={[Function]}
+                                    placeholder="Password"
+                                    type="password"
+                                    value="password"
+                                  />
+                                  <span
+                                    className="icon is-large is-left"
+                                  >
+                                    <i
+                                      className="fas fa-lock"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <button
+                                className="button is-block is-primary is-large is-fullwidth is-loading"
+                                disabled={true}
+                                id="login-button"
+                                onClick={[Function]}
+                              >
+                                Login
+                              </button>
+                            </form>
+                          </div>
                         </div>
                       </div>
-                      <div
-                        className="field"
-                      >
-                        <div
-                          className="control has-icons-left"
-                        >
-                          <input
-                            className="input is-large"
-                            id="password-input"
-                            onChange={[Function]}
-                            placeholder="Password"
-                            type="password"
-                            value="password"
-                          />
-                          <span
-                            className="icon is-large is-left"
-                          >
-                            <i
-                              className="fas fa-lock"
-                            />
-                          </span>
-                        </div>
-                      </div>
-                      <button
-                        className="button is-block is-primary is-large is-fullwidth is-loading"
-                        disabled={true}
-                        id="login-button"
-                        onClick={[Function]}
-                      >
-                        Login
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </Login>
-      </ResetOnUnmount>
-    </Connect(ResetOnUnmount)>
-  </Connect(Connect(ResetOnUnmount))>
+                    </div>
+                  </section>
+                </Login>
+              </InjectIntl(Login)>
+            </ResetOnUnmount>
+          </Connect(ResetOnUnmount)>
+        </Connect(Connect(ResetOnUnmount))>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
 </Provider>
 `;
 
@@ -279,123 +855,411 @@ exports[`containers/login simulates successful login 1`] = `
     }
   }
 >
-  <Connect(Connect(ResetOnUnmount))>
-    <Connect(ResetOnUnmount)
-      isAuth={[Function]}
-      isLoading={false}
-      login={[Function]}
-      logout={[Function]}
-      password={null}
-      setPassword={[Function]}
-      setUsername={[Function]}
-      username={null}
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurements:": "Measurements:",
+          "Password": "Password",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Select end date": "Select end date",
+          "Select observation": "Select observation",
+          "Select start date": "Select start date",
+          "Select thing": "Select thing",
+          "Select time period": "Select time period",
+          "Select type": "Select type",
+          "Stats": "Stats",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
     >
-      <ResetOnUnmount
-        isAuth={[Function]}
-        isLoading={false}
-        login={[Function]}
-        logout={[Function]}
-        password={null}
-        reset={[Function]}
-        setPassword={[Function]}
-        setUsername={[Function]}
-        username={null}
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurements:": "Measurements:",
+            "Password": "Password",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Select end date": "Select end date",
+            "Select observation": "Select observation",
+            "Select start date": "Select start date",
+            "Select thing": "Select thing",
+            "Select time period": "Select time period",
+            "Select type": "Select type",
+            "Stats": "Stats",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
       >
-        <Login
-          isAuth={[Function]}
-          isLoading={false}
-          login={[Function]}
-          logout={[Function]}
-          password={null}
-          reset={[Function]}
-          setPassword={[Function]}
-          setUsername={[Function]}
-          username={null}
-        >
-          <section
-            className="hero is-fullheight"
+        <Connect(Connect(ResetOnUnmount))>
+          <Connect(ResetOnUnmount)
+            isAuth={[Function]}
+            isLoading={false}
+            login={[Function]}
+            logout={[Function]}
+            password={null}
+            setPassword={[Function]}
+            setUsername={[Function]}
+            username={null}
           >
-            <div
-              className="hero-body"
+            <ResetOnUnmount
+              isAuth={[Function]}
+              isLoading={false}
+              login={[Function]}
+              logout={[Function]}
+              password={null}
+              reset={[Function]}
+              setPassword={[Function]}
+              setUsername={[Function]}
+              username={null}
             >
-              <div
-                className="container has-text-centered"
+              <InjectIntl(Login)
+                isAuth={[Function]}
+                isLoading={false}
+                login={[Function]}
+                logout={[Function]}
+                password={null}
+                reset={[Function]}
+                setPassword={[Function]}
+                setUsername={[Function]}
+                username={null}
               >
-                <div
-                  className="column is-4 is-offset-4"
+                <Login
+                  intl={
+                    Object {
+                      "defaultFormats": Object {},
+                      "defaultLocale": "en",
+                      "formatDate": [Function],
+                      "formatHTMLMessage": [Function],
+                      "formatMessage": [Function],
+                      "formatNumber": [Function],
+                      "formatPlural": [Function],
+                      "formatRelative": [Function],
+                      "formatTime": [Function],
+                      "formats": Object {},
+                      "formatters": Object {
+                        "getDateTimeFormat": [Function],
+                        "getMessageFormat": [Function],
+                        "getNumberFormat": [Function],
+                        "getPluralFormat": [Function],
+                        "getRelativeFormat": [Function],
+                      },
+                      "locale": "en",
+                      "messages": Object {
+                        "Custom": "Custom",
+                        "Data": "Data",
+                        "Delete": "Delete",
+                        "Error": "Error",
+                        "Event stats": "Event stats",
+                        "Events:": "Events:",
+                        "Filters": "Filters",
+                        "Google maps": "Google maps",
+                        "Group by": "Group by",
+                        "IP address:": "IP address:",
+                        "IoT": "IoT",
+                        "Last observation:": "Last observation:",
+                        "Login": "Login",
+                        "Logout": "Logout",
+                        "MQTT topic:": "MQTT topic:",
+                        "Measurement stats": "Measurement stats",
+                        "Measurements:": "Measurements:",
+                        "Password": "Password",
+                        "Request failed": "Request failed",
+                        "Reset": "Reset",
+                        "Select end date": "Select end date",
+                        "Select observation": "Select observation",
+                        "Select start date": "Select start date",
+                        "Select thing": "Select thing",
+                        "Select time period": "Select time period",
+                        "Select type": "Select type",
+                        "Stats": "Stats",
+                        "Thing not found": "Thing not found",
+                        "Things": "Things",
+                        "Time": "Time",
+                        "Time period": "Time period",
+                        "Username": "Username",
+                        "avg": "Average",
+                        "avgByHour": "Average by hour",
+                        "date": "Date",
+                        "day": "Day",
+                        "door-closed": "Door closed",
+                        "door-opened": "Door opened",
+                        "en": "English",
+                        "es": "Spanish",
+                        "event": "Event",
+                        "hour": "Hour",
+                        "humidity": "Humidity",
+                        "humidity-indoor": "Humidity indoor",
+                        "humidity-outdoor": "Humidity outdoor",
+                        "max": "Maximum",
+                        "maxByHour": "Maximum by hour",
+                        "measurement": "Mesasurement",
+                        "min": "Minimum",
+                        "minByHour": "Minimum by hour",
+                        "minute": "Minute",
+                        "month": "Month",
+                        "second": "Second",
+                        "stdDev": "Standard deviation",
+                        "stdDevByHour": "Standard deviation by hour",
+                        "temperature": "Temperature",
+                        "temperature-indoor": "Temperature indoor",
+                        "temperature-outdoor": "Temperature outdoor",
+                        "thing": "Thing",
+                        "total": "Total",
+                        "week": "Week",
+                        "year": "Year",
+                      },
+                      "now": [Function],
+                      "onError": [Function],
+                      "textComponent": "span",
+                      "timeZone": null,
+                    }
+                  }
+                  isAuth={[Function]}
+                  isLoading={false}
+                  login={[Function]}
+                  logout={[Function]}
+                  password={null}
+                  reset={[Function]}
+                  setPassword={[Function]}
+                  setUsername={[Function]}
+                  username={null}
                 >
-                  <div
-                    className="box"
+                  <section
+                    className="hero is-fullheight"
                   >
-                    <p
-                      className="title is-1"
+                    <div
+                      className="hero-body"
                     >
-                      IoT
-                    </p>
-                    <form>
                       <div
-                        className="field"
+                        className="container has-text-centered"
                       >
                         <div
-                          className="control has-icons-left"
+                          className="column is-4 is-offset-4"
                         >
-                          <input
-                            className="input is-large"
-                            id="username-input"
-                            onChange={[Function]}
-                            placeholder="Username"
-                            value=""
-                          />
-                          <span
-                            className="icon is-large is-left"
+                          <div
+                            className="box"
                           >
-                            <i
-                              className="fas fa-user"
-                            />
-                          </span>
+                            <p
+                              className="title is-1"
+                            >
+                              IoT
+                            </p>
+                            <form>
+                              <div
+                                className="field"
+                              >
+                                <div
+                                  className="control has-icons-left"
+                                >
+                                  <input
+                                    className="input is-large"
+                                    id="username-input"
+                                    onChange={[Function]}
+                                    placeholder="Username"
+                                    value=""
+                                  />
+                                  <span
+                                    className="icon is-large is-left"
+                                  >
+                                    <i
+                                      className="fas fa-user"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <div
+                                className="field"
+                              >
+                                <div
+                                  className="control has-icons-left"
+                                >
+                                  <input
+                                    className="input is-large"
+                                    id="password-input"
+                                    onChange={[Function]}
+                                    placeholder="Password"
+                                    type="password"
+                                    value=""
+                                  />
+                                  <span
+                                    className="icon is-large is-left"
+                                  >
+                                    <i
+                                      className="fas fa-lock"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <button
+                                className="button is-block is-primary is-large is-fullwidth"
+                                disabled={false}
+                                id="login-button"
+                                onClick={[Function]}
+                              >
+                                Login
+                              </button>
+                            </form>
+                          </div>
                         </div>
                       </div>
-                      <div
-                        className="field"
-                      >
-                        <div
-                          className="control has-icons-left"
-                        >
-                          <input
-                            className="input is-large"
-                            id="password-input"
-                            onChange={[Function]}
-                            placeholder="Password"
-                            type="password"
-                            value=""
-                          />
-                          <span
-                            className="icon is-large is-left"
-                          >
-                            <i
-                              className="fas fa-lock"
-                            />
-                          </span>
-                        </div>
-                      </div>
-                      <button
-                        className="button is-block is-primary is-large is-fullwidth"
-                        disabled={false}
-                        id="login-button"
-                        onClick={[Function]}
-                      >
-                        Login
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </Login>
-      </ResetOnUnmount>
-    </Connect(ResetOnUnmount)>
-  </Connect(Connect(ResetOnUnmount))>
+                    </div>
+                  </section>
+                </Login>
+              </InjectIntl(Login)>
+            </ResetOnUnmount>
+          </Connect(ResetOnUnmount)>
+        </Connect(Connect(ResetOnUnmount))>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
 </Provider>
 `;
 
@@ -448,6 +1312,77 @@ Object {
       ],
     },
   },
+  "localization": Object {
+    "languages": Array [
+      "en",
+      "es",
+    ],
+    "selectedLanguage": "en",
+    "translations": Object {
+      "Custom": "Custom",
+      "Data": "Data",
+      "Delete": "Delete",
+      "Error": "Error",
+      "Event stats": "Event stats",
+      "Events:": "Events:",
+      "Filters": "Filters",
+      "Google maps": "Google maps",
+      "Group by": "Group by",
+      "IP address:": "IP address:",
+      "IoT": "IoT",
+      "Last observation:": "Last observation:",
+      "Login": "Login",
+      "Logout": "Logout",
+      "MQTT topic:": "MQTT topic:",
+      "Measurement stats": "Measurement stats",
+      "Measurements:": "Measurements:",
+      "Password": "Password",
+      "Request failed": "Request failed",
+      "Reset": "Reset",
+      "Select end date": "Select end date",
+      "Select observation": "Select observation",
+      "Select start date": "Select start date",
+      "Select thing": "Select thing",
+      "Select time period": "Select time period",
+      "Select type": "Select type",
+      "Stats": "Stats",
+      "Thing not found": "Thing not found",
+      "Things": "Things",
+      "Time": "Time",
+      "Time period": "Time period",
+      "Username": "Username",
+      "avg": "Average",
+      "avgByHour": "Average by hour",
+      "date": "Date",
+      "day": "Day",
+      "door-closed": "Door closed",
+      "door-opened": "Door opened",
+      "en": "English",
+      "es": "Spanish",
+      "event": "Event",
+      "hour": "Hour",
+      "humidity": "Humidity",
+      "humidity-indoor": "Humidity indoor",
+      "humidity-outdoor": "Humidity outdoor",
+      "max": "Maximum",
+      "maxByHour": "Maximum by hour",
+      "measurement": "Mesasurement",
+      "min": "Minimum",
+      "minByHour": "Minimum by hour",
+      "minute": "Minute",
+      "month": "Month",
+      "second": "Second",
+      "stdDev": "Standard deviation",
+      "stdDevByHour": "Standard deviation by hour",
+      "temperature": "Temperature",
+      "temperature-indoor": "Temperature indoor",
+      "temperature-outdoor": "Temperature outdoor",
+      "thing": "Thing",
+      "total": "Total",
+      "week": "Week",
+      "year": "Year",
+    },
+  },
   "params": Object {
     "allIds": Array [],
     "byId": Object {},
@@ -479,122 +1414,410 @@ exports[`containers/login simulates successful login 3`] = `
     }
   }
 >
-  <Connect(Connect(ResetOnUnmount))>
-    <Connect(ResetOnUnmount)
-      isAuth={[Function]}
-      isLoading={false}
-      login={[Function]}
-      logout={[Function]}
-      password={null}
-      setPassword={[Function]}
-      setUsername={[Function]}
-      username={null}
+  <Connect(IntlProvider)
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  >
+    <IntlProvider
+      dispatch={[Function]}
+      locale="en"
+      messages={
+        Object {
+          "Custom": "Custom",
+          "Data": "Data",
+          "Delete": "Delete",
+          "Error": "Error",
+          "Event stats": "Event stats",
+          "Events:": "Events:",
+          "Filters": "Filters",
+          "Google maps": "Google maps",
+          "Group by": "Group by",
+          "IP address:": "IP address:",
+          "IoT": "IoT",
+          "Last observation:": "Last observation:",
+          "Login": "Login",
+          "Logout": "Logout",
+          "MQTT topic:": "MQTT topic:",
+          "Measurement stats": "Measurement stats",
+          "Measurements:": "Measurements:",
+          "Password": "Password",
+          "Request failed": "Request failed",
+          "Reset": "Reset",
+          "Select end date": "Select end date",
+          "Select observation": "Select observation",
+          "Select start date": "Select start date",
+          "Select thing": "Select thing",
+          "Select time period": "Select time period",
+          "Select type": "Select type",
+          "Stats": "Stats",
+          "Thing not found": "Thing not found",
+          "Things": "Things",
+          "Time": "Time",
+          "Time period": "Time period",
+          "Username": "Username",
+          "avg": "Average",
+          "avgByHour": "Average by hour",
+          "date": "Date",
+          "day": "Day",
+          "door-closed": "Door closed",
+          "door-opened": "Door opened",
+          "en": "English",
+          "es": "Spanish",
+          "event": "Event",
+          "hour": "Hour",
+          "humidity": "Humidity",
+          "humidity-indoor": "Humidity indoor",
+          "humidity-outdoor": "Humidity outdoor",
+          "max": "Maximum",
+          "maxByHour": "Maximum by hour",
+          "measurement": "Mesasurement",
+          "min": "Minimum",
+          "minByHour": "Minimum by hour",
+          "minute": "Minute",
+          "month": "Month",
+          "second": "Second",
+          "stdDev": "Standard deviation",
+          "stdDevByHour": "Standard deviation by hour",
+          "temperature": "Temperature",
+          "temperature-indoor": "Temperature indoor",
+          "temperature-outdoor": "Temperature outdoor",
+          "thing": "Thing",
+          "total": "Total",
+          "week": "Week",
+          "year": "Year",
+        }
+      }
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      storeSubscription={
+        Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "unsubscribe": [Function],
+        }
+      }
     >
-      <ResetOnUnmount
-        isAuth={[Function]}
-        isLoading={false}
-        login={[Function]}
-        logout={[Function]}
-        password={null}
-        reset={[Function]}
-        setPassword={[Function]}
-        setUsername={[Function]}
-        username={null}
+      <IntlProvider
+        key="en"
+        locale="en"
+        messages={
+          Object {
+            "Custom": "Custom",
+            "Data": "Data",
+            "Delete": "Delete",
+            "Error": "Error",
+            "Event stats": "Event stats",
+            "Events:": "Events:",
+            "Filters": "Filters",
+            "Google maps": "Google maps",
+            "Group by": "Group by",
+            "IP address:": "IP address:",
+            "IoT": "IoT",
+            "Last observation:": "Last observation:",
+            "Login": "Login",
+            "Logout": "Logout",
+            "MQTT topic:": "MQTT topic:",
+            "Measurement stats": "Measurement stats",
+            "Measurements:": "Measurements:",
+            "Password": "Password",
+            "Request failed": "Request failed",
+            "Reset": "Reset",
+            "Select end date": "Select end date",
+            "Select observation": "Select observation",
+            "Select start date": "Select start date",
+            "Select thing": "Select thing",
+            "Select time period": "Select time period",
+            "Select type": "Select type",
+            "Stats": "Stats",
+            "Thing not found": "Thing not found",
+            "Things": "Things",
+            "Time": "Time",
+            "Time period": "Time period",
+            "Username": "Username",
+            "avg": "Average",
+            "avgByHour": "Average by hour",
+            "date": "Date",
+            "day": "Day",
+            "door-closed": "Door closed",
+            "door-opened": "Door opened",
+            "en": "English",
+            "es": "Spanish",
+            "event": "Event",
+            "hour": "Hour",
+            "humidity": "Humidity",
+            "humidity-indoor": "Humidity indoor",
+            "humidity-outdoor": "Humidity outdoor",
+            "max": "Maximum",
+            "maxByHour": "Maximum by hour",
+            "measurement": "Mesasurement",
+            "min": "Minimum",
+            "minByHour": "Minimum by hour",
+            "minute": "Minute",
+            "month": "Month",
+            "second": "Second",
+            "stdDev": "Standard deviation",
+            "stdDevByHour": "Standard deviation by hour",
+            "temperature": "Temperature",
+            "temperature-indoor": "Temperature indoor",
+            "temperature-outdoor": "Temperature outdoor",
+            "thing": "Thing",
+            "total": "Total",
+            "week": "Week",
+            "year": "Year",
+          }
+        }
       >
-        <Login
-          isAuth={[Function]}
-          isLoading={false}
-          login={[Function]}
-          logout={[Function]}
-          password={null}
-          reset={[Function]}
-          setPassword={[Function]}
-          setUsername={[Function]}
-          username={null}
-        >
-          <section
-            className="hero is-fullheight"
+        <Connect(Connect(ResetOnUnmount))>
+          <Connect(ResetOnUnmount)
+            isAuth={[Function]}
+            isLoading={false}
+            login={[Function]}
+            logout={[Function]}
+            password={null}
+            setPassword={[Function]}
+            setUsername={[Function]}
+            username={null}
           >
-            <div
-              className="hero-body"
+            <ResetOnUnmount
+              isAuth={[Function]}
+              isLoading={false}
+              login={[Function]}
+              logout={[Function]}
+              password={null}
+              reset={[Function]}
+              setPassword={[Function]}
+              setUsername={[Function]}
+              username={null}
             >
-              <div
-                className="container has-text-centered"
+              <InjectIntl(Login)
+                isAuth={[Function]}
+                isLoading={false}
+                login={[Function]}
+                logout={[Function]}
+                password={null}
+                reset={[Function]}
+                setPassword={[Function]}
+                setUsername={[Function]}
+                username={null}
               >
-                <div
-                  className="column is-4 is-offset-4"
+                <Login
+                  intl={
+                    Object {
+                      "defaultFormats": Object {},
+                      "defaultLocale": "en",
+                      "formatDate": [Function],
+                      "formatHTMLMessage": [Function],
+                      "formatMessage": [Function],
+                      "formatNumber": [Function],
+                      "formatPlural": [Function],
+                      "formatRelative": [Function],
+                      "formatTime": [Function],
+                      "formats": Object {},
+                      "formatters": Object {
+                        "getDateTimeFormat": [Function],
+                        "getMessageFormat": [Function],
+                        "getNumberFormat": [Function],
+                        "getPluralFormat": [Function],
+                        "getRelativeFormat": [Function],
+                      },
+                      "locale": "en",
+                      "messages": Object {
+                        "Custom": "Custom",
+                        "Data": "Data",
+                        "Delete": "Delete",
+                        "Error": "Error",
+                        "Event stats": "Event stats",
+                        "Events:": "Events:",
+                        "Filters": "Filters",
+                        "Google maps": "Google maps",
+                        "Group by": "Group by",
+                        "IP address:": "IP address:",
+                        "IoT": "IoT",
+                        "Last observation:": "Last observation:",
+                        "Login": "Login",
+                        "Logout": "Logout",
+                        "MQTT topic:": "MQTT topic:",
+                        "Measurement stats": "Measurement stats",
+                        "Measurements:": "Measurements:",
+                        "Password": "Password",
+                        "Request failed": "Request failed",
+                        "Reset": "Reset",
+                        "Select end date": "Select end date",
+                        "Select observation": "Select observation",
+                        "Select start date": "Select start date",
+                        "Select thing": "Select thing",
+                        "Select time period": "Select time period",
+                        "Select type": "Select type",
+                        "Stats": "Stats",
+                        "Thing not found": "Thing not found",
+                        "Things": "Things",
+                        "Time": "Time",
+                        "Time period": "Time period",
+                        "Username": "Username",
+                        "avg": "Average",
+                        "avgByHour": "Average by hour",
+                        "date": "Date",
+                        "day": "Day",
+                        "door-closed": "Door closed",
+                        "door-opened": "Door opened",
+                        "en": "English",
+                        "es": "Spanish",
+                        "event": "Event",
+                        "hour": "Hour",
+                        "humidity": "Humidity",
+                        "humidity-indoor": "Humidity indoor",
+                        "humidity-outdoor": "Humidity outdoor",
+                        "max": "Maximum",
+                        "maxByHour": "Maximum by hour",
+                        "measurement": "Mesasurement",
+                        "min": "Minimum",
+                        "minByHour": "Minimum by hour",
+                        "minute": "Minute",
+                        "month": "Month",
+                        "second": "Second",
+                        "stdDev": "Standard deviation",
+                        "stdDevByHour": "Standard deviation by hour",
+                        "temperature": "Temperature",
+                        "temperature-indoor": "Temperature indoor",
+                        "temperature-outdoor": "Temperature outdoor",
+                        "thing": "Thing",
+                        "total": "Total",
+                        "week": "Week",
+                        "year": "Year",
+                      },
+                      "now": [Function],
+                      "onError": [Function],
+                      "textComponent": "span",
+                      "timeZone": null,
+                    }
+                  }
+                  isAuth={[Function]}
+                  isLoading={false}
+                  login={[Function]}
+                  logout={[Function]}
+                  password={null}
+                  reset={[Function]}
+                  setPassword={[Function]}
+                  setUsername={[Function]}
+                  username={null}
                 >
-                  <div
-                    className="box"
+                  <section
+                    className="hero is-fullheight"
                   >
-                    <p
-                      className="title is-1"
+                    <div
+                      className="hero-body"
                     >
-                      IoT
-                    </p>
-                    <form>
                       <div
-                        className="field"
+                        className="container has-text-centered"
                       >
                         <div
-                          className="control has-icons-left"
+                          className="column is-4 is-offset-4"
                         >
-                          <input
-                            className="input is-large"
-                            id="username-input"
-                            onChange={[Function]}
-                            placeholder="Username"
-                            value=""
-                          />
-                          <span
-                            className="icon is-large is-left"
+                          <div
+                            className="box"
                           >
-                            <i
-                              className="fas fa-user"
-                            />
-                          </span>
+                            <p
+                              className="title is-1"
+                            >
+                              IoT
+                            </p>
+                            <form>
+                              <div
+                                className="field"
+                              >
+                                <div
+                                  className="control has-icons-left"
+                                >
+                                  <input
+                                    className="input is-large"
+                                    id="username-input"
+                                    onChange={[Function]}
+                                    placeholder="Username"
+                                    value=""
+                                  />
+                                  <span
+                                    className="icon is-large is-left"
+                                  >
+                                    <i
+                                      className="fas fa-user"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <div
+                                className="field"
+                              >
+                                <div
+                                  className="control has-icons-left"
+                                >
+                                  <input
+                                    className="input is-large"
+                                    id="password-input"
+                                    onChange={[Function]}
+                                    placeholder="Password"
+                                    type="password"
+                                    value=""
+                                  />
+                                  <span
+                                    className="icon is-large is-left"
+                                  >
+                                    <i
+                                      className="fas fa-lock"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <button
+                                className="button is-block is-primary is-large is-fullwidth"
+                                disabled={false}
+                                id="login-button"
+                                onClick={[Function]}
+                              >
+                                Login
+                              </button>
+                            </form>
+                          </div>
                         </div>
                       </div>
-                      <div
-                        className="field"
-                      >
-                        <div
-                          className="control has-icons-left"
-                        >
-                          <input
-                            className="input is-large"
-                            id="password-input"
-                            onChange={[Function]}
-                            placeholder="Password"
-                            type="password"
-                            value=""
-                          />
-                          <span
-                            className="icon is-large is-left"
-                          >
-                            <i
-                              className="fas fa-lock"
-                            />
-                          </span>
-                        </div>
-                      </div>
-                      <button
-                        className="button is-block is-primary is-large is-fullwidth"
-                        disabled={false}
-                        id="login-button"
-                        onClick={[Function]}
-                      >
-                        Login
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </Login>
-      </ResetOnUnmount>
-    </Connect(ResetOnUnmount)>
-  </Connect(Connect(ResetOnUnmount))>
+                    </div>
+                  </section>
+                </Login>
+              </InjectIntl(Login)>
+            </ResetOnUnmount>
+          </Connect(ResetOnUnmount)>
+        </Connect(Connect(ResetOnUnmount))>
+      </IntlProvider>
+    </IntlProvider>
+  </Connect(IntlProvider)>
 </Provider>
 `;

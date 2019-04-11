@@ -1,13 +1,13 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import Dropdown from "components/dropdown";
 import IntlProvider from "containers/intlProvider";
-import store from "config/store";
+import { defaultStore } from "../constants";
 
 describe("components/dropdown", () => {
   it("renders in initial state", () => {
-    const wrapper = shallow(
-      <IntlProvider store={store}>
+    const wrapper = mount(
+      <IntlProvider store={defaultStore}>
         <Dropdown
           label="Select item"
           items={["foo", "bar"]}
@@ -22,8 +22,8 @@ describe("components/dropdown", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("renders in active state", () => {
-    const wrapper = shallow(
-      <IntlProvider store={store}>
+    const wrapper = mount(
+      <IntlProvider store={defaultStore}>
         <Dropdown
           label="Select item"
           items={["foo", "bar"]}
@@ -39,8 +39,8 @@ describe("components/dropdown", () => {
     expect(wrapper.find(".dropdown").hasClass("is-active")).toBeTruthy();
   });
   it("renders in loading state", () => {
-    const wrapper = shallow(
-      <IntlProvider store={store}>
+    const wrapper = mount(
+      <IntlProvider store={defaultStore}>
         <Dropdown
           label="Select item"
           items={["foo", "bar"]}
@@ -56,8 +56,8 @@ describe("components/dropdown", () => {
     expect(wrapper.find(".button").hasClass("is-loading")).toBeTruthy();
   });
   it("renders in disabled state", () => {
-    const wrapper = shallow(
-      <IntlProvider store={store}>
+    const wrapper = mount(
+      <IntlProvider store={defaultStore}>
         <Dropdown
           label="Select item"
           items={["foo", "bar"]}
@@ -74,8 +74,8 @@ describe("components/dropdown", () => {
   });
   it("simulates a click in button", () => {
     const onButtonClick = jest.fn();
-    const wrapper = shallow(
-      <IntlProvider store={store}>
+    const wrapper = mount(
+      <IntlProvider store={defaultStore}>
         <Dropdown
           label="Select item"
           items={["foo", "bar"]}
@@ -92,8 +92,8 @@ describe("components/dropdown", () => {
   });
   it("simulates a click in an item", () => {
     const onClick = jest.fn();
-    const wrapper = shallow(
-      <IntlProvider store={store}>
+    const wrapper = mount(
+      <IntlProvider store={defaultStore}>
         <Dropdown
           label="Select item"
           items={["foo", "bar"]}

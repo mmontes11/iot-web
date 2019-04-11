@@ -1,8 +1,8 @@
 import React from "react";
 import DateFilter from "components/dateFilter";
 import IntlProvider from "containers/intlProvider";
-import store from "config/store";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
+import { defaultStore } from "../constants";
 
 describe("components/dateFilter", () => {
   it("renders DateFilter for selecting a time period", () => {
@@ -34,7 +34,7 @@ describe("components/dateFilter", () => {
       onDelete: () => undefined,
     };
     const wrapper = shallow(
-      <IntlProvider store={store}>
+      <IntlProvider store={defaultStore}>
         <DateFilter dateFilter={dateFilter} />
       </IntlProvider>,
     );
@@ -68,7 +68,7 @@ describe("components/dateFilter", () => {
       onDelete: () => undefined,
     };
     const wrapper = shallow(
-      <IntlProvider store={store}>
+      <IntlProvider store={defaultStore}>
         <DateFilter dateFilter={dateFilter} />
       </IntlProvider>,
     );
@@ -103,8 +103,8 @@ describe("components/dateFilter", () => {
       },
       onDelete,
     };
-    const wrapper = shallow(
-      <IntlProvider store={store}>
+    const wrapper = mount(
+      <IntlProvider store={defaultStore}>
         <DateFilter dateFilter={dateFilter} />
       </IntlProvider>,
     );
