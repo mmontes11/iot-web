@@ -9,7 +9,7 @@ exports[`containers/statsParamsPanel renders in initial state 1`] = `
   }
   keyLength={0}
 >
-  <Connect(Connect(ResetOnUnmount))
+  <Connect(StatsParamsPanel)
     onParamsSelected={[Function]}
     onReset={[Function]}
   />
@@ -25,7 +25,7 @@ exports[`containers/statsParamsPanel renders when TYPE is selected 1`] = `
   }
   keyLength={0}
 >
-  <Connect(Connect(ResetOnUnmount))
+  <Connect(StatsParamsPanel)
     onParamsSelected={[Function]}
     onReset={[Function]}
   />
@@ -41,7 +41,7 @@ exports[`containers/statsParamsPanel renders when loading TYPE 1`] = `
   }
   keyLength={0}
 >
-  <Connect(Connect(ResetOnUnmount))
+  <Connect(StatsParamsPanel)
     onParamsSelected={[Function]}
     onReset={[Function]}
   />

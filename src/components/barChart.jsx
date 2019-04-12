@@ -14,6 +14,9 @@ import { colorForIndex } from "helpers/chart";
 import { injectIntl, intlShape } from "react-intl";
 
 const BarChart = ({ intl: { formatMessage, formatNumber }, data }) => {
+  if (data === null || data.length === 0) {
+    return null;
+  }
   const dataElement = data[0];
   const thingKey = "thing";
   const barKeys = Object.keys(dataElement).filter(key => key !== thingKey);
@@ -40,7 +43,11 @@ const BarChart = ({ intl: { formatMessage, formatNumber }, data }) => {
 
 BarChart.propTypes = {
   intl: intlShape.isRequired,
-  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+BarChart.defaultProps = {
+  data: null,
 };
 
 export default injectIntl(BarChart);

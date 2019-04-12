@@ -1,7 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
-import { compose } from "recompose";
 import PropTypes from "prop-types";
 import FiltersPanel from "components/filtersPanel";
 import * as filterActions from "actions/filters";
@@ -146,7 +144,4 @@ const withConnect = connect(
   { ...filterActions, ...thingFilterActions, ...dateFilterActions },
 );
 
-export default compose(
-  withConnect,
-  withResetOnUnmount,
-)(FiltersPanelContainer);
+export default withConnect(FiltersPanelContainer);

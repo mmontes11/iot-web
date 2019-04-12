@@ -234,166 +234,32 @@ exports[`containers/stats renders stats 1`] = `
               }
             }
           >
-            <withRouter(Connect(DataParams))>
-              <Route>
-                <Connect(DataParams)
-                  history={
-                    Object {
-                      "action": "POP",
-                      "block": [Function],
-                      "canGo": [Function],
-                      "createHref": [Function],
-                      "entries": Array [
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                      ],
-                      "go": [Function],
-                      "goBack": [Function],
-                      "goForward": [Function],
-                      "index": 0,
-                      "length": 1,
-                      "listen": [Function],
-                      "location": Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      },
-                      "push": [Function],
-                      "replace": [Function],
-                    }
-                  }
-                  location={
-                    Object {
-                      "hash": "",
-                      "pathname": "/",
-                      "search": "",
-                      "state": undefined,
-                    }
-                  }
-                  match={
-                    Object {
-                      "isExact": true,
-                      "params": Object {},
-                      "path": "/",
-                      "url": "/",
-                    }
-                  }
+            <Connect(Connect(ResetOnUnmount))>
+              <Connect(ResetOnUnmount)
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
+                hasError={false}
+                updateParams={[Function]}
+              >
+                <ResetOnUnmount
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
+                  hasError={false}
+                  reset={[Function]}
+                  updateParams={[Function]}
                 >
-                  <DataParams
+                  <withRouter(DataParams)
                     addCustomTimePeriodFilter={[Function]}
                     addThingFilter={[Function]}
                     addTimePeriodFilter={[Function]}
                     hasError={false}
-                    history={
-                      Object {
-                        "action": "POP",
-                        "block": [Function],
-                        "canGo": [Function],
-                        "createHref": [Function],
-                        "entries": Array [
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                        ],
-                        "go": [Function],
-                        "goBack": [Function],
-                        "goForward": [Function],
-                        "index": 0,
-                        "length": 1,
-                        "listen": [Function],
-                        "location": Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                        "push": [Function],
-                        "replace": [Function],
-                      }
-                    }
-                    location={
-                      Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      }
-                    }
-                    match={
-                      Object {
-                        "isExact": true,
-                        "params": Object {},
-                        "path": "/",
-                        "url": "/",
-                      }
-                    }
+                    reset={[Function]}
                     updateParams={[Function]}
                   >
-                    <Connect(ResetOnUnmount)
-                      addCustomTimePeriodFilter={[Function]}
-                      addThingFilter={[Function]}
-                      addTimePeriodFilter={[Function]}
-                      hasError={false}
-                      history={
-                        Object {
-                          "action": "POP",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      location={
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        }
-                      }
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/",
-                          "url": "/",
-                        }
-                      }
-                      onFiltersSelected={[Function]}
-                      onParamsSelected={[Function]}
-                      onReset={[Function]}
-                      updateParams={[Function]}
-                    >
-                      <ResetOnUnmount
+                    <Route>
+                      <DataParams
                         addCustomTimePeriodFilter={[Function]}
                         addThingFilter={[Function]}
                         addTimePeriodFilter={[Function]}
@@ -444,9 +310,6 @@ exports[`containers/stats renders stats 1`] = `
                             "url": "/",
                           }
                         }
-                        onFiltersSelected={[Function]}
-                        onParamsSelected={[Function]}
-                        onReset={[Function]}
                         reset={[Function]}
                         updateParams={[Function]}
                       >
@@ -516,11 +379,11 @@ exports[`containers/stats renders stats 1`] = `
                               <div
                                 className="column is-three-quarters"
                               >
-                                <Connect(Connect(ResetOnUnmount))
+                                <Connect(StatsParamsPanel)
                                   onParamsSelected={[Function]}
                                   onReset={[Function]}
                                 >
-                                  <Connect(ResetOnUnmount)
+                                  <StatsParamsPanel
                                     isResetDisabled={true}
                                     observation={Object {}}
                                     onParamsSelected={[Function]}
@@ -534,229 +397,197 @@ exports[`containers/stats renders stats 1`] = `
                                     updateParams={[Function]}
                                     updateType={[Function]}
                                   >
-                                    <ResetOnUnmount
-                                      isResetDisabled={true}
-                                      observation={Object {}}
-                                      onParamsSelected={[Function]}
-                                      onReset={[Function]}
-                                      reset={[Function]}
-                                      selectGroupBy={[Function]}
-                                      selectObservation={[Function]}
-                                      selectType={[Function]}
-                                      type={Object {}}
-                                      updateGroupBy={[Function]}
-                                      updateObservation={[Function]}
-                                      updateParams={[Function]}
-                                      updateType={[Function]}
+                                    <ParamsPanel
+                                      params={
+                                        Array [
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "type",
+                                            "label": "Type",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": true,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "observation",
+                                            "label": "Observation",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                        ]
+                                      }
+                                      reset={
+                                        Object {
+                                          "isDisabled": true,
+                                          "onReset": [Function],
+                                        }
+                                      }
                                     >
-                                      <StatsParamsPanel
-                                        isResetDisabled={true}
-                                        observation={Object {}}
-                                        onParamsSelected={[Function]}
-                                        onReset={[Function]}
-                                        reset={[Function]}
-                                        selectGroupBy={[Function]}
-                                        selectObservation={[Function]}
-                                        selectType={[Function]}
-                                        type={Object {}}
-                                        updateGroupBy={[Function]}
-                                        updateObservation={[Function]}
-                                        updateParams={[Function]}
-                                        updateType={[Function]}
+                                      <div
+                                        className="box"
                                       >
-                                        <ParamsPanel
-                                          params={
-                                            Array [
-                                              Object {
-                                                "isActive": false,
-                                                "isDisabled": false,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "key": "type",
-                                                "label": "Type",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                              },
-                                              Object {
-                                                "isActive": false,
-                                                "isDisabled": true,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "key": "observation",
-                                                "label": "Observation",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                              },
-                                            ]
-                                          }
-                                          reset={
-                                            Object {
-                                              "isDisabled": true,
-                                              "onReset": [Function],
-                                            }
-                                          }
+                                        <div
+                                          className="columns"
                                         >
                                           <div
-                                            className="box"
+                                            className="column"
+                                            key="type"
                                           >
-                                            <div
-                                              className="columns"
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Type"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
                                             >
                                               <div
-                                                className="column"
-                                                key="type"
+                                                className="dropdown"
                                               >
-                                                <Dropdown
-                                                  buttonStyle=""
-                                                  iconStyle="fa-angle-down"
-                                                  isActive={false}
-                                                  isDisabled={false}
-                                                  isLoading={false}
-                                                  items={Array []}
-                                                  label="Type"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
+                                                <div
+                                                  className="dropdown-trigger"
                                                 >
-                                                  <div
-                                                    className="dropdown"
-                                                  >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button"
-                                                        disabled={false}
-                                                        onClick={[Function]}
-                                                      >
-                                                        <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Type"
-                                                            id="Type"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Type
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-angle-down"
-                                                          />
-                                                        </span>
-                                                      </button>
-                                                    </div>
-                                                    <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
-                                                    >
-                                                      <div
-                                                        className="dropdown-content"
-                                                      />
-                                                    </div>
-                                                  </div>
-                                                </Dropdown>
-                                              </div>
-                                              <div
-                                                className="column"
-                                                key="observation"
-                                              >
-                                                <Dropdown
-                                                  buttonStyle=""
-                                                  iconStyle="fa-angle-down"
-                                                  isActive={false}
-                                                  isDisabled={true}
-                                                  isLoading={false}
-                                                  items={Array []}
-                                                  label="Observation"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
-                                                >
-                                                  <div
-                                                    className="dropdown"
-                                                  >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button"
-                                                        disabled={true}
-                                                        onClick={[Function]}
-                                                      >
-                                                        <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Observation"
-                                                            id="Observation"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Observation
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-angle-down"
-                                                          />
-                                                        </span>
-                                                      </button>
-                                                    </div>
-                                                    <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
-                                                    >
-                                                      <div
-                                                        className="dropdown-content"
-                                                      />
-                                                    </div>
-                                                  </div>
-                                                </Dropdown>
-                                              </div>
-                                              <div
-                                                className="column is-2"
-                                              >
-                                                <button
-                                                  className="button is-warning is-fullwidth"
-                                                  disabled={true}
-                                                  onClick={[Function]}
-                                                >
-                                                  <FormattedMessage
-                                                    id="Reset"
-                                                    values={Object {}}
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={false}
+                                                    onClick={[Function]}
                                                   >
                                                     <span>
-                                                      Reset
+                                                      <FormattedMessage
+                                                        defaultMessage="Type"
+                                                        id="Type"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Type
+                                                        </span>
+                                                      </FormattedMessage>
                                                     </span>
-                                                  </FormattedMessage>
-                                                  <span
-                                                    className="icon is-small"
-                                                  >
-                                                    <i
-                                                      aria-hidden="true"
-                                                      className="fas fa-eraser"
-                                                    />
-                                                  </span>
-                                                </button>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
                                               </div>
-                                            </div>
+                                            </Dropdown>
                                           </div>
-                                        </ParamsPanel>
-                                      </StatsParamsPanel>
-                                    </ResetOnUnmount>
-                                  </Connect(ResetOnUnmount)>
-                                </Connect(Connect(ResetOnUnmount))>
+                                          <div
+                                            className="column"
+                                            key="observation"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={true}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Observation"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={true}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Observation"
+                                                        id="Observation"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Observation
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column is-2"
+                                          >
+                                            <button
+                                              className="button is-warning is-fullwidth"
+                                              disabled={true}
+                                              onClick={[Function]}
+                                            >
+                                              <FormattedMessage
+                                                id="Reset"
+                                                values={Object {}}
+                                              >
+                                                <span>
+                                                  Reset
+                                                </span>
+                                              </FormattedMessage>
+                                              <span
+                                                className="icon is-small"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="fas fa-eraser"
+                                                />
+                                              </span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </ParamsPanel>
+                                  </StatsParamsPanel>
+                                </Connect(StatsParamsPanel)>
                                 <Connect(Charts)
                                   chartType="BARCHART"
                                 >
@@ -1460,10 +1291,10 @@ exports[`containers/stats renders stats 1`] = `
                               <div
                                 className="column is-one-quarter"
                               >
-                                <Connect(Connect(ResetOnUnmount))
+                                <Connect(FiltersPanelContainer)
                                   onFiltersSelected={[Function]}
                                 >
-                                  <Connect(ResetOnUnmount)
+                                  <FiltersPanelContainer
                                     addCustomTimePeriodFilter={[Function]}
                                     addFilterType={[Function]}
                                     addThingFilter={[Function]}
@@ -1490,6 +1321,7 @@ exports[`containers/stats renders stats 1`] = `
                                     selectThingFilter={[Function]}
                                     selectTimePeriod={[Function]}
                                     selectedFilters={Array []}
+                                    statsType={null}
                                     thingFilter={
                                       Object {
                                         "isActive": false,
@@ -1515,33 +1347,37 @@ exports[`containers/stats renders stats 1`] = `
                                     updateThingFilter={[Function]}
                                     updateTimePeriod={[Function]}
                                   >
-                                    <ResetOnUnmount
-                                      addCustomTimePeriodFilter={[Function]}
-                                      addFilterType={[Function]}
-                                      addThingFilter={[Function]}
-                                      addTimePeriodFilter={[Function]}
+                                    <FiltersPanel
                                       dateFilter={
                                         Object {
                                           "custom": Object {
-                                            "endDate": null,
-                                            "startDate": null,
+                                            "endDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                            "startDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
                                           },
                                           "isCustomSelected": false,
+                                          "onDelete": [Function],
+                                          "selector": Object {
+                                            "isCustomSelected": false,
+                                            "onChange": [Function],
+                                          },
                                           "timePeriod": Object {
                                             "isActive": false,
                                             "isDisabled": false,
                                             "isLoading": false,
                                             "items": Array [],
+                                            "label": "Time period",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
                                             "selectedItem": null,
                                           },
                                         }
                                       }
-                                      deleteFilterType={[Function]}
-                                      onFiltersSelected={[Function]}
-                                      reset={[Function]}
-                                      selectFilterType={[Function]}
-                                      selectThingFilter={[Function]}
-                                      selectTimePeriod={[Function]}
                                       selectedFilters={Array []}
                                       thingFilter={
                                         Object {
@@ -1549,10 +1385,13 @@ exports[`containers/stats renders stats 1`] = `
                                           "isDisabled": false,
                                           "isLoading": false,
                                           "items": Array [],
+                                          "label": "Thing",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
                                           "selectedItem": null,
                                         }
                                       }
-                                      toggleDateFilterType={[Function]}
                                       type={
                                         Object {
                                           "isActive": false,
@@ -1561,250 +1400,134 @@ exports[`containers/stats renders stats 1`] = `
                                             "thing",
                                             "date",
                                           ],
+                                          "onButtonClick": [Function],
+                                          "onItemClick": [Function],
                                         }
                                       }
-                                      updateEndDate={[Function]}
-                                      updateStartDate={[Function]}
-                                      updateThingFilter={[Function]}
-                                      updateTimePeriod={[Function]}
                                     >
-                                      <FiltersPanelContainer
-                                        addCustomTimePeriodFilter={[Function]}
-                                        addFilterType={[Function]}
-                                        addThingFilter={[Function]}
-                                        addTimePeriodFilter={[Function]}
-                                        dateFilter={
-                                          Object {
-                                            "custom": Object {
-                                              "endDate": null,
-                                              "startDate": null,
-                                            },
-                                            "isCustomSelected": false,
-                                            "timePeriod": Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "isLoading": false,
-                                              "items": Array [],
-                                              "selectedItem": null,
-                                            },
-                                          }
-                                        }
-                                        deleteFilterType={[Function]}
-                                        onFiltersSelected={[Function]}
-                                        reset={[Function]}
-                                        selectFilterType={[Function]}
-                                        selectThingFilter={[Function]}
-                                        selectTimePeriod={[Function]}
-                                        selectedFilters={Array []}
-                                        statsType={null}
-                                        thingFilter={
-                                          Object {
-                                            "isActive": false,
-                                            "isDisabled": false,
-                                            "isLoading": false,
-                                            "items": Array [],
-                                            "selectedItem": null,
-                                          }
-                                        }
-                                        toggleDateFilterType={[Function]}
-                                        type={
-                                          Object {
-                                            "isActive": false,
-                                            "isDisabled": false,
-                                            "items": Array [
-                                              "thing",
-                                              "date",
-                                            ],
-                                          }
-                                        }
-                                        updateEndDate={[Function]}
-                                        updateStartDate={[Function]}
-                                        updateThingFilter={[Function]}
-                                        updateTimePeriod={[Function]}
+                                      <div
+                                        className="box"
                                       >
-                                        <FiltersPanel
-                                          dateFilter={
-                                            Object {
-                                              "custom": Object {
-                                                "endDate": Object {
-                                                  "onChange": [Function],
-                                                  "selected": null,
-                                                },
-                                                "startDate": Object {
-                                                  "onChange": [Function],
-                                                  "selected": null,
-                                                },
-                                              },
-                                              "isCustomSelected": false,
-                                              "onDelete": [Function],
-                                              "selector": Object {
-                                                "isCustomSelected": false,
-                                                "onChange": [Function],
-                                              },
-                                              "timePeriod": Object {
-                                                "isActive": false,
-                                                "isDisabled": false,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "label": "Time period",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                                "selectedItem": null,
-                                              },
-                                            }
-                                          }
-                                          selectedFilters={Array []}
-                                          thingFilter={
-                                            Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "isLoading": false,
-                                              "items": Array [],
-                                              "label": "Thing",
-                                              "onButtonClick": [Function],
-                                              "onDelete": [Function],
-                                              "onItemClick": [Function],
-                                              "selectedItem": null,
-                                            }
-                                          }
-                                          type={
-                                            Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "items": Array [
-                                                "thing",
-                                                "date",
-                                              ],
-                                              "onButtonClick": [Function],
-                                              "onItemClick": [Function],
-                                            }
-                                          }
+                                        <div
+                                          className="columns"
                                         >
                                           <div
-                                            className="box"
+                                            className="column"
                                           >
-                                            <div
-                                              className="columns"
+                                            <Dropdown
+                                              buttonStyle="is-primary"
+                                              iconStyle="fa-plus"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={
+                                                Array [
+                                                  "thing",
+                                                  "date",
+                                                ]
+                                              }
+                                              label="Filters"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
                                             >
                                               <div
-                                                className="column"
+                                                className="dropdown"
                                               >
-                                                <Dropdown
-                                                  buttonStyle="is-primary"
-                                                  iconStyle="fa-plus"
-                                                  isActive={false}
-                                                  isDisabled={false}
-                                                  isLoading={false}
-                                                  items={
-                                                    Array [
-                                                      "thing",
-                                                      "date",
-                                                    ]
-                                                  }
-                                                  label="Filters"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
+                                                <div
+                                                  className="dropdown-trigger"
                                                 >
-                                                  <div
-                                                    className="dropdown"
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button is-primary"
+                                                    disabled={false}
+                                                    onClick={[Function]}
                                                   >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button is-primary"
-                                                        disabled={false}
-                                                        onClick={[Function]}
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Filters"
+                                                        id="Filters"
+                                                        values={Object {}}
                                                       >
                                                         <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Filters"
-                                                            id="Filters"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Filters
-                                                            </span>
-                                                          </FormattedMessage>
+                                                          Filters
                                                         </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-plus"
-                                                          />
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-plus"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  >
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="thing"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="thing"
+                                                        id="thing"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Thing
                                                         </span>
-                                                      </button>
+                                                      </FormattedMessage>
                                                     </div>
                                                     <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
+                                                      className="dropdown-item"
+                                                      key="date"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
                                                     >
-                                                      <div
-                                                        className="dropdown-content"
+                                                      <FormattedMessage
+                                                        defaultMessage="date"
+                                                        id="date"
+                                                        values={Object {}}
                                                       >
-                                                        <div
-                                                          className="dropdown-item"
-                                                          key="thing"
-                                                          onClick={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          role="button"
-                                                          tabIndex={0}
-                                                        >
-                                                          <FormattedMessage
-                                                            defaultMessage="thing"
-                                                            id="thing"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Thing
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </div>
-                                                        <div
-                                                          className="dropdown-item"
-                                                          key="date"
-                                                          onClick={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          role="button"
-                                                          tabIndex={0}
-                                                        >
-                                                          <FormattedMessage
-                                                            defaultMessage="date"
-                                                            id="date"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Date
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </div>
-                                                      </div>
+                                                        <span>
+                                                          Date
+                                                        </span>
+                                                      </FormattedMessage>
                                                     </div>
                                                   </div>
-                                                </Dropdown>
+                                                </div>
                                               </div>
-                                            </div>
+                                            </Dropdown>
                                           </div>
-                                        </FiltersPanel>
-                                      </FiltersPanelContainer>
-                                    </ResetOnUnmount>
-                                  </Connect(ResetOnUnmount)>
-                                </Connect(Connect(ResetOnUnmount))>
+                                        </div>
+                                      </div>
+                                    </FiltersPanel>
+                                  </FiltersPanelContainer>
+                                </Connect(FiltersPanelContainer)>
                               </div>
                             </div>
                           </div>
                         </Stats>
-                      </ResetOnUnmount>
-                    </Connect(ResetOnUnmount)>
-                  </DataParams>
-                </Connect(DataParams)>
-              </Route>
-            </withRouter(Connect(DataParams))>
+                      </DataParams>
+                    </Route>
+                  </withRouter(DataParams)>
+                </ResetOnUnmount>
+              </Connect(ResetOnUnmount)>
+            </Connect(Connect(ResetOnUnmount))>
           </Router>
         </MemoryRouter>
       </IntlProvider>
@@ -2047,166 +1770,32 @@ exports[`containers/stats renders stats in initial state 1`] = `
               }
             }
           >
-            <withRouter(Connect(DataParams))>
-              <Route>
-                <Connect(DataParams)
-                  history={
-                    Object {
-                      "action": "POP",
-                      "block": [Function],
-                      "canGo": [Function],
-                      "createHref": [Function],
-                      "entries": Array [
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                      ],
-                      "go": [Function],
-                      "goBack": [Function],
-                      "goForward": [Function],
-                      "index": 0,
-                      "length": 1,
-                      "listen": [Function],
-                      "location": Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      },
-                      "push": [Function],
-                      "replace": [Function],
-                    }
-                  }
-                  location={
-                    Object {
-                      "hash": "",
-                      "pathname": "/",
-                      "search": "",
-                      "state": undefined,
-                    }
-                  }
-                  match={
-                    Object {
-                      "isExact": true,
-                      "params": Object {},
-                      "path": "/",
-                      "url": "/",
-                    }
-                  }
+            <Connect(Connect(ResetOnUnmount))>
+              <Connect(ResetOnUnmount)
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
+                hasError={false}
+                updateParams={[Function]}
+              >
+                <ResetOnUnmount
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
+                  hasError={false}
+                  reset={[Function]}
+                  updateParams={[Function]}
                 >
-                  <DataParams
+                  <withRouter(DataParams)
                     addCustomTimePeriodFilter={[Function]}
                     addThingFilter={[Function]}
                     addTimePeriodFilter={[Function]}
                     hasError={false}
-                    history={
-                      Object {
-                        "action": "POP",
-                        "block": [Function],
-                        "canGo": [Function],
-                        "createHref": [Function],
-                        "entries": Array [
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                        ],
-                        "go": [Function],
-                        "goBack": [Function],
-                        "goForward": [Function],
-                        "index": 0,
-                        "length": 1,
-                        "listen": [Function],
-                        "location": Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                        "push": [Function],
-                        "replace": [Function],
-                      }
-                    }
-                    location={
-                      Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      }
-                    }
-                    match={
-                      Object {
-                        "isExact": true,
-                        "params": Object {},
-                        "path": "/",
-                        "url": "/",
-                      }
-                    }
+                    reset={[Function]}
                     updateParams={[Function]}
                   >
-                    <Connect(ResetOnUnmount)
-                      addCustomTimePeriodFilter={[Function]}
-                      addThingFilter={[Function]}
-                      addTimePeriodFilter={[Function]}
-                      hasError={false}
-                      history={
-                        Object {
-                          "action": "POP",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      location={
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        }
-                      }
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/",
-                          "url": "/",
-                        }
-                      }
-                      onFiltersSelected={[Function]}
-                      onParamsSelected={[Function]}
-                      onReset={[Function]}
-                      updateParams={[Function]}
-                    >
-                      <ResetOnUnmount
+                    <Route>
+                      <DataParams
                         addCustomTimePeriodFilter={[Function]}
                         addThingFilter={[Function]}
                         addTimePeriodFilter={[Function]}
@@ -2257,9 +1846,6 @@ exports[`containers/stats renders stats in initial state 1`] = `
                             "url": "/",
                           }
                         }
-                        onFiltersSelected={[Function]}
-                        onParamsSelected={[Function]}
-                        onReset={[Function]}
                         reset={[Function]}
                         updateParams={[Function]}
                       >
@@ -2329,11 +1915,11 @@ exports[`containers/stats renders stats in initial state 1`] = `
                               <div
                                 className="column is-three-quarters"
                               >
-                                <Connect(Connect(ResetOnUnmount))
+                                <Connect(StatsParamsPanel)
                                   onParamsSelected={[Function]}
                                   onReset={[Function]}
                                 >
-                                  <Connect(ResetOnUnmount)
+                                  <StatsParamsPanel
                                     isResetDisabled={true}
                                     observation={Object {}}
                                     onParamsSelected={[Function]}
@@ -2347,229 +1933,197 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     updateParams={[Function]}
                                     updateType={[Function]}
                                   >
-                                    <ResetOnUnmount
-                                      isResetDisabled={true}
-                                      observation={Object {}}
-                                      onParamsSelected={[Function]}
-                                      onReset={[Function]}
-                                      reset={[Function]}
-                                      selectGroupBy={[Function]}
-                                      selectObservation={[Function]}
-                                      selectType={[Function]}
-                                      type={Object {}}
-                                      updateGroupBy={[Function]}
-                                      updateObservation={[Function]}
-                                      updateParams={[Function]}
-                                      updateType={[Function]}
+                                    <ParamsPanel
+                                      params={
+                                        Array [
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "type",
+                                            "label": "Type",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": true,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "observation",
+                                            "label": "Observation",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                        ]
+                                      }
+                                      reset={
+                                        Object {
+                                          "isDisabled": true,
+                                          "onReset": [Function],
+                                        }
+                                      }
                                     >
-                                      <StatsParamsPanel
-                                        isResetDisabled={true}
-                                        observation={Object {}}
-                                        onParamsSelected={[Function]}
-                                        onReset={[Function]}
-                                        reset={[Function]}
-                                        selectGroupBy={[Function]}
-                                        selectObservation={[Function]}
-                                        selectType={[Function]}
-                                        type={Object {}}
-                                        updateGroupBy={[Function]}
-                                        updateObservation={[Function]}
-                                        updateParams={[Function]}
-                                        updateType={[Function]}
+                                      <div
+                                        className="box"
                                       >
-                                        <ParamsPanel
-                                          params={
-                                            Array [
-                                              Object {
-                                                "isActive": false,
-                                                "isDisabled": false,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "key": "type",
-                                                "label": "Type",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                              },
-                                              Object {
-                                                "isActive": false,
-                                                "isDisabled": true,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "key": "observation",
-                                                "label": "Observation",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                              },
-                                            ]
-                                          }
-                                          reset={
-                                            Object {
-                                              "isDisabled": true,
-                                              "onReset": [Function],
-                                            }
-                                          }
+                                        <div
+                                          className="columns"
                                         >
                                           <div
-                                            className="box"
+                                            className="column"
+                                            key="type"
                                           >
-                                            <div
-                                              className="columns"
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Type"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
                                             >
                                               <div
-                                                className="column"
-                                                key="type"
+                                                className="dropdown"
                                               >
-                                                <Dropdown
-                                                  buttonStyle=""
-                                                  iconStyle="fa-angle-down"
-                                                  isActive={false}
-                                                  isDisabled={false}
-                                                  isLoading={false}
-                                                  items={Array []}
-                                                  label="Type"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
+                                                <div
+                                                  className="dropdown-trigger"
                                                 >
-                                                  <div
-                                                    className="dropdown"
-                                                  >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button"
-                                                        disabled={false}
-                                                        onClick={[Function]}
-                                                      >
-                                                        <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Type"
-                                                            id="Type"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Type
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-angle-down"
-                                                          />
-                                                        </span>
-                                                      </button>
-                                                    </div>
-                                                    <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
-                                                    >
-                                                      <div
-                                                        className="dropdown-content"
-                                                      />
-                                                    </div>
-                                                  </div>
-                                                </Dropdown>
-                                              </div>
-                                              <div
-                                                className="column"
-                                                key="observation"
-                                              >
-                                                <Dropdown
-                                                  buttonStyle=""
-                                                  iconStyle="fa-angle-down"
-                                                  isActive={false}
-                                                  isDisabled={true}
-                                                  isLoading={false}
-                                                  items={Array []}
-                                                  label="Observation"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
-                                                >
-                                                  <div
-                                                    className="dropdown"
-                                                  >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button"
-                                                        disabled={true}
-                                                        onClick={[Function]}
-                                                      >
-                                                        <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Observation"
-                                                            id="Observation"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Observation
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-angle-down"
-                                                          />
-                                                        </span>
-                                                      </button>
-                                                    </div>
-                                                    <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
-                                                    >
-                                                      <div
-                                                        className="dropdown-content"
-                                                      />
-                                                    </div>
-                                                  </div>
-                                                </Dropdown>
-                                              </div>
-                                              <div
-                                                className="column is-2"
-                                              >
-                                                <button
-                                                  className="button is-warning is-fullwidth"
-                                                  disabled={true}
-                                                  onClick={[Function]}
-                                                >
-                                                  <FormattedMessage
-                                                    id="Reset"
-                                                    values={Object {}}
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={false}
+                                                    onClick={[Function]}
                                                   >
                                                     <span>
-                                                      Reset
+                                                      <FormattedMessage
+                                                        defaultMessage="Type"
+                                                        id="Type"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Type
+                                                        </span>
+                                                      </FormattedMessage>
                                                     </span>
-                                                  </FormattedMessage>
-                                                  <span
-                                                    className="icon is-small"
-                                                  >
-                                                    <i
-                                                      aria-hidden="true"
-                                                      className="fas fa-eraser"
-                                                    />
-                                                  </span>
-                                                </button>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
                                               </div>
-                                            </div>
+                                            </Dropdown>
                                           </div>
-                                        </ParamsPanel>
-                                      </StatsParamsPanel>
-                                    </ResetOnUnmount>
-                                  </Connect(ResetOnUnmount)>
-                                </Connect(Connect(ResetOnUnmount))>
+                                          <div
+                                            className="column"
+                                            key="observation"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={true}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Observation"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={true}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Observation"
+                                                        id="Observation"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Observation
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column is-2"
+                                          >
+                                            <button
+                                              className="button is-warning is-fullwidth"
+                                              disabled={true}
+                                              onClick={[Function]}
+                                            >
+                                              <FormattedMessage
+                                                id="Reset"
+                                                values={Object {}}
+                                              >
+                                                <span>
+                                                  Reset
+                                                </span>
+                                              </FormattedMessage>
+                                              <span
+                                                className="icon is-small"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="fas fa-eraser"
+                                                />
+                                              </span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </ParamsPanel>
+                                  </StatsParamsPanel>
+                                </Connect(StatsParamsPanel)>
                                 <Connect(Charts)
                                   chartType="BARCHART"
                                 >
@@ -2585,10 +2139,10 @@ exports[`containers/stats renders stats in initial state 1`] = `
                               <div
                                 className="column is-one-quarter"
                               >
-                                <Connect(Connect(ResetOnUnmount))
+                                <Connect(FiltersPanelContainer)
                                   onFiltersSelected={[Function]}
                                 >
-                                  <Connect(ResetOnUnmount)
+                                  <FiltersPanelContainer
                                     addCustomTimePeriodFilter={[Function]}
                                     addFilterType={[Function]}
                                     addThingFilter={[Function]}
@@ -2615,6 +2169,7 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     selectThingFilter={[Function]}
                                     selectTimePeriod={[Function]}
                                     selectedFilters={Array []}
+                                    statsType={null}
                                     thingFilter={
                                       Object {
                                         "isActive": false,
@@ -2640,33 +2195,37 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                     updateThingFilter={[Function]}
                                     updateTimePeriod={[Function]}
                                   >
-                                    <ResetOnUnmount
-                                      addCustomTimePeriodFilter={[Function]}
-                                      addFilterType={[Function]}
-                                      addThingFilter={[Function]}
-                                      addTimePeriodFilter={[Function]}
+                                    <FiltersPanel
                                       dateFilter={
                                         Object {
                                           "custom": Object {
-                                            "endDate": null,
-                                            "startDate": null,
+                                            "endDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                            "startDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
                                           },
                                           "isCustomSelected": false,
+                                          "onDelete": [Function],
+                                          "selector": Object {
+                                            "isCustomSelected": false,
+                                            "onChange": [Function],
+                                          },
                                           "timePeriod": Object {
                                             "isActive": false,
                                             "isDisabled": false,
                                             "isLoading": false,
                                             "items": Array [],
+                                            "label": "Time period",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
                                             "selectedItem": null,
                                           },
                                         }
                                       }
-                                      deleteFilterType={[Function]}
-                                      onFiltersSelected={[Function]}
-                                      reset={[Function]}
-                                      selectFilterType={[Function]}
-                                      selectThingFilter={[Function]}
-                                      selectTimePeriod={[Function]}
                                       selectedFilters={Array []}
                                       thingFilter={
                                         Object {
@@ -2674,10 +2233,13 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                           "isDisabled": false,
                                           "isLoading": false,
                                           "items": Array [],
+                                          "label": "Thing",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
                                           "selectedItem": null,
                                         }
                                       }
-                                      toggleDateFilterType={[Function]}
                                       type={
                                         Object {
                                           "isActive": false,
@@ -2686,250 +2248,134 @@ exports[`containers/stats renders stats in initial state 1`] = `
                                             "thing",
                                             "date",
                                           ],
+                                          "onButtonClick": [Function],
+                                          "onItemClick": [Function],
                                         }
                                       }
-                                      updateEndDate={[Function]}
-                                      updateStartDate={[Function]}
-                                      updateThingFilter={[Function]}
-                                      updateTimePeriod={[Function]}
                                     >
-                                      <FiltersPanelContainer
-                                        addCustomTimePeriodFilter={[Function]}
-                                        addFilterType={[Function]}
-                                        addThingFilter={[Function]}
-                                        addTimePeriodFilter={[Function]}
-                                        dateFilter={
-                                          Object {
-                                            "custom": Object {
-                                              "endDate": null,
-                                              "startDate": null,
-                                            },
-                                            "isCustomSelected": false,
-                                            "timePeriod": Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "isLoading": false,
-                                              "items": Array [],
-                                              "selectedItem": null,
-                                            },
-                                          }
-                                        }
-                                        deleteFilterType={[Function]}
-                                        onFiltersSelected={[Function]}
-                                        reset={[Function]}
-                                        selectFilterType={[Function]}
-                                        selectThingFilter={[Function]}
-                                        selectTimePeriod={[Function]}
-                                        selectedFilters={Array []}
-                                        statsType={null}
-                                        thingFilter={
-                                          Object {
-                                            "isActive": false,
-                                            "isDisabled": false,
-                                            "isLoading": false,
-                                            "items": Array [],
-                                            "selectedItem": null,
-                                          }
-                                        }
-                                        toggleDateFilterType={[Function]}
-                                        type={
-                                          Object {
-                                            "isActive": false,
-                                            "isDisabled": false,
-                                            "items": Array [
-                                              "thing",
-                                              "date",
-                                            ],
-                                          }
-                                        }
-                                        updateEndDate={[Function]}
-                                        updateStartDate={[Function]}
-                                        updateThingFilter={[Function]}
-                                        updateTimePeriod={[Function]}
+                                      <div
+                                        className="box"
                                       >
-                                        <FiltersPanel
-                                          dateFilter={
-                                            Object {
-                                              "custom": Object {
-                                                "endDate": Object {
-                                                  "onChange": [Function],
-                                                  "selected": null,
-                                                },
-                                                "startDate": Object {
-                                                  "onChange": [Function],
-                                                  "selected": null,
-                                                },
-                                              },
-                                              "isCustomSelected": false,
-                                              "onDelete": [Function],
-                                              "selector": Object {
-                                                "isCustomSelected": false,
-                                                "onChange": [Function],
-                                              },
-                                              "timePeriod": Object {
-                                                "isActive": false,
-                                                "isDisabled": false,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "label": "Time period",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                                "selectedItem": null,
-                                              },
-                                            }
-                                          }
-                                          selectedFilters={Array []}
-                                          thingFilter={
-                                            Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "isLoading": false,
-                                              "items": Array [],
-                                              "label": "Thing",
-                                              "onButtonClick": [Function],
-                                              "onDelete": [Function],
-                                              "onItemClick": [Function],
-                                              "selectedItem": null,
-                                            }
-                                          }
-                                          type={
-                                            Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "items": Array [
-                                                "thing",
-                                                "date",
-                                              ],
-                                              "onButtonClick": [Function],
-                                              "onItemClick": [Function],
-                                            }
-                                          }
+                                        <div
+                                          className="columns"
                                         >
                                           <div
-                                            className="box"
+                                            className="column"
                                           >
-                                            <div
-                                              className="columns"
+                                            <Dropdown
+                                              buttonStyle="is-primary"
+                                              iconStyle="fa-plus"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={
+                                                Array [
+                                                  "thing",
+                                                  "date",
+                                                ]
+                                              }
+                                              label="Filters"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
                                             >
                                               <div
-                                                className="column"
+                                                className="dropdown"
                                               >
-                                                <Dropdown
-                                                  buttonStyle="is-primary"
-                                                  iconStyle="fa-plus"
-                                                  isActive={false}
-                                                  isDisabled={false}
-                                                  isLoading={false}
-                                                  items={
-                                                    Array [
-                                                      "thing",
-                                                      "date",
-                                                    ]
-                                                  }
-                                                  label="Filters"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
+                                                <div
+                                                  className="dropdown-trigger"
                                                 >
-                                                  <div
-                                                    className="dropdown"
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button is-primary"
+                                                    disabled={false}
+                                                    onClick={[Function]}
                                                   >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button is-primary"
-                                                        disabled={false}
-                                                        onClick={[Function]}
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Filters"
+                                                        id="Filters"
+                                                        values={Object {}}
                                                       >
                                                         <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Filters"
-                                                            id="Filters"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Filters
-                                                            </span>
-                                                          </FormattedMessage>
+                                                          Filters
                                                         </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-plus"
-                                                          />
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-plus"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  >
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="thing"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="thing"
+                                                        id="thing"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Thing
                                                         </span>
-                                                      </button>
+                                                      </FormattedMessage>
                                                     </div>
                                                     <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
+                                                      className="dropdown-item"
+                                                      key="date"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
                                                     >
-                                                      <div
-                                                        className="dropdown-content"
+                                                      <FormattedMessage
+                                                        defaultMessage="date"
+                                                        id="date"
+                                                        values={Object {}}
                                                       >
-                                                        <div
-                                                          className="dropdown-item"
-                                                          key="thing"
-                                                          onClick={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          role="button"
-                                                          tabIndex={0}
-                                                        >
-                                                          <FormattedMessage
-                                                            defaultMessage="thing"
-                                                            id="thing"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Thing
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </div>
-                                                        <div
-                                                          className="dropdown-item"
-                                                          key="date"
-                                                          onClick={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          role="button"
-                                                          tabIndex={0}
-                                                        >
-                                                          <FormattedMessage
-                                                            defaultMessage="date"
-                                                            id="date"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Date
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </div>
-                                                      </div>
+                                                        <span>
+                                                          Date
+                                                        </span>
+                                                      </FormattedMessage>
                                                     </div>
                                                   </div>
-                                                </Dropdown>
+                                                </div>
                                               </div>
-                                            </div>
+                                            </Dropdown>
                                           </div>
-                                        </FiltersPanel>
-                                      </FiltersPanelContainer>
-                                    </ResetOnUnmount>
-                                  </Connect(ResetOnUnmount)>
-                                </Connect(Connect(ResetOnUnmount))>
+                                        </div>
+                                      </div>
+                                    </FiltersPanel>
+                                  </FiltersPanelContainer>
+                                </Connect(FiltersPanelContainer)>
                               </div>
                             </div>
                           </div>
                         </Stats>
-                      </ResetOnUnmount>
-                    </Connect(ResetOnUnmount)>
-                  </DataParams>
-                </Connect(DataParams)>
-              </Route>
-            </withRouter(Connect(DataParams))>
+                      </DataParams>
+                    </Route>
+                  </withRouter(DataParams)>
+                </ResetOnUnmount>
+              </Connect(ResetOnUnmount)>
+            </Connect(Connect(ResetOnUnmount))>
           </Router>
         </MemoryRouter>
       </IntlProvider>
@@ -3172,166 +2618,32 @@ exports[`containers/stats renders when loading stats 1`] = `
               }
             }
           >
-            <withRouter(Connect(DataParams))>
-              <Route>
-                <Connect(DataParams)
-                  history={
-                    Object {
-                      "action": "POP",
-                      "block": [Function],
-                      "canGo": [Function],
-                      "createHref": [Function],
-                      "entries": Array [
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                      ],
-                      "go": [Function],
-                      "goBack": [Function],
-                      "goForward": [Function],
-                      "index": 0,
-                      "length": 1,
-                      "listen": [Function],
-                      "location": Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      },
-                      "push": [Function],
-                      "replace": [Function],
-                    }
-                  }
-                  location={
-                    Object {
-                      "hash": "",
-                      "pathname": "/",
-                      "search": "",
-                      "state": undefined,
-                    }
-                  }
-                  match={
-                    Object {
-                      "isExact": true,
-                      "params": Object {},
-                      "path": "/",
-                      "url": "/",
-                    }
-                  }
+            <Connect(Connect(ResetOnUnmount))>
+              <Connect(ResetOnUnmount)
+                addCustomTimePeriodFilter={[Function]}
+                addThingFilter={[Function]}
+                addTimePeriodFilter={[Function]}
+                hasError={false}
+                updateParams={[Function]}
+              >
+                <ResetOnUnmount
+                  addCustomTimePeriodFilter={[Function]}
+                  addThingFilter={[Function]}
+                  addTimePeriodFilter={[Function]}
+                  hasError={false}
+                  reset={[Function]}
+                  updateParams={[Function]}
                 >
-                  <DataParams
+                  <withRouter(DataParams)
                     addCustomTimePeriodFilter={[Function]}
                     addThingFilter={[Function]}
                     addTimePeriodFilter={[Function]}
                     hasError={false}
-                    history={
-                      Object {
-                        "action": "POP",
-                        "block": [Function],
-                        "canGo": [Function],
-                        "createHref": [Function],
-                        "entries": Array [
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                        ],
-                        "go": [Function],
-                        "goBack": [Function],
-                        "goForward": [Function],
-                        "index": 0,
-                        "length": 1,
-                        "listen": [Function],
-                        "location": Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        },
-                        "push": [Function],
-                        "replace": [Function],
-                      }
-                    }
-                    location={
-                      Object {
-                        "hash": "",
-                        "pathname": "/",
-                        "search": "",
-                        "state": undefined,
-                      }
-                    }
-                    match={
-                      Object {
-                        "isExact": true,
-                        "params": Object {},
-                        "path": "/",
-                        "url": "/",
-                      }
-                    }
+                    reset={[Function]}
                     updateParams={[Function]}
                   >
-                    <Connect(ResetOnUnmount)
-                      addCustomTimePeriodFilter={[Function]}
-                      addThingFilter={[Function]}
-                      addTimePeriodFilter={[Function]}
-                      hasError={false}
-                      history={
-                        Object {
-                          "action": "POP",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      location={
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        }
-                      }
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/",
-                          "url": "/",
-                        }
-                      }
-                      onFiltersSelected={[Function]}
-                      onParamsSelected={[Function]}
-                      onReset={[Function]}
-                      updateParams={[Function]}
-                    >
-                      <ResetOnUnmount
+                    <Route>
+                      <DataParams
                         addCustomTimePeriodFilter={[Function]}
                         addThingFilter={[Function]}
                         addTimePeriodFilter={[Function]}
@@ -3382,9 +2694,6 @@ exports[`containers/stats renders when loading stats 1`] = `
                             "url": "/",
                           }
                         }
-                        onFiltersSelected={[Function]}
-                        onParamsSelected={[Function]}
-                        onReset={[Function]}
                         reset={[Function]}
                         updateParams={[Function]}
                       >
@@ -3454,11 +2763,11 @@ exports[`containers/stats renders when loading stats 1`] = `
                               <div
                                 className="column is-three-quarters"
                               >
-                                <Connect(Connect(ResetOnUnmount))
+                                <Connect(StatsParamsPanel)
                                   onParamsSelected={[Function]}
                                   onReset={[Function]}
                                 >
-                                  <Connect(ResetOnUnmount)
+                                  <StatsParamsPanel
                                     isResetDisabled={true}
                                     observation={Object {}}
                                     onParamsSelected={[Function]}
@@ -3472,229 +2781,197 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     updateParams={[Function]}
                                     updateType={[Function]}
                                   >
-                                    <ResetOnUnmount
-                                      isResetDisabled={true}
-                                      observation={Object {}}
-                                      onParamsSelected={[Function]}
-                                      onReset={[Function]}
-                                      reset={[Function]}
-                                      selectGroupBy={[Function]}
-                                      selectObservation={[Function]}
-                                      selectType={[Function]}
-                                      type={Object {}}
-                                      updateGroupBy={[Function]}
-                                      updateObservation={[Function]}
-                                      updateParams={[Function]}
-                                      updateType={[Function]}
+                                    <ParamsPanel
+                                      params={
+                                        Array [
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": false,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "type",
+                                            "label": "Type",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                          Object {
+                                            "isActive": false,
+                                            "isDisabled": true,
+                                            "isLoading": false,
+                                            "items": Array [],
+                                            "key": "observation",
+                                            "label": "Observation",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
+                                          },
+                                        ]
+                                      }
+                                      reset={
+                                        Object {
+                                          "isDisabled": true,
+                                          "onReset": [Function],
+                                        }
+                                      }
                                     >
-                                      <StatsParamsPanel
-                                        isResetDisabled={true}
-                                        observation={Object {}}
-                                        onParamsSelected={[Function]}
-                                        onReset={[Function]}
-                                        reset={[Function]}
-                                        selectGroupBy={[Function]}
-                                        selectObservation={[Function]}
-                                        selectType={[Function]}
-                                        type={Object {}}
-                                        updateGroupBy={[Function]}
-                                        updateObservation={[Function]}
-                                        updateParams={[Function]}
-                                        updateType={[Function]}
+                                      <div
+                                        className="box"
                                       >
-                                        <ParamsPanel
-                                          params={
-                                            Array [
-                                              Object {
-                                                "isActive": false,
-                                                "isDisabled": false,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "key": "type",
-                                                "label": "Type",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                              },
-                                              Object {
-                                                "isActive": false,
-                                                "isDisabled": true,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "key": "observation",
-                                                "label": "Observation",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                              },
-                                            ]
-                                          }
-                                          reset={
-                                            Object {
-                                              "isDisabled": true,
-                                              "onReset": [Function],
-                                            }
-                                          }
+                                        <div
+                                          className="columns"
                                         >
                                           <div
-                                            className="box"
+                                            className="column"
+                                            key="type"
                                           >
-                                            <div
-                                              className="columns"
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Type"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
                                             >
                                               <div
-                                                className="column"
-                                                key="type"
+                                                className="dropdown"
                                               >
-                                                <Dropdown
-                                                  buttonStyle=""
-                                                  iconStyle="fa-angle-down"
-                                                  isActive={false}
-                                                  isDisabled={false}
-                                                  isLoading={false}
-                                                  items={Array []}
-                                                  label="Type"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
+                                                <div
+                                                  className="dropdown-trigger"
                                                 >
-                                                  <div
-                                                    className="dropdown"
-                                                  >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button"
-                                                        disabled={false}
-                                                        onClick={[Function]}
-                                                      >
-                                                        <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Type"
-                                                            id="Type"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Type
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-angle-down"
-                                                          />
-                                                        </span>
-                                                      </button>
-                                                    </div>
-                                                    <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
-                                                    >
-                                                      <div
-                                                        className="dropdown-content"
-                                                      />
-                                                    </div>
-                                                  </div>
-                                                </Dropdown>
-                                              </div>
-                                              <div
-                                                className="column"
-                                                key="observation"
-                                              >
-                                                <Dropdown
-                                                  buttonStyle=""
-                                                  iconStyle="fa-angle-down"
-                                                  isActive={false}
-                                                  isDisabled={true}
-                                                  isLoading={false}
-                                                  items={Array []}
-                                                  label="Observation"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
-                                                >
-                                                  <div
-                                                    className="dropdown"
-                                                  >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button"
-                                                        disabled={true}
-                                                        onClick={[Function]}
-                                                      >
-                                                        <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Observation"
-                                                            id="Observation"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Observation
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-angle-down"
-                                                          />
-                                                        </span>
-                                                      </button>
-                                                    </div>
-                                                    <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
-                                                    >
-                                                      <div
-                                                        className="dropdown-content"
-                                                      />
-                                                    </div>
-                                                  </div>
-                                                </Dropdown>
-                                              </div>
-                                              <div
-                                                className="column is-2"
-                                              >
-                                                <button
-                                                  className="button is-warning is-fullwidth"
-                                                  disabled={true}
-                                                  onClick={[Function]}
-                                                >
-                                                  <FormattedMessage
-                                                    id="Reset"
-                                                    values={Object {}}
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={false}
+                                                    onClick={[Function]}
                                                   >
                                                     <span>
-                                                      Reset
+                                                      <FormattedMessage
+                                                        defaultMessage="Type"
+                                                        id="Type"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Type
+                                                        </span>
+                                                      </FormattedMessage>
                                                     </span>
-                                                  </FormattedMessage>
-                                                  <span
-                                                    className="icon is-small"
-                                                  >
-                                                    <i
-                                                      aria-hidden="true"
-                                                      className="fas fa-eraser"
-                                                    />
-                                                  </span>
-                                                </button>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
                                               </div>
-                                            </div>
+                                            </Dropdown>
                                           </div>
-                                        </ParamsPanel>
-                                      </StatsParamsPanel>
-                                    </ResetOnUnmount>
-                                  </Connect(ResetOnUnmount)>
-                                </Connect(Connect(ResetOnUnmount))>
+                                          <div
+                                            className="column"
+                                            key="observation"
+                                          >
+                                            <Dropdown
+                                              buttonStyle=""
+                                              iconStyle="fa-angle-down"
+                                              isActive={false}
+                                              isDisabled={true}
+                                              isLoading={false}
+                                              items={Array []}
+                                              label="Observation"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
+                                            >
+                                              <div
+                                                className="dropdown"
+                                              >
+                                                <div
+                                                  className="dropdown-trigger"
+                                                >
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button"
+                                                    disabled={true}
+                                                    onClick={[Function]}
+                                                  >
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Observation"
+                                                        id="Observation"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Observation
+                                                        </span>
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-angle-down"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </Dropdown>
+                                          </div>
+                                          <div
+                                            className="column is-2"
+                                          >
+                                            <button
+                                              className="button is-warning is-fullwidth"
+                                              disabled={true}
+                                              onClick={[Function]}
+                                            >
+                                              <FormattedMessage
+                                                id="Reset"
+                                                values={Object {}}
+                                              >
+                                                <span>
+                                                  Reset
+                                                </span>
+                                              </FormattedMessage>
+                                              <span
+                                                className="icon is-small"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="fas fa-eraser"
+                                                />
+                                              </span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </ParamsPanel>
+                                  </StatsParamsPanel>
+                                </Connect(StatsParamsPanel)>
                                 <Connect(Charts)
                                   chartType="BARCHART"
                                 >
@@ -3725,10 +3002,10 @@ exports[`containers/stats renders when loading stats 1`] = `
                               <div
                                 className="column is-one-quarter"
                               >
-                                <Connect(Connect(ResetOnUnmount))
+                                <Connect(FiltersPanelContainer)
                                   onFiltersSelected={[Function]}
                                 >
-                                  <Connect(ResetOnUnmount)
+                                  <FiltersPanelContainer
                                     addCustomTimePeriodFilter={[Function]}
                                     addFilterType={[Function]}
                                     addThingFilter={[Function]}
@@ -3755,6 +3032,7 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     selectThingFilter={[Function]}
                                     selectTimePeriod={[Function]}
                                     selectedFilters={Array []}
+                                    statsType={null}
                                     thingFilter={
                                       Object {
                                         "isActive": false,
@@ -3780,33 +3058,37 @@ exports[`containers/stats renders when loading stats 1`] = `
                                     updateThingFilter={[Function]}
                                     updateTimePeriod={[Function]}
                                   >
-                                    <ResetOnUnmount
-                                      addCustomTimePeriodFilter={[Function]}
-                                      addFilterType={[Function]}
-                                      addThingFilter={[Function]}
-                                      addTimePeriodFilter={[Function]}
+                                    <FiltersPanel
                                       dateFilter={
                                         Object {
                                           "custom": Object {
-                                            "endDate": null,
-                                            "startDate": null,
+                                            "endDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
+                                            "startDate": Object {
+                                              "onChange": [Function],
+                                              "selected": null,
+                                            },
                                           },
                                           "isCustomSelected": false,
+                                          "onDelete": [Function],
+                                          "selector": Object {
+                                            "isCustomSelected": false,
+                                            "onChange": [Function],
+                                          },
                                           "timePeriod": Object {
                                             "isActive": false,
                                             "isDisabled": false,
                                             "isLoading": false,
                                             "items": Array [],
+                                            "label": "Time period",
+                                            "onButtonClick": [Function],
+                                            "onItemClick": [Function],
                                             "selectedItem": null,
                                           },
                                         }
                                       }
-                                      deleteFilterType={[Function]}
-                                      onFiltersSelected={[Function]}
-                                      reset={[Function]}
-                                      selectFilterType={[Function]}
-                                      selectThingFilter={[Function]}
-                                      selectTimePeriod={[Function]}
                                       selectedFilters={Array []}
                                       thingFilter={
                                         Object {
@@ -3814,10 +3096,13 @@ exports[`containers/stats renders when loading stats 1`] = `
                                           "isDisabled": false,
                                           "isLoading": false,
                                           "items": Array [],
+                                          "label": "Thing",
+                                          "onButtonClick": [Function],
+                                          "onDelete": [Function],
+                                          "onItemClick": [Function],
                                           "selectedItem": null,
                                         }
                                       }
-                                      toggleDateFilterType={[Function]}
                                       type={
                                         Object {
                                           "isActive": false,
@@ -3826,250 +3111,134 @@ exports[`containers/stats renders when loading stats 1`] = `
                                             "thing",
                                             "date",
                                           ],
+                                          "onButtonClick": [Function],
+                                          "onItemClick": [Function],
                                         }
                                       }
-                                      updateEndDate={[Function]}
-                                      updateStartDate={[Function]}
-                                      updateThingFilter={[Function]}
-                                      updateTimePeriod={[Function]}
                                     >
-                                      <FiltersPanelContainer
-                                        addCustomTimePeriodFilter={[Function]}
-                                        addFilterType={[Function]}
-                                        addThingFilter={[Function]}
-                                        addTimePeriodFilter={[Function]}
-                                        dateFilter={
-                                          Object {
-                                            "custom": Object {
-                                              "endDate": null,
-                                              "startDate": null,
-                                            },
-                                            "isCustomSelected": false,
-                                            "timePeriod": Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "isLoading": false,
-                                              "items": Array [],
-                                              "selectedItem": null,
-                                            },
-                                          }
-                                        }
-                                        deleteFilterType={[Function]}
-                                        onFiltersSelected={[Function]}
-                                        reset={[Function]}
-                                        selectFilterType={[Function]}
-                                        selectThingFilter={[Function]}
-                                        selectTimePeriod={[Function]}
-                                        selectedFilters={Array []}
-                                        statsType={null}
-                                        thingFilter={
-                                          Object {
-                                            "isActive": false,
-                                            "isDisabled": false,
-                                            "isLoading": false,
-                                            "items": Array [],
-                                            "selectedItem": null,
-                                          }
-                                        }
-                                        toggleDateFilterType={[Function]}
-                                        type={
-                                          Object {
-                                            "isActive": false,
-                                            "isDisabled": false,
-                                            "items": Array [
-                                              "thing",
-                                              "date",
-                                            ],
-                                          }
-                                        }
-                                        updateEndDate={[Function]}
-                                        updateStartDate={[Function]}
-                                        updateThingFilter={[Function]}
-                                        updateTimePeriod={[Function]}
+                                      <div
+                                        className="box"
                                       >
-                                        <FiltersPanel
-                                          dateFilter={
-                                            Object {
-                                              "custom": Object {
-                                                "endDate": Object {
-                                                  "onChange": [Function],
-                                                  "selected": null,
-                                                },
-                                                "startDate": Object {
-                                                  "onChange": [Function],
-                                                  "selected": null,
-                                                },
-                                              },
-                                              "isCustomSelected": false,
-                                              "onDelete": [Function],
-                                              "selector": Object {
-                                                "isCustomSelected": false,
-                                                "onChange": [Function],
-                                              },
-                                              "timePeriod": Object {
-                                                "isActive": false,
-                                                "isDisabled": false,
-                                                "isLoading": false,
-                                                "items": Array [],
-                                                "label": "Time period",
-                                                "onButtonClick": [Function],
-                                                "onItemClick": [Function],
-                                                "selectedItem": null,
-                                              },
-                                            }
-                                          }
-                                          selectedFilters={Array []}
-                                          thingFilter={
-                                            Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "isLoading": false,
-                                              "items": Array [],
-                                              "label": "Thing",
-                                              "onButtonClick": [Function],
-                                              "onDelete": [Function],
-                                              "onItemClick": [Function],
-                                              "selectedItem": null,
-                                            }
-                                          }
-                                          type={
-                                            Object {
-                                              "isActive": false,
-                                              "isDisabled": false,
-                                              "items": Array [
-                                                "thing",
-                                                "date",
-                                              ],
-                                              "onButtonClick": [Function],
-                                              "onItemClick": [Function],
-                                            }
-                                          }
+                                        <div
+                                          className="columns"
                                         >
                                           <div
-                                            className="box"
+                                            className="column"
                                           >
-                                            <div
-                                              className="columns"
+                                            <Dropdown
+                                              buttonStyle="is-primary"
+                                              iconStyle="fa-plus"
+                                              isActive={false}
+                                              isDisabled={false}
+                                              isLoading={false}
+                                              items={
+                                                Array [
+                                                  "thing",
+                                                  "date",
+                                                ]
+                                              }
+                                              label="Filters"
+                                              onButtonClick={[Function]}
+                                              onItemClick={[Function]}
                                             >
                                               <div
-                                                className="column"
+                                                className="dropdown"
                                               >
-                                                <Dropdown
-                                                  buttonStyle="is-primary"
-                                                  iconStyle="fa-plus"
-                                                  isActive={false}
-                                                  isDisabled={false}
-                                                  isLoading={false}
-                                                  items={
-                                                    Array [
-                                                      "thing",
-                                                      "date",
-                                                    ]
-                                                  }
-                                                  label="Filters"
-                                                  onButtonClick={[Function]}
-                                                  onItemClick={[Function]}
+                                                <div
+                                                  className="dropdown-trigger"
                                                 >
-                                                  <div
-                                                    className="dropdown"
+                                                  <button
+                                                    aria-controls="dropdown-menu"
+                                                    aria-haspopup="true"
+                                                    className="button is-primary"
+                                                    disabled={false}
+                                                    onClick={[Function]}
                                                   >
-                                                    <div
-                                                      className="dropdown-trigger"
-                                                    >
-                                                      <button
-                                                        aria-controls="dropdown-menu"
-                                                        aria-haspopup="true"
-                                                        className="button is-primary"
-                                                        disabled={false}
-                                                        onClick={[Function]}
+                                                    <span>
+                                                      <FormattedMessage
+                                                        defaultMessage="Filters"
+                                                        id="Filters"
+                                                        values={Object {}}
                                                       >
                                                         <span>
-                                                          <FormattedMessage
-                                                            defaultMessage="Filters"
-                                                            id="Filters"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Filters
-                                                            </span>
-                                                          </FormattedMessage>
+                                                          Filters
                                                         </span>
-                                                        <span
-                                                          className="icon is-small"
-                                                        >
-                                                          <i
-                                                            aria-hidden="true"
-                                                            className="fas fa-plus"
-                                                          />
+                                                      </FormattedMessage>
+                                                    </span>
+                                                    <span
+                                                      className="icon is-small"
+                                                    >
+                                                      <i
+                                                        aria-hidden="true"
+                                                        className="fas fa-plus"
+                                                      />
+                                                    </span>
+                                                  </button>
+                                                </div>
+                                                <div
+                                                  className="dropdown-menu"
+                                                  id="dropdown-menu"
+                                                  role="menu"
+                                                >
+                                                  <div
+                                                    className="dropdown-content"
+                                                  >
+                                                    <div
+                                                      className="dropdown-item"
+                                                      key="thing"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
+                                                    >
+                                                      <FormattedMessage
+                                                        defaultMessage="thing"
+                                                        id="thing"
+                                                        values={Object {}}
+                                                      >
+                                                        <span>
+                                                          Thing
                                                         </span>
-                                                      </button>
+                                                      </FormattedMessage>
                                                     </div>
                                                     <div
-                                                      className="dropdown-menu"
-                                                      id="dropdown-menu"
-                                                      role="menu"
+                                                      className="dropdown-item"
+                                                      key="date"
+                                                      onClick={[Function]}
+                                                      onKeyPress={[Function]}
+                                                      role="button"
+                                                      tabIndex={0}
                                                     >
-                                                      <div
-                                                        className="dropdown-content"
+                                                      <FormattedMessage
+                                                        defaultMessage="date"
+                                                        id="date"
+                                                        values={Object {}}
                                                       >
-                                                        <div
-                                                          className="dropdown-item"
-                                                          key="thing"
-                                                          onClick={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          role="button"
-                                                          tabIndex={0}
-                                                        >
-                                                          <FormattedMessage
-                                                            defaultMessage="thing"
-                                                            id="thing"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Thing
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </div>
-                                                        <div
-                                                          className="dropdown-item"
-                                                          key="date"
-                                                          onClick={[Function]}
-                                                          onKeyPress={[Function]}
-                                                          role="button"
-                                                          tabIndex={0}
-                                                        >
-                                                          <FormattedMessage
-                                                            defaultMessage="date"
-                                                            id="date"
-                                                            values={Object {}}
-                                                          >
-                                                            <span>
-                                                              Date
-                                                            </span>
-                                                          </FormattedMessage>
-                                                        </div>
-                                                      </div>
+                                                        <span>
+                                                          Date
+                                                        </span>
+                                                      </FormattedMessage>
                                                     </div>
                                                   </div>
-                                                </Dropdown>
+                                                </div>
                                               </div>
-                                            </div>
+                                            </Dropdown>
                                           </div>
-                                        </FiltersPanel>
-                                      </FiltersPanelContainer>
-                                    </ResetOnUnmount>
-                                  </Connect(ResetOnUnmount)>
-                                </Connect(Connect(ResetOnUnmount))>
+                                        </div>
+                                      </div>
+                                    </FiltersPanel>
+                                  </FiltersPanelContainer>
+                                </Connect(FiltersPanelContainer)>
                               </div>
                             </div>
                           </div>
                         </Stats>
-                      </ResetOnUnmount>
-                    </Connect(ResetOnUnmount)>
-                  </DataParams>
-                </Connect(DataParams)>
-              </Route>
-            </withRouter(Connect(DataParams))>
+                      </DataParams>
+                    </Route>
+                  </withRouter(DataParams)>
+                </ResetOnUnmount>
+              </Connect(ResetOnUnmount)>
+            </Connect(Connect(ResetOnUnmount))>
           </Router>
         </MemoryRouter>
       </IntlProvider>

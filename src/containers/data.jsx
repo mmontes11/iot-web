@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { compose } from "recompose";
 import { handleDataParams } from "hocs/dataParams";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import store from "config/store";
 import { getData } from "actions/data";
 import { reset } from "actions/common";
@@ -33,7 +31,4 @@ Data.propTypes = {
 
 const withDataParams = handleDataParams("data", () => store.dispatch(getData()), () => store.dispatch(reset()));
 
-export default compose(
-  withDataParams,
-  withResetOnUnmount,
-)(Data);
+export default withDataParams(Data);

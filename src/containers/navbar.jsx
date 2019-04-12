@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import { compose } from "recompose";
 import * as actionsAuth from "actions/auth";
 import * as appActions from "actions/app";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import { FormattedMessage } from "react-intl";
 import LanguageSelector from "containers/languageSelector";
 
@@ -93,5 +92,4 @@ const withConnect = connect(
 export default compose(
   withRouter,
   withConnect,
-  withResetOnUnmount,
 )(Navbar);

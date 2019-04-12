@@ -9,7 +9,7 @@ exports[`containers/statFiltersPanel renders in in initial state 1`] = `
   }
   keyLength={0}
 >
-  <Connect(Connect(ResetOnUnmount))
+  <Connect(FiltersPanelContainer)
     onFiltersChange={[Function]}
   />
 </MemoryRouter>

@@ -229,9 +229,9 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
               }
             }
           >
-            <withRouter(Connect(Connect(ResetOnUnmount)))>
+            <withRouter(Connect(Navbar))>
               <Route>
-                <Connect(Connect(ResetOnUnmount))
+                <Connect(Navbar)
                   history={
                     Object {
                       "action": "POP",
@@ -279,7 +279,7 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                     }
                   }
                 >
-                  <Connect(ResetOnUnmount)
+                  <Navbar
                     history={
                       Object {
                         "action": "POP",
@@ -330,408 +330,302 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                     }
                     toggleHamburgerMenu={[Function]}
                   >
-                    <ResetOnUnmount
-                      history={
-                        Object {
-                          "action": "POP",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      isHamburgerMenuExpanded={false}
-                      location={
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        }
-                      }
-                      logout={[Function]}
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/",
-                          "url": "/",
-                        }
-                      }
-                      reset={[Function]}
-                      toggleHamburgerMenu={[Function]}
+                    <nav
+                      className="navbar has-shadow is-spaced"
                     >
-                      <Navbar
-                        history={
-                          Object {
-                            "action": "POP",
-                            "block": [Function],
-                            "canGo": [Function],
-                            "createHref": [Function],
-                            "entries": Array [
-                              Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              },
-                            ],
-                            "go": [Function],
-                            "goBack": [Function],
-                            "goForward": [Function],
-                            "index": 0,
-                            "length": 1,
-                            "listen": [Function],
-                            "location": Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                            "push": [Function],
-                            "replace": [Function],
-                          }
-                        }
-                        isHamburgerMenuExpanded={false}
-                        location={
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          }
-                        }
-                        logout={[Function]}
-                        match={
-                          Object {
-                            "isExact": true,
-                            "params": Object {},
-                            "path": "/",
-                            "url": "/",
-                          }
-                        }
-                        reset={[Function]}
-                        toggleHamburgerMenu={[Function]}
+                      <div
+                        className="navbar-brand"
                       >
-                        <nav
-                          className="navbar has-shadow is-spaced"
+                        <NavLink
+                          activeClassName="active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/"
                         >
-                          <div
-                            className="navbar-brand"
+                          <Route
+                            path="\\\\/"
                           >
-                            <NavLink
-                              activeClassName="active"
+                            <Link
                               aria-current="page"
-                              className="navbar-item"
+                              className="navbar-item active"
+                              replace={false}
+                              style={Object {}}
                               to="/"
                             >
-                              <Route
-                                path="\\\\/"
-                              >
-                                <Link
-                                  aria-current="page"
-                                  className="navbar-item active"
-                                  replace={false}
-                                  style={Object {}}
-                                  to="/"
-                                >
-                                  <a
-                                    aria-current="page"
-                                    className="navbar-item active"
-                                    href="/"
-                                    onClick={[Function]}
-                                    style={Object {}}
-                                  >
-                                    <FormattedMessage
-                                      id="IoT"
-                                      values={Object {}}
-                                    >
-                                      <h1
-                                        className="title"
-                                      >
-                                        IoT
-                                      </h1>
-                                    </FormattedMessage>
-                                  </a>
-                                </Link>
-                              </Route>
-                            </NavLink>
-                            <div
-                              className="navbar-burger burger"
-                              data-target="navbar-menu"
-                              onClick={[Function]}
-                              onKeyPress={[Function]}
-                              role="button"
-                              tabIndex={0}
-                            >
-                              <span />
-                              <span />
-                              <span />
-                            </div>
-                          </div>
-                          <div
-                            className="navbar-menu"
-                            id="navbar-menu"
-                          >
-                            <div
-                              className="navbar-start"
-                            >
-                              <NavLink
-                                activeClassName="navbar-item-active"
+                              <a
                                 aria-current="page"
+                                className="navbar-item active"
+                                href="/"
+                                onClick={[Function]}
+                                style={Object {}}
+                              >
+                                <FormattedMessage
+                                  id="IoT"
+                                  values={Object {}}
+                                >
+                                  <h1
+                                    className="title"
+                                  >
+                                    IoT
+                                  </h1>
+                                </FormattedMessage>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                        <div
+                          className="navbar-burger burger"
+                          data-target="navbar-menu"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                      </div>
+                      <div
+                        className="navbar-menu"
+                        id="navbar-menu"
+                      >
+                        <div
+                          className="navbar-start"
+                        >
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/things"
+                          >
+                            <Route
+                              path="\\\\/things"
+                            >
+                              <Link
+                                aria-current={null}
                                 className="navbar-item"
+                                replace={false}
                                 to="/things"
                               >
-                                <Route
-                                  path="\\\\/things"
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/things"
+                                  onClick={[Function]}
                                 >
-                                  <Link
-                                    aria-current={null}
-                                    className="navbar-item"
-                                    replace={false}
-                                    to="/things"
+                                  <span
+                                    className="icon"
                                   >
-                                    <a
-                                      aria-current={null}
-                                      className="navbar-item"
-                                      href="/things"
-                                      onClick={[Function]}
-                                    >
-                                      <span
-                                        className="icon"
-                                      >
-                                        <i
-                                          className="fas fa-microchip"
-                                        />
-                                      </span>
-                                      <FormattedMessage
-                                        id="Things"
-                                        values={Object {}}
-                                      >
-                                        <span>
-                                          Things
-                                        </span>
-                                      </FormattedMessage>
-                                    </a>
-                                  </Link>
-                                </Route>
-                              </NavLink>
-                              <NavLink
-                                activeClassName="navbar-item-active"
-                                aria-current="page"
+                                    <i
+                                      className="fas fa-microchip"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Things"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Things
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/stats"
+                          >
+                            <Route
+                              path="\\\\/stats"
+                            >
+                              <Link
+                                aria-current={null}
                                 className="navbar-item"
+                                replace={false}
                                 to="/stats"
                               >
-                                <Route
-                                  path="\\\\/stats"
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/stats"
+                                  onClick={[Function]}
                                 >
-                                  <Link
-                                    aria-current={null}
-                                    className="navbar-item"
-                                    replace={false}
-                                    to="/stats"
+                                  <span
+                                    className="icon"
                                   >
-                                    <a
-                                      aria-current={null}
-                                      className="navbar-item"
-                                      href="/stats"
-                                      onClick={[Function]}
-                                    >
-                                      <span
-                                        className="icon"
-                                      >
-                                        <i
-                                          className="fas fa-chart-bar"
-                                        />
-                                      </span>
-                                      <FormattedMessage
-                                        id="Stats"
-                                        values={Object {}}
-                                      >
-                                        <span>
-                                          Stats
-                                        </span>
-                                      </FormattedMessage>
-                                    </a>
-                                  </Link>
-                                </Route>
-                              </NavLink>
-                              <NavLink
-                                activeClassName="navbar-item-active"
-                                aria-current="page"
+                                    <i
+                                      className="fas fa-chart-bar"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Stats"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Stats
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/data"
+                          >
+                            <Route
+                              path="\\\\/data"
+                            >
+                              <Link
+                                aria-current={null}
                                 className="navbar-item"
+                                replace={false}
                                 to="/data"
                               >
-                                <Route
-                                  path="\\\\/data"
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/data"
+                                  onClick={[Function]}
                                 >
-                                  <Link
-                                    aria-current={null}
-                                    className="navbar-item"
-                                    replace={false}
-                                    to="/data"
+                                  <span
+                                    className="icon"
                                   >
-                                    <a
-                                      aria-current={null}
-                                      className="navbar-item"
-                                      href="/data"
-                                      onClick={[Function]}
-                                    >
-                                      <span
-                                        className="icon"
-                                      >
-                                        <i
-                                          className="fas fa-database"
-                                        />
-                                      </span>
-                                      <FormattedMessage
-                                        id="Data"
-                                        values={Object {}}
-                                      >
-                                        <span>
-                                          Data
-                                        </span>
-                                      </FormattedMessage>
-                                    </a>
-                                  </Link>
-                                </Route>
-                              </NavLink>
-                            </div>
-                            <div
-                              className="navbar-end"
+                                    <i
+                                      className="fas fa-database"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Data"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Data
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                        </div>
+                        <div
+                          className="navbar-end"
+                        >
+                          <Connect(LanguageSelector)>
+                            <LanguageSelector
+                              languages={
+                                Array [
+                                  "en",
+                                  "es",
+                                ]
+                              }
+                              selectedLanguage="en"
+                              updateLanguage={[Function]}
                             >
-                              <Connect(LanguageSelector)>
-                                <LanguageSelector
-                                  languages={
-                                    Array [
-                                      "en",
-                                      "es",
-                                    ]
-                                  }
-                                  selectedLanguage="en"
-                                  updateLanguage={[Function]}
-                                >
-                                  <div
-                                    className="navbar-item has-dropdown is-hoverable"
-                                  >
-                                    <button
-                                      className="navbar-link button is-white"
-                                    >
-                                      <LanguageItem
-                                        language="en"
-                                      >
-                                        <span
-                                          className="icon is-medium"
-                                        >
-                                          <i
-                                            className="flag-icon flag-icon-gb"
-                                          />
-                                        </span>
-                                        <FormattedMessage
-                                          id="en"
-                                          values={Object {}}
-                                        >
-                                          <span>
-                                            English
-                                          </span>
-                                        </FormattedMessage>
-                                      </LanguageItem>
-                                    </button>
-                                    <div
-                                      className="navbar-dropdown"
-                                    >
-                                      <button
-                                        className="navbar-item button is-white"
-                                        key="es"
-                                        onClick={[Function]}
-                                      >
-                                        <LanguageItem
-                                          language="es"
-                                        >
-                                          <span
-                                            className="icon is-medium"
-                                          >
-                                            <i
-                                              className="flag-icon flag-icon-es"
-                                            />
-                                          </span>
-                                          <FormattedMessage
-                                            id="es"
-                                            values={Object {}}
-                                          >
-                                            <span>
-                                              Spanish
-                                            </span>
-                                          </FormattedMessage>
-                                        </LanguageItem>
-                                      </button>
-                                    </div>
-                                  </div>
-                                </LanguageSelector>
-                              </Connect(LanguageSelector)>
                               <div
-                                className="navbar-item"
+                                className="navbar-item has-dropdown is-hoverable"
                               >
-                                <div
-                                  className="field"
+                                <button
+                                  className="navbar-link button is-white"
                                 >
-                                  <p
-                                    className="control"
+                                  <LanguageItem
+                                    language="en"
                                   >
-                                    <button
-                                      className="button is-primary"
-                                      id="logout-button"
-                                      onClick={[Function]}
+                                    <span
+                                      className="icon is-medium"
+                                    >
+                                      <i
+                                        className="flag-icon flag-icon-gb"
+                                      />
+                                    </span>
+                                    <FormattedMessage
+                                      id="en"
+                                      values={Object {}}
+                                    >
+                                      <span>
+                                        English
+                                      </span>
+                                    </FormattedMessage>
+                                  </LanguageItem>
+                                </button>
+                                <div
+                                  className="navbar-dropdown"
+                                >
+                                  <button
+                                    className="navbar-item button is-white"
+                                    key="es"
+                                    onClick={[Function]}
+                                  >
+                                    <LanguageItem
+                                      language="es"
                                     >
                                       <span
-                                        className="icon"
+                                        className="icon is-medium"
                                       >
                                         <i
-                                          className="fa fa-user"
+                                          className="flag-icon flag-icon-es"
                                         />
                                       </span>
                                       <FormattedMessage
-                                        id="Logout"
+                                        id="es"
                                         values={Object {}}
                                       >
                                         <span>
-                                          Logout
+                                          Spanish
                                         </span>
                                       </FormattedMessage>
-                                    </button>
-                                  </p>
+                                    </LanguageItem>
+                                  </button>
                                 </div>
                               </div>
+                            </LanguageSelector>
+                          </Connect(LanguageSelector)>
+                          <div
+                            className="navbar-item"
+                          >
+                            <div
+                              className="field"
+                            >
+                              <p
+                                className="control"
+                              >
+                                <button
+                                  className="button is-primary"
+                                  id="logout-button"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fa fa-user"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Logout"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Logout
+                                    </span>
+                                  </FormattedMessage>
+                                </button>
+                              </p>
                             </div>
                           </div>
-                        </nav>
-                      </Navbar>
-                    </ResetOnUnmount>
-                  </Connect(ResetOnUnmount)>
-                </Connect(Connect(ResetOnUnmount))>
+                        </div>
+                      </div>
+                    </nav>
+                  </Navbar>
+                </Connect(Navbar)>
               </Route>
-            </withRouter(Connect(Connect(ResetOnUnmount)))>
+            </withRouter(Connect(Navbar))>
           </Router>
         </MemoryRouter>
       </IntlProvider>
@@ -969,9 +863,9 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
               }
             }
           >
-            <withRouter(Connect(Connect(ResetOnUnmount)))>
+            <withRouter(Connect(Navbar))>
               <Route>
-                <Connect(Connect(ResetOnUnmount))
+                <Connect(Navbar)
                   history={
                     Object {
                       "action": "POP",
@@ -1019,7 +913,7 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                     }
                   }
                 >
-                  <Connect(ResetOnUnmount)
+                  <Navbar
                     history={
                       Object {
                         "action": "POP",
@@ -1070,408 +964,302 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                     }
                     toggleHamburgerMenu={[Function]}
                   >
-                    <ResetOnUnmount
-                      history={
-                        Object {
-                          "action": "POP",
-                          "block": [Function],
-                          "canGo": [Function],
-                          "createHref": [Function],
-                          "entries": Array [
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                          ],
-                          "go": [Function],
-                          "goBack": [Function],
-                          "goForward": [Function],
-                          "index": 0,
-                          "length": 1,
-                          "listen": [Function],
-                          "location": Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          },
-                          "push": [Function],
-                          "replace": [Function],
-                        }
-                      }
-                      isHamburgerMenuExpanded={true}
-                      location={
-                        Object {
-                          "hash": "",
-                          "pathname": "/",
-                          "search": "",
-                          "state": undefined,
-                        }
-                      }
-                      logout={[Function]}
-                      match={
-                        Object {
-                          "isExact": true,
-                          "params": Object {},
-                          "path": "/",
-                          "url": "/",
-                        }
-                      }
-                      reset={[Function]}
-                      toggleHamburgerMenu={[Function]}
+                    <nav
+                      className="navbar has-shadow is-spaced"
                     >
-                      <Navbar
-                        history={
-                          Object {
-                            "action": "POP",
-                            "block": [Function],
-                            "canGo": [Function],
-                            "createHref": [Function],
-                            "entries": Array [
-                              Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              },
-                            ],
-                            "go": [Function],
-                            "goBack": [Function],
-                            "goForward": [Function],
-                            "index": 0,
-                            "length": 1,
-                            "listen": [Function],
-                            "location": Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                            "push": [Function],
-                            "replace": [Function],
-                          }
-                        }
-                        isHamburgerMenuExpanded={true}
-                        location={
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          }
-                        }
-                        logout={[Function]}
-                        match={
-                          Object {
-                            "isExact": true,
-                            "params": Object {},
-                            "path": "/",
-                            "url": "/",
-                          }
-                        }
-                        reset={[Function]}
-                        toggleHamburgerMenu={[Function]}
+                      <div
+                        className="navbar-brand"
                       >
-                        <nav
-                          className="navbar has-shadow is-spaced"
+                        <NavLink
+                          activeClassName="active"
+                          aria-current="page"
+                          className="navbar-item"
+                          to="/"
                         >
-                          <div
-                            className="navbar-brand"
+                          <Route
+                            path="\\\\/"
                           >
-                            <NavLink
-                              activeClassName="active"
+                            <Link
                               aria-current="page"
-                              className="navbar-item"
+                              className="navbar-item active"
+                              replace={false}
+                              style={Object {}}
                               to="/"
                             >
-                              <Route
-                                path="\\\\/"
-                              >
-                                <Link
-                                  aria-current="page"
-                                  className="navbar-item active"
-                                  replace={false}
-                                  style={Object {}}
-                                  to="/"
-                                >
-                                  <a
-                                    aria-current="page"
-                                    className="navbar-item active"
-                                    href="/"
-                                    onClick={[Function]}
-                                    style={Object {}}
-                                  >
-                                    <FormattedMessage
-                                      id="IoT"
-                                      values={Object {}}
-                                    >
-                                      <h1
-                                        className="title"
-                                      >
-                                        IoT
-                                      </h1>
-                                    </FormattedMessage>
-                                  </a>
-                                </Link>
-                              </Route>
-                            </NavLink>
-                            <div
-                              className="navbar-burger burger is-active"
-                              data-target="navbar-menu"
-                              onClick={[Function]}
-                              onKeyPress={[Function]}
-                              role="button"
-                              tabIndex={0}
-                            >
-                              <span />
-                              <span />
-                              <span />
-                            </div>
-                          </div>
-                          <div
-                            className="navbar-menu is-active"
-                            id="navbar-menu"
-                          >
-                            <div
-                              className="navbar-start"
-                            >
-                              <NavLink
-                                activeClassName="navbar-item-active"
+                              <a
                                 aria-current="page"
+                                className="navbar-item active"
+                                href="/"
+                                onClick={[Function]}
+                                style={Object {}}
+                              >
+                                <FormattedMessage
+                                  id="IoT"
+                                  values={Object {}}
+                                >
+                                  <h1
+                                    className="title"
+                                  >
+                                    IoT
+                                  </h1>
+                                </FormattedMessage>
+                              </a>
+                            </Link>
+                          </Route>
+                        </NavLink>
+                        <div
+                          className="navbar-burger burger is-active"
+                          data-target="navbar-menu"
+                          onClick={[Function]}
+                          onKeyPress={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          <span />
+                          <span />
+                          <span />
+                        </div>
+                      </div>
+                      <div
+                        className="navbar-menu is-active"
+                        id="navbar-menu"
+                      >
+                        <div
+                          className="navbar-start"
+                        >
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/things"
+                          >
+                            <Route
+                              path="\\\\/things"
+                            >
+                              <Link
+                                aria-current={null}
                                 className="navbar-item"
+                                replace={false}
                                 to="/things"
                               >
-                                <Route
-                                  path="\\\\/things"
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/things"
+                                  onClick={[Function]}
                                 >
-                                  <Link
-                                    aria-current={null}
-                                    className="navbar-item"
-                                    replace={false}
-                                    to="/things"
+                                  <span
+                                    className="icon"
                                   >
-                                    <a
-                                      aria-current={null}
-                                      className="navbar-item"
-                                      href="/things"
-                                      onClick={[Function]}
-                                    >
-                                      <span
-                                        className="icon"
-                                      >
-                                        <i
-                                          className="fas fa-microchip"
-                                        />
-                                      </span>
-                                      <FormattedMessage
-                                        id="Things"
-                                        values={Object {}}
-                                      >
-                                        <span>
-                                          Things
-                                        </span>
-                                      </FormattedMessage>
-                                    </a>
-                                  </Link>
-                                </Route>
-                              </NavLink>
-                              <NavLink
-                                activeClassName="navbar-item-active"
-                                aria-current="page"
+                                    <i
+                                      className="fas fa-microchip"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Things"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Things
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/stats"
+                          >
+                            <Route
+                              path="\\\\/stats"
+                            >
+                              <Link
+                                aria-current={null}
                                 className="navbar-item"
+                                replace={false}
                                 to="/stats"
                               >
-                                <Route
-                                  path="\\\\/stats"
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/stats"
+                                  onClick={[Function]}
                                 >
-                                  <Link
-                                    aria-current={null}
-                                    className="navbar-item"
-                                    replace={false}
-                                    to="/stats"
+                                  <span
+                                    className="icon"
                                   >
-                                    <a
-                                      aria-current={null}
-                                      className="navbar-item"
-                                      href="/stats"
-                                      onClick={[Function]}
-                                    >
-                                      <span
-                                        className="icon"
-                                      >
-                                        <i
-                                          className="fas fa-chart-bar"
-                                        />
-                                      </span>
-                                      <FormattedMessage
-                                        id="Stats"
-                                        values={Object {}}
-                                      >
-                                        <span>
-                                          Stats
-                                        </span>
-                                      </FormattedMessage>
-                                    </a>
-                                  </Link>
-                                </Route>
-                              </NavLink>
-                              <NavLink
-                                activeClassName="navbar-item-active"
-                                aria-current="page"
+                                    <i
+                                      className="fas fa-chart-bar"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Stats"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Stats
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/data"
+                          >
+                            <Route
+                              path="\\\\/data"
+                            >
+                              <Link
+                                aria-current={null}
                                 className="navbar-item"
+                                replace={false}
                                 to="/data"
                               >
-                                <Route
-                                  path="\\\\/data"
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/data"
+                                  onClick={[Function]}
                                 >
-                                  <Link
-                                    aria-current={null}
-                                    className="navbar-item"
-                                    replace={false}
-                                    to="/data"
+                                  <span
+                                    className="icon"
                                   >
-                                    <a
-                                      aria-current={null}
-                                      className="navbar-item"
-                                      href="/data"
-                                      onClick={[Function]}
-                                    >
-                                      <span
-                                        className="icon"
-                                      >
-                                        <i
-                                          className="fas fa-database"
-                                        />
-                                      </span>
-                                      <FormattedMessage
-                                        id="Data"
-                                        values={Object {}}
-                                      >
-                                        <span>
-                                          Data
-                                        </span>
-                                      </FormattedMessage>
-                                    </a>
-                                  </Link>
-                                </Route>
-                              </NavLink>
-                            </div>
-                            <div
-                              className="navbar-end"
+                                    <i
+                                      className="fas fa-database"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Data"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Data
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                        </div>
+                        <div
+                          className="navbar-end"
+                        >
+                          <Connect(LanguageSelector)>
+                            <LanguageSelector
+                              languages={
+                                Array [
+                                  "en",
+                                  "es",
+                                ]
+                              }
+                              selectedLanguage="en"
+                              updateLanguage={[Function]}
                             >
-                              <Connect(LanguageSelector)>
-                                <LanguageSelector
-                                  languages={
-                                    Array [
-                                      "en",
-                                      "es",
-                                    ]
-                                  }
-                                  selectedLanguage="en"
-                                  updateLanguage={[Function]}
-                                >
-                                  <div
-                                    className="navbar-item has-dropdown is-hoverable"
-                                  >
-                                    <button
-                                      className="navbar-link button is-white"
-                                    >
-                                      <LanguageItem
-                                        language="en"
-                                      >
-                                        <span
-                                          className="icon is-medium"
-                                        >
-                                          <i
-                                            className="flag-icon flag-icon-gb"
-                                          />
-                                        </span>
-                                        <FormattedMessage
-                                          id="en"
-                                          values={Object {}}
-                                        >
-                                          <span>
-                                            English
-                                          </span>
-                                        </FormattedMessage>
-                                      </LanguageItem>
-                                    </button>
-                                    <div
-                                      className="navbar-dropdown"
-                                    >
-                                      <button
-                                        className="navbar-item button is-white"
-                                        key="es"
-                                        onClick={[Function]}
-                                      >
-                                        <LanguageItem
-                                          language="es"
-                                        >
-                                          <span
-                                            className="icon is-medium"
-                                          >
-                                            <i
-                                              className="flag-icon flag-icon-es"
-                                            />
-                                          </span>
-                                          <FormattedMessage
-                                            id="es"
-                                            values={Object {}}
-                                          >
-                                            <span>
-                                              Spanish
-                                            </span>
-                                          </FormattedMessage>
-                                        </LanguageItem>
-                                      </button>
-                                    </div>
-                                  </div>
-                                </LanguageSelector>
-                              </Connect(LanguageSelector)>
                               <div
-                                className="navbar-item"
+                                className="navbar-item has-dropdown is-hoverable"
                               >
-                                <div
-                                  className="field"
+                                <button
+                                  className="navbar-link button is-white"
                                 >
-                                  <p
-                                    className="control"
+                                  <LanguageItem
+                                    language="en"
                                   >
-                                    <button
-                                      className="button is-primary"
-                                      id="logout-button"
-                                      onClick={[Function]}
+                                    <span
+                                      className="icon is-medium"
+                                    >
+                                      <i
+                                        className="flag-icon flag-icon-gb"
+                                      />
+                                    </span>
+                                    <FormattedMessage
+                                      id="en"
+                                      values={Object {}}
+                                    >
+                                      <span>
+                                        English
+                                      </span>
+                                    </FormattedMessage>
+                                  </LanguageItem>
+                                </button>
+                                <div
+                                  className="navbar-dropdown"
+                                >
+                                  <button
+                                    className="navbar-item button is-white"
+                                    key="es"
+                                    onClick={[Function]}
+                                  >
+                                    <LanguageItem
+                                      language="es"
                                     >
                                       <span
-                                        className="icon"
+                                        className="icon is-medium"
                                       >
                                         <i
-                                          className="fa fa-user"
+                                          className="flag-icon flag-icon-es"
                                         />
                                       </span>
                                       <FormattedMessage
-                                        id="Logout"
+                                        id="es"
                                         values={Object {}}
                                       >
                                         <span>
-                                          Logout
+                                          Spanish
                                         </span>
                                       </FormattedMessage>
-                                    </button>
-                                  </p>
+                                    </LanguageItem>
+                                  </button>
                                 </div>
                               </div>
+                            </LanguageSelector>
+                          </Connect(LanguageSelector)>
+                          <div
+                            className="navbar-item"
+                          >
+                            <div
+                              className="field"
+                            >
+                              <p
+                                className="control"
+                              >
+                                <button
+                                  className="button is-primary"
+                                  id="logout-button"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fa fa-user"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Logout"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Logout
+                                    </span>
+                                  </FormattedMessage>
+                                </button>
+                              </p>
                             </div>
                           </div>
-                        </nav>
-                      </Navbar>
-                    </ResetOnUnmount>
-                  </Connect(ResetOnUnmount)>
-                </Connect(Connect(ResetOnUnmount))>
+                        </div>
+                      </div>
+                    </nav>
+                  </Navbar>
+                </Connect(Navbar)>
               </Route>
-            </withRouter(Connect(Connect(ResetOnUnmount)))>
+            </withRouter(Connect(Navbar))>
           </Router>
         </MemoryRouter>
       </IntlProvider>

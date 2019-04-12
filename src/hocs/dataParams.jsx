@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
@@ -126,7 +127,8 @@ export const handleDataParams = (path, getData, reset) => WrappedComponent => {
     { updateParams, addThingFilter, addTimePeriodFilter, addCustomTimePeriodFilter },
   );
   return compose(
-    withRouter,
     withConnect,
+    withResetOnUnmount,
+    withRouter,
   )(DataParams);
 };

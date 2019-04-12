@@ -1,7 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
-import { compose } from "recompose";
 import PropTypes from "prop-types";
 import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
@@ -74,7 +72,4 @@ StatsParamsPanel.propTypes = {
   updateObservation: PropTypes.func.isRequired,
 };
 
-export default compose(
-  withConnect,
-  withResetOnUnmount,
-)(StatsParamsPanel);
+export default withConnect(StatsParamsPanel);
