@@ -37,7 +37,10 @@ exports[`components/thingFilter renders ThingFilter in initial state 1`] = `
         onClick={[Function]}
         tabIndex={0}
       >
-        Delete
+        <FormattedMessage
+          id="Delete"
+          values={Object {}}
+        />
       </button>
     </div>
   </div>

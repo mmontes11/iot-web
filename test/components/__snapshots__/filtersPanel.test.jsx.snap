@@ -45,7 +45,7 @@ exports[`components/filterPanel renders with filters 1`] = `
       }
     }
   />
-  <DateFilter
+  <InjectIntl(DateFilter)
     dateFilter={
       Object {
         "custom": Object {

@@ -5,16 +5,18 @@ import { Provider } from "react-redux";
 import { MemoryRouter } from "react-router-dom";
 import thunk from "redux-thunk";
 import App from "containers/app";
-import { initialState } from "../constants/index";
+import IntlProvider from "containers/intlProvider";
+import { initialState, defaultStore } from "../constants/index";
 
 describe("containers/app", () => {
   it("renders the app without auth", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter initialEntries={["/"]} keyLength={0}>
-          <App />
-        </MemoryRouter>
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <App />
+          </MemoryRouter>
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -32,20 +34,23 @@ describe("containers/app", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <Provider store={store}>
-        <MemoryRouter initialEntries={["/"]} keyLength={0}>
-          <App />
-        </MemoryRouter>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <App />
+          </MemoryRouter>
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
   it("renders the app with auth in /foo", () => {
-    const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter initialEntries={["/foo"]} keyLength={0}>
-          <App />
-        </MemoryRouter>
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <MemoryRouter initialEntries={["/foo"]} keyLength={0}>
+            <App />
+          </MemoryRouter>
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -54,9 +59,11 @@ describe("containers/app", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <Provider store={store}>
-        <MemoryRouter initialEntries={["/things"]} keyLength={0}>
-          <App />
-        </MemoryRouter>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/things"]} keyLength={0}>
+            <App />
+          </MemoryRouter>
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -65,9 +72,11 @@ describe("containers/app", () => {
     const store = configureStore([thunk])(stateWithAuth);
     const wrapper = mount(
       <Provider store={store}>
-        <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
-          <App />
-        </MemoryRouter>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
+            <App />
+          </MemoryRouter>
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -90,9 +99,11 @@ describe("containers/app", () => {
     const store = configureStore([thunk])(state);
     const wrapper = mount(
       <Provider store={store}>
-        <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
-          <App />
-        </MemoryRouter>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/stats"]} keyLength={0}>
+            <App />
+          </MemoryRouter>
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();

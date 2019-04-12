@@ -7,6 +7,8 @@ import { compose } from "recompose";
 import * as actionsAuth from "actions/auth";
 import * as appActions from "actions/app";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
+import { FormattedMessage } from "react-intl";
+import LanguageSelector from "containers/languageSelector";
 
 const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
   const navbarBurgerClass = classNames("navbar-burger", "burger", {
@@ -19,7 +21,7 @@ const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
     <nav className="navbar has-shadow is-spaced">
       <div className="navbar-brand">
         <NavLink to="/" className="navbar-item">
-          <h1 className="title">IoT</h1>
+          <FormattedMessage id="IoT">{txt => <h1 className="title">{txt}</h1>}</FormattedMessage>
         </NavLink>
         <div
           className={navbarBurgerClass}
@@ -40,22 +42,23 @@ const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
             <span className="icon">
               <i className="fas fa-microchip" />
             </span>
-            <span>Things</span>
+            <FormattedMessage id="Things" />
           </NavLink>
           <NavLink to="/stats" className="navbar-item" activeClassName="navbar-item-active">
             <span className="icon">
               <i className="fas fa-chart-bar" />
             </span>
-            <span>Stats</span>
+            <FormattedMessage id="Stats" />
           </NavLink>
           <NavLink to="/data" className="navbar-item" activeClassName="navbar-item-active">
             <span className="icon">
               <i className="fas fa-database" />
             </span>
-            <span>Data</span>
+            <FormattedMessage id="Data" />
           </NavLink>
         </div>
         <div className="navbar-end">
+          <LanguageSelector />
           <div className="navbar-item">
             <div className="field">
               <p className="control">
@@ -63,7 +66,7 @@ const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
                   <span className="icon">
                     <i className="fa fa-user" />
                   </span>
-                  <span>Logout</span>
+                  <FormattedMessage id="Logout" />
                 </button>
               </p>
             </div>

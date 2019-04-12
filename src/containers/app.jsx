@@ -9,21 +9,23 @@ import * as appActions from "actions/app";
 import Login from "containers/login";
 import Main from "components/main";
 import Modal from "components/modal";
+import { injectIntl, intlShape } from "react-intl";
 
-const App = ({ isAuth, shouldShowError, setShowError }) => (
+const App = ({ intl: { formatMessage }, isAuth, shouldShowError, setShowError }) => (
   <Fragment>
     {isAuth ? <Main /> : <Login />}
     <Modal
       isActive={shouldShowError}
       onCloseClick={() => setShowError(false)}
       messageStyle="is-danger"
-      title="Error"
-      subTitle="Request failed"
+      title={formatMessage({ id: "Error" })}
+      subTitle={formatMessage({ id: "Request failed" })}
     />
   </Fragment>
 );
 
 App.propTypes = {
+  intl: intlShape.isRequired,
   isAuth: PropTypes.bool.isRequired,
   shouldShowError: PropTypes.bool.isRequired,
   setShowError: PropTypes.func.isRequired,
@@ -40,4 +42,5 @@ const withConnect = connect(
 export default compose(
   withRouter,
   withConnect,
+  injectIntl,
 )(App);

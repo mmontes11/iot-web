@@ -78,9 +78,10 @@ exports[`components/paramsPanel renders with some params 1`] = `
         disabled={true}
         onClick={[Function]}
       >
-        <span>
-          Reset
-        </span>
+        <FormattedMessage
+          id="Reset"
+          values={Object {}}
+        />
         <span
           className="icon is-small"
         >

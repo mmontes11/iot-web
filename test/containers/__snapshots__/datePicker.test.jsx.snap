@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/thingDetail renders 1`] = `
+exports[`components/datePicker renders in initial state 1`] = `
 <IntlProvider
   dispatch={[Function]}
   locale="en"
@@ -101,35 +101,9 @@ exports[`components/thingDetail renders 1`] = `
     }
   }
 >
-  <InjectIntl(ThingDetail)
-    onEventStatsClick={[Function]}
-    onMeasurementStatsClick={[Function]}
-    thing={
-      Object {
-        "geometry": Object {
-          "coordinates": Array [
-            -40.58457,
-            40.21339,
-          ],
-          "type": "Point",
-        },
-        "googleMapsUrl": "https://www.google.es/maps",
-        "ip": "http://192.168.0.20",
-        "lastObservation": "2018-08-18T10:30:04.158Z",
-        "name": "foo",
-        "supportedObservationTypes": Object {
-          "event": Array [
-            "foo",
-            "bar",
-          ],
-          "measurement": Array [
-            "bar",
-            "foo",
-          ],
-        },
-        "topic": "bar",
-      }
-    }
+  <Connect(DatePicker)
+    onChange={[Function]}
+    placeholder="Select date:"
   />
 </IntlProvider>
 `;

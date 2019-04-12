@@ -11,7 +11,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { colorForIndex } from "helpers/chart";
-import { formatDate } from "helpers/date";
+import { injectIntl, intlShape } from "react-intl";
+import { formatDateTime } from "helpers/date";
 
 const dataKey = (item, thing) => {
   const data = item.values.find(el => el.thing === thing);
@@ -26,35 +27,40 @@ const axisProps = {
   tickLine: false,
 };
 
-const lineProps = (thing, index) => ({
-  key: `${thing}${index}`,
-  name: thing,
-  type: "monotone",
-  strokeWidth: 3,
-  dot: false,
-  isAnimationActive: true,
-  dataKey: item => dataKey(item, thing),
-  stroke: colorForIndex(index),
-});
-
-const LineChart = ({ data, things }) => (
+const LineChart = ({ intl: { formatMessage, formatNumber, formatDate, formatTime }, data, things }) => (
   <ResponsiveContainer>
     <RechartsLineChart data={data}>
-      <XAxis dataKey="phenomenonTime" tickFormatter={item => formatDate(item)} {...axisProps} />
-      <YAxis {...axisProps} />
+      <XAxis
+        dataKey="phenomenonTime"
+        tickFormatter={tick => formatDateTime(tick, formatDate, formatTime)}
+        {...axisProps}
+      />
+      <YAxis {...axisProps} tickFormatter={tick => formatNumber(tick)} />
       <CartesianGrid strokeDasharray="3 3" />
-      <Tooltip />
+      <Tooltip
+        labelFormatter={label => formatDateTime(label, formatDate, formatTime)}
+        formatter={value => formatNumber(value)}
+      />
       <Legend />
       {things.map((thing, index) => (
-        <Line {...lineProps(thing, index)} />
+        <Line
+          key={thing}
+          name={formatMessage({ id: thing, defaultMessage: thing })}
+          type="monotone"
+          strokeWidth={3}
+          dot={false}
+          dataKey={item => dataKey(item, thing)}
+          stroke={colorForIndex(index)}
+        />
       ))}
     </RechartsLineChart>
   </ResponsiveContainer>
 );
 
 LineChart.propTypes = {
+  intl: intlShape.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   things: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default LineChart;
+export default injectIntl(LineChart);
