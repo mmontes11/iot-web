@@ -3,25 +3,41 @@ import ParamsPanel from "components/paramsPanel";
 import { shallow } from "enzyme";
 
 describe("components/paramsPanel", () => {
-  it("renders in normal state", () => {
+  it("renders with some params", () => {
     const wrapper = shallow(
       <ParamsPanel
-        type={{
-          label: "Select type",
-          items: ["foo", "bar"],
-          isActive: false,
-          onButtonClick: () => undefined,
-          onItemClick: () => undefined,
-        }}
-        observation={{
-          label: "Select type",
-          items: ["foo", "bar"],
-          isActive: false,
-          isLoading: false,
-          isDisabled: false,
-          onButtonClick: () => undefined,
-          onItemClick: () => undefined,
-        }}
+        params={[
+          {
+            key: "type",
+            label: "Select type",
+            items: ["foo", "bar"],
+            isActive: false,
+            isLoading: false,
+            isDisabled: false,
+            onButtonClick: () => undefined,
+            onItemClick: () => undefined,
+          },
+          {
+            key: "observation",
+            label: "Select observation",
+            items: ["foo", "bar"],
+            isActive: false,
+            isLoading: false,
+            isDisabled: false,
+            onButtonClick: () => undefined,
+            onItemClick: () => undefined,
+          },
+          {
+            key: "groupBy",
+            label: "Group by",
+            items: ["foo", "bar"],
+            isActive: false,
+            isLoading: false,
+            isDisabled: false,
+            onButtonClick: () => undefined,
+            onItemClick: () => undefined,
+          },
+        ]}
         reset={{
           isDisabled: true,
           onReset: () => undefined,
@@ -29,61 +45,5 @@ describe("components/paramsPanel", () => {
       />,
     );
     expect(wrapper).toMatchSnapshot();
-  });
-  it("renders after some params have been specified", () => {
-    const wrapper = shallow(
-      <ParamsPanel
-        type={{
-          label: "Select type",
-          items: ["foo", "bar"],
-          isActive: false,
-          onButtonClick: () => undefined,
-          onItemClick: () => undefined,
-        }}
-        observation={{
-          label: "Select type",
-          items: ["foo", "bar"],
-          isActive: false,
-          isLoading: false,
-          isDisabled: false,
-          onButtonClick: () => undefined,
-          onItemClick: () => undefined,
-        }}
-        reset={{
-          isDisabled: false,
-          onReset: () => undefined,
-        }}
-      />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-  it("simulates click on reset", () => {
-    const onReset = jest.fn();
-    const wrapper = shallow(
-      <ParamsPanel
-        type={{
-          label: "Select type",
-          items: ["foo", "bar"],
-          isActive: false,
-          onButtonClick: () => undefined,
-          onItemClick: () => undefined,
-        }}
-        observation={{
-          label: "Select type",
-          items: ["foo", "bar"],
-          isActive: false,
-          isLoading: false,
-          isDisabled: false,
-          onButtonClick: () => undefined,
-          onItemClick: () => undefined,
-        }}
-        reset={{
-          isDisabled: false,
-          onReset,
-        }}
-      />,
-    );
-    wrapper.find(".button").simulate("click");
-    expect(onReset).toHaveBeenCalledTimes(1);
   });
 });

@@ -9,25 +9,32 @@ exports[`components/tagList renders tags 1`] = `
   <p
     className="tag-list-label is-6"
   >
-    <strong>
-      foo
-    </strong>
+    <FormattedMessage
+      id="foo"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
   </p>
   <div
     className="tags"
   >
-    <span
-      className="tag is-warning"
-      key="Zm9v"
+    <FormattedMessage
+      defaultMessage="foo"
+      id="foo"
+      key="foo"
+      values={Object {}}
     >
-      foo
-    </span>
-    <span
-      className="tag is-warning"
-      key="YmFy"
+      <Component />
+    </FormattedMessage>
+    <FormattedMessage
+      defaultMessage="bar"
+      id="bar"
+      key="bar"
+      values={Object {}}
     >
-      bar
-    </span>
+      <Component />
+    </FormattedMessage>
   </div>
 </div>
 `;
@@ -39,18 +46,22 @@ exports[`components/tagList renders tags without label 1`] = `
   <div
     className="tags"
   >
-    <span
-      className="tag is-warning"
-      key="Zm9v"
+    <FormattedMessage
+      defaultMessage="foo"
+      id="foo"
+      key="foo"
+      values={Object {}}
     >
-      foo
-    </span>
-    <span
-      className="tag is-warning"
-      key="YmFy"
+      <Component />
+    </FormattedMessage>
+    <FormattedMessage
+      defaultMessage="bar"
+      id="bar"
+      key="bar"
+      values={Object {}}
     >
-      bar
-    </span>
+      <Component />
+    </FormattedMessage>
   </div>
 </div>
 `;
@@ -62,25 +73,32 @@ exports[`components/tagList renders tags without style 1`] = `
   <p
     className="tag-list-label is-6"
   >
-    <strong>
-      foo
-    </strong>
+    <FormattedMessage
+      id="foo"
+      values={Object {}}
+    >
+      <Component />
+    </FormattedMessage>
   </p>
   <div
     className="tags"
   >
-    <span
-      className="tag"
-      key="Zm9v"
+    <FormattedMessage
+      defaultMessage="foo"
+      id="foo"
+      key="foo"
+      values={Object {}}
     >
-      foo
-    </span>
-    <span
-      className="tag"
-      key="YmFy"
+      <Component />
+    </FormattedMessage>
+    <FormattedMessage
+      defaultMessage="bar"
+      id="bar"
+      key="bar"
+      values={Object {}}
     >
-      bar
-    </span>
+      <Component />
+    </FormattedMessage>
   </div>
 </div>
 `;

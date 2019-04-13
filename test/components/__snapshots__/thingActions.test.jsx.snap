@@ -18,9 +18,10 @@ exports[`components/thingActions renders 1`] = `
         className="fas fa-map-marked"
       />
     </span>
-    <span>
-      Google Maps
-    </span>
+    <FormattedMessage
+      id="Google maps"
+      values={Object {}}
+    />
   </a>
   <button
     className="button"
@@ -34,9 +35,10 @@ exports[`components/thingActions renders 1`] = `
         className="fas fa-chart-bar"
       />
     </span>
-    <span>
-      Event Stats
-    </span>
+    <FormattedMessage
+      id="Event stats"
+      values={Object {}}
+    />
   </button>
   <button
     className="button"
@@ -50,9 +52,10 @@ exports[`components/thingActions renders 1`] = `
         className="fas fa-chart-bar"
       />
     </span>
-    <span>
-      Measurement Stats
-    </span>
+    <FormattedMessage
+      id="Measurement stats"
+      values={Object {}}
+    />
   </button>
 </p>
 `;

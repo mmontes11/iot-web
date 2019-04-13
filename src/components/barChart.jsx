@@ -1,41 +1,53 @@
 import React from "react";
-import { BarChart as RechartsBarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import PropTypes from "prop-types";
+import {
+  BarChart as RechartsBarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
+import { colorForIndex } from "helpers/chart";
+import { injectIntl, intlShape } from "react-intl";
 
-const titleForStats = title => {
-  let titleText = `${title.type} stats of ${title.thing}`;
-  if (title.unit) {
-    titleText += ` (${title.unit.symbol})`;
+const BarChart = ({ intl: { formatMessage, formatNumber }, data }) => {
+  if (data === null || data.length === 0) {
+    return null;
   }
-  return titleText;
+  const dataElement = data[0];
+  const thingKey = "thing";
+  const barKeys = Object.keys(dataElement).filter(key => key !== thingKey);
+  return (
+    <ResponsiveContainer>
+      <RechartsBarChart data={data}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey={thingKey} />
+        <YAxis tickFormatter={tick => formatNumber(tick)} />
+        <Tooltip formatter={value => formatNumber(value)} />
+        <Legend />
+        {barKeys.map((barKey, index) => (
+          <Bar
+            key={barKey}
+            name={formatMessage({ id: barKey, defaultMessage: barKey })}
+            dataKey={barKey}
+            fill={colorForIndex(index)}
+          />
+        ))}
+      </RechartsBarChart>
+    </ResponsiveContainer>
+  );
 };
-
-const BarChart = props => (
-  <div className="box">
-    <div className="columns">
-      <div className="column">
-        <p className="title is-3 has-text-primary has-text-centered is-spaced">{titleForStats(props.stats.title)}</p>
-        <div className="barchart">
-          <ResponsiveContainer>
-            <RechartsBarChart data={props.stats.data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="value" fill="#70c1b3" />
-            </RechartsBarChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 BarChart.propTypes = {
-  stats: PropTypes.shape({
-    data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-    title: PropTypes.shape({}).isRequired,
-  }).isRequired,
+  intl: intlShape.isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
-export default BarChart;
+BarChart.defaultProps = {
+  data: null,
+};
+
+export default injectIntl(BarChart);

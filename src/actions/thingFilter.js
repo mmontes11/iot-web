@@ -16,9 +16,9 @@ export const selectThingFilter = (type, isActive) => dispatch => {
   if (!isActive) {
     let getThingsParams = [];
     if (type === EVENT_TYPE) {
-      getThingsParams = [false, true];
+      getThingsParams = [undefined, true];
     } else if (type === MEASUREMENT_TYPE) {
-      getThingsParams = [true, false];
+      getThingsParams = [true, undefined];
     }
     dispatch({ type: THING_FILTERS_REQUEST });
     iotClient.thingsService

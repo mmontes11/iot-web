@@ -1,66 +1,83 @@
 import {
-  TYPE_SELECT,
-  TYPE_UPDATED,
-  OBSERVATION_SELECT,
-  OBSERVATION_UPDATED,
-  OBSERVATIONS_REQUEST,
-  OBSERVATIONS_REQUEST_SUCCESS,
-  OBSERVATIONS_REQUEST_ERROR,
-  OBSERVATIONS_UPDATED,
+  PARAM_SELECT,
+  PARAM_UPDATE,
+  PARAM_RESET,
+  PARAM_REQUEST,
+  PARAM_REQUEST_SUCCESS,
+  PARAM_REQUEST_ERROR,
+  PARAM_ITEMS_UPDATED,
 } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
-import { OBSERVATION_TYPES } from "constants/observationTypes";
+import deepEqual from "deep-equal";
 
-const observationInitialState = {
+export const initialState = {
+  byId: {},
+  allIds: [],
+  isResetDisabled: true,
+};
+
+const paramInitialState = {
   items: [],
   isActive: false,
   isLoading: false,
-  isDisabled: true,
+  isDisabled: false,
   selectedItem: null,
 };
 
-export const initialState = {
-  type: {
-    items: OBSERVATION_TYPES,
-    isActive: false,
-    selectedItem: null,
-  },
-  observation: observationInitialState,
-  reset: {
-    isDisabled: true,
-  },
+const addParamIfNeeded = (state, paramId) => {
+  if (state.allIds.includes(paramId)) {
+    return state;
+  }
+  return {
+    ...state,
+    byId: {
+      ...state.byId,
+      [paramId]: paramInitialState,
+    },
+    allIds: [...state.allIds, paramId],
+  };
 };
 
-export default (state = initialState, { type, updatedType, updatedObservation, observations }) => {
+const updateParam = (state, paramId, param) => ({
+  ...state,
+  byId: {
+    ...state.byId,
+    [paramId]: param,
+  },
+});
+
+const allParamsInInitialState = state => Object.values(state.byId).every(param => deepEqual(param, paramInitialState));
+
+export default (state = initialState, { type, param: paramId, selectedItem, items }) => {
+  if (type === RESET) {
+    return initialState;
+  }
+  if (!paramId) {
+    return state;
+  }
+  let newState = { ...state };
+  newState = addParamIfNeeded(newState, paramId);
+  const param = newState.byId[paramId];
   switch (type) {
-    case TYPE_SELECT:
-      return { ...state, type: { ...state.type, isActive: !state.type.isActive } };
-    case TYPE_UPDATED:
-      return {
-        ...state,
-        type: { ...state.type, isActive: false, selectedItem: updatedType },
-        observation: observationInitialState,
-        reset: { ...state.reset, isDisabled: false },
-      };
-    case OBSERVATION_SELECT:
-      return { ...state, observation: { ...state.observation, isActive: !state.observation.isActive } };
-    case OBSERVATION_UPDATED:
-      return {
-        ...state,
-        observation: { ...state.observation, isActive: false, selectedItem: updatedObservation },
-        reset: { ...state.reset, isDisabled: false },
-      };
-    case OBSERVATIONS_REQUEST:
-      return { ...state, observation: { ...state.observation, isLoading: true, isDisabled: true } };
-    case OBSERVATIONS_REQUEST_SUCCESS:
-      return { ...state, observation: { ...state.observation, isLoading: false, isDisabled: false } };
-    case OBSERVATIONS_REQUEST_ERROR:
-      return { ...state, observation: { ...state.observation, isLoading: false, isDisabled: true } };
-    case OBSERVATIONS_UPDATED:
-      return { ...state, observation: { ...state.observation, items: observations } };
-    case RESET:
-      return initialState;
+    case PARAM_SELECT:
+      return updateParam(newState, paramId, { ...param, isActive: !param.isActive });
+    case PARAM_UPDATE:
+      return { ...updateParam(newState, paramId, { ...param, isActive: false, selectedItem }), isResetDisabled: false };
+    case PARAM_RESET: {
+      const newStateWithResetParam = updateParam(newState, paramId, paramInitialState);
+      return { ...newStateWithResetParam, isResetDisabled: allParamsInInitialState(newStateWithResetParam) };
+    }
+    case PARAM_REQUEST:
+      return updateParam(newState, paramId, { ...param, isLoading: true, isDisabled: true });
+    case PARAM_REQUEST_SUCCESS:
+      return updateParam(newState, paramId, { ...param, isLoading: false, isDisabled: false });
+    case PARAM_REQUEST_ERROR:
+      return updateParam(newState, paramId, { ...param, isLoading: false, isDisabled: false });
+    case PARAM_ITEMS_UPDATED:
+      return updateParam(newState, paramId, { ...param, items });
     default:
       return state;
   }
 };
+
+export const getParam = (state, paramName) => state.byId[paramName] || {};

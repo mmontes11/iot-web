@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import { FormattedMessage } from "react-intl";
 
 const Dropdown = ({
   label,
@@ -26,7 +27,9 @@ const Dropdown = ({
           onClick={() => onButtonClick()}
           disabled={isDisabled}
         >
-          <span>{label}</span>
+          <span>
+            <FormattedMessage id={label} defaultMessage={label} />
+          </span>
           <span className="icon is-small">
             <i className={iconClass} aria-hidden="true" />
           </span>
@@ -37,7 +40,7 @@ const Dropdown = ({
           {items &&
             items.map(item => (
               <div
-                key={btoa(item)}
+                key={item}
                 className="dropdown-item"
                 onClick={() => {
                   onItemClick(item);
@@ -46,7 +49,7 @@ const Dropdown = ({
                 role="button"
                 tabIndex={0}
               >
-                {item}
+                <FormattedMessage id={item} defaultMessage={item} />
               </div>
             ))}
         </div>
@@ -58,7 +61,7 @@ const Dropdown = ({
 Dropdown.propTypes = {
   label: PropTypes.string.isRequired,
   buttonStyle: PropTypes.string,
-  iconStyle: PropTypes.string.isRequired,
+  iconStyle: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   isActive: PropTypes.bool.isRequired,
   isLoading: PropTypes.bool.isRequired,
@@ -69,6 +72,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   buttonStyle: "",
+  iconStyle: "fa-angle-down",
 };
 
 export default Dropdown;

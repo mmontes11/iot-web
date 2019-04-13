@@ -10,12 +10,11 @@ const Map = ({ zoom, center, label, point, isDialogOpened, toggleDialog }) => (
   <GoogleMap zoom={zoom} center={center}>
     {point && (
       <Marker position={point} onClick={() => toggleDialog()}>
-        {label &&
-          isDialogOpened && (
-            <InfoWindow onCloseClick={() => toggleDialog()}>
-              <p className="title is-6 has-text-primary">{label}</p>
-            </InfoWindow>
-          )}
+        {label && isDialogOpened && (
+          <InfoWindow onCloseClick={() => toggleDialog()}>
+            <p className="title is-6 has-text-primary">{label}</p>
+          </InfoWindow>
+        )}
       </Marker>
     )}
   </GoogleMap>

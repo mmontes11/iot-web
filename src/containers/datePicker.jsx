@@ -1,21 +1,22 @@
 import React from "react";
-import ReactDatePicker from "react-datepicker";
 import PropTypes from "prop-types";
+import ReactDatePicker from "react-datepicker";
+import { connect } from "react-redux";
 
-const DatePicker = ({ placeholder, selected, onChange }) => (
+const DatePicker = ({ locale, placeholder, selected, onChange }) => (
   <ReactDatePicker
+    locale={locale}
     selected={selected}
     onChange={date => onChange(date)}
     showTimeSelect
-    timeFormat="hh:mm"
     timeIntervals={15}
-    dateFormat="yyyy-MM-dd hh:mm"
+    dateFormat="Pp"
     placeholderText={placeholder}
-    timeCaption="Time"
   />
 );
 
 DatePicker.propTypes = {
+  locale: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   selected: PropTypes.instanceOf(Date),
   onChange: PropTypes.func.isRequired,
@@ -25,4 +26,8 @@ DatePicker.defaultProps = {
   selected: null,
 };
 
-export default DatePicker;
+const withConnect = connect(state => ({
+  locale: state.localization.selectedLanguage,
+}));
+
+export default withConnect(DatePicker);

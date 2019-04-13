@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Dropdown from "components/dropdown";
-import DatePicker from "components/datePicker";
+import DatePicker from "containers/datePicker";
 import { DATE_FILTER_TYPE } from "constants/filterTypes";
+import { injectIntl, intlShape } from "react-intl";
 
-const DateFilter = ({ dateFilter }) => {
+const DateFilter = ({ intl: { formatMessage }, dateFilter }) => {
   const deleteFilter = () => {
     dateFilter.onDelete(DATE_FILTER_TYPE);
   };
@@ -27,7 +28,7 @@ const DateFilter = ({ dateFilter }) => {
           <div className="columns">
             <div className="column">
               <DatePicker
-                placeholder="Select start date:"
+                placeholder={formatMessage({ id: "Start date" })}
                 selected={dateFilter.custom.startDate.selected}
                 onChange={date => dateFilter.custom.startDate.onChange(date)}
               />
@@ -36,7 +37,7 @@ const DateFilter = ({ dateFilter }) => {
           <div className="columns">
             <div className="column">
               <DatePicker
-                placeholder="Select end date:"
+                placeholder={formatMessage({ id: "End date" })}
                 selected={dateFilter.custom.endDate.selected}
                 onChange={date => dateFilter.custom.endDate.onChange(date)}
               />
@@ -47,12 +48,13 @@ const DateFilter = ({ dateFilter }) => {
       <div className="columns">
         <div className="column is-10">
           <button id="time-period-button" className="button is-info" onClick={() => dateFilter.selector.onChange()}>
-            {(dateFilter.selector.isCustomSelected && "Time Period") || "Custom"}
+            {(dateFilter.selector.isCustomSelected && formatMessage({ id: "Time period" })) ||
+              formatMessage({ id: "Custom" })}
           </button>
         </div>
         <div className="column is-center">
           <button id="delete-button" className="delete is-medium" onClick={() => deleteFilter()} tabIndex={0}>
-            Delete
+            {formatMessage({ id: "Delete" })}
           </button>
         </div>
       </div>
@@ -66,6 +68,7 @@ const dateShape = PropTypes.shape({
 });
 
 DateFilter.propTypes = {
+  intl: intlShape.isRequired,
   dateFilter: PropTypes.shape({
     selector: PropTypes.shape({
       isCustomSelected: PropTypes.bool.isRequired,
@@ -88,4 +91,4 @@ DateFilter.propTypes = {
   }).isRequired,
 };
 
-export default DateFilter;
+export default injectIntl(DateFilter);

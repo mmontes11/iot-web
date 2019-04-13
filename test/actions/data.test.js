@@ -1,9 +1,9 @@
-import { getStats } from "actions/stats";
+import { getStats } from "actions/data";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 import { FILTER_TYPES } from "constants/filterTypes";
 import { initialState } from "../constants";
 
-describe("actions/stats", () => {
+describe("actions/data", () => {
   it("dispatches a getStats action for event stats", () => {
     const thunk = getStats();
     const dispatch = jest.fn();

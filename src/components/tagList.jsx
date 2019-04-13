@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import { FormattedMessage } from "react-intl";
 
 const TagList = ({ label, tags, tagStyle }) => {
   if (tags.length === 0) {
@@ -11,14 +12,14 @@ const TagList = ({ label, tags, tagStyle }) => {
     <div className="tag-list">
       {label && (
         <p className="tag-list-label is-6">
-          <strong>{label}</strong>
+          <FormattedMessage id={label}>{txt => <strong>{txt}</strong>}</FormattedMessage>
         </p>
       )}
       <div className="tags">
         {tags.map(tag => (
-          <span key={btoa(tag)} className={tagClass}>
-            {tag}
-          </span>
+          <FormattedMessage key={tag} id={tag} defaultMessage={tag}>
+            {txt => <span className={tagClass}>{txt}</span>}
+          </FormattedMessage>
         ))}
       </div>
     </div>

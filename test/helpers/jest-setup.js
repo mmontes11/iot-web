@@ -104,6 +104,11 @@ jest.mock("lib/iotClient", () => ({
   },
 }));
 
-jest.mock("helpers/dateFormatter", () => ({
-  formatDate: () => "Mock Date",
+jest.mock("helpers/date", () => ({
+  formatDateTime: () => "Mock Date",
+}));
+
+jest.mock("helpers/localStorage", () => ({
+  setLanguage: () => undefined,
+  getLanguage: () => "en",
 }));

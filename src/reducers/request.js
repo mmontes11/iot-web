@@ -1,6 +1,6 @@
 import { RESET } from "constants/actionTypes/common";
 
-const initialState = {
+export const initialState = {
   pending: 0,
   statusCode: null,
   error: null,

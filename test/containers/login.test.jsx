@@ -4,14 +4,16 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
 import Login from "containers/login";
-import { initialState } from "../constants/index";
+import IntlProvider from "containers/intlProvider";
+import { initialState, defaultStore } from "../constants/index";
 
 describe("containers/login", () => {
   it("renders login in initial state and unmounts", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <Provider store={store}>
-        <Login />
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <Login />
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -35,7 +37,9 @@ describe("containers/login", () => {
     const store = configureStore([thunk])(state);
     const wrapper = mount(
       <Provider store={store}>
-        <Login />
+        <IntlProvider store={store}>
+          <Login />
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
@@ -44,7 +48,9 @@ describe("containers/login", () => {
     const store = configureStore([thunk])(initialState);
     const wrapper = mount(
       <Provider store={store}>
-        <Login />
+        <IntlProvider store={store}>
+          <Login />
+        </IntlProvider>
       </Provider>,
     );
     expect(wrapper).toMatchSnapshot();

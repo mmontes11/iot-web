@@ -1,17 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
-import { compose } from "recompose";
 import PropTypes from "prop-types";
 import FiltersPanel from "components/filtersPanel";
 import * as filterActions from "actions/filters";
 import * as thingFilterActions from "actions/thingFilter";
 import * as dateFilterActions from "actions/dateFilter";
+import * as fromState from "reducers";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
+import { TYPE } from "constants/params";
 
-const StatsFiltersPanel = ({
-  onFiltersChange,
+const FiltersPanelContainer = ({
+  onFiltersSelected,
   type,
   statsType,
   thingFilter,
@@ -36,11 +35,11 @@ const StatsFiltersPanel = ({
     }}
     thingFilter={{
       ...thingFilter,
-      label: thingFilter.selectedItem || "Select Thing: ",
+      label: thingFilter.selectedItem || "Thing",
       onButtonClick: () => selectThingFilter(statsType, thingFilter.isActive),
       onItemClick: item => {
         updateThingFilter(item);
-        onFiltersChange(
+        onFiltersSelected(
           item,
           dateFilter.timePeriod.selectedItem,
           dateFilter.custom.startDate,
@@ -49,7 +48,7 @@ const StatsFiltersPanel = ({
       },
       onDelete: item => {
         deleteFilterType(item);
-        onFiltersChange();
+        onFiltersSelected();
       },
     }}
     dateFilter={{
@@ -60,11 +59,11 @@ const StatsFiltersPanel = ({
       },
       timePeriod: {
         ...dateFilter.timePeriod,
-        label: dateFilter.timePeriod.selectedItem || "Select Time Period:",
+        label: dateFilter.timePeriod.selectedItem || "Time period",
         onButtonClick: () => selectTimePeriod(dateFilter.timePeriod.isActive),
         onItemClick: item => {
           updateTimePeriod(item);
-          onFiltersChange(thingFilter.selectedItem, item, dateFilter.custom.startDate, dateFilter.custom.endDate);
+          onFiltersSelected(thingFilter.selectedItem, item, dateFilter.custom.startDate, dateFilter.custom.endDate);
         },
       },
       custom: {
@@ -72,7 +71,7 @@ const StatsFiltersPanel = ({
           selected: dateFilter.custom.startDate,
           onChange: date => {
             updateStartDate(date);
-            onFiltersChange(
+            onFiltersSelected(
               thingFilter.selectedItem,
               dateFilter.timePeriod.selectedItem,
               date,
@@ -84,7 +83,7 @@ const StatsFiltersPanel = ({
           selected: dateFilter.custom.endDate,
           onChange: date => {
             updateEndDate(date);
-            onFiltersChange(
+            onFiltersSelected(
               thingFilter.selectedItem,
               dateFilter.timePeriod.selectedItem,
               dateFilter.custom.startDate,
@@ -96,14 +95,14 @@ const StatsFiltersPanel = ({
       onDelete: item => {
         deleteFilterType(item);
         if (item === THING_FILTER_TYPE) {
-          onFiltersChange(
+          onFiltersSelected(
             undefined,
             dateFilter.timePeriod.selectedItem,
             dateFilter.custom.startDate,
             dateFilter.custom.endDate,
           );
         } else if (item === DATE_FILTER_TYPE) {
-          onFiltersChange(thingFilter.selectedItem);
+          onFiltersSelected(thingFilter.selectedItem);
         }
       },
     }}
@@ -111,8 +110,8 @@ const StatsFiltersPanel = ({
   />
 );
 
-StatsFiltersPanel.propTypes = {
-  onFiltersChange: PropTypes.func.isRequired,
+FiltersPanelContainer.propTypes = {
+  onFiltersSelected: PropTypes.func.isRequired,
   type: PropTypes.shape({}).isRequired,
   statsType: PropTypes.string,
   thingFilter: PropTypes.shape({}).isRequired,
@@ -130,23 +129,19 @@ StatsFiltersPanel.propTypes = {
   updateEndDate: PropTypes.func.isRequired,
 };
 
-StatsFiltersPanel.defaultProps = {
+FiltersPanelContainer.defaultProps = {
   statsType: null,
 };
 
 const withConnect = connect(
   state => ({
-    type: state.stats.filters.type,
-    statsType: state.stats.params.type.selectedItem,
-    thingFilter: state.stats.filters.thingFilter,
-    dateFilter: state.stats.filters.dateFilter,
-    selectedFilters: state.stats.filters.items,
+    statsType: fromState.getParam(state, TYPE).selectedItem,
+    type: state.filters.type,
+    thingFilter: state.filters.thingFilter,
+    dateFilter: state.filters.dateFilter,
+    selectedFilters: state.filters.items,
   }),
   { ...filterActions, ...thingFilterActions, ...dateFilterActions },
 );
 
-export default compose(
-  withRouter,
-  withConnect,
-  withResetOnUnmount,
-)(StatsFiltersPanel);
+export default withConnect(FiltersPanelContainer);

@@ -1,7 +1,7 @@
 import { TOGGLE_HAMBURGER_MENU, TOGGLE_MAP_DIALOG, SET_SHOW_ERROR } from "constants/actionTypes/app";
 import { RESET } from "constants/actionTypes/common";
 
-const initialState = {
+export const initialState = {
   isHamburgerMenuExpanded: false,
   isMapDialogOpened: false,
   showError: true,

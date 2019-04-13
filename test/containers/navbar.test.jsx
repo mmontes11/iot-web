@@ -5,17 +5,19 @@ import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
 import { MemoryRouter } from "react-router-dom";
 import Navbar from "containers/navbar";
-import { initialState } from "../constants/index";
+import IntlProvider from "containers/intlProvider";
+import { initialState, defaultStore } from "../constants/index";
 
 describe("containers/navbar", () => {
   it("renders navbar in initial state and unmounts", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <MemoryRouter keyLength={0}>
-        <Provider store={store}>
-          <Navbar />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <MemoryRouter keyLength={0}>
+            <Navbar />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
@@ -29,26 +31,29 @@ describe("containers/navbar", () => {
     };
     const store = configureStore([thunk])(state);
     const wrapper = mount(
-      <MemoryRouter keyLength={0}>
-        <Provider store={store}>
-          <Navbar />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={store}>
+        <IntlProvider store={store}>
+          <MemoryRouter keyLength={0}>
+            <Navbar />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapper).toMatchSnapshot();
   });
   it("simulates a click in logout button", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapper = mount(
-      <MemoryRouter keyLength={0}>
-        <Provider store={store}>
-          <Navbar />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <MemoryRouter keyLength={0}>
+            <Navbar />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     const logoutButton = wrapper.find("#logout-button");
     logoutButton.first().simulate("click");
-    expect(store.getState().auth.isAuth).toBeFalsy();
-    expect(store.getState()).toMatchSnapshot();
+    expect(defaultStore.getState().auth.isAuth).toBeFalsy();
+    expect(defaultStore.getState()).toMatchSnapshot();
   });
 });

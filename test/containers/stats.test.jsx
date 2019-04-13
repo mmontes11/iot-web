@@ -5,17 +5,19 @@ import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
 import Stats from "containers/stats";
-import { initialState, statsWithUnits, statsWithoutUnits } from "../constants";
+import IntlProvider from "containers/intlProvider";
+import { initialState, defaultStore, statsWithUnits, statsWithoutUnits } from "../constants";
 
 describe("containers/stats", () => {
   it("renders stats in initial state", () => {
-    const store = configureStore([thunk])(initialState);
     const wrapperLoading = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <Stats />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={defaultStore}>
+        <IntlProvider store={defaultStore}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <Stats />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapperLoading).toMatchSnapshot();
   });
@@ -27,38 +29,42 @@ describe("containers/stats", () => {
         statusCode: null,
         error: null,
       },
-      stats: {
-        ...initialState.stats,
+      data: {
+        ...initialState.data,
         isLoading: true,
         items: [],
       },
     };
     const store = configureStore([thunk])(state);
     const wrapperLoading = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <Stats />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={store}>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <Stats />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapperLoading).toMatchSnapshot();
   });
-  it("renders stats barcharts", () => {
+  it("renders stats", () => {
     const state = {
       ...initialState,
-      stats: {
-        ...initialState.stats,
+      data: {
+        ...initialState.data,
         isLoading: false,
         items: [statsWithUnits, statsWithoutUnits],
       },
     };
     const store = configureStore([thunk])(state);
     const wrapperLoading = mount(
-      <MemoryRouter initialEntries={["/"]} keyLength={0}>
-        <Provider store={store}>
-          <Stats />
-        </Provider>
-      </MemoryRouter>,
+      <Provider store={store}>
+        <IntlProvider store={store}>
+          <MemoryRouter initialEntries={["/"]} keyLength={0}>
+            <Stats />
+          </MemoryRouter>
+        </IntlProvider>
+      </Provider>,
     );
     expect(wrapperLoading).toMatchSnapshot();
   });

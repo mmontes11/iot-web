@@ -8,8 +8,9 @@ import ThingDetail from "components/thingDetail";
 import Loader from "components/loader";
 import Modal from "components/modal";
 import * as thingActions from "actions/things";
-import * as reducerHelpers from "reducers";
+import * as fromState from "reducers";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
+import { injectIntl, intlShape } from "react-intl";
 
 class Things extends React.Component {
   componentDidMount() {
@@ -58,7 +59,14 @@ class Things extends React.Component {
     );
   };
   render() {
-    const { isLoading, things, selectedThing, shouldShowNotFoundError, showNotFoundError } = this.props;
+    const {
+      intl: { formatMessage },
+      isLoading,
+      things,
+      selectedThing,
+      shouldShowNotFoundError,
+      showNotFoundError,
+    } = this.props;
     if (isLoading && things.length === 0) {
       return <Loader />;
     }
@@ -69,7 +77,7 @@ class Things extends React.Component {
             <div className="column is-one-quarter">
               {things.map(thing => (
                 <ThingItem
-                  key={btoa(thing.name)}
+                  key={thing.name}
                   name={thing.name}
                   isSelected={this._isSelected(thing)}
                   onClick={() => this._selectThing(thing)}
@@ -91,8 +99,8 @@ class Things extends React.Component {
           isActive={shouldShowNotFoundError}
           onCloseClick={() => showNotFoundError(false)}
           messageStyle="is-danger"
-          title="Error"
-          subTitle="Thing not found"
+          title={formatMessage({ id: "Error" })}
+          subTitle={formatMessage({ id: "Thing not found" })}
         />
       </div>
     );
@@ -100,6 +108,7 @@ class Things extends React.Component {
 }
 
 Things.propTypes = {
+  intl: intlShape.isRequired,
   getThings: PropTypes.func.isRequired,
   selectThing: PropTypes.func.isRequired,
   selectedThing: PropTypes.shape({
@@ -123,7 +132,7 @@ Things.defaultProps = {
 
 const withConnect = connect(
   state => ({
-    isLoading: reducerHelpers.isLoading(state),
+    isLoading: fromState.isLoading(state),
     things: state.things.items,
     selectedThing: state.things.selectedItem,
     shouldShowNotFoundError: state.things.showNotFoundError,
@@ -136,7 +145,8 @@ const withConnect = connect(
 );
 
 export default compose(
-  withRouter,
   withConnect,
+  withRouter,
   withResetOnUnmount,
+  injectIntl,
 )(Things);
