@@ -11,6 +11,7 @@ import * as thingActions from "actions/things";
 import * as fromState from "reducers";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import { injectIntl, intlShape } from "react-intl";
+import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 import { defaultGroupBy } from "config/params";
 
 class Things extends React.Component {
@@ -27,7 +28,7 @@ class Things extends React.Component {
         params: { thing: thingName },
       },
     } = this.props;
-    if (selectedThing == null && things.length > 0 && thingName) {
+    if (selectedThing === null && things.length > 0 && thingName) {
       const thing = things.find(t => t.name === thingName);
       if (thing) {
         this._selectThing(thing);
@@ -49,15 +50,18 @@ class Things extends React.Component {
   _resetPathToRoot = () => {
     this.props.history.push("/things");
   };
-  _onEventStatsClick = thing => {
-    this.props.history.push(
-      `/stats/event/${thing.supportedObservationTypes.event[0]}?thing=${thing.name}&timePeriod=day`,
-    );
-  };
-  _onMeasurementStatsClick = thing => {
-    this.props.history.push(
-      `/stats/measurement/${thing.supportedObservationTypes.measurement[0]}?thing=${thing.name}&timePeriod=day`,
-    );
+  _onStatsClick = (type, thing) => {
+    const supportedEvents = thing.supportedObservationTypes.event;
+    const supportedMeasurements = thing.supportedObservationTypes.measurement;
+    let url;
+    if (type === EVENT_TYPE && supportedEvents && supportedEvents.length > 0) {
+      url = `/stats/${type}/${supportedEvents[0]}?thing=${thing.name}&timePeriod=day`;
+    } else if (type === MEASUREMENT_TYPE && supportedMeasurements && supportedMeasurements.length > 0) {
+      url = `/stats/${type}/${supportedMeasurements[0]}?thing=${thing.name}&timePeriod=day`;
+    }
+    if (url) {
+      this.props.history.push(url);
+    }
   };
   _onDataClick = (type, observation, thing) => {
     this.props.history.push(`/data/${type}/${observation}?thing=${thing.name}&groupBy=${defaultGroupBy}`);
@@ -92,8 +96,7 @@ class Things extends React.Component {
               <div className="column is-three-quarters">
                 <ThingDetail
                   thing={selectedThing}
-                  onEventStatsClick={() => this._onEventStatsClick(selectedThing)}
-                  onMeasurementStatsClick={() => this._onMeasurementStatsClick(selectedThing)}
+                  onStatsClick={type => this._onStatsClick(type, selectedThing)}
                   onDataClick={(type, observation) => this._onDataClick(type, observation, selectedThing)}
                 />
               </div>

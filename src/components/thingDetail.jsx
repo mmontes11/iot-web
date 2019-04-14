@@ -6,14 +6,9 @@ import Map from "containers/map";
 import { pointToLatLng } from "helpers/geometry";
 import { formatDateTime } from "helpers/date";
 import { injectIntl, intlShape, FormattedMessage } from "react-intl";
+import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 
-const ThingDetail = ({
-  intl: { formatDate, formatTime },
-  thing,
-  onEventStatsClick,
-  onMeasurementStatsClick,
-  onDataClick,
-}) => (
+const ThingDetail = ({ intl: { formatDate, formatTime }, thing, onStatsClick, onDataClick }) => (
   <div className="card">
     <div className="card-content">
       <div className="columns">
@@ -37,19 +32,15 @@ const ThingDetail = ({
             label="Events:"
             tags={thing.supportedObservationTypes.event}
             tagStyle="is-warning"
-            onTagClick={observation => onDataClick("event", observation)}
+            onTagClick={observation => onDataClick(EVENT_TYPE, observation)}
           />
           <TagList
             label="Measurements:"
             tags={thing.supportedObservationTypes.measurement}
             tagStyle="is-warning"
-            onTagClick={observation => onDataClick("measurement", observation)}
+            onTagClick={observation => onDataClick(MEASUREMENT_TYPE, observation)}
           />
-          <ThingActions
-            thing={thing}
-            onEventStatsClick={onEventStatsClick}
-            onMeasurementStatsClick={onMeasurementStatsClick}
-          />
+          <ThingActions thing={thing} onStatsClick={onStatsClick} />
         </div>
         <div className="column is-two-fifths">
           <Map marker={{ label: thing.name, point: pointToLatLng(thing.geometry) }} />
@@ -62,8 +53,7 @@ const ThingDetail = ({
 ThingDetail.propTypes = {
   intl: intlShape.isRequired,
   thing: PropTypes.shape({}).isRequired,
-  onEventStatsClick: PropTypes.func.isRequired,
-  onMeasurementStatsClick: PropTypes.func.isRequired,
+  onStatsClick: PropTypes.func.isRequired,
   onDataClick: PropTypes.func.isRequired,
 };
 

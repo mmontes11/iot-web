@@ -2873,8 +2873,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                 >
                                   <InjectIntl(ThingDetail)
                                     onDataClick={[Function]}
-                                    onEventStatsClick={[Function]}
-                                    onMeasurementStatsClick={[Function]}
+                                    onStatsClick={[Function]}
                                     thing={
                                       Object {
                                         "geometry": Object {
@@ -2994,8 +2993,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                         }
                                       }
                                       onDataClick={[Function]}
-                                      onEventStatsClick={[Function]}
-                                      onMeasurementStatsClick={[Function]}
+                                      onStatsClick={[Function]}
                                       thing={
                                         Object {
                                           "geometry": Object {
@@ -3225,8 +3223,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                                 </div>
                                               </TagList>
                                               <ThingActions
-                                                onEventStatsClick={[Function]}
-                                                onMeasurementStatsClick={[Function]}
+                                                onStatsClick={[Function]}
                                                 thing={
                                                   Object {
                                                     "geometry": Object {
@@ -4372,8 +4369,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                 >
                                   <InjectIntl(ThingDetail)
                                     onDataClick={[Function]}
-                                    onEventStatsClick={[Function]}
-                                    onMeasurementStatsClick={[Function]}
+                                    onStatsClick={[Function]}
                                     thing={
                                       Object {
                                         "geometry": Object {
@@ -4493,8 +4489,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                         }
                                       }
                                       onDataClick={[Function]}
-                                      onEventStatsClick={[Function]}
-                                      onMeasurementStatsClick={[Function]}
+                                      onStatsClick={[Function]}
                                       thing={
                                         Object {
                                           "geometry": Object {
@@ -4724,8 +4719,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                                 </div>
                                               </TagList>
                                               <ThingActions
-                                                onEventStatsClick={[Function]}
-                                                onMeasurementStatsClick={[Function]}
+                                                onStatsClick={[Function]}
                                                 thing={
                                                   Object {
                                                     "geometry": Object {
