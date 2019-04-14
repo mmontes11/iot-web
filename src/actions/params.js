@@ -28,13 +28,11 @@ const requestObservations = (type, onStart, onSuccess, onError) => {
   }
 };
 
-export const selectType = () => dispatch => {
-  dispatch({ type: PARAM_ITEMS_UPDATED, param: TYPE, items: OBSERVATION_TYPES });
-  dispatch({ type: PARAM_SELECT, param: TYPE });
-};
-
-export const updateType = type => dispatch => {
-  dispatch({ type: PARAM_UPDATE, param: TYPE, selectedItem: type });
+const requestObservationsDispatchingActions = (dispatch, type, cb) => {
+  if (!type) {
+    cb();
+    return;
+  }
   requestObservations(
     type,
     () => dispatch({ type: PARAM_REQUEST, param: OBSERVATION }),
@@ -42,15 +40,37 @@ export const updateType = type => dispatch => {
       dispatch({ type: PARAM_REQUEST_SUCCESS, param: OBSERVATION, statusCode: res.statusCode, error: null });
       dispatch({ type: PARAM_RESET, param: OBSERVATION });
       dispatch({ type: PARAM_ITEMS_UPDATED, param: OBSERVATION, items: res.body.types });
+      cb();
     },
     error => {
       dispatch({ type: PARAM_REQUEST_ERROR, param: OBSERVATION, statusCode: error.statusCode, error });
+      cb();
     },
   );
 };
 
-export const selectObservation = () => dispatch => {
-  dispatch({ type: PARAM_SELECT, param: OBSERVATION });
+export const selectType = () => dispatch => {
+  dispatch({ type: PARAM_ITEMS_UPDATED, param: TYPE, items: OBSERVATION_TYPES });
+  dispatch({ type: PARAM_SELECT, param: TYPE });
+};
+
+export const updateType = type => dispatch => {
+  dispatch({ type: PARAM_UPDATE, param: TYPE, selectedItem: type });
+  requestObservationsDispatchingActions(dispatch, type, () => undefined);
+};
+
+export const selectObservation = () => (dispatch, getState) => {
+  const state = getState();
+  const observation = fromState.getParam(state, OBSERVATION);
+  const dispatchSelectObservation = () => dispatch({ type: PARAM_SELECT, param: OBSERVATION });
+  if (observation && observation.items && observation.items.length > 0) {
+    dispatchSelectObservation();
+  } else {
+    const type = fromState.getParam(state, TYPE);
+    if (type && type.selectedItem) {
+      requestObservationsDispatchingActions(dispatch, type.selectedItem, dispatchSelectObservation);
+    }
+  }
 };
 
 export const updateObservation = observation => dispatch => {
