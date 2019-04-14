@@ -3,7 +3,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 import { FormattedMessage } from "react-intl";
 
-const TagList = ({ label, tags, tagStyle }) => {
+const TagList = ({ label, tags, tagStyle, onTagClick }) => {
   if (tags.length === 0) {
     return null;
   }
@@ -18,7 +18,17 @@ const TagList = ({ label, tags, tagStyle }) => {
       <div className="tags">
         {tags.map(tag => (
           <FormattedMessage key={tag} id={tag} defaultMessage={tag}>
-            {txt => <span className={tagClass}>{txt}</span>}
+            {txt => (
+              <a
+                className={tagClass}
+                onClick={() => onTagClick(tag)}
+                onKeyPress={() => onTagClick(tag)}
+                role="link"
+                tabIndex={0}
+              >
+                {txt}
+              </a>
+            )}
           </FormattedMessage>
         ))}
       </div>
@@ -30,6 +40,7 @@ TagList.propTypes = {
   label: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   tagStyle: PropTypes.string,
+  onTagClick: PropTypes.func.isRequired,
 };
 
 TagList.defaultProps = {

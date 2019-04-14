@@ -11,6 +11,7 @@ import * as thingActions from "actions/things";
 import * as fromState from "reducers";
 import { withResetOnUnmount } from "hocs/resetOnUnmount";
 import { injectIntl, intlShape } from "react-intl";
+import { defaultGroupBy } from "config/params";
 
 class Things extends React.Component {
   componentDidMount() {
@@ -58,6 +59,9 @@ class Things extends React.Component {
       `/stats/measurement/${thing.supportedObservationTypes.measurement[0]}?thing=${thing.name}&timePeriod=day`,
     );
   };
+  _onDataClick = (type, observation, thing) => {
+    this.props.history.push(`/data/${type}/${observation}?thing=${thing.name}&groupBy=${defaultGroupBy}`);
+  };
   render() {
     const {
       intl: { formatMessage },
@@ -90,6 +94,7 @@ class Things extends React.Component {
                   thing={selectedThing}
                   onEventStatsClick={() => this._onEventStatsClick(selectedThing)}
                   onMeasurementStatsClick={() => this._onMeasurementStatsClick(selectedThing)}
+                  onDataClick={(type, observation) => this._onDataClick(type, observation, selectedThing)}
                 />
               </div>
             )}
