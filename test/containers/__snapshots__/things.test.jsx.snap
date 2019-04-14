@@ -74,6 +74,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
           "humidity": "Humidity",
           "humidity-indoor": "Humidity indoor",
           "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
           "max": "Maximum",
           "maxByHour": "Maximum by hour",
           "measurement": "Mesasurement",
@@ -174,6 +175,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
             "humidity": "Humidity",
             "humidity-indoor": "Humidity indoor",
             "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
             "max": "Maximum",
             "maxByHour": "Maximum by hour",
             "measurement": "Mesasurement",
@@ -509,6 +511,7 @@ exports[`containers/things renders things in initial state and unmounts 1`] = `
                                 "humidity": "Humidity",
                                 "humidity-indoor": "Humidity indoor",
                                 "humidity-outdoor": "Humidity outdoor",
+                                "luminosity": "Luminosity",
                                 "max": "Maximum",
                                 "maxByHour": "Maximum by hour",
                                 "measurement": "Mesasurement",
@@ -703,6 +706,7 @@ exports[`containers/things renders things in loading state 1`] = `
           "humidity": "Humidity",
           "humidity-indoor": "Humidity indoor",
           "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
           "max": "Maximum",
           "maxByHour": "Maximum by hour",
           "measurement": "Mesasurement",
@@ -803,6 +807,7 @@ exports[`containers/things renders things in loading state 1`] = `
             "humidity": "Humidity",
             "humidity-indoor": "Humidity indoor",
             "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
             "max": "Maximum",
             "maxByHour": "Maximum by hour",
             "measurement": "Mesasurement",
@@ -1138,6 +1143,7 @@ exports[`containers/things renders things in loading state 1`] = `
                                 "humidity": "Humidity",
                                 "humidity-indoor": "Humidity indoor",
                                 "humidity-outdoor": "Humidity outdoor",
+                                "luminosity": "Luminosity",
                                 "max": "Maximum",
                                 "maxByHour": "Maximum by hour",
                                 "measurement": "Mesasurement",
@@ -1289,6 +1295,7 @@ exports[`containers/things renders things with loaded things 1`] = `
           "humidity": "Humidity",
           "humidity-indoor": "Humidity indoor",
           "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
           "max": "Maximum",
           "maxByHour": "Maximum by hour",
           "measurement": "Mesasurement",
@@ -1389,6 +1396,7 @@ exports[`containers/things renders things with loaded things 1`] = `
             "humidity": "Humidity",
             "humidity-indoor": "Humidity indoor",
             "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
             "max": "Maximum",
             "maxByHour": "Maximum by hour",
             "measurement": "Mesasurement",
@@ -1828,6 +1836,7 @@ exports[`containers/things renders things with loaded things 1`] = `
                                 "humidity": "Humidity",
                                 "humidity-indoor": "Humidity indoor",
                                 "humidity-outdoor": "Humidity outdoor",
+                                "luminosity": "Luminosity",
                                 "max": "Maximum",
                                 "maxByHour": "Maximum by hour",
                                 "measurement": "Mesasurement",
@@ -2078,6 +2087,7 @@ exports[`containers/things renders things with loaded things and selected thing 
           "humidity": "Humidity",
           "humidity-indoor": "Humidity indoor",
           "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
           "max": "Maximum",
           "maxByHour": "Maximum by hour",
           "measurement": "Mesasurement",
@@ -2178,6 +2188,7 @@ exports[`containers/things renders things with loaded things and selected thing 
             "humidity": "Humidity",
             "humidity-indoor": "Humidity indoor",
             "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
             "max": "Maximum",
             "maxByHour": "Maximum by hour",
             "measurement": "Mesasurement",
@@ -2717,6 +2728,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                 "humidity": "Humidity",
                                 "humidity-indoor": "Humidity indoor",
                                 "humidity-outdoor": "Humidity outdoor",
+                                "luminosity": "Luminosity",
                                 "max": "Maximum",
                                 "maxByHour": "Maximum by hour",
                                 "measurement": "Mesasurement",
@@ -2860,8 +2872,8 @@ exports[`containers/things renders things with loaded things and selected thing 
                                   className="column is-three-quarters"
                                 >
                                   <InjectIntl(ThingDetail)
-                                    onEventStatsClick={[Function]}
-                                    onMeasurementStatsClick={[Function]}
+                                    onDataClick={[Function]}
+                                    onStatsClick={[Function]}
                                     thing={
                                       Object {
                                         "geometry": Object {
@@ -2955,6 +2967,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                             "humidity": "Humidity",
                                             "humidity-indoor": "Humidity indoor",
                                             "humidity-outdoor": "Humidity outdoor",
+                                            "luminosity": "Luminosity",
                                             "max": "Maximum",
                                             "maxByHour": "Maximum by hour",
                                             "measurement": "Mesasurement",
@@ -2979,8 +2992,8 @@ exports[`containers/things renders things with loaded things and selected thing 
                                           "timeZone": null,
                                         }
                                       }
-                                      onEventStatsClick={[Function]}
-                                      onMeasurementStatsClick={[Function]}
+                                      onDataClick={[Function]}
+                                      onStatsClick={[Function]}
                                       thing={
                                         Object {
                                           "geometry": Object {
@@ -3083,6 +3096,7 @@ exports[`containers/things renders things with loaded things and selected thing 
                                               </p>
                                               <TagList
                                                 label="Events:"
+                                                onTagClick={[Function]}
                                                 tagStyle="is-warning"
                                                 tags={
                                                   Array [
@@ -3115,11 +3129,15 @@ exports[`containers/things renders things with loaded things and selected thing 
                                                       key="foo"
                                                       values={Object {}}
                                                     >
-                                                      <span
+                                                      <a
                                                         className="tag is-warning"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="link"
+                                                        tabIndex={0}
                                                       >
                                                         foo
-                                                      </span>
+                                                      </a>
                                                     </FormattedMessage>
                                                     <FormattedMessage
                                                       defaultMessage="bar"
@@ -3127,17 +3145,22 @@ exports[`containers/things renders things with loaded things and selected thing 
                                                       key="bar"
                                                       values={Object {}}
                                                     >
-                                                      <span
+                                                      <a
                                                         className="tag is-warning"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="link"
+                                                        tabIndex={0}
                                                       >
                                                         bar
-                                                      </span>
+                                                      </a>
                                                     </FormattedMessage>
                                                   </div>
                                                 </div>
                                               </TagList>
                                               <TagList
                                                 label="Measurements:"
+                                                onTagClick={[Function]}
                                                 tagStyle="is-warning"
                                                 tags={
                                                   Array [
@@ -3170,11 +3193,15 @@ exports[`containers/things renders things with loaded things and selected thing 
                                                       key="bar"
                                                       values={Object {}}
                                                     >
-                                                      <span
+                                                      <a
                                                         className="tag is-warning"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="link"
+                                                        tabIndex={0}
                                                       >
                                                         bar
-                                                      </span>
+                                                      </a>
                                                     </FormattedMessage>
                                                     <FormattedMessage
                                                       defaultMessage="foo"
@@ -3182,18 +3209,21 @@ exports[`containers/things renders things with loaded things and selected thing 
                                                       key="foo"
                                                       values={Object {}}
                                                     >
-                                                      <span
+                                                      <a
                                                         className="tag is-warning"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="link"
+                                                        tabIndex={0}
                                                       >
                                                         foo
-                                                      </span>
+                                                      </a>
                                                     </FormattedMessage>
                                                   </div>
                                                 </div>
                                               </TagList>
                                               <ThingActions
-                                                onEventStatsClick={[Function]}
-                                                onMeasurementStatsClick={[Function]}
+                                                onStatsClick={[Function]}
                                                 thing={
                                                   Object {
                                                     "geometry": Object {
@@ -3523,6 +3553,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
           "humidity": "Humidity",
           "humidity-indoor": "Humidity indoor",
           "humidity-outdoor": "Humidity outdoor",
+          "luminosity": "Luminosity",
           "max": "Maximum",
           "maxByHour": "Maximum by hour",
           "measurement": "Mesasurement",
@@ -3623,6 +3654,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
             "humidity": "Humidity",
             "humidity-indoor": "Humidity indoor",
             "humidity-outdoor": "Humidity outdoor",
+            "luminosity": "Luminosity",
             "max": "Maximum",
             "maxByHour": "Maximum by hour",
             "measurement": "Mesasurement",
@@ -4192,6 +4224,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                 "humidity": "Humidity",
                                 "humidity-indoor": "Humidity indoor",
                                 "humidity-outdoor": "Humidity outdoor",
+                                "luminosity": "Luminosity",
                                 "max": "Maximum",
                                 "maxByHour": "Maximum by hour",
                                 "measurement": "Mesasurement",
@@ -4335,8 +4368,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                   className="column is-three-quarters"
                                 >
                                   <InjectIntl(ThingDetail)
-                                    onEventStatsClick={[Function]}
-                                    onMeasurementStatsClick={[Function]}
+                                    onDataClick={[Function]}
+                                    onStatsClick={[Function]}
                                     thing={
                                       Object {
                                         "geometry": Object {
@@ -4430,6 +4463,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                             "humidity": "Humidity",
                                             "humidity-indoor": "Humidity indoor",
                                             "humidity-outdoor": "Humidity outdoor",
+                                            "luminosity": "Luminosity",
                                             "max": "Maximum",
                                             "maxByHour": "Maximum by hour",
                                             "measurement": "Mesasurement",
@@ -4454,8 +4488,8 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                           "timeZone": null,
                                         }
                                       }
-                                      onEventStatsClick={[Function]}
-                                      onMeasurementStatsClick={[Function]}
+                                      onDataClick={[Function]}
+                                      onStatsClick={[Function]}
                                       thing={
                                         Object {
                                           "geometry": Object {
@@ -4558,6 +4592,7 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                               </p>
                                               <TagList
                                                 label="Events:"
+                                                onTagClick={[Function]}
                                                 tagStyle="is-warning"
                                                 tags={
                                                   Array [
@@ -4590,11 +4625,15 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                                       key="foo"
                                                       values={Object {}}
                                                     >
-                                                      <span
+                                                      <a
                                                         className="tag is-warning"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="link"
+                                                        tabIndex={0}
                                                       >
                                                         foo
-                                                      </span>
+                                                      </a>
                                                     </FormattedMessage>
                                                     <FormattedMessage
                                                       defaultMessage="bar"
@@ -4602,17 +4641,22 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                                       key="bar"
                                                       values={Object {}}
                                                     >
-                                                      <span
+                                                      <a
                                                         className="tag is-warning"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="link"
+                                                        tabIndex={0}
                                                       >
                                                         bar
-                                                      </span>
+                                                      </a>
                                                     </FormattedMessage>
                                                   </div>
                                                 </div>
                                               </TagList>
                                               <TagList
                                                 label="Measurements:"
+                                                onTagClick={[Function]}
                                                 tagStyle="is-warning"
                                                 tags={
                                                   Array [
@@ -4645,11 +4689,15 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                                       key="bar"
                                                       values={Object {}}
                                                     >
-                                                      <span
+                                                      <a
                                                         className="tag is-warning"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="link"
+                                                        tabIndex={0}
                                                       >
                                                         bar
-                                                      </span>
+                                                      </a>
                                                     </FormattedMessage>
                                                     <FormattedMessage
                                                       defaultMessage="foo"
@@ -4657,18 +4705,21 @@ exports[`containers/things simulates a click in a thing and in its actions 1`] =
                                                       key="foo"
                                                       values={Object {}}
                                                     >
-                                                      <span
+                                                      <a
                                                         className="tag is-warning"
+                                                        onClick={[Function]}
+                                                        onKeyPress={[Function]}
+                                                        role="link"
+                                                        tabIndex={0}
                                                       >
                                                         foo
-                                                      </span>
+                                                      </a>
                                                     </FormattedMessage>
                                                   </div>
                                                 </div>
                                               </TagList>
                                               <ThingActions
-                                                onEventStatsClick={[Function]}
-                                                onMeasurementStatsClick={[Function]}
+                                                onStatsClick={[Function]}
                                                 thing={
                                                   Object {
                                                     "geometry": Object {

@@ -43,6 +43,7 @@
 	"humidity": "Humedad",
 	"humidity-indoor": "Humedad interior",
 	"humidity-outdoor": "Humedad exterior",
+	"luminosity": "Luminosidad",
 	"max": "Máximo",
 	"maxByHour": "Máximo por hora",
 	"measurement": "Medida",

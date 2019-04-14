@@ -4,15 +4,9 @@ import ThingActions from "components/thingActions";
 import { thing } from "../constants";
 
 describe("components/thingActions", () => {
-  const onEventStatsClick = jest.fn();
-  const onMeasurementStatsClick = jest.fn();
-  const wrapper = shallow(
-    <ThingActions
-      thing={thing}
-      onEventStatsClick={onEventStatsClick}
-      onMeasurementStatsClick={onMeasurementStatsClick}
-    />,
-  );
+  const onStatsClick = jest.fn();
+  const onDataClick = jest.fn();
+  const wrapper = shallow(<ThingActions thing={thing} onStatsClick={onStatsClick} onDataClick={onDataClick} />);
   it("renders", () => {
     expect(wrapper).toMatchSnapshot();
   });
@@ -20,7 +14,6 @@ describe("components/thingActions", () => {
     wrapper.find("#google-maps-link").simulate("click");
     wrapper.find("#event-stats-button").simulate("click");
     wrapper.find("#measurement-stats-button").simulate("click");
-    expect(onEventStatsClick).toHaveBeenCalled();
-    expect(onMeasurementStatsClick).toHaveBeenCalled();
+    expect(onStatsClick).toHaveBeenCalled();
   });
 });

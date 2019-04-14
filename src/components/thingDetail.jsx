@@ -6,8 +6,9 @@ import Map from "containers/map";
 import { pointToLatLng } from "helpers/geometry";
 import { formatDateTime } from "helpers/date";
 import { injectIntl, intlShape, FormattedMessage } from "react-intl";
+import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 
-const ThingDetail = ({ intl: { formatDate, formatTime }, thing, onEventStatsClick, onMeasurementStatsClick }) => (
+const ThingDetail = ({ intl: { formatDate, formatTime }, thing, onStatsClick, onDataClick }) => (
   <div className="card">
     <div className="card-content">
       <div className="columns">
@@ -27,13 +28,19 @@ const ThingDetail = ({ intl: { formatDate, formatTime }, thing, onEventStatsClic
             <FormattedMessage id="Last observation:">{txt => <strong>{txt}</strong>}</FormattedMessage>{" "}
             <span className="has-text-info">{formatDateTime(thing.lastObservation, formatDate, formatTime)}</span>
           </p>
-          <TagList label="Events:" tags={thing.supportedObservationTypes.event} tagStyle="is-warning" />
-          <TagList label="Measurements:" tags={thing.supportedObservationTypes.measurement} tagStyle="is-warning" />
-          <ThingActions
-            thing={thing}
-            onEventStatsClick={onEventStatsClick}
-            onMeasurementStatsClick={onMeasurementStatsClick}
+          <TagList
+            label="Events:"
+            tags={thing.supportedObservationTypes.event}
+            tagStyle="is-warning"
+            onTagClick={observation => onDataClick(EVENT_TYPE, observation)}
           />
+          <TagList
+            label="Measurements:"
+            tags={thing.supportedObservationTypes.measurement}
+            tagStyle="is-warning"
+            onTagClick={observation => onDataClick(MEASUREMENT_TYPE, observation)}
+          />
+          <ThingActions thing={thing} onStatsClick={onStatsClick} />
         </div>
         <div className="column is-two-fifths">
           <Map marker={{ label: thing.name, point: pointToLatLng(thing.geometry) }} />
@@ -46,8 +53,8 @@ const ThingDetail = ({ intl: { formatDate, formatTime }, thing, onEventStatsClic
 ThingDetail.propTypes = {
   intl: intlShape.isRequired,
   thing: PropTypes.shape({}).isRequired,
-  onEventStatsClick: PropTypes.func.isRequired,
-  onMeasurementStatsClick: PropTypes.func.isRequired,
+  onStatsClick: PropTypes.func.isRequired,
+  onDataClick: PropTypes.func.isRequired,
 };
 
 export default injectIntl(ThingDetail);
