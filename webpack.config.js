@@ -3,8 +3,8 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
-
 const inProduction = process.env.NODE_ENV === "production";
+require("dotenv").config();
 
 module.exports = {
   entry: "./src/index.js",

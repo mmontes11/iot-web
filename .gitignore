@@ -27,3 +27,6 @@ package-lock.json
 
 # git
 *.orig
+
+# env
+.env
