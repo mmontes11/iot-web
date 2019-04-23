@@ -5,7 +5,7 @@ import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
 import { TYPE, OBSERVATION } from "constants/params";
-import { isObservationDisabled } from "helpers/paramsPanel";
+import { isParamDisabled } from "helpers/paramsPanel";
 
 const StatsParamsPanel = ({
   onParamsSelected,
@@ -36,7 +36,7 @@ const StatsParamsPanel = ({
         items: observation.items || [],
         isActive: observation.isActive || false,
         isLoading: observation.isLoading || false,
-        isDisabled: isObservationDisabled(observation),
+        isDisabled: isParamDisabled(observation),
         onButtonClick: () => selectObservation(),
         onItemClick: item => {
           updateObservation(item);
@@ -51,15 +51,6 @@ const StatsParamsPanel = ({
   />
 );
 
-const withConnect = connect(
-  state => ({
-    type: fromState.getParam(state, TYPE),
-    observation: fromState.getParam(state, OBSERVATION),
-    isResetDisabled: fromState.isResetDisabled(state),
-  }),
-  { ...paramsActions },
-);
-
 StatsParamsPanel.propTypes = {
   onParamsSelected: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
@@ -71,5 +62,14 @@ StatsParamsPanel.propTypes = {
   selectObservation: PropTypes.func.isRequired,
   updateObservation: PropTypes.func.isRequired,
 };
+
+const withConnect = connect(
+  state => ({
+    type: fromState.getParam(state, TYPE),
+    observation: fromState.getParam(state, OBSERVATION),
+    isResetDisabled: fromState.isResetDisabled(state),
+  }),
+  { ...paramsActions },
+);
 
 export default withConnect(StatsParamsPanel);

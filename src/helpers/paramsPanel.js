@@ -1,6 +1,6 @@
-export const isObservationDisabled = observation => {
-  if (observation && observation.isDisabled !== undefined) {
-    return observation.isDisabled;
+export const isParamDisabled = param => {
+  if (param && param.isDisabled !== undefined) {
+    return param.isDisabled;
   }
   return true;
 };

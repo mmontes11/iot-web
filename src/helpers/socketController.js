@@ -5,7 +5,7 @@ export class SocketController {
   constructor(thing, onData) {
     const query = {
       token: getToken(),
-      thing
+      thing,
     };
     this.socket = new SocketIOClient(process.env.IOT_SERVER_URL, { query });
     this.onData = onData;
