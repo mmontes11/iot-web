@@ -1,10 +1,18 @@
-import { DATA_UPDATED, DATA_REQUEST, DATA_REQUEST_SUCCESS, DATA_REQUEST_ERROR } from "constants/actionTypes/data";
+import {
+  DATA_UPDATED,
+  DATA_REQUEST,
+  DATA_REQUEST_SUCCESS,
+  DATA_REQUEST_ERROR,
+  ADD_DATA_ITEM,
+  RESET_DATA,
+} from "constants/actionTypes/data";
 import { EVENT_TYPE, MEASUREMENT_TYPE } from "constants/observationTypes";
 import iotClient from "lib/iotClient";
+import { SocketController } from "helpers/socketController";
 import { THING_FILTER_TYPE, DATE_FILTER_TYPE } from "constants/filterTypes";
 import { RESET } from "constants/actionTypes/common";
 import * as fromState from "reducers";
-import { TYPE, OBSERVATION, GROUPBY } from "constants/params";
+import { TYPE, OBSERVATION, GROUPBY, THING } from "constants/params";
 
 const getParams = (filterItems, observation, groupBy, thing, timePeriod, startDate, endDate) => {
   let params = {
@@ -173,4 +181,39 @@ export const getData = () => (dispatch, getState) => {
       dispatch({ type: RESET, preserveError: true });
     },
   );
+};
+
+let socketController = null;
+
+export const finishRealTimeData = () => () => {
+  if (socketController !== null) {
+    socketController.close();
+  }
+};
+
+export const startRealTimeData = () => (dispatch, getState) => {
+  const state = getState();
+  const thing = fromState.getParam(state, THING).selectedItem;
+  const type = fromState.getParam(state, TYPE).selectedItem;
+  if (!thing || !type) {
+    return;
+  }
+  finishRealTimeData()();
+  const onData = data => {
+    const {
+      data: { items },
+    } = getState();
+    if (items.length === 0) {
+      dispatch({ type: DATA_REQUEST_SUCCESS });
+    }
+    dispatch({ type: ADD_DATA_ITEM, item: data });
+  };
+  const onError = error => dispatch({ type: DATA_REQUEST_ERROR, error });
+  socketController = new SocketController(thing, type, onData, onError);
+  socketController.listen();
+  dispatch({ type: DATA_REQUEST });
+};
+
+export const resetData = () => dispatch => {
+  dispatch({ type: RESET_DATA });
 };

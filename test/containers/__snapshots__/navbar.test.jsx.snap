@@ -47,9 +47,11 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -148,9 +150,11 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -515,6 +519,46 @@ exports[`containers/navbar renders navbar in initial state and unmounts 1`] = `
                               </Link>
                             </Route>
                           </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/real-time"
+                          >
+                            <Route
+                              path="\\\\/real-time"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/real-time"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/real-time"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-clock"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Real time"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Real time
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
                         </div>
                         <div
                           className="navbar-end"
@@ -683,9 +727,11 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -784,9 +830,11 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -1151,6 +1199,46 @@ exports[`containers/navbar renders navbar in toggled hamburguer menu state 1`] =
                               </Link>
                             </Route>
                           </NavLink>
+                          <NavLink
+                            activeClassName="navbar-item-active"
+                            aria-current="page"
+                            className="navbar-item"
+                            to="/real-time"
+                          >
+                            <Route
+                              path="\\\\/real-time"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="navbar-item"
+                                replace={false}
+                                to="/real-time"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="navbar-item"
+                                  href="/real-time"
+                                  onClick={[Function]}
+                                >
+                                  <span
+                                    className="icon"
+                                  >
+                                    <i
+                                      className="fas fa-clock"
+                                    />
+                                  </span>
+                                  <FormattedMessage
+                                    id="Real time"
+                                    values={Object {}}
+                                  >
+                                    <span>
+                                      Real time
+                                    </span>
+                                  </FormattedMessage>
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
                         </div>
                         <div
                           className="navbar-end"
@@ -1345,9 +1433,11 @@ Object {
       "Logout": "Logout",
       "MQTT topic:": "MQTT topic:",
       "Measurement stats": "Measurement stats",
+      "Measurement type": "Measurement type",
       "Measurements:": "Measurements:",
       "Observation": "Observation",
       "Password": "Password",
+      "Real time": "Real time",
       "Request failed": "Request failed",
       "Reset": "Reset",
       "Start date": "Start date",
