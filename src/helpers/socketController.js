@@ -17,10 +17,17 @@ export class SocketController {
     this.onData = onData;
     this.onError = onError;
   }
+  _handleError = err => {
+    this.onError(err);
+    this.close();
+  };
   listen() {
     this.socket.on("data", data => this.onData(data));
-    this.socket.on("connect_error", err => this.onError(err));
-    this.socket.on("error", err => this.onError(err));
+    this.socket.on("error", err => this._handleError(err));
+    this.socket.on("connect_error", err => this._handleError(err));
+    this.socket.on("thing_disconnect", err => this._handleError(err));
+    this.socket.on("thing_error", err => this._handleError(err));
+    this.socket.on("socket_server_error", err => this._handleError(err));
   }
   close() {
     this.socket.close();

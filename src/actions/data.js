@@ -208,7 +208,10 @@ export const startRealTimeData = () => (dispatch, getState) => {
     }
     dispatch({ type: ADD_DATA_ITEM, item: data });
   };
-  const onError = error => dispatch({ type: DATA_REQUEST_ERROR, error });
+  const onError = error => {
+    dispatch({ type: DATA_REQUEST_ERROR, error });
+    dispatch({ type: RESET, preserveError: true });
+  };
   socketController = new SocketController(thing, type, onData, onError);
   socketController.listen();
   dispatch({ type: DATA_REQUEST });
