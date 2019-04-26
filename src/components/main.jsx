@@ -4,7 +4,7 @@ import Navbar from "containers/navbar";
 import Things from "containers/things";
 import Stats from "containers/stats";
 import Data from "containers/data";
-import RealTime from "components/realTime";
+import RealTime from "containers/realTime";
 
 const Main = () => (
   <div className="has-navbar-fixed-top">

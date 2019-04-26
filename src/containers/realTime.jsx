@@ -6,6 +6,8 @@ import { compose } from "recompose";
 import RealTimeParamsPanel from "containers/realTimeParamsPanel";
 import * as dataActions from "actions/data";
 import * as commonActions from "actions/common";
+import Charts from "containers/charts";
+import { REALTIME } from "constants/chartTypes";
 
 class RealTime extends Component {
   componentWillUnmount() {
@@ -27,6 +29,7 @@ class RealTime extends Component {
                 finishRealTimeData();
               }}
             />
+            <Charts chartType={REALTIME} />
           </div>
         </div>
       </div>
