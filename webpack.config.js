@@ -3,9 +3,8 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
-
+require("dotenv").config();
 const inProduction = process.env.NODE_ENV === "production";
-const config = require("dotenv").config().parsed;
 
 module.exports = {
   entry: "./src/index.js",
@@ -80,10 +79,10 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-        IOT_SERVER_URL: JSON.stringify(config.IOT_SERVER_URL),
-        IOT_SERVER_BASIC_AUTH_USERNAME: JSON.stringify(config.IOT_SERVER_BASIC_AUTH_USERNAME),
-        IOT_SERVER_BASIC_AUTH_PASSWORD: JSON.stringify(config.IOT_SERVER_BASIC_AUTH_PASSWORD),
-        GOOGLE_MAPS_KEY: JSON.stringify(config.GOOGLE_MAPS_KEY),
+        IOT_SERVER_URL: JSON.stringify(process.env.IOT_SERVER_URL),
+        IOT_SERVER_BASIC_AUTH_USERNAME: JSON.stringify(process.env.IOT_SERVER_BASIC_AUTH_USERNAME),
+        IOT_SERVER_BASIC_AUTH_PASSWORD: JSON.stringify(process.env.IOT_SERVER_BASIC_AUTH_PASSWORD),
+        GOOGLE_MAPS_KEY: JSON.stringify(process.env.GOOGLE_MAPS_KEY),
       },
     }),
   ],
