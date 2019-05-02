@@ -6,6 +6,7 @@ import {
   PARAM_REQUEST_SUCCESS,
   PARAM_REQUEST_ERROR,
   PARAM_ITEMS_UPDATED,
+  PARAM_DISABLE,
 } from "constants/actionTypes/params";
 import { RESET } from "constants/actionTypes/common";
 import deepEqual from "deep-equal";
@@ -75,6 +76,8 @@ export default (state = initialState, { type, param: paramId, selectedItem, item
       return updateParam(newState, paramId, { ...param, isLoading: false, isDisabled: false });
     case PARAM_ITEMS_UPDATED:
       return updateParam(newState, paramId, { ...param, items });
+    case PARAM_DISABLE:
+      return updateParam(newState, paramId, { ...param, isDisabled: true });
     default:
       return state;
   }

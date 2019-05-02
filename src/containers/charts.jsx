@@ -5,31 +5,54 @@ import Loader from "components/loader";
 import ChartBox from "components/chartBox";
 import BarChart from "components/barChart";
 import LineChart from "components/lineChart";
-import { BARCHART, LINECHART } from "constants/chartTypes";
+import { BARCHART, LINECHART, REALTIME } from "constants/chartTypes";
+import { isEmpty } from "helpers/validation";
 
 const Charts = ({ chartType, items, things, isLoading }) => {
   if (isLoading) {
     return <Loader />;
   }
-  if (items === null || items.length === 0) {
-    return null;
-  }
   switch (chartType) {
-    case BARCHART:
+    case BARCHART: {
+      if (isEmpty(items)) {
+        return null;
+      }
       return items.map(({ type, unit, data }) => (
         <ChartBox key={type} type={type} unit={unit}>
           <BarChart data={data} />
         </ChartBox>
       ));
+    }
     case LINECHART: {
-      if (things === null || things.length === 0) {
+      if (isEmpty(items) || isEmpty(things)) {
         return null;
       }
       return items.map(({ type, unit, items: data }) => (
         <ChartBox key={type} type={type} unit={unit}>
-          <LineChart data={data} things={things} />
+          <LineChart
+            data={data}
+            lineItems={things}
+            lineDataKey={(dataItem, thing) => {
+              const thingData = dataItem.values.find(el => el.thing === thing);
+              if (thingData) {
+                return thingData.value;
+              }
+              return null;
+            }}
+          />
         </ChartBox>
       ));
+    }
+    case REALTIME: {
+      if (isEmpty(items)) {
+        return null;
+      }
+      const { type, unit } = items[0];
+      return (
+        <ChartBox key={type} type={type} unit={unit}>
+          <LineChart data={items} lineItems={[type]} lineDataKey={dataItem => dataItem.value} />
+        </ChartBox>
+      );
     }
     default:
       return null;
@@ -37,7 +60,7 @@ const Charts = ({ chartType, items, things, isLoading }) => {
 };
 
 Charts.propTypes = {
-  chartType: PropTypes.oneOf([BARCHART, LINECHART]).isRequired,
+  chartType: PropTypes.oneOf([BARCHART, LINECHART, REALTIME]).isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({})),
   things: PropTypes.arrayOf(PropTypes.string),
   isLoading: PropTypes.bool.isRequired,

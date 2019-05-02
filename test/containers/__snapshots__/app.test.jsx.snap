@@ -47,9 +47,11 @@ exports[`containers/app renders app in error state 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -148,9 +150,11 @@ exports[`containers/app renders app in error state 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -406,9 +410,11 @@ exports[`containers/app renders app in error state 1`] = `
                             "Logout": "Logout",
                             "MQTT topic:": "MQTT topic:",
                             "Measurement stats": "Measurement stats",
+                            "Measurement type": "Measurement type",
                             "Measurements:": "Measurements:",
                             "Observation": "Observation",
                             "Password": "Password",
+                            "Real time": "Real time",
                             "Request failed": "Request failed",
                             "Reset": "Reset",
                             "Start date": "Start date",
@@ -762,6 +768,46 @@ exports[`containers/app renders app in error state 1`] = `
                                                 >
                                                   <span>
                                                     Data
+                                                  </span>
+                                                </FormattedMessage>
+                                              </a>
+                                            </Link>
+                                          </Route>
+                                        </NavLink>
+                                        <NavLink
+                                          activeClassName="navbar-item-active"
+                                          aria-current="page"
+                                          className="navbar-item"
+                                          to="/real-time"
+                                        >
+                                          <Route
+                                            path="\\\\/real-time"
+                                          >
+                                            <Link
+                                              aria-current={null}
+                                              className="navbar-item"
+                                              replace={false}
+                                              to="/real-time"
+                                            >
+                                              <a
+                                                aria-current={null}
+                                                className="navbar-item"
+                                                href="/real-time"
+                                                onClick={[Function]}
+                                              >
+                                                <span
+                                                  className="icon"
+                                                >
+                                                  <i
+                                                    className="fas fa-clock"
+                                                  />
+                                                </span>
+                                                <FormattedMessage
+                                                  id="Real time"
+                                                  values={Object {}}
+                                                >
+                                                  <span>
+                                                    Real time
                                                   </span>
                                                 </FormattedMessage>
                                               </a>
@@ -1243,12 +1289,16 @@ exports[`containers/app renders app in error state 1`] = `
                                                         onParamsSelected={[Function]}
                                                         onReset={[Function]}
                                                         selectGroupBy={[Function]}
+                                                        selectMeasurementType={[Function]}
                                                         selectObservation={[Function]}
+                                                        selectThing={[Function]}
                                                         selectType={[Function]}
                                                         type={Object {}}
                                                         updateGroupBy={[Function]}
+                                                        updateMeasurementType={[Function]}
                                                         updateObservation={[Function]}
                                                         updateParams={[Function]}
+                                                        updateThing={[Function]}
                                                         updateType={[Function]}
                                                       >
                                                         <ParamsPanel
@@ -1803,9 +1853,11 @@ exports[`containers/app renders app with auth in / 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -1904,9 +1956,11 @@ exports[`containers/app renders app with auth in / 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -2162,9 +2216,11 @@ exports[`containers/app renders app with auth in / 1`] = `
                             "Logout": "Logout",
                             "MQTT topic:": "MQTT topic:",
                             "Measurement stats": "Measurement stats",
+                            "Measurement type": "Measurement type",
                             "Measurements:": "Measurements:",
                             "Observation": "Observation",
                             "Password": "Password",
+                            "Real time": "Real time",
                             "Request failed": "Request failed",
                             "Reset": "Reset",
                             "Start date": "Start date",
@@ -2518,6 +2574,46 @@ exports[`containers/app renders app with auth in / 1`] = `
                                                 >
                                                   <span>
                                                     Data
+                                                  </span>
+                                                </FormattedMessage>
+                                              </a>
+                                            </Link>
+                                          </Route>
+                                        </NavLink>
+                                        <NavLink
+                                          activeClassName="navbar-item-active"
+                                          aria-current="page"
+                                          className="navbar-item"
+                                          to="/real-time"
+                                        >
+                                          <Route
+                                            path="\\\\/real-time"
+                                          >
+                                            <Link
+                                              aria-current={null}
+                                              className="navbar-item"
+                                              replace={false}
+                                              to="/real-time"
+                                            >
+                                              <a
+                                                aria-current={null}
+                                                className="navbar-item"
+                                                href="/real-time"
+                                                onClick={[Function]}
+                                              >
+                                                <span
+                                                  className="icon"
+                                                >
+                                                  <i
+                                                    className="fas fa-clock"
+                                                  />
+                                                </span>
+                                                <FormattedMessage
+                                                  id="Real time"
+                                                  values={Object {}}
+                                                >
+                                                  <span>
+                                                    Real time
                                                   </span>
                                                 </FormattedMessage>
                                               </a>
@@ -3000,9 +3096,11 @@ exports[`containers/app renders app with auth in / 1`] = `
                                                     "Logout": "Logout",
                                                     "MQTT topic:": "MQTT topic:",
                                                     "Measurement stats": "Measurement stats",
+                                                    "Measurement type": "Measurement type",
                                                     "Measurements:": "Measurements:",
                                                     "Observation": "Observation",
                                                     "Password": "Password",
+                                                    "Real time": "Real time",
                                                     "Request failed": "Request failed",
                                                     "Reset": "Reset",
                                                     "Start date": "Start date",
@@ -3249,9 +3347,11 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -3350,9 +3450,11 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -3608,9 +3710,11 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                             "Logout": "Logout",
                             "MQTT topic:": "MQTT topic:",
                             "Measurement stats": "Measurement stats",
+                            "Measurement type": "Measurement type",
                             "Measurements:": "Measurements:",
                             "Observation": "Observation",
                             "Password": "Password",
+                            "Real time": "Real time",
                             "Request failed": "Request failed",
                             "Reset": "Reset",
                             "Start date": "Start date",
@@ -3752,9 +3856,11 @@ exports[`containers/app renders the app with auth in /foo 1`] = `
                                       "Logout": "Logout",
                                       "MQTT topic:": "MQTT topic:",
                                       "Measurement stats": "Measurement stats",
+                                      "Measurement type": "Measurement type",
                                       "Measurements:": "Measurements:",
                                       "Observation": "Observation",
                                       "Password": "Password",
+                                      "Real time": "Real time",
                                       "Request failed": "Request failed",
                                       "Reset": "Reset",
                                       "Start date": "Start date",
@@ -4003,9 +4109,11 @@ exports[`containers/app renders the app without auth 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -4104,9 +4212,11 @@ exports[`containers/app renders the app without auth 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -4362,9 +4472,11 @@ exports[`containers/app renders the app without auth 1`] = `
                             "Logout": "Logout",
                             "MQTT topic:": "MQTT topic:",
                             "Measurement stats": "Measurement stats",
+                            "Measurement type": "Measurement type",
                             "Measurements:": "Measurements:",
                             "Observation": "Observation",
                             "Password": "Password",
+                            "Real time": "Real time",
                             "Request failed": "Request failed",
                             "Reset": "Reset",
                             "Start date": "Start date",
@@ -4506,9 +4618,11 @@ exports[`containers/app renders the app without auth 1`] = `
                                       "Logout": "Logout",
                                       "MQTT topic:": "MQTT topic:",
                                       "Measurement stats": "Measurement stats",
+                                      "Measurement type": "Measurement type",
                                       "Measurements:": "Measurements:",
                                       "Observation": "Observation",
                                       "Password": "Password",
+                                      "Real time": "Real time",
                                       "Request failed": "Request failed",
                                       "Reset": "Reset",
                                       "Start date": "Start date",
@@ -4757,9 +4871,11 @@ exports[`containers/app renders the with auth in /stats 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -4858,9 +4974,11 @@ exports[`containers/app renders the with auth in /stats 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -5116,9 +5234,11 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                             "Logout": "Logout",
                             "MQTT topic:": "MQTT topic:",
                             "Measurement stats": "Measurement stats",
+                            "Measurement type": "Measurement type",
                             "Measurements:": "Measurements:",
                             "Observation": "Observation",
                             "Password": "Password",
+                            "Real time": "Real time",
                             "Request failed": "Request failed",
                             "Reset": "Reset",
                             "Start date": "Start date",
@@ -5472,6 +5592,46 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                 >
                                                   <span>
                                                     Data
+                                                  </span>
+                                                </FormattedMessage>
+                                              </a>
+                                            </Link>
+                                          </Route>
+                                        </NavLink>
+                                        <NavLink
+                                          activeClassName="navbar-item-active"
+                                          aria-current="page"
+                                          className="navbar-item"
+                                          to="/real-time"
+                                        >
+                                          <Route
+                                            path="\\\\/real-time"
+                                          >
+                                            <Link
+                                              aria-current={null}
+                                              className="navbar-item"
+                                              replace={false}
+                                              to="/real-time"
+                                            >
+                                              <a
+                                                aria-current={null}
+                                                className="navbar-item"
+                                                href="/real-time"
+                                                onClick={[Function]}
+                                              >
+                                                <span
+                                                  className="icon"
+                                                >
+                                                  <i
+                                                    className="fas fa-clock"
+                                                  />
+                                                </span>
+                                                <FormattedMessage
+                                                  id="Real time"
+                                                  values={Object {}}
+                                                >
+                                                  <span>
+                                                    Real time
                                                   </span>
                                                 </FormattedMessage>
                                               </a>
@@ -5953,12 +6113,16 @@ exports[`containers/app renders the with auth in /stats 1`] = `
                                                         onParamsSelected={[Function]}
                                                         onReset={[Function]}
                                                         selectGroupBy={[Function]}
+                                                        selectMeasurementType={[Function]}
                                                         selectObservation={[Function]}
+                                                        selectThing={[Function]}
                                                         selectType={[Function]}
                                                         type={Object {}}
                                                         updateGroupBy={[Function]}
+                                                        updateMeasurementType={[Function]}
                                                         updateObservation={[Function]}
                                                         updateParams={[Function]}
+                                                        updateThing={[Function]}
                                                         updateType={[Function]}
                                                       >
                                                         <ParamsPanel
@@ -6513,9 +6677,11 @@ exports[`containers/app renders the with auth in /things 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -6614,9 +6780,11 @@ exports[`containers/app renders the with auth in /things 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -6872,9 +7040,11 @@ exports[`containers/app renders the with auth in /things 1`] = `
                             "Logout": "Logout",
                             "MQTT topic:": "MQTT topic:",
                             "Measurement stats": "Measurement stats",
+                            "Measurement type": "Measurement type",
                             "Measurements:": "Measurements:",
                             "Observation": "Observation",
                             "Password": "Password",
+                            "Real time": "Real time",
                             "Request failed": "Request failed",
                             "Reset": "Reset",
                             "Start date": "Start date",
@@ -7228,6 +7398,46 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                                 >
                                                   <span>
                                                     Data
+                                                  </span>
+                                                </FormattedMessage>
+                                              </a>
+                                            </Link>
+                                          </Route>
+                                        </NavLink>
+                                        <NavLink
+                                          activeClassName="navbar-item-active"
+                                          aria-current="page"
+                                          className="navbar-item"
+                                          to="/real-time"
+                                        >
+                                          <Route
+                                            path="\\\\/real-time"
+                                          >
+                                            <Link
+                                              aria-current={null}
+                                              className="navbar-item"
+                                              replace={false}
+                                              to="/real-time"
+                                            >
+                                              <a
+                                                aria-current={null}
+                                                className="navbar-item"
+                                                href="/real-time"
+                                                onClick={[Function]}
+                                              >
+                                                <span
+                                                  className="icon"
+                                                >
+                                                  <i
+                                                    className="fas fa-clock"
+                                                  />
+                                                </span>
+                                                <FormattedMessage
+                                                  id="Real time"
+                                                  values={Object {}}
+                                                >
+                                                  <span>
+                                                    Real time
                                                   </span>
                                                 </FormattedMessage>
                                               </a>
@@ -7710,9 +7920,11 @@ exports[`containers/app renders the with auth in /things 1`] = `
                                                     "Logout": "Logout",
                                                     "MQTT topic:": "MQTT topic:",
                                                     "Measurement stats": "Measurement stats",
+                                                    "Measurement type": "Measurement type",
                                                     "Measurements:": "Measurements:",
                                                     "Observation": "Observation",
                                                     "Password": "Password",
+                                                    "Real time": "Real time",
                                                     "Request failed": "Request failed",
                                                     "Reset": "Reset",
                                                     "Start date": "Start date",

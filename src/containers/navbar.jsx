@@ -55,6 +55,12 @@ const Navbar = ({ isHamburgerMenuExpanded, logout, toggleHamburgerMenu }) => {
             </span>
             <FormattedMessage id="Data" />
           </NavLink>
+          <NavLink to="/real-time" className="navbar-item" activeClassName="navbar-item-active">
+            <span className="icon">
+              <i className="fas fa-clock" />
+            </span>
+            <FormattedMessage id="Real time" />
+          </NavLink>
         </div>
         <div className="navbar-end">
           <LanguageSelector />
