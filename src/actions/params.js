@@ -6,11 +6,13 @@ import {
   PARAM_REQUEST_SUCCESS,
   PARAM_REQUEST_ERROR,
   PARAM_ITEMS_UPDATED,
+  PARAM_DISABLE,
 } from "constants/actionTypes/params";
 import { EVENT_TYPE, MEASUREMENT_TYPE, OBSERVATION_TYPES } from "constants/observationTypes";
 import { TYPE, OBSERVATION, GROUPBY, THING } from "constants/params";
 import iotClient from "lib/iotClient";
 import * as fromState from "reducers";
+import { isEmpty } from "helpers/validation";
 
 const requestObservations = (type, onStart, onSuccess, onError) => {
   if (type === EVENT_TYPE) {
@@ -63,7 +65,7 @@ export const selectObservation = () => (dispatch, getState) => {
   const state = getState();
   const observation = fromState.getParam(state, OBSERVATION);
   const dispatchSelectObservation = () => dispatch({ type: PARAM_SELECT, param: OBSERVATION });
-  if (observation && observation.items && observation.items.length > 0) {
+  if (observation && !isEmpty(observation.items)) {
     dispatchSelectObservation();
   } else {
     const type = fromState.getParam(state, TYPE);
@@ -80,7 +82,7 @@ export const updateObservation = observation => dispatch => {
 export const selectGroupBy = () => (dispatch, getState) => {
   const state = getState();
   const groupBy = fromState.getParam(state, GROUPBY);
-  if (groupBy && groupBy.items && groupBy.items.length > 0) {
+  if (groupBy && !isEmpty(groupBy.items)) {
     dispatch({ type: PARAM_SELECT, param: GROUPBY });
   } else {
     dispatch({ type: PARAM_REQUEST, param: GROUPBY });
@@ -102,15 +104,17 @@ export const updateGroupBy = groupBy => dispatch => {
 };
 
 export const updateParams = params => dispatch => {
-  const keys = Object.keys(params);
-  keys.forEach(key => {
+  const [firstParam, ...rest] = Object.keys(params);
+  dispatch({ type: PARAM_UPDATE, param: firstParam, selectedItem: params[firstParam] });
+  rest.forEach(key => {
+    dispatch({ type: PARAM_DISABLE, param: key });
     dispatch({ type: PARAM_UPDATE, param: key, selectedItem: params[key] });
   });
 };
 
 export const selectThing = () => (dispatch, getState) => {
   const thing = fromState.getParam(getState(), THING);
-  if (thing && thing.items) {
+  if (thing && !isEmpty(thing.items)) {
     dispatch({ type: PARAM_SELECT, param: THING });
   } else {
     dispatch({ type: PARAM_REQUEST, param: THING });

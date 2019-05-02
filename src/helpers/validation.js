@@ -1,1 +1,1 @@
-export const isNullOrEmpty = array => array === null || array.length === 0;
+export const isEmpty = array => !array || array === null || array.length === 0;

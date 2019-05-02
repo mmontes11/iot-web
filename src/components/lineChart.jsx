@@ -13,7 +13,7 @@ import {
 import { colorForIndex } from "helpers/chart";
 import { injectIntl, intlShape } from "react-intl";
 import { formatDateTime } from "helpers/date";
-import { isNullOrEmpty } from "helpers/validation";
+import { isEmpty } from "helpers/validation";
 
 const axisProps = {
   axisLine: false,
@@ -21,7 +21,7 @@ const axisProps = {
 };
 
 const LineChart = ({ intl: { formatMessage, formatNumber, formatDate, formatTime }, data, lineItems, lineDataKey }) => {
-  if (isNullOrEmpty(data) || isNullOrEmpty(lineItems)) {
+  if (isEmpty(data) || isEmpty(lineItems)) {
     return null;
   }
   return (

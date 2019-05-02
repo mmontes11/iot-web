@@ -6,7 +6,7 @@ import ChartBox from "components/chartBox";
 import BarChart from "components/barChart";
 import LineChart from "components/lineChart";
 import { BARCHART, LINECHART, REALTIME } from "constants/chartTypes";
-import { isNullOrEmpty } from "helpers/validation";
+import { isEmpty } from "helpers/validation";
 
 const Charts = ({ chartType, items, things, isLoading }) => {
   if (isLoading) {
@@ -14,7 +14,7 @@ const Charts = ({ chartType, items, things, isLoading }) => {
   }
   switch (chartType) {
     case BARCHART: {
-      if (isNullOrEmpty(items)) {
+      if (isEmpty(items)) {
         return null;
       }
       return items.map(({ type, unit, data }) => (
@@ -24,7 +24,7 @@ const Charts = ({ chartType, items, things, isLoading }) => {
       ));
     }
     case LINECHART: {
-      if (isNullOrEmpty(items) || isNullOrEmpty(things)) {
+      if (isEmpty(items) || isEmpty(things)) {
         return null;
       }
       return items.map(({ type, unit, items: data }) => (
@@ -44,7 +44,7 @@ const Charts = ({ chartType, items, things, isLoading }) => {
       ));
     }
     case REALTIME: {
-      if (isNullOrEmpty(items)) {
+      if (isEmpty(items)) {
         return null;
       }
       const { type, unit } = items[0];
