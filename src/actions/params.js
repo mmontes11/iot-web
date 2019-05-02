@@ -101,16 +101,11 @@ export const updateGroupBy = groupBy => dispatch => {
   dispatch({ type: PARAM_UPDATE, param: GROUPBY, selectedItem: groupBy });
 };
 
-export const updateParams = (type, observation, groupBy) => dispatch => {
-  if (type) {
-    dispatch({ type: PARAM_UPDATE, param: TYPE, selectedItem: type });
-  }
-  if (observation) {
-    dispatch({ type: PARAM_UPDATE, param: OBSERVATION, selectedItem: observation });
-  }
-  if (groupBy) {
-    dispatch({ type: PARAM_UPDATE, param: GROUPBY, selectedItem: groupBy });
-  }
+export const updateParams = params => dispatch => {
+  const keys = Object.keys(params);
+  keys.forEach(key => {
+    dispatch({ type: PARAM_UPDATE, param: key, selectedItem: params[key] });
+  });
 };
 
 export const selectThing = () => (dispatch, getState) => {

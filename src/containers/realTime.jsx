@@ -1,34 +1,25 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { withResetOnUnmount } from "hocs/resetOnUnmount";
-import { connect } from "react-redux";
-import { compose } from "recompose";
+import { handleDataParams } from "hocs/dataParams";
+import store from "config/store";
 import RealTimeParamsPanel from "containers/realTimeParamsPanel";
-import * as dataActions from "actions/data";
-import * as commonActions from "actions/common";
+import { startRealTimeData, finishRealTimeData, resetData } from "actions/data";
+import { reset } from "actions/common";
 import Charts from "containers/charts";
 import { REALTIME } from "constants/chartTypes";
+import { THING, TYPE } from "constants/params";
 
 class RealTime extends Component {
   componentWillUnmount() {
-    this.props.finishRealTimeData();
+    store.dispatch(finishRealTimeData());
   }
   render() {
-    const { startRealTimeData, finishRealTimeData, resetData, reset } = this.props;
+    const { onParamsSelected, onReset } = this.props;
     return (
       <div className="container is-fluid section">
         <div className="columns is-centered">
           <div className="column is-three-quarters">
-            <RealTimeParamsPanel
-              onParamsSelected={() => {
-                resetData();
-                startRealTimeData();
-              }}
-              onReset={() => {
-                reset();
-                finishRealTimeData();
-              }}
-            />
+            <RealTimeParamsPanel onParamsSelected={onParamsSelected} onReset={onReset} />
             <Charts chartType={REALTIME} />
           </div>
         </div>
@@ -38,18 +29,21 @@ class RealTime extends Component {
 }
 
 RealTime.propTypes = {
-  startRealTimeData: PropTypes.func.isRequired,
-  finishRealTimeData: PropTypes.func.isRequired,
-  resetData: PropTypes.func.isRequired,
-  reset: PropTypes.func.isRequired,
+  onParamsSelected: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
 };
 
-const withConnect = connect(
-  null,
-  { ...dataActions, reset: commonActions.reset },
+const withDataParams = handleDataParams(
+  "real-time",
+  [THING, TYPE],
+  () => {
+    store.dispatch(resetData());
+    store.dispatch(startRealTimeData());
+  },
+  () => {
+    store.dispatch(reset());
+    store.dispatch(finishRealTimeData());
+  },
 );
 
-export default compose(
-  withConnect,
-  withResetOnUnmount,
-)(RealTime);
+export default withDataParams(RealTime);
