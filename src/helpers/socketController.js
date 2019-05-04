@@ -13,7 +13,11 @@ export class SocketController {
         type,
       };
     }
-    this.socket = new SocketIOClient(process.env.IOT_SERVER_URL, { query });
+    const options = {
+      query,
+      transports: ["polling", "websocket"],
+    };
+    this.socket = SocketIOClient(process.env.IOT_SERVER_SOCKET_URL, options);
     this.onData = onData;
     this.onError = onError;
   }
