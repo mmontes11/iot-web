@@ -6,11 +6,13 @@ import {
   PARAM_REQUEST_SUCCESS,
   PARAM_REQUEST_ERROR,
   PARAM_ITEMS_UPDATED,
+  PARAM_DISABLE,
 } from "constants/actionTypes/params";
 import { EVENT_TYPE, MEASUREMENT_TYPE, OBSERVATION_TYPES } from "constants/observationTypes";
-import { TYPE, OBSERVATION, GROUPBY } from "constants/params";
+import { TYPE, OBSERVATION, GROUPBY, THING } from "constants/params";
 import iotClient from "lib/iotClient";
 import * as fromState from "reducers";
+import { isEmpty } from "helpers/validation";
 
 const requestObservations = (type, onStart, onSuccess, onError) => {
   if (type === EVENT_TYPE) {
@@ -63,7 +65,7 @@ export const selectObservation = () => (dispatch, getState) => {
   const state = getState();
   const observation = fromState.getParam(state, OBSERVATION);
   const dispatchSelectObservation = () => dispatch({ type: PARAM_SELECT, param: OBSERVATION });
-  if (observation && observation.items && observation.items.length > 0) {
+  if (observation && !isEmpty(observation.items)) {
     dispatchSelectObservation();
   } else {
     const type = fromState.getParam(state, TYPE);
@@ -80,7 +82,7 @@ export const updateObservation = observation => dispatch => {
 export const selectGroupBy = () => (dispatch, getState) => {
   const state = getState();
   const groupBy = fromState.getParam(state, GROUPBY);
-  if (groupBy && groupBy.items && groupBy.items.length > 0) {
+  if (groupBy && !isEmpty(groupBy.items)) {
     dispatch({ type: PARAM_SELECT, param: GROUPBY });
   } else {
     dispatch({ type: PARAM_REQUEST, param: GROUPBY });
@@ -101,14 +103,46 @@ export const updateGroupBy = groupBy => dispatch => {
   dispatch({ type: PARAM_UPDATE, param: GROUPBY, selectedItem: groupBy });
 };
 
-export const updateParams = (type, observation, groupBy) => dispatch => {
-  if (type) {
-    dispatch({ type: PARAM_UPDATE, param: TYPE, selectedItem: type });
+export const updateParams = params => dispatch => {
+  const [firstParam, ...rest] = Object.keys(params);
+  dispatch({ type: PARAM_UPDATE, param: firstParam, selectedItem: params[firstParam] });
+  rest.forEach(key => {
+    dispatch({ type: PARAM_DISABLE, param: key });
+    dispatch({ type: PARAM_UPDATE, param: key, selectedItem: params[key] });
+  });
+};
+
+export const selectThing = () => (dispatch, getState) => {
+  const thing = fromState.getParam(getState(), THING);
+  if (thing && !isEmpty(thing.items)) {
+    dispatch({ type: PARAM_SELECT, param: THING });
+  } else {
+    dispatch({ type: PARAM_REQUEST, param: THING });
+    iotClient.thingsService
+      .getThings(true)
+      .then(res => {
+        dispatch({ type: PARAM_REQUEST_SUCCESS, param: THING, statusCode: res.statusCode, error: null });
+        dispatch({ type: PARAM_ITEMS_UPDATED, param: THING, items: res.body.things });
+        dispatch({ type: PARAM_SELECT, param: THING });
+      })
+      .catch(error => {
+        dispatch({ type: PARAM_REQUEST_ERROR, param: THING, statusCode: error.statusCode, error });
+      });
   }
-  if (observation) {
-    dispatch({ type: PARAM_UPDATE, param: OBSERVATION, selectedItem: observation });
-  }
-  if (groupBy) {
-    dispatch({ type: PARAM_UPDATE, param: GROUPBY, selectedItem: groupBy });
-  }
+};
+
+export const updateThing = thingName => (dispatch, getState) => {
+  dispatch({ type: PARAM_UPDATE, param: THING, selectedItem: thingName });
+  const thingParam = fromState.getParam(getState(), THING);
+  const thing = thingParam.items.find(item => item.name === thingName);
+  dispatch({ type: PARAM_RESET, param: TYPE });
+  dispatch({ type: PARAM_ITEMS_UPDATED, param: TYPE, items: thing.supportedObservationTypes.measurement });
+};
+
+export const selectMeasurementType = () => dispatch => {
+  dispatch({ type: PARAM_SELECT, param: TYPE });
+};
+
+export const updateMeasurementType = type => dispatch => {
+  dispatch({ type: PARAM_UPDATE, param: TYPE, selectedItem: type });
 };

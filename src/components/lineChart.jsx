@@ -13,22 +13,15 @@ import {
 import { colorForIndex } from "helpers/chart";
 import { injectIntl, intlShape } from "react-intl";
 import { formatDateTime } from "helpers/date";
-
-const dataKey = (item, thing) => {
-  const data = item.values.find(el => el.thing === thing);
-  if (data) {
-    return data.value;
-  }
-  return null;
-};
+import { isEmpty } from "helpers/validation";
 
 const axisProps = {
   axisLine: false,
   tickLine: false,
 };
 
-const LineChart = ({ intl: { formatMessage, formatNumber, formatDate, formatTime }, data, things }) => {
-  if (data == null || data.length === 0 || things === null || things.length === 0) {
+const LineChart = ({ intl: { formatMessage, formatNumber, formatDate, formatTime }, data, lineItems, lineDataKey }) => {
+  if (isEmpty(data) || isEmpty(lineItems)) {
     return null;
   }
   return (
@@ -46,14 +39,14 @@ const LineChart = ({ intl: { formatMessage, formatNumber, formatDate, formatTime
           formatter={value => formatNumber(value)}
         />
         <Legend />
-        {things.map((thing, index) => (
+        {lineItems.map((lineItem, index) => (
           <Line
-            key={thing}
-            name={formatMessage({ id: thing, defaultMessage: thing })}
+            key={lineItem}
+            name={formatMessage({ id: lineItem, defaultMessage: lineItem })}
             type="monotone"
             strokeWidth={3}
             dot={false}
-            dataKey={item => dataKey(item, thing)}
+            dataKey={dataItem => lineDataKey(dataItem, lineItem)}
             stroke={colorForIndex(index)}
           />
         ))}
@@ -65,12 +58,13 @@ const LineChart = ({ intl: { formatMessage, formatNumber, formatDate, formatTime
 LineChart.propTypes = {
   intl: intlShape.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({})),
-  things: PropTypes.arrayOf(PropTypes.string),
+  lineItems: PropTypes.arrayOf(PropTypes.string),
+  lineDataKey: PropTypes.func.isRequired,
 };
 
 LineChart.defaultProps = {
   data: null,
-  things: null,
+  lineItems: null,
 };
 
 export default injectIntl(LineChart);

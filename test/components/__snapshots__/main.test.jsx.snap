@@ -47,9 +47,11 @@ exports[`components/main renders a main in / path 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -148,9 +150,11 @@ exports[`components/main renders a main in / path 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -526,6 +530,46 @@ exports[`components/main renders a main in / path 1`] = `
                                   </Link>
                                 </Route>
                               </NavLink>
+                              <NavLink
+                                activeClassName="navbar-item-active"
+                                aria-current="page"
+                                className="navbar-item"
+                                to="/real-time"
+                              >
+                                <Route
+                                  path="\\\\/real-time"
+                                >
+                                  <Link
+                                    aria-current={null}
+                                    className="navbar-item"
+                                    replace={false}
+                                    to="/real-time"
+                                  >
+                                    <a
+                                      aria-current={null}
+                                      className="navbar-item"
+                                      href="/real-time"
+                                      onClick={[Function]}
+                                    >
+                                      <span
+                                        className="icon"
+                                      >
+                                        <i
+                                          className="fas fa-clock"
+                                        />
+                                      </span>
+                                      <FormattedMessage
+                                        id="Real time"
+                                        values={Object {}}
+                                      >
+                                        <span>
+                                          Real time
+                                        </span>
+                                      </FormattedMessage>
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
                             </div>
                             <div
                               className="navbar-end"
@@ -1002,9 +1046,11 @@ exports[`components/main renders a main in / path 1`] = `
                                           "Logout": "Logout",
                                           "MQTT topic:": "MQTT topic:",
                                           "Measurement stats": "Measurement stats",
+                                          "Measurement type": "Measurement type",
                                           "Measurements:": "Measurements:",
                                           "Observation": "Observation",
                                           "Password": "Password",
+                                          "Real time": "Real time",
                                           "Request failed": "Request failed",
                                           "Reset": "Reset",
                                           "Start date": "Start date",
@@ -1202,9 +1248,11 @@ exports[`components/main renders a main in /foo path 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -1303,9 +1351,11 @@ exports[`components/main renders a main in /foo path 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -1681,6 +1731,46 @@ exports[`components/main renders a main in /foo path 1`] = `
                                   </Link>
                                 </Route>
                               </NavLink>
+                              <NavLink
+                                activeClassName="navbar-item-active"
+                                aria-current="page"
+                                className="navbar-item"
+                                to="/real-time"
+                              >
+                                <Route
+                                  path="\\\\/real-time"
+                                >
+                                  <Link
+                                    aria-current={null}
+                                    className="navbar-item"
+                                    replace={false}
+                                    to="/real-time"
+                                  >
+                                    <a
+                                      aria-current={null}
+                                      className="navbar-item"
+                                      href="/real-time"
+                                      onClick={[Function]}
+                                    >
+                                      <span
+                                        className="icon"
+                                      >
+                                        <i
+                                          className="fas fa-clock"
+                                        />
+                                      </span>
+                                      <FormattedMessage
+                                        id="Real time"
+                                        values={Object {}}
+                                      >
+                                        <span>
+                                          Real time
+                                        </span>
+                                      </FormattedMessage>
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
                             </div>
                             <div
                               className="navbar-end"
@@ -2157,9 +2247,11 @@ exports[`components/main renders a main in /foo path 1`] = `
                                           "Logout": "Logout",
                                           "MQTT topic:": "MQTT topic:",
                                           "Measurement stats": "Measurement stats",
+                                          "Measurement type": "Measurement type",
                                           "Measurements:": "Measurements:",
                                           "Observation": "Observation",
                                           "Password": "Password",
+                                          "Real time": "Real time",
                                           "Request failed": "Request failed",
                                           "Reset": "Reset",
                                           "Start date": "Start date",
@@ -2357,9 +2449,11 @@ exports[`components/main renders a main in /stats path 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -2458,9 +2552,11 @@ exports[`components/main renders a main in /stats path 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -2830,6 +2926,46 @@ exports[`components/main renders a main in /stats path 1`] = `
                                       >
                                         <span>
                                           Data
+                                        </span>
+                                      </FormattedMessage>
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
+                              <NavLink
+                                activeClassName="navbar-item-active"
+                                aria-current="page"
+                                className="navbar-item"
+                                to="/real-time"
+                              >
+                                <Route
+                                  path="\\\\/real-time"
+                                >
+                                  <Link
+                                    aria-current={null}
+                                    className="navbar-item"
+                                    replace={false}
+                                    to="/real-time"
+                                  >
+                                    <a
+                                      aria-current={null}
+                                      className="navbar-item"
+                                      href="/real-time"
+                                      onClick={[Function]}
+                                    >
+                                      <span
+                                        className="icon"
+                                      >
+                                        <i
+                                          className="fas fa-clock"
+                                        />
+                                      </span>
+                                      <FormattedMessage
+                                        id="Real time"
+                                        values={Object {}}
+                                      >
+                                        <span>
+                                          Real time
                                         </span>
                                       </FormattedMessage>
                                     </a>
@@ -3311,12 +3447,16 @@ exports[`components/main renders a main in /stats path 1`] = `
                                               onParamsSelected={[Function]}
                                               onReset={[Function]}
                                               selectGroupBy={[Function]}
+                                              selectMeasurementType={[Function]}
                                               selectObservation={[Function]}
+                                              selectThing={[Function]}
                                               selectType={[Function]}
                                               type={Object {}}
                                               updateGroupBy={[Function]}
+                                              updateMeasurementType={[Function]}
                                               updateObservation={[Function]}
                                               updateParams={[Function]}
+                                              updateThing={[Function]}
                                               updateType={[Function]}
                                             >
                                               <ParamsPanel
@@ -3822,9 +3962,11 @@ exports[`components/main renders a main in /things path 1`] = `
           "Logout": "Logout",
           "MQTT topic:": "MQTT topic:",
           "Measurement stats": "Measurement stats",
+          "Measurement type": "Measurement type",
           "Measurements:": "Measurements:",
           "Observation": "Observation",
           "Password": "Password",
+          "Real time": "Real time",
           "Request failed": "Request failed",
           "Reset": "Reset",
           "Start date": "Start date",
@@ -3923,9 +4065,11 @@ exports[`components/main renders a main in /things path 1`] = `
             "Logout": "Logout",
             "MQTT topic:": "MQTT topic:",
             "Measurement stats": "Measurement stats",
+            "Measurement type": "Measurement type",
             "Measurements:": "Measurements:",
             "Observation": "Observation",
             "Password": "Password",
+            "Real time": "Real time",
             "Request failed": "Request failed",
             "Reset": "Reset",
             "Start date": "Start date",
@@ -4295,6 +4439,46 @@ exports[`components/main renders a main in /things path 1`] = `
                                       >
                                         <span>
                                           Data
+                                        </span>
+                                      </FormattedMessage>
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
+                              <NavLink
+                                activeClassName="navbar-item-active"
+                                aria-current="page"
+                                className="navbar-item"
+                                to="/real-time"
+                              >
+                                <Route
+                                  path="\\\\/real-time"
+                                >
+                                  <Link
+                                    aria-current={null}
+                                    className="navbar-item"
+                                    replace={false}
+                                    to="/real-time"
+                                  >
+                                    <a
+                                      aria-current={null}
+                                      className="navbar-item"
+                                      href="/real-time"
+                                      onClick={[Function]}
+                                    >
+                                      <span
+                                        className="icon"
+                                      >
+                                        <i
+                                          className="fas fa-clock"
+                                        />
+                                      </span>
+                                      <FormattedMessage
+                                        id="Real time"
+                                        values={Object {}}
+                                      >
+                                        <span>
+                                          Real time
                                         </span>
                                       </FormattedMessage>
                                     </a>
@@ -4777,9 +4961,11 @@ exports[`components/main renders a main in /things path 1`] = `
                                           "Logout": "Logout",
                                           "MQTT topic:": "MQTT topic:",
                                           "Measurement stats": "Measurement stats",
+                                          "Measurement type": "Measurement type",
                                           "Measurements:": "Measurements:",
                                           "Observation": "Observation",
                                           "Password": "Password",
+                                          "Real time": "Real time",
                                           "Request failed": "Request failed",
                                           "Reset": "Reset",
                                           "Start date": "Start date",

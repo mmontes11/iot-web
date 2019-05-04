@@ -8,6 +8,9 @@ export const initialState = {
 };
 
 export default (state = initialState, { type, showError, preserveError }) => {
+  if (/_REQUEST_ERROR$/.test(type)) {
+    return { ...state, showError: true };
+  }
   switch (type) {
     case TOGGLE_HAMBURGER_MENU:
       return { ...state, isHamburgerMenuExpanded: !state.isHamburgerMenuExpanded };

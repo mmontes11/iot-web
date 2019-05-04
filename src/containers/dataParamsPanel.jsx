@@ -5,7 +5,7 @@ import ParamsPanel from "components/paramsPanel";
 import * as paramsActions from "actions/params";
 import * as fromState from "reducers";
 import { TYPE, OBSERVATION, GROUPBY } from "constants/params";
-import { isObservationDisabled } from "helpers/paramsPanel";
+import { isParamDisabled } from "helpers/paramsPanel";
 import { defaultGroupBy } from "config/params";
 
 class DataParamsPanel extends Component {
@@ -46,7 +46,7 @@ class DataParamsPanel extends Component {
             items: observation.items || [],
             isActive: observation.isActive || false,
             isLoading: observation.isLoading || false,
-            isDisabled: isObservationDisabled(observation),
+            isDisabled: isParamDisabled(observation),
             onButtonClick: () => selectObservation(),
             onItemClick: item => {
               updateObservation(item);
@@ -76,16 +76,6 @@ class DataParamsPanel extends Component {
   }
 }
 
-const withConnect = connect(
-  state => ({
-    type: fromState.getParam(state, TYPE),
-    observation: fromState.getParam(state, OBSERVATION),
-    groupBy: fromState.getParam(state, GROUPBY),
-    isResetDisabled: fromState.isResetDisabled(state),
-  }),
-  { ...paramsActions },
-);
-
 DataParamsPanel.propTypes = {
   onParamsSelected: PropTypes.func.isRequired,
   onReset: PropTypes.func.isRequired,
@@ -100,5 +90,15 @@ DataParamsPanel.propTypes = {
   selectGroupBy: PropTypes.func.isRequired,
   updateGroupBy: PropTypes.func.isRequired,
 };
+
+const withConnect = connect(
+  state => ({
+    type: fromState.getParam(state, TYPE),
+    observation: fromState.getParam(state, OBSERVATION),
+    groupBy: fromState.getParam(state, GROUPBY),
+    isResetDisabled: fromState.isResetDisabled(state),
+  }),
+  { ...paramsActions },
+);
 
 export default withConnect(DataParamsPanel);

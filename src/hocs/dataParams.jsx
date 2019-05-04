@@ -10,16 +10,17 @@ import { addThingFilter } from "actions/thingFilter";
 import { addTimePeriodFilter, addCustomTimePeriodFilter } from "actions/dateFilter";
 import * as fromState from "reducers";
 
-export const handleDataParams = (path, getData, reset) => WrappedComponent => {
+export const handleDataParams = (path, paramNames, getData, reset) => WrappedComponent => {
   class DataParams extends React.Component {
     componentDidMount() {
       const {
-        match: {
-          params: { type, observation, groupBy },
-        },
+        match: { params: urlParams },
         location: { search },
       } = this.props;
-      if (!type || !observation) {
+      const [firstParamName, secondParamName, thirdParamName] = paramNames;
+      const firstParam = urlParams[firstParamName];
+      const secondParam = urlParams[secondParamName];
+      if (!firstParam || !secondParam) {
         return;
       }
       const queryParams = QueryString.parse(search);
@@ -31,31 +32,44 @@ export const handleDataParams = (path, getData, reset) => WrappedComponent => {
       } else if (queryParams.startDate || queryParams.endDate) {
         this.props.addCustomTimePeriodFilter(queryParams.startDate, queryParams.endDate);
       }
-      this.props.updateParams(type, observation, groupBy);
+      let params = {
+        [firstParamName]: firstParam,
+        [secondParamName]: secondParam,
+      };
+      const thirdParam = params[thirdParamName];
+      if (thirdParam) {
+        params = {
+          ...params,
+          [thirdParamName]: thirdParam,
+        };
+      }
+      this.props.updateParams(params);
       getData();
     }
     componentDidUpdate() {
       const {
-        match: {
-          params: { type, observation },
-        },
+        match: { params },
         hasError,
       } = this.props;
-      if (type && observation && hasError) {
+      const [firstParamName, secondParamName] = paramNames;
+      const firstParam = params[firstParamName];
+      const secondParam = params[secondParamName];
+      if (firstParam && secondParam && hasError) {
         this._pushRootPath();
       }
     }
-    _onParamsSelected = (type, observation, groupBy) => {
-      if (!type || !observation) {
+    _onParamsSelected = (...params) => {
+      const [firstParam, secondParam, thirdParam] = params;
+      if (!firstParam || !secondParam) {
         return;
       }
       const {
         history,
         location: { search },
       } = this.props;
-      let basePath = `/${path}/${type}/${observation}`;
-      if (groupBy) {
-        basePath += `/${groupBy}`;
+      let basePath = `/${path}/${firstParam}/${secondParam}`;
+      if (thirdParam) {
+        basePath += `/${thirdParam}`;
       }
       basePath += `${search}`;
       history.push(basePath);
