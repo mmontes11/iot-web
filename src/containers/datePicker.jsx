@@ -12,6 +12,7 @@ const DatePicker = ({ locale, placeholder, selected, onChange }) => (
     timeIntervals={15}
     dateFormat="Pp"
     placeholderText={placeholder}
+    className="input"
   />
 );
 

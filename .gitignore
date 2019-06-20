@@ -22,9 +22,6 @@ yarn-error.log*
 # IDE
 .idea
 
-# npm
-package-lock.json
-
 # git
 *.orig
 
